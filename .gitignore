@@ -1,0 +1,16 @@
+/PDC/SVM
+*.pyc
+.*.swp
+
+# AGSDBFeeder
+/AGSDBFeeder/bin/AGSDBFeeder
+.*.swp
+*.o
+*.d
+
+# AGSAPIProvider
+__pycache__
+*.pyc
+
+# Misc
+Test

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TypeEquipement module="" nom="ascenseur">
+    <Info cle="mot_id_ligne_station" mot="448" bit="-1"/>
+    <Info cle="mot_id_type_numero_equipement" mot="449" bit="-1"/>
+    <Info cle="mot_id_mois_annee_version" mot="450" bit="-1"/>
+    <Info cle="mot_id_checksum" mot="451" bit="-1"/>
+    <Info cle="mot_status" mot="452" bit="-1"/>
+    <Info cle="mot_mesure_tps_voyageur" mot="453" bit="-1"/>
+    <Info cle="mot_mesure_nb_demarrages" mot="454" bit="-1"/>
+    <Info cle="mot_mesure_tps_exploitant" mot="455" bit="-1"/>
+    <Info cle="mot_mesure_tps_deplacement" mot="456" bit="-1"/>
+    <Info cle="mot_mesure_tps_arret_entretien" mot="457" bit="-1"/>
+    <Info cle="mot_mesure_tps_arret_panne_AAI" mot="458" bit="-1"/>
+    <Info cle="mot_mesure_tps_arret_panne_ASI" mot="459" bit="-1"/>
+    <Info cle="mot_mesure_tps_coupure_alimentation" mot="460" bit="-1"/>
+    <Info cle="mot_16_etat" mot="464" bit="-1"/>
+    <Info cle="bit_etat_en_service" mot="464" bit="0"/>
+    <Info cle="bit_etat_hors_service" mot="464" bit="1"/>
+    <Info cle="bit_etat_reservation_cabine" mot="464" bit="2"/>
+    <Info cle="bit_etat_sens_montee" mot="464" bit="3"/>
+    <Info cle="bit_etat_sens_descente" mot="464" bit="4"/>
+    <Info cle="bit_etat_manoeuvre_rappel" mot="464" bit="5"/>
+    <Info cle="bit_etat_inspection" mot="464" bit="6"/>
+    <Info cle="bit_etat_en_entretien" mot="464" bit="7"/>
+    <Info cle="bit_etat_cabine_niveau_0" mot="464" bit="8"/>
+    <Info cle="bit_etat_cabine_niveau_1" mot="464" bit="9"/>
+    <Info cle="bit_etat_cabine_niveau_2" mot="464" bit="10"/>
+    <Info cle="bit_etat_cabine_niveau_3" mot="464" bit="11"/>
+    <Info cle="bit_etat_cabine_niveau_4" mot="464" bit="12"/>
+    <Info cle="bit_etat_portes_fermees" mot="464" bit="13"/>
+    <Info cle="bit_etat_mise_hors_service_palier" mot="464" bit="14"/>
+    <Info cle="bit_etat_cabine_zone_deverrouillage" mot="464" bit="15"/>
+    <Info cle="mot_17_pre-alerte" mot="465" bit="-1"/>
+    <Info cle="bit_pre-alerte_pre_alerte" mot="465" bit="0"/>
+    <Info cle="bit_alerte_presence_eau_cuvette" mot="465" bit="1"/>
+    <Info cle="bit_alerte_panne_communication_api_coffret_aquisistion" mot="465" bit="2"/>
+    <Info cle="bit_alerte_coupure_alimentation_PEF" mot="465" bit="3"/>
+    <Info cle="bit_alerte_coupure_alimentation_permanent" mot="465" bit="4"/>
+    <Info cle="bit_pre-alerte_coupure_48V_ABN" mot="465" bit="5"/>
+    <Info cle="bit_pre-alerte_defaut_automate" mot="465" bit="6"/>
+    <Info cle="bit_alarme_presence_eau_cuvette" mot="465" bit="1"/>
+    <Info cle="bit_alarme_panne_communication_api_coffret_aquisistion" mot="465" bit="2"/>
+    <Info cle="bit_alarme_coupure_alimentation_PEF" mot="465" bit="3"/>
+    <Info cle="bit_alarme_coupure_alimentation_permanent" mot="465" bit="4"/>
+    <Info cle="mot_18_alerte" mot="466" bit="-1"/>
+    <Info cle="bit_alerte_synthese_alerte" mot="466" bit="0"/>
+    <Info cle="bit_alerte_non_discriminee" mot="466" bit="1"/>
+    <Info cle="bit_alerte_forcage_porte" mot="466" bit="2"/>
+    <Info cle="bit_alerte_retour_alimentation" mot="466" bit="3"/>
+    <Info cle="bit_alarme_forcage_porte" mot="466" bit="2"/>
+    <Info cle="bit_alarme_retour_alimentation" mot="466" bit="3"/>
+    <Info cle="mot_19_alerte" mot="467" bit="-1"/>
+    <Info cle="mot_20_alerte" mot="468" bit="-1"/>
+    <Info cle="mot_21_alerte" mot="469" bit="-1"/>
+    <Info cle="bit_alerte_defaut_manoeuvre_de_secours" mot="469" bit="2"/>
+    <Info cle="bit_alerte_defaut_thermique_moteur" mot="469" bit="3"/>
+    <Info cle="bit_alerte_defaut_temperature_moteur" mot="469" bit="4"/>
+    <Info cle="bit_alerte_defaut_contacts_portes_palieres" mot="469" bit="5"/>
+    <Info cle="bit_alerte_defaut_contacts_porte_cabine" mot="469" bit="6"/>
+    <Info cle="bit_alerte_defaut_trappe" mot="469" bit="7"/>
+    <Info cle="bit_alerte_defaut_survitesse" mot="469" bit="8"/>
+    <Info cle="bit_alerte_defaut_contacts_parachute" mot="469" bit="9"/>
+    <Info cle="bit_alerte_defaut_contacts_fin_de_course" mot="469" bit="10"/>
+    <Info cle="bit_alerte_defaut_poulie_tendeuse" mot="469" bit="11"/>
+    <Info cle="bit_alerte_defaut_alimentation_CAF" mot="469" bit="12"/>
+    <Info cle="bit_alerte_defaut_alimentation_CAP" mot="469" bit="13"/>
+    <Info cle="bit_alerte_defaut_personne_bloquee" mot="469" bit="14"/>
+    <Info cle="bit_alarme_synthese_alarme" mot="469" bit="0"/>
+    <Info cle="bit_alarme_non_discriminee" mot="469" bit="1"/>
+    <Info cle="bit_alarme_defaut_manoeuvre_de_secours" mot="469" bit="2"/>
+    <Info cle="bit_alarme_defaut_thermique_moteur" mot="469" bit="3"/>
+    <Info cle="bit_alarme_defaut_temperature_moteur" mot="469" bit="4"/>
+    <Info cle="bit_alarme_defaut_contacts_portes_palieres" mot="469" bit="5"/>
+    <Info cle="bit_alarme_defaut_contacts_porte_cabine" mot="469" bit="6"/>
+    <Info cle="bit_alarme_defaut_trappe" mot="469" bit="7"/>
+    <Info cle="bit_alarme_defaut_survitesse" mot="469" bit="8"/>
+    <Info cle="bit_alarme_defaut_contacts_parachute" mot="469" bit="9"/>
+    <Info cle="bit_alarme_defaut_contacts_fin_de_course" mot="469" bit="10"/>
+    <Info cle="bit_alarme_defaut_poulie_tendeuse" mot="469" bit="11"/>
+    <Info cle="bit_alarme_defaut_alimentation_CAF" mot="469" bit="12"/>
+    <Info cle="bit_alarme_defaut_alimentation_CAP" mot="469" bit="13"/>
+    <Info cle="bit_alarme_defaut_personne_bloquee" mot="469" bit="14"/>
+    <Info cle="mot_22_alerte" mot="470" bit="-1"/>
+    <Info cle="bit_alerte_defaut_bouton_stop" mot="470" bit="0"/>
+    <Info cle="bit_alerte_defaut_3_faux_departs" mot="470" bit="1"/>
+    <Info cle="bit_alerte_defaut_alimentation_chaine_securite" mot="470" bit="2"/>
+    <Info cle="bit_alerte_defaut_selecteur" mot="470" bit="3"/>
+    <Info cle="bit_alerte_defaut_controle_ralentissement" mot="470" bit="4"/>
+    <Info cle="bit_alerte_defaut_tps_freinage" mot="470" bit="5"/>
+    <Info cle="bit_alerte_defaut_tps_fermeture_portes" mot="470" bit="6"/>
+    <Info cle="bit_alerte_defaut_tps_ouverture_portes" mot="470" bit="7"/>
+    <Info cle="bit_alerte_defaut_tps_deplacement" mot="470" bit="8"/>
+    <Info cle="bit_alerte_defaut_non_retombee_contacteurs" mot="470" bit="9"/>
+    <Info cle="bit_alerte_defaut_non_levee_frein" mot="470" bit="10"/>
+    <Info cle="bit_alerte_defaut_temperature_local_machine" mot="470" bit="11"/>
+    <Info cle="bit_alerte_defaut_bae_superieure_5_heure" mot="470" bit="12"/>
+    <Info cle="bit_alarme_defaut_bouton_stop" mot="470" bit="0"/>
+    <Info cle="bit_alarme_defaut_3_faux_departs" mot="470" bit="1"/>
+    <Info cle="bit_alarme_defaut_alimentation_chaine_securite" mot="470" bit="2"/>
+    <Info cle="bit_alarme_defaut_selecteur" mot="470" bit="3"/>
+    <Info cle="bit_alarme_defaut_controle_ralentissement" mot="470" bit="4"/>
+    <Info cle="bit_alarme_defaut_tps_freinage" mot="470" bit="5"/>
+    <Info cle="bit_alarme_defaut_tps_fermeture_portes" mot="470" bit="6"/>
+    <Info cle="bit_alarme_defaut_tps_ouverture_portes" mot="470" bit="7"/>
+    <Info cle="bit_alarme_defaut_tps_deplacement" mot="470" bit="8"/>
+    <Info cle="bit_alarme_defaut_non_retombee_contacteurs" mot="470" bit="9"/>
+    <Info cle="bit_alarme_defaut_non_levee_frein" mot="470" bit="10"/>
+    <Info cle="bit_alarme_defaut_temperature_local_machine" mot="470" bit="11"/>
+    <Info cle="bit_alarme_defaut_bae_superieure_5_heure" mot="470" bit="12"/>
+    <Info cle="mot_23_alarme" mot="471" bit="-1"/>
+    <Info cle="mot_24_alarme" mot="472" bit="-1"/>
+    <Info cle="mot_25_alarme" mot="473" bit="-1"/>
+    <Info cle="mot_26_alarme" mot="474" bit="-1"/>
+    <Info cle="mot_27_alarme" mot="475" bit="-1"/>
+    <Info cle="mot_28_etat" mot="476" bit="-1"/>
+    <Info cle="bit_etat_cabine_sommeil" mot="476" bit="0"/>
+    <Info cle="bit_etat_commande_locale" mot="476" bit="1"/>
+    <Info cle="mot_29_mesure" mot="477" bit="-1"/>
+    <Info cle="mot_commande" mot="480" bit="-1"/>
+    <Info cle="bit_commande_mise_en_service" mot="480" bit="0" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_mise_hors_service" mot="480" bit="1" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_commande_ouverture_porte" mot="480" bit="2" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_commande_fermeture_porte" mot="480" bit="3" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_appel_niveau_0" mot="480" bit="4" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_appel_niveau_1" mot="480" bit="5" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_appel_niveau_2" mot="480" bit="6" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_appel_niveau_3" mot="480" bit="7" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_appel_niveau_4" mot="480" bit="8" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_rearmement_ASI" mot="480" bit="9" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_debut_priorite_liaison_serie" mot="480" bit="12" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_fin_priorite_liaison_serie" mot="480" bit="13" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_synchro" mot="480" bit="14" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_signe_de_vie" mot="480" bit="15" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="mot_commande_1_reserve" mot="481" bit="-1"/>
+    <Info cle="mot_commande_2_reserve" mot="482" bit="-1"/>
+    <Info cle="mot_commande_3_reserve" mot="482" bit="-1"/>
+</TypeEquipement>

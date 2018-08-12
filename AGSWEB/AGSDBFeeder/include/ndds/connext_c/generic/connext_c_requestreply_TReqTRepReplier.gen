@@ -1,0 +1,797 @@
+/* (c) Copyright 2003-2015, Real-Time Innovations, Inc. All rights reserved. */
+/* $Id$
+
+ (c) Copyright, Real-Time Innovations, 2012-2016.
+ All rights reserved.
+ No duplications, whole or partial, manual or electronic, may be made
+ without express written permission.  Any such copies, or
+ revisions thereof, must display this notice unaltered.
+ This code contains trade secrets of Real-Time Innovations, Inc.
+
+ modification history
+---------------------
+5.20,20aug14,acr  Fixed declaration of return_loan and copy_or_loan (REQREPLY-18)
+5.0.1,10jul13,fcs Fixed comp warnings
+1.0a,2mar12,jch  Created.
+============================================================================ */
+
+
+#include "log/log_makeheader.h"
+
+#ifndef log_common_h
+  #include "log/log_common.h"
+#endif
+
+#ifndef connext_c_replier_h
+  #include "connext_c/connext_c_replier.h"
+#endif
+
+#include "connext_c/connext_c_simple_replier.h"
+
+#ifndef connext_c_replier_impl_h
+    #include "connext_c/connext_c_replier_impl.h"
+#endif
+
+#include "dds_c/dds_c_log_impl.h"
+
+#include "connext_c/connext_c_untyped_impl.h"
+
+#define DDS_CURRENT_SUBMODULE  DDS_SUBMODULE_MASK_DATA
+
+#define concatenate(A, B)  A ## B
+
+#define RTI_Connext_Replier_INITIALIZER {NULL, NULL, NULL}
+
+#if defined(TReq) && defined(TRep)
+
+#define TReqTRep_name_c(TReq, TRep) concatenate(TReq, TRep)
+#define TReqTRep_name TReqTRep_name_c(TReq, TRep)
+
+#ifdef TReplier
+#define TReqTRepReplier_name_c(Replier_name) Replier_name
+#define TReqTRepReplier_name TReqTRepReplier_name_c(TReplier)
+#define TReqTRepReplier TReqTRepReplier_name_c(TReplier)
+#else
+#define TReqTRepReplier_name_c(TReqTRep_name) concatenate(TReqTRep_name, Replier)
+#define TReqTRepReplier_name TReqTRepReplier_name_c(TReqTRep_name)
+#define TReqTRepReplier TReqTRepReplier_name_c(TReqTRep_name)
+#endif
+
+#define TReqTypeSupport_c(TReq) concatenate(TReq, TypeSupport)
+#define TReqTypeSupport TReqTypeSupport_c(TReq)
+
+#define TRepTypeSupport_c(TRep) concatenate(TRep, TypeSupport)
+#define TRepTypeSupport TRepTypeSupport_c(TRep)
+
+#define TReqTypeSupport_copy_data_c(TReqTypeSupport) concatenate(TReqTypeSupport, _copy_data)
+#define TReqTypeSupport_copy_data TReqTypeSupport_copy_data_c(TReqTypeSupport)
+
+#define TReqTypeSupport_register_type_c(TReqTypeSupport) concatenate(TReqTypeSupport, _register_type)
+#define TReqTypeSupport_register_type TReqTypeSupport_register_type_c(TReqTypeSupport)
+
+#define TReqTypeSupport_get_type_name_c(TReqTypeSupport) concatenate(TReqTypeSupport, _get_type_name)
+#define TReqTypeSupport_get_type_name TReqTypeSupport_get_type_name_c(TReqTypeSupport)
+
+#define TRepTypeSupport_register_type_c(TRepTypeSupport) concatenate(TRepTypeSupport, _register_type)
+#define TRepTypeSupport_register_type TRepTypeSupport_register_type_c(TRepTypeSupport)
+
+#define TRepTypeSupport_get_type_name_c(TRepTypeSupport) concatenate(TRepTypeSupport, _get_type_name)
+#define TRepTypeSupport_get_type_name TRepTypeSupport_get_type_name_c(TRepTypeSupport)
+
+#define TReqDataReader_c(TReq) concatenate(TReq, DataReader)
+#define TReqDataReader TReqDataReader_c(TReq)
+
+#define TRepDataWriter_c(TRep) concatenate(TRep, DataWriter)
+#define TRepDataWriter TRepDataWriter_c(TRep)
+
+#define TReqDataReader_narrow_c(TReqDataReader) concatenate(TReqDataReader, _narrow)
+#define TReqDataReader_narrow TReqDataReader_narrow_c(TReqDataReader)
+
+#define TRepDataWriter_narrow_c(TRepDataWriter) concatenate(TRepDataWriter, _narrow)
+#define TRepDataWriter_narrow TRepDataWriter_narrow_c(TRepDataWriter)
+
+#define TReqDataReader_return_loan_c(TReqDataReader) concatenate(TReqDataReader, _return_loan)
+#define TReqDataReader_return_loan TReqDataReader_return_loan_c(TReqDataReader)
+
+#define TReqSeq_c(TReq) concatenate(TReq, Seq)
+#define TReqSeq TReqSeq_c(TReq)
+
+#define TReqSeq_get_length_c(TReqSeq) concatenate(TReqSeq, _get_length)
+#define TReqSeq_get_length TReqSeq_get_length_c(TReqSeq)
+
+#define TReqSeq_get_maximum_c(TReqSeq) concatenate(TReqSeq, _get_maximum)
+#define TReqSeq_get_maximum TReqSeq_get_maximum_c(TReqSeq)
+
+#define TReqSeq_has_ownership_c(TReqSeq) concatenate(TReqSeq, _has_ownership)
+#define TReqSeq_has_ownership TReqSeq_has_ownership_c(TReqSeq)
+
+#define TReqSeq_get_contiguous_bufferI_c(TReqSeq) concatenate(TReqSeq, _get_contiguous_bufferI)
+#define TReqSeq_get_contiguous_bufferI TReqSeq_get_contiguous_bufferI_c(TReqSeq)
+
+#define TReqSeq_set_length_c(TReqSeq) concatenate(TReqSeq, _set_length)
+#define TReqSeq_set_length TReqSeq_set_length_c(TReqSeq)
+
+#define TReqSeq_get_discontiguous_buffer_c(TReqSeq) concatenate(TReqSeq, _get_discontiguous_buffer)
+#define TReqSeq_get_discontiguous_buffer TReqSeq_get_discontiguous_buffer_c(TReqSeq)
+
+#define TReqSeq_loan_discontiguous_c(TReqSeq) concatenate(TReqSeq, _loan_discontiguous)
+#define TReqSeq_loan_discontiguous TReqSeq_loan_discontiguous_c(TReqSeq)
+
+#define TReqTRepReplier_create_c(TReqTRepReplier_name) concatenate(TReqTRepReplier_name, _create)
+#define TReqTRepReplier_create TReqTRepReplier_create_c(TReqTRepReplier_name)
+
+#define TReqTRepReplier_create_w_params_c(TReqTRepReplier_name) concatenate(TReqTRepReplier_name, _create_w_params)
+#define TReqTRepReplier_create_w_params TReqTRepReplier_create_w_params_c(TReqTRepReplier_name)
+
+#define TReqTRepReplier_take_request_c(TReqTRepReplier_name) concatenate(TReqTRepReplier_name, _take_request)
+#define TReqTRepReplier_take_request TReqTRepReplier_take_request_c(TReqTRepReplier_name)
+
+#define TReqTRepReplier_take_requests_c(TReqTRepReplier_name) concatenate(TReqTRepReplier_name, _take_requests)
+#define TReqTRepReplier_take_requests TReqTRepReplier_take_requests_c(TReqTRepReplier_name)
+
+#define TReqTRepReplier_read_request_c(TReqTRepReplier_name) concatenate(TReqTRepReplier_name, _read_request)
+#define TReqTRepReplier_read_request TReqTRepReplier_read_request_c(TReqTRepReplier_name)
+
+#define TReqTRepReplier_read_requests_c(TReqTRepReplier_name) concatenate(TReqTRepReplier_name, _read_requests)
+#define TReqTRepReplier_read_requests TReqTRepReplier_read_requests_c(TReqTRepReplier_name)
+
+#define TReqTRepReplier_receive_request_c(TReqTRepReplier_name) concatenate(TReqTRepReplier_name, _receive_request)
+#define TReqTRepReplier_receive_request TReqTRepReplier_receive_request_c(TReqTRepReplier_name)
+
+#define TReqTRepReplier_receive_requests_c(TReqTRepReplier_name) concatenate(TReqTRepReplier_name, _receive_requests)
+#define TReqTRepReplier_receive_requests TReqTRepReplier_receive_requests_c(TReqTRepReplier_name)
+
+#define TReqTRepReplier_send_reply_c(TReqTRepReplier_name) concatenate(TReqTRepReplier_name, _send_reply)
+#define TReqTRepReplier_send_reply TReqTRepReplier_send_reply_c(TReqTRepReplier_name)
+
+#define TReqTRepReplier_get_request_datareader_c(TReqTRepReplier_name) concatenate(TReqTRepReplier_name, _get_request_datareader)
+#define TReqTRepReplier_get_request_datareader TReqTRepReplier_get_request_datareader_c(TReqTRepReplier_name)
+
+#define TReqTRepReplier_get_reply_datawriter_c(TReqTRepReplier_name) concatenate(TReqTRepReplier_name, _get_reply_datawriter)
+#define TReqTRepReplier_get_reply_datawriter TReqTRepReplier_get_reply_datawriter_c(TReqTRepReplier_name)
+
+#define TReqTRepReplier_return_loan_c(TReqTRepReplier_name) concatenate(TReqTRepReplier_name, _return_loan)
+#define TReqTRepReplier_return_loan TReqTRepReplier_return_loan_c(TReqTRepReplier_name)
+
+#define TReqTRepReplier_loan_or_copy_samplesI_c(TReqTRepReplier_name) concatenate(TReqTRepReplier_name, _loan_or_copy_samplesI)
+#define TReqTRepReplier_loan_or_copy_samplesI TReqTRepReplier_loan_or_copy_samplesI_c(TReqTRepReplier_name)
+
+
+TReqTRepReplier * TReqTRepReplier_create(
+    DDS_DomainParticipant * participant,
+    char* service_name)
+{
+    TReqTRepReplier* replier = NULL;
+    char* METHOD_NAME = "TReqTRepReplier_create";
+
+    RTI_Connext_ReplierParams params = RTI_Connext_ReplierParams_INITIALIZER;
+
+    params.participant = participant;
+    params.service_name = (char*) service_name;
+
+    replier = TReqTRepReplier_create_w_params(&params);
+    if(replier == NULL) {
+        DDSLog_exception(METHOD_NAME, &RTI_LOG_CREATION_FAILURE_s,
+                         "replier with params");
+        return NULL;
+    }
+
+    return replier;
+}
+
+TReqTRepReplier* TReqTRepReplier_create_w_params(
+    const RTI_Connext_ReplierParams* params)
+{
+    TReqTRepReplier* replier = NULL;
+    char* METHOD_NAME = "TReqTRepReplier_create_w_params";
+    struct DDS_DataReaderListener reader_listener =
+        DDS_DataReaderListener_INITIALIZER;
+    RTI_Connext_EntityParams entity_params;
+    DDS_ReturnCode_t retcode;
+
+    if(params == NULL) {
+        DDSLog_exception(METHOD_NAME, &DDS_LOG_BAD_PARAMETER_s,
+                         "params");
+        return NULL;
+    }
+
+    RTIOsapiHeap_allocateStructure(&replier, TReqTRepReplier);
+    if(replier == NULL) {
+        DDSLog_exception(METHOD_NAME, &RTI_LOG_ANY_FAILURE_s,
+            "error creating a TReqTRepReplier");
+        goto finish;
+    }
+
+    if (params->listener != NULL) {
+        replier->parent.listener = *params->listener;
+    } else {
+        replier->parent.listener.on_request_available = NULL;
+    }
+
+    replier->parent._impl = RTI_Connext_ReplierUntypedImpl_create();
+    if(replier->parent._impl == NULL) {
+        DDSLog_exception(METHOD_NAME, &RTI_LOG_CREATION_FAILURE_s,
+                         "ReplierUntypedImpl");
+        goto finish;
+    }
+
+    RTI_Connext_ReplierParams_toEntityParams(params, &entity_params);
+
+    reader_listener.on_data_available = RTI_Connext_Replier_on_data_available;
+    reader_listener.as_listener.listener_data = replier;
+
+    retcode = RTI_Connext_ReplierUntypedImpl_initialize(
+        replier->parent._impl,
+        &entity_params,
+        &TReqTypeSupport_register_type,
+        TReqTypeSupport_get_type_name(),
+        &TRepTypeSupport_register_type,
+        TRepTypeSupport_get_type_name(),
+        sizeof(TReq),
+        params->listener != NULL ? &reader_listener : NULL);
+
+    if (retcode != DDS_RETCODE_OK) {
+        DDSLog_exception(METHOD_NAME, &RTI_LOG_ANY_FAILURE_s,
+                         "initialize ReplierUntypedImpl");
+        goto finish;
+    }
+
+    return replier;
+
+finish:
+    if(replier != NULL) {
+        RTI_Connext_Replier_delete((RTI_Connext_Replier *) replier);
+    }
+    return NULL;
+}
+
+
+DDS_ReturnCode_t TReqTRepReplier_loan_or_copy_samplesI(
+    TReqTRepReplier * self,
+    DDS_ReturnCode_t inRetCode,
+    struct TReqSeq* received_data,
+    DDS_Boolean isLoan,
+    void **dataPtrArray,
+    int dataCount,
+    struct DDS_SampleInfoSeq* info_seq)
+{
+    DDS_ReturnCode_t result = inRetCode;
+
+    if (inRetCode == DDS_RETCODE_NO_DATA) {
+        TReqSeq_set_length(received_data, 0);
+        goto done;
+    }
+
+    if (inRetCode != DDS_RETCODE_OK) {
+        goto done;
+    }
+
+    if (isLoan) {
+        /* loan buffer to sequence */
+        if (!TReqSeq_loan_discontiguous(received_data,
+                                        (TReq **)dataPtrArray, dataCount,
+                                        dataCount)) {
+            /* this should never happen */
+            result = DDS_RETCODE_ERROR;
+            /* since we failed to loan data to data seq, but data is already
+               taken, we will need to return it still.
+               Note that data will be lost in this case */
+            RTI_Connext_EntityUntypedImpl_return_loan(
+                self->parent._impl, dataPtrArray, info_seq);
+        }
+    } else {
+        /* data is already copied to dataSeqContiguousBuffer */
+        if (!TReqSeq_set_length(received_data, dataCount)) {
+            /* this should never happen */
+            result = DDS_RETCODE_ERROR;
+        }
+    }
+
+  done:
+
+  return result;
+}
+
+DDS_ReturnCode_t TReqTRepReplier_take_request(
+    TReqTRepReplier* self,
+    TReq * request,
+    struct DDS_SampleInfo * sample_info)
+{
+    DDS_ReturnCode_t retCode = DDS_RETCODE_OK;
+    const char* METHOD_NAME = "TReqTRepReplier_take_request";
+
+    struct DDS_SampleInfoSeq info_seq = DDS_SEQUENCE_INITIALIZER;
+    void ** data = NULL;
+    int count = 0;
+    DDS_Boolean isLoan = DDS_BOOLEAN_TRUE;
+
+    if(self == NULL) {
+        DDSLog_exception(METHOD_NAME, &DDS_LOG_BAD_PARAMETER_s,
+                         "self");
+        return DDS_RETCODE_BAD_PARAMETER;
+    }
+    if(request == NULL) {
+        DDSLog_exception(METHOD_NAME, &DDS_LOG_BAD_PARAMETER_s,
+                         "request");
+        return DDS_RETCODE_BAD_PARAMETER;
+    }
+    if(sample_info == NULL) {
+        DDSLog_exception(METHOD_NAME, &DDS_LOG_BAD_PARAMETER_s,
+                         "sample_info");
+        return DDS_RETCODE_BAD_PARAMETER;
+    }
+    sample_info->valid_data = DDS_BOOLEAN_FALSE;
+
+    /* No read condition, get any reply */
+    retCode = RTI_Connext_EntityUntypedImpl_get_sample_loaned(
+        self->parent._impl,
+        &data,
+        &count,
+        &isLoan,
+        NULL,
+        &info_seq,
+        (DDS_Long)0, /* dataSeqLen */
+        (DDS_Long)0, /* dataSeqMaxLen */
+        DDS_BOOLEAN_TRUE, /* dataSeqHasOwnership */
+        1,
+        NULL,
+        RTI_TRUE);
+
+    if (retCode != DDS_RETCODE_OK) {
+        if (retCode != DDS_RETCODE_NO_DATA ) {
+            DDSLog_exception(METHOD_NAME, &RTI_LOG_ANY_FAILURE_s,
+                             "get sample");
+        }
+        return retCode;
+    }
+
+    retCode = TReqTypeSupport_copy_data(request, *((TReq**)data));
+    if(retCode != DDS_RETCODE_OK) {
+        DDSLog_exception(METHOD_NAME, &RTI_LOG_ANY_FAILURE_s,
+                         "copy sample");
+        goto done;
+    }
+
+    if(DDS_SampleInfoSeq_get_length(&info_seq) != 0) {
+        /* TODO: implement copy function? */
+        *sample_info = DDS_SampleInfoSeq_get(&info_seq, 0);
+    }
+
+  done:
+    RTI_Connext_EntityUntypedImpl_return_loan(self->parent._impl, data, &info_seq);
+    return retCode;
+}
+
+
+/* TODO: do checking on params */
+DDS_ReturnCode_t TReqTRepReplier_take_requests(
+    TReqTRepReplier* self,
+    struct TReqSeq* requests,
+    struct DDS_SampleInfoSeq * info_seq,
+    DDS_Long max_request_count)
+{
+    const char* METHOD_NAME = "TReqTRepReplier_take_requests";
+
+    DDS_Long dataSeqLen = 0;
+    DDS_Long dataSeqMaxLen = 0;
+    DDS_Boolean dataSeqHasOwnership = DDS_BOOLEAN_FALSE;
+    DDS_Boolean isLoan = DDS_BOOLEAN_TRUE;
+    void **dataPtrArray = NULL;
+    int dataCount = 0;
+    DDS_ReturnCode_t result = DDS_RETCODE_OK;
+    TReq *dataSeqContiguousBuffer = NULL;
+
+    /* --- Check parameters --- */
+    if (requests == NULL) {
+        DDSLog_exception(METHOD_NAME, &DDS_LOG_BAD_PARAMETER_s,
+                         "requests is NULL");
+        return DDS_RETCODE_BAD_PARAMETER;
+    }
+
+    /* --- get dataSeq information --- */
+    dataSeqLen = TReqSeq_get_length(requests);
+    dataSeqMaxLen = TReqSeq_get_maximum(requests);
+    dataSeqHasOwnership = TReqSeq_has_ownership(requests);
+    dataSeqContiguousBuffer = TReqSeq_get_contiguous_bufferI(requests);
+
+    result = RTI_Connext_EntityUntypedImpl_get_sample_loaned(
+        self->parent._impl,
+        &dataPtrArray,
+        &dataCount,
+        &isLoan,
+        (void*)dataSeqContiguousBuffer,
+        info_seq,
+        dataSeqLen,
+        dataSeqMaxLen,
+        dataSeqHasOwnership,
+        max_request_count,
+        NULL,
+        RTI_TRUE);
+
+    result = TReqTRepReplier_loan_or_copy_samplesI(
+        self, result, requests,
+        isLoan, dataPtrArray, dataCount, info_seq);
+
+    if(result != DDS_RETCODE_OK && result != DDS_RETCODE_NO_DATA) {
+        DDSLog_exception(METHOD_NAME, &DDS_LOG_BAD_PARAMETER_s,
+            "error loan or copying data");
+    }
+
+    return result;
+}
+
+DDS_ReturnCode_t TReqTRepReplier_read_request(
+    TReqTRepReplier* self,
+    TReq * request,
+    struct DDS_SampleInfo * sample_info)
+{
+    DDS_ReturnCode_t retCode = DDS_RETCODE_OK;
+    const char* METHOD_NAME = "TReqTRepReplier_read_request";
+
+    struct DDS_SampleInfoSeq info_seq = DDS_SEQUENCE_INITIALIZER;
+    void ** data = NULL;
+    int count = 0;
+    DDS_Boolean isLoan = DDS_BOOLEAN_TRUE;
+
+    if(self == NULL) {
+        DDSLog_exception(METHOD_NAME, &DDS_LOG_BAD_PARAMETER_s,
+                         "self");
+        return DDS_RETCODE_BAD_PARAMETER;
+    }
+    if(request == NULL) {
+        DDSLog_exception(METHOD_NAME, &DDS_LOG_BAD_PARAMETER_s,
+                         "request");
+        return DDS_RETCODE_BAD_PARAMETER;
+    }
+    if(sample_info == NULL) {
+        DDSLog_exception(METHOD_NAME, &DDS_LOG_BAD_PARAMETER_s,
+                         "sample_info");
+        return DDS_RETCODE_BAD_PARAMETER;
+    }
+    sample_info->valid_data = DDS_BOOLEAN_FALSE;
+
+    /* No read condition, get any reply */
+    retCode = RTI_Connext_EntityUntypedImpl_get_sample_loaned(
+        self->parent._impl,
+        &data,
+        &count,
+        &isLoan,
+        NULL,
+        &info_seq,
+        (DDS_Long)0, /* dataSeqLen */
+        (DDS_Long)0, /* dataSeqMaxLen */
+        DDS_BOOLEAN_TRUE, /* dataSeqHasOwnership */
+        1,
+        NULL,
+        RTI_FALSE);
+
+    if (retCode != DDS_RETCODE_OK) {
+        if (retCode != DDS_RETCODE_NO_DATA ) {
+            DDSLog_exception(METHOD_NAME, &RTI_LOG_ANY_FAILURE_s,
+                             "get sample");
+        }
+        return retCode;
+    }
+
+    retCode = TReqTypeSupport_copy_data(request, *((TReq**)data));
+    if(retCode != DDS_RETCODE_OK) {
+        DDSLog_exception(METHOD_NAME, &RTI_LOG_ANY_FAILURE_s,
+                         "copy sample");
+        goto done;
+    }
+
+    if(DDS_SampleInfoSeq_get_length(&info_seq) != 0) {
+        /* TODO: implement copy function? */
+        *sample_info = DDS_SampleInfoSeq_get(&info_seq, 0);
+    }
+
+  done:
+    RTI_Connext_EntityUntypedImpl_return_loan(self->parent._impl, data, &info_seq);
+    return retCode;
+}
+
+
+/* TODO: do checking on params */
+DDS_ReturnCode_t TReqTRepReplier_read_requests(
+    TReqTRepReplier* self,
+    struct TReqSeq* requests,
+    struct DDS_SampleInfoSeq * info_seq,
+    DDS_Long max_request_count)
+{
+    const char* METHOD_NAME = "TReqTRepReplier_read_requests";
+
+    DDS_Long dataSeqLen = 0;
+    DDS_Long dataSeqMaxLen = 0;
+    DDS_Boolean dataSeqHasOwnership = DDS_BOOLEAN_FALSE;
+    DDS_Boolean isLoan = DDS_BOOLEAN_TRUE;
+    void **dataPtrArray = NULL;
+    int dataCount = 0;
+    DDS_ReturnCode_t result = DDS_RETCODE_OK;
+    TReq *dataSeqContiguousBuffer = NULL;
+
+    /* --- Check parameters --- */
+    if (requests == NULL) {
+        DDSLog_exception(METHOD_NAME, &DDS_LOG_BAD_PARAMETER_s,
+                         "requests is NULL");
+        return DDS_RETCODE_BAD_PARAMETER;
+    }
+
+    /* --- get dataSeq information --- */
+    dataSeqLen = TReqSeq_get_length(requests);
+    dataSeqMaxLen = TReqSeq_get_maximum(requests);
+    dataSeqHasOwnership = TReqSeq_has_ownership(requests);
+    dataSeqContiguousBuffer = TReqSeq_get_contiguous_bufferI(requests);
+
+    result = RTI_Connext_EntityUntypedImpl_get_sample_loaned(
+        self->parent._impl,
+        &dataPtrArray,
+        &dataCount,
+        &isLoan,
+        (void*)dataSeqContiguousBuffer,
+        info_seq,
+        dataSeqLen,
+        dataSeqMaxLen,
+        dataSeqHasOwnership,
+        max_request_count,
+        NULL,
+        RTI_FALSE);
+
+    result = TReqTRepReplier_loan_or_copy_samplesI(
+        self, result, requests,
+        isLoan, dataPtrArray, dataCount, info_seq);
+
+    if(result != DDS_RETCODE_OK && result != DDS_RETCODE_NO_DATA) {
+        DDSLog_exception(METHOD_NAME, &DDS_LOG_BAD_PARAMETER_s,
+            "error loan or copying data");
+    }
+
+    return result;
+}
+
+DDS_ReturnCode_t TReqTRepReplier_receive_request(
+    TReqTRepReplier * self,
+    TReq * request,
+    struct DDS_SampleInfo * sample_info,
+    const struct DDS_Duration_t * max_wait)
+{
+    DDS_ReturnCode_t retCode = DDS_RETCODE_OK;
+    const char* METHOD_NAME = "TReqTRepReplier_receive_reply";
+
+    if(self == NULL) {
+        DDSLog_exception(METHOD_NAME, &DDS_LOG_BAD_PARAMETER_s,
+                         "self");
+        return DDS_RETCODE_BAD_PARAMETER;
+    }
+    if(request == NULL) {
+        DDSLog_exception(METHOD_NAME, &DDS_LOG_BAD_PARAMETER_s,
+                         "request");
+        return DDS_RETCODE_BAD_PARAMETER;
+    }
+    if(sample_info == NULL) {
+        DDSLog_exception(METHOD_NAME, &DDS_LOG_BAD_PARAMETER_s,
+                         "sample_info");
+        return DDS_RETCODE_BAD_PARAMETER;
+    }
+    if(max_wait == NULL) {
+        DDSLog_exception(METHOD_NAME, &DDS_LOG_BAD_PARAMETER_s,
+                         "max_wait");
+        return DDS_RETCODE_BAD_PARAMETER;
+    }
+    sample_info->valid_data = DDS_BOOLEAN_FALSE;
+
+    retCode = RTI_Connext_Replier_wait_for_requests(
+        (RTI_Connext_Replier *) self, 1, max_wait);
+    if (retCode != DDS_RETCODE_OK) {
+        if (retCode != DDS_RETCODE_TIMEOUT) {
+            DDSLog_exception(METHOD_NAME, &RTI_LOG_ANY_FAILURE_s,
+                             "wait for requests");
+        }
+        return retCode;
+    }
+
+    retCode = TReqTRepReplier_take_request(self, request, sample_info);
+    if (retCode != DDS_RETCODE_OK) {
+        if (retCode != DDS_RETCODE_NO_DATA) {
+            DDSLog_exception(METHOD_NAME, &RTI_LOG_ANY_FAILURE_s,
+                             "get request");
+        }
+        return retCode;
+    }
+
+    return DDS_RETCODE_OK;
+}
+
+DDS_ReturnCode_t TReqTRepReplier_receive_requests(
+    TReqTRepReplier * self,
+    struct TReqSeq * requests,
+    struct DDS_SampleInfoSeq * info_seq,
+    DDS_Long min_count,
+    DDS_Long max_count,
+    const struct DDS_Duration_t * max_wait)
+{
+    DDS_ReturnCode_t retCode = DDS_RETCODE_OK;
+    const char* METHOD_NAME = "TReqTRepReplier_receive_requests";
+
+    if(self == NULL) {
+        DDSLog_exception(METHOD_NAME, &DDS_LOG_BAD_PARAMETER_s,
+                         "self");
+        return DDS_RETCODE_BAD_PARAMETER;
+    }
+    if(requests == NULL) {
+        DDSLog_exception(METHOD_NAME, &DDS_LOG_BAD_PARAMETER_s,
+                         "requests");
+        return DDS_RETCODE_BAD_PARAMETER;
+    }
+    if(info_seq == NULL) {
+        DDSLog_exception(METHOD_NAME, &DDS_LOG_BAD_PARAMETER_s,
+                         "info_seq");
+        return DDS_RETCODE_BAD_PARAMETER;
+    }
+    if(max_wait == NULL) {
+        DDSLog_exception(METHOD_NAME, &DDS_LOG_BAD_PARAMETER_s,
+                         "max_wait");
+        return DDS_RETCODE_BAD_PARAMETER;
+    }
+
+    if (!RTI_Connext_EntityUntypedImpl_validate_receive_params(
+        self->parent._impl, METHOD_NAME, min_count, max_count, max_wait)) {
+        return DDS_RETCODE_BAD_PARAMETER;
+    }
+
+    retCode = RTI_Connext_Replier_wait_for_requests(
+        (RTI_Connext_Replier *) self, min_count, max_wait);
+    if (retCode != DDS_RETCODE_OK) {
+        if (retCode != DDS_RETCODE_TIMEOUT) {
+            DDSLog_exception(METHOD_NAME, &RTI_LOG_ANY_FAILURE_s,
+                             "wait for requests");
+        }
+        return retCode;
+    }
+
+    retCode = TReqTRepReplier_take_requests(
+        self, requests, info_seq, max_count);
+    if (retCode != DDS_RETCODE_OK) {
+        if (retCode != DDS_RETCODE_NO_DATA) {
+            DDSLog_exception(METHOD_NAME, &RTI_LOG_ANY_FAILURE_s,
+                             "get requests");
+        }
+        return retCode;
+    }
+
+    return DDS_RETCODE_OK;
+}
+
+/* TODO: add TReqTRepReplier_send_reply_w_params API */
+DDS_ReturnCode_t TReqTRepReplier_send_reply(
+    TReqTRepReplier* self,
+    TRep* reply,
+    const struct DDS_SampleIdentity_t * related_request_id)
+{
+    DDS_ReturnCode_t retCode = DDS_RETCODE_OK;
+    const char* METHOD_NAME = "TReqTRepReplier_send_reply";
+    struct DDS_WriteParams_t params = DDS_WRITEPARAMS_DEFAULT;
+
+    if(self == NULL) {
+        DDSLog_exception(METHOD_NAME, &DDS_LOG_BAD_PARAMETER_s,
+                         "self");
+        return DDS_RETCODE_BAD_PARAMETER;
+    }
+    if(reply == NULL) {
+        DDSLog_exception(METHOD_NAME, &DDS_LOG_BAD_PARAMETER_s,
+                         "reply");
+        return DDS_RETCODE_BAD_PARAMETER;
+    }
+    if(related_request_id == NULL) {
+        DDSLog_exception(METHOD_NAME, &DDS_LOG_BAD_PARAMETER_s,
+                         "related_request_id");
+        return DDS_RETCODE_BAD_PARAMETER;
+    }
+
+    retCode = RTI_Connext_ReplierUntypedImpl_send_sample(
+        self->parent._impl, (void*)reply, related_request_id, &params);
+
+    if(retCode != DDS_RETCODE_OK) {
+        DDSLog_exception(METHOD_NAME, &RTI_LOG_ANY_FAILURE_s,
+                         "send reply");
+    }
+    return retCode;
+}
+
+
+TRepDataWriter* TReqTRepReplier_get_reply_datawriter(TReqTRepReplier* self)
+{
+    const char* METHOD_NAME = "TReqTRepReplier_get_reply_datawriter";
+
+    DDS_DataWriter * internal_writer = NULL;
+
+    if(self == NULL) {
+        DDSLog_exception(METHOD_NAME, &DDS_LOG_BAD_PARAMETER_s,
+                         "self");
+        return NULL;
+    }
+
+    internal_writer = RTI_Connext_EntityUntypedImpl_get_datawriter(self->parent._impl);
+    if(internal_writer == NULL) {
+        DDSLog_exception(METHOD_NAME, &RTI_LOG_GET_FAILURE_s,
+                         "reply DataWriter");
+        return NULL;
+    }
+
+    return TRepDataWriter_narrow(internal_writer);
+}
+
+TReqDataReader * TReqTRepReplier_get_request_datareader(TReqTRepReplier* self)
+{
+    const char* METHOD_NAME = "TReqTRepReplier_get_request_datareader";
+
+    DDS_DataReader* internal_reader = NULL;
+
+    if(self == NULL) {
+        DDSLog_exception(METHOD_NAME, &DDS_LOG_BAD_PARAMETER_s,
+                         "self");
+        return NULL;
+    }
+
+    internal_reader = RTI_Connext_EntityUntypedImpl_get_datareader(self->parent._impl);
+    if(internal_reader == NULL) {
+        DDSLog_exception(METHOD_NAME, &RTI_LOG_GET_FAILURE_s,
+                         "request DataReader");
+        return NULL;
+    }
+
+    return TReqDataReader_narrow(internal_reader);
+}
+
+DDS_ReturnCode_t TReqTRepReplier_return_loan(
+    TReqTRepReplier* self,
+    struct TReqSeq *replies,
+    struct DDS_SampleInfoSeq *info_seq)
+{
+    const char* METHOD_NAME = "TReqTRepReplier_return_loan";
+    DDS_ReturnCode_t retCode = DDS_RETCODE_OK;
+    TReqDataReader * reader = NULL;
+
+    if(self == NULL) {
+        DDSLog_exception(METHOD_NAME, &DDS_LOG_BAD_PARAMETER_s,
+                         "self");
+        return DDS_RETCODE_BAD_PARAMETER;
+    }
+    if(replies == NULL) {
+        DDSLog_exception(METHOD_NAME, &DDS_LOG_BAD_PARAMETER_s,
+                         "replies");
+        return DDS_RETCODE_BAD_PARAMETER;
+    }
+    if(info_seq == NULL) {
+        DDSLog_exception(METHOD_NAME, &DDS_LOG_BAD_PARAMETER_s,
+                         "info_seq");
+        return DDS_RETCODE_BAD_PARAMETER;
+    }
+
+    reader = TReqTRepReplier_get_request_datareader(self);
+    if (reader == NULL) {
+        DDSLog_exception(METHOD_NAME, &RTI_LOG_GET_FAILURE_s,
+                         "reader to return loan");
+        return DDS_RETCODE_ERROR;
+    }
+
+    retCode = TReqDataReader_return_loan(reader, replies, info_seq);
+    if(retCode != DDS_RETCODE_OK) {
+        DDSLog_exception(METHOD_NAME, &RTI_LOG_ANY_FAILURE_s,
+                         "return loan");
+        return retCode;
+    }
+
+    return retCode;
+}
+
+#undef TReqTypeSupport_get_type_name_c
+#undef TReqTypeSupport_get_type_name
+
+#undef TRepTypeSupport_get_type_name_c
+#undef TRepTypeSupport_get_type_name
+
+
+#endif
+
+/* ----------------------------------------------------------------- */
+/* End of $Id$ */

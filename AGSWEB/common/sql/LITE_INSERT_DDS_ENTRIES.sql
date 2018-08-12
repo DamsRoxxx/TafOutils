@@ -1,0 +1,23 @@
+DELETE FROM DDS;
+SELECT * FROM DDS;
+
+INSERT INTO DDS
+VALUES(NULL, "N1", "T1", "D1--- idInfo: 69 ---");
+
+INSERT INTO DDS
+VALUES(NULL, "N1", "T1", "D2--- idInfo: 69 ---");
+
+INSERT INTO DDS
+VALUES(NULL, "N1", "T2", "D3--- idInfo: 67 ---");
+
+INSERT INTO DDS
+VALUES(NULL, "N1", "T1", "D4--- idInfo: 69 ---");
+
+INSERT INTO DDS
+VALUES(NULL, "N1", "T1", "D5--- idInfo: 96 ---");
+
+INSERT INTO DDS
+VALUES(NULL, "N1", "T2", "D6--- idInfo: 67 ---");
+
+SELECT * FROM DDS;
+

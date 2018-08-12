@@ -1,0 +1,1067 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TypeEquipement module="" nom="EC_API">
+    <Info cle="mot_id_ligne_station" mot="448" bit="-1"/>
+    <Info cle="mot_id_type_numero_equipement" mot="449" bit="-1"/>
+    <Info cle="mot_id_mois_annee_version" mot="450" bit="-1"/>
+    <Info cle="mot_id_version_programme" mot="450" bit="-1"/>
+    <Info cle="mot_id_checksum" mot="451" bit="-1"/>
+    <Info cle="mot_id_image_mot0_commande" mot="452" bit="-1"/>
+    <Info cle="mot_id_image_mot6_commande" mot="453" bit="-1"/>
+    <Info cle="mot_id_image_mot7_commande" mot="454" bit="-1"/>
+    <Info cle="mot_id_image_mot8_commande" mot="455" bit="-1"/>
+    <Info cle="mot_id_image_mot9_commande" mot="456" bit="-1"/>
+    <Info cle="mot_id_image_mot10_commande" mot="457" bit="-1"/>
+    <Info cle="mot_id_image_mot11_commande" mot="458" bit="-1"/>
+    <Info cle="mot_id_image_mot12_commande" mot="459" bit="-1"/>
+    <Info cle="mot_12_mesure" mot="460" bit="-1"/>
+    <Info cle="mot_mesure_horloge_API_heures_minutes" mot="462" bit="-1"/>
+    <Info cle="mot_mesure_horloge_API_jour_mois" mot="463" bit="-1"/>
+    <Info cle="mot_mesure_image_mot13_commande" mot="513" bit="-1"/>
+    <Info cle="mot_mesure_image_mot14_commande" mot="514" bit="-1"/>
+    <Info cle="mot_mesure_image_mot15_commande" mot="515" bit="-1"/>
+    <Info cle="mot_mesure_image_mot16_commande" mot="516" bit="-1"/>
+    <Info cle="mot_mesure_image_mot17_commande" mot="517" bit="-1"/>
+    <Info cle="mot_mesure_image_mot18_commande" mot="518" bit="-1"/>
+    <Info cle="mot_mesure_image_mot19_commande" mot="519" bit="-1"/>
+    <Info cle="mot_mesure_image_mot20_commande" mot="520" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC1_AP1" mot="521" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC2_AP1" mot="522" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC3_AP1" mot="523" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC4_AP1" mot="524" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC5_AP1" mot="525" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC6_AP1" mot="526" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC7_AP1" mot="527" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC8_AP1" mot="528" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC9_AP1" mot="529" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC10_AP1" mot="530" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC11_AP1" mot="531" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC1_AP2" mot="532" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC2_AP2" mot="533" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC3_AP2" mot="534" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC4_AP2" mot="535" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC5_AP2" mot="536" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC6_AP2" mot="537" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC7_AP2" mot="538" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC8_AP2" mot="539" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC9_AP2" mot="540" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC10_AP2" mot="541" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC11_AP2" mot="542" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC1_AP3" mot="543" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC2_AP3" mot="544" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC3_AP3" mot="545" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC4_AP3" mot="546" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC5_AP3" mot="547" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC6_AP3" mot="548" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC7_AP3" mot="549" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC8_AP3" mot="550" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC9_AP3" mot="551" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC10_AP3" mot="552" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC11_AP3" mot="553" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC1_AP4" mot="554" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC2_AP4" mot="555" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC3_AP4" mot="556" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC4_AP4" mot="557" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC5_AP4" mot="558" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC6_AP4" mot="559" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC7_AP4" mot="560" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC8_AP4" mot="561" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC9_AP4" mot="562" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC10_AP4" mot="563" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC11_AP4" mot="564" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC1_AP5" mot="565" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC2_AP5" mot="566" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC3_AP5" mot="567" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC4_AP5" mot="568" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC5_AP5" mot="569" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC6_AP5" mot="570" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC7_AP5" mot="571" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC8_AP5" mot="572" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC9_AP5" mot="573" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC10_AP5" mot="574" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC11_AP5" mot="575" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC1_AP6" mot="576" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC2_AP6" mot="577" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC3_AP6" mot="578" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC4_AP6" mot="579" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC5_AP6" mot="580" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC6_AP6" mot="581" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC7_AP6" mot="582" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC8_AP6" mot="583" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC9_AP6" mot="584" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC10_AP6" mot="585" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC11_AP6" mot="586" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC1_AP7" mot="587" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC2_AP7" mot="588" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC3_AP7" mot="589" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC4_AP7" mot="590" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC5_AP7" mot="591" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC6_AP7" mot="592" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC7_AP7" mot="593" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC8_AP7" mot="594" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC9_AP7" mot="595" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC10_AP7" mot="596" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC11_AP7" mot="597" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC1_AP8" mot="598" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC2_AP8" mot="599" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC3_AP8" mot="600" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC4_AP8" mot="601" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC5_AP8" mot="602" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC6_AP8" mot="603" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC7_AP8" mot="604" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC8_AP8" mot="605" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC9_AP8" mot="606" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC10_AP8" mot="607" bit="-1"/>
+    <Info cle="mot_mesure_compteur_horlogetemps_fonctionnement_CC11_AP8" mot="608" bit="-1"/>
+    <Info cle="mot_16_etat" mot="464" bit="-1"/>
+    <Info cle="bit_etat_presence_tension_24_ou_48v" mot="464" bit="0"/>
+    <Info cle="bit_etat_commutateur_coffret_quai_en_position_PCC" mot="464" bit="1"/>
+    <Info cle="bit_etat_commutateur_coffret_quai_en_position_local" mot="464" bit="2"/>
+    <Info cle="bit_etat_commutateur_essaie_ligne" mot="464" bit="3"/>
+    <Info cle="bit_etat_rearmement_et_acq_defauts_cordons_chauffants" mot="464" bit="4"/>
+    <Info cle="bit_etat_fonctionnement_armoires_puissance_par_PCC" mot="464" bit="5"/>
+    <Info cle="bit_etat_defaut_communication_api_fils" mot="464" bit="6"/>
+    <Info cle="bit_etat_defaut_API" mot="464" bit="15"/>
+    <Info cle="mot_17_etat" mot="465" bit="-1"/>
+    <Info cle="bit_etat_disjoncteur_general_220V_AP1" mot="465" bit="0"/>
+    <Info cle="bit_etat_sectionneur_general_750V_AP1" mot="465" bit="1"/>
+    <Info cle="bit_etat_presence_tension_750V_AP1" mot="465" bit="2"/>
+    <Info cle="bit_etat_commutateur_AP1_en_position_distant" mot="465" bit="3"/>
+    <Info cle="bit_etat_commutateur_AP1_en_position_arret" mot="465" bit="4"/>
+    <Info cle="bit_etat_fonctionnement_AP1" mot="465" bit="5"/>
+    <Info cle="bit_etat_synthese_fonctionnement_cordons_interieurs_AP1" mot="465" bit="6"/>
+    <Info cle="bit_etat_synthese_fonctionnement_cordons_exterieurs_AP1" mot="465" bit="7"/>
+    <Info cle="bit_etat_fonctionnement_CC1_AP1" mot="465" bit="12"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC1_AP1" mot="465" bit="13"/>
+    <Info cle="bit_alerte_defaut_haut_CC1_AP1" mot="465" bit="14"/>
+    <Info cle="bit_alarme_defaut_bas_CC1_AP1" mot="465" bit="15"/>
+    <Info cle="mot_18_etat" mot="466" bit="-1"/>
+    <Info cle="bit_alarme_defaut_fusible_CC1_AP1" mot="466" bit="0"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC1_AP1" mot="466" bit="1"/>
+    <Info cle="bit_etat_shunt_CC1_AP1_actif" mot="466" bit="2"/>
+    <Info cle="bit_etat_fonctionnement_CC2_AP1" mot="466" bit="3"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC2_AP1" mot="466" bit="4"/>
+    <Info cle="bit_alerte_defaut_haut_CC2_AP1" mot="466" bit="5"/>
+    <Info cle="bit_alarme_defaut_bas_CC2_AP1" mot="466" bit="6"/>
+    <Info cle="bit_alarme_defaut_fusible_CC2_AP1" mot="466" bit="7"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC2_AP1" mot="466" bit="8"/>
+    <Info cle="bit_etat_shunt_CC2_AP1_actif" mot="466" bit="9"/>
+    <Info cle="bit_etat_fonctionnement_CC3_AP1" mot="466" bit="10"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC3_AP1" mot="466" bit="11"/>
+    <Info cle="bit_alerte_defaut_haut_CC3_AP1" mot="466" bit="12"/>
+    <Info cle="bit_alarme_defaut_bas_CC3_AP1" mot="466" bit="13"/>
+    <Info cle="bit_alarme_defaut_fusible_CC3_AP1" mot="466" bit="14"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC3_AP1" mot="466" bit="15"/>
+    <Info cle="mot_19_etat" mot="467" bit="-1"/>
+    <Info cle="bit_etat_shunt_CC3_AP1_actif" mot="467" bit="0"/>
+    <Info cle="bit_etat_fonctionnement_CC4_AP1" mot="467" bit="1"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC4_AP1" mot="467" bit="2"/>
+    <Info cle="bit_alerte_defaut_haut_CC4_AP1" mot="467" bit="3"/>
+    <Info cle="bit_alarme_defaut_bas_CC4_AP1" mot="467" bit="4"/>
+    <Info cle="bit_alarme_defaut_fusible_CC4_AP1" mot="467" bit="5"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC4_AP1" mot="467" bit="6"/>
+    <Info cle="bit_etat_shunt_CC4_AP1_actif" mot="467" bit="7"/>
+    <Info cle="bit_etat_fonctionnement_CC5_AP1" mot="467" bit="8"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC5_AP1" mot="467" bit="9"/>
+    <Info cle="bit_alerte_defaut_haut_CC5_AP1" mot="467" bit="10"/>
+    <Info cle="bit_alarme_defaut_bas_CC5_AP1" mot="467" bit="11"/>
+    <Info cle="bit_alarme_defaut_fusible_CC5_AP1" mot="467" bit="12"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC5_AP1" mot="467" bit="13"/>
+    <Info cle="bit_etat_shunt_CC5_AP1_actif" mot="467" bit="14"/>
+    <Info cle="bit_etat_fonctionnement_CC6_AP1" mot="467" bit="15"/>
+    <Info cle="mot_20_etat" mot="468" bit="-1"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC6_AP1" mot="468" bit="0"/>
+    <Info cle="bit_alerte_defaut_haut_CC6_AP1" mot="468" bit="1"/>
+    <Info cle="bit_alarme_defaut_bas_CC6_AP1" mot="468" bit="2"/>
+    <Info cle="bit_alarme_defaut_fusible_CC6_AP1" mot="468" bit="3"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC6_AP1" mot="468" bit="4"/>
+    <Info cle="bit_etat_shunt_CC6_AP1_actif" mot="468" bit="5"/>
+    <Info cle="bit_etat_fonctionnement_CC7_AP1" mot="468" bit="6"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC7_AP1" mot="468" bit="7"/>
+    <Info cle="bit_alerte_defaut_haut_CC7_AP1" mot="468" bit="8"/>
+    <Info cle="bit_alarme_defaut_bas_CC7_AP1" mot="468" bit="9"/>
+    <Info cle="bit_alarme_defaut_fusible_CC7_AP1" mot="468" bit="10"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC7_AP1" mot="468" bit="11"/>
+    <Info cle="bit_etat_shunt_CC7_AP1_actif" mot="468" bit="12"/>
+    <Info cle="bit_etat_fonctionnement_CC8_AP1" mot="468" bit="13"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC8_AP1" mot="468" bit="14"/>
+    <Info cle="bit_alerte_defaut_haut_CC8_AP1" mot="468" bit="15"/>
+    <Info cle="mot_21_etat" mot="469" bit="-1"/>
+    <Info cle="bit_alarme_defaut_bas_CC8_AP1" mot="469" bit="0"/>
+    <Info cle="bit_alarme_defaut_fusible_CC8_AP1" mot="469" bit="1"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC8_AP1" mot="469" bit="2"/>
+    <Info cle="bit_etat_shunt_CC8_AP1_actif" mot="469" bit="3"/>
+    <Info cle="bit_etat_fonctionnement_CC9_AP1" mot="469" bit="4"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC9_AP1" mot="469" bit="5"/>
+    <Info cle="bit_alerte_defaut_haut_CC9_AP1" mot="469" bit="6"/>
+    <Info cle="bit_alarme_defaut_bas_CC9_AP1" mot="469" bit="7"/>
+    <Info cle="bit_alarme_defaut_fusible_CC9_AP1" mot="469" bit="8"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC9_AP1" mot="469" bit="9"/>
+    <Info cle="bit_etat_shunt_CC9_AP1_actif" mot="469" bit="10"/>
+    <Info cle="bit_etat_fonctionnement_CC10_AP1" mot="469" bit="11"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC10_AP1" mot="469" bit="12"/>
+    <Info cle="bit_alerte_defaut_haut_CC10_AP1" mot="469" bit="13"/>
+    <Info cle="bit_alarme_defaut_bas_CC10_AP1" mot="469" bit="14"/>
+    <Info cle="bit_alarme_defaut_fusible_CC10_AP1" mot="469" bit="15"/>
+    <Info cle="mot_22_etat" mot="470" bit="-1"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC10_AP1" mot="470" bit="0"/>
+    <Info cle="bit_etat_shunt_CC10_AP1_actif" mot="470" bit="1"/>
+    <Info cle="bit_etat_fonctionnement_CC11_AP1" mot="470" bit="2"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC11_AP1" mot="470" bit="3"/>
+    <Info cle="bit_alerte_defaut_haut_CC11_AP1" mot="470" bit="4"/>
+    <Info cle="bit_alarme_defaut_bas_CC11_AP1" mot="470" bit="5"/>
+    <Info cle="bit_alarme_defaut_fusible_CC11_AP1" mot="470" bit="6"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC11_AP1" mot="470" bit="7"/>
+    <Info cle="bit_etat_shunt_CC11_AP1_actif" mot="470" bit="8"/>
+    <Info cle="mot_23_etat" mot="471" bit="-1"/>
+    <Info cle="bit_etat_disjoncteur_general_220V_AP2" mot="471" bit="0"/>
+    <Info cle="bit_etat_sectionneur_general_750V_AP2" mot="471" bit="1"/>
+    <Info cle="bit_etat_presence_tension_750V_AP2" mot="471" bit="2"/>
+    <Info cle="bit_etat_commutateur_AP2_en_position_distant" mot="471" bit="3"/>
+    <Info cle="bit_etat_commutateur_AP2_en_position_arret" mot="471" bit="4"/>
+    <Info cle="bit_etat_fonctionnement_AP2" mot="471" bit="5"/>
+    <Info cle="bit_etat_synthese_fonctionnement_cordons_interieurs_AP2" mot="471" bit="6"/>
+    <Info cle="bit_etat_synthese_fonctionnement_cordons_exterieurs_AP2" mot="471" bit="7"/>
+    <Info cle="bit_etat_fonctionnement_CC1_AP2" mot="471" bit="12"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC1_AP2" mot="471" bit="13"/>
+    <Info cle="bit_alerte_defaut_haut_CC1_AP2" mot="471" bit="14"/>
+    <Info cle="bit_alarme_defaut_bas_CC1_AP2" mot="471" bit="15"/>
+    <Info cle="mot_24_etat" mot="472" bit="-1"/>
+    <Info cle="bit_alarme_defaut_fusible_CC1_AP2" mot="472" bit="0"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC1_AP2" mot="472" bit="1"/>
+    <Info cle="bit_etat_shunt_CC1_AP2_actif" mot="472" bit="2"/>
+    <Info cle="bit_etat_fonctionnement_CC2_AP2" mot="472" bit="3"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC2_AP2" mot="472" bit="4"/>
+    <Info cle="bit_alerte_defaut_haut_CC2_AP2" mot="472" bit="5"/>
+    <Info cle="bit_alarme_defaut_bas_CC2_AP2" mot="472" bit="6"/>
+    <Info cle="bit_alarme_defaut_fusible_CC2_AP2" mot="472" bit="7"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC2_AP2" mot="472" bit="8"/>
+    <Info cle="bit_etat_shunt_CC2_AP2_actif" mot="472" bit="9"/>
+    <Info cle="bit_etat_fonctionnement_CC3_AP2" mot="472" bit="10"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC3_AP2" mot="472" bit="11"/>
+    <Info cle="bit_alerte_defaut_haut_CC3_AP2" mot="472" bit="12"/>
+    <Info cle="bit_alarme_defaut_bas_CC3_AP2" mot="472" bit="13"/>
+    <Info cle="bit_alarme_defaut_fusible_CC3_AP2" mot="472" bit="14"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC3_AP2" mot="472" bit="15"/>
+    <Info cle="mot_25_etat" mot="473" bit="-1"/>
+    <Info cle="bit_etat_shunt_CC3_AP2_actif" mot="473" bit="0"/>
+    <Info cle="bit_etat_fonctionnement_CC4_AP2" mot="473" bit="1"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC4_AP2" mot="473" bit="2"/>
+    <Info cle="bit_alerte_defaut_haut_CC4_AP2" mot="473" bit="3"/>
+    <Info cle="bit_alarme_defaut_bas_CC4_AP2" mot="473" bit="4"/>
+    <Info cle="bit_alarme_defaut_fusible_CC4_AP2" mot="473" bit="5"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC4_AP2" mot="473" bit="6"/>
+    <Info cle="bit_etat_shunt_CC4_AP2_actif" mot="473" bit="7"/>
+    <Info cle="bit_etat_fonctionnement_CC5_AP2" mot="473" bit="8"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC5_AP2" mot="473" bit="9"/>
+    <Info cle="bit_alerte_defaut_haut_CC5_AP2" mot="473" bit="10"/>
+    <Info cle="bit_alarme_defaut_bas_CC5_AP2" mot="473" bit="11"/>
+    <Info cle="bit_alarme_defaut_fusible_CC5_AP2" mot="473" bit="12"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC5_AP2" mot="473" bit="13"/>
+    <Info cle="bit_etat_shunt_CC5_AP2_actif" mot="473" bit="14"/>
+    <Info cle="bit_etat_fonctionnement_CC6_AP2" mot="473" bit="15"/>
+    <Info cle="mot_26_etat" mot="474" bit="-1"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC6_AP2" mot="474" bit="0"/>
+    <Info cle="bit_alerte_defaut_haut_CC6_AP2" mot="474" bit="1"/>
+    <Info cle="bit_alarme_defaut_bas_CC6_AP2" mot="474" bit="2"/>
+    <Info cle="bit_alarme_defaut_fusible_CC6_AP2" mot="474" bit="3"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC6_AP2" mot="474" bit="4"/>
+    <Info cle="bit_etat_shunt_CC6_AP2_actif" mot="474" bit="5"/>
+    <Info cle="bit_etat_fonctionnement_CC7_AP2" mot="474" bit="6"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC7_AP2" mot="474" bit="7"/>
+    <Info cle="bit_alerte_defaut_haut_CC7_AP2" mot="474" bit="8"/>
+    <Info cle="bit_alarme_defaut_bas_CC7_AP2" mot="474" bit="9"/>
+    <Info cle="bit_alarme_defaut_fusible_CC7_AP2" mot="474" bit="10"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC7_AP2" mot="474" bit="11"/>
+    <Info cle="bit_etat_shunt_CC7_AP2_actif" mot="474" bit="12"/>
+    <Info cle="bit_etat_fonctionnement_CC8_AP2" mot="474" bit="13"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC8_AP2" mot="474" bit="14"/>
+    <Info cle="bit_alerte_defaut_haut_CC8_AP2" mot="474" bit="15"/>
+    <Info cle="mot_27_etat" mot="475" bit="-1"/>
+    <Info cle="bit_alarme_defaut_bas_CC8_AP2" mot="475" bit="0"/>
+    <Info cle="bit_alarme_defaut_fusible_CC8_AP2" mot="475" bit="1"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC8_AP2" mot="475" bit="2"/>
+    <Info cle="bit_etat_shunt_CC8_AP2_actif" mot="475" bit="3"/>
+    <Info cle="bit_etat_fonctionnement_CC9_AP2" mot="475" bit="4"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC9_AP2" mot="475" bit="5"/>
+    <Info cle="bit_alerte_defaut_haut_CC9_AP2" mot="475" bit="6"/>
+    <Info cle="bit_alarme_defaut_bas_CC9_AP2" mot="475" bit="7"/>
+    <Info cle="bit_alarme_defaut_fusible_CC9_AP2" mot="475" bit="8"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC9_AP2" mot="475" bit="9"/>
+    <Info cle="bit_etat_shunt_CC9_AP2_actif" mot="475" bit="10"/>
+    <Info cle="bit_etat_fonctionnement_CC10_AP2" mot="475" bit="11"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC10_AP2" mot="475" bit="12"/>
+    <Info cle="bit_alerte_defaut_haut_CC10_AP2" mot="475" bit="13"/>
+    <Info cle="bit_alarme_defaut_bas_CC10_AP2" mot="475" bit="14"/>
+    <Info cle="bit_alarme_defaut_fusible_CC10_AP2" mot="475" bit="15"/>
+    <Info cle="mot_28_etat" mot="476" bit="-1"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC10_AP2" mot="476" bit="0"/>
+    <Info cle="bit_etat_shunt_CC10_AP2_actif" mot="476" bit="1"/>
+    <Info cle="bit_etat_fonctionnement_CC11_AP2" mot="476" bit="2"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC11_AP2" mot="476" bit="3"/>
+    <Info cle="bit_alerte_defaut_haut_CC11_AP2" mot="476" bit="4"/>
+    <Info cle="bit_alarme_defaut_bas_CC11_AP2" mot="476" bit="5"/>
+    <Info cle="bit_alarme_defaut_fusible_CC11_AP2" mot="476" bit="6"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC11_AP2" mot="476" bit="7"/>
+    <Info cle="bit_etat_shunt_CC11_AP2_actif" mot="476" bit="8"/>
+    <Info cle="mot_29_etat" mot="477" bit="-1"/>
+    <Info cle="bit_etat_disjoncteur_general_220V_AP3" mot="477" bit="0"/>
+    <Info cle="bit_etat_sectionneur_general_750V_AP3" mot="477" bit="1"/>
+    <Info cle="bit_etat_presence_tension_750V_AP3" mot="477" bit="2"/>
+    <Info cle="bit_etat_commutateur_AP3_en_position_distant" mot="477" bit="3"/>
+    <Info cle="bit_etat_commutateur_AP3_en_position_arret" mot="477" bit="4"/>
+    <Info cle="bit_etat_fonctionnement_AP3" mot="477" bit="5"/>
+    <Info cle="bit_etat_synthese_fonctionnement_cordons_interieurs_AP3" mot="477" bit="6"/>
+    <Info cle="bit_etat_synthese_fonctionnement_cordons_exterieurs_AP3" mot="477" bit="7"/>
+    <Info cle="bit_etat_fonctionnement_CC1_AP3" mot="477" bit="12"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC1_AP3" mot="477" bit="13"/>
+    <Info cle="bit_alerte_defaut_haut_CC1_AP3" mot="477" bit="14"/>
+    <Info cle="bit_alarme_defaut_bas_CC1_AP3" mot="477" bit="15"/>
+    <Info cle="mot_30_etat" mot="478" bit="-1"/>
+    <Info cle="bit_alarme_defaut_fusible_CC1_AP3" mot="478" bit="0"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC1_AP3" mot="478" bit="1"/>
+    <Info cle="bit_etat_shunt_CC1_AP3_actif" mot="478" bit="2"/>
+    <Info cle="bit_etat_fonctionnement_CC2_AP3" mot="478" bit="3"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC2_AP3" mot="478" bit="4"/>
+    <Info cle="bit_alerte_defaut_haut_CC2_AP3" mot="478" bit="5"/>
+    <Info cle="bit_alarme_defaut_bas_CC2_AP3" mot="478" bit="6"/>
+    <Info cle="bit_alarme_defaut_fusible_CC2_AP3" mot="478" bit="7"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC2_AP3" mot="478" bit="8"/>
+    <Info cle="bit_etat_shunt_CC2_AP3_actif" mot="478" bit="9"/>
+    <Info cle="bit_etat_fonctionnement_CC3_AP3" mot="478" bit="10"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC3_AP3" mot="478" bit="11"/>
+    <Info cle="bit_alerte_defaut_haut_CC3_AP3" mot="478" bit="12"/>
+    <Info cle="bit_alarme_defaut_bas_CC3_AP3" mot="478" bit="13"/>
+    <Info cle="bit_alarme_defaut_fusible_CC3_AP3" mot="478" bit="14"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC3_AP3" mot="478" bit="15"/>
+    <Info cle="mot_31_etat" mot="479" bit="-1"/>
+    <Info cle="bit_etat_shunt_CC3_AP3_actif" mot="479" bit="0"/>
+    <Info cle="bit_etat_fonctionnement_CC4_AP3" mot="479" bit="1"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC4_AP3" mot="479" bit="2"/>
+    <Info cle="bit_alerte_defaut_haut_CC4_AP3" mot="479" bit="3"/>
+    <Info cle="bit_alarme_defaut_bas_CC4_AP3" mot="479" bit="4"/>
+    <Info cle="bit_alarme_defaut_fusible_CC4_AP3" mot="479" bit="5"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC4_AP3" mot="479" bit="6"/>
+    <Info cle="bit_etat_shunt_CC4_AP3_actif" mot="479" bit="7"/>
+    <Info cle="bit_etat_fonctionnement_CC5_AP3" mot="479" bit="8"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC5_AP3" mot="479" bit="9"/>
+    <Info cle="bit_alerte_defaut_haut_CC5_AP3" mot="479" bit="10"/>
+    <Info cle="bit_alarme_defaut_bas_CC5_AP3" mot="479" bit="11"/>
+    <Info cle="bit_alarme_defaut_fusible_CC5_AP3" mot="479" bit="12"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC5_AP3" mot="479" bit="13"/>
+    <Info cle="bit_etat_shunt_CC5_AP3_actif" mot="479" bit="14"/>
+    <Info cle="bit_etat_fonctionnement_CC6_AP3" mot="479" bit="15"/>
+    <Info cle="mot_32_etat" mot="480" bit="-1"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC6_AP3" mot="480" bit="0"/>
+    <Info cle="bit_alerte_defaut_haut_CC6_AP3" mot="480" bit="1"/>
+    <Info cle="bit_alarme_defaut_bas_CC6_AP3" mot="480" bit="2"/>
+    <Info cle="bit_alarme_defaut_fusible_CC6_AP3" mot="480" bit="3"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC6_AP3" mot="480" bit="4"/>
+    <Info cle="bit_etat_shunt_CC6_AP3_actif" mot="480" bit="5"/>
+    <Info cle="bit_etat_fonctionnement_CC7_AP3" mot="480" bit="6"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC7_AP3" mot="480" bit="7"/>
+    <Info cle="bit_alerte_defaut_haut_CC7_AP3" mot="480" bit="8"/>
+    <Info cle="bit_alarme_defaut_bas_CC7_AP3" mot="480" bit="9"/>
+    <Info cle="bit_alarme_defaut_fusible_CC7_AP3" mot="480" bit="10"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC7_AP3" mot="480" bit="11"/>
+    <Info cle="bit_etat_shunt_CC7_AP3_actif" mot="480" bit="12"/>
+    <Info cle="bit_etat_fonctionnement_CC8_AP3" mot="480" bit="13"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC8_AP3" mot="480" bit="14"/>
+    <Info cle="bit_alerte_defaut_haut_CC8_AP3" mot="480" bit="15"/>
+    <Info cle="mot_33_etat" mot="481" bit="-1"/>
+    <Info cle="bit_alarme_defaut_bas_CC8_AP3" mot="481" bit="0"/>
+    <Info cle="bit_alarme_defaut_fusible_CC8_AP3" mot="481" bit="1"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC8_AP3" mot="481" bit="2"/>
+    <Info cle="bit_etat_shunt_CC8_AP3_actif" mot="481" bit="3"/>
+    <Info cle="bit_etat_fonctionnement_CC9_AP3" mot="481" bit="4"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC9_AP3" mot="481" bit="5"/>
+    <Info cle="bit_alerte_defaut_haut_CC9_AP3" mot="481" bit="6"/>
+    <Info cle="bit_alarme_defaut_bas_CC9_AP3" mot="481" bit="7"/>
+    <Info cle="bit_alarme_defaut_fusible_CC9_AP3" mot="481" bit="8"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC9_AP3" mot="481" bit="9"/>
+    <Info cle="bit_etat_shunt_CC9_AP3_actif" mot="481" bit="10"/>
+    <Info cle="bit_etat_fonctionnement_CC10_AP3" mot="481" bit="11"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC10_AP3" mot="481" bit="12"/>
+    <Info cle="bit_alerte_defaut_haut_CC10_AP3" mot="481" bit="13"/>
+    <Info cle="bit_alarme_defaut_bas_CC10_AP3" mot="481" bit="14"/>
+    <Info cle="bit_alarme_defaut_fusible_CC10_AP3" mot="481" bit="15"/>
+    <Info cle="mot_34_etat" mot="482" bit="-1"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC10_AP3" mot="482" bit="0"/>
+    <Info cle="bit_etat_shunt_CC10_AP3_actif" mot="482" bit="1"/>
+    <Info cle="bit_etat_fonctionnement_CC11_AP3" mot="482" bit="2"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC11_AP3" mot="482" bit="3"/>
+    <Info cle="bit_alerte_defaut_haut_CC11_AP3" mot="482" bit="4"/>
+    <Info cle="bit_alarme_defaut_bas_CC11_AP3" mot="482" bit="5"/>
+    <Info cle="bit_alarme_defaut_fusible_CC11_AP3" mot="482" bit="6"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC11_AP3" mot="482" bit="7"/>
+    <Info cle="bit_etat_shunt_CC11_AP3_actif" mot="482" bit="8"/>
+    <Info cle="mot_35_etat" mot="483" bit="-1"/>
+    <Info cle="bit_etat_disjoncteur_general_220V_AP4" mot="483" bit="0"/>
+    <Info cle="bit_etat_sectionneur_general_750V_AP4" mot="483" bit="1"/>
+    <Info cle="bit_etat_presence_tension_750V_AP4" mot="483" bit="2"/>
+    <Info cle="bit_etat_commutateur_AP4_en_position_distant" mot="483" bit="3"/>
+    <Info cle="bit_etat_commutateur_AP4_en_position_arret" mot="483" bit="4"/>
+    <Info cle="bit_etat_fonctionnement_AP4" mot="483" bit="5"/>
+    <Info cle="bit_etat_synthese_fonctionnement_cordons_interieurs_AP4" mot="483" bit="6"/>
+    <Info cle="bit_etat_synthese_fonctionnement_cordons_exterieurs_AP4" mot="483" bit="7"/>
+    <Info cle="bit_etat_fonctionnement_CC1_AP4" mot="483" bit="12"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC1_AP4" mot="483" bit="13"/>
+    <Info cle="bit_alerte_defaut_haut_CC1_AP4" mot="483" bit="14"/>
+    <Info cle="bit_alarme_defaut_bas_CC1_AP4" mot="483" bit="15"/>
+    <Info cle="mot_36_etat" mot="484" bit="-1"/>
+    <Info cle="bit_alarme_defaut_fusible_CC1_AP4" mot="484" bit="0"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC1_AP4" mot="484" bit="1"/>
+    <Info cle="bit_etat_shunt_CC1_AP4_actif" mot="484" bit="2"/>
+    <Info cle="bit_etat_fonctionnement_CC2_AP4" mot="484" bit="3"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC2_AP4" mot="484" bit="4"/>
+    <Info cle="bit_alerte_defaut_haut_CC2_AP4" mot="484" bit="5"/>
+    <Info cle="bit_alarme_defaut_bas_CC2_AP4" mot="484" bit="6"/>
+    <Info cle="bit_alarme_defaut_fusible_CC2_AP4" mot="484" bit="7"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC2_AP4" mot="484" bit="8"/>
+    <Info cle="bit_etat_shunt_CC2_AP4_actif" mot="484" bit="9"/>
+    <Info cle="bit_etat_fonctionnement_CC3_AP4" mot="484" bit="10"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC3_AP4" mot="484" bit="11"/>
+    <Info cle="bit_alerte_defaut_haut_CC3_AP4" mot="484" bit="12"/>
+    <Info cle="bit_alarme_defaut_bas_CC3_AP4" mot="484" bit="13"/>
+    <Info cle="bit_alarme_defaut_fusible_CC3_AP4" mot="484" bit="14"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC3_AP4" mot="484" bit="15"/>
+    <Info cle="mot_37_etat" mot="485" bit="-1"/>
+    <Info cle="bit_etat_shunt_CC3_AP4_actif" mot="485" bit="0"/>
+    <Info cle="bit_etat_fonctionnement_CC4_AP4" mot="485" bit="1"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC4_AP4" mot="485" bit="2"/>
+    <Info cle="bit_alerte_defaut_haut_CC4_AP4" mot="485" bit="3"/>
+    <Info cle="bit_alarme_defaut_bas_CC4_AP4" mot="485" bit="4"/>
+    <Info cle="bit_alarme_defaut_fusible_CC4_AP4" mot="485" bit="5"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC4_AP4" mot="485" bit="6"/>
+    <Info cle="bit_etat_shunt_CC4_AP4_actif" mot="485" bit="7"/>
+    <Info cle="bit_etat_fonctionnement_CC5_AP4" mot="485" bit="8"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC5_AP4" mot="485" bit="9"/>
+    <Info cle="bit_alerte_defaut_haut_CC5_AP4" mot="485" bit="10"/>
+    <Info cle="bit_alarme_defaut_bas_CC5_AP4" mot="485" bit="11"/>
+    <Info cle="bit_alarme_defaut_fusible_CC5_AP4" mot="485" bit="12"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC5_AP4" mot="485" bit="13"/>
+    <Info cle="bit_etat_shunt_CC5_AP4_actif" mot="485" bit="14"/>
+    <Info cle="bit_etat_fonctionnement_CC6_AP4" mot="485" bit="15"/>
+    <Info cle="mot_38_etat" mot="486" bit="-1"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC6_AP4" mot="486" bit="0"/>
+    <Info cle="bit_alerte_defaut_haut_CC6_AP4" mot="486" bit="1"/>
+    <Info cle="bit_alarme_defaut_bas_CC6_AP4" mot="486" bit="2"/>
+    <Info cle="bit_alarme_defaut_fusible_CC6_AP4" mot="486" bit="3"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC6_AP4" mot="486" bit="4"/>
+    <Info cle="bit_etat_shunt_CC6_AP4_actif" mot="486" bit="5"/>
+    <Info cle="bit_etat_fonctionnement_CC7_AP4" mot="486" bit="6"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC7_AP4" mot="486" bit="7"/>
+    <Info cle="bit_alerte_defaut_haut_CC7_AP4" mot="486" bit="8"/>
+    <Info cle="bit_alarme_defaut_bas_CC7_AP4" mot="486" bit="9"/>
+    <Info cle="bit_alarme_defaut_fusible_CC7_AP4" mot="486" bit="10"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC7_AP4" mot="486" bit="11"/>
+    <Info cle="bit_etat_shunt_CC7_AP4_actif" mot="486" bit="12"/>
+    <Info cle="bit_etat_fonctionnement_CC8_AP4" mot="486" bit="13"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC8_AP4" mot="486" bit="14"/>
+    <Info cle="bit_alerte_defaut_haut_CC8_AP4" mot="486" bit="15"/>
+    <Info cle="mot_39_etat" mot="487" bit="-1"/>
+    <Info cle="bit_alarme_defaut_bas_CC8_AP4" mot="487" bit="0"/>
+    <Info cle="bit_alarme_defaut_fusible_CC8_AP4" mot="487" bit="1"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC8_AP4" mot="487" bit="2"/>
+    <Info cle="bit_etat_shunt_CC8_AP4_actif" mot="487" bit="3"/>
+    <Info cle="bit_etat_fonctionnement_CC9_AP4" mot="487" bit="4"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC9_AP4" mot="487" bit="5"/>
+    <Info cle="bit_alerte_defaut_haut_CC9_AP4" mot="487" bit="6"/>
+    <Info cle="bit_alarme_defaut_bas_CC9_AP4" mot="487" bit="7"/>
+    <Info cle="bit_alarme_defaut_fusible_CC9_AP4" mot="487" bit="8"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC9_AP4" mot="487" bit="9"/>
+    <Info cle="bit_etat_shunt_CC9_AP4_actif" mot="487" bit="10"/>
+    <Info cle="bit_etat_fonctionnement_CC10_AP4" mot="487" bit="11"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC10_AP4" mot="487" bit="12"/>
+    <Info cle="bit_alerte_defaut_haut_CC10_AP4" mot="487" bit="13"/>
+    <Info cle="bit_alarme_defaut_bas_CC10_AP4" mot="487" bit="14"/>
+    <Info cle="bit_alarme_defaut_fusible_CC10_AP4" mot="487" bit="15"/>
+    <Info cle="mot_40_etat" mot="488" bit="-1"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC10_AP4" mot="488" bit="0"/>
+    <Info cle="bit_etat_shunt_CC10_AP4_actif" mot="488" bit="1"/>
+    <Info cle="bit_etat_fonctionnement_CC11_AP4" mot="488" bit="2"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC11_AP4" mot="488" bit="3"/>
+    <Info cle="bit_alerte_defaut_haut_CC11_AP4" mot="488" bit="4"/>
+    <Info cle="bit_alarme_defaut_bas_CC11_AP4" mot="488" bit="5"/>
+    <Info cle="bit_alarme_defaut_fusible_CC11_AP4" mot="488" bit="6"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC11_AP4" mot="488" bit="7"/>
+    <Info cle="bit_etat_shunt_CC11_AP4_actif" mot="488" bit="8"/>
+    <Info cle="mot_41_etat" mot="489" bit="-1"/>
+    <Info cle="bit_etat_disjoncteur_general_220V_AP5" mot="489" bit="0"/>
+    <Info cle="bit_etat_sectionneur_general_750V_AP5" mot="489" bit="1"/>
+    <Info cle="bit_etat_presence_tension_750V_AP5" mot="489" bit="2"/>
+    <Info cle="bit_etat_commutateur_AP5_en_position_distant" mot="489" bit="3"/>
+    <Info cle="bit_etat_commutateur_AP5_en_position_arret" mot="489" bit="4"/>
+    <Info cle="bit_etat_fonctionnement_AP5" mot="489" bit="5"/>
+    <Info cle="bit_etat_synthese_fonctionnement_cordons_interieurs_AP5" mot="489" bit="6"/>
+    <Info cle="bit_etat_synthese_fonctionnement_cordons_exterieurs_AP5" mot="489" bit="7"/>
+    <Info cle="bit_etat_fonctionnement_CC1_AP5" mot="489" bit="12"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC1_AP5" mot="489" bit="13"/>
+    <Info cle="bit_alerte_defaut_haut_CC1_AP5" mot="489" bit="14"/>
+    <Info cle="bit_alarme_defaut_bas_CC1_AP5" mot="489" bit="15"/>
+    <Info cle="mot_42_etat" mot="490" bit="-1"/>
+    <Info cle="bit_alarme_defaut_fusible_CC1_AP5" mot="490" bit="0"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC1_AP5" mot="490" bit="1"/>
+    <Info cle="bit_etat_shunt_CC1_AP5_actif" mot="490" bit="2"/>
+    <Info cle="bit_etat_fonctionnement_CC2_AP5" mot="490" bit="3"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC2_AP5" mot="490" bit="4"/>
+    <Info cle="bit_alerte_defaut_haut_CC2_AP5" mot="490" bit="5"/>
+    <Info cle="bit_alarme_defaut_bas_CC2_AP5" mot="490" bit="6"/>
+    <Info cle="bit_alarme_defaut_fusible_CC2_AP5" mot="490" bit="7"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC2_AP5" mot="490" bit="8"/>
+    <Info cle="bit_etat_shunt_CC2_AP5_actif" mot="490" bit="9"/>
+    <Info cle="bit_etat_fonctionnement_CC3_AP5" mot="490" bit="10"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC3_AP5" mot="490" bit="11"/>
+    <Info cle="bit_alerte_defaut_haut_CC3_AP5" mot="490" bit="12"/>
+    <Info cle="bit_alarme_defaut_bas_CC3_AP5" mot="490" bit="13"/>
+    <Info cle="bit_alarme_defaut_fusible_CC3_AP5" mot="490" bit="14"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC3_AP5" mot="490" bit="15"/>
+    <Info cle="mot_43_etat" mot="491" bit="-1"/>
+    <Info cle="bit_etat_shunt_CC3_AP5_actif" mot="491" bit="0"/>
+    <Info cle="bit_etat_fonctionnement_CC4_AP5" mot="491" bit="1"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC4_AP5" mot="491" bit="2"/>
+    <Info cle="bit_alerte_defaut_haut_CC4_AP5" mot="491" bit="3"/>
+    <Info cle="bit_alarme_defaut_bas_CC4_AP5" mot="491" bit="4"/>
+    <Info cle="bit_alarme_defaut_fusible_CC4_AP5" mot="491" bit="5"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC4_AP5" mot="491" bit="6"/>
+    <Info cle="bit_etat_shunt_CC4_AP5_actif" mot="491" bit="7"/>
+    <Info cle="bit_etat_fonctionnement_CC5_AP5" mot="491" bit="8"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC5_AP5" mot="491" bit="9"/>
+    <Info cle="bit_alerte_defaut_haut_CC5_AP5" mot="491" bit="10"/>
+    <Info cle="bit_alarme_defaut_bas_CC5_AP5" mot="491" bit="11"/>
+    <Info cle="bit_alarme_defaut_fusible_CC5_AP5" mot="491" bit="12"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC5_AP5" mot="491" bit="13"/>
+    <Info cle="bit_etat_shunt_CC5_AP5_actif" mot="491" bit="14"/>
+    <Info cle="bit_etat_fonctionnement_CC6_AP5" mot="491" bit="15"/>
+    <Info cle="mot_44_etat" mot="492" bit="-1"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC6_AP5" mot="492" bit="0"/>
+    <Info cle="bit_alerte_defaut_haut_CC6_AP5" mot="492" bit="1"/>
+    <Info cle="bit_alarme_defaut_bas_CC6_AP5" mot="492" bit="2"/>
+    <Info cle="bit_alarme_defaut_fusible_CC6_AP5" mot="492" bit="3"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC6_AP5" mot="492" bit="4"/>
+    <Info cle="bit_etat_shunt_CC6_AP5_actif" mot="492" bit="5"/>
+    <Info cle="bit_etat_fonctionnement_CC7_AP5" mot="492" bit="6"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC7_AP5" mot="492" bit="7"/>
+    <Info cle="bit_alerte_defaut_haut_CC7_AP5" mot="492" bit="8"/>
+    <Info cle="bit_alarme_defaut_bas_CC7_AP5" mot="492" bit="9"/>
+    <Info cle="bit_alarme_defaut_fusible_CC7_AP5" mot="492" bit="10"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC7_AP5" mot="492" bit="11"/>
+    <Info cle="bit_etat_shunt_CC7_AP5_actif" mot="492" bit="12"/>
+    <Info cle="bit_etat_fonctionnement_CC8_AP5" mot="492" bit="13"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC8_AP5" mot="492" bit="14"/>
+    <Info cle="bit_alerte_defaut_haut_CC8_AP5" mot="492" bit="15"/>
+    <Info cle="mot_45_etat" mot="493" bit="-1"/>
+    <Info cle="bit_alarme_defaut_bas_CC8_AP5" mot="493" bit="0"/>
+    <Info cle="bit_alarme_defaut_fusible_CC8_AP5" mot="493" bit="1"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC8_AP5" mot="493" bit="2"/>
+    <Info cle="bit_etat_shunt_CC8_AP5_actif" mot="493" bit="3"/>
+    <Info cle="bit_etat_fonctionnement_CC9_AP5" mot="493" bit="4"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC9_AP5" mot="493" bit="5"/>
+    <Info cle="bit_alerte_defaut_haut_CC9_AP5" mot="493" bit="6"/>
+    <Info cle="bit_alarme_defaut_bas_CC9_AP5" mot="493" bit="7"/>
+    <Info cle="bit_alarme_defaut_fusible_CC9_AP5" mot="493" bit="8"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC9_AP5" mot="493" bit="9"/>
+    <Info cle="bit_etat_shunt_CC9_AP5_actif" mot="493" bit="10"/>
+    <Info cle="bit_etat_fonctionnement_CC10_AP5" mot="493" bit="11"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC10_AP5" mot="493" bit="12"/>
+    <Info cle="bit_alerte_defaut_haut_CC10_AP5" mot="493" bit="13"/>
+    <Info cle="bit_alarme_defaut_bas_CC10_AP5" mot="493" bit="14"/>
+    <Info cle="bit_alarme_defaut_fusible_CC10_AP5" mot="493" bit="15"/>
+    <Info cle="mot_46_etat" mot="494" bit="-1"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC10_AP5" mot="494" bit="0"/>
+    <Info cle="bit_etat_shunt_CC10_AP5_actif" mot="494" bit="1"/>
+    <Info cle="bit_etat_fonctionnement_CC11_AP5" mot="494" bit="2"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC11_AP5" mot="494" bit="3"/>
+    <Info cle="bit_alerte_defaut_haut_CC11_AP5" mot="494" bit="4"/>
+    <Info cle="bit_alarme_defaut_bas_CC11_AP5" mot="494" bit="5"/>
+    <Info cle="bit_alarme_defaut_fusible_CC11_AP5" mot="494" bit="6"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC11_AP5" mot="494" bit="7"/>
+    <Info cle="bit_etat_shunt_CC11_AP5_actif" mot="494" bit="8"/>
+    <Info cle="mot_47_etat" mot="495" bit="-1"/>
+    <Info cle="bit_etat_disjoncteur_general_220V_AP6" mot="495" bit="0"/>
+    <Info cle="bit_etat_sectionneur_general_750V_AP6" mot="495" bit="1"/>
+    <Info cle="bit_etat_presence_tension_750V_AP6" mot="495" bit="2"/>
+    <Info cle="bit_etat_commutateur_AP6_en_position_distant" mot="495" bit="3"/>
+    <Info cle="bit_etat_commutateur_AP6_en_position_arret" mot="495" bit="4"/>
+    <Info cle="bit_etat_fonctionnement_AP6" mot="495" bit="5"/>
+    <Info cle="bit_etat_synthese_fonctionnement_cordons_interieurs_AP6" mot="495" bit="6"/>
+    <Info cle="bit_etat_synthese_fonctionnement_cordons_exterieurs_AP6" mot="495" bit="7"/>
+    <Info cle="bit_etat_fonctionnement_CC1_AP6" mot="495" bit="12"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC1_AP6" mot="495" bit="13"/>
+    <Info cle="bit_alerte_defaut_haut_CC1_AP6" mot="495" bit="14"/>
+    <Info cle="bit_alarme_defaut_bas_CC1_AP6" mot="495" bit="15"/>
+    <Info cle="mot_48_etat" mot="496" bit="-1"/>
+    <Info cle="bit_alarme_defaut_fusible_CC1_AP6" mot="496" bit="0"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC1_AP6" mot="496" bit="1"/>
+    <Info cle="bit_etat_shunt_CC1_AP6_actif" mot="496" bit="2"/>
+    <Info cle="bit_etat_fonctionnement_CC2_AP6" mot="496" bit="3"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC2_AP6" mot="496" bit="4"/>
+    <Info cle="bit_alerte_defaut_haut_CC2_AP6" mot="496" bit="5"/>
+    <Info cle="bit_alarme_defaut_bas_CC2_AP6" mot="496" bit="6"/>
+    <Info cle="bit_alarme_defaut_fusible_CC2_AP6" mot="496" bit="7"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC2_AP6" mot="496" bit="8"/>
+    <Info cle="bit_etat_shunt_CC2_AP6_actif" mot="496" bit="9"/>
+    <Info cle="bit_etat_fonctionnement_CC3_AP6" mot="496" bit="10"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC3_AP6" mot="496" bit="11"/>
+    <Info cle="bit_alerte_defaut_haut_CC3_AP6" mot="496" bit="12"/>
+    <Info cle="bit_alarme_defaut_bas_CC3_AP6" mot="496" bit="13"/>
+    <Info cle="bit_alarme_defaut_fusible_CC3_AP6" mot="496" bit="14"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC3_AP6" mot="496" bit="15"/>
+    <Info cle="mot_49_etat" mot="497" bit="-1"/>
+    <Info cle="bit_etat_shunt_CC3_AP6_actif" mot="497" bit="0"/>
+    <Info cle="bit_etat_fonctionnement_CC4_AP6" mot="497" bit="1"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC4_AP6" mot="497" bit="2"/>
+    <Info cle="bit_alerte_defaut_haut_CC4_AP6" mot="497" bit="3"/>
+    <Info cle="bit_alarme_defaut_bas_CC4_AP6" mot="497" bit="4"/>
+    <Info cle="bit_alarme_defaut_fusible_CC4_AP6" mot="497" bit="5"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC4_AP6" mot="497" bit="6"/>
+    <Info cle="bit_etat_shunt_CC4_AP6_actif" mot="497" bit="7"/>
+    <Info cle="bit_etat_fonctionnement_CC5_AP6" mot="497" bit="8"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC5_AP6" mot="497" bit="9"/>
+    <Info cle="bit_alerte_defaut_haut_CC5_AP6" mot="497" bit="10"/>
+    <Info cle="bit_alarme_defaut_bas_CC5_AP6" mot="497" bit="11"/>
+    <Info cle="bit_alarme_defaut_fusible_CC5_AP6" mot="497" bit="12"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC5_AP6" mot="497" bit="13"/>
+    <Info cle="bit_etat_shunt_CC5_AP6_actif" mot="497" bit="14"/>
+    <Info cle="bit_etat_fonctionnement_CC6_AP6" mot="497" bit="15"/>
+    <Info cle="mot_50_etat" mot="498" bit="-1"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC6_AP6" mot="498" bit="0"/>
+    <Info cle="bit_alerte_defaut_haut_CC6_AP6" mot="498" bit="1"/>
+    <Info cle="bit_alarme_defaut_bas_CC6_AP6" mot="498" bit="2"/>
+    <Info cle="bit_alarme_defaut_fusible_CC6_AP6" mot="498" bit="3"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC6_AP6" mot="498" bit="4"/>
+    <Info cle="bit_etat_shunt_CC6_AP6_actif" mot="498" bit="5"/>
+    <Info cle="bit_etat_fonctionnement_CC7_AP6" mot="498" bit="6"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC7_AP6" mot="498" bit="7"/>
+    <Info cle="bit_alerte_defaut_haut_CC7_AP6" mot="498" bit="8"/>
+    <Info cle="bit_alarme_defaut_bas_CC7_AP6" mot="498" bit="9"/>
+    <Info cle="bit_alarme_defaut_fusible_CC7_AP6" mot="498" bit="10"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC7_AP6" mot="498" bit="11"/>
+    <Info cle="bit_etat_shunt_CC7_AP6_actif" mot="498" bit="12"/>
+    <Info cle="bit_etat_fonctionnement_CC8_AP6" mot="498" bit="13"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC8_AP6" mot="498" bit="14"/>
+    <Info cle="bit_alerte_defaut_haut_CC8_AP6" mot="498" bit="15"/>
+    <Info cle="mot_51_etat" mot="499" bit="-1"/>
+    <Info cle="bit_alarme_defaut_bas_CC8_AP6" mot="499" bit="0"/>
+    <Info cle="bit_alarme_defaut_fusible_CC8_AP6" mot="499" bit="1"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC8_AP6" mot="499" bit="2"/>
+    <Info cle="bit_etat_shunt_CC8_AP6_actif" mot="499" bit="3"/>
+    <Info cle="bit_etat_fonctionnement_CC9_AP6" mot="499" bit="4"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC9_AP6" mot="499" bit="5"/>
+    <Info cle="bit_alerte_defaut_haut_CC9_AP6" mot="499" bit="6"/>
+    <Info cle="bit_alarme_defaut_bas_CC9_AP6" mot="499" bit="7"/>
+    <Info cle="bit_alarme_defaut_fusible_CC9_AP6" mot="499" bit="8"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC9_AP6" mot="499" bit="9"/>
+    <Info cle="bit_etat_shunt_CC9_AP6_actif" mot="499" bit="10"/>
+    <Info cle="bit_etat_fonctionnement_CC10_AP6" mot="499" bit="11"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC10_AP6" mot="499" bit="12"/>
+    <Info cle="bit_alerte_defaut_haut_CC10_AP6" mot="499" bit="13"/>
+    <Info cle="bit_alarme_defaut_bas_CC10_AP6" mot="499" bit="14"/>
+    <Info cle="bit_alarme_defaut_fusible_CC10_AP6" mot="499" bit="15"/>
+    <Info cle="mot_52_etat" mot="500" bit="-1"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC10_AP6" mot="500" bit="0"/>
+    <Info cle="bit_etat_shunt_CC10_AP6_actif" mot="500" bit="1"/>
+    <Info cle="bit_etat_fonctionnement_CC11_AP6" mot="500" bit="2"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC11_AP6" mot="500" bit="3"/>
+    <Info cle="bit_alerte_defaut_haut_CC11_AP6" mot="500" bit="4"/>
+    <Info cle="bit_alarme_defaut_bas_CC11_AP6" mot="500" bit="5"/>
+    <Info cle="bit_alarme_defaut_fusible_CC11_AP6" mot="500" bit="6"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC11_AP6" mot="500" bit="7"/>
+    <Info cle="bit_etat_shunt_CC11_AP6_actif" mot="500" bit="8"/>
+    <Info cle="mot_53_etat" mot="501" bit="-1"/>
+    <Info cle="bit_etat_disjoncteur_general_220V_AP7" mot="501" bit="0"/>
+    <Info cle="bit_etat_sectionneur_general_750V_AP7" mot="501" bit="1"/>
+    <Info cle="bit_etat_presence_tension_750V_AP7" mot="501" bit="2"/>
+    <Info cle="bit_etat_commutateur_AP7_en_position_distant" mot="501" bit="3"/>
+    <Info cle="bit_etat_commutateur_AP7_en_position_arret" mot="501" bit="4"/>
+    <Info cle="bit_etat_fonctionnement_AP7" mot="501" bit="5"/>
+    <Info cle="bit_etat_synthese_fonctionnement_cordons_interieurs_AP7" mot="501" bit="6"/>
+    <Info cle="bit_etat_synthese_fonctionnement_cordons_exterieurs_AP7" mot="501" bit="7"/>
+    <Info cle="bit_etat_fonctionnement_CC1_AP7" mot="501" bit="12"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC1_AP7" mot="501" bit="13"/>
+    <Info cle="bit_alerte_defaut_haut_CC1_AP7" mot="501" bit="14"/>
+    <Info cle="bit_alarme_defaut_bas_CC1_AP7" mot="501" bit="15"/>
+    <Info cle="mot_54_etat" mot="502" bit="-1"/>
+    <Info cle="bit_alarme_defaut_fusible_CC1_AP7" mot="502" bit="0"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC1_AP7" mot="502" bit="1"/>
+    <Info cle="bit_etat_shunt_CC1_AP7_actif" mot="502" bit="2"/>
+    <Info cle="bit_etat_fonctionnement_CC2_AP7" mot="502" bit="3"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC2_AP7" mot="502" bit="4"/>
+    <Info cle="bit_alerte_defaut_haut_CC2_AP7" mot="502" bit="5"/>
+    <Info cle="bit_alarme_defaut_bas_CC2_AP7" mot="502" bit="6"/>
+    <Info cle="bit_alarme_defaut_fusible_CC2_AP7" mot="502" bit="7"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC2_AP7" mot="502" bit="8"/>
+    <Info cle="bit_etat_shunt_CC2_AP7_actif" mot="502" bit="9"/>
+    <Info cle="bit_etat_fonctionnement_CC3_AP7" mot="502" bit="10"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC3_AP7" mot="502" bit="11"/>
+    <Info cle="bit_alerte_defaut_haut_CC3_AP7" mot="502" bit="12"/>
+    <Info cle="bit_alarme_defaut_bas_CC3_AP7" mot="502" bit="13"/>
+    <Info cle="bit_alarme_defaut_fusible_CC3_AP7" mot="502" bit="14"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC3_AP7" mot="502" bit="15"/>
+    <Info cle="mot_55_etat" mot="503" bit="-1"/>
+    <Info cle="bit_etat_shunt_CC3_AP7_actif" mot="503" bit="0"/>
+    <Info cle="bit_etat_fonctionnement_CC4_AP7" mot="503" bit="1"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC4_AP7" mot="503" bit="2"/>
+    <Info cle="bit_alerte_defaut_haut_CC4_AP7" mot="503" bit="3"/>
+    <Info cle="bit_alarme_defaut_bas_CC4_AP7" mot="503" bit="4"/>
+    <Info cle="bit_alarme_defaut_fusible_CC4_AP7" mot="503" bit="5"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC4_AP7" mot="503" bit="6"/>
+    <Info cle="bit_etat_shunt_CC4_AP7_actif" mot="503" bit="7"/>
+    <Info cle="bit_etat_fonctionnement_CC5_AP7" mot="503" bit="8"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC5_AP7" mot="503" bit="9"/>
+    <Info cle="bit_alerte_defaut_haut_CC5_AP7" mot="503" bit="10"/>
+    <Info cle="bit_alarme_defaut_bas_CC5_AP7" mot="503" bit="11"/>
+    <Info cle="bit_alarme_defaut_fusible_CC5_AP7" mot="503" bit="12"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC5_AP7" mot="503" bit="13"/>
+    <Info cle="bit_etat_shunt_CC5_AP7_actif" mot="503" bit="14"/>
+    <Info cle="bit_etat_fonctionnement_CC6_AP7" mot="503" bit="15"/>
+    <Info cle="mot_56_etat" mot="504" bit="-1"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC6_AP7" mot="504" bit="0"/>
+    <Info cle="bit_alerte_defaut_haut_CC6_AP7" mot="504" bit="1"/>
+    <Info cle="bit_alarme_defaut_bas_CC6_AP7" mot="504" bit="2"/>
+    <Info cle="bit_alarme_defaut_fusible_CC6_AP7" mot="504" bit="3"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC6_AP7" mot="504" bit="4"/>
+    <Info cle="bit_etat_shunt_CC6_AP7_actif" mot="504" bit="5"/>
+    <Info cle="bit_etat_fonctionnement_CC7_AP7" mot="504" bit="6"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC7_AP7" mot="504" bit="7"/>
+    <Info cle="bit_alerte_defaut_haut_CC7_AP7" mot="504" bit="8"/>
+    <Info cle="bit_alarme_defaut_bas_CC7_AP7" mot="504" bit="9"/>
+    <Info cle="bit_alarme_defaut_fusible_CC7_AP7" mot="504" bit="10"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC7_AP7" mot="504" bit="11"/>
+    <Info cle="bit_etat_shunt_CC7_AP7_actif" mot="504" bit="12"/>
+    <Info cle="bit_etat_fonctionnement_CC8_AP7" mot="504" bit="13"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC8_AP7" mot="504" bit="14"/>
+    <Info cle="bit_alerte_defaut_haut_CC8_AP7" mot="504" bit="15"/>
+    <Info cle="mot_57_etat" mot="505" bit="-1"/>
+    <Info cle="bit_alarme_defaut_bas_CC8_AP7" mot="505" bit="0"/>
+    <Info cle="bit_alarme_defaut_fusible_CC8_AP7" mot="505" bit="1"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC8_AP7" mot="505" bit="2"/>
+    <Info cle="bit_etat_shunt_CC8_AP7_actif" mot="505" bit="3"/>
+    <Info cle="bit_etat_fonctionnement_CC9_AP7" mot="505" bit="4"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC9_AP7" mot="505" bit="5"/>
+    <Info cle="bit_alerte_defaut_haut_CC9_AP7" mot="505" bit="6"/>
+    <Info cle="bit_alarme_defaut_bas_CC9_AP7" mot="505" bit="7"/>
+    <Info cle="bit_alarme_defaut_fusible_CC9_AP7" mot="505" bit="8"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC9_AP7" mot="505" bit="9"/>
+    <Info cle="bit_etat_shunt_CC9_AP7_actif" mot="505" bit="10"/>
+    <Info cle="bit_etat_fonctionnement_CC10_AP7" mot="505" bit="11"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC10_AP7" mot="505" bit="12"/>
+    <Info cle="bit_alerte_defaut_haut_CC10_AP7" mot="505" bit="13"/>
+    <Info cle="bit_alarme_defaut_bas_CC10_AP7" mot="505" bit="14"/>
+    <Info cle="bit_alarme_defaut_fusible_CC10_AP7" mot="505" bit="15"/>
+    <Info cle="mot_58_etat" mot="506" bit="-1"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC10_AP7" mot="506" bit="0"/>
+    <Info cle="bit_etat_shunt_CC10_AP7_actif" mot="506" bit="1"/>
+    <Info cle="bit_etat_fonctionnement_CC11_AP7" mot="506" bit="2"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC11_AP7" mot="506" bit="3"/>
+    <Info cle="bit_alerte_defaut_haut_CC11_AP7" mot="506" bit="4"/>
+    <Info cle="bit_alarme_defaut_bas_CC11_AP7" mot="506" bit="5"/>
+    <Info cle="bit_alarme_defaut_fusible_CC11_AP7" mot="506" bit="6"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC11_AP7" mot="506" bit="7"/>
+    <Info cle="bit_etat_shunt_CC11_AP7_actif" mot="506" bit="8"/>
+    <Info cle="mot_59_etat" mot="507" bit="-1"/>
+    <Info cle="bit_etat_disjoncteur_general_220V_AP8" mot="507" bit="0"/>
+    <Info cle="bit_etat_sectionneur_general_750V_AP8" mot="507" bit="1"/>
+    <Info cle="bit_etat_presence_tension_750V_AP8" mot="507" bit="2"/>
+    <Info cle="bit_etat_commutateur_AP8_en_position_distant" mot="507" bit="3"/>
+    <Info cle="bit_etat_commutateur_AP8_en_position_arret" mot="507" bit="4"/>
+    <Info cle="bit_etat_fonctionnement_AP8" mot="507" bit="5"/>
+    <Info cle="bit_etat_synthese_fonctionnement_cordons_interieurs_AP8" mot="507" bit="6"/>
+    <Info cle="bit_etat_synthese_fonctionnement_cordons_exterieurs_AP8" mot="507" bit="7"/>
+    <Info cle="bit_etat_fonctionnement_CC1_AP8" mot="507" bit="12"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC1_AP8" mot="507" bit="13"/>
+    <Info cle="bit_alerte_defaut_haut_CC1_AP8" mot="507" bit="14"/>
+    <Info cle="bit_alarme_defaut_bas_CC1_AP8" mot="507" bit="15"/>
+    <Info cle="mot_60_etat" mot="508" bit="-1"/>
+    <Info cle="bit_alarme_defaut_fusible_CC1_AP8" mot="508" bit="0"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC1_AP8" mot="508" bit="1"/>
+    <Info cle="bit_etat_shunt_CC1_AP8_actif" mot="508" bit="2"/>
+    <Info cle="bit_etat_fonctionnement_CC2_AP8" mot="508" bit="3"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC2_AP8" mot="508" bit="4"/>
+    <Info cle="bit_alerte_defaut_haut_CC2_AP8" mot="508" bit="5"/>
+    <Info cle="bit_alarme_defaut_bas_CC2_AP8" mot="508" bit="6"/>
+    <Info cle="bit_alarme_defaut_fusible_CC2_AP8" mot="508" bit="7"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC2_AP8" mot="508" bit="8"/>
+    <Info cle="bit_etat_shunt_CC2_AP8_actif" mot="508" bit="9"/>
+    <Info cle="bit_etat_fonctionnement_CC3_AP8" mot="508" bit="10"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC3_AP8" mot="508" bit="11"/>
+    <Info cle="bit_alerte_defaut_haut_CC3_AP8" mot="508" bit="12"/>
+    <Info cle="bit_alarme_defaut_bas_CC3_AP8" mot="508" bit="13"/>
+    <Info cle="bit_alarme_defaut_fusible_CC3_AP8" mot="508" bit="14"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC3_AP8" mot="508" bit="15"/>
+    <Info cle="mot_61_etat" mot="509" bit="-1"/>
+    <Info cle="bit_etat_shunt_CC3_AP8_actif" mot="509" bit="0"/>
+    <Info cle="bit_etat_fonctionnement_CC4_AP8" mot="509" bit="1"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC4_AP8" mot="509" bit="2"/>
+    <Info cle="bit_alerte_defaut_haut_CC4_AP8" mot="509" bit="3"/>
+    <Info cle="bit_alarme_defaut_bas_CC4_AP8" mot="509" bit="4"/>
+    <Info cle="bit_alarme_defaut_fusible_CC4_AP8" mot="509" bit="5"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC4_AP8" mot="509" bit="6"/>
+    <Info cle="bit_etat_shunt_CC4_AP8_actif" mot="509" bit="7"/>
+    <Info cle="bit_etat_fonctionnement_CC5_AP8" mot="509" bit="8"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC5_AP8" mot="509" bit="9"/>
+    <Info cle="bit_alerte_defaut_haut_CC5_AP8" mot="509" bit="10"/>
+    <Info cle="bit_alarme_defaut_bas_CC5_AP8" mot="509" bit="11"/>
+    <Info cle="bit_alarme_defaut_fusible_CC5_AP8" mot="509" bit="12"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC5_AP8" mot="509" bit="13"/>
+    <Info cle="bit_etat_shunt_CC5_AP8_actif" mot="509" bit="14"/>
+    <Info cle="bit_etat_fonctionnement_CC6_AP8" mot="509" bit="15"/>
+    <Info cle="mot_62_etat" mot="510" bit="-1"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC6_AP8" mot="510" bit="0"/>
+    <Info cle="bit_alerte_defaut_haut_CC6_AP8" mot="510" bit="1"/>
+    <Info cle="bit_alarme_defaut_bas_CC6_AP8" mot="510" bit="2"/>
+    <Info cle="bit_alarme_defaut_fusible_CC6_AP8" mot="510" bit="3"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC6_AP8" mot="510" bit="4"/>
+    <Info cle="bit_etat_shunt_CC6_AP8_actif" mot="510" bit="5"/>
+    <Info cle="bit_etat_fonctionnement_CC7_AP8" mot="510" bit="6"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC7_AP8" mot="510" bit="7"/>
+    <Info cle="bit_alerte_defaut_haut_CC7_AP8" mot="510" bit="8"/>
+    <Info cle="bit_alarme_defaut_bas_CC7_AP8" mot="510" bit="9"/>
+    <Info cle="bit_alarme_defaut_fusible_CC7_AP8" mot="510" bit="10"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC7_AP8" mot="510" bit="11"/>
+    <Info cle="bit_etat_shunt_CC7_AP8_actif" mot="510" bit="12"/>
+    <Info cle="bit_etat_fonctionnement_CC8_AP8" mot="510" bit="13"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC8_AP8" mot="510" bit="14"/>
+    <Info cle="bit_alerte_defaut_haut_CC8_AP8" mot="510" bit="15"/>
+    <Info cle="mot_63_etat" mot="511" bit="-1"/>
+    <Info cle="bit_alarme_defaut_bas_CC8_AP8" mot="511" bit="0"/>
+    <Info cle="bit_alarme_defaut_fusible_CC8_AP8" mot="511" bit="1"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC8_AP8" mot="511" bit="2"/>
+    <Info cle="bit_etat_shunt_CC8_AP8_actif" mot="511" bit="3"/>
+    <Info cle="bit_etat_fonctionnement_CC9_AP8" mot="511" bit="4"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC9_AP8" mot="511" bit="5"/>
+    <Info cle="bit_alerte_defaut_haut_CC9_AP8" mot="511" bit="6"/>
+    <Info cle="bit_alarme_defaut_bas_CC9_AP8" mot="511" bit="7"/>
+    <Info cle="bit_alarme_defaut_fusible_CC9_AP8" mot="511" bit="8"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC9_AP8" mot="511" bit="9"/>
+    <Info cle="bit_etat_shunt_CC9_AP8_actif" mot="511" bit="10"/>
+    <Info cle="bit_etat_fonctionnement_CC10_AP8" mot="511" bit="11"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC10_AP8" mot="511" bit="12"/>
+    <Info cle="bit_alerte_defaut_haut_CC10_AP8" mot="511" bit="13"/>
+    <Info cle="bit_alarme_defaut_bas_CC10_AP8" mot="511" bit="14"/>
+    <Info cle="bit_alarme_defaut_fusible_CC10_AP8" mot="511" bit="15"/>
+    <Info cle="mot_64_etat" mot="512" bit="-1"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC10_AP8" mot="512" bit="0"/>
+    <Info cle="bit_etat_shunt_CC10_AP8_actif" mot="512" bit="1"/>
+    <Info cle="bit_etat_fonctionnement_CC11_AP8" mot="512" bit="2"/>
+    <Info cle="bit_alarme_defaut_mise_en_fonctionnement_CC11_AP8" mot="512" bit="3"/>
+    <Info cle="bit_alerte_defaut_haut_CC11_AP8" mot="512" bit="4"/>
+    <Info cle="bit_alarme_defaut_bas_CC11_AP8" mot="512" bit="5"/>
+    <Info cle="bit_alarme_defaut_fusible_CC11_AP8" mot="512" bit="6"/>
+    <Info cle="bit_pre_alerte_arret_fonctionnement_CC11_AP8" mot="512" bit="7"/>
+    <Info cle="bit_etat_shunt_CC11_AP8_actif" mot="512" bit="8"/>
+    <Info cle="mot_0_commande" mot="610" bit="-1"/>
+    <Info cle="bit_commande_mise_en_fonctionnement_cordons_chauffants_AP1" mot="610" bit="0" motStatus="mot_id_image_mot0_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_mise_en_fonctionnement_cordons_chauffants_AP2" mot="610" bit="1" motStatus="mot_id_image_mot0_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_mise_en_fonctionnement_cordons_chauffants_AP3" mot="610" bit="2" motStatus="mot_id_image_mot0_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_mise_en_fonctionnement_cordons_chauffants_AP4" mot="610" bit="3" motStatus="mot_id_image_mot0_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_mise_en_fonctionnement_cordons_chauffants_AP5" mot="610" bit="4" motStatus="mot_id_image_mot0_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_mise_en_fonctionnement_cordons_chauffants_AP6" mot="610" bit="5" motStatus="mot_id_image_mot0_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_mise_en_fonctionnement_cordons_chauffants_AP7" mot="610" bit="6" motStatus="mot_id_image_mot0_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_mise_en_fonctionnement_cordons_chauffants_AP8" mot="610" bit="7" motStatus="mot_id_image_mot0_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_rearmement_et_acq_defauts_cordons_chauffants" mot="610" bit="9" motStatus="mot_id_image_mot0_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_bit_synchro_mise_reglage_heure_et_date_API" mot="610" bit="14" motStatus="mot_id_image_mot0_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_bit_signe_de_vie_Nds" mot="610" bit="15" motStatus="mot_id_image_mot0_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_reglage_heure_API_seconde" mot="611" bit="-1"/>
+    <Info cle="bit_commande_reglage_heure_API_heures_minutes" mot="612" bit="-1"/>
+    <Info cle="bit_commande_reglage_date_API_jours_mois" mot="614" bit="-1"/>
+    <Info cle="bit_commande_reglage_date_API_semaines_annees" mot="615" bit="-1"/>
+    <Info cle="mot_6_commande" mot="616" bit="-1"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC1_AP1" mot="616" bit="0" motStatus="mot_id_image_mot6_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC2_AP1" mot="616" bit="1" motStatus="mot_id_image_mot6_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC3_AP1" mot="616" bit="2" motStatus="mot_id_image_mot6_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC4_AP1" mot="616" bit="3" motStatus="mot_id_image_mot6_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC5_AP1" mot="616" bit="4" motStatus="mot_id_image_mot6_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC6_AP1" mot="616" bit="5" motStatus="mot_id_image_mot6_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC7_AP1" mot="616" bit="6" motStatus="mot_id_image_mot6_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC8_AP1" mot="616" bit="7" motStatus="mot_id_image_mot6_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC9_AP1" mot="616" bit="8" motStatus="mot_id_image_mot6_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC10_AP1" mot="616" bit="9" motStatus="mot_id_image_mot6_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC11_AP1" mot="616" bit="10" motStatus="mot_id_image_mot6_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC1_AP2" mot="616" bit="11" motStatus="mot_id_image_mot6_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC2_AP2" mot="616" bit="12" motStatus="mot_id_image_mot6_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC3_AP2" mot="616" bit="13" motStatus="mot_id_image_mot6_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC4_AP2" mot="616" bit="14" motStatus="mot_id_image_mot6_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC5_AP2" mot="616" bit="15" motStatus="mot_id_image_mot6_commande" delaiStatus="700"/>
+    <Info cle="mot_7_commande" mot="617" bit="-1"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC6_AP2" mot="617" bit="0" motStatus="mot_id_image_mot7_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC7_AP2" mot="617" bit="1" motStatus="mot_id_image_mot7_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC8_AP2" mot="617" bit="2" motStatus="mot_id_image_mot7_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC9_AP2" mot="617" bit="3" motStatus="mot_id_image_mot7_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC10_AP2" mot="617" bit="4" motStatus="mot_id_image_mot7_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC11_AP2" mot="617" bit="5" motStatus="mot_id_image_mot7_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC1_AP3" mot="617" bit="6" motStatus="mot_id_image_mot7_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC2_AP3" mot="617" bit="7" motStatus="mot_id_image_mot7_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC3_AP3" mot="617" bit="8" motStatus="mot_id_image_mot7_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC4_AP3" mot="617" bit="9" motStatus="mot_id_image_mot7_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC5_AP3" mot="617" bit="10" motStatus="mot_id_image_mot7_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC6_AP3" mot="617" bit="11" motStatus="mot_id_image_mot7_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC7_AP3" mot="617" bit="12" motStatus="mot_id_image_mot7_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC8_AP3" mot="617" bit="13" motStatus="mot_id_image_mot7_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC9_AP3" mot="617" bit="14" motStatus="mot_id_image_mot7_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC10_AP3" mot="617" bit="15" motStatus="mot_id_image_mot7_commande" delaiStatus="700"/>
+    <Info cle="mot_8_commande" mot="618" bit="-1"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC11_AP3" mot="618" bit="0" motStatus="mot_id_image_mot8_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC1_AP4" mot="618" bit="1" motStatus="mot_id_image_mot8_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC2_AP4" mot="618" bit="2" motStatus="mot_id_image_mot8_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC3_AP4" mot="618" bit="3" motStatus="mot_id_image_mot8_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC4_AP4" mot="618" bit="4" motStatus="mot_id_image_mot8_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC5_AP4" mot="618" bit="5" motStatus="mot_id_image_mot8_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC6_AP4" mot="618" bit="6" motStatus="mot_id_image_mot8_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC7_AP4" mot="618" bit="7" motStatus="mot_id_image_mot8_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC8_AP4" mot="618" bit="8" motStatus="mot_id_image_mot8_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC9_AP4" mot="618" bit="9" motStatus="mot_id_image_mot8_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC10_AP4" mot="618" bit="10" motStatus="mot_id_image_mot8_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC11_AP4" mot="618" bit="11" motStatus="mot_id_image_mot8_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC1_AP5" mot="618" bit="12" motStatus="mot_id_image_mot8_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC2_AP5" mot="618" bit="13" motStatus="mot_id_image_mot8_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC3_AP5" mot="618" bit="14" motStatus="mot_id_image_mot8_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC4_AP5" mot="618" bit="15" motStatus="mot_id_image_mot8_commande" delaiStatus="700"/>
+    <Info cle="mot_9_commande" mot="619" bit="-1"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC5_AP5" mot="619" bit="0" motStatus="mot_id_image_mot9_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC6_AP5" mot="619" bit="1" motStatus="mot_id_image_mot9_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC7_AP5" mot="619" bit="2" motStatus="mot_id_image_mot9_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC8_AP5" mot="619" bit="3" motStatus="mot_id_image_mot9_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC9_AP5" mot="619" bit="4" motStatus="mot_id_image_mot9_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC10_AP5" mot="619" bit="5" motStatus="mot_id_image_mot9_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC11_AP5" mot="619" bit="6" motStatus="mot_id_image_mot9_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC1_AP6" mot="619" bit="7" motStatus="mot_id_image_mot9_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC2_AP6" mot="619" bit="8" motStatus="mot_id_image_mot9_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC3_AP6" mot="619" bit="9" motStatus="mot_id_image_mot9_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC4_AP6" mot="619" bit="10" motStatus="mot_id_image_mot9_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC5_AP6" mot="619" bit="11" motStatus="mot_id_image_mot9_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC6_AP6" mot="619" bit="12" motStatus="mot_id_image_mot9_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC7_AP6" mot="619" bit="13" motStatus="mot_id_image_mot9_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC8_AP6" mot="619" bit="14" motStatus="mot_id_image_mot9_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC9_AP6" mot="619" bit="15" motStatus="mot_id_image_mot9_commande" delaiStatus="700"/>
+    <Info cle="mot_10_commande" mot="620" bit="-1"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC10_AP6" mot="620" bit="0" motStatus="mot_id_image_mot10_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC11_AP6" mot="620" bit="1" motStatus="mot_id_image_mot10_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC1_AP7" mot="620" bit="2" motStatus="mot_id_image_mot10_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC2_AP7" mot="620" bit="3" motStatus="mot_id_image_mot10_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC3_AP7" mot="620" bit="4" motStatus="mot_id_image_mot10_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC4_AP7" mot="620" bit="5" motStatus="mot_id_image_mot10_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC5_AP7" mot="620" bit="6" motStatus="mot_id_image_mot10_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC6_AP7" mot="620" bit="7" motStatus="mot_id_image_mot10_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC7_AP7" mot="620" bit="8" motStatus="mot_id_image_mot10_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC8_AP7" mot="620" bit="9" motStatus="mot_id_image_mot10_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC9_AP7" mot="620" bit="10" motStatus="mot_id_image_mot10_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC10_AP7" mot="620" bit="11" motStatus="mot_id_image_mot10_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC11_AP7" mot="620" bit="12" motStatus="mot_id_image_mot10_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC1_AP8" mot="620" bit="13" motStatus="mot_id_image_mot10_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC2_AP8" mot="620" bit="14" motStatus="mot_id_image_mot10_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC3_AP8" mot="620" bit="15" motStatus="mot_id_image_mot10_commande" delaiStatus="700"/>
+    <Info cle="mot_11_commande" mot="621" bit="-1"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC4_AP8" mot="621" bit="0" motStatus="mot_id_image_mot11_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC5_AP8" mot="621" bit="1" motStatus="mot_id_image_mot11_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC6_AP8" mot="621" bit="2" motStatus="mot_id_image_mot11_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC7_AP8" mot="621" bit="3" motStatus="mot_id_image_mot11_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC8_AP8" mot="621" bit="4" motStatus="mot_id_image_mot11_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC9_AP8" mot="621" bit="5" motStatus="mot_id_image_mot11_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC10_AP8" mot="621" bit="6" motStatus="mot_id_image_mot11_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_horaire_temps_fonctionnement_CC11_AP8" mot="621" bit="7" motStatus="mot_id_image_mot11_commande" delaiStatus="700"/>
+    <Info cle="mot_12_commande" mot="622" bit="-1"/>
+    <Info cle="bit_commande_arret_fonctionnement_cordons_chauffants_AP1" mot="622" bit="0" motStatus="mot_id_image_mot12_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_arret_fonctionnement_cordons_chauffants_AP2" mot="622" bit="1" motStatus="mot_id_image_mot12_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_arret_fonctionnement_cordons_chauffants_AP3" mot="622" bit="2" motStatus="mot_id_image_mot12_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_arret_fonctionnement_cordons_chauffants_AP4" mot="622" bit="3" motStatus="mot_id_image_mot12_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_arret_fonctionnement_cordons_chauffants_AP5" mot="622" bit="4" motStatus="mot_id_image_mot12_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_arret_fonctionnement_cordons_chauffants_AP6" mot="622" bit="5" motStatus="mot_id_image_mot12_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_arret_fonctionnement_cordons_chauffants_AP7" mot="622" bit="6" motStatus="mot_id_image_mot12_commande" delaiStatus="700"/>
+    <Info cle="bit_commande_arret_fonctionnement_cordons_chauffants_AP8" mot="622" bit="7" motStatus="mot_id_image_mot12_commande" delaiStatus="700"/>
+    <Info cle="mot_13_commande" mot="623" bit="-1"/>
+    <Info cle="bit_commande_AP1_shunt_EC1" mot="623" bit="0"/>
+    <Info cle="bit_commande_AP1_shunt_EC2" mot="623" bit="1"/>
+    <Info cle="bit_commande_AP1_shunt_EC3" mot="623" bit="2"/>
+    <Info cle="bit_commande_AP1_shunt_EC4" mot="623" bit="3"/>
+    <Info cle="bit_commande_AP1_shunt_EC5" mot="623" bit="4"/>
+    <Info cle="bit_commande_AP1_shunt_EC6" mot="623" bit="5"/>
+    <Info cle="bit_commande_AP1_shunt_EC7" mot="623" bit="6"/>
+    <Info cle="bit_commande_AP1_shunt_EC8" mot="623" bit="7"/>
+    <Info cle="bit_commande_AP1_shunt_EC9" mot="623" bit="8"/>
+    <Info cle="bit_commande_AP1_shunt_EC10" mot="623" bit="9"/>
+    <Info cle="bit_commande_AP1_shunt_EC11" mot="623" bit="10"/>
+    <Info cle="mot_14_commande" mot="624" bit="-1"/>
+    <Info cle="bit_commande_AP2_shunt_EC1" mot="624" bit="0"/>
+    <Info cle="bit_commande_AP2_shunt_EC2" mot="624" bit="1"/>
+    <Info cle="bit_commande_AP2_shunt_EC3" mot="624" bit="2"/>
+    <Info cle="bit_commande_AP2_shunt_EC4" mot="624" bit="3"/>
+    <Info cle="bit_commande_AP2_shunt_EC5" mot="624" bit="4"/>
+    <Info cle="bit_commande_AP2_shunt_EC6" mot="624" bit="5"/>
+    <Info cle="bit_commande_AP2_shunt_EC7" mot="624" bit="6"/>
+    <Info cle="bit_commande_AP2_shunt_EC8" mot="624" bit="7"/>
+    <Info cle="bit_commande_AP2_shunt_EC9" mot="624" bit="8"/>
+    <Info cle="bit_commande_AP2_shunt_EC10" mot="624" bit="9"/>
+    <Info cle="bit_commande_AP2_shunt_EC11" mot="624" bit="10"/>
+    <Info cle="mot_15_commande" mot="625" bit="-1"/>
+    <Info cle="bit_commande_AP3_shunt_EC1" mot="625" bit="0"/>
+    <Info cle="bit_commande_AP3_shunt_EC2" mot="625" bit="1"/>
+    <Info cle="bit_commande_AP3_shunt_EC3" mot="625" bit="2"/>
+    <Info cle="bit_commande_AP3_shunt_EC4" mot="625" bit="3"/>
+    <Info cle="bit_commande_AP3_shunt_EC5" mot="625" bit="4"/>
+    <Info cle="bit_commande_AP3_shunt_EC6" mot="625" bit="5"/>
+    <Info cle="bit_commande_AP3_shunt_EC7" mot="625" bit="6"/>
+    <Info cle="bit_commande_AP3_shunt_EC8" mot="625" bit="7"/>
+    <Info cle="bit_commande_AP3_shunt_EC9" mot="625" bit="8"/>
+    <Info cle="bit_commande_AP3_shunt_EC10" mot="625" bit="9"/>
+    <Info cle="bit_commande_AP3_shunt_EC11" mot="625" bit="10"/>
+    <Info cle="mot_16_commande" mot="626" bit="-1"/>
+    <Info cle="bit_commande_AP4_shunt_EC1" mot="626" bit="0"/>
+    <Info cle="bit_commande_AP4_shunt_EC2" mot="626" bit="1"/>
+    <Info cle="bit_commande_AP4_shunt_EC3" mot="626" bit="2"/>
+    <Info cle="bit_commande_AP4_shunt_EC4" mot="626" bit="3"/>
+    <Info cle="bit_commande_AP4_shunt_EC5" mot="626" bit="4"/>
+    <Info cle="bit_commande_AP4_shunt_EC6" mot="626" bit="5"/>
+    <Info cle="bit_commande_AP4_shunt_EC7" mot="626" bit="6"/>
+    <Info cle="bit_commande_AP4_shunt_EC8" mot="626" bit="7"/>
+    <Info cle="bit_commande_AP4_shunt_EC9" mot="626" bit="8"/>
+    <Info cle="bit_commande_AP4_shunt_EC10" mot="626" bit="9"/>
+    <Info cle="bit_commande_AP4_shunt_EC11" mot="626" bit="10"/>
+    <Info cle="mot_17_commande" mot="627" bit="-1"/>
+    <Info cle="bit_commande_AP5_shunt_EC1" mot="627" bit="0"/>
+    <Info cle="bit_commande_AP5_shunt_EC2" mot="627" bit="1"/>
+    <Info cle="bit_commande_AP5_shunt_EC3" mot="627" bit="2"/>
+    <Info cle="bit_commande_AP5_shunt_EC4" mot="627" bit="3"/>
+    <Info cle="bit_commande_AP5_shunt_EC5" mot="627" bit="4"/>
+    <Info cle="bit_commande_AP5_shunt_EC6" mot="627" bit="5"/>
+    <Info cle="bit_commande_AP5_shunt_EC7" mot="627" bit="6"/>
+    <Info cle="bit_commande_AP5_shunt_EC8" mot="627" bit="7"/>
+    <Info cle="bit_commande_AP5_shunt_EC9" mot="627" bit="8"/>
+    <Info cle="bit_commande_AP5_shunt_EC10" mot="627" bit="9"/>
+    <Info cle="bit_commande_AP5_shunt_EC11" mot="627" bit="10"/>
+    <Info cle="mot_18_commande" mot="628" bit="-1"/>
+    <Info cle="bit_commande_AP6_shunt_EC1" mot="628" bit="0"/>
+    <Info cle="bit_commande_AP6_shunt_EC2" mot="628" bit="1"/>
+    <Info cle="bit_commande_AP6_shunt_EC3" mot="628" bit="2"/>
+    <Info cle="bit_commande_AP6_shunt_EC4" mot="628" bit="3"/>
+    <Info cle="bit_commande_AP6_shunt_EC5" mot="628" bit="4"/>
+    <Info cle="bit_commande_AP6_shunt_EC6" mot="628" bit="5"/>
+    <Info cle="bit_commande_AP6_shunt_EC7" mot="628" bit="6"/>
+    <Info cle="bit_commande_AP6_shunt_EC8" mot="628" bit="7"/>
+    <Info cle="bit_commande_AP6_shunt_EC9" mot="628" bit="8"/>
+    <Info cle="bit_commande_AP6_shunt_EC10" mot="628" bit="9"/>
+    <Info cle="bit_commande_AP6_shunt_EC11" mot="628" bit="10"/>
+    <Info cle="mot_19_commande" mot="629" bit="-1"/>
+    <Info cle="bit_commande_AP7_shunt_EC1" mot="629" bit="0"/>
+    <Info cle="bit_commande_AP7_shunt_EC2" mot="629" bit="1"/>
+    <Info cle="bit_commande_AP7_shunt_EC3" mot="629" bit="2"/>
+    <Info cle="bit_commande_AP7_shunt_EC4" mot="629" bit="3"/>
+    <Info cle="bit_commande_AP7_shunt_EC5" mot="629" bit="4"/>
+    <Info cle="bit_commande_AP7_shunt_EC6" mot="629" bit="5"/>
+    <Info cle="bit_commande_AP7_shunt_EC7" mot="629" bit="6"/>
+    <Info cle="bit_commande_AP7_shunt_EC8" mot="629" bit="7"/>
+    <Info cle="bit_commande_AP7_shunt_EC9" mot="629" bit="8"/>
+    <Info cle="bit_commande_AP7_shunt_EC10" mot="629" bit="9"/>
+    <Info cle="bit_commande_AP7_shunt_EC11" mot="629" bit="10"/>
+    <Info cle="mot_20_commande" mot="630" bit="-1"/>
+    <Info cle="bit_commande_AP8_shunt_EC1" mot="630" bit="0"/>
+    <Info cle="bit_commande_AP8_shunt_EC2" mot="630" bit="1"/>
+    <Info cle="bit_commande_AP8_shunt_EC3" mot="630" bit="2"/>
+    <Info cle="bit_commande_AP8_shunt_EC4" mot="630" bit="3"/>
+    <Info cle="bit_commande_AP8_shunt_EC5" mot="630" bit="4"/>
+    <Info cle="bit_commande_AP8_shunt_EC6" mot="630" bit="5"/>
+    <Info cle="bit_commande_AP8_shunt_EC7" mot="630" bit="6"/>
+    <Info cle="bit_commande_AP8_shunt_EC8" mot="630" bit="7"/>
+    <Info cle="bit_commande_AP8_shunt_EC9" mot="630" bit="8"/>
+    <Info cle="bit_commande_AP8_shunt_EC10" mot="630" bit="9"/>
+    <Info cle="bit_commande_AP8_shunt_EC11" mot="630" bit="10"/>
+</TypeEquipement>

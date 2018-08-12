@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TypeEquipement module="" nom="SonoIDA8">
+    <Info cle="mot_status_global" mot="0" bit="-1"/>
+    <Info cle="mot_status_global_systeme_en_mode_bypass" mot="0" bit="2"/>
+    <Info cle="mot_status_global_reseau_global_ATEIS_rompu" mot="0" bit="3"/>
+    <Info cle="mot_status_global_sauvegarde_reseau_global_ATEIS_en_cours" mot="0" bit="4"/>
+    <Info cle="mot_status_global_reseau_local_ATEIS_rompu" mot="0" bit="5"/>
+    <Info cle="mot_status_global_sauvegarde_reseau_local_ATEIS_en_cours" mot="0" bit="6"/>
+    <Info cle="mot_status_global_faute_systeme_interne" mot="0" bit="7"/>
+    <Info cle="mot_status_global_serveur_NTP_indisponible" mot="0" bit="8"/>
+    <Info cle="mot_status_global_synthese_etat_evacuation_generale" mot="0" bit="9"/>
+    <Info cle="mot_status_global_deconnexion_ethernet" mot="0" bit="10"/>
+    <Info cle="mot_status_global_appareil_sauvegarde_en_faute" mot="0" bit="11"/>
+    <Info cle="mot_status_global_appareil secondaire_actif" mot="0" bit="12"/>
+    <Info cle="mot_status_global_appareil_principal_actif" mot="0" bit="13"/>
+    <Info cle="mot_status_global_synthese_defaut_immediat" mot="0" bit="14"/>
+    <Info cle="mot_status_global_synthese_defaut_differe" mot="0" bit="15"/>
+    <Info cle="mot_watchdog_sortie" mot="3"/>
+    <Info cle="mot_watchdog_entree" mot="4"/>
+    <Info cle="mot_duree_message_maximum" mot="5"/>
+    <Info cle="mot_compteur_changement_global" mot="6"/>
+    <Info cle="mot_compteur_global_occupe" mot="7"/>
+    <Info cle="mot_compteur_global_en_erreur" mot="8"/>
+    <Info cle="mot_en_execution" mot="9"/>
+    <Info cle="mot_changement_compteur_message" mot="10"/>
+    <Info cle="mot_changement_compteur_calendrier" mot="11"/>
+    <Info cle="mot_changement_compteur_IO" mot="12"/>
+    <Info cle="mot_timestamp_bibliotheque_message_annee" mot="14"/>
+    <Info cle="mot_timestamp_bibliotheque_message_mois_jour" mot="15"/>
+    <Info cle="mot_timestamp_bibliotheque_message_heure_minute" mot="16"/>
+    <Info cle="mot_timestamp_bibliotheque_message_seconde" mot="17"/>
+    <Info cle="mot_etat_pupitre_PDC_1" mot="256" bit="-1" motParent="6"/>
+    <Info cle="mot_etat_pupitre_PDC_1_etat_en_ligne" mot="256" bit="0" motParent="6"/>
+    <Info cle="mot_etat_pupitre_PDC_1_microphone_actif" mot="256" bit="8" motParent="6"/>
+    <Info cle="mot_etat_pupitre_PDC_1_sonal_actif" mot="256" bit="9" motParent="6"/>
+    <Info cle="mot_etat_pupitre_PDC_1_enregistrement_actif" mot="256" bit="10" motParent="6"/>
+    <Info cle="mot_etat_pupitre_PDC_1_ecoute_active" mot="256" bit="11" motParent="6"/>
+    <Info cle="mot_etat_pupitre_PDC_1_erreur_microphone" mot="256" bit="14" motParent="6"/>
+    <Info cle="mot_etat_pupitre_PDC_1_erreur_diffuseur" mot="256" bit="15" motParent="6"/>
+    <Info cle="mot_statut_entree_IP_1" mot="2304" bit="-1" motParent="6"/>
+    <Info cle="mot_statut_entree_IP_1_flux_audio_non_recu" mot="2304" bit="0" motParent="6"/>
+    <Info cle="mot_statut_entree_IP_1_actif" mot="2304" bit="8" motParent="6"/>
+    <Info cle="mot_statut_entree_IP_2" mot="2305" motParent="6"/>
+    <Info cle="mot_statut_entree_IP_2_flux_audio_non_recu" mot="2305" bit="0" motParent="6"/>
+    <Info cle="mot_statut_entree_IP_2_actif" mot="2305" bit="8" motParent="6"/>
+    <Info cle="mot_statut_entree_0dB_1" mot="2336" bit="-1" motParent="6"/>
+    <Info cle="mot_statut_entree_0dB_1_absent" mot="2336" bit="0" motParent="6"/>
+    <Info cle="mot_statut_entree_0dB_1_actif" mot="2336" bit="8" motParent="6"/>
+    <Info cle="mot_statut_entree_distante_1" mot="6432" motParent="6"/>
+    <Info cle="mot_defaut_haut_parleur_ligne_1" mot="7000" bit="-1" motParent="6"/>
+    <Info cle="mot_defaut_haut_parleur_ligne_1_faute_sauvegarde_amplificateur" mot="7000" bit="7" motParent="6"/>
+    <Info cle="mot_defaut_haut_parleur_ligne_1_fuite_de_terre" mot="7000" bit="8" motParent="6"/>
+    <Info cle="mot_defaut_haut_parleur_ligne_1_impedance" mot="7000" bit="9" motParent="6"/>
+    <Info cle="mot_defaut_haut_parleur_ligne_1_insuffisance" mot="7000" bit="10" motParent="6"/>
+    <Info cle="mot_defaut_haut_parleur_ligne_1_ouvert" mot="7000" bit="11" motParent="6"/>
+    <Info cle="mot_defaut_haut_parleur_ligne_1_sauvegarde_amplifieur_en_cours" mot="7000" bit="12" motParent="6"/>
+    <Info cle="mot_defaut_haut_parleur_ligne_1_faute_amplifieur_normale" mot="7000" bit="13" motParent="6"/>
+    <Info cle="mot_defaut_haut_parleur_ligne_1_faute_immediate" mot="7000" bit="14" motParent="6"/>
+    <Info cle="mot_defaut_haut_parleur_ligne_1_faute_differee" mot="7000" bit="15" motParent="6"/>
+    <Info cle="mot_occupation_haut_parleur_ligne_1" mot="11096" bit="-1" motParent="6"/>
+    <Info cle="mot_occupation_haut_parleur_ligne_1_bit_erreur" mot="11096" bit="13" motParent="6"/>
+    <Info cle="mot_occupation_haut_parleur_ligne_1_bit_surcharge" mot="11096" bit="14" motParent="6"/>
+    <Info cle="mot_occupation_haut_parleur_ligne_1_etat_evacuation" mot="11096" bit="15" motParent="6"/>
+    <Info cle="mot_sortie_0dB_occupee_1" mot="15192" bit="-1" motParent="6"/>
+    <Info cle="mot_sortie_0dB_occupee_1_bit_erreur" mot="15192" bit="13" motParent="6"/>
+    <Info cle="mot_sortie_0dB_occupee_1_bit_surcharge" mot="15192" bit="14" motParent="6"/>
+    <Info cle="mot_sortie_0dB_occupee_1_etat_evacuation" mot="15192" bit="15" motParent="6"/>
+    <Info cle="mot_statut_contact_sortie_1" mot="19288" motParent="12"/>
+    <Info cle="mot_compteur_programmation" mot="20000" bit="-1" motParent="11"/>
+    <Info cle="mot_source_programmation_1_source" mot="20001" bit="-1" motParent="11"/>
+    <Info cle="mot_source_programmation_1_debut_annee" mot="20002" bit="-1" motParent="11"/>
+    <Info cle="mot_source_programmation_1_debut_jour" mot="20003" bit="-1" motParent="11"/>
+    <Info cle="mot_source_programmation_1_debut_heure" mot="20004" bit="-1" motParent="11"/>
+    <Info cle="mot_source_programmation_1_debut_secondes" mot="20005" bit="-1" motParent="11"/>
+    <Info cle="mot_source_programmation_1_fin_annee" mot="20006" bit="-1" motParent="11"/>
+    <Info cle="mot_source_programmation_1_fin_jour" mot="20007" bit="-1" motParent="11"/>
+    <Info cle="mot_source_programmation_1_fin_heure" mot="20008" bit="-1" motParent="11"/>
+    <Info cle="mot_source_programmation_1_fin_secondes" mot="20009" bit="-1" motParent="11"/>
+    <Info cle="mot_source_programmation_1_programmation_periode" mot="20010" bit="-1" motParent="11"/>
+    <Info cle="mot_source_programmation_1_programmation_periode_secondes" mot="20011" bit="-1" motParent="11"/>
+    <Info cle="mot_source_programmation_1_programmation_jours" mot="20012" bit="-1" motParent="11"/>
+    <Info cle="mot_source_programmation_1_programmation_repetition" mot="20013" bit="-1" motParent="11"/>
+    <Info cle="mot_source_programmation_1_programmation_sonal" mot="20014" bit="-1" motParent="11"/>
+    <Info cle="mot_source_programmation_1_priorite" mot="20015" bit="-1" motParent="11"/>
+    <Info cle="mot_source_programmation_1_priorite_basse" mot="20015" bit="0" motParent="11"/>
+    <Info cle="mot_source_programmation_1_priorite_moyenne" mot="20015" bit="1" motParent="11"/>
+    <Info cle="mot_source_programmation_1_priorite_haute" mot="20015" bit="2" motParent="11"/>
+    <Info cle="mot_source_programmation_1_priorite_ajout_queue_traitement" mot="20015" bit="7" motParent="11"/>
+    <Info cle="mot_source_programmation_1_reserve" mot="20016" bit="-1" motParent="11"/>
+    <Info cle="mot_message_niveau_sonore_1" mot="22201" bit="-1"/>
+    <Info cle="mot_message_niveau_sonore_1_n_existe_pas" mot="22201" bit="15"/>
+    <Info cle="mot_pupitre_niveau_sonore_1" mot="23201" bit="-1"/>
+    <Info cle="mot_pupitre_niveau_sonore_1_n_existe_pas" mot="23201" bit="15"/>
+    <Info cle="mot_entree_audio_niveau_1" mot="25249" bit="-1"/>
+    <Info cle="mot_entree_audio_niveau_1_puissance_phantom" mot="25249" bit="11"/>
+    <Info cle="mot_entree_audio_niveau_1_muet" mot="25249" bit="12"/>
+    <Info cle="mot_entree_audio_niveau_1_canal_n_existe_pas" mot="25249" bit="15"/>
+    <Info cle="mot_sortie_haut_parleur_ligne_1" mot="29345" bit="-1"/>
+    <Info cle="mot_sortie_haut_parleur_ligne_1_n_existe_pas" mot="29345" bit="15"/>
+    <Info cle="mot_sortie_0dB_niveau_1" mot="33441" bit="-1"/>
+    <Info cle="mot_sortie_0dB_niveau_1_n_existe_pas" mot="33441" bit="15"/>
+    <Info cle="mot_compteur_messages" mot="37560" bit="-1" motParent="10"/>
+    <Info cle="mot_numero_message_liste_1" mot="37561" bit="-1" motParent="10"/>
+    <Info cle="mot_banque_messages_liste_1" mot="37562" bit="-1" motParent="10"/>
+    <Info cle="mot_banque_CRC16_1" mot="39561" bit="-1" motParent="10"/>
+    <Info cle="mot_fautes_messages_1_16" mot="39600" bit="-1" motParent="10"/>
+    <Info cle="mot_compteur_queue_messages" mot="39700" bit="-1" motParent="10"/>
+    <Info cle="mot_liste_nombre_message_1" mot="39701" bit="-1" motParent="10"/>
+    <Info cle="mot_commande" mot="40000"/>
+    <Info cle="mot_acquittement_commande" mot="40001"/>
+    <Info cle="mot_priorite" mot="40002" bit="-1"/>
+    <Info cle="mot_priorite_basse" mot="40002" bit="0"/>
+    <Info cle="mot_priorite_moyenne" mot="40002" bit="1"/>
+    <Info cle="mot_priorite_haute" mot="40002" bit="2"/>
+    <Info cle="mot_priorite_ajout_queue_attente" mot="40002" bit="7"/>
+    <Info cle="mot_numero_message" mot="40003"/>
+    <Info cle="mot_numero_sonal" mot="40004"/>
+    <Info cle="mot_numero_programme" mot="40005"/>
+    <Info cle="mot_numero_source" mot="40006"/>
+    <Info cle="mot_numero_banque" mot="40007"/>
+    <Info cle="mot_numero_enntree_sortie" mot="40008"/>
+    <Info cle="mot_programmation_debut_annee" mot="40009"/>
+    <Info cle="mot_programmation_debut_jour" mot="40010"/>
+    <Info cle="mot_programmation_debut_heure" mot="40011"/>
+    <Info cle="mot_programmation_debut_secondes" mot="40012"/>
+    <Info cle="mot_programmation_fin_annee" mot="40013"/>
+    <Info cle="mot_programmation_fin_jour" mot="40014"/>
+    <Info cle="mot_programmation_fin_heure" mot="40015"/>
+    <Info cle="mot_programmation_fin_secondes" mot="40016"/>
+    <Info cle="mot_programmation_periode_heure" mot="40017"/>
+    <Info cle="mot_programmation_periode_secondes" mot="40018"/>
+    <Info cle="mot_programmation_jours" mot="40019" bit="-1"/>
+    <Info cle="mot_programmation_jours_dimanche" mot="40019" bit="0"/>
+    <Info cle="mot_programmation_jours_lundi" mot="40019" bit="1"/>
+    <Info cle="mot_programmation_jours_mardi" mot="40019" bit="2"/>
+    <Info cle="mot_programmation_jours_mercredi" mot="40019" bit="3"/>
+    <Info cle="mot_programmation_jours_jeudi" mot="40019" bit="4"/>
+    <Info cle="mot_programmation_jours_vendredi" mot="40019" bit="5"/>
+    <Info cle="mot_programmation_jours_samedi" mot="40019" bit="6"/>
+    <Info cle="mot_programmation_jours_active" mot="40019" bit="7"/>
+    <Info cle="mot_programmation_repetition" mot="40020"/>
+    <Info cle="mot_transmission_id" mot="40021"/>
+    <Info cle="mot_niveau_sonore" mot="40022"/>
+    <Info cle="mot_temporisation_message" mot="40023"/>
+    <Info cle="mot_temporisation_message_dixieme" mot="40024"/>
+    <Info cle="mot_parametres_avances" mot="40025"/>
+    <Info cle="mot_nom_message_1" mot="40030"/>
+    <Info cle="mot_nom_message_2" mot="40031"/>
+    <Info cle="mot_nom_message_3" mot="40032"/>
+    <Info cle="mot_nom_message_4" mot="40033"/>
+    <Info cle="mot_nom_message_5" mot="40034"/>
+    <Info cle="mot_nom_message_6" mot="40035"/>
+    <Info cle="mot_nom_message_7" mot="40036"/>
+    <Info cle="mot_nom_message_8" mot="40037"/>
+    <Info cle="mot_nom_message_9" mot="40038"/>
+    <Info cle="mot_nom_message_10" mot="40039"/>
+    <Info cle="mot_nom_message_11" mot="40040"/>
+    <Info cle="mot_nom_message_12" mot="40041"/>
+    <Info cle="mot_nom_message_13" mot="40042"/>
+    <Info cle="mot_nom_message_14" mot="40043"/>
+    <Info cle="mot_nom_message_15" mot="40044"/>
+    <Info cle="mot_nom_message_16" mot="40045"/>
+    <Info cle="mot_nom_message_17" mot="40046"/>
+    <Info cle="mot_nom_message_18" mot="40047"/>
+    <Info cle="mot_nom_message_19" mot="40048"/>
+    <Info cle="mot_nom_message_20" mot="40049"/>
+    <Info cle="mot_nom_message_21" mot="40050"/>
+    <Info cle="mot_nom_message_22" mot="40051"/>
+    <Info cle="mot_nom_message_23" mot="40052"/>
+    <Info cle="mot_nom_message_24" mot="40053"/>
+    <Info cle="mot_nom_message_25" mot="40054"/>
+    <Info cle="mot_nom_message_26" mot="40055"/>
+    <Info cle="mot_nom_message_27" mot="40056"/>
+    <Info cle="mot_nom_message_28" mot="40057"/>
+    <Info cle="mot_nom_message_29" mot="40058"/>
+    <Info cle="mot_nom_message_30" mot="40059"/>
+    <Info cle="mot_nom_message_31" mot="40060"/>
+    <Info cle="mot_nom_message_32" mot="40061"/>
+    <Info cle="mot_etat_ligne_haut_parleur_1" mot="57300"/>
+</TypeEquipement>

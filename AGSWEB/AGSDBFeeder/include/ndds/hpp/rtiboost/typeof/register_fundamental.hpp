@@ -1,0 +1,62 @@
+// Copyright (C) 2004 Arkadiy Vertleyb
+// Copyright (C) 2004 Peder Holt
+// Use, modification and distribution is subject to the Boost Software
+// License, Version 1.0. (http://www.boost.org/LICENSE_1_0.txt)
+
+#ifndef RTIBOOST_TYPEOF_REGISTER_FUNDAMENTAL_HPP_INCLUDED
+#define RTIBOOST_TYPEOF_REGISTER_FUNDAMENTAL_HPP_INCLUDED
+
+#include <rtiboost/typeof/typeof.hpp>
+
+#include RTIBOOST_TYPEOF_INCREMENT_REGISTRATION_GROUP()
+
+RTIBOOST_TYPEOF_REGISTER_TYPE(unsigned char)
+RTIBOOST_TYPEOF_REGISTER_TYPE(unsigned short)
+RTIBOOST_TYPEOF_REGISTER_TYPE(unsigned int)
+RTIBOOST_TYPEOF_REGISTER_TYPE(unsigned long)
+
+RTIBOOST_TYPEOF_REGISTER_TYPE(signed char)
+RTIBOOST_TYPEOF_REGISTER_TYPE(signed short)
+RTIBOOST_TYPEOF_REGISTER_TYPE(signed int)
+RTIBOOST_TYPEOF_REGISTER_TYPE(signed long)
+
+RTIBOOST_TYPEOF_REGISTER_TYPE(bool)
+RTIBOOST_TYPEOF_REGISTER_TYPE(char)
+
+RTIBOOST_TYPEOF_REGISTER_TYPE(float)
+RTIBOOST_TYPEOF_REGISTER_TYPE(double)
+RTIBOOST_TYPEOF_REGISTER_TYPE(long double)
+
+#ifndef RTIBOOST_NO_INTRINSIC_WCHAR_T
+// If the following line fails to compile and you're using the Intel
+// compiler, see http://lists.boost.org/MailArchives/boost-users/msg06567.php,
+// and define RTIBOOST_NO_INTRINSIC_WCHAR_T on the command line.
+RTIBOOST_TYPEOF_REGISTER_TYPE(wchar_t)
+#endif
+
+#if (defined(RTIBOOST_MSVC) && (RTIBOOST_MSVC == 1200)) \
+    || (defined(RTIBOOST_INTEL_CXX_VERSION) && defined(_MSC_VER) && (RTIBOOST_INTEL_CXX_VERSION <= 600)) \
+    || (defined(__BORLANDC__) && (__BORLANDC__ == 0x600) && (_MSC_VER == 1200))
+RTIBOOST_TYPEOF_REGISTER_TYPE(unsigned __int8)
+RTIBOOST_TYPEOF_REGISTER_TYPE(__int8)
+RTIBOOST_TYPEOF_REGISTER_TYPE(unsigned __int16)
+RTIBOOST_TYPEOF_REGISTER_TYPE(__int16)
+RTIBOOST_TYPEOF_REGISTER_TYPE(unsigned __int32)
+RTIBOOST_TYPEOF_REGISTER_TYPE(__int32)
+#ifdef __BORLANDC__
+RTIBOOST_TYPEOF_REGISTER_TYPE(unsigned __int64)
+RTIBOOST_TYPEOF_REGISTER_TYPE(__int64)
+#endif
+#endif
+
+# if defined(RTIBOOST_HAS_LONG_LONG)
+RTIBOOST_TYPEOF_REGISTER_TYPE(::rtiboost::ulong_long_type)
+RTIBOOST_TYPEOF_REGISTER_TYPE(::rtiboost::long_long_type)
+#elif defined(RTIBOOST_HAS_MS_INT64)
+RTIBOOST_TYPEOF_REGISTER_TYPE(unsigned __int64)
+RTIBOOST_TYPEOF_REGISTER_TYPE(__int64)
+#endif
+
+RTIBOOST_TYPEOF_REGISTER_TYPE(void)
+
+#endif//RTIBOOST_TYPEOF_REGISTER_FUNDAMENTAL_HPP_INCLUDED
