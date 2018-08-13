@@ -1,6 +1,8 @@
 #!/usr/bin/python
 # coding: utf-8
 
+# ATTENTION : LE FICHIER PARC a utiliser est celui d'origine et non celui filtre pour Qlik !
+
 import sys
 import csv
 from datetime import datetime

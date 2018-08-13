@@ -24,7 +24,7 @@
 
 # Étape 7
 
-./MergeAudaceTOSLogsIntoCSV.py [AUDACE_TED_LOGS_DIRECTORY] "2018-07-14 00:00:01" "2018-07-23 23:59:59"
+./MergeAudaceTOSLogsIntoCSV.py [AUDACE_TOS_LOGS_DIRECTORY] "2018-07-14 00:00:01" "2018-07-23 23:59:59"
 
 # Étape 8
 
