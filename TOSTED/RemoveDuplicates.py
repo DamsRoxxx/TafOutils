@@ -20,12 +20,10 @@ def RemoveDuplicates(inputCSV, outputCSV):
         code = row[1]
         valeur = row[2]
         horodatage = row[3]
-        if nomLogique in lastRow:
-            if lastRow[nomLogique][code] == valeur:
-                removeCounter += 1
-                # print(row)
-            else:
-                outputCSVWriter.writerow((nomLogique, code, valeur, horodatage))
+
+        if lastRow[nomLogique][code] == valeur:
+            removeCounter += 1
+            # print(row)
         else:
             outputCSVWriter.writerow((nomLogique, code, valeur, horodatage))
 
