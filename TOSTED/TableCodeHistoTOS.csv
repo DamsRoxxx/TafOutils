@@ -1,0 +1,2380 @@
+MNEMONIQUE;LIBELLE;ADRESSE_NDS;ADRESSE_SNMP;LIBELLE_1
+EM;Escalier Mécanique;48;;AAI plaque palière supérieure
+EM;Escalier Mécanique;47;;AAI trappe
+PEP;Poste d'Epuisement;28;;Défaut thermique groupe 3
+PEP;Poste d'Epuisement;27;;Défaut variateur groupe 2
+PEP;Poste d'Epuisement;26;;Défaut thermique groupe 2
+PEP;Poste d'Epuisement;25;;Défaut variateur groupe 1
+PEP;Poste d'Epuisement;24;;Défaut thermique groupe 1
+PEP;Poste d'Epuisement;23;;Défaut détection de niveaux
+PEP;Poste d'Epuisement;22;;Absence tension T2 (400V)
+PEP;Poste d'Epuisement;21;;Absence tension T1 (400V)
+PEP;Poste d'Epuisement;11;;Temps de pompage trop long groupe 4
+PEP;Poste d'Epuisement;10;;Temps de pompage trop long groupe 3
+PEP;Poste d'Epuisement;9;;Temps de pompage trop long groupe 2
+PEP;Poste d'Epuisement;8;;Temps de pompage trop long groupe 1
+PEP;Poste d'Epuisement;7;;Alerte
+PEP;Poste d'Epuisement;6;;Baisse débit groupe 4
+PEP;Poste d'Epuisement;5;;Baisse débit groupe 3
+PEP;Poste d'Epuisement;4;;Baisse débit groupe 2
+Trottoir_Roulant;Trottoir Roulant;1000;;Erreur de communication
+Trottoir_Roulant;Trottoir Roulant;66;;Panne d'épuisement
+Trottoir_Roulant;Trottoir Roulant;65;;AAI entrée main courante inférieure bloquée
+Trottoir_Roulant;Trottoir Roulant;64;;AAI entrée main courante supérieure bloquée
+Trottoir_Roulant;Trottoir Roulant;63;;AAI Défaut armoire automatisme
+Trottoir_Roulant;Trottoir Roulant;62;;AAI Défaut automate
+Trottoir_Roulant;Trottoir Roulant;61;;AAI non levée frein de fonctionnement
+Trottoir_Roulant;Trottoir Roulant;60;;AAI non levée frein secours
+ADA;Armoire Distribution Automatique;10;;Défaut départ permanent luminaires BAES vers local FQ
+ADA;Armoire Distribution Automatique;11;;Défaut départ remplacement Luminaires/PC/Clim vers local FQ
+ADA;Armoire Distribution Automatique;12;;Défaut départ permanent luminaires BAES vers local Signaux
+ADA;Armoire Distribution Automatique;13;;Défaut départ remplacement Luminaires/PC/Clim vers local Signaux
+ADA;Armoire Distribution Automatique;14;;Défaut départ permanent luminaires BAES vers local M2E/BT
+ADA;Armoire Distribution Automatique;15;;Défaut départ remplacement Luminaires/PC/Clim vers local M2E/BT
+ADA;Armoire Distribution Automatique;17;;I3 Aval inverseur ouvert et hors maintenance
+ADA;Armoire Distribution Automatique;18;;Défaut automatisme inverseur
+ADA;Armoire Distribution Automatique;19;;Durée de maintenance trop longue
+ADA;Armoire Distribution Automatique;20;;Défaut Départ alimentation équipement SAET
+ADA;Armoire Distribution Automatique;21;;Défaut Départ alimentation équipement FQ
+ADA;Armoire Distribution Automatique;22;;Défaut Départ alimentation équipement Signaux
+ADA;Armoire Distribution Automatique;1000;1000;Erreur de communication
+ADA;Armoire Distribution Automatique;1001;;Identifiant station incorrect
+ADA;Armoire Distribution Automatique;1002;;Identifiant équipement incorrect
+ADA;Armoire Distribution Automatique;1003;;Identifiant version incorrect
+ADA;Armoire Distribution Automatique;1004;;Identifiant checksum incorrect
+ADA;Armoire Distribution Automatique;1005;;Synchronisation horloge impossible
+ADA;Armoire Distribution Automatique;1006;;Bit de signe de vie manquant
+ADA;Armoire Distribution Automatique;1014;;Inhibition
+PTOSC;Poste mainteneur TOSCANE;8000;.1.3.6.1.2.1.4.18.0;Etat fonctionnel
+PC_I;PC industriel;99999;.1.3.6.1.2.1.4.18.0;Etat Fonctionnel
+TPV;Terminal Point de Vente;99;1.3.6.1.2.1.4.18.0;Etat Fonctionnel
+ADUP_snmp;Appareil Distributeur à l'Usage du Public snmp;99999;.1.3.6.1.2.1.4.18.0;Etat Fonctionnel
+EM;Escalier Mécanique;66;;Défaut automate
+SDP;Serveur de ports;99999;.1.3.6.1.2.1.4.18.0;Etat fonctionnel
+Ventilateur;Ventilateur;19;;Echauffement des paliers moteur
+Ventilateur;Ventilateur;20;;Défaut automate
+E_ECS;Eqpt concentrateur Vente et Contrôle d'accès(ECS);1000;1000;Erreur de communication
+E_ECS;Eqpt concentrateur Vente et Contrôle d'accès(ECS);1014;;Inhibition
+E_ECS;Eqpt concentrateur Vente et Contrôle d'accès(ECS);1;;Passage simulé
+E_AE5G;Equipement API AE5G;1000;1000;Erreur de communication
+E_AE5G;Equipement API AE5G;1006;;Bit de signe de vie manquant
+E_AE5G;Equipement API AE5G;1014;;Inhibition
+E_AE5G;Equipement API AE5G;1;;Hors Tension du TAC
+E_AE5G;Equipement API AE5G;2;;Hors tension Exterieur
+E_AE5G;Equipement API AE5G;37;;Présence clé
+E_CES;Concentrateur En Station;1000;1000;Erreur de communication
+E_CES;Concentrateur En Station;900;;Erreur Abonnement
+E_PEM;Passages Elargis Motorisés;1000;1000;Erreur de communication
+E_PEM;Passages Elargis Motorisés;900;;Erreur Abonnement
+E_PEM;Passages Elargis Motorisés;3;;Equipement HS
+E_PEM;Passages Elargis Motorisés;4;;Portillon bloqué
+E_PEM;Passages Elargis Motorisés;5;;Portillon non verrouillé en position zéro
+E_PEM;Passages Elargis Motorisés;6;;Valideur magnétique d'entrée HS
+E_PEM;Passages Elargis Motorisés;7;;Valideur magnétique de sortie HS
+E_PEM;Passages Elargis Motorisés;8;;Coupleur télébillettique d'entrée HS
+E_PEM;Passages Elargis Motorisés;9;;Coupleur télébillettique de sortie  HS
+E_PEM;Passages Elargis Motorisés;12;;Bourrage du valideur magnétique d'entrée
+E_PEM;Passages Elargis Motorisés;13;;Bourrage du valideur magnétique de sortie
+E_PEM;Passages Elargis Motorisés;14;;Interphone d'entrée  HS
+E_PEM;Passages Elargis Motorisés;15;;Interphone de sortie  HS
+OCA;Postes ocarina;99999;.1.3.6.1.2.1.4.18.0;Etat fonctionnel
+OCA;Postes ocarina;1000;1000;Erreur de communication
+Trottoir_Roulant_R;Trottoir Roulant à Relais;1002;;Identifiant équipement incorrect
+Trottoir_Roulant_R;Trottoir Roulant à Relais;1001;;Identifiant station incorrect
+Trottoir_Roulant_R;Trottoir Roulant à Relais;1000;;Erreur de communication
+Trottoir_Roulant_R;Trottoir Roulant à Relais;18;;Panne d'épuisement
+Trottoir_Roulant_R;Trottoir Roulant à Relais;17;;Défaut levée de frein
+Trottoir_Roulant_R;Trottoir Roulant à Relais;16;;AAI Défaut 48V Tame
+Trottoir_Roulant_R;Trottoir Roulant à Relais;15;;AAI Défaut 48V de l¿AEM
+Trottoir_Roulant_R;Trottoir Roulant à Relais;14;;AAI Défaut 400V PEF
+Trottoir_Roulant_R;Trottoir Roulant à Relais;13;;AAI Défaut chariot tenseur
+Trottoir_Roulant_R;Trottoir Roulant à Relais;12;;AAI Défaut rupture chaîne de treuil
+Trottoir_Roulant_R;Trottoir Roulant à Relais;11;;AAI Défaut survitesse / dévirage
+Trottoir_Roulant_R;Trottoir Roulant à Relais;10;;AAI Défaut thermique TLD démarrage
+PC_I;PC industriel;1;0;Arrêt automatique en cours !
+TPV;Terminal Point de Vente;1000;1000;Erreur de communication
+TPV;Terminal Point de Vente;999999;;En entretien
+SDP;Serveur de ports;1000;1000;Erreur de communication
+SDP;Serveur de ports;999999;1;En entretien
+CACC;Contrôle d'Accès métro Symphonie;1000;;Erreur de communication
+CACC;Contrôle d'Accès métro Symphonie;999999;;En entretien
+ADUP_snmp;Appareil Distributeur à l'Usage du Public snmp;1000;1000;Erreur de communication
+ADUP_snmp;Appareil Distributeur à l'Usage du Public snmp;999999;;En entretien
+API_STA;API station métro;10;;Defaut module PCMCIA
+API_STA;API station métro;9;;Defaut carte emplacement 9
+API_STA;API station métro;8;;Defaut carte emplacement 8
+API_STA;API station métro;7;;Defaut carte emplacement 7
+API_STA;API station métro;6;;Defaut carte emplacement 6
+API_STA;API station métro;5;;Defaut carte emplacement 5
+API_STA;API station métro;4;;Defaut carte emplacement 4
+API_STA;API station métro;3;;Defaut carte emplacement 3
+API_STA;API station métro;2;;Defaut carte emplacement 2
+API_STA;API station métro;1;;Synthese defaut zone alarme
+API_STA;API station métro;1014;;Inhibition
+API_STA;API station métro;1011;;Commande maître modbus impossible
+API_STA;API station métro;1006;;Bit de signe de vie manquant
+API_STA;API station métro;1004;;Identifiant checksum incorrect
+API_STA;API station métro;1003;;Identifiant version incorrect
+API_STA;API station métro;1000;;Erreur de communication
+Imprimante_snmp;IMPRIMANTE bureau station CDSMG et Symphonie;1014;;Inhibition
+Imprimante_snmp;IMPRIMANTE bureau station CDSMG et Symphonie;1001;;Erreur de communication SNMP
+Imprimante_snmp;IMPRIMANTE bureau station CDSMG et Symphonie;1000;;Erreur de communication
+Imprimante_snmp;IMPRIMANTE bureau station CDSMG et Symphonie;3;;Bourrage papier
+Imprimante_snmp;IMPRIMANTE bureau station CDSMG et Symphonie;2;;Plus de papier
+Imprimante_snmp;IMPRIMANTE bureau station CDSMG et Symphonie;1;;Cartouche d'encre terminée
+SUPVIDEO;SUPVIDEO - équipement virtuel de commutation video;1000;;Erreur de communication
+SUPVIDEO;SUPVIDEO - équipement virtuel de commutation video;1;;En défaut (Alarme de synthèse)
+SORTIE;Sortie sono;13;;Impédance 1 kHz hors tolérance
+SORTIE;Sortie sono;12;;Zone non fonctionnelle
+SORTIE;Sortie sono;11;;Amplificateur Hors Service
+SORTIE;Sortie sono;10;;Amplificateur non secourable
+SORTIE;Sortie sono;9;;Gain amplification hors tolérance
+SORTIE;Sortie sono;8;;Amplificateur secouru
+SORTIE;Sortie sono;7;;Ligne en court-circuit
+SORTIE;Sortie sono;6;;Ligne en circuit ouvert
+SORTIE;Sortie sono;5;;Impédance 18 kHz hors tolérance
+SORTIE;Sortie sono;4;;Fuite à la terre hors tolérance
+SORTIE;Sortie sono;3;;Erreur de commutation
+CP_CA;Capteurs centrale alarme métro fils de ECENTRALE;6;;Défaut fonctionnement radar
+CP_CA;Capteurs centrale alarme métro fils de ECENTRALE;5;;Defaut entrée en court-circuit
+CP_CA;Capteurs centrale alarme métro fils de ECENTRALE;4;;Defaut entrée ouverte
+CP_CA;Capteurs centrale alarme métro fils de ECENTRALE;3;;Defaut alimentation radar
+ECENTRALE;Centrale alarme métro;4;;Défaut DLPS1
+ECENTRALE;Centrale alarme métro;3;;Défaut d'alimentation DLPS
+ECENTRALE;Centrale alarme métro;2;;Défaut d'alimentation capteur
+ECENTRALE;Centrale alarme métro;1014;;Inhibition
+ECENTRALE;Centrale alarme métro;1006;;Bit de signe de vie manquant
+ECENTRALE;Centrale alarme métro;1004;;Identifiant checksum incorrect
+ECENTRALE;Centrale alarme métro;1003;;Identifiant version incorrect
+ECENTRALE;Centrale alarme métro;1002;;Identifiant équipement incorrect
+ECENTRALE;Centrale alarme métro;1001;;Identifiant station incorrect
+ECENTRALE;Centrale alarme métro;1000;;Erreur de communication
+EEAS;Eqpt d'Accès Sono CDSMG et Symphonie;11;;Controleur remote non connecté
+EEAS;Eqpt d'Accès Sono CDSMG et Symphonie;10;;Controleur polling non connecté
+EEAS;Eqpt d'Accès Sono CDSMG et Symphonie;9;;Défaut smart failure
+EEAS;Eqpt d'Accès Sono CDSMG et Symphonie;8;;Défaut disque dur
+EEAS;Eqpt d'Accès Sono CDSMG et Symphonie;7;;Defaut Ethernet LAN 2
+EEAS;Eqpt d'Accès Sono CDSMG et Symphonie;6;;Défaut Ethernet LAN 1
+EEAS;Eqpt d'Accès Sono CDSMG et Symphonie;5;;Défaut ATM
+EEAS;Eqpt d'Accès Sono CDSMG et Symphonie;4;;Défaut ventillation EAS
+EEAS;Eqpt d'Accès Sono CDSMG et Symphonie;3;;Accès alimentation EAS impossible
+EEAS;Eqpt d'Accès Sono CDSMG et Symphonie;2;;Défaut alimentation EAS
+EEAS;Eqpt d'Accès Sono CDSMG et Symphonie;1000;;Erreur de communication
+CSONO;Centrale de Sonorisation CDSMG et Symphonie;21;;Défaut nombre d'IDAS
+CSONO;Centrale de Sonorisation CDSMG et Symphonie;20;;Défaut régulation 32
+CSONO;Centrale de Sonorisation CDSMG et Symphonie;19;;Défaut régulation 28
+CSONO;Centrale de Sonorisation CDSMG et Symphonie;18;;Défaut régulation 24
+CSONO;Centrale de Sonorisation CDSMG et Symphonie;17;;Défaut régulation 20
+CSONO;Centrale de Sonorisation CDSMG et Symphonie;16;;Défaut régulation 16
+CSONO;Centrale de Sonorisation CDSMG et Symphonie;15;;Défaut régulation 12
+CSONO;Centrale de Sonorisation CDSMG et Symphonie;14;;Défaut régulation 8
+CSONO;Centrale de Sonorisation CDSMG et Symphonie;13;;Défaut régulation 4
+CSONO;Centrale de Sonorisation CDSMG et Symphonie;12;;Défaut paramètre maintenance
+CSONO;Centrale de Sonorisation CDSMG et Symphonie;11;;Défaut CRC message test phase
+CSONO;Centrale de Sonorisation CDSMG et Symphonie;10;;Défaut message test phase absent
+CSONO;Centrale de Sonorisation CDSMG et Symphonie;9;;Défaut CRC message évacuation
+STOSC;Serveur TOSCANE;999998;;Version de logiciel incorrecte
+STOSC;Serveur TOSCANE;1000;;Perte de communication
+PTOSC;Poste mainteneur TOSCANE;1000;1000;Perte de communication
+NDS;Concentrateur;999998;;Version de logiciel incorrecte
+Monte_charge_ERM_CDS;Eqpt monte charge accédé via API ERM(CDS RER);1014;;Inhibition
+Monte_charge_ERM_CDS;Eqpt monte charge accédé via API ERM(CDS RER);1;;Synthèse défaut technique
+Climatiseur_ERM_CDS;Eqpt climatiseur accédé via API ERM CDS;1014;;Inhibition
+Climatiseur_ERM_CDS;Eqpt climatiseur accédé via API ERM CDS;1;;Synthèse alarme AAI
+Alimentation_ERM_CDS;Eqpt alimentation accédé via API ERM(CDS RER);1014;;Inhibition
+Alimentation_ERM_CDS;Eqpt alimentation accédé via API ERM(CDS RER);1;;Synthese defaut technique
+Eclairage_ERM_CDS;Eqpt armoire éclairage accédé via API ERM(CDS RER);1014;;Inhibition
+Eclairage_ERM_CDS;Eqpt armoire éclairage accédé via API ERM(CDS RER);1;;Synthese defaut technique
+PEF_ERM_CDS;Eqpt PEF accédé via API ERM (CDS RER);1014;;Inhibition
+PEF_ERM_CDS;Eqpt PEF accédé via API ERM (CDS RER);3;;defaut alarme 3 (Manque Alim Force)
+PEF_ERM_CDS;Eqpt PEF accédé via API ERM (CDS RER);2;;defaut alarme 2 (Defaut eclairage)
+PEF_ERM_CDS;Eqpt PEF accédé via API ERM (CDS RER);1;;defaut alarme 1 (Manque tension)
+API_ERM;Eqpt concentrateur API ERM (CDS RER);1014;;Inhibition
+API_ERM;Eqpt concentrateur API ERM (CDS RER);1006;;Bit de signe de vie manquant
+API_ERM;Eqpt concentrateur API ERM (CDS RER);1005;;Synchronisation horloge impossible
+API_ERM;Eqpt concentrateur API ERM (CDS RER);1004;;Identifiant checksum incorrect
+API_ERM;Eqpt concentrateur API ERM (CDS RER);1003;;Identifiant version incorrect
+API_ERM;Eqpt concentrateur API ERM (CDS RER);1002;;Identifiant équipement incorrect
+API_ERM;Eqpt concentrateur API ERM (CDS RER);1001;;Identifiant station incorrect
+API_ERM;Eqpt concentrateur API ERM (CDS RER);1000;;Erreur de communication
+Disjoncteur_Camera_GTC;Disjoncteur Carméra via API  GTC;1;;Disjoncteur caméra déclenché
+Disjoncteur_Camera_GTC;Disjoncteur Carméra via API  GTC;1014;;Inhibition
+API_GTC;API concentrateur GTC Telephonie/sono/EAI(API_GTC);1014;;Inhibition
+API_GTC;API concentrateur GTC Telephonie/sono/EAI(API_GTC);1000;;Erreur de communication
+Zone_Effraction_ADUP_GTC;Zone Effraction ADUP via API  GTC (CDS RER);1014;;Inhibition
+Zone_Effraction_ADUP_GTC;Zone Effraction ADUP via API  GTC (CDS RER);5;;Synthèse défaut liaisons
+Zone_Effraction_ADUP_GTC;Zone Effraction ADUP via API  GTC (CDS RER);4;;Synthèse défaut technique
+Zone_Effraction_ADUP_GTC;Zone Effraction ADUP via API  GTC (CDS RER);3;;Ouverture ligne ADUP
+Zone_Effraction_ADUP_GTC;Zone Effraction ADUP via API  GTC (CDS RER);2;;Court-circuit ligne ADUP
+Zone_Effraction_ADUP_GTC;Zone Effraction ADUP via API  GTC (CDS RER);1;;Effraction ADUP
+Armoire_Forte_GTC;Armoire Forte dans Zone agression via API  GTC;1014;;Inhibition
+Armoire_Forte_GTC;Armoire Forte dans Zone agression via API  GTC;6;;Ouverture ligne ouverture armoire forte
+Armoire_Forte_GTC;Armoire Forte dans Zone agression via API  GTC;5;;Court circuit ouverture armoire forte
+Armoire_Forte_GTC;Armoire Forte dans Zone agression via API  GTC;4;;Ouverture ligne armoire forte
+Armoire_Forte_GTC;Armoire Forte dans Zone agression via API  GTC;3;;Court circuit armoire forte
+Armoire_Forte_GTC;Armoire Forte dans Zone agression via API  GTC;2;;Armoire forte
+Armoire_Forte_GTC;Armoire Forte dans Zone agression via API  GTC;1;;Armoire forte HS
+Pedale_GTC;Pédale d'alarme agression via API GTC;1014;;Inhibition
+Pedale_GTC;Pédale d'alarme agression via API GTC;3;;Ouverture ligne pédale
+Pedale_GTC;Pédale d'alarme agression via API GTC;2;;Court-circuit pédale
+Pedale_GTC;Pédale d'alarme agression via API GTC;1;;Déclenchement pédale
+Zone_Agression_GTC;Zone agression via un API  GTC (CDS RER);1014;;Inhibition
+Zone_Agression_GTC;Zone agression via un API  GTC (CDS RER);7;;Synthèse défaut liaisons
+Zone_Agression_GTC;Zone agression via un API  GTC (CDS RER);6;;Synthèse défaut technique agression
+Zone_Agression_GTC;Zone agression via un API  GTC (CDS RER);5;;Synthèse alarme agression
+Zone_Agression_GTC;Zone agression via un API  GTC (CDS RER);4;;Ouverture coffret agression
+Zone_Agression_GTC;Zone agression via un API  GTC (CDS RER);3;;Sabotage clé de réarmement
+Zone_Agression_GTC;Zone agression via un API  GTC (CDS RER);2;;Ouverture ligne clé de réarmement
+Zone_Agression_GTC;Zone agression via un API  GTC (CDS RER);1;;Court-circuit clé de réarmement
+Contact_Porte_GTC;Contact porte Zone effraction via API  GTC;1014;;Inhibition
+Contact_Porte_GTC;Contact porte Zone effraction via API  GTC;6;;Ouverture ligne sabotage ouverture porte
+Contact_Porte_GTC;Contact porte Zone effraction via API  GTC;5;;Court-circuit sabotage ouverture
+Contact_Porte_GTC;Contact porte Zone effraction via API  GTC;4;;Sabotage ouverture
+Contact_Porte_GTC;Contact porte Zone effraction via API  GTC;3;;Ouverture ligne ouverture porte
+Contact_Porte_GTC;Contact porte Zone effraction via API  GTC;2;;Court-circuit ouverture porte
+Contact_Porte_GTC;Contact porte Zone effraction via API  GTC;1;;Ouverture porte
+Radar_GTC;Radar Zone effraction via API  GTC;1014;;Inhibition
+Radar_GTC;Radar Zone effraction via API  GTC;6;;Ouverture ligne sabotage détection présence
+Radar_GTC;Radar Zone effraction via API  GTC;5;;Court-circuit sabotage détection présence
+Radar_GTC;Radar Zone effraction via API  GTC;4;;Sabotage détection présence
+Radar_GTC;Radar Zone effraction via API  GTC;3;;Ouverture ligne détection présence
+Radar_GTC;Radar Zone effraction via API  GTC;2;;Court-circuit détection présence
+Radar_GTC;Radar Zone effraction via API  GTC;1;;Detection présence
+Zone_Effraction_GTC;Zone effraction via API GTC(Zone_Effraction_GTC);1014;;Inhibition
+Zone_Effraction_GTC;Zone effraction via API GTC(Zone_Effraction_GTC);7;;Synthèse défaut liaisons
+Zone_Effraction_GTC;Zone effraction via API GTC(Zone_Effraction_GTC);6;;Synthèse défaut technique effraction
+Zone_Effraction_GTC;Zone effraction via API GTC(Zone_Effraction_GTC);5;;Synthèse alarme effraction
+Zone_Effraction_GTC;Zone effraction via API GTC(Zone_Effraction_GTC);4;;Ouverture coffret effraction
+Zone_Effraction_GTC;Zone effraction via API GTC(Zone_Effraction_GTC);3;;Sabotage clé de réarmement
+Zone_Effraction_GTC;Zone effraction via API GTC(Zone_Effraction_GTC);2;;Ouverture ligne clé de réarmement
+Zone_Effraction_GTC;Zone effraction via API GTC(Zone_Effraction_GTC);1;;Court-circuit clé de réarmement
+UTL_GTC;Unité Traitement Local via un API GTC(CDS RER);1014;;Inhibition
+UTL_GTC;Unité Traitement Local via un API GTC(CDS RER);3;;Défaut alimentation
+UTL_GTC;Unité Traitement Local via un API GTC(CDS RER);2;;Sabotage du coffret
+UTL_GTC;Unité Traitement Local via un API GTC(CDS RER);1;;Défaut communication API EA <-> UTL
+API_EA_GTC;Centrale alarme accédé via un API GTC;1014;;Inhibition
+API_EA_GTC;Centrale alarme accédé via un API GTC;5;;Défaut liaison API EA <-> MODEM
+API_EA_GTC;Centrale alarme accédé via un API GTC;4;;Sabotage du coffret
+API_EA_GTC;Centrale alarme accédé via un API GTC;3;;Défaut centrale écoute discrète
+API_EA_GTC;Centrale alarme accédé via un API GTC;2;;Défaut disjoncteur alimentation
+API_EA_GTC;Centrale alarme accédé via un API GTC;1;;Défaut communication API SONO <-> API EA
+Haut_Parleur_GTC;Haut parleur via un API GTC;1014;;Inhibition
+Haut_Parleur_GTC;Haut parleur via un API GTC;1;;Défaut impédance
+Zone_Sono_GTC;Zone de sonorisation via un API GTC (CDS RER);1014;;Inhibition
+Zone_Sono_GTC;Zone de sonorisation via un API GTC (CDS RER);3;;Zone de sonrisation HS
+Zone_Sono_GTC;Zone de sonorisation via un API GTC (CDS RER);2;;Défaut haut-parleur
+Zone_Sono_GTC;Zone de sonorisation via un API GTC (CDS RER);1;;Défaut amplificateur
+Ampli_GTC;Amplificateur via un API GTC;1014;;Inhibition
+Ampli_GTC;Amplificateur via un API GTC;2;;Ampli secouru
+Ampli_GTC;Amplificateur via un API GTC;1;;Ampli en défaut
+IPH_GTC;Interphone via un API concentrateur GTC;1014;;Inhibition
+IPH_GTC;Interphone via un API concentrateur GTC;1;;Hors service
+EAT_GTC;Centrale téléphonique via un API GTC(EAT_GTC);1014;;Inhibition
+EAT_GTC;Centrale téléphonique via un API GTC(EAT_GTC);3;;Défaut ligne téléphonique
+EAT_GTC;Centrale téléphonique via un API GTC(EAT_GTC);2;;Défaut batterie
+EAT_GTC;Centrale téléphonique via un API GTC(EAT_GTC);1;;Auto-commutateur en défaut
+ALMTC;alarme de synthèse de divers équipements;1014;;Inhibition
+ALMTC;alarme de synthèse de divers équipements;1;;Synthèse défaut technique
+ECENTRALE;Centrale alarme métro;7;;Défaut Autoprotection
+ECENTRALE;Centrale alarme métro;6;;Vu hors service par API
+ECENTRALE;Centrale alarme métro;5;;Défaut DLPS2
+PTN;Poste Téléphonique Numérique;2;;Defaut liaison téléphonique
+EMONITEUR;Moniteur de téléaffichage CDSMG et Symphonie;1000;;Erreur de communication
+EMONITEUR;Moniteur de téléaffichage CDSMG et Symphonie;3;;Indisponible selon exploitant
+EMONITEUR;Moniteur de téléaffichage CDSMG et Symphonie;2;;Moniteur HS
+EIPH;Interphone CDSMG et Symphonie;7;;Dysfonctionnement interne
+EIPH;Interphone CDSMG et Symphonie;6;;Defaut liaison téléphonique
+EEAT;Eqpt d'Accès Téléphonie CDSMG et Symphonie;1000;1000;Erreur de communication
+EEAT;Eqpt d'Accès Téléphonie CDSMG et Symphonie;1;;IT alarme synthese
+ECAMERA;Caméra;1000;;Erreur de communication
+ECAMERA;Caméra;3;;Caméra masquée
+ECAMERA;Caméra;2;;Caméra HS
+ECAMERA;Caméra;1;;En défaut (Alarme de synthèse)
+API_STA;API station métro;13;;Defaut batterie
+API_STA;API station métro;12;;Defaut debordement chien de garde
+API_STA;API station métro;11;;Defaut E S
+CSONO;Centrale de Sonorisation CDSMG et Symphonie;8;;Défaut message évacuation absent
+CSONO;Centrale de Sonorisation CDSMG et Symphonie;7;;Réserve
+CSONO;Centrale de Sonorisation CDSMG et Symphonie;6;;Défaut commande évacuation
+CSONO;Centrale de Sonorisation CDSMG et Symphonie;5;;Combiné SONO secours mal raccroché
+CSONO;Centrale de Sonorisation CDSMG et Symphonie;4;;Défaut audio combiné secours
+CSONO;Centrale de Sonorisation CDSMG et Symphonie;3;;Défaut alternat combiné de secours
+CSONO;Centrale de Sonorisation CDSMG et Symphonie;2;;Défaut sonorisation secours
+CSONO;Centrale de Sonorisation CDSMG et Symphonie;1;;Alarme de synthèse intervention différée
+CSONO;Centrale de Sonorisation CDSMG et Symphonie;1007;;Identifiant checksum paramètres incorrect
+CSONO;Centrale de Sonorisation CDSMG et Symphonie;1006;;Bit de signe de vie manquant
+CSONO;Centrale de Sonorisation CDSMG et Symphonie;1004;;Identifiant checksum incorrect
+CSONO;Centrale de Sonorisation CDSMG et Symphonie;1003;;Identifiant version incorrect
+CSONO;Centrale de Sonorisation CDSMG et Symphonie;1002;;Identifiant équipement incorrect
+CSONO;Centrale de Sonorisation CDSMG et Symphonie;1001;;Identifiant station incorrect
+CSONO;Centrale de Sonorisation CDSMG et Symphonie;1000;;Erreur de communication
+Bris_de_glace;Bris de glace via API Station et Gare;1013;;Commande automatique klaxon impossible
+Bris_de_glace;Bris de glace via API Station et Gare;1;;Détection
+NDS;Concentrateur;999999;;En entretien
+NDS;Concentrateur;1000;;Erreur de communication
+SielStation;Objet SIEL;2;;Plus de réception des TA sans perte de connexion avec le diffuseur
+SielStation;Objet SIEL;1;;Perte de la connexion avec le diffuseur
+SielStation;Objet SIEL;999999;;En entretien
+SIV;Serveur d'Information Voyageur;1000;;Erreur de communication
+Disjoncteur_DBT_PEF;PEF Métro;1000;;Erreur de communication
+Disjoncteur_DBT_PEF;PEF Métro;4;;alarme zone P ou J
+Disjoncteur_DBT_PEF;PEF Métro;3;;alarme zone T2
+Disjoncteur_DBT_PEF;PEF Métro;2;;alarme zone T1
+Disjoncteur_DBT_PEF;PEF Métro;1;;alarme zone PEF
+Disjoncteur_DBT_PEF;PEF Métro;999999;;En entretien
+PSIEL;Panneau d'Information Quai;1008;;Echec d'une ou plusieurs commandes de PIQ
+PSIEL;Panneau d'Information Quai;1007;;Service indisponible
+PSIEL;Panneau d'Information Quai;1006;;Bit de signe de vie manquant
+PSIEL;Panneau d'Information Quai;1005;;Synchronisation horloge impossible
+PSIEL;Panneau d'Information Quai;1004;;Identifiant checksum incorrect
+PSIEL;Panneau d'Information Quai;1003;;Identifiant version incorrect
+PSIEL;Panneau d'Information Quai;1002;;Identifiant équipement incorrect
+PSIEL;Panneau d'Information Quai;1001;;Identifiant station incorrect
+PSIEL;Panneau d'Information Quai;1000;;Erreur de communication
+PSIEL;Panneau d'Information Quai;14;;Erreur de CRC : X alarmes en Y minutes, mise en mode repli
+PSIEL;Panneau d'Information Quai;13;;Erreur de CRC : X erreurs sur Y trames
+PSIEL;Panneau d'Information Quai;12;;Absence de mise à jour de l'heure
+PSIEL;Panneau d'Information Quai;11;;Absence de réception des TA
+PSIEL;Panneau d'Information Quai;10;;Défaillance de l'alimentation
+PSIEL;Panneau d'Information Quai;9;;Défaut de fonctionnement à la mise sous tension
+PSIEL;Panneau d'Information Quai;8;;Défaillance de la direction B
+PSIEL;Panneau d'Information Quai;7;;Défaillance de la direction A
+PSIEL;Panneau d'Information Quai;6;;Défaillance de la zone d'affichage 2 direction B
+PSIEL;Panneau d'Information Quai;5;;Défaillance de la zone d'affichage 1 direction B
+PSIEL;Panneau d'Information Quai;4;;Défaillance de la zone d'affichage 2 direction A
+PSIEL;Panneau d'Information Quai;3;;Défaillance de la zone d'affichage 1 direction A
+PSIEL;Panneau d'Information Quai;2;;Défaillance de la zone heure
+PSIEL;Panneau d'Information Quai;1;;Alarme sur l'afficheur
+PSIEL;Panneau d'Information Quai;999999;;En entretien
+PC_I;PC industriel;1000;1000;Erreur de communication
+PC_I;PC industriel;4;.1.3.6.1.4.1.2021.8.1.100.5;Appli HS
+PC_I;PC industriel;3;.1.3.6.1.4.1.2021.8.1.100.1;Température trop élevée
+PC_I;PC industriel;2;.1.3.6.1.4.1.2021.8.1.100.2;Conso CPU trop élevée 
+Trottoir_Roulant_R;Trottoir Roulant à Relais;9;;AAI Défaut mains courantes
+Trottoir_Roulant_R;Trottoir Roulant à Relais;8;;AAI Défaut plaques palières haute ou basse
+Trottoir_Roulant_R;Trottoir Roulant à Relais;7;;AAI non discriminée
+Trottoir_Roulant_R;Trottoir Roulant à Relais;6;;En arrêt AAI
+Trottoir_Roulant_R;Trottoir Roulant à Relais;5;;En arrêt ASI
+Trottoir_Roulant_R;Trottoir Roulant à Relais;4;;Niveau de bruit anormal
+Trottoir_Roulant_R;Trottoir Roulant à Relais;3;;Percussion retournement de marche
+Trottoir_Roulant_R;Trottoir Roulant à Relais;2;;Température haute moto-réducteur
+Trottoir_Roulant_R;Trottoir Roulant à Relais;1;;Pré-alerte
+Trottoir_Roulant_R;Trottoir Roulant à Relais;999999;;En entretien
+EM_Re;Escalier Mécanique à Relais;1009;;Commande initiale impossible
+EM_Re;Escalier Mécanique à Relais;1006;;Bit de signe de vie manquant
+EM_Re;Escalier Mécanique à Relais;1005;;Synchronisation horloge impossible
+EM_Re;Escalier Mécanique à Relais;1004;;Identifiant checksum incorrect
+EM_Re;Escalier Mécanique à Relais;1003;;Identifiant version incorrect
+EM_Re;Escalier Mécanique à Relais;1002;;Identifiant équipement incorrect
+EM_Re;Escalier Mécanique à Relais;1001;;Identifiant station incorrect
+EM_Re;Escalier Mécanique à Relais;1000;;Erreur de communication
+EM_Re;Escalier Mécanique à Relais;17;;Défaut levée de frein
+EM_Re;Escalier Mécanique à Relais;16;;AAI Défaut 48V Tame
+EM_Re;Escalier Mécanique à Relais;15;;AAI Défaut 48V de l¿AEM
+EM_Re;Escalier Mécanique à Relais;14;;AAI Défaut 400V PEF
+EM_Re;Escalier Mécanique à Relais;13;;AAI Défaut chariot tenseur
+EM_Re;Escalier Mécanique à Relais;12;;AAI Défaut rupture chaîne de treuil
+EM_Re;Escalier Mécanique à Relais;11;;AAI Défaut survitesse / dévirage
+EM_Re;Escalier Mécanique à Relais;10;;AAI Défaut thermique TLD démarrage
+EM_Re;Escalier Mécanique à Relais;9;;AAI Défaut mains courantes
+EM_Re;Escalier Mécanique à Relais;8;;AAI Défaut plaques palières haute ou basse
+EM_Re;Escalier Mécanique à Relais;7;;AAI non discriminée
+EM_Re;Escalier Mécanique à Relais;6;;En arrêt AAI
+EM_Re;Escalier Mécanique à Relais;5;;En arrêt ASI
+EM_Re;Escalier Mécanique à Relais;4;;Niveau de bruit anormal
+EM_Re;Escalier Mécanique à Relais;3;;Percussion retournement de marche
+EM_Re;Escalier Mécanique à Relais;2;;Température haute moto-réducteur
+EM_Re;Escalier Mécanique à Relais;18;;Défaut automate
+EM_Re;Escalier Mécanique à Relais;999999;;En entretien
+BAES;Bloc Autonome Eclairage Secours;1006;;Bit de signe de vie manquant
+BAES;Bloc Autonome Eclairage Secours;1005;;Synchronisation horloge impossible
+BAES;Bloc Autonome Eclairage Secours;1004;;Identifiant checksum incorrect
+BAES;Bloc Autonome Eclairage Secours;1003;;Identifiant version incorrect
+BAES;Bloc Autonome Eclairage Secours;1002;;Identifiant équipement incorrect
+BAES;Bloc Autonome Eclairage Secours;1001;;Identifiant station incorrect
+BAES;Bloc Autonome Eclairage Secours;1000;;Erreur de communication
+BAES;Bloc Autonome Eclairage Secours;7;;Batterie de la centrale HS
+BAES;Bloc Autonome Eclairage Secours;6;;Au moins 3 blocs  défaillants
+BAES;Bloc Autonome Eclairage Secours;5;;Alarme de synthèse AAI
+BAES;Bloc Autonome Eclairage Secours;4;;Au moins 2 blocs défaillants
+BAES;Bloc Autonome Eclairage Secours;3;;Alerte
+BAES;Bloc Autonome Eclairage Secours;2;;Au moins 1 bloc défaillant
+BAES;Bloc Autonome Eclairage Secours;1;;Pré-alerte
+BAES;Bloc Autonome Eclairage Secours;999999;;En entretien
+AEROA;Aéroéjecteur Autonome;1006;;Bit de signe de vie manquant
+AEROA;Aéroéjecteur Autonome;1005;;Synchronisation horloge impossible
+AEROA;Aéroéjecteur Autonome;1004;;Identifiant checksum incorrect
+AEROA;Aéroéjecteur Autonome;1003;;Identifiant version incorrect
+AEROA;Aéroéjecteur Autonome;1002;;Identifiant équipement incorrect
+AEROA;Aéroéjecteur Autonome;1001;;Identifiant station incorrect
+AEROA;Aéroéjecteur Autonome;1000;;Erreur de communication
+AEROA;Aéroéjecteur Autonome;7;;Défaut thermique compresseur
+AEROA;Aéroéjecteur Autonome;6;;Défaut thermique moteur compresseur
+AEROA;Aéroéjecteur Autonome;5;;Manque tension compresseur
+AEROA;Aéroéjecteur Autonome;4;;Manque de pression
+AEROA;Aéroéjecteur Autonome;3;;Tirage d'air
+AEROA;Aéroéjecteur Autonome;2;;Niveau d'eau
+Onduleur;Onduleur;4;;Fréquence insuffisante
+Onduleur;Onduleur;3;;Fréquence excessive
+Onduleur;Onduleur;2;;Non synchronisme
+Onduleur;Onduleur;1;;Alerte
+Onduleur;Onduleur;999999;;En entretien
+Ascenseur;Ascenseur;1009;;Commande initiale impossible
+Ascenseur;Ascenseur;1006;;Bit de signe de vie manquant
+Ascenseur;Ascenseur;1005;;Synchronisation horloge impossible
+Ascenseur;Ascenseur;1004;;Identifiant checksum incorrect
+Ascenseur;Ascenseur;1003;;Identifiant version incorrect
+Ascenseur;Ascenseur;1002;;Identifiant équipement incorrect
+Ascenseur;Ascenseur;1001;;Identifiant station incorrect
+Ascenseur;Ascenseur;1000;;Erreur de communication
+Ascenseur;Ascenseur;37;;Défaut température > 40° dans le local machine
+Ascenseur;Ascenseur;36;;Défaut non levée de frein
+Ascenseur;Ascenseur;35;;Défaut non retombée des contacteurs
+Ascenseur;Ascenseur;34;;Défaut temps de déplacement trop long
+Ascenseur;Ascenseur;33;;Défaut temps d' ouverture portes trop long
+Ascenseur;Ascenseur;32;;Défaut temps de fermeture portes trop long
+Ascenseur;Ascenseur;31;;Défaut temps de freinage trop long
+Ascenseur;Ascenseur;30;;Défaut contrôle de ralentissement
+Ascenseur;Ascenseur;29;;Défaut sélecteur (bistable, capteurs en gaine¿)
+Ascenseur;Ascenseur;28;;Défaut alimentation chaîne de sécurité
+Ascenseur;Ascenseur;27;;Défaut 3 faux départ
+Ascenseur;Ascenseur;26;;Défaut bouton STOP enfoncé
+Ascenseur;Ascenseur;25;;Défaut: Personne bloquée en cabine
+Ascenseur;Ascenseur;24;;Défaut: d'alimentation CAP
+Ascenseur;Ascenseur;23;;Défaut: d'alimentation CAF
+Ascenseur;Ascenseur;22;;Défaut: poulie tendeuse
+Ascenseur;Ascenseur;21;;Défaut: Contacts fins de course / amortisseurs
+Ascenseur;Ascenseur;20;;Défaut: Contacts parachute
+Ascenseur;Ascenseur;19;;Défaut: Survitesse
+Ascenseur;Ascenseur;18;;Défaut: Trappe, porte intercommun. ou porte secours
+Ascenseur;Ascenseur;17;;Défaut: Contacts porte cabine
+Ascenseur;Ascenseur;16;;Défaut: Contacts portes palières
+Ascenseur;Ascenseur;15;;Défaut: Température moteur
+Ascenseur;Ascenseur;14;;Défaut: Thermique moteur
+Ascenseur;Ascenseur;13;;Défaut: Man¿uvre de secours
+Ascenseur;Ascenseur;12;;AAI non discriminée
+Ascenseur;Ascenseur;11;;En arrêt AAI
+Ascenseur;Ascenseur;10;;ASI retour d'alimentation (380 ou 48V)
+Ascenseur;Ascenseur;9;;ASI forçage de porte
+Ascenseur;Ascenseur;8;;ASI non discriminée
+Ascenseur;Ascenseur;7;;En arrêt ASI
+Ascenseur;Ascenseur;6;;Coupure 48V ABN
+Ascenseur;Ascenseur;5;;Coupure alimentation permanent
+Ascenseur;Ascenseur;4;;Coupure alimentation normale PEF
+Ascenseur;Ascenseur;3;;Panne de communication entre API et coffret d'aquisition
+Ascenseur;Ascenseur;2;;Présence d'eau en cuvette
+Ascenseur;Ascenseur;1;;Pré-alerte
+Ascenseur;Ascenseur;999999;;En entretien
+Grille;Grille Motorisée;1008;;Réglage horaire fermeture impossible
+Grille;Grille Motorisée;1007;;Réglage horaire ouverture impossible
+Grille;Grille Motorisée;1006;;Bit de signe de vie manquant
+Grille;Grille Motorisée;1005;;Synchronisation horloge impossible
+Grille;Grille Motorisée;1004;;Identifiant checksum incorrect
+Grille;Grille Motorisée;1003;;Identifiant version incorrect
+Grille;Grille Motorisée;1002;;Identifiant équipement incorrect
+Grille;Grille Motorisée;1001;;Identifiant station incorrect
+Grille;Grille Motorisée;1000;;Erreur de communication
+Grille;Grille Motorisée;13;;Défaut chaîne de sécurité
+Grille;Grille Motorisée;12;;Défaut sécurité effort
+Grille;Grille Motorisée;11;;Défaut relais de phase
+Grille;Grille Motorisée;10;;Défaut temps de cycle trop long
+Trottoir_Roulant;Trottoir Roulant;44;;AAI rupture chaîne de treuil
+Trottoir_Roulant;Trottoir Roulant;43;;AAI non retombée contacteur
+Trottoir_Roulant;Trottoir Roulant;42;;AAI déclenchement relais sécurité
+Trottoir_Roulant;Trottoir Roulant;41;;AAI défaut relais de phase ou 400V
+Trottoir_Roulant;Trottoir Roulant;40;;AAI Défaut TBTS  de l¿AEM (48 àu 24v)
+Trottoir_Roulant;Trottoir Roulant;39;;AAI défaut relais vitesse RV sur test
+Trottoir_Roulant;Trottoir Roulant;38;;AAI défaut détecteur de vitesse
+Trottoir_Roulant;Trottoir Roulant;37;;AAI survitesse
+Trottoir_Roulant;Trottoir Roulant;36;;AAI inversion sens de marche(sous vitesse)
+Trottoir_Roulant;Trottoir Roulant;35;;AAI non discriminée
+Trottoir_Roulant;Trottoir Roulant;34;;En arrêt AAI
+Trottoir_Roulant;Trottoir Roulant;33;;AAI-RD défaut démarrage TLD
+Trottoir_Roulant;Trottoir Roulant;32;;AAI-RD bouton poussoir d'arrêt
+Trottoir_Roulant;Trottoir Roulant;31;;AAI-RD variateur
+Trottoir_Roulant;Trottoir Roulant;30;;AAI-RD pompe à huile
+Trottoir_Roulant;Trottoir Roulant;29;;AAI-RD connecteur prise d'inspection
+Trottoir_Roulant;Trottoir Roulant;28;;AAI-RD défaut thermique frein de secours
+Trottoir_Roulant;Trottoir Roulant;27;;AAI-RD défaut thermique frein de fonctionnement
+Trottoir_Roulant;Trottoir Roulant;26;;AAI-RD défaut thermique moteur
+Trottoir_Roulant;Trottoir Roulant;25;;AAI-RD non retombée frein de fonctionnement
+Trottoir_Roulant;Trottoir Roulant;24;;AAI-RD non retombée frein additionnel
+Trottoir_Roulant;Trottoir Roulant;23;;En arrêt AAI réarmable à distance par PCM
+Trottoir_Roulant;Trottoir Roulant;22;;ASI Fin asservissement
+Trottoir_Roulant;Trottoir Roulant;12;;ASI arrêt d'urgence voyageur
+Trottoir_Roulant;Trottoir Roulant;11;;ASI non discriminée
+Trottoir_Roulant;Trottoir Roulant;10;;En arrêt ASI
+Trottoir_Roulant;Trottoir Roulant;9;;Défaut détection voyageur
+Trottoir_Roulant;Trottoir Roulant;8;;Détection de fumée en machinerie
+Trottoir_Roulant;Trottoir Roulant;7;;Panne détection incendie
+Trottoir_Roulant;Trottoir Roulant;6;;Usure des freins
+Trottoir_Roulant;Trottoir Roulant;5;;Niveau d'huile
+Trottoir_Roulant;Trottoir Roulant;4;;Niveau de bruit anormal
+Trottoir_Roulant;Trottoir Roulant;3;;Percussion retournement de marche
+Trottoir_Roulant;Trottoir Roulant;2;;Température haute moto-réducteur
+Trottoir_Roulant;Trottoir Roulant;1;;Pré-alerte
+Trottoir_Roulant;Trottoir Roulant;999999;;En entretien
+EM;Escalier Mécanique;1009;;Commande initiale impossible
+EM;Escalier Mécanique;1006;;Bit de signe de vie manquant
+EM;Escalier Mécanique;1005;;Synchronisation horloge impossible
+EM;Escalier Mécanique;1004;;Identifiant checksum incorrect
+EM;Escalier Mécanique;1003;;Identifiant version incorrect
+EM;Escalier Mécanique;1002;;Identifiant équipement incorrect
+EM;Escalier Mécanique;1001;;Identifiant station incorrect
+EM;Escalier Mécanique;1000;1000;Erreur de communication
+EM;Escalier Mécanique;67;;Panne d'épuisement
+EM;Escalier Mécanique;65;;AAI entrée main courante inférieure bloquée
+EM;Escalier Mécanique;64;;AAI entrée main courante supérieure bloquée
+EM;Escalier Mécanique;63;;AAI Défaut armoire automatisme
+EM;Escalier Mécanique;62;;AAI Défaut automate
+EM;Escalier Mécanique;61;;AAI non levée frein de fonctionnement
+EM;Escalier Mécanique;60;;AAI non levée frein secours
+EM;Escalier Mécanique;59;;AAI déjantement main courante Gauche
+EM;Escalier Mécanique;58;;AAI déjantement main courante Droite
+EM;Escalier Mécanique;57;;AAI entrainement main courante Gauche
+EM;Escalier Mécanique;56;;AAI entrainement main courante Droite
+EM;Escalier Mécanique;55;;AAI rupture main courante Gauche
+EM;Escalier Mécanique;54;;AAI rupture main courante Droite
+EM;Escalier Mécanique;53;;AAI absence marche basse
+EM;Escalier Mécanique;52;;AAI absence marche haute
+EM;Escalier Mécanique;51;;AAI affaissement marche supérieure
+EM;Escalier Mécanique;50;;AAI affaissement marche inférieure
+EM;Escalier Mécanique;49;;AAI plaque palière inférieure
+Onduleur;Onduleur;53;;batterie: Batterie en floating
+Onduleur;Onduleur;52;;batterie: Batterie en charge
+Onduleur;Onduleur;51;;batterie: Chargeur batterie bloqué
+Onduleur;Onduleur;50;;batterie: Batterie déchargée
+Onduleur;Onduleur;49;;batterie: Batterie presque déchargée
+Onduleur;Onduleur;48;;batterie: Défaut batterie
+Onduleur;Onduleur;47;;batterie: Défaut thyristor batterie
+Onduleur;Onduleur;46;;batterie: Défaut capteur température
+Onduleur;Onduleur;45;;batterie: Température hors limites
+Onduleur;Onduleur;44;;batterie: Température batterie élevée
+Onduleur;Onduleur;43;;batterie: Coupure imminente
+Onduleur;Onduleur;42;;batterie: Batterie en décharge
+Onduleur;Onduleur;41;;batterie: Chargeur batterie inhibé
+Onduleur;Onduleur;40;;batterie: Batterie déconnectée
+Onduleur;Onduleur;39;;batterie: DJ batterie ouvert
+Onduleur;Onduleur;38;;batterie: Arrêt d'urgence activé
+Onduleur;Onduleur;37;;sortie: Surcharge
+Onduleur;Onduleur;36;;sortie: Présence d'une composante continue
+Onduleur;Onduleur;35;;sortie: Sortie non alimentée
+Onduleur;Onduleur;34;;sortie: DJ sortie ouvert
+Onduleur;Onduleur;33;;onduleur: Protection contre les réalimentations activée
+Onduleur;Onduleur;32;;onduleur: Fonctionnement en surcharge
+Onduleur;Onduleur;31;;onduleur: Protection contre les réalimentations
+Onduleur;Onduleur;30;;onduleur: Défaut contacteur statique
+Onduleur;Onduleur;29;;onduleur: Température excessive du radiateur
+Onduleur;Onduleur;28;;onduleur: Blocage par courant limite
+Onduleur;Onduleur;27;;onduleur: Défaut contacteur statique de l'onduleur
+Onduleur;Onduleur;26;;onduleur: Fusible fondu
+Onduleur;Onduleur;25;;onduleur: Blocage par tension insuffisante
+Onduleur;Onduleur;24;;onduleur: Blocage par tension excessive
+BAM;Baie d'Aération Motorisée;5;;Défaut 48V
+Onduleur;Onduleur;23;;onduleur: Défaut onduleur
+Onduleur;Onduleur;22;;onduleur: Commutateur de by-pass fermé
+Onduleur;Onduleur;21;;onduleur: Inhibition surtempérature
+Onduleur;Onduleur;20;;onduleur: Inhibition surcharge
+Onduleur;Onduleur;19;;onduleur: Tension continue insuffisante
+Onduleur;Onduleur;18;;onduleur: Tension continue excessive
+Onduleur;Onduleur;17;;onduleur: Arrêt d'urgence activé
+Onduleur;Onduleur;16;;redresseur: Panne secteur
+Onduleur;Onduleur;15;;redresseur: Alimentation par la batterie
+Onduleur;Onduleur;14;;redresseur: Défaut de suralimentation
+Onduleur;Onduleur;13;;redresseur: Avarie thyristor batterie
+Onduleur;Onduleur;12;;redresseur: Défaut redresseur
+Onduleur;Onduleur;11;;redresseur: Déséquilibre de suralimentation
+Onduleur;Onduleur;10;;redresseur: Tension de suralimentation insuffisante
+Onduleur;Onduleur;9;;redresseur: Température excessive
+Onduleur;Onduleur;8;;redresseur: Arrêt d'urgence activé
+Onduleur;Onduleur;7;;redresseur: DJ secteur ouvert
+Onduleur;Onduleur;6;;En alarme (AAI)
+Onduleur;Onduleur;5;;Défaut de mesure
+Trottoir_Roulant_R;Trottoir Roulant à Relais;1006;;Bit de signe de vie manquant
+Trottoir_Roulant_R;Trottoir Roulant à Relais;1005;;Synchronisation horloge impossible
+Trottoir_Roulant_R;Trottoir Roulant à Relais;1004;;Identifiant checksum incorrect
+Trottoir_Roulant_R;Trottoir Roulant à Relais;1003;;Identifiant version incorrect
+Trottoir_Roulant;Trottoir Roulant;52;;AAI absence marche haute
+SIV;Serveur d'Information Voyageur;;.1.3.6.1.2.1.2.2.1.9.1;Absence logiciel application
+Trottoir_Roulant;Trottoir Roulant;1006;;Bit de signe de vie manquant
+Trottoir_Roulant;Trottoir Roulant;1005;;Synchronisation horloge impossible
+Trottoir_Roulant;Trottoir Roulant;1004;;Identifiant checksum incorrect
+Trottoir_Roulant;Trottoir Roulant;1003;;Identifiant version incorrect
+Trottoir_Roulant;Trottoir Roulant;1002;;Identifiant équipement incorrect
+Trottoir_Roulant;Trottoir Roulant;1001;;Identifiant station incorrect
+PEP;Poste d'Epuisement;3;;Baisse débit groupe 1
+PEP;Poste d'Epuisement;2;;Apport d'eau élevé (> 0,4 x débit nominal groupe)
+PEP;Poste d'Epuisement;1;;Pré-alerte
+PEP;Poste d'Epuisement;999999;;En entretien
+PEP;Poste d'Epuisement;20;;BAE (Bouton Arrêt Entretien) > 5 heures
+PEP;Poste d'Epuisement;19;;Alarme Haute
+PEP;Poste d'Epuisement;18;;Vanne d'arrivée fermée
+PEP;Poste d'Epuisement;17;;AAI non discriminée
+PEP;Poste d'Epuisement;16;;Alarme  AAI
+PEP;Poste d'Epuisement;15;;Défaut hydraulique groupe 4
+PEP;Poste d'Epuisement;14;;Défaut hydraulique groupe 3
+PEP;Poste d'Epuisement;13;;Défaut hydraulique groupe 2
+PEP;Poste d'Epuisement;12;;Défaut hydraulique groupe 1
+EM;Escalier Mécanique;46;;AAI capot bout d'arbre
+EM;Escalier Mécanique;45;;AAI chariot tenseur
+EM;Escalier Mécanique;44;;AAI rupture chaîne de treuil
+EM;Escalier Mécanique;43;;AAI non retombée contacteur
+EM;Escalier Mécanique;42;;AAI déclenchement relais sécurité
+EM;Escalier Mécanique;41;;AAI défaut relais de phase ou 400V
+EM;Escalier Mécanique;40;;AAI Défaut TBTS  de l¿AEM (48 àu 24v)
+EM;Escalier Mécanique;39;;AAI défaut relais vitesse RV sur test
+EM;Escalier Mécanique;38;;AAI défaut détecteur de vitesse
+EM;Escalier Mécanique;37;;AAI survitesse
+EM;Escalier Mécanique;36;;AAI inversion sens de marche(sous vitesse)
+EM;Escalier Mécanique;35;;AAI non discriminée
+EM;Escalier Mécanique;34;;En arrêt AAI
+EM;Escalier Mécanique;33;;AAI-RD défaut démarrage TLD
+EM;Escalier Mécanique;32;;AAI-RD bouton poussoir d'arrêt
+EM;Escalier Mécanique;31;;AAI-RD variateur
+EM;Escalier Mécanique;30;;AAI-RD pompe à huile
+EM;Escalier Mécanique;29;;AAI-RD connecteur prise d'inspection
+EM;Escalier Mécanique;28;;AAI-RD défaut thermique frein de secours
+EM;Escalier Mécanique;27;;AAI-RD défaut thermique frein de fonctionnement
+EM;Escalier Mécanique;26;;AAI-RD défaut thermique moteur
+EM;Escalier Mécanique;25;;AAI-RD non retombée frein de fonctionnement
+EM;Escalier Mécanique;24;;AAI-RD non retombée frein additionnel
+EM;Escalier Mécanique;23;;En arrêt AAI réarmable à distance par PCM
+EM;Escalier Mécanique;22;;ASI Fin asservissement
+EM;Escalier Mécanique;21;;ASI Retour 400V ou manque 48V Tame
+EM;Escalier Mécanique;20;;ASI Relais de phase
+EM;Escalier Mécanique;19;;ASI variateur
+EM;Escalier Mécanique;18;;ASI plaque palière supérieure
+EM;Escalier Mécanique;17;;ASI plaque palière inférieure
+EM;Escalier Mécanique;16;;ASI entrainement main courante gauche
+EM;Escalier Mécanique;15;;ASI entrainement main courante droite
+BAM;Baie d'Aération Motorisée;4;;Défaut chaîne de sécurité
+BAM;Baie d'Aération Motorisée;3;;AAI non discriminée
+BAM;Baie d'Aération Motorisée;2;;Défaut thermique moteur
+BAM;Baie d'Aération Motorisée;1;;En panne AAI
+BAM;Baie d'Aération Motorisée;999999;;En entretien
+Ventilateur;Ventilateur;1006;;Bit de signe de vie manquant
+STOSC;Serveur TOSCANE;100;;Perte du process ApplibusPingSymphonie
+STOSC;Serveur TOSCANE;101;;Perte du process ApplibusNameServer
+STOSC;Serveur TOSCANE;102;;Perte du process ApplibusAccobep
+STOSC;Serveur TOSCANE;103;;Perte du process DriverNDSI (interface LibA)
+STOSC;Serveur TOSCANE;104;;Perte du process Ilog TCP daemon (accès à Ilog Serveur)
+STOSC;Serveur TOSCANE;105;;Perte du process Ilog Serveur (coeur du système TOSCANE)
+STOSC;Serveur TOSCANE;106;;Perte du process Client Persistance (accès ORACLE)
+STOSC;Serveur TOSCANE;107;;Perte du process DriverSNMP (équipements en mode direct)
+STOSC;Serveur TOSCANE;108;;Perte du process DriverNDSRP (interface LibA)
+STOSC;Serveur TOSCANE;109;;Perte du process DriverGMAO (interface GMAO)
+STOSC;Serveur TOSCANE;110;;Perte du process CalculateurCF (chaînes fonctionnelles)
+STOSC;Serveur TOSCANE;111;;Perte du process MoteurAnalyse (Ilog Rules)
+STOSC;Serveur TOSCANE;112;;Perte du process DriverSYSTEME (gestion des performances)
+STOSC;Serveur TOSCANE;113;;Perte du process DriverSGC (interface SGC)
+STOSC;Serveur TOSCANE;114;;Perte du process InterfaceSGC (interface SGC)
+STOSC;Serveur TOSCANE;115;;Perte du process ServeurCOMMANDE (gestion accès ADMF)
+STOSC;Serveur TOSCANE;116;;Perte du process JONAS (serveur WEB)
+HUB;HUB;1000;1000;Erreur de communication
+HUB;HUB;;.1.3.6.1.2.1.2.2.1.9.1;Etat fonctionnel
+MON;Moniteur de Téléaffichage en mode snmp;1000;1000;Erreur de communication
+MON;Moniteur de Téléaffichage en mode snmp;;.1.3.6.1.4.1.1581.1.5.1.601.0.4002;PC portable de maintenance connecté
+MON;Moniteur de Téléaffichage en mode snmp;;.1.3.6.1.4.1.1581.1.5.1.601.3.1.0;Défaut retour caractère LCD
+MON;Moniteur de Téléaffichage en mode snmp;;.1.3.6.1.2.1.4.18.0;Etat fonctionnel
+ADA;Armoire Distribution Automatique;2;;Défaut source normal (RATP)
+EM;Escalier Mécanique;2001;;Arrêt exploitation
+EM;Escalier Mécanique;2002;;Arrêt maintenance
+EM;Escalier Mécanique;2000;;Arrêt
+ADA;Armoire Distribution Automatique;3;;Défaut source remplacement (EDF)
+ADA;Armoire Distribution Automatique;4;;Absence de tension aval inverseur
+ADA;Armoire Distribution Automatique;5;;Durée de maintenance long
+ADA;Armoire Distribution Automatique;6;;Défaut automate
+ADA;Armoire Distribution Automatique;8;;Défaut départ permanent luminaires BAES vers local SEAT
+ADA;Armoire Distribution Automatique;9;;Défaut départ remplacement Luminaires/PC/Clim vers local SEAT
+Trottoir_Roulant;Trottoir Roulant;59;;AAI déjantement main courante Gauche
+Trottoir_Roulant;Trottoir Roulant;58;;AAI déjantement main courante Droite
+Trottoir_Roulant;Trottoir Roulant;57;;AAI entrainement main courante Gauche
+Trottoir_Roulant;Trottoir Roulant;56;;AAI entrainement main courante Droite
+Trottoir_Roulant;Trottoir Roulant;55;;AAI rupture main courante Gauche
+Trottoir_Roulant;Trottoir Roulant;54;;AAI rupture main courante Droite
+Trottoir_Roulant;Trottoir Roulant;53;;AAI absence marche basse
+Ventilateur;Ventilateur;1005;;Synchronisation horloge impossible
+Ventilateur;Ventilateur;1004;;Identifiant checksum incorrect
+Ventilateur;Ventilateur;1003;;Identifiant version incorrect
+Ventilateur;Ventilateur;1002;;Identifiant équipement incorrect
+Ventilateur;Ventilateur;1001;;Identifiant station incorrect
+Ventilateur;Ventilateur;1000;;Erreur de communication
+Ventilateur;Ventilateur;18;;Panne d'épuisement (de l'ouvrage de ventilation)
+Ventilateur;Ventilateur;17;;Arrêt d'urgence
+Ventilateur;Ventilateur;16;;Défaut BAE > 5 heures
+Ventilateur;Ventilateur;15;;Défaut rideau coupe-vent
+Ventilateur;Ventilateur;14;;Défaut frein
+Ventilateur;Ventilateur;13;;Discordance BAE / CDAL
+Ventilateur;Ventilateur;12;;Défaut absence tension 48 Volts Armoire
+Ventilateur;Ventilateur;11;;Défaut absence tension 400 Volts NORMAL
+Ventilateur;Ventilateur;10;;Panne non discriminée
+Ventilateur;Ventilateur;9;;Défaut thermique moteur (RD)
+Ventilateur;Ventilateur;8;;Défaut variateur ou thermique démarreur (RD)
+Ventilateur;Ventilateur;6;;Absence 400V REMPLACEMENT
+Ventilateur;Ventilateur;5;;Niveau de bruit élévé en baie (>60 db)
+Ventilateur;Ventilateur;4;;Intensité insuffisante en insuflation
+Ventilateur;Ventilateur;3;;Intensité insuffisante en extraction
+Ventilateur;Ventilateur;2;;Défaut vibration
+Ventilateur;Ventilateur;999999;;En entretien
+PEP;Poste d'Epuisement;1006;;Bit de signe de vie manquant
+PEP;Poste d'Epuisement;1005;;Synchronisation horloge impossible
+PEP;Poste d'Epuisement;1004;;Identifiant checksum incorrect
+PEP;Poste d'Epuisement;1003;;Identifiant version incorrect
+PEP;Poste d'Epuisement;1002;;Identifiant équipement incorrect
+PEP;Poste d'Epuisement;1001;;Identifiant station incorrect
+PEP;Poste d'Epuisement;1000;;Erreur de communication
+PEP;Poste d'Epuisement;31;;Défaut variateur groupe 4
+PEP;Poste d'Epuisement;30;;Défaut thermique groupe 4
+PEP;Poste d'Epuisement;29;;Défaut variateur groupe 3
+Grille;Grille Motorisée;9;;Man¿uvre de secours
+Grille;Grille Motorisée;8;;Défaut ipsotherme
+Grille;Grille Motorisée;7;;Défaut niveau d'huile
+Grille;Grille Motorisée;6;;En entretien > 5h
+Grille;Grille Motorisée;5;;Contact de surpassement
+Grille;Grille Motorisée;4;;Défaut thermique moteur
+Grille;Grille Motorisée;3;;Défaut barre sensible
+Grille;Grille Motorisée;2;;Défaut volets de sécurité
+Grille;Grille Motorisée;1;;En panne AAI
+Grille;Grille Motorisée;999999;;En entretien
+Compresseur;Compresseur;1006;;Bit de signe de vie manquant
+Compresseur;Compresseur;1005;;Synchronisation horloge impossible
+Compresseur;Compresseur;1004;;Identifiant checksum incorrect
+Compresseur;Compresseur;1003;;Identifiant version incorrect
+Compresseur;Compresseur;1002;;Identifiant équipement incorrect
+Compresseur;Compresseur;1001;;Identifiant station incorrect
+Compresseur;Compresseur;1000;;Erreur de communication
+Compresseur;Compresseur;16;;Défaut sécheur 2
+Compresseur;Compresseur;15;;Défaut sécheur 1
+Compresseur;Compresseur;14;;Absence tension compresseur 2 (400V)
+Compresseur;Compresseur;13;;Absence tension compresseur 1 (400V)
+Compresseur;Compresseur;12;;BAE>5 heures
+Compresseur;Compresseur;11;;Défaut compresseur 2
+Compresseur;Compresseur;10;;Défaut compresseur 1
+Compresseur;Compresseur;9;;Défaut de pression basse < 4 Bars
+Compresseur;Compresseur;8;;AAI non discriminée
+Compresseur;Compresseur;7;;En arrêt AAI
+Compresseur;Compresseur;6;;Temps de compression groupe 2 trop long
+Compresseur;Compresseur;5;;Temps de compression groupe 1 trop long
+Compresseur;Compresseur;4;;Défaut fuite réseau
+Compresseur;Compresseur;3;;Alerte
+Compresseur;Compresseur;2;;Température de groupe anormale
+Compresseur;Compresseur;999999;;En entretien
+BAM;Baie d'Aération Motorisée;1006;;Bit de signe de vie manquant
+BAM;Baie d'Aération Motorisée;1005;;Synchronisation horloge impossible
+BAM;Baie d'Aération Motorisée;1004;;Identifiant checksum incorrect
+BAM;Baie d'Aération Motorisée;1003;;Identifiant version incorrect
+BAM;Baie d'Aération Motorisée;1002;;Identifiant équipement incorrect
+BAM;Baie d'Aération Motorisée;1001;;Identifiant station incorrect
+BAM;Baie d'Aération Motorisée;1000;;Erreur de communication
+BAM;Baie d'Aération Motorisée;6;;Défaut BAE>5h
+Trottoir_Roulant;Trottoir Roulant;51;;AAI affaissement marche supérieure
+Trottoir_Roulant;Trottoir Roulant;50;;AAI affaissement marche inférieure
+Trottoir_Roulant;Trottoir Roulant;49;;AAI plaque palière inférieure
+Trottoir_Roulant;Trottoir Roulant;48;;AAI plaque palière supérieure
+Trottoir_Roulant;Trottoir Roulant;47;;AAI trappe
+Trottoir_Roulant;Trottoir Roulant;46;;AAI capot bout d'arbre
+Trottoir_Roulant;Trottoir Roulant;21;;ASI Retour 400V ou manque 48V Tame
+Trottoir_Roulant;Trottoir Roulant;20;;ASI Relais de phase
+Trottoir_Roulant;Trottoir Roulant;19;;ASI variateur
+Trottoir_Roulant;Trottoir Roulant;18;;ASI plaque palière supérieure
+Trottoir_Roulant;Trottoir Roulant;17;;ASI plaque palière inférieure
+Trottoir_Roulant;Trottoir Roulant;16;;ASI entrainement main courante gauche
+Trottoir_Roulant;Trottoir Roulant;15;;ASI entrainement main courante droite
+Trottoir_Roulant;Trottoir Roulant;14;;ASI entrée main courante gauche
+Trottoir_Roulant;Trottoir Roulant;13;;ASI entrée main courante droite
+EM;Escalier Mécanique;14;;ASI entrée main courante gauche
+EM;Escalier Mécanique;13;;ASI entrée main courante droite
+EM;Escalier Mécanique;12;;ASI arrêt d'urgence voyageur
+EM;Escalier Mécanique;11;;ASI non discriminée
+EM;Escalier Mécanique;10;;En arrêt ASI
+EM;Escalier Mécanique;9;;Défaut détection voyageur
+EM;Escalier Mécanique;8;;Détection de fumée en machinerie
+EM;Escalier Mécanique;7;;Panne détection incendie
+EM;Escalier Mécanique;6;;Usure des freins
+EM;Escalier Mécanique;5;;Niveau d'huile
+EM;Escalier Mécanique;4;;Niveau de bruit anormal
+EM;Escalier Mécanique;3;;Percussion retournement de marche
+EM;Escalier Mécanique;2;;Température haute moto-réducteur
+EM;Escalier Mécanique;1;;Pré-alerte
+EM;Escalier Mécanique;999999;;En entretien
+Trottoir_Roulant;Trottoir Roulant;45;;AAI chariot tenseur
+AEROA;Aéroéjecteur Autonome;1;;Alarme AAI
+AEROA;Aéroéjecteur Autonome;999999;;En entretien
+Onduleur;Onduleur;1006;;Bit de signe de vie manquant
+Onduleur;Onduleur;1005;;Synchronisation horloge impossible
+Onduleur;Onduleur;1004;;Identifiant checksum incorrect
+Onduleur;Onduleur;1003;;Identifiant version incorrect
+Onduleur;Onduleur;1002;;Identifiant équipement incorrect
+Onduleur;Onduleur;1001;;Identifiant station incorrect
+Onduleur;Onduleur;1000;;Erreur de communication
+Onduleur;Onduleur;61;;Baie 48V n°4: Défaut redresseur
+Onduleur;Onduleur;60;;Baie 48V n°4: Défaut alim. AC 
+Onduleur;Onduleur;59;;Baie 48V n°3: Défaut redresseur
+Onduleur;Onduleur;58;;Baie 48V n°3: Défaut alim. AC 
+Onduleur;Onduleur;57;;Baie 48V n°2: Défaut redresseur
+Onduleur;Onduleur;56;;Baie 48V n°2: Défaut alim. AC 
+Onduleur;Onduleur;55;;Baie 48V n°1: Défaut redresseur
+Onduleur;Onduleur;54;;Baie 48V n°1: Défaut alim. AC 
+E_CALARME;Centrale alarme RER CDSMG;1000;;Erreur de communication
+E_CALARME;Centrale alarme RER CDSMG;1001;;Identifiant station incorrect
+E_CALARME;Centrale alarme RER CDSMG;1002;;Identifiant équipement incorrect
+E_CALARME;Centrale alarme RER CDSMG;1003;;Identifiant version incorrect
+E_CALARME;Centrale alarme RER CDSMG;1004;;Identifiant checksum incorrect
+E_CALARME;Centrale alarme RER CDSMG;1006;;Bit de signe de vie manquant
+E_CALARME;Centrale alarme RER CDSMG;2;;Defaut Transmetteur Vocal
+E_CALARME;Centrale alarme RER CDSMG;3;;Vu Hors Service par API
+EC_Cordon_Chauffant;Cordon Chauffant Elément Chauffant;5;;Cordon chauffant en arret
+EC_Cordon_Chauffant;Cordon Chauffant Elément Chauffant;2;;Défaut I haut du cordon chauffant
+EC_Cordon_Chauffant;Cordon Chauffant Elément Chauffant;1;;Défaut de mise en fonctionnement du cordon chauffant
+EC_Cordon_Chauffant;Cordon Chauffant Elément Chauffant;3;;Defaut I bas du cordon chauffant
+EC_Cordon_Chauffant;Cordon Chauffant Elément Chauffant;4;;Défaut fusible du cordon chauffant
+E_MICRO_ONDULEUR_GARE;Micro Onduleur Gare via API Station et Gare;1;1;Alarme
+E_MICRO_ONDULEUR_GARE;Micro Onduleur Gare via API Station et Gare;2;2;Mode Batterie
+E_MICRO_ONDULEUR_GARE;Micro Onduleur Gare via API Station et Gare;3;3;Fin d'autonomie
+E_MICRO_ONDULEUR_GARE;Micro Onduleur Gare via API Station et Gare;4;4;By Pass
+Armoire_Forte;E_ARMOIRE_FORTE CDSMG et Symphonie;1014;;Inhibition
+Buzzer;Buzzer via API Station et Gare;1014;;Inhibition
+E_AS;ADUP AS PARKEON  type3;1000;1000;Erreur de communication
+E_AS;ADUP AS PARKEON  type3;702;;Défaut lecteur C.B.
+E_AS;ADUP AS PARKEON  type3;703;;Clavier bancaire hors service 
+E_AS;ADUP AS PARKEON  type3;704;;défaut fichiers 
+E_AS;ADUP AS PARKEON  type3;705;;Défaut imprimante 
+E_AS;ADUP AS PARKEON  type3;706;;Effraction
+E_AS;ADUP AS PARKEON  type3;708;;Présence clef 
+E_AS;ADUP AS PARKEON  type3;709;;Mise hors service automate 
+E_AS;ADUP AS PARKEON  type3;710;;Intervention 
+E_AS;ADUP AS PARKEON  type3;711;;Mise hors service C.B. 
+E_AS;ADUP AS PARKEON  type3;712;;défaut télétransmission 
+E_AS;ADUP AS PARKEON  type3;900;;Erreur Abonnement 
+E_AS;ADUP AS PARKEON  type3;1;;Code confidentiel agent incorrect 
+E_AS;ADUP AS PARKEON  type3;2;;Agent inconnu 
+E_AS;ADUP AS PARKEON  type3;3;;Corrélation agent / distributeur fausse 
+E_AS;ADUP AS PARKEON  type3;4;;Date de validité du passe incorrecte 
+E_AS;ADUP AS PARKEON  type3;5;;Fraude à l'identification (carte de service bloquée) 
+E_AS;ADUP AS PARKEON  type3;6;;Téléchargement CSC en cours 
+E_AS;ADUP AS PARKEON  type3;7;;Echec du téléchargement CSC 
+E_AS;ADUP AS PARKEON  type3;8;;Défaut de communication avec l'antenne 
+E_AS;ADUP AS PARKEON  type3;9;;Exécution anormale signalée par le passe 
+E_AS;ADUP AS PARKEON  type3;10;;Exécution anormale signalée par le SAM 
+E_AS;ADUP AS PARKEON  type3;11;;Anomalie signalée par API passe 
+E_AS;ADUP AS PARKEON  type3;12;;Echec du CSC 
+E_AS;ADUP AS PARKEON  type3;13;;Seuil haut du SAM atteint 
+E_AS;ADUP AS PARKEON  type3;14;;SAM de rechargement « vide » 
+E_AS;ADUP AS PARKEON  type3;15;;Passe invalide 
+E_AS;ADUP AS PARKEON  type3;16;;Passe oublié 
+E_AS;ADUP AS PARKEON  type3;17;;Défaut de communication avec la carte CSC 
+E_AS;ADUP AS PARKEON  type3;18;;Erreur configuration noyau SSSR 
+E_AS;ADUP AS PARKEON  type3;19;;Refus rechargement SSSR 
+E_AS;ADUP AS PARKEON  type3;20;;Incohérence avec SSSR 
+E_AS;ADUP AS PARKEON  type3;21;;Problème rechargement SSSR 
+E_AS;ADUP AS PARKEON  type3;22;;Problème SSSR non prévu 
+E_AS;ADUP AS PARKEON  type3;23;;Carte oubliée-avalée 
+E_AS;ADUP AS PARKEON  type3;24;;Défaut télétransmission entre UC - LCB 
+E_AS;ADUP AS PARKEON  type3;25;;Erreur interne LCB 
+E_AS;ADUP AS PARKEON  type3;26;;Défaut de communication clavier bancaire 
+E_AS;ADUP AS PARKEON  type3;27;;Erreur interne clavier bancaire 
+EC_API;API Elément Chauffant;1002;;Identifiant équipement incorrect
+EC_API;API Elément Chauffant;1000;1000;Erreur de communication
+EC_API;API Elément Chauffant;1001;;Identifiant station incorrect
+EC_API;API Elément Chauffant;1003;;Identifiant version incorrect
+EC_API;API Elément Chauffant;1004;;Identifiant checksum incorrect
+EC_API;API Elément Chauffant;1005;;Synchronisation horloge impossible
+EC_API;API Elément Chauffant;1006;;Bit de signe de vie manquant
+EC_API;API Elément Chauffant;1014;;Inhibition
+EC_Armoire_Puissance;Armoire de Puissance Elément Chauffant;1000;1000;Erreur de communication
+EC_Cordon_Chauffant;Cordon Chauffant Elément Chauffant;1000;1000;Erreur de communication
+E_AS;ADUP AS PARKEON  type3;28;;Application B0' non initialisée 
+E_AS;ADUP AS PARKEON  type3;29;;Application EMV non initialisée 
+E_AS;ADUP AS PARKEON  type3;30;;Application privative 0 non initialisée 
+E_AS;ADUP AS PARKEON  type3;31;;Application privative 1 non initialisée 
+E_AS;ADUP AS PARKEON  type3;32;;Application privative 2 non initialisée 
+E_AS;ADUP AS PARKEON  type3;33;;L'APV fonctionne avec une base obsolète 
+E_AS;ADUP AS PARKEON  type3;34;;Pas de base utilisable 
+E_AS;ADUP AS PARKEON  type3;35;;Erreur dans la gamme tarifaire 
+E_AS;ADUP AS PARKEON  type3;36;;Fichier d'archive incohérent 
+E_AS;ADUP AS PARKEON  type3;37;;Ecriture archive impossible 
+E_AS;ADUP AS PARKEON  type3;38;;Fichier d'archives trop ancien 
+E_AS;ADUP AS PARKEON  type3;39;;Accès impossible aux données MIB 
+E_AS;ADUP AS PARKEON  type3;40;;Au moins un fichier de paramètre absent 
+E_AS;ADUP AS PARKEON  type3;41;;Erreur de CRC sur au moins un fichier de paramètre 
+E_AS;ADUP AS PARKEON  type3;42;;Au mon un fichier de paramètre non intègre 
+E_AS;ADUP AS PARKEON  type3;43;;Problème de génération de base 
+E_AS;ADUP AS PARKEON  type3;44;;Disque endommagé 
+E_AS;ADUP AS PARKEON  type3;45;;Rouleau imprimante presque vide 
+E_AS;ADUP AS PARKEON  type3;46;;Rouleau imprimante vide 
+E_AS;ADUP AS PARKEON  type3;47;;Bourrage imprimante document 
+E_AS;ADUP AS PARKEON  type3;48;;Défaut de Communication UC/ Imprimante document 
+E_AS;ADUP AS PARKEON  type3;49;;Coupure secteur 
+E_AS;ADUP AS PARKEON  type3;50;;Effraction porte  
+E_AS;ADUP AS PARKEON  type3;51;;Porte ouverte 
+E_AS;ADUP AS PARKEON  type3;52;;Activation clé prise de service 
+E_AS;ADUP AS PARKEON  type3;53;;Clé prise de service non retirée 
+E_AS;ADUP AS PARKEON  type3;54;;Détection d'un choc important 
+E_AS;ADUP AS PARKEON  type3;55;;distributeur hors service 
+E_AS;ADUP AS PARKEON  type3;56;;Automate H.S. sur demande central 
+E_AS;ADUP AS PARKEON  type3;57;;Automate H.S. sur demande locale 
+E_AS;ADUP AS PARKEON  type3;58;;Automate en intervention exploitation 
+E_AS;ADUP AS PARKEON  type3;59;;TLB fonction vente HS sur demande central 
+E_AS;ADUP AS PARKEON  type3;60;;HS paiement CB sur demande central 
+E_AS;ADUP AS PARKEON  type3;61;;Mise hors service identification 
+E_AS;ADUP AS PARKEON  type3;62;;Paiement par CB hors service 
+E_AS;ADUP AS PARKEON  type3;63;;Changement version fichiers programmes 
+E_AS;ADUP AS PARKEON  type3;64;;Changement version fichiers paramètres 
+E_AS;ADUP AS PARKEON  type3;65;;Traitement LV interdit par le central 
+E_AS;ADUP AS PARKEON  type3;66;;Changement date et heure distributeur 
+E_AS;ADUP AS PARKEON  type3;67;;Automate en intervention formation 
+E_AS;ADUP AS PARKEON  type3;68;;Automate en intervention maintenance 
+E_AS;ADUP AS PARKEON  type3;69;;Relance par Watchdog logiciel 
+E_AS;ADUP AS PARKEON  type3;70;;CB off-line interdit par le central 
+E_AS;ADUP AS PARKEON  type3;71;;Aucune application bancaire n'est en état de fonctionner 
+E_AS;ADUP AS PARKEON  type3;72;;Défaut de communication carte de surveillance 
+E_AS;ADUP AS PARKEON  type3;73;;Température basse 
+E_AS;ADUP AS PARKEON  type3;74;;Température haute atteinte 
+E_AS;ADUP AS PARKEON  type3;75;;Défaut de communication dalle tactile 
+E_AS;ADUP AS PARKEON  type3;76;;Défaut de communication avec le SGLV 
+E_AS;ADUP AS PARKEON  type3;77;;Défaut de communication SSSR 
+E_AS;ADUP AS PARKEON  type3;78;;Compte-rendu d'opération SGLV non transmis 
+E_AS;ADUP AS PARKEON  type3;79;;Fichier de transaction CB offline B0¿ trop ancien
+E_AS;ADUP AS PARKEON  type3;80;;Fichier CB hors-ligne EMV trop ancien 
+E_AS;ADUP AS PARKEON  type3;81;;Fichier CB hors-ligne appli 0 trop ancien 
+E_AS;ADUP AS PARKEON  type3;82;;Fichier CB hors-ligne appli 1 trop ancien 
+E_AS;ADUP AS PARKEON  type3;83;;Fichier CB hors-ligne appli 2 trop ancien 
+E_AS;ADUP AS PARKEON  type3;84;;Défaut de communication SGAS 
+E_AS;ADUP AS PARKEON  type3;85;;Anomalie NTP 
+E_AS;ADUP AS PARKEON  type3;86;;AS en échec d¿authentification 
+E_AS;ADUP AS PARKEON  type3;87;;AS en échec d'authentification 
+E_AS;ADUP AS PARKEON  type3;88;;Fichier CB hors-ligne B0' plein 
+E_AS;ADUP AS PARKEON  type3;89;;Fichier CB hors-ligne EMV plein 
+E_AS;ADUP AS PARKEON  type3;90;;Fichier CB hors-ligne appli 0 plein 
+E_AS;ADUP AS PARKEON  type3;91;;Fichier CB hors-ligne appli 1 plein 
+E_AS;ADUP AS PARKEON  type3;92;;Fichier CB hors-ligne appli 2 plein 
+E_AS;ADUP AS PARKEON  type3;93;;Défaut de liaison automate alarmes 
+E_AS;ADUP AS PARKEON  type3;94;;Transaction EMV en attente d'acquisition 
+E_AS;ADUP AS PARKEON  type3;95;;Fonctionnement hors-ligne application B0' 
+E_AS;ADUP AS PARKEON  type3;96;;Défaut de liaison TVR ou de sécurisation piste EMV 
+E_AS;ADUP AS PARKEON  type3;97;;Echec de communication avec le SBE 
+E_AS;ADUP AS PARKEON  type3;98;;Divergence autorisation / acquisition 
+E_TLB;TLB Ferré CDSMG;1000;1000;Erreur de communication 
+E_TLB;TLB Ferré CDSMG;1002;;Equipement inconnu par CES 
+E_TLB;TLB Ferré CDSMG;1;;Défaut 
+E_TLB;TLB Ferré CDSMG;2;;Erreur de communication équipement (entre CES et l'équipement) 
+E_TLB;TLB Ferré CDSMG;3;;TLB Hors Service 
+E_TLB;TLB Ferré CDSMG;4;;ANT ABSENTE 
+E_TLB;TLB Ferré CDSMG;5;;SAM 1 HS 
+E_TLB;TLB Ferré CDSMG;6;;SAM 2 HS 
+E_TLB;TLB Ferré CDSMG;7;;CSC HS 
+E_TLB;TLB Ferré CDSMG;8;;DEF PARAM 
+E_LC;Ligne de Contrôle générique;1000;1000;Erreur de communication 
+E_LC;Ligne de Contrôle générique;900;;Perte de liaison avec AE5G 
+E_LC;Ligne de Contrôle générique;901;;Perte de liaison avec CES 
+E_LC;Ligne de Contrôle générique;902;;Perte de liaison avec ECS 
+E_LC;Ligne de Contrôle générique;903;;Perte de liaison avec API GARE 
+E_LC;Ligne de Contrôle générique;3;;Hors tension du TAC 
+E_LC;Ligne de Contrôle générique;4;;Hors tension Extérieure 
+E_LC;Ligne de Contrôle générique;5;;Simulé automatique 
+E_LC;Ligne de Contrôle générique;6;;Simulé manuel 
+E_LC;Ligne de Contrôle générique;7;;Simulé externe 
+E_LC;Ligne de Contrôle générique;8;;Commutation de Recette effectuée 
+E_LC;Ligne de Contrôle générique;9;;Déverrouillage secours (BHU) 
+E_LC;Ligne de Contrôle générique;10;;Bourrage lecteur magnétique 
+E_LC;Ligne de Contrôle générique;11;;Lecteur hors service 
+E_LC;Ligne de Contrôle générique;12;;Ligne tombée 
+E_LC;Ligne de Contrôle générique;13;;Ligne disjonctée 
+E_LC;Ligne de Contrôle générique;14;;Pavel bloqué ouvert 
+E_LC;Ligne de Contrôle générique;15;;Pavel bloqué fermé 
+E_LC;Ligne de Contrôle générique;16;;Pavel verrouillé 
+E_LC;Ligne de Contrôle générique;17;;Mise hors tension impossible 
+E_LC;Ligne de Contrôle générique;18;;Présence Fraudeur 
+E_LC;Ligne de Contrôle générique;19;;Porte HS auto. (PAS) 
+E_LC;Ligne de Contrôle générique;20;;Porte mise HS (PAS) 
+E_LC;Ligne de Contrôle générique;21;;Défaut de communication avec TLB 
+E_LC;Ligne de Contrôle générique;22;;Valideur TLB hors service 
+E_LC;Ligne de Contrôle générique;23;;Simulé externe 
+E_LC;Ligne de Contrôle générique;24;;Défaut de communication avec le lecteur magnétique 
+E_LC;Ligne de Contrôle générique;25;;Bourrage lecteur magnétique 
+E_LC;Ligne de Contrôle générique;26;;Lecteur hors service 
+E_LC;Ligne de Contrôle générique;27;;Défaut de communication avec le Pavel 
+E_LC;Ligne de Contrôle générique;28;;Pavel bloqué ouvert 
+E_LC;Ligne de Contrôle générique;29;;Pavel bloqué fermé 
+E_LC;Ligne de Contrôle générique;30;;Pavel verrouillé 
+E_LC;Ligne de Contrôle générique;31;;BHU 
+E_LC;Ligne de Contrôle générique;32;;Porte HS auto. (BHU) 
+E_LC;Ligne de Contrôle générique;33;;Porte mise HS (BHU) 
+E_LC;Ligne de Contrôle générique;34;;Tourniquet Barbès 
+E_LC;Ligne de Contrôle générique;35;;Occupé (SAS) 
+E_LC;Ligne de Contrôle générique;36;;HS mécanique (SAS) 
+E_LC;Ligne de Contrôle générique;37;;HS Logiciel (SAS) 
+E_SUPLC;Supervision des lignes de contrôle;1000;1000;Erreur de communication 
+E_PS;Portillon de service CDSMG;900;;Erreur de communication AE5G 
+E_MICRO_ONDULEUR_GARE;Micro Onduleur Gare via API Station et Gare;1014;1014;Inhibition
+E_A2007;ADUP Automate de service 2007 type6;1;;Code confidentiel agent incorrect 
+E_A2007;ADUP Automate de service 2007 type6;2;;Agent inconnu 
+E_A2007;ADUP Automate de service 2007 type6;3;;Corrélation Agent/APV fausse 
+E_A2007;ADUP Automate de service 2007 type6;9;;Anomalie signalée par le passe 
+E_A2007;ADUP Automate de service 2007 type6;13;;Seuil haut du SAM atteint 
+E_A2007;ADUP Automate de service 2007 type6;22;;Problème SSSR non prévu 
+E_A2007;ADUP Automate de service 2007 type6;31;;Carte invalide/non supportée 
+E_A2007;ADUP Automate de service 2007 type6;32;;Tentatives de composition du code confidentiel épuisées 
+E_A2007;ADUP Automate de service 2007 type6;57;;Problème sur parcours demandé 
+E_A2007;ADUP Automate de service 2007 type6;78;;Bourrage module d¿appro n°1 
+E_A2007;ADUP Automate de service 2007 type6;79;;Bourrage module d¿appro n°2 
+E_A2007;ADUP Automate de service 2007 type6;80;;Module d¿appro No 1 HS 
+E_A2007;ADUP Automate de service 2007 type6;81;;Module d¿appro No 2 HS 
+E_A2007;ADUP Automate de service 2007 type6;86;;Produit non fabricable 
+E_A2007;ADUP Automate de service 2007 type6;87;;Compte rendu après reboot 
+E_A2007;ADUP Automate de service 2007 type6;142;;Pré-alarme barrière 
+E_A2007;ADUP Automate de service 2007 type6;155;;Caisse billets échangée 
+E_A2007;ADUP Automate de service 2007 type6;157;;ABB échangé 
+E_A2007;ADUP Automate de service 2007 type6;160;;Batterie faible 
+E_A2007;ADUP Automate de service 2007 type6;179;;Distributeur en vente usager 
+E_A2007;ADUP Automate de service 2007 type6;180;;Distributeur en sommeil 
+E_A2007;ADUP Automate de service 2007 type6;189;;Changement de version fichier programme 
+E_A2007;ADUP Automate de service 2007 type6;190;;Changement de version fichiers paramètres 
+E_A2007;ADUP Automate de service 2007 type6;194;;Changement date heure 
+E_A2007;ADUP Automate de service 2007 type6;197;;Relance par watchdog logiciel 
+E_A2007;ADUP Automate de service 2007 type6;207;;Compte rendu d¿opération SGLV non transmis 
+E_A2007;ADUP Automate de service 2007 type6;224;;Divergence autorisation/acquisition 
+E_A2007;ADUP Automate de service 2007 type6;723;;CARTE OUBLIEE / AVALEE  
+E_A2007;ADUP Automate de service 2007 type6;725;;BOURRAGE ABB 
+E_A2007;ADUP Automate de service 2007 type6;726;;INTERVENTION 
+E_A2007;ADUP Automate de service 2007 type6;6;;Téléchargement CSC en cours 
+E_A2007;ADUP Automate de service 2007 type6;7;;Echec du téléchargement CSC 
+E_A2007;ADUP Automate de service 2007 type6;8;;Pb de comm. avec antenne cible avant 
+E_A2007;ADUP Automate de service 2007 type6;10;;Anomalie signalée par le SAM 
+E_A2007;ADUP Automate de service 2007 type6;11;;Anomalie signalée par API passe 
+E_A2007;ADUP Automate de service 2007 type6;12;;Echec du CSC 
+E_A2007;ADUP Automate de service 2007 type6;14;;SAM de rechargement vide 
+E_A2007;ADUP Automate de service 2007 type6;17;;Pb de communication UC-CSC 
+E_A2007;ADUP Automate de service 2007 type6;18;;Erreur configuration noyau SSSR 
+E_A2007;ADUP Automate de service 2007 type6;19;;Refus rechargement SSSR 
+E_A2007;ADUP Automate de service 2007 type6;20;;Incohérence avec SSSR 
+E_A2007;ADUP Automate de service 2007 type6;21;;Problème rechargement SSSR 
+E_A2007;ADUP Automate de service 2007 type6;23;;Pb de comm. avec antenne cible arrière 
+E_A2007;ADUP Automate de service 2007 type6;24;;Pb de comm. avec antenne dépileur 
+E_A2007;ADUP Automate de service 2007 type6;25;;Pb de comm. avec antenne imp.TLB 1 
+E_A2007;ADUP Automate de service 2007 type6;26;;Pb de comm. avec antenne imp.TLB 2 
+E_A2007;ADUP Automate de service 2007 type6;33;;Carte CB client ou agent oubliée 
+E_A2007;ADUP Automate de service 2007 type6;34;;Pb de communication UC-Lecteur CB 
+E_A2007;ADUP Automate de service 2007 type6;35;;Lecteur CB HS 
+E_A2007;ADUP Automate de service 2007 type6;36;;Défaut de communication clavier bancaire 
+E_A2007;ADUP Automate de service 2007 type6;37;;Clavier bancaire HS 
+E_A2007;ADUP Automate de service 2007 type6;38;;Application EMV non initialisée 
+E_A2007;ADUP Automate de service 2007 type6;39;;Application privative 0 non initialisée 
+E_A2007;ADUP Automate de service 2007 type6;40;;Application privative 1 non initialisée 
+E_A2007;ADUP Automate de service 2007 type6;41;;Application privative 2 non initialisée 
+E_A2007;ADUP Automate de service 2007 type6;42;;Défaut de communication UC-dépileur 
+E_A2007;ADUP Automate de service 2007 type6;43;;Dépileur HS 
+E_A2007;ADUP Automate de service 2007 type6;46;;Bourrage sortie dépileur 
+E_A2007;ADUP Automate de service 2007 type6;47;;Pb encodage passe dépilé 
+E_A2007;ADUP Automate de service 2007 type6;54;;L¿APV fonctionne sur une base obsolète 
+E_A2007;ADUP Automate de service 2007 type6;56;;Problème prise en compte fichier MOC 
+E_A2007;ADUP Automate de service 2007 type6;62;;Fichier de paramètres absent 
+E_A2007;ADUP Automate de service 2007 type6;63;;Erreur de CRC sur fichier de paramètre 
+E_A2007;ADUP Automate de service 2007 type6;64;;Fichier de paramètres non intègre 
+E_A2007;ADUP Automate de service 2007 type6;65;;Problème de génération de base 
+E_A2007;ADUP Automate de service 2007 type6;66;;Disque endommagé 
+E_A2007;ADUP Automate de service 2007 type6;73;;Carnetteur non vide 
+E_A2007;ADUP Automate de service 2007 type6;76;;Bourrage imprimante 
+E_A2007;ADUP Automate de service 2007 type6;77;;Module de coupe HS 
+E_A2007;ADUP Automate de service 2007 type6;82;;Toutes les appros sont HS 
+E_A2007;ADUP Automate de service 2007 type6;83;;Pb Hard sur le port série 
+E_A2007;ADUP Automate de service 2007 type6;84;;Mémoire flash HS 
+E_A2007;ADUP Automate de service 2007 type6;85;;Pb de comm. avec l¿imprimante 
+E_A2007;ADUP Automate de service 2007 type6;88;;Emballement thermique 
+E_A2007;ADUP Automate de service 2007 type6;89;;Carnetteur HS 
+E_A2007;ADUP Automate de service 2007 type6;93;;Défaut de comm. UC-Imprimante document 
+E_A2007;ADUP Automate de service 2007 type6;99;;Bourrage imprimante 1 
+E_A2007;ADUP Automate de service 2007 type6;100;;Module de coupe HS sur imprimante 1 
+E_A2007;ADUP Automate de service 2007 type6;101;;Pb de comm. avec l¿imprimante 1 
+E_A2007;ADUP Automate de service 2007 type6;102;;Orienteur imprimante 1 HS 
+E_A2007;ADUP Automate de service 2007 type6;105;;Bourrage imprimante 2 
+E_A2007;ADUP Automate de service 2007 type6;106;;Module de coupe HS sur imprimante 2 
+E_A2007;ADUP Automate de service 2007 type6;107;;Pb de comm. avec l¿imprimante 2 
+E_A2007;ADUP Automate de service 2007 type6;108;;Orienteur imprimante 2 HS 
+E_A2007;ADUP Automate de service 2007 type6;110;;Pièce bloquée 
+E_A2007;ADUP Automate de service 2007 type6;114;;Bourrage en entrée caisse 
+E_A2007;ADUP Automate de service 2007 type6;115;;Sélecteur absent 
+E_A2007;ADUP Automate de service 2007 type6;116;;Panne sélecteur 
+E_A2007;ADUP Automate de service 2007 type6;117;;Recycleur 1 absent 
+E_A2007;ADUP Automate de service 2007 type6;118;;Recycleur 2 absent 
+E_A2007;ADUP Automate de service 2007 type6;119;;Recycleur 3 absent 
+E_A2007;ADUP Automate de service 2007 type6;120;;Recycleur 4 absent 
+E_A2007;ADUP Automate de service 2007 type6;121;;Recycleur 5 absent 
+E_A2007;ADUP Automate de service 2007 type6;122;;Panne recycleur 1 
+E_A2007;ADUP Automate de service 2007 type6;123;;Panne recycleur 2 
+E_A2007;ADUP Automate de service 2007 type6;124;;Panne recycleur 3 
+E_A2007;ADUP Automate de service 2007 type6;125;;Panne recycleur 4 
+E_A2007;ADUP Automate de service 2007 type6;126;;Panne recycleur 5 
+E_A2007;ADUP Automate de service 2007 type6;127;;Pb de comm. UC-monnayeur 
+E_A2007;ADUP Automate de service 2007 type6;143;;Panne composants électromécaniques 
+E_A2007;ADUP Automate de service 2007 type6;144;;Billet de banque oublié 
+E_A2007;ADUP Automate de service 2007 type6;145;;Panne électronique 
+E_A2007;ADUP Automate de service 2007 type6;146;;Panne têtes 
+E_A2007;ADUP Automate de service 2007 type6;147;;Panne transport 
+E_A2007;ADUP Automate de service 2007 type6;148;;Panne piston 
+E_A2007;ADUP Automate de service 2007 type6;149;;Panne données 
+E_A2007;ADUP Automate de service 2007 type6;156;;Pb communication UC-ABB 
+E_A2007;ADUP Automate de service 2007 type6;181;;Automate en intervention Exploitation 
+E_A2007;ADUP Automate de service 2007 type6;186;;Paiement espèces HS 
+E_A2007;ADUP Automate de service 2007 type6;187;;Paiement CB HS 
+E_A2007;ADUP Automate de service 2007 type6;193;;Problème exécution MoCaT 
+E_A2007;ADUP Automate de service 2007 type6;198;;CB offline interdit par le central 
+E_A2007;ADUP Automate de service 2007 type6;199;;Aucune application CB en état de fonctionner 
+E_A2007;ADUP Automate de service 2007 type6;205;;Défaut de communication SGLV 
+E_A2007;ADUP Automate de service 2007 type6;206;;Défaut de communication SSSR 
+E_A2007;ADUP Automate de service 2007 type6;208;;Fichier CB hors ligne EMV trop ancien 
+E_A2007;ADUP Automate de service 2007 type6;209;;Fichier appli 0 hors ligne trop ancien 
+E_A2007;ADUP Automate de service 2007 type6;210;;Fichier appli 1 hors ligne trop ancien 
+E_A2007;ADUP Automate de service 2007 type6;211;;Fichier appli 2 hors ligne trop ancien 
+E_A2007;ADUP Automate de service 2007 type6;212;;Défaut de communication SGADR 
+E_A2007;ADUP Automate de service 2007 type6;213;;Anomalie NTP 
+E_A2007;ADUP Automate de service 2007 type6;215;;Fichier de transaction CB EMV plein 
+E_A2007;ADUP Automate de service 2007 type6;216;;Fichier de transaction appli 0 plein 
+E_A2007;ADUP Automate de service 2007 type6;217;;Fichier de transaction appli 1 plein 
+E_A2007;ADUP Automate de service 2007 type6;218;;Fichier de transaction appli 2 plein 
+E_A2007;ADUP Automate de service 2007 type6;219;;Défaut de liaison automate alarmes 
+E_A2007;ADUP Automate de service 2007 type6;220;;Défaut de liaison automate NDS 
+E_A2007;ADUP Automate de service 2007 type6;221;;Transactions EMV en attente d¿acquisition 
+E_A2007;ADUP Automate de service 2007 type6;222;;Défaut liaison TVR ou sécu. piste EMV 
+E_A2007;ADUP Automate de service 2007 type6;223;;Echec communication serveur sécu. puce EMV 
+E_A2007;ADUP Automate de service 2007 type6;55;;Pas de base utilisable 
+E_A2007;ADUP Automate de service 2007 type6;58;;Fichier d¿archive incohérent 
+E_A2007;ADUP Automate de service 2007 type6;59;;Ecriture archive impossible 
+E_A2007;ADUP Automate de service 2007 type6;60;;Fichier d¿archives trop ancien 
+E_A2007;ADUP Automate de service 2007 type6;61;;Accès impossible aux données MIB 
+E_A2007;ADUP Automate de service 2007 type6;130;;Ouverture volet hors procédure 
+E_A2007;ADUP Automate de service 2007 type6;158;;Coupure secteur 
+E_A2007;ADUP Automate de service 2007 type6;159;;Batterie HS ou débranchée 
+E_A2007;ADUP Automate de service 2007 type6;176;;Automate Hors Service 
+E_A2007;ADUP Automate de service 2007 type6;196;;Défaut de communication UC-carte de surveillance 
+E_A2007;ADUP Automate de service 2007 type6;202;;Température basse 
+E_A2007;ADUP Automate de service 2007 type6;203;;Température haute 
+E_A2007;ADUP Automate de service 2007 type6;204;;Défaut de communication dalle tactile 
+E_A2007;ADUP Automate de service 2007 type6;214;;Automate en échec d¿authentification 
+E_A2007;ADUP Automate de service 2007 type6;1000;1000;Erreur de communication
+E_API_GARE;API Gare CDSMG;1000;1000;Erreur de communication
+E_API_GARE;API Gare CDSMG;1003;;Identifiant version incorrect
+E_API_GARE;API Gare CDSMG;1004;;Identifiant checksum incorrect 
+E_API_GARE;API Gare CDSMG;1006;;Bit de signe de vie manquant 
+E_API_GARE;API Gare CDSMG;1014;;Inhibition 
+E_API_GARE;API Gare CDSMG;1016;;Identifiant checksum parametre incorrect 
+E_API_GARE;API Gare CDSMG;1;;Echec de commande NDS 
+E_API_GARE;API Gare CDSMG;2;;Défaillance d'E/S 
+E_API_GARE;API Gare CDSMG;3;;Erreur d'E/S locales 
+E_API_GARE;API Gare CDSMG;4;;Perte d'alimentation E/S 
+E_BAIE_SONO;Baie Sono CDSMG;1000;1000;Erreur de communication 
+E_BAIE_SONO;Baie Sono CDSMG;2;;Police BCS 
+E_BAIE_SONO;Baie Sono CDSMG;3;;Police BVP 
+E_BAIE_SONO;Baie Sono CDSMG;4;;Police réserve 1 
+E_BAIE_SONO;Baie Sono CDSMG;5;;Police réserve 2 
+E_BAIE_SONO;Baie Sono CDSMG;6;;Synthése ligne HP en défaut 
+E_BAIE_SONO;Baie Sono CDSMG;7;;Synthése ampli en défaut 
+E_BAIE_SONO;Baie Sono CDSMG;8;;Télésono en défaut 
+E_BAIE_SONO;Baie Sono CDSMG;9;;Convertisseur en défaut 
+Ventilateur;Ventilateur;21;;Clapet coupe feu défaillant
+Ventilateur;Ventilateur;22;;Absence 400V Normal
+Ventilateur;Ventilateur;23;;Panne désenfumage
+Ventilateur;Ventilateur;24;;Vibration Seuil danger
+Ventilateur;Ventilateur;25;;Absence tension 48V Station
+Ventilateur;Ventilateur;26;;Défaut Clapets coupe feu
+VLE;Ventilateur locaux électriques;2;;Défaut automate  
+Ventilateur;Ventilateur;1014;;Inhibition
+E_ADUP_THALES;ADUP THALES type5;900;;Erreur Abonnement
+E_ADUP_THALES;ADUP THALES type5;1;;Code confidentiel agent incorrect
+VLE;Ventilateur locaux électriques;4;;Dépassement seuil de température 
+E_ADUP_THALES;ADUP THALES type5;2;;Agent inconnu
+VLE;Ventilateur locaux électriques;6;;Défaut volet coupe-feu aspiration 
+VLE;Ventilateur locaux électriques;7;;Défaut volet coupe-feu refoulement 
+VLE;Ventilateur locaux électriques;8;;Défaut extracteur 
+VLE;Ventilateur locaux électriques;9;;Défaut variateur 
+VLE;Ventilateur locaux électriques;10;;Défaut sonde d'ambiance intérieur local 
+VLE;Ventilateur locaux électriques;11;;Défaut sonde d'ambiance extérieur local 
+VLE;Ventilateur locaux électriques;12;;BAE > 5 heures 
+VLE;Ventilateur locaux électriques;1000;1000;Erreur de communication 
+VLE;Ventilateur locaux électriques;1001;;Identifiant station incorrect 
+VLE;Ventilateur locaux électriques;1002;;Identifiant équipement incorrect 
+VLE;Ventilateur locaux électriques;1003;;Identifiant version incorrect 
+VLE;Ventilateur locaux électriques;1004;;Identifiant checksum incorrect 
+VLE;Ventilateur locaux électriques;1005;;Synchronisation horloge impossible 
+VLE;Ventilateur locaux électriques;1006;;Bit de signe de vie manquant 
+VLE;Ventilateur locaux électriques;1014;;Inhibition 
+PSIEL;Panneau d'Information Quai;15;;Dysfonctionnement du module sonore
+Concentrateur_EC_API;Equipement de regroupement des tc des EC;1000;1000;Erreur de communication
+ADA;Armoire Distribution Automatique;23;;"Défaut départ permanent ""luminaire/BAES"" vers local PCC de repli"
+ADA;Armoire Distribution Automatique;26;;Défaut commande TEST inverseur
+E_ADUP_THALES;ADUP THALES type5;3;;Corrélation agent/distributeur fausse
+E_ADUP_THALES;ADUP THALES type5;4;;Date de validité carte agent expirée
+E_ADUP_THALES;ADUP THALES type5;5;;Fraude à l'identification
+E_ADUP_THALES;ADUP THALES type5;6;;Agent sans droit
+E_ADUP_THALES;ADUP THALES type5;7;;Téléchargement CSC en cours
+E_ADUP_THALES;ADUP THALES type5;8;;Echec du téléchargement CSC
+E_ADUP_THALES;ADUP THALES type5;9;;Problème lié à l¿antenne
+E_ADUP_THALES;ADUP THALES type5;10;;Exécution anormale signalée par le passe
+E_ADUP_THALES;ADUP THALES type5;11;;Exécution anormale signalée par le SAM
+E_ADUP_THALES;ADUP THALES type5;12;;Anomalie signalée par API passe
+E_ADUP_THALES;ADUP THALES type5;13;;Echec du CSC
+E_ADUP_THALES;ADUP THALES type5;14;;Seuil haut du SAM atteint
+E_ADUP_THALES;ADUP THALES type5;15;;SAM de rechargement « vide »
+E_ADUP_THALES;ADUP THALES type5;16;;Passe invalide
+E_ADUP_THALES;ADUP THALES type5;17;;Passe oublié
+E_ADUP_THALES;ADUP THALES type5;18;;Carte agent oubliée Accès avant
+E_ADUP_THALES;ADUP THALES type5;19;;Carte agent oubliée Accès arrière
+E_ADUP_THALES;ADUP THALES type5;20;;Incident sur lecteur carte (fonctionnement anormal du lecteur) Accès arrière
+E_ADUP_THALES;ADUP THALES type5;21;;Incident à la lecture carte (erreur de transmission) Accès arrière
+E_ADUP_THALES;ADUP THALES type5;22;;Carte non supportée (non SOLAIC) Accès arrière
+E_ADUP_THALES;ADUP THALES type5;23;;Tentatives de composition du code confidentiel épuisées (carte bloquée) Accès arrière
+E_ADUP_THALES;ADUP THALES type5;24;;Défaut de communication avec la carte CSC
+E_ADUP_THALES;ADUP THALES type5;25;;Erreur configuration noyau SSSR
+E_ADUP_THALES;ADUP THALES type5;26;;Refus rechargement SSSR
+E_ADUP_THALES;ADUP THALES type5;27;;Incohérence avec SSSR
+E_ADUP_THALES;ADUP THALES type5;28;;Problème rechargement SSSR
+E_ADUP_THALES;ADUP THALES type5;29;;Problème SSSR non prévu
+E_ADUP_THALES;ADUP THALES type5;30;;Carte non supportée (ni CB, ni SOLAIC) Accès avant
+E_ADUP_THALES;ADUP THALES type5;31;;Carte client oubliée
+E_ADUP_THALES;ADUP THALES type5;32;;Incident sur lecteur carte (fonctionnement anormal du lecteur) Accès avant
+E_ADUP_THALES;ADUP THALES type5;33;;Incident à la lecture carte (erreur de transmission) Accès avant
+E_ADUP_THALES;ADUP THALES type5;34;;Tentatives de composition du code confidentiel épuisées (carte bloquée) Accès avant
+E_ADUP_THALES;ADUP THALES type5;35;;Carte saturée (ZE ou ZT pleine) Accès avant
+E_ADUP_THALES;ADUP THALES type5;36;;Carte saturée (ZE ou ZT pleine) Accès arrière
+E_ADUP_THALES;ADUP THALES type5;37;;Incident de gestion de la goulotte LCM
+E_ADUP_THALES;ADUP THALES type5;38;;L'APV fonctionne avec une base obsolète
+E_ADUP_THALES;ADUP THALES type5;39;;Pas de base utilisable
+E_ADUP_THALES;ADUP THALES type5;40;;Incident fichier d'archives
+E_ADUP_THALES;ADUP THALES type5;41;;Incident remontée du fichier d'archives (problème réseau)
+E_ADUP_THALES;ADUP THALES type5;42;;Mise en service du bloc logiciel monétique impossible
+E_ADUP_THALES;ADUP THALES type5;43;;Fichier de paramètres non intègre ou incohérent
+E_ADUP_THALES;ADUP THALES type5;44;;Erreur CRC sur fichiers d'archives
+E_ADUP_THALES;ADUP THALES type5;45;;Espace disque limite pour l'archivage
+E_ADUP_THALES;ADUP THALES type5;46;;Espace d'archivage saturé
+E_ADUP_THALES;ADUP THALES type5;47;;Base sans produit vendable
+E_ADUP_THALES;ADUP THALES type5;48;;Erreur CRC sur fichier mémoire
+E_ADUP_THALES;ADUP THALES type5;49;;Absence du fichier FON
+E_ADUP_THALES;ADUP THALES type5;50;;Liste de l'auto-apprentissage vide
+E_ADUP_THALES;ADUP THALES type5;51;;Fichier paramètre absent
+E_ADUP_THALES;ADUP THALES type5;52;;Aucun produit vendable
+E_ADUP_THALES;ADUP THALES type5;53;;Bobineau de cartonette n°1 presque vide
+E_ADUP_THALES;ADUP THALES type5;54;;Bobineau de cartonette n°2 presque vide
+E_ADUP_THALES;ADUP THALES type5;55;;Bobineau de cartonette n°3 presque vide
+E_ADUP_THALES;ADUP THALES type5;56;;Bobineau de cartonette n°4 presque vide
+E_ADUP_THALES;ADUP THALES type5;57;;Bobineau de cartonette n°1 vide 
+E_ADUP_THALES;ADUP THALES type5;58;;Bobineau de cartonette n°2 vide
+E_ADUP_THALES;ADUP THALES type5;59;;Bobineau de cartonette n°3 vide
+E_ADUP_THALES;ADUP THALES type5;60;;Bobineau de cartonette n°4 vide
+E_ADUP_THALES;ADUP THALES type5;61;;Taux d'utilisation des bobineaux différent de la valeur sauvegardée
+E_ADUP_THALES;ADUP THALES type5;62;;Incident carnetteur
+E_ADUP_THALES;ADUP THALES type5;63;;Bourrage en zone d'impression
+E_ADUP_THALES;ADUP THALES type5;64;;Codage magnétique des billets défectueux
+E_ADUP_THALES;ADUP THALES type5;65;;Bourrage en sortie
+E_ADUP_THALES;ADUP THALES type5;66;;Bourrage en approvisionnement
+E_ADUP_THALES;ADUP THALES type5;67;;Tous les bobineaux sont vides
+E_ADUP_THALES;ADUP THALES type5;68;;Erreur matériel
+E_ADUP_THALES;ADUP THALES type5;69;;Changement de diamètre bobineau signalé par la carte de sécurité (hors procédure de changement)
+E_ADUP_THALES;ADUP THALES type5;70;;Erreur de communication sur la ligne série
+E_ADUP_THALES;ADUP THALES type5;71;;Carnetteur non vide en début de préparation d'impression
+E_ADUP_THALES;ADUP THALES type5;72;;Cartonette bobineau n°1 non insérée dans l'imprimante
+E_ADUP_THALES;ADUP THALES type5;73;;Cartonette bobineau n°2 non insérée dans l'imprimante
+E_ADUP_THALES;ADUP THALES type5;74;;Cartonette bobineau n°3 non insérée dans l'imprimante
+E_ADUP_THALES;ADUP THALES type5;75;;Cartonette bobineau n°4 non insérée dans l'imprimante
+E_ADUP_THALES;ADUP THALES type5;76;;Impression physiquement impossible
+E_ADUP_THALES;ADUP THALES type5;77;;Temps d'impression dépassé
+E_ADUP_THALES;ADUP THALES type5;78;;Caisse pleine
+E_ADUP_THALES;ADUP THALES type5;79;;Pièce bloquée dans un tambour
+E_ADUP_THALES;ADUP THALES type5;80;;Pièce bloquée dans le sélecteur
+E_ADUP_THALES;ADUP THALES type5;81;;Pièce bloquée en position inconnue
+E_ADUP_THALES;ADUP THALES type5;82;;Pièce dans un tambour incorrect
+E_ADUP_THALES;ADUP THALES type5;83;;Erreur sur le type de pièces
+E_ADUP_THALES;ADUP THALES type5;84;;Caisse presque pleine
+E_ADUP_THALES;ADUP THALES type5;85;;Caisse changée
+E_ADUP_THALES;ADUP THALES type5;86;;Flux du rendu monnaie nul
+E_ADUP_THALES;ADUP THALES type5;87;;Incident en restitution monnaie
+E_ADUP_THALES;ADUP THALES type5;88;;Caisse verrouillée hors procédure
+E_ADUP_THALES;ADUP THALES type5;89;;Caisse absente ou non verrouillée
+E_ADUP_THALES;ADUP THALES type5;90;;Bourrage en entrée de caisse
+E_ADUP_THALES;ADUP THALES type5;91;;Sélecteur absent
+E_ADUP_THALES;ADUP THALES type5;92;;Panne sélecteur
+E_ADUP_THALES;ADUP THALES type5;93;;Recycleur de pièces 1 absent
+E_ADUP_THALES;ADUP THALES type5;94;;Recycleur de pièces 2 absent
+E_ADUP_THALES;ADUP THALES type5;95;;Recycleur de pièces 3 absent
+E_ADUP_THALES;ADUP THALES type5;96;;Recycleur de pièces 4 absent
+E_ADUP_THALES;ADUP THALES type5;97;;Recycleur de pièces 5 absent
+E_ADUP_THALES;ADUP THALES type5;98;;Recycleur de pièces 6 absent
+E_ADUP_THALES;ADUP THALES type5;99;;Recycleur de pièces 7 absent
+E_ADUP_THALES;ADUP THALES type5;100;;Recycleur de pièces 1 mal placé
+E_ADUP_THALES;ADUP THALES type5;101;;Recycleur de pièces 2 mal placé
+E_ADUP_THALES;ADUP THALES type5;102;;Recycleur de pièces 3 mal placé
+E_ADUP_THALES;ADUP THALES type5;103;;Recycleur de pièces 4 mal placé
+E_ADUP_THALES;ADUP THALES type5;104;;Recycleur de pièces 5 mal placé
+E_ADUP_THALES;ADUP THALES type5;105;;Recycleur de pièces 6 mal placé
+E_ADUP_THALES;ADUP THALES type5;106;;Recycleur de pièces 7 mal placé
+E_ADUP_THALES;ADUP THALES type5;107;;Panne recycleur de pièces 1
+E_ADUP_THALES;ADUP THALES type5;108;;Panne recycleur de pièces 2
+E_ADUP_THALES;ADUP THALES type5;109;;Panne recycleur de pièces 3
+E_ADUP_THALES;ADUP THALES type5;110;;Panne recycleur de pièces 4
+E_ADUP_THALES;ADUP THALES type5;111;;Panne recycleur de pièces 5
+E_ADUP_THALES;ADUP THALES type5;112;;Panne recycleur de pièces 6
+E_ADUP_THALES;ADUP THALES type5;113;;Panne recycleur de pièces 7
+E_ADUP_THALES;ADUP THALES type5;114;;Panne réserve grande capacité 1
+E_ADUP_THALES;ADUP THALES type5;115;;Réserve grande capacité 1 mal placée
+E_ADUP_THALES;ADUP THALES type5;116;;Réserve grande capacité 1 absente
+E_ADUP_THALES;ADUP THALES type5;117;;Réserve grande capacité 1 presque vide
+E_ADUP_THALES;ADUP THALES type5;118;;Réserve grande capacité 1 vide
+E_ADUP_THALES;ADUP THALES type5;119;;Panne réserve grande capacité 2
+E_ADUP_THALES;ADUP THALES type5;120;;Réserve grande capacité 2 mal placée
+E_ADUP_THALES;ADUP THALES type5;121;;Réserve grande capacité 2 absente
+E_ADUP_THALES;ADUP THALES type5;122;;Réserve grande capacité 2 presque vide
+E_ADUP_THALES;ADUP THALES type5;123;;Réserve grande capacité 2 vide
+E_ADUP_THALES;ADUP THALES type5;124;;Décodage de télégramme d'erreur Fx impossible
+E_ADUP_THALES;ADUP THALES type5;125;;Dernière commande émise invalide
+E_ADUP_THALES;ADUP THALES type5;126;;Télégramme reçu sur demande d'émission
+E_ADUP_THALES;ADUP THALES type5;127;;Erreur de protocole (séparateur)
+E_ADUP_THALES;ADUP THALES type5;128;;Erreur de protocole (baud rate)
+E_ADUP_THALES;ADUP THALES type5;129;;Erreur de protocole (parité)
+E_ADUP_THALES;ADUP THALES type5;130;;Erreur de protocole (interruption)
+E_ADUP_THALES;ADUP THALES type5;131;;Erreur de protocole (sur stx)
+E_ADUP_THALES;ADUP THALES type5;132;;Erreur de protocole (longueur)
+E_ADUP_THALES;ADUP THALES type5;133;;Erreur de protocole (données)
+E_ADUP_THALES;ADUP THALES type5;134;;Erreur de protocole (sur etx)
+E_ADUP_THALES;ADUP THALES type5;135;;Erreur de protocole (lrc)
+E_ADUP_THALES;ADUP THALES type5;136;;Erreur de protocole (message inconnu)
+E_ADUP_THALES;ADUP THALES type5;137;;Erreur de protocole (commande inconnue)
+E_ADUP_THALES;ADUP THALES type5;138;;Erreur de transmission (lrc calculé et reçu différents)
+E_ADUP_THALES;ADUP THALES type5;139;;Erreur de transmission (longueur)
+E_ADUP_THALES;ADUP THALES type5;140;;Erreur de transmission (octets perdus)
+E_ADUP_THALES;ADUP THALES type5;141;;Transmission ou monnayeur HS
+E_ADUP_THALES;ADUP THALES type5;142;;Changement numéro de caisse (hors procédure de changement)
+E_ADUP_THALES;ADUP THALES type5;143;;Coupure secteur
+E_ADUP_THALES;ADUP THALES type5;144;;Défaut de batterie onduleur
+E_ADUP_THALES;ADUP THALES type5;145;;Effraction sur la porte principale ou hayon
+E_ADUP_THALES;ADUP THALES type5;146;;Effraction sur l'accès à la caisse
+E_ADUP_THALES;ADUP THALES type5;147;;Effraction sur l'accès aux bobineaux
+E_ADUP_THALES;ADUP THALES type5;148;;Ouverture sur la porte principale ou le hayon (fonctionnement normal)
+E_ADUP_THALES;ADUP THALES type5;149;;Ouverture sur l'accès à la caisse (fonctionnement normal)
+E_ADUP_THALES;ADUP THALES type5;150;;Ouverture sur l'accès aux bobineaux (fonctionnement normal)
+E_ADUP_THALES;ADUP THALES type5;151;;Incident moteurs hayon
+E_ADUP_THALES;ADUP THALES type5;152;;Incident moteur porte titre
+E_ADUP_THALES;ADUP THALES type5;153;;Incident moteur porte caisse
+E_ADUP_THALES;ADUP THALES type5;154;;Incident fermeture hayon (coté droit)
+E_ADUP_THALES;ADUP THALES type5;155;;Incident fermeture hayon (coté gauche)
+E_ADUP_THALES;ADUP THALES type5;156;;Incident capteur bas droit hayon
+E_ADUP_THALES;ADUP THALES type5;157;;Incident capteur bas gauche hayon
+E_ADUP_THALES;ADUP THALES type5;158;;Incident ouverture porte titre
+E_ADUP_THALES;ADUP THALES type5;159;;Incident fermeture porte titre
+E_ADUP_THALES;ADUP THALES type5;160;;Incident ouverture porte caisse
+E_ADUP_THALES;ADUP THALES type5;161;;Incident fermeture porte caisse
+E_ADUP_THALES;ADUP THALES type5;162;;Incident ouverture hayon (coté droit)
+E_ADUP_THALES;ADUP THALES type5;163;;Incident ouverture hayon (coté gauche)
+E_ADUP_THALES;ADUP THALES type5;164;;Incident capteur porte bobineau 
+E_ADUP_THALES;ADUP THALES type5;165;;Incident capteur porte caisse
+E_ADUP_THALES;ADUP THALES type5;166;;Déclenchement d'un bouton coup de poing
+E_ADUP_THALES;ADUP THALES type5;167;;Distributeur hors service (incident matériel)
+E_ADUP_THALES;ADUP THALES type5;168;;Distributeur hors service en période de vente
+E_ADUP_THALES;ADUP THALES type5;169;;Distributeur hors service en période de sommeil
+E_ADUP_THALES;ADUP THALES type5;170;;Distributeur hors service sur demande central
+E_ADUP_THALES;ADUP THALES type5;171;;Distributeur hors service sur demande locale
+E_ADUP_THALES;ADUP THALES type5;172;;Distributeur en vente usager
+E_ADUP_THALES;ADUP THALES type5;173;;Distributeur en sommeil
+E_ADUP_THALES;ADUP THALES type5;174;;Distributeur en intervention agent d'exploitation
+E_ADUP_THALES;ADUP THALES type5;175;;Distributeur en intervention agent de recette
+E_ADUP_THALES;ADUP THALES type5;176;;TLB fonction vente HS sur demande central
+E_ADUP_THALES;ADUP THALES type5;177;;Hors service paiement par pièces sur demande central
+E_ADUP_THALES;ADUP THALES type5;178;;Hors service paiement CB sur demande central
+E_ADUP_THALES;ADUP THALES type5;179;;Hors service identification sur demande central
+E_ADUP_THALES;ADUP THALES type5;180;;Paiement par monnaie hors service
+E_ADUP_THALES;ADUP THALES type5;181;;Paiement par carte hors service
+E_ADUP_THALES;ADUP THALES type5;182;;Rendu monnaie hors service
+E_ADUP_THALES;ADUP THALES type5;183;;Changement de version des fichiers programmes
+E_ADUP_THALES;ADUP THALES type5;184;;Changement de version des fichiers paramètres
+E_ADUP_THALES;ADUP THALES type5;185;;Vente partielle
+E_ADUP_THALES;ADUP THALES type5;186;;MPA muet
+E_ADUP_THALES;ADUP THALES type5;187;;Ré initialisation du distributeur
+E_ADUP_THALES;ADUP THALES type5;188;;Remise à zéro des compteurs de maintenance
+E_ADUP_THALES;ADUP THALES type5;189;;Changement de date ou heure sur demande central
+E_ADUP_THALES;ADUP THALES type5;190;;Changement de date ou heure sur demande locale
+E_ADUP_THALES;ADUP THALES type5;191;;Absence de moyen de paiement (problèmes matériels)
+E_ADUP_THALES;ADUP THALES type5;192;;Incident disquette
+E_ADUP_THALES;ADUP THALES type5;193;;Impossibilité d'accéder à la carte sécurité
+E_ADUP_THALES;ADUP THALES type5;194;;Carte sécurité : Interruptions bloquées
+E_ADUP_THALES;ADUP THALES type5;195;;Carte sécurité : Bus I2C bloqué
+E_ADUP_THALES;ADUP THALES type5;196;;Problème système : Arrêt de l'application
+E_ADUP_THALES;ADUP THALES type5;197;;Reboot automatique sur Dr WATSON
+E_ADUP_THALES;ADUP THALES type5;198;;Hors service PSC sur demande central
+E_ADUP_THALES;ADUP THALES type5;199;;Défaut batterie carte sécurité
+E_ADUP_THALES;ADUP THALES type5;200;;CB hors-ligne interdit par le central
+E_ADUP_THALES;ADUP THALES type5;201;;Aucune application bancaire n'est en état de fonctionner
+E_ADUP_THALES;ADUP THALES type5;202;;Traitement LV interdit par le central
+E_ADUP_THALES;ADUP THALES type5;203;;Anomalie détectée, champ RAC absent, version TSTO
+E_ADUP_THALES;ADUP THALES type5;204;;Défaut de communication SGLV
+E_ADUP_THALES;ADUP THALES type5;205;;Défaut de communication SSSR
+E_ADUP_THALES;ADUP THALES type5;206;;Compte-rendu d¿opération non transmis
+E_ADUP_THALES;ADUP THALES type5;207;;Refus de transaction par le SBA
+E_ADUP_THALES;ADUP THALES type5;208;;Message formellement incorrect
+E_ADUP_THALES;ADUP THALES type5;209;;Code message SGADU inconnu
+E_ADUP_THALES;ADUP THALES type5;210;;Erreur téléchargement fichier (checksum erronée) (uniquement ADUP magnétique)
+E_ADUP_THALES;ADUP THALES type5;211;;Connexion SGADU refusée
+E_ADUP_THALES;ADUP THALES type5;212;;Interdiction de transaction par le SBA
+E_ADUP_THALES;ADUP THALES type5;213;;Incident sur session FTP (uniquement ADUP magnétique)
+E_ADUP_THALES;ADUP THALES type5;214;;Forçage changement de fichiers de paramètres
+E_ADUP_THALES;ADUP THALES type5;215;;Adresse SGADU inconnue
+E_ADUP_THALES;ADUP THALES type5;216;;Non réponse SAGIS
+E_ADUP_THALES;ADUP THALES type5;217;;Carte RATP non interrogée par API GAA avant délai d'inactivité
+E_ADUP_THALES;ADUP THALES type5;218;;Carte de surveillance externe déconnectée de la Gestion Technique Centralisée.
+E_ADUP_THALES;ADUP THALES type5;219;;Demande de paiement incorrecte (SBA)
+E_ADUP_THALES;ADUP THALES type5;220;;Demande d'acquisition incorrecte (SBA)
+E_ADUP_THALES;ADUP THALES type5;221;;Refus d'acquisition par SBA
+E_ADUP_THALES;ADUP THALES type5;222;;Carte invalide (réponse MPA)
+E_ADUP_THALES;ADUP THALES type5;223;;SGADU indisponible temporairement (réception d'un DTD) (uniquement ADUP magnétique)
+E_ADUP_THALES;ADUP THALES type5;224;;Fichier de transaction CB hors-ligne B0' trop ancien
+E_ADUP_THALES;ADUP THALES type5;225;;Fichier de transaction CB hors-ligne EMV trop ancien
+E_ADUP_THALES;ADUP THALES type5;226;;Fichier de transaction CB hors-ligne application 0 trop ancien
+E_ADUP_THALES;ADUP THALES type5;227;;Fichier de transaction CB hors-ligne application 1 trop ancien
+E_ADUP_THALES;ADUP THALES type5;228;;Fichier de transaction CB hors-ligne application 2 trop ancien
+E_ADUP_THALES;ADUP THALES type5;229;;APV en attente d¿authentification
+E_ADUP_THALES;ADUP THALES type5;230;;Fichier des transactions CB hors-ligne B0' plein
+E_ADUP_THALES;ADUP THALES type5;231;;Fichier des transactions CB hors-ligne EMV plein
+E_ADUP_THALES;ADUP THALES type5;232;;Fichier des transactions CB hors-ligne plein application 0
+E_ADUP_THALES;ADUP THALES type5;233;;Fichier des transactions CB hors-ligne plein application 1
+E_ADUP_THALES;ADUP THALES type5;234;;Fichier des transactions CB hors-ligne plein application 2
+E_ADUP_THALES;ADUP THALES type5;235;;Fichier des transactions CB hors-ligne B0' incohérent
+E_ADUP_THALES;ADUP THALES type5;236;;Fichier des transactions CB hors-ligne EMV incohérent
+E_ADUP_THALES;ADUP THALES type5;237;;Fichier des transactions CB hors-ligne application 0 incohérent
+E_ADUP_THALES;ADUP THALES type5;238;;Fichier des transactions CB hors-ligne application 1 incohérent
+E_ADUP_THALES;ADUP THALES type5;239;;Fichier des transactions CB hors-ligne application 2 incohérent
+E_ADUP_THALES;ADUP THALES type5;240;;Transaction EMV en attente d¿acquisition
+E_ADUP_THALES;ADUP THALES type5;241;;Fonctionnement hors-ligne de l¿application B0¿
+E_ADUP_THALES;ADUP THALES type5;242;;Défaut de liaison  TVR ou de sécurisation piste EMV
+E_ADUP_THALES;ADUP THALES type5;243;;Défaut de liaison SBA application 0
+E_ADUP_THALES;ADUP THALES type5;244;;Défaut de liaison SBA application 1
+E_ADUP_THALES;ADUP THALES type5;245;;Défaut de liaison SBA application 2
+E_ADUP_THALES;ADUP THALES type5;246;;Echec de communication avec le SBE
+E_ADUP_THALES;ADUP THALES type5;247;;Divergence autorisation/acquisition
+E_ADUP_THALES;ADUP THALES type5;701;;Effraction
+E_ADUP_ASCOM;ADUP ASCOM type4;900;;Erreur Abonnement
+E_ADUP_ASCOM;ADUP ASCOM type4;1;;Code confidentiel agent incorrect
+E_ADUP_ASCOM;ADUP ASCOM type4;2;;Agent inconnu
+E_ADUP_ASCOM;ADUP ASCOM type4;3;;Corrélation agent / distributeur fausse
+E_ADUP_ASCOM;ADUP ASCOM type4;4;;Date de validité carte agent expirée
+E_ADUP_ASCOM;ADUP ASCOM type4;5;;Fraude à l'identification
+E_ADUP_ASCOM;ADUP ASCOM type4;6;;Agent sans droit
+E_ADUP_ASCOM;ADUP ASCOM type4;7;;Téléchargement CSC en cours
+E_ADUP_ASCOM;ADUP ASCOM type4;8;;Echec du téléchargement CSC
+E_ADUP_ASCOM;ADUP ASCOM type4;9;;Problème lié à l¿antenne
+E_ADUP_ASCOM;ADUP ASCOM type4;10;;Exécution anormale signalée par le passe
+E_ADUP_ASCOM;ADUP ASCOM type4;11;;Exécution anormale signalée par le SAM
+E_ADUP_ASCOM;ADUP ASCOM type4;12;;Anomalie signalée par API passe
+E_ADUP_ASCOM;ADUP ASCOM type4;13;;Echec du CSC
+E_ADUP_ASCOM;ADUP ASCOM type4;14;;Seuil haut du SAM atteint
+E_ADUP_ASCOM;ADUP ASCOM type4;15;;SAM de rechargement « vide »
+E_ADUP_ASCOM;ADUP ASCOM type4;16;;Passe invalide
+E_ADUP_ASCOM;ADUP ASCOM type4;17;;Passe oublié
+E_ADUP_ASCOM;ADUP ASCOM type4;18;;Défaut de communication avec la carte CSC
+E_ADUP_ASCOM;ADUP ASCOM type4;19;;Erreur configuration noyau SSSR
+E_ADUP_ASCOM;ADUP ASCOM type4;20;;Refus rechargement SSSR
+E_ADUP_ASCOM;ADUP ASCOM type4;21;;Incohérence avec SSSR
+E_ADUP_ASCOM;ADUP ASCOM type4;22;;Problème rechargement SSSR
+E_ADUP_ASCOM;ADUP ASCOM type4;23;;Problème SSSR non prévu
+E_ADUP_ASCOM;ADUP ASCOM type4;24;;Carte oubliée
+E_ADUP_ASCOM;ADUP ASCOM type4;25;;Défaut télétrans entre UC distri et MPC
+E_ADUP_ASCOM;ADUP ASCOM type4;26;;Application B0' non initialisée
+E_ADUP_ASCOM;ADUP ASCOM type4;27;;Application EMV non initialisée
+E_ADUP_ASCOM;ADUP ASCOM type4;28;;Application privative 0 non initialisée
+E_ADUP_ASCOM;ADUP ASCOM type4;29;;Application privative 1 non initialisée
+E_ADUP_ASCOM;ADUP ASCOM type4;30;;Application privative 2 non initialisée
+E_ADUP_ASCOM;ADUP ASCOM type4;31;;Charge faible pile RAM secourue
+E_ADUP_ASCOM;ADUP ASCOM type4;32;;L'APV fonctionne avec une base obsolète
+E_ADUP_ASCOM;ADUP ASCOM type4;33;;Pas de base utilisable
+E_ADUP_ASCOM;ADUP ASCOM type4;34;;Fichier FIC absent
+E_ADUP_ASCOM;ADUP ASCOM type4;35;;Fichier FIC vide
+E_ADUP_ASCOM;ADUP ASCOM type4;36;;Fichier FIC défaut code de scellement
+E_ADUP_ASCOM;ADUP ASCOM type4;37;;Fichier FIC en-tête incohérent
+E_ADUP_ASCOM;ADUP ASCOM type4;38;;Fichier GTR absent
+E_ADUP_ASCOM;ADUP ASCOM type4;39;;Fichier GTR vide
+E_ADUP_ASCOM;ADUP ASCOM type4;40;;Fichier GTR défaut code de scellement
+E_ADUP_ASCOM;ADUP ASCOM type4;41;;Fichier GTR en-tête incohérent
+E_ADUP_ASCOM;ADUP ASCOM type4;42;;Fichier LIB absent
+E_ADUP_ASCOM;ADUP ASCOM type4;43;;Fichier LIB vide
+E_ADUP_ASCOM;ADUP ASCOM type4;44;;Fichier LIB défaut code de scellement
+E_ADUP_ASCOM;ADUP ASCOM type4;45;;Fichier LIB en-tête incohérent
+E_ADUP_ASCOM;ADUP ASCOM type4;46;;Fichier PRO absent
+E_ADUP_ASCOM;ADUP ASCOM type4;47;;Fichier PRO vide
+E_ADUP_ASCOM;ADUP ASCOM type4;48;;Fichier PRO défaut code de scellement
+E_ADUP_ASCOM;ADUP ASCOM type4;49;;Fichier PRO en-tête incohérent
+E_ADUP_ASCOM;ADUP ASCOM type4;50;;Fichier RTL absent
+E_ADUP_ASCOM;ADUP ASCOM type4;51;;Fichier RTL vide
+E_ADUP_ASCOM;ADUP ASCOM type4;52;;Fichier RTL défaut code de scellement
+E_ADUP_ASCOM;ADUP ASCOM type4;53;;Fichier RTL en-tête incohérent
+E_ADUP_ASCOM;ADUP ASCOM type4;54;;Fichier VIG absent
+E_ADUP_ASCOM;ADUP ASCOM type4;55;;Fichier VIG vide
+E_ADUP_ASCOM;ADUP ASCOM type4;56;;Fichier VIG défaut code de scellement
+E_ADUP_ASCOM;ADUP ASCOM type4;57;;Fichier VIG en-tête incohérent
+E_ADUP_ASCOM;ADUP ASCOM type4;58;;Fichier OBJ absent
+E_ADUP_ASCOM;ADUP ASCOM type4;59;;Fichier OBJ vide
+E_ADUP_ASCOM;ADUP ASCOM type4;60;;Fichier OBJ défaut code de scellement
+E_ADUP_ASCOM;ADUP ASCOM type4;61;;Fichier OBJ en-tête incohérent
+E_ADUP_ASCOM;ADUP ASCOM type4;62;;Fichier PRX absent
+E_ADUP_ASCOM;ADUP ASCOM type4;63;;Fichier PRX vide
+E_ADUP_ASCOM;ADUP ASCOM type4;64;;Fichier PRX défaut code de scellement
+E_ADUP_ASCOM;ADUP ASCOM type4;65;;Fichier PRX en-tête incohérent
+E_ADUP_ASCOM;ADUP ASCOM type4;66;;Fichier FON absent
+E_ADUP_ASCOM;ADUP ASCOM type4;67;;Fichier FON vide
+E_ADUP_ASCOM;ADUP ASCOM type4;68;;Fichier FON défaut code de scellement
+E_ADUP_ASCOM;ADUP ASCOM type4;69;;Fichier FON en-tête incohérent
+E_ADUP_ASCOM;ADUP ASCOM type4;70;;Fichier MES absent
+E_ADUP_ASCOM;ADUP ASCOM type4;71;;Fichier MES vide
+E_ADUP_ASCOM;ADUP ASCOM type4;72;;Fichier MES défaut code de scellement
+E_ADUP_ASCOM;ADUP ASCOM type4;73;;Fichier MES en-tête incohérent
+E_ADUP_ASCOM;ADUP ASCOM type4;74;;Fichier PAR absent
+E_ADUP_ASCOM;ADUP ASCOM type4;75;;Fichier PAR vide
+E_ADUP_ASCOM;ADUP ASCOM type4;76;;Fichier PAR défaut code de scellement
+E_ADUP_ASCOM;ADUP ASCOM type4;77;;Fichier PAR en-tête incohérent
+E_ADUP_ASCOM;ADUP ASCOM type4;78;;Fichier PGM absent
+E_ADUP_ASCOM;ADUP ASCOM type4;79;;Fichier PGM vide
+E_ADUP_ASCOM;ADUP ASCOM type4;80;;Fichier PGM défaut code de scellement
+E_ADUP_ASCOM;ADUP ASCOM type4;81;;Fichier PGM en-tête incohérent
+E_ADUP_ASCOM;ADUP ASCOM type4;82;;Fichier BAN absent
+E_ADUP_ASCOM;ADUP ASCOM type4;83;;Fichier BAN vide
+E_ADUP_ASCOM;ADUP ASCOM type4;84;;Fichier BAN défaut code de scellement
+E_ADUP_ASCOM;ADUP ASCOM type4;85;;Fichier BAN en-tête incohérent
+E_ADUP_ASCOM;ADUP ASCOM type4;86;;Fichier PTO absent
+E_ADUP_ASCOM;ADUP ASCOM type4;87;;Fichier PTO vide
+E_ADUP_ASCOM;ADUP ASCOM type4;88;;Fichier PTO défaut code de scellement
+E_ADUP_ASCOM;ADUP ASCOM type4;89;;Fichier PTO en-tête incohérent
+E_ADUP_ASCOM;ADUP ASCOM type4;90;;Fichier PTX absent
+E_ADUP_ASCOM;ADUP ASCOM type4;91;;Fichier PTX vide
+E_ADUP_ASCOM;ADUP ASCOM type4;92;;Fichier PTX défaut code de scellement
+E_ADUP_ASCOM;ADUP ASCOM type4;93;;Fichier PTX en-tête incohérent
+E_ADUP_ASCOM;ADUP ASCOM type4;94;;Bobineau 1 presque vide
+E_ADUP_ASCOM;ADUP ASCOM type4;95;;Bobineau 2 presque vide
+E_ADUP_ASCOM;ADUP ASCOM type4;96;;Réserve
+E_ADUP_ASCOM;ADUP ASCOM type4;97;;Réserve
+E_ADUP_ASCOM;ADUP ASCOM type4;98;;Bobineau 1 vide
+E_ADUP_ASCOM;ADUP ASCOM type4;99;;Bobineau 2 vide
+E_ADUP_ASCOM;ADUP ASCOM type4;100;;Réserve
+E_ADUP_ASCOM;ADUP ASCOM type4;101;;Réserve
+E_ADUP_ASCOM;ADUP ASCOM type4;102;;Bobineau 1 et bobineau 2 vides
+E_ADUP_ASCOM;ADUP ASCOM type4;103;;Défaut télétrans entre UC et imprimante
+E_ADUP_ASCOM;ADUP ASCOM type4;104;;Billetterie non initialisée (NINIT)
+E_ADUP_ASCOM;ADUP ASCOM type4;105;;CAPTEUR C occulté (HS)
+E_ADUP_ASCOM;ADUP ASCOM type4;106;;Capteur J occulté (HS)
+E_ADUP_ASCOM;ADUP ASCOM type4;107;;Capteur H occulté (HS)
+E_ADUP_ASCOM;ADUP ASCOM type4;108;;Présence cassette en thermique direct
+E_ADUP_ASCOM;ADUP ASCOM type4;109;;Poubelle absente
+E_ADUP_ASCOM;ADUP ASCOM type4;110;;Poubelle pleine, plus de 30 billets
+E_ADUP_ASCOM;ADUP ASCOM type4;111;;Poubelle presque pleine (> 25 billets)
+E_ADUP_ASCOM;ADUP ASCOM type4;112;;Séquestre plein (plus de 20 billets)
+E_ADUP_ASCOM;ADUP ASCOM type4;113;;Séquestre non vide
+E_ADUP_ASCOM;ADUP ASCOM type4;114;;Température tête trop élevée
+E_ADUP_ASCOM;ADUP ASCOM type4;115;;Av. début appro, capteur C non occulté
+E_ADUP_ASCOM;ADUP ASCOM type4;116;;Av. pos. coupe, nb. pas moteur appro.
+E_ADUP_ASCOM;ADUP ASCOM type4;117;;Attente appro libre, capt. C non désocc.
+E_ADUP_ASCOM;ADUP ASCOM type4;118;;Attente fin ou billet suivant, non reçu
+E_ADUP_ASCOM;ADUP ASCOM type4;119;;Retrait bande, capteur C non désocc.
+E_ADUP_ASCOM;ADUP ASCOM type4;120;;Retrait bande, nb. pas moteur appro.
+E_ADUP_ASCOM;ADUP ASCOM type4;121;;Buffer impression et codage non prêt 
+E_ADUP_ASCOM;ADUP ASCOM type4;122;;Test moteur appro, avance, nb. pas max
+E_ADUP_ASCOM;ADUP ASCOM type4;123;;Test moteur appro, recul, nb. pas max.
+E_ADUP_ASCOM;ADUP ASCOM type4;124;;Test moteur appro, avance, arrêt t/o
+E_ADUP_ASCOM;ADUP ASCOM type4;125;;Test moteur appro, recul, arrêt t/o
+E_ADUP_ASCOM;ADUP ASCOM type4;126;;Contrôle impress., capteur C non désocc.
+E_ADUP_ASCOM;ADUP ASCOM type4;127;;Attente fin imp, nb. pas moteur impress.
+E_ADUP_ASCOM;ADUP ASCOM type4;128;;Attente sortie impres.,capteur H non occ
+E_ADUP_ASCOM;ADUP ASCOM type4;129;;Test moteur impres, avance, nb. pas max. 
+E_ADUP_ASCOM;ADUP ASCOM type4;130;;Test moteur impres., recul, nb. pas max.
+E_ADUP_ASCOM;ADUP ASCOM type4;131;;Défaut courant moteur lecteur/codeur
+E_ADUP_ASCOM;ADUP ASCOM type4;132;;Problème sur lecture billet
+E_ADUP_ASCOM;ADUP ASCOM type4;133;;Attente billet codeur, capt H non occ.
+E_ADUP_ASCOM;ADUP ASCOM type4;134;;Billet direct séquestre, Capt J non dés.
+E_ADUP_ASCOM;ADUP ASCOM type4;135;;Av. billet direct poub., capt H non dés.
+E_ADUP_ASCOM;ADUP ASCOM type4;136;;Codage, capteur J non désocculté
+E_ADUP_ASCOM;ADUP ASCOM type4;137;;Recul contrôle lecture, capt H non occ.
+E_ADUP_ASCOM;ADUP ASCOM type4;138;;Recul fin lecture, capteur H non désoc.
+E_ADUP_ASCOM;ADUP ASCOM type4;139;;Avance avant relect., capteur J non dés.
+E_ADUP_ASCOM;ADUP ASCOM type4;140;;Séquestre après lecture, capt H non occ.
+E_ADUP_ASCOM;ADUP ASCOM type4;141;;Av avt poub. après lect, capt H non dés.
+E_ADUP_ASCOM;ADUP ASCOM type4;142;;Mise en poubelle, capteur H non désoc.
+E_ADUP_ASCOM;ADUP ASCOM type4;143;;Recul module impres, capteur C non occ.
+E_ADUP_ASCOM;ADUP ASCOM type4;144;;Recul repos modul.impres, nb.pas n.att.
+E_ADUP_ASCOM;ADUP ASCOM type4;145;;Time-out attente fin de fabrication
+E_ADUP_ASCOM;ADUP ASCOM type4;146;;Défaut codage (3 erreurs sur vérif.)
+E_ADUP_ASCOM;ADUP ASCOM type4;147;;Caisse pleine
+E_ADUP_ASCOM;ADUP ASCOM type4;148;;Pièce bloquée dans un tambour
+E_ADUP_ASCOM;ADUP ASCOM type4;149;;Pièce bloquée dans le sélecteur
+E_ADUP_ASCOM;ADUP ASCOM type4;150;;Pièce bloquée en position inconnue
+E_ADUP_ASCOM;ADUP ASCOM type4;151;;Pièce dans un type de tambour incorrect
+E_ADUP_ASCOM;ADUP ASCOM type4;152;;Caisse presque pleine
+E_ADUP_ASCOM;ADUP ASCOM type4;153;;Caisse changée
+E_ADUP_ASCOM;ADUP ASCOM type4;154;;Vidage intempestif tambours restitution
+E_ADUP_ASCOM;ADUP ASCOM type4;155;;Caisse absente
+E_ADUP_ASCOM;ADUP ASCOM type4;156;;Caisse présente et non verrouillée
+E_ADUP_ASCOM;ADUP ASCOM type4;157;;Bourrage en entrée caisse (RS20)
+E_ADUP_ASCOM;ADUP ASCOM type4;158;;Sélecteur absent
+E_ADUP_ASCOM;ADUP ASCOM type4;159;;Panne sélecteur
+E_ADUP_ASCOM;ADUP ASCOM type4;160;;Recycleur 1 absent
+E_ADUP_ASCOM;ADUP ASCOM type4;161;;Recycleur 2 absent
+E_ADUP_ASCOM;ADUP ASCOM type4;162;;Recycleur 3 absent
+E_ADUP_ASCOM;ADUP ASCOM type4;163;;Recycleur 4 absent
+E_ADUP_ASCOM;ADUP ASCOM type4;164;;Recycleur 5 absent
+E_ADUP_ASCOM;ADUP ASCOM type4;165;;Recycleur 6 absent
+E_ADUP_ASCOM;ADUP ASCOM type4;166;;Recycleur 7 absent
+E_ADUP_ASCOM;ADUP ASCOM type4;167;;Recycleur 1 mal placé
+E_ADUP_ASCOM;ADUP ASCOM type4;168;;Recycleur 2 mal placé
+E_ADUP_ASCOM;ADUP ASCOM type4;169;;Recycleur 3 mal placé
+E_ADUP_ASCOM;ADUP ASCOM type4;170;;Recycleur 4 mal placé
+E_ADUP_ASCOM;ADUP ASCOM type4;171;;Recycleur 5 mal placé
+E_ADUP_ASCOM;ADUP ASCOM type4;172;;Recycleur 6 mal placé
+E_ADUP_ASCOM;ADUP ASCOM type4;173;;Recycleur 7 mal placé
+E_ADUP_ASCOM;ADUP ASCOM type4;174;;Panne tambour 1
+E_ADUP_ASCOM;ADUP ASCOM type4;175;;Panne tambour 2
+E_ADUP_ASCOM;ADUP ASCOM type4;176;;Panne tambour 3
+E_ADUP_ASCOM;ADUP ASCOM type4;177;;Panne tambour 4
+E_ADUP_ASCOM;ADUP ASCOM type4;178;;Panne tambour 5
+E_ADUP_ASCOM;ADUP ASCOM type4;179;;Panne tambour 6
+E_ADUP_ASCOM;ADUP ASCOM type4;180;;Panne tambour 7
+E_ADUP_ASCOM;ADUP ASCOM type4;181;;Transmission ou monnayeur HS
+E_ADUP_ASCOM;ADUP ASCOM type4;182;;Echange anormal tambour 1
+E_ADUP_ASCOM;ADUP ASCOM type4;183;;Echange anormal tambour 2
+E_ADUP_ASCOM;ADUP ASCOM type4;184;;Echange anormal tambour 3
+E_ADUP_ASCOM;ADUP ASCOM type4;185;;Echange anormal tambour 4
+E_ADUP_ASCOM;ADUP ASCOM type4;186;;Echange anormal tambour 5
+E_ADUP_ASCOM;ADUP ASCOM type4;187;;Echange anormal tambour 6
+E_ADUP_ASCOM;ADUP ASCOM type4;188;;Echange anormal tambour 7
+E_ADUP_ASCOM;ADUP ASCOM type4;189;;Après éch. tambour, pièce entrée caisse
+E_ADUP_ASCOM;ADUP ASCOM type4;190;;Retrait caisse demandé et non effectué 
+E_ADUP_ASCOM;ADUP ASCOM type4;191;;Retrait caisse effectué hors procédure
+E_ADUP_ASCOM;ADUP ASCOM type4;192;;Pb rendu monnaie - reliquat fabriqué
+E_ADUP_ASCOM;ADUP ASCOM type4;193;;Echange sélecteur effectué
+E_ADUP_ASCOM;ADUP ASCOM type4;194;;Réserve 1 absente
+E_ADUP_ASCOM;ADUP ASCOM type4;195;;Réserve 2 absente
+E_ADUP_ASCOM;ADUP ASCOM type4;196;;Incident rendu monnaie réserve 1
+E_ADUP_ASCOM;ADUP ASCOM type4;197;;Incident rendu monnaie réserve 2
+E_ADUP_ASCOM;ADUP ASCOM type4;198;;Réserve 1 mal placée
+E_ADUP_ASCOM;ADUP ASCOM type4;199;;Réserve 2 mal placée
+E_ADUP_ASCOM;ADUP ASCOM type4;200;;Panne réserve 1
+E_ADUP_ASCOM;ADUP ASCOM type4;201;;Panne réserve 2
+E_ADUP_ASCOM;ADUP ASCOM type4;202;;Changement réserve 1 hors procédure
+E_ADUP_ASCOM;ADUP ASCOM type4;203;;Changement réserve 2 hors procédure
+E_ADUP_ASCOM;ADUP ASCOM type4;204;;Réserve 1 presque vide
+E_ADUP_ASCOM;ADUP ASCOM type4;205;;Réserve 2 presque vide
+E_ADUP_ASCOM;ADUP ASCOM type4;206;;Réserve 1 vide
+E_ADUP_ASCOM;ADUP ASCOM type4;207;;Réserve 2 vide
+E_ADUP_ASCOM;ADUP ASCOM type4;208;;Echange réserve 1
+E_ADUP_ASCOM;ADUP ASCOM type4;209;;Echange réserve 2
+E_ADUP_ASCOM;ADUP ASCOM type4;210;;Pré-alarme barrière lumineuse
+E_ADUP_ASCOM;ADUP ASCOM type4;211;;Panne composants électromécaniques
+E_ADUP_ASCOM;ADUP ASCOM type4;212;;Billet de banque oublié
+E_ADUP_ASCOM;ADUP ASCOM type4;213;;Panne électronique
+E_ADUP_ASCOM;ADUP ASCOM type4;214;;Bruit sur mesure
+E_ADUP_ASCOM;ADUP ASCOM type4;215;;Panne têtes
+E_ADUP_ASCOM;ADUP ASCOM type4;216;;Panne transport
+E_ADUP_ASCOM;ADUP ASCOM type4;217;;Panne piston
+E_ADUP_ASCOM;ADUP ASCOM type4;218;;Panne données
+E_ADUP_ASCOM;ADUP ASCOM type4;219;;Caisse absente
+E_ADUP_ASCOM;ADUP ASCOM type4;220;;Détecteur caisse pleine défectueux
+E_ADUP_ASCOM;ADUP ASCOM type4;221;;Caisse presque pleine
+E_ADUP_ASCOM;ADUP ASCOM type4;222;;Caisse pleine
+E_ADUP_ASCOM;ADUP ASCOM type4;223;;Caisse échangée ou mémoire défectueuse
+E_ADUP_ASCOM;ADUP ASCOM type4;224;;Retrait ou échange caisse hors procédure
+E_ADUP_ASCOM;ADUP ASCOM type4;225;;Caisse échangée
+E_ADUP_ASCOM;ADUP ASCOM type4;226;;Panne pré-caisse
+E_ADUP_ASCOM;ADUP ASCOM type4;227;;Défaut télétrans avec ABB
+E_ADUP_ASCOM;ADUP ASCOM type4;228;;Echange ABB hors procédure
+E_ADUP_ASCOM;ADUP ASCOM type4;229;;ABB échangé
+E_ADUP_ASCOM;ADUP ASCOM type4;230;;Coupure secteur
+E_ADUP_ASCOM;ADUP ASCOM type4;231;;Perte communication avec l¿onduleur
+E_ADUP_ASCOM;ADUP ASCOM type4;232;;Défaut de batterie onduleur
+E_ADUP_ASCOM;ADUP ASCOM type4;233;;Effraction porte principale
+E_ADUP_ASCOM;ADUP ASCOM type4;234;;Effraction accès caisse
+E_ADUP_ASCOM;ADUP ASCOM type4;235;;Effraction accès bobineaux
+E_ADUP_ASCOM;ADUP ASCOM type4;236;;Ouverture porte principale
+E_ADUP_ASCOM;ADUP ASCOM type4;237;;Ouverture accès caisse
+E_ADUP_ASCOM;ADUP ASCOM type4;238;;Accès bobineaux
+E_ADUP_ASCOM;ADUP ASCOM type4;239;;Activation clé prise de service
+E_ADUP_ASCOM;ADUP ASCOM type4;240;;Clé prise de service non retirée
+E_ADUP_ASCOM;ADUP ASCOM type4;241;;Effraction ABB
+E_ADUP_ASCOM;ADUP ASCOM type4;242;;Ouverture porte ABB
+E_ADUP_ASCOM;ADUP ASCOM type4;243;;Accès ABB
+E_ADUP_ASCOM;ADUP ASCOM type4;244;;Ouverture porte arrière ABB
+E_ADUP_ASCOM;ADUP ASCOM type4;245;;Distributeur HS (incident matériel)
+E_ADUP_ASCOM;ADUP ASCOM type4;246;;Distributeur HS en période de vente
+E_ADUP_ASCOM;ADUP ASCOM type4;247;;Distributeur HS sur demande du central
+E_ADUP_ASCOM;ADUP ASCOM type4;248;;Distributeur HS sur demande locale
+E_ADUP_ASCOM;ADUP ASCOM type4;249;;Distributeur en vente usager
+E_ADUP_ASCOM;ADUP ASCOM type4;250;;Distributeur en sommeil
+E_ADUP_ASCOM;ADUP ASCOM type4;251;;Distributeur en intervention exploitation
+E_ADUP_ASCOM;ADUP ASCOM type4;252;;Distributeur en intervention recette
+E_ADUP_ASCOM;ADUP ASCOM type4;253;;TLB fonction vente HS sur demande central
+E_ADUP_ASCOM;ADUP ASCOM type4;254;;HS paiement pièce sur demande central
+E_ADUP_ASCOM;ADUP ASCOM type4;255;;HS paiement CB sur demande central
+E_ADUP_ASCOM;ADUP ASCOM type4;256;;HS identification sur demande central
+E_ADUP_ASCOM;ADUP ASCOM type4;257;;Paiement par monnaie hors service
+E_ADUP_ASCOM;ADUP ASCOM type4;258;;Paiement par CB hors service
+E_ADUP_ASCOM;ADUP ASCOM type4;259;;Rendu monnaie hors service
+E_ADUP_ASCOM;ADUP ASCOM type4;260;;Changement version fichiers programmes
+E_ADUP_ASCOM;ADUP ASCOM type4;261;;Changement version fichiers paramètres
+E_ADUP_ASCOM;ADUP ASCOM type4;262;;Vente partielle
+E_ADUP_ASCOM;ADUP ASCOM type4;263;;Traitement LV interdit par le central
+E_ADUP_ASCOM;ADUP ASCOM type4;264;;Changement date et heure distributeur
+E_ADUP_ASCOM;ADUP ASCOM type4;265;;HS paiement par billets sur demande central
+E_ADUP_ASCOM;ADUP ASCOM type4;266;;CB off-line interdit par le central
+E_ADUP_ASCOM;ADUP ASCOM type4;267;;Aucune application bancaire ne fonctionne
+E_ADUP_ASCOM;ADUP ASCOM type4;268;;Pré-alarme température basse
+E_ADUP_ASCOM;ADUP ASCOM type4;269;;Température haute atteinte
+E_ADUP_ASCOM;ADUP ASCOM type4;270;;Arrêt anormal de l'application ADUP
+E_ADUP_ASCOM;ADUP ASCOM type4;271;;Défaut disque de sauvegarde
+E_ADUP_ASCOM;ADUP ASCOM type4;272;;Défaut de communication avec le SGLV
+E_ADUP_ASCOM;ADUP ASCOM type4;273;;Compte-rendu d¿opération SGLV non transmis
+E_ADUP_ASCOM;ADUP ASCOM type4;274;;Défaut de communication SSSR
+E_ADUP_ASCOM;ADUP ASCOM type4;275;;Défaut de liaison avec le SGADU
+E_ADUP_ASCOM;ADUP ASCOM type4;276;;APV en attente d'authentification
+E_ADUP_ASCOM;ADUP ASCOM type4;277;;Défaut de liaison SSV
+E_ADUP_ASCOM;ADUP ASCOM type4;278;;Fichier CB hors-ligne B0' trop ancien
+E_ADUP_ASCOM;ADUP ASCOM type4;279;;Fichier CB hors-ligne EMV trop ancien
+E_ADUP_ASCOM;ADUP ASCOM type4;280;;Fichier CB hors-ligne appli 0 trop ancien
+E_ADUP_ASCOM;ADUP ASCOM type4;281;;Fichier CB hors-ligne appli 1 trop ancien
+E_ADUP_ASCOM;ADUP ASCOM type4;282;;Fichier CB hors-ligne appli 2 trop ancien
+E_ADUP_ASCOM;ADUP ASCOM type4;283;;Fichier CB hors-ligne B0' plein
+E_ADUP_ASCOM;ADUP ASCOM type4;284;;Fichier CB hors-ligne EMV plein
+E_ADUP_ASCOM;ADUP ASCOM type4;285;;Fichier CB hors-ligne appli 0 plein
+E_ADUP_ASCOM;ADUP ASCOM type4;286;;Fichier CB hors-ligne appli 1 plein
+E_ADUP_ASCOM;ADUP ASCOM type4;287;;Fichier CB hors-ligne appli 2 plein
+E_ADUP_ASCOM;ADUP ASCOM type4;288;;Défaut de liaison automate alarmes
+E_ADUP_ASCOM;ADUP ASCOM type4;289;;Fichier CB hors-ligne B0' incohérent
+E_ADUP_ASCOM;ADUP ASCOM type4;290;;Fichier CB hors-ligne EMV incohérent
+E_ADUP_ASCOM;ADUP ASCOM type4;291;;Fichier CB hors-ligne appli 0 incohérent
+E_ADUP_ASCOM;ADUP ASCOM type4;292;;Fichier CB hors-ligne appli 1 incohérent
+E_ADUP_ASCOM;ADUP ASCOM type4;293;;Fichier CB hors-ligne appli 2 incohérent
+E_ADUP_ASCOM;ADUP ASCOM type4;294;;Transaction EMV en attente d¿acquisition
+E_ADUP_ASCOM;ADUP ASCOM type4;295;;Fonctionnement hors-ligne application B0¿
+E_ADUP_ASCOM;ADUP ASCOM type4;296;;Défaut de liaison TVR ou de sécurisation piste EMV
+E_ADUP_ASCOM;ADUP ASCOM type4;297;;Défaut de liaison SBA application 0
+E_ADUP_ASCOM;ADUP ASCOM type4;298;;Défaut de liaison SBA application 1
+E_ADUP_ASCOM;ADUP ASCOM type4;299;;Défaut de liaison SBA application 2
+E_ADUP_ASCOM;ADUP ASCOM type4;300;;Echec de communication avec le SBE
+E_ADUP_ASCOM;ADUP ASCOM type4;301;;Divergence autorisation / acquisition
+E_ADUP_THALES;ADUP THALES type5;1000;;Erreur de communication 
+E_ADUP_ASCOM;ADUP ASCOM type4;1000;;Erreur de communication 
+ADA;Armoire Distribution Automatique;999999;;Entretien
+EC_Cordon_Chauffant;Cordon Chauffant Elément Chauffant;999999;;Shunt actif
+ADA;Armoire Distribution Automatique;1;;Synthèse Pré-alerte
+ADA;Armoire Distribution Automatique;7;;Synthèse alerte
+ADA;Armoire Distribution Automatique;16;;Synthèse alarme BL
+ADA;Armoire Distribution Automatique;24;;Défaut Départ Remplacement Luminaire/PC/Clim vers local PCC de Repli
+ADA;Armoire Distribution Automatique;25;;En Arret AAI rearmable sur PCM
+ADUP;Appareil Distributeur à l'Usage du Public type1;999999;;Entretien
+ADUP;Appareil Distributeur à l'Usage du Public type1;1000;;PERTE DE COM
+ADUP;Appareil Distributeur à l'Usage du Public type1;1014;;Inhibition
+API_BOURDON;API_BOURDON;1;;Defaut COM passerelle WAGO1
+API_BOURDON;API_BOURDON;2;;Defaut COM passerelle WAGO2
+API_BOURDON;API_BOURDON;3;;Defaut COM Aigle
+API_BOURDON;API_BOURDON;4;;Defaut API
+API_BOURDON;API_BOURDON;5;;Defaut pile API
+API_BOURDON;API_BOURDON;6;;Defaut module ETY1 API
+API_BOURDON;API_BOURDON;7;;Defaut module ETY2 API
+API_BOURDON;API_BOURDON;8;;Defaut module SCY API
+API_BOURDON;API_BOURDON;9;;Defaut voie 1 module SCY API
+API_BOURDON;API_BOURDON;10;;Defaut API secours
+API_BOURDON;API_BOURDON;11;;Defaut pile API secours
+API_BOURDON;API_BOURDON;12;;Defaut module ETY1 API secours
+API_BOURDON;API_BOURDON;13;;Defaut module ETY2 API secours
+API_BOURDON;API_BOURDON;14;;Defaut module SCY API secours
+API_BOURDON;API_BOURDON;15;;Defaut voie 1 module SCY APIsecours 
+API_BOURDON;API_BOURDON;16;;Defaut module STB1
+API_BOURDON;API_BOURDON;17;;Defaut module STB2
+API_BOURDON;API_BOURDON;18;;Defaut module STB3
+API_BOURDON;API_BOURDON;19;;Defaut module STB4
+API_BOURDON;API_BOURDON;20;;Defaut alimentation normal API1
+API_BOURDON;API_BOURDON;21;;Defaut alimentation normal Q12 pour module 240AC/24DC(A11)
+API_BOURDON;API_BOURDON;22;;Defaut alimentation normal Q13 pour bobine contacteur normal(KC1)
+API_BOURDON;API_BOURDON;23;;Defaut alimentation A11 pour STB
+API_BOURDON;API_BOURDON;24;;Defaut alimentation normal API2
+API_BOURDON;API_BOURDON;25;;Defaut alimentation normal Q22 pour module 240AC/24DC(A21)
+API_BOURDON;API_BOURDON;26;;Defaut alimentation normal Q23 pour bobine contacteur normal(KC2)
+API_BOURDON;API_BOURDON;27;;Defaut alimentation A21 pour STB
+API_BOURDON;API_BOURDON;28;;Defaut éclairage armorie
+API_BOURDON;API_BOURDON;29;;Defaut alimentation ventilateur armoire
+API_BOURDON;API_BOURDON;30;;Defaut alimentation bandeau prises + modem
+API_BOURDON;API_BOURDON;31;;Defaut alimentation passerelles WAGO
+API_BOURDON;API_BOURDON;32;;Defaut alimentation SWITCHS
+API_BOURDON;API_BOURDON;33;;Defaut alimentation afficheur
+API_BOURDON;API_BOURDON;34;;Defaut alimentation STB ilot 1
+API_BOURDON;API_BOURDON;35;;Defaut alimentation STB ilot 2
+API_BOURDON;API_BOURDON;36;;Defaut alimentation STB ilot 3
+API_BOURDON;API_BOURDON;37;;Defaut alimentation STB ilot 4
+API_BOURDON;API_BOURDON;38;;Defaut alimentation SWITCH n1
+API_BOURDON;API_BOURDON;39;;Defaut alimentation SWITCH n2
+API_BOURDON;API_BOURDON;40;;Defaut alimentation SWITCH n3
+API_BOURDON;API_BOURDON;41;;Defaut alimentation SWITCH n4
+API_BOURDON;API_BOURDON;1000;;PERTE DE COM
+API_BOURDON;API_BOURDON;1001;;Identifiant station incorrect
+API_BOURDON;API_BOURDON;1002;;Identifiant équipement incorrect
+API_BOURDON;API_BOURDON;1003;;Identifiant version incorrect
+API_BOURDON;API_BOURDON;1004;;Identifiant checksum incorrect
+API_BOURDON;API_BOURDON;1005;;Synchronisation horloge impossible
+API_BOURDON;API_BOURDON;1006;;Bit de signe de vie manquant
+API_BOURDON;API_BOURDON;1014;;Inhibition
+API_STA;API station métro;1001;;Identifiant station incorrect
+API_STA;API station métro;1002;;Identifiant équipement incorrect
+API_STA;API station métro;1005;;Synchronisation horloge impossible
+API_EA_GTC;Centrale alarme accédé via un API GTC;999999;;Entretien
+API_ERM;Eqpt concentrateur API ERM (CDS RER);999999;;Entretien
+API_GTC;API concentrateur GTC Telephonie/sono/EAI(API_GTC);999999;;Entretien
+AEROA;Aéroéjecteur Autonome;9;;Défaut automate
+AEROA;Aéroéjecteur Autonome;1014;;Inhibition
+Aeroejecteur_Comp;Aeroejecteur Compresseur;999999;;Entretien
+Aeroejecteur_Comp;Aeroejecteur Compresseur;2;;Niveau d'eau
+Aeroejecteur_Comp;Aeroejecteur Compresseur;3;;Tirage d'air
+Aeroejecteur_Comp;Aeroejecteur Compresseur;4;;Manque de pression
+Aeroejecteur_Comp;Aeroejecteur Compresseur;1000;;PERTE DE COM
+Aeroejecteur_Comp;Aeroejecteur Compresseur;1014;;Inhibition
+PSIEL;Panneau d'Information Quai;1014;;Inhibition
+Alarme_Synthese;Alarme Synthese via API Station et Gare;1014;;Inhibition
+Ampli_GTC;Amplificateur via un API GTC;999999;;Entretien
+Armoire_Forte_GTC;Armoire Forte dans Zone agression via API  GTC;999999;;Entretien
+Ascenseur;Ascenseur;38;;Défaut Automate
+Ascenseur;Ascenseur;39;;Défaut manoeuvre de secours
+Ascenseur;Ascenseur;40;;Défaut thermique moteur
+Ascenseur;Ascenseur;41;;Défaut température moteur
+Ascenseur;Ascenseur;42;;Défaut contacts portes palières
+Ascenseur;Ascenseur;43;;Défaut contacts porte cabine
+Ascenseur;Ascenseur;44;;Défaut trappe: porte intercommun ou porte de secours
+Ascenseur;Ascenseur;45;;Défaut survitesse
+Ascenseur;Ascenseur;46;;Défaut contacts parachute
+Ascenseur;Ascenseur;47;;Défaut contacts fin de course/amortisseurs
+Ascenseur;Ascenseur;48;;Défaut poulie tendeuse
+Ascenseur;Ascenseur;49;;Défaut d'alimentation CAF
+Ascenseur;Ascenseur;50;;Défaut d'alimentation CAP
+Ascenseur;Ascenseur;51;;Défaut personne bloquée en cabine
+Ascenseur;Ascenseur;52;;Défaut bouton STOP enfonce
+Ascenseur;Ascenseur;53;;Défaut 3 faux départs
+Ascenseur;Ascenseur;54;;Défaut alimentation chaine de sécurite
+Ascenseur;Ascenseur;55;;Défaut sélecteur (bistable/capteur en gaine...)
+Ascenseur;Ascenseur;56;;Défaut contrôle de ralentissement
+Ascenseur;Ascenseur;57;;Défaut temps de freinage trop long
+Ascenseur;Ascenseur;58;;Défaut temps de fermeture portes trop long
+Ascenseur;Ascenseur;59;;Défaut temps d'ouverture portes trop long
+Ascenseur;Ascenseur;60;;Défaut temps de déplacement trop long
+Ascenseur;Ascenseur;61;;Défaut non retombée des contacteurs
+Ascenseur;Ascenseur;62;;Défaut non levée de freinvs
+Ascenseur;Ascenseur;63;;Défaut température>40 degrés dans le local machine
+Ascenseur;Ascenseur;64;;Défaut BAE > 5 heures
+Ascenseur;Ascenseur;65;;Défaut alimentation onduleur
+Ascenseur;Ascenseur;66;;Interupteur générale IG déclenché
+Ascenseur;Ascenseur;67;;Défaut capteur en zone de déverouillage
+Ascenseur;Ascenseur;68;;Défaut sous vitesse cabine
+Ascenseur;Ascenseur;69;;Perte du niveau de référence
+Ascenseur;Ascenseur;70;;Bouton stop CEX enfoncé
+Ascenseur;Ascenseur;71;;Défaut sécurité porte entre étage
+Ascenseur;Ascenseur;72;;Interrupteur Arrêt Incendie (IAI)
+Ascenseur;Ascenseur;73;;Défaut non ouverture des portes
+Ascenseur;Ascenseur;74;;Présence d'eau en cuvette
+Ascenseur;Ascenseur;75;;Panne de communication entre API et coffret d'aquisition
+Ascenseur;Ascenseur;76;;Coupure alimentation normale PEF
+Ascenseur;Ascenseur;77;;Coupure alimentation permanent
+Ascenseur;Ascenseur;78;;Forçage de porte
+Ascenseur;Ascenseur;79;;Retour d'alimentation (380 ou 48V)
+Ascenseur;Ascenseur;80;;Défaut BAE > 5 heures
+Ascenseur;Ascenseur;81;;Défaut alimentation onduleur
+Ascenseur;Ascenseur;82;;Interupteur générale IG déclenché
+Ascenseur;Ascenseur;83;;Défaut capteur en zone de déverouillage
+Ascenseur;Ascenseur;84;;Défaut sous vitesse cabine
+Ascenseur;Ascenseur;85;;Perte du niveau de référence
+Ascenseur;Ascenseur;86;;Bouton stop CEX enfoncé
+Ascenseur;Ascenseur;87;;Défaut sécurité porte entre étage
+Ascenseur;Ascenseur;88;;Interrupteur Arrêt Incendie (IAI)
+Ascenseur;Ascenseur;89;;Défaut non ouverture des portes
+Ascenseur;Ascenseur;1014;;Inhibition
+BAES;Bloc Autonome Eclairage Secours;1014;;Inhibition
+BAM;Baie d'Aération Motorisée;8;;Défaut automate
+BAM;Baie d'Aération Motorisée;9;;Défaut 48V Station
+BAM;Baie d'Aération Motorisée;1014;;Inhibition
+PEP;Poste d'Epuisement;32;;Défaut automate
+PEP;Poste d'Epuisement;1014;;Inhibition
+Bris_de_glace;Bris de glace via API Station et Gare;1014;;Inhibition
+Buzzer;Buzzer via API Station et Gare;1012;;Commande automatique arret buzzer impossible
+CACC;Contrôle d'Accès métro Symphonie;1014;;Inhibition
+CSONO;Centrale de Sonorisation CDSMG et Symphonie;22;;Défaut Température
+CSONO;Centrale de Sonorisation CDSMG et Symphonie;1005;;Synchronisation horloge impossible
+Coffret_Sonal;Coffret Sonal via API Station et Gare;1014;;Inhibition
+Compresseur;Compresseur;17;;Défaut automate
+Compresseur;Compresseur;1014;;Inhibition
+Contact_Porte_GTC;Contact porte Zone effraction via API  GTC;999999;;Entretien
+Alarme_PEF;Alarme_PEF via API Station et Gare;1;;ALARME
+Alarme_PEF;Alarme_PEF via API Station et Gare;1014;;Inhibition
+DetectionIncendie;Détection Incendie via API Station et Gare;1;;Alarme FEU
+DetectionIncendie;Détection Incendie via API Station et Gare;2;;Dérangement Incendie
+DetectionIncendie;Détection Incendie via API Station et Gare;1014;;Inhibition
+Diffuseur;Diffuseur de musique CL;1000;;PERTE DE COM
+Diffuseur;Diffuseur de musique CL;1001;;Erreur de communication SNMP
+Diffuseur;Diffuseur de musique CL;1014;;Inhibition
+Disjoncteur_Camera_GTC;Disjoncteur Carméra via API  GTC;999999;;Entretien
+Disjoncteur_DBT_PEF;PEF Métro;5;;1er défaut CPI T2
+Disjoncteur_DBT_PEF;PEF Métro;6;;1er défaut CPI EDF
+Disjoncteur_DBT_PEF;PEF Métro;7;;1er défaut CPI F1
+Disjoncteur_DBT_PEF;PEF Métro;8;;1er défaut CPI F2
+Disjoncteur_DBT_PEF;PEF Métro;9;;défaut Automate
+Disjoncteur_DBT_PEF;PEF Métro;10;;Ouverture DJ signalisation L1
+Disjoncteur_DBT_PEF;PEF Métro;11;;Ouverture DJ signalisation L2
+Disjoncteur_DBT_PEF;PEF Métro;12;;Ouverture DJ signalisation L3
+Disjoncteur_DBT_PEF;PEF Métro;13;;Ouverture DJ signalisation L4
+Disjoncteur_DBT_PEF;PEF Métro;14;;Ouverture DJ signalisation L5
+Disjoncteur_DBT_PEF;PEF Métro;15;;Ouverture DJ signalisation L6
+Disjoncteur_DBT_PEF;PEF Métro;16;;Absence T1
+Disjoncteur_DBT_PEF;PEF Métro;17;;Absence T2
+Disjoncteur_DBT_PEF;PEF Métro;18;;Manque tension EDF
+Disjoncteur_DBT_PEF;PEF Métro;19;;CN ouvert
+Disjoncteur_DBT_PEF;PEF Métro;20;;CS ouvert et CN ouvert (alarme P)
+Disjoncteur_DBT_PEF;PEF Métro;21;;Défaut départ(s) Permanent
+Disjoncteur_DBT_PEF;PEF Métro;22;;Défaut Tension RUP
+Disjoncteur_DBT_PEF;PEF Métro;23;;Défaut Automatisme
+Disjoncteur_DBT_PEF;PEF Métro;24;;Ouverture d'un appareil de delestage en présence T1 et T2
+Disjoncteur_DBT_PEF;PEF Métro;25;;Ouverture du disjoncteur d'arrivée T1
+Disjoncteur_DBT_PEF;PEF Métro;26;;Ouverture du disjoncteur d'arrivée T2
+Disjoncteur_DBT_PEF;PEF Métro;27;;Défaut armoire chargeur batterie 48V
+Disjoncteur_DBT_PEF;PEF Métro;28;;Défaut depart(s) non délestable T1
+Disjoncteur_DBT_PEF;PEF Métro;29;;Défaut depart(s) non délestable T2
+Disjoncteur_DBT_PEF;PEF Métro;30;;Défaut allumage du jalonnement en présence de l'éclairage permanent
+Disjoncteur_DBT_PEF;PEF Métro;31;;Défaut non allumage du jalonnement en absence de toutes les alimentations
+Disjoncteur_DBT_PEF;PEF Métro;32;;Défaut armoire chargeur batterie 120V jalonnement
+Disjoncteur_DBT_PEF;PEF Métro;33;;Défaut éclairage de sécurité jalonnement station L1
+Disjoncteur_DBT_PEF;PEF Métro;34;;Défaut éclairage de sécurité jalonnement station L2
+Disjoncteur_DBT_PEF;PEF Métro;35;;Défaut éclairage de sécurité jalonnement station L3
+Disjoncteur_DBT_PEF;PEF Métro;36;;Défaut éclairage de sécurité jalonnement station L4
+Disjoncteur_DBT_PEF;PEF Métro;37;;Défaut éclairage de sécurité jalonnement station L5
+Disjoncteur_DBT_PEF;PEF Métro;38;;Défaut éclairage de sécurité jalonnement station L6
+Disjoncteur_DBT_PEF;PEF Métro;39;;Défaut absence F1
+Disjoncteur_DBT_PEF;PEF Métro;40;;Défaut absence F2
+Disjoncteur_DBT_PEF;PEF Métro;41;;Fermeture F1-F2
+Disjoncteur_DBT_PEF;PEF Métro;42;;Ouverture disjoncteur F1
+Disjoncteur_DBT_PEF;PEF Métro;43;;Ouverture disjoncteur F2
+Disjoncteur_DBT_PEF;PEF Métro;44;;Défaut depart F1
+Disjoncteur_DBT_PEF;PEF Métro;45;;Défaut depart F2
+Disjoncteur_DBT_PEF;PEF Métro;1001;;Identifiant station incorrect
+Disjoncteur_DBT_PEF;PEF Métro;1002;;Identifiant équipement incorrect
+Disjoncteur_DBT_PEF;PEF Métro;1003;;Identifiant version incorrect
+Disjoncteur_DBT_PEF;PEF Métro;1004;;Identifiant checksum incorrect
+Disjoncteur_DBT_PEF;PEF Métro;1005;;Synchronisation horloge impossible
+Disjoncteur_DBT_PEF;PEF Métro;1006;;Bit de signe de vie manquant
+Disjoncteur_DBT_PEF;PEF Métro;1014;;Inhibition
+EAT_GTC;Centrale téléphonique via un API GTC(EAT_GTC);999999;;Entretien
+CP_CA;Capteurs centrale alarme métro fils de ECENTRALE;7;;Autoprotection capteur
+CP_CA;Capteurs centrale alarme métro fils de ECENTRALE;8;;Circuit autoprotection ouvert
+CP_CA;Capteurs centrale alarme métro fils de ECENTRALE;9;;Court circuit autoprotection
+ECENTRALE;Centrale alarme métro;1005;;Synchronisation horloge impossible
+PC_I;PC industriel;5;;Conso mémoire trop élevée
+PC_I;PC industriel;6;;Conso mémoire pagination trop élevée
+PC_I;PC industriel;1001;;PERTE DE COM SNMP
+PC_I;PC industriel;1014;;Inhibition
+EEAS;Eqpt d'Accès Sono CDSMG et Symphonie;1;;PANNE
+EEAT;Eqpt d'Accès Téléphonie CDSMG et Symphonie;2;;Erreur Communication LibEAT
+EEAV;Eqpt d'Accès Vidéo CDSMG et Symphonie;999999;;Entretien
+EEAV;Eqpt d'Accès Vidéo CDSMG et Symphonie;1000;;PERTE DE COM
+EM;Escalier Mécanique;1014;;Inhibition
+EM;Escalier Mécanique;1015;;Commande marche locale impossible
+EM_Re;Escalier Mécanique à Relais;19;;DERANG INCENDI
+EM_Re;Escalier Mécanique à Relais;1014;;Inhibition
+EM_Re;Escalier Mécanique à Relais;1015;;Commande marche locale impossible
+ALMTC;alarme de synthèse de divers équipements;999999;;Entretien
+E_A2007;ADUP Automate de service 2007 type6;4;;Pb de comm. avec antenne cible arrière
+E_A2007;ADUP Automate de service 2007 type6;5;;Problème rechargement SSSR
+E_A2007;ADUP Automate de service 2007 type6;15;;Anomalie signalée par le passe
+E_A2007;ADUP Automate de service 2007 type6;16;;Pb de comm. avec antenne cible avant
+E_A2007;ADUP Automate de service 2007 type6;27;;Carte CB client ou agent oubliée
+E_A2007;ADUP Automate de service 2007 type6;28;;Colonne dépileur absente
+E_A2007;ADUP Automate de service 2007 type6;29;;Séquestre dépileur retiré hors procédure
+E_A2007;ADUP Automate de service 2007 type6;30;;Séquestre dépileur plein
+E_A2007;ADUP Automate de service 2007 type6;44;;Erreur de CRC sur fichier de paramètre
+E_A2007;ADUP Automate de service 2007 type6;45;;Fichier de paramètres absent
+E_A2007;ADUP Automate de service 2007 type6;48;;Ecriture archive impossible
+E_A2007;ADUP Automate de service 2007 type6;49;;Fichier d'archive incohérent
+E_A2007;ADUP Automate de service 2007 type6;50;;Problème prise en compte fichier MOC
+E_A2007;ADUP Automate de service 2007 type6;51;;Pas de base utilisable
+E_A2007;ADUP Automate de service 2007 type6;52;;L'APV fonctionne sur une base obsolète
+E_A2007;ADUP Automate de service 2007 type6;53;;Carnetteur HS
+E_A2007;ADUP Automate de service 2007 type6;67;;Carnetteur non vide
+E_A2007;ADUP Automate de service 2007 type6;68;;Séquestre presque plein
+E_A2007;ADUP Automate de service 2007 type6;69;;Séquestre plein
+E_A2007;ADUP Automate de service 2007 type6;70;;Bobineau 2 vide
+E_A2007;ADUP Automate de service 2007 type6;71;;Bobineau 1 vide
+E_A2007;ADUP Automate de service 2007 type6;72;;Bobineau 2 presque vide
+E_A2007;ADUP Automate de service 2007 type6;74;;Imprimante document mal positionnée
+E_A2007;ADUP Automate de service 2007 type6;75;;Défaut de comm. UC-Imprimante document
+E_A2007;ADUP Automate de service 2007 type6;90;;Bourrage imprimante 2
+E_A2007;ADUP Automate de service 2007 type6;91;;Bobineau 2 vide
+E_A2007;ADUP Automate de service 2007 type6;92;;Bobineau 2 presque vide
+E_A2007;ADUP Automate de service 2007 type6;94;;Pièce bloquée dans l'orienteur
+E_A2007;ADUP Automate de service 2007 type6;95;;Pièce bloquée dans la sortie sébile
+E_A2007;ADUP Automate de service 2007 type6;96;;Pièce bloquée dans le recycleur de 0,10 euro
+E_A2007;ADUP Automate de service 2007 type6;97;;Pièce bloquée dans le recycleur de 1 euro
+E_A2007;ADUP Automate de service 2007 type6;98;;Pièce bloquée dans le recycleur de 2 euro
+E_A2007;ADUP Automate de service 2007 type6;103;;Pièce inattendue dans le recycleur 2 euros
+E_A2007;ADUP Automate de service 2007 type6;104;;Pièce inattendue dans le recycleur 0,50 euro
+E_A2007;ADUP Automate de service 2007 type6;109;;Recycleur 5 presque vide
+E_A2007;ADUP Automate de service 2007 type6;111;;Recycleur 4 presque vide
+E_A2007;ADUP Automate de service 2007 type6;112;;Recycleur 3 vide
+E_A2007;ADUP Automate de service 2007 type6;113;;Recycleur 3 presque vide
+E_A2007;ADUP Automate de service 2007 type6;128;;Panne recycleur 1
+E_A2007;ADUP Automate de service 2007 type6;129;;Recycleur 5 absent
+E_A2007;ADUP Automate de service 2007 type6;131;;Recycleur 3 absent
+E_A2007;ADUP Automate de service 2007 type6;132;;Recycleur 2 absent
+E_A2007;ADUP Automate de service 2007 type6;133;;Recycleur 1 absent
+E_A2007;ADUP Automate de service 2007 type6;134;;Panne sélecteur
+E_A2007;ADUP Automate de service 2007 type6;135;;Sélecteur absent
+E_A2007;ADUP Automate de service 2007 type6;136;;Pièce inattendue dans la caisse à pièces
+E_A2007;ADUP Automate de service 2007 type6;137;;Bourrage en entrée caisse
+E_A2007;ADUP Automate de service 2007 type6;138;;Caisse pièces absente ou non verrouillée
+E_A2007;ADUP Automate de service 2007 type6;139;;Caisse pièces presque pleine
+E_A2007;ADUP Automate de service 2007 type6;140;;Pièce bloquée
+E_A2007;ADUP Automate de service 2007 type6;141;;Caisse à pièces pleine
+E_A2007;ADUP Automate de service 2007 type6;150;;Panne transport
+E_A2007;ADUP Automate de service 2007 type6;151;;Panne têtes
+E_A2007;ADUP Automate de service 2007 type6;152;;Panne électronique
+E_A2007;ADUP Automate de service 2007 type6;153;;Billet de banque oublié
+E_A2007;ADUP Automate de service 2007 type6;154;;Panne composants électromécaniques
+E_A2007;ADUP Automate de service 2007 type6;161;;Effraction accès colonne dépileur
+E_A2007;ADUP Automate de service 2007 type6;162;;Effraction porte accès arrière
+E_A2007;ADUP Automate de service 2007 type6;163;;Ouverture porte imprimante magnétique
+E_A2007;ADUP Automate de service 2007 type6;164;;Ouverture porte accès arrière
+E_A2007;ADUP Automate de service 2007 type6;165;;Détection d'un choc important
+E_A2007;ADUP Automate de service 2007 type6;166;;Clé prise de service oubliée
+E_A2007;ADUP Automate de service 2007 type6;167;;Activation clé prise de service
+E_A2007;ADUP Automate de service 2007 type6;168;;Accès ABB
+E_A2007;ADUP Automate de service 2007 type6;169;;Effraction accès ABB
+E_A2007;ADUP Automate de service 2007 type6;170;;Accès bobineaux
+E_A2007;ADUP Automate de service 2007 type6;171;;Ouverture porte avant   
+E_A2007;ADUP Automate de service 2007 type6;172;;Effraction à l'imprimante
+E_A2007;ADUP Automate de service 2007 type6;173;;Effraction porte avant
+E_A2007;ADUP Automate de service 2007 type6;174;;Défaut de communication dalle tactile
+E_A2007;ADUP Automate de service 2007 type6;175;;Température haute
+E_A2007;ADUP Automate de service 2007 type6;177;;Distribution passes interdite par le central
+E_A2007;ADUP Automate de service 2007 type6;178;;Edition titres mag. ou billets sans contact interdit par le central
+E_A2007;ADUP Automate de service 2007 type6;182;;Paiement billets HS sur demande central
+E_A2007;ADUP Automate de service 2007 type6;183;;Problème exécution MoCaT
+E_A2007;ADUP Automate de service 2007 type6;184;;Mise en service paramètres interdite par central
+E_A2007;ADUP Automate de service 2007 type6;185;;Traitement LV interdit par le central
+E_A2007;ADUP Automate de service 2007 type6;188;;Paiement espèces HS
+E_A2007;ADUP Automate de service 2007 type6;191;;Paiement pièces HS sur demande central
+E_A2007;ADUP Automate de service 2007 type6;192;;Vente TLB HS sur demande central
+E_A2007;ADUP Automate de service 2007 type6;195;;Automate HS sur demande central
+E_A2007;ADUP Automate de service 2007 type6;200;;Défaut de liaison automate NDS
+E_A2007;ADUP Automate de service 2007 type6;201;;Défaut de liaison automate alarmes
+E_A2007;ADUP Automate de service 2007 type6;225;;Erreur de comm. en fin d'écriture
+E_A2007;ADUP Automate de service 2007 type6;226;;Chargement KO après la 2e tentative
+E_A2007;ADUP Automate de service 2007 type6;227;;Carte invalide/non supportée
+E_A2007;ADUP Automate de service 2007 type6;228;;Tentatives de composition du code confidentiel épuisées
+E_A2007;ADUP Automate de service 2007 type6;229;;Passe mis en séquestre
+E_A2007;ADUP Automate de service 2007 type6;230;;Problème sur parcours demandé
+E_A2007;ADUP Automate de service 2007 type6;231;;Produit non fabricable
+E_A2007;ADUP Automate de service 2007 type6;232;;Compte rendu après reboot
+E_A2007;ADUP Automate de service 2007 type6;233;;Caisse à pièces changée
+E_A2007;ADUP Automate de service 2007 type6;234;;Pb rendu monnaie
+E_A2007;ADUP Automate de service 2007 type6;235;;Retrait de la cassette de transfert
+E_A2007;ADUP Automate de service 2007 type6;236;;Caisse billets échangée
+E_A2007;ADUP Automate de service 2007 type6;237;;ABB échangé
+E_A2007;ADUP Automate de service 2007 type6;238;;Distributeur en vente usager
+E_A2007;ADUP Automate de service 2007 type6;239;;Distributeur en sommeil
+E_A2007;ADUP Automate de service 2007 type6;240;;Changement de version fichier programme
+E_A2007;ADUP Automate de service 2007 type6;241;;Changement de version fichiers paramètres
+E_A2007;ADUP Automate de service 2007 type6;242;;Changement date heure
+E_A2007;ADUP Automate de service 2007 type6;243;;Relance par watchdog logiciel
+E_A2007;ADUP Automate de service 2007 type6;244;;Compte rendu d'opération SGLV non transmis
+E_A2007;ADUP Automate de service 2007 type6;245;;Traps SNMP en attente de remontée à la supervision
+E_A2007;ADUP Automate de service 2007 type6;246;;Divergence autorisation/acquisition
+E_A2007;ADUP Automate de service 2007 type6;724;;Effraction
+E_A2007;ADUP Automate de service 2007 type6;900;;Erreur abonnement
+E_ADUP;Appareil Distributeur à l'Usage du Public type2;701;;Effraction
+E_ADUP;Appareil Distributeur à l'Usage du Public type2;900;;Erreur abonnement
+E_ADUP;Appareil Distributeur à l'Usage du Public type2;1000;;PERTE DE COM
+E_AE5G;Equipement API AE5G;3;;Simulé Auto
+E_AE5G;Equipement API AE5G;4;;Simulé Manuel
+E_AE5G;Equipement API AE5G;5;;Simulé depuis le Superviseur
+E_AE5G;Equipement API AE5G;6;;Communication Recette effectuée
+E_AE5G;Equipement API AE5G;700;;Defaut
+E_AE5G;Equipement API AE5G;1001;;Identifiant station incorrect
+E_AE5G;Equipement API AE5G;1002;;Identifiant équipement incorrect
+E_AE5G;Equipement API AE5G;1003;;Identifiant version incorrect
+E_AE5G;Equipement API AE5G;1004;;Identifiant checksum incorrect
+E_AE5G;Equipement API AE5G;1005;;Synchronisation horloge impossible
+E_API_GARE;API Gare CDSMG;1001;;Identifiant station incorrect
+E_API_GARE;API Gare CDSMG;1002;;Identifiant équipement incorrect
+E_API_GARE;API Gare CDSMG;1005;;Synchronisation horloge impossible
+E_AS;ADUP AS PARKEON  type3;99;;Session ecriture non ratifiee
+E_AS;ADUP AS PARKEON  type3;100;;Chargement reussi a la 2eme tentative
+E_AS;ADUP AS PARKEON  type3;101;;Erreur de communication en fin d'ecriture
+E_AS;ADUP AS PARKEON  type3;102;;Chargement en echec apres 2 tentatives consecutives
+E_AS;ADUP AS PARKEON  type3;103;;Mise en service parametres interdite par le central
+E_AS;ADUP AS PARKEON  type3;104;;DProbleme execution MOCAT
+E_BAIE_SONO;Baie Sono CDSMG;999999;;Entretien
+E_CALARME;Centrale alarme RER CDSMG;999999;;Entretien
+E_CALARME;Centrale alarme RER CDSMG;1005;;Synchronisation horloge impossible
+E_CALARME;Centrale alarme RER CDSMG;1016;;Identifiant checksum parametre incorrect
+E_CES;Concentrateur En Station;999999;;En entretien
+E_CTL_EPIS;Controleur de l'EPIS CDSMG;1;;Défaut configuration mode normal
+E_CTL_EPIS;Controleur de l'EPIS CDSMG;2;;Défaut configuration mode dégradé cube1 seul
+E_CTL_EPIS;Controleur de l'EPIS CDSMG;3;;Défaut configuration mode dégradé cube2 seul
+E_CTL_EPIS;Controleur de l'EPIS CDSMG;4;;SS2 Err licences
+E_CTL_EPIS;Controleur de l'EPIS CDSMG;5;;SS2-11 Err licences
+E_CTL_EPIS;Controleur de l'EPIS CDSMG;6;;SS2-12 Err licences
+E_CTL_EPIS;Controleur de l'EPIS CDSMG;10;;SS2 Err Gest Licence
+E_CTL_EPIS;Controleur de l'EPIS CDSMG;11;;SS2 Err Réseau Info
+E_CTL_EPIS;Controleur de l'EPIS CDSMG;12;;SS2 Err Fermeture modules
+E_CTL_EPIS;Controleur de l'EPIS CDSMG;13;;SS2-11 Err Fermeture modules
+E_CTL_EPIS;Controleur de l'EPIS CDSMG;14;;SS2-12 Err Fermeture modules
+E_CTL_EPIS;Controleur de l'EPIS CDSMG;18;;SS2 Err licence Globale
+E_CTL_EPIS;Controleur de l'EPIS CDSMG;19;;SS2 Err table licences
+E_CTL_EPIS;Controleur de l'EPIS CDSMG;20;;SS2 Hors Ctrl/Cmd
+E_CTL_EPIS;Controleur de l'EPIS CDSMG;21;;SS2 Err Commande/Service
+E_CTL_EPIS;Controleur de l'EPIS CDSMG;22;;SS2 Err Syntax Commande
+E_CTL_EPIS;Controleur de l'EPIS CDSMG;23;;SS2 Def Memoires/BD
+E_CTL_EPIS;Controleur de l'EPIS CDSMG;24;;SS2 Def Aff Sources
+E_CTL_EPIS;Controleur de l'EPIS CDSMG;25;;SS2 Def Sources
+E_CTL_EPIS;Controleur de l'EPIS CDSMG;26;;SS2 Err Module Aff Version
+E_CTL_EPIS;Controleur de l'EPIS CDSMG;27;;SS2 Err Module Aff Absence
+E_CTL_EPIS;Controleur de l'EPIS CDSMG;28;;SS2 Err Module Aff Démarrage
+E_CTL_EPIS;Controleur de l'EPIS CDSMG;29;;SS2 Synth Err licences
+E_CTL_EPIS;Controleur de l'EPIS CDSMG;30;;SS2 Synth Err Fermeture modules
+E_CTL_EPIS;Controleur de l'EPIS CDSMG;31;;SS2 Synth Err Contrôleur
+E_CTL_EPIS;Controleur de l'EPIS CDSMG;32;;SS2 Synth Err Fenêtre
+E_CTL_EPIS;Controleur de l'EPIS CDSMG;33;;SS2 Synth Err (erreur technique)
+E_CTL_EPIS;Controleur de l'EPIS CDSMG;34;;Defaut configuration mode normale petite taille
+E_CTL_EPIS;Controleur de l'EPIS CDSMG;1000;;PERTE DE COM
+E_CTL_EPIS;Controleur de l'EPIS CDSMG;1001;;Echec activation mode
+E_ECS;Eqpt concentrateur Vente et Contrôle d'accès(ECS);1001;;Identifiant station incorrect
+E_ECS;Eqpt concentrateur Vente et Contrôle d'accès(ECS);1002;;Identifiant équipement incorrect
+E_ECS;Eqpt concentrateur Vente et Contrôle d'accès(ECS);1003;;Identifiant version incorrect
+E_ECS;Eqpt concentrateur Vente et Contrôle d'accès(ECS);1004;;Identifiant checksum incorrect
+E_ECS;Eqpt concentrateur Vente et Contrôle d'accès(ECS);1005;;Synchronisation horloge impossible
+E_ECS;Eqpt concentrateur Vente et Contrôle d'accès(ECS);1006;;Bit de signe de vie manquant
+E_EPIS;Mur d'écran EPIS CDSMG;3;;Cube1 en défaut
+E_EPIS;Mur d'écran EPIS CDSMG;4;;Cube2 en défaut
+E_EPIS;Mur d'écran EPIS CDSMG;6;;SS1-1 Def Carte DVI
+E_EPIS;Mur d'écran EPIS CDSMG;7;;SS1-2 Def Carte DVI
+E_EPIS;Mur d'écran EPIS CDSMG;9;;SS1-1 Chg lampe 1->2
+E_EPIS;Mur d'écran EPIS CDSMG;10;;SS1-2 Chg lampe 1->2
+E_EPIS;Mur d'écran EPIS CDSMG;12;;SS1-1 Chg lampe 2->1
+E_EPIS;Mur d'écran EPIS CDSMG;13;;SS1-2 Chg lampe 2->1
+E_EPIS;Mur d'écran EPIS CDSMG;15;;SS1-1 Manque lampe 1
+E_EPIS;Mur d'écran EPIS CDSMG;16;;SS1-2 Manque lampe 1
+E_EPIS;Mur d'écran EPIS CDSMG;18;;SS1-1 Manque lampe 2
+E_EPIS;Mur d'écran EPIS CDSMG;19;;SS1-2 Manque lampe 2
+E_EPIS;Mur d'écran EPIS CDSMG;21;;SS1-1 Def Ventil Proj
+E_EPIS;Mur d'écran EPIS CDSMG;22;;SS1-2 Def Ventil Proj
+E_EPIS;Mur d'écran EPIS CDSMG;24;;SS1-1 Def Ventil lampe
+E_EPIS;Mur d'écran EPIS CDSMG;25;;SS1-2 Def Ventil lampe
+E_EPIS;Mur d'écran EPIS CDSMG;27;;SS1-1 Def Chg lampe 1->2
+E_EPIS;Mur d'écran EPIS CDSMG;28;;SS1-2 Def Chg lampe 1->2
+E_EPIS;Mur d'écran EPIS CDSMG;30;;SS1-1 Def Chg lampe 2->1
+E_EPIS;Mur d'écran EPIS CDSMG;31;;SS1-2 Def Chg lampe 2->1
+E_EPIS;Mur d'écran EPIS CDSMG;33;;SS1-1 Def lampes 1-2
+E_EPIS;Mur d'écran EPIS CDSMG;34;;SS1-2 Def lampes 1-2
+E_EPIS;Mur d'écran EPIS CDSMG;36;;SS1-1 Err lampe 1 et Abs 2
+E_EPIS;Mur d'écran EPIS CDSMG;37;;SS1-2 Err lampe 1 et Abs 2
+E_EPIS;Mur d'écran EPIS CDSMG;39;;SS1-1 Err lampe 2 et Abs 1
+E_EPIS;Mur d'écran EPIS CDSMG;40;;SS1-2 Err lampe 2 et Abs 1
+E_EPIS;Mur d'écran EPIS CDSMG;42;;SS1-1 Roues couleur HS
+E_EPIS;Mur d'écran EPIS CDSMG;43;;SS1-2 Roues couleur HS
+E_EPIS;Mur d'écran EPIS CDSMG;45;;SS1-1 Err interne PROJ
+E_EPIS;Mur d'écran EPIS CDSMG;46;;SS1-2 Err interne PROJ
+E_EPIS;Mur d'écran EPIS CDSMG;48;;SS1-1 Def Com CPU-PROJ
+E_EPIS;Mur d'écran EPIS CDSMG;49;;SS1-2 Def Com CPU-PROJ
+E_EPIS;Mur d'écran EPIS CDSMG;51;;SS1-1 Abs lampe 1
+E_EPIS;Mur d'écran EPIS CDSMG;52;;SS1-2 Abs lampe 1
+E_EPIS;Mur d'écran EPIS CDSMG;54;;SS1-1 Abs lampe 2
+E_EPIS;Mur d'écran EPIS CDSMG;55;;SS1-2 Abs lampe 2
+E_EPIS;Mur d'écran EPIS CDSMG;56;;SS1 Err licences
+E_EPIS;Mur d'écran EPIS CDSMG;57;;SS1 Err Gest Licence
+E_EPIS;Mur d'écran EPIS CDSMG;58;;SS1 Err Réseau Info
+E_EPIS;Mur d'écran EPIS CDSMG;59;;SS1 Err Fermeture modules
+E_EPIS;Mur d'écran EPIS CDSMG;60;;SS1 Err licence Globale
+E_EPIS;Mur d'écran EPIS CDSMG;61;;SS1 Err table licences
+E_EPIS;Mur d'écran EPIS CDSMG;62;;SS1 Hors Ctrl/Cmd
+E_EPIS;Mur d'écran EPIS CDSMG;63;;SS1 Err Commande/Service
+E_EPIS;Mur d'écran EPIS CDSMG;64;;SS1 Err Syntax Commande
+E_EPIS;Mur d'écran EPIS CDSMG;65;;SS1 Def Memoires/BD
+E_EPIS;Mur d'écran EPIS CDSMG;66;;SS1 Def Aff Sources
+E_EPIS;Mur d'écran EPIS CDSMG;67;;SS1 Def Sources
+E_EPIS;Mur d'écran EPIS CDSMG;68;;SS1 Err Module Aff Version
+E_EPIS;Mur d'écran EPIS CDSMG;69;;SS1 Err Module Aff Absence
+E_EPIS;Mur d'écran EPIS CDSMG;70;;SS1 Err Module Aff Démarrage
+E_EPIS;Mur d'écran EPIS CDSMG;72;;SS1-1 Synth Def lampe
+E_EPIS;Mur d'écran EPIS CDSMG;73;;SS1-2 Synth Def lampe
+E_EPIS;Mur d'écran EPIS CDSMG;75;;SS1-1 Synth Def bloc Proj
+E_EPIS;Mur d'écran EPIS CDSMG;76;;SS1-2 Synth Def bloc Proj
+E_EPIS;Mur d'écran EPIS CDSMG;78;;SS1-1 Synth Def Ventil
+E_EPIS;Mur d'écran EPIS CDSMG;79;;SS1-2 Synth Def Ventil
+E_EPIS;Mur d'écran EPIS CDSMG;81;;SS1-1 Synth Def
+E_EPIS;Mur d'écran EPIS CDSMG;82;;SS1-2 Synth Def
+E_EPIS;Mur d'écran EPIS CDSMG;83;;SS1-1 Synth Def lampe 1 et lampe 2
+E_EPIS;Mur d'écran EPIS CDSMG;84;;SS1-2 Synth Def lampe 1 et lampe 2
+E_EPIS;Mur d'écran EPIS CDSMG;85;;SS1-1 Synth Def lampe 1 et lampe 2 Abs
+E_EPIS;Mur d'écran EPIS CDSMG;86;;SS1-2 Synth Def lampe 1 et lampe 2 Abs
+E_EPIS;Mur d'écran EPIS CDSMG;87;;SS1-1 Synth Def lampe 2 et lampe 1 Abs
+E_EPIS;Mur d'écran EPIS CDSMG;88;;SS1-2 Synth Def lampe 2 et lampe 1 Abs
+E_EPIS;Mur d'écran EPIS CDSMG;89;;SS1-1 Synth Def lampes
+E_EPIS;Mur d'écran EPIS CDSMG;90;;SS1-2 Synth Def lampes
+E_EPIS;Mur d'écran EPIS CDSMG;1000;;PERTE DE COM
+E_EPISCONFIGURATION;Objet de configuration mur d'écrans CDSMG;999999;;Entretien
+E_EPISCONFIGURATION;Objet de configuration mur d'écrans CDSMG;1;;Erreur de fichier
+E_EPISCONFIGURATION;Objet de configuration mur d'écrans CDSMG;2;;Erreur d'activation
+E_EPISCONFIGURATION;Objet de configuration mur d'écrans CDSMG;3;;Erreur de création
+E_EPISCONFIGURATION;Objet de configuration mur d'écrans CDSMG;4;;Erreur de mode d'affichage
+E_LC;Ligne de Contrôle générique;38;;Passage hors service
+E_LC;Ligne de Contrôle générique;39;;Portillon bloqué
+E_LECTEUR;Lecteur 3G;999999;;En entretien
+E_LECTEUR;Lecteur 3G;1;;Erreur Communication Equipement
+E_LECTEUR;Lecteur 3G;2;;Bourrage
+E_LECTEUR;Lecteur 3G;3;;Hors Service
+E_PAVEL;Controle acces type PAVEL;999999;;En entretien
+E_PAVEL;Controle acces type PAVEL;1;;Erreur Communication Equipement
+E_PAVEL;Controle acces type PAVEL;2;;Bloqué Ouvert
+E_PAVEL;Controle acces type PAVEL;3;;Bloqué Fermé
+E_PAVEL;Controle acces type PAVEL;4;;Vérouillé
+E_PEM;Passages Elargis Motorisés;999999;;En entretien
+E_PS;Portillon de service CDSMG;999999;;En entretien
+E_SECURITE_INCENDIE;Eqt sécurité incendie E_SSI et E_SPRINKLER;1;;DECLENCHEMENT
+E_SECURITE_INCENDIE;Eqt sécurité incendie E_SSI et E_SPRINKLER;2;;DERANGEMENT
+E_SECURITE_INCENDIE;Eqt sécurité incendie E_SSI et E_SPRINKLER;1014;;Inhibition
+E_ZFS_BAIE_SONO;Zone de sonorisation CDSMG;13;;Defaut partiel
+E_ZFS_BAIE_SONO;Zone de sonorisation CDSMG;14;;Défaut total
+E_ZFS_BAIE_SONO;Zone de sonorisation CDSMG;15;;Discordance des commutations des sorties
+Eclairage_ERM_CDS;Eqpt armoire éclairage accédé via API ERM(CDS RER);999999;;Entretien
+Grille;Grille Motorisée;15;;Défaut automate
+Grille;Grille Motorisée;1009;;Commande automatique initiale impossible
+Grille;Grille Motorisée;1014;;Inhibition
+Haut_Parleur_GTC;Haut parleur via un API GTC;999999;;Entretien
+Imprimante;IMPRIMANTE bureau station CDSMG et Symphonie;1;;Encre épuisée
+Imprimante;IMPRIMANTE bureau station CDSMG et Symphonie;2;;Plus de papier
+Imprimante;IMPRIMANTE bureau station CDSMG et Symphonie;3;;Bourrage
+Imprimante;IMPRIMANTE bureau station CDSMG et Symphonie;1000;;PERTE DE COM
+Imprimante;IMPRIMANTE bureau station CDSMG et Symphonie;1001;;PERTE DE COM SNMP
+Imprimante;IMPRIMANTE bureau station CDSMG et Symphonie;1014;;Inhibition
+IPH_GTC;Interphone via un API concentrateur GTC;999999;;Entretien
+IssueDeSecours;Issue De Secours Projets lieux;999999;;Entretien
+IssueDeSecours;Issue De Secours Projets lieux;1;;PORTE DEVEROUILLEE
+IssueDeSecours;Issue De Secours Projets lieux;1014;;Inhibition
+MoniteurTeleaff;MoniteurTeleaffichage Pointe du Lac;999999;;Entretien
+MoniteurTeleaff;MoniteurTeleaffichage Pointe du Lac;1;;PC portable de maintenance connecté
+MoniteurTeleaff;MoniteurTeleaffichage Pointe du Lac;2;;Absence logiciel application
+MoniteurTeleaff;MoniteurTeleaffichage Pointe du Lac;3;;Absence tension cathode rouge
+MoniteurTeleaff;MoniteurTeleaffichage Pointe du Lac;4;;Absence tension cathode verte
+MoniteurTeleaff;MoniteurTeleaffichage Pointe du Lac;5;;Absence tension cathode bleue
+MoniteurTeleaff;MoniteurTeleaffichage Pointe du Lac;6;;Absence signal vidéo
+MoniteurTeleaff;MoniteurTeleaffichage Pointe du Lac;7;;Absence balayage vertical
+MoniteurTeleaff;MoniteurTeleaffichage Pointe du Lac;8;;Absence balayage horizontal
+MoniteurTeleaff;MoniteurTeleaffichage Pointe du Lac;9;;Défaut retour caractère LCD
+MoniteurTeleaff;MoniteurTeleaffichage Pointe du Lac;10;;Défaut général du sous-système vidéo
+MoniteurTeleaff;MoniteurTeleaffichage Pointe du Lac;1000;;PERTE DE COM
+MoniteurTeleaff;MoniteurTeleaffichage Pointe du Lac;1001;;PERTE DE COM SNMP
+MoniteurTeleaff;MoniteurTeleaffichage Pointe du Lac;1014;;Inhibition
+Onduleur;Onduleur;1014;;Inhibition
+Pedale_GTC;Pédale d'alarme agression via API GTC;999999;;Entretien
+Peigne;Eqt Peigne sur stations LMPG et BH;999999;;Entretien
+Peigne;Eqt Peigne sur stations LMPG et BH;1;;BHU Activé
+Peigne;Eqt Peigne sur stations LMPG et BH;1014;;Inhibition
+PompeDeRelevageSousQuai;Eqt Pompe De Relevage Sous Quai station AGLA;999999;;Entretien
+PompeDeRelevageSousQuai;Eqt Pompe De Relevage Sous Quai station AGLA;1;;ALARME
+PompeDeRelevageSousQuai;Eqt Pompe De Relevage Sous Quai station AGLA;1014;;Inhibition
+Radar_GTC;Radar Zone effraction via API  GTC;999999;;Entretien
+SDP;Serveur de ports;1014;;Inhibition
+SUPVIDEO;SUPVIDEO - équipement virtuel de commutation video;999999;;Entretien
+SUPVIDEO;SUPVIDEO - équipement virtuel de commutation video;2;;Erreur initialisation LibEAV
+SielStation;Objet SIEL;1014;;Inhibition
+Sono_GTC;Sonorisation accédé via API GTC (CDS RER);999999;;Entretien
+Sono_GTC;Sonorisation accédé via API GTC (CDS RER);1;;defaut telesono
+Sono_GTC;Sonorisation accédé via API GTC (CDS RER);2;;defaut convertisseur
+Sono_GTC;Sonorisation accédé via API GTC (CDS RER);3;;defaut comm api uc sono
+Sono_GTC;Sonorisation accédé via API GTC (CDS RER);4;;defaut lecteur enregistreur
+Sono_GTC;Sonorisation accédé via API GTC (CDS RER);5;;Baie de sonorisation HS
+Sono_GTC;Sonorisation accédé via API GTC (CDS RER);6;;Message d'evacuation en cours
+SWITCH;Switch;1000;;PERTE DE COM
+SWITCH;Switch;1014;;Inhibition
+TPV;Terminal Point de Vente;1014;;Inhibition
+Trottoir_Roulant;Trottoir Roulant;1009;;Commande automatique initiale impossible
+Trottoir_Roulant;Trottoir Roulant;1014;;Inhibition
+Trottoir_Roulant;Trottoir Roulant;1015;;Commande marche locale impossible
+Trottoir_Roulant_R;Trottoir Roulant à Relais;19;;DERANG INCENDI
+Trottoir_Roulant_R;Trottoir Roulant à Relais;1009;;Commande automatique initiale impossible
+Trottoir_Roulant_R;Trottoir Roulant à Relais;1014;;Inhibition
+Trottoir_Roulant_R;Trottoir Roulant à Relais;1015;;Commande marche locale impossible
+UTL_GTC;Unité Traitement Local via un API GTC(CDS RER);999999;;Entretien
+VLE;Ventilateur locaux électriques;999999;;Entretien
+VLE;Ventilateur locaux électriques;1;;Synthèse Pré-alerte
+VLE;Ventilateur locaux électriques;3;;Synthése Alerte
+VLE;Ventilateur locaux électriques;5;;Synthése Alarme
+Ventilateur;Ventilateur;1010;;Commande voyant PGR impossible
+Zone_Agression_GTC;Zone agression via un API  GTC (CDS RER);999999;;Entretien
+Zone_Agression_GTC;Zone agression via un API  GTC (CDS RER);8;;Armoire forte HS
+Zone_Agression_GTC;Zone agression via un API  GTC (CDS RER);9;;Armoire forte
+Zone_Agression_GTC;Zone agression via un API  GTC (CDS RER);10;;Court-circuit armoire forte
+Zone_Agression_GTC;Zone agression via un API  GTC (CDS RER);11;;Ouverture ligne armoire forte
+Zone_Agression_GTC;Zone agression via un API  GTC (CDS RER);12;;Court-circuit ouverture armoire forte
+Zone_Agression_GTC;Zone agression via un API  GTC (CDS RER);13;;Ouverture ligne ouverture armoire forte
+Zone_Effraction_ADUP_GTC;Zone Effraction ADUP via API  GTC (CDS RER);999999;;Entretien
+Zone_Effraction_GTC;Zone effraction via API GTC(Zone_Effraction_GTC);999999;;Entretien
+Zone_Effraction_GTC;Zone effraction via API GTC(Zone_Effraction_GTC);8;;Detection presence
+Zone_Effraction_GTC;Zone effraction via API GTC(Zone_Effraction_GTC);9;;Court-circuit detection presence
+Zone_Effraction_GTC;Zone effraction via API GTC(Zone_Effraction_GTC);10;;Ouverture ligne detection presence
+Zone_Effraction_GTC;Zone effraction via API GTC(Zone_Effraction_GTC);11;;Sabotage detection presence
+Zone_Effraction_GTC;Zone effraction via API GTC(Zone_Effraction_GTC);12;;Court-circuit sabotage detection presence
+Zone_Effraction_GTC;Zone effraction via API GTC(Zone_Effraction_GTC);13;;Ouverture ligne sabotage detection presence
+Zone_Sono_GTC;Zone de sonorisation via un API GTC (CDS RER);999999;;Entretien
+PEP_station;Poste d'épuisement station;999999;;Entretien
+PEP_station;Poste d'épuisement station;2;;Augmentation apport d'eau (+25%)
+PEP_station;Poste d'épuisement station;3;;Baisse débit groupe 1
+PEP_station;Poste d'épuisement station;4;;Baisse débit groupe 2
+PEP_station;Poste d'épuisement station;5;;Baisse débit groupe 3
+PEP_station;Poste d'épuisement station;6;;Baisse débit groupe 4
+PEP_station;Poste d'épuisement station;8;;Temps de pompage trop long groupe 1
+PEP_station;Poste d'épuisement station;9;;Temps de pompage trop long groupe 2
+PEP_station;Poste d'épuisement station;10;;Temps de pompage trop long groupe 3
+PEP_station;Poste d'épuisement station;11;;Temps de pompage trop long groupe 4
+PEP_station;Poste d'épuisement station;12;;Défaut hydraulique groupe 1
+PEP_station;Poste d'épuisement station;13;;Défaut hydraulique groupe 2
+PEP_station;Poste d'épuisement station;14;;Défaut hydraulique groupe 3
+PEP_station;Poste d'épuisement station;15;;Défaut hydraulique groupe 4
+PEP_station;Poste d'épuisement station;17;;AAI non discriminée
+PEP_station;Poste d'épuisement station;18;;Vanne d'arrivée fermée
+PEP_station;Poste d'épuisement station;19;;Alarme haute
+PEP_station;Poste d'épuisement station;20;;Bouton Arrêt Entretien > 5 heures
+PEP_station;Poste d'épuisement station;21;;Absence tension T1 (400V)
+PEP_station;Poste d'épuisement station;22;;Absence tension T2 (400V)
+PEP_station;Poste d'épuisement station;23;;Défaut détection niveaux
+PEP_station;Poste d'épuisement station;24;;Défaut thermique groupe 1
+PEP_station;Poste d'épuisement station;25;;Défaut variateur groupe 1
+PEP_station;Poste d'épuisement station;26;;Défaut thermique groupe 2
+PEP_station;Poste d'épuisement station;27;;Défaut variateur groupe 2
+PEP_station;Poste d'épuisement station;28;;Défaut thermique groupe 3
+PEP_station;Poste d'épuisement station;29;;Défaut variateur groupe 3
+PEP_station;Poste d'épuisement station;30;;Défaut thermique groupe 4
+PEP_station;Poste d'épuisement station;31;;Défaut variateur groupe 4
+PEP_station;Poste d'épuisement station;32;;Défaut automate
+PEP_station;Poste d'épuisement station;1000;;PERTE DE COM
+PEP_station;Poste d'épuisement station;1001;;Identifiant station incorrect
+PEP_station;Poste d'épuisement station;1002;;Identifiant équipement incorrect
+PEP_station;Poste d'épuisement station;1003;;Identifiant version incorrect
+PEP_station;Poste d'épuisement station;1004;;Identifiant checksum incorrect
+PEP_station;Poste d'épuisement station;1005;;Synchronisation horloge impossible
+PEP_station;Poste d'épuisement station;1006;;Bit de signe de vie manquant
+PEP_station;Poste d'épuisement station;1014;;Inhibition
+IMAGE_V4;Afficheur IMAGE V4;999999;;En entretien
+BAES_IP;BAES en mode direct;1000;1000;Erreur de communication
+PEF;PEF;1;;DEFAUT PEF
+PEF;PEF;2;;T1 / T2
+PEF;PEF;3;;Jalonnement / Permanent
+PEF;PEF;1014;;Inhibition
+PorteCoulissante;PorteCoulissante;1;;Alarme Synthèse
+PorteCoulissante;PorteCoulissante;1014;;Inhibition
+IMAGE_V4;Afficheur IMAGE V4;1000;1000;Erreur de communication
+IMAGE_V4;Afficheur IMAGE V4;1001;;Erreur de communication SNMP
+IMAGE_V4;Afficheur IMAGE V4;1002;;Erreur de protocole SNMP V3
+IMAGE_V4;Afficheur IMAGE V4;1003;;Erreur d'initialisation SNMP V3
+IMAGE_V4;Afficheur IMAGE V4;1;;Temperature ambiante haute dans l'afficheur
+IMAGE_V4;Afficheur IMAGE V4;2;;Temperature ambiante Moyenne dans l'afficheur
+IMAGE_V4;Afficheur IMAGE V4;3;;Temperature ambiante Basse dans l'afficheur
+IMAGE_V4;Afficheur IMAGE V4;4;;Alerte disque SSD full
+IMAGE_V4;Afficheur IMAGE V4;5;;Absence application ratp
+IMAGE_V4;Afficheur IMAGE V4;6;;Application IMAGE HS
+IMAGE_V4;Afficheur IMAGE V4;7;;Service Image indisponible
+IMAGE_V4;Afficheur IMAGE V4;8;;Synthese ventilateur HS
+IMAGE_V4;Afficheur IMAGE V4;9;;Synthese alimentation HS
+IMAGE_V4;Afficheur IMAGE V4;10;;Synthese dalle et eclairage HS 
+IMAGE_V4;Afficheur IMAGE V4;11;;Synthese carte de supervision HS
+IMAGE_V4;Afficheur IMAGE V4;1014;;Inhibition
