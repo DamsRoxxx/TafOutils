@@ -8,7 +8,7 @@ from xlsxwriter.workbook import Workbook
 import zipfile
 from datetime import datetime
 
-FILES_TO_MERGE = ["PdC", "Staffing"]
+FILES_TO_MERGE = ["PdC", "Staffing", "Ressources"]
 
 def MergeSheet(booksList, sheetName, dstWorkbook):
     dstWorksheet = dstWorkbook.add_worksheet(sheetName)
