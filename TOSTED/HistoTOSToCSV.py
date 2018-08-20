@@ -7,7 +7,7 @@ from collections import defaultdict
 
 def HistoTOSToCSV(inputCSV, outputCSV):
     # Indexation de la table des noms logiques
-    nomLogiqueIndex = defaultdict(lambda: defaultdict(str))
+    nomLogiqueIndex = defaultdict(lambda: defaultdict(lambda: defaultdict(str)))
     with open("TableNomLogiqueHistoTOS.csv", "rb") as nomLogiqueTableFile:
         nomLogiqueTableCSVReader = csv.reader(nomLogiqueTableFile, delimiter=';')
         nomLogiqueTableCSVReader.next() # Ignore la premiere ligne
@@ -15,7 +15,8 @@ def HistoTOSToCSV(inputCSV, outputCSV):
             nomLogique = unicode(row[0], "utf-8")
             libelle = unicode(row[1], "utf-8")
             mnemonique = unicode(row[5], "utf-8")
-            nomLogiqueIndex[mnemonique][libelle] = nomLogique
+            nomStation = unicode(row[3], "utf-8")
+            nomLogiqueIndex[mnemonique][libelle][nomStation] = nomLogique
 
     # Indexation de la table des codes
     codeIndex = defaultdict(lambda: defaultdict(str))
@@ -37,6 +38,13 @@ def HistoTOSToCSV(inputCSV, outputCSV):
     inputCSVReader.next() # Ignore la premiere ligne
     for row in inputCSVReader:
         evenement = row[7]
+        horodatage = unicode(row[0][:-2], "ISO-8859-1")
+        typeEqpt = unicode(row[2], "ISO-8859-1")
+        libelleEqpt = unicode(row[3], "ISO-8859-1")
+        libelleAlarme = unicode(row[6], "ISO-8859-1")
+        nomStation = unicode(row[1], "ISO-8859-1")
+        nomLogique = nomLogiqueIndex[typeEqpt][libelleEqpt][nomStation]
+        code = codeIndex[typeEqpt][libelleAlarme]
 
         # Ne pas traiter la ligne si il ne s'agit pas d'un debut ou d'une fin d'alarme
         if evenement == "Mise en attente d'une IDP":
@@ -44,14 +52,9 @@ def HistoTOSToCSV(inputCSV, outputCSV):
         elif evenement == "Fin d'une IDP":
             valeur = 0
         else:
+            print(';'.join([str(nomLogique), str(code), str(evenement), str(horodatage)]))
             continue
 
-        horodatage = unicode(row[0][:-2], "ISO-8859-1")
-        typeEqpt = unicode(row[2], "ISO-8859-1")
-        libelleEqpt = unicode(row[3], "ISO-8859-1")
-        libelleAlarme = unicode(row[6], "ISO-8859-1")
-        nomLogique = nomLogiqueIndex[typeEqpt][libelleEqpt]
-        code = codeIndex[typeEqpt][libelleAlarme]
         outputCSVWriter.writerow((nomLogique, code, valeur, horodatage))
 
     inputCSVFile.close()
