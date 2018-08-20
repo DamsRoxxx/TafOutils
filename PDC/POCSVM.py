@@ -1,6 +1,8 @@
 #!/usr/bin/python
 # coding: utf-8
 
+# VERSION : 1.0
+
 import os
 import sys
 import xlrd
