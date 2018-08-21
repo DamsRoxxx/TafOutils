@@ -3,18 +3,19 @@
 
 from subprocess import call
 
-startDate = "2018-08-02 00:00:01"
-endDate = "2018-08-05 23:59:59"
+startDate = "2018-08-13 00:00:01"
+endDate = "2018-08-17 23:59:59"
 
-tosLogs = "RES/TOS"
-tedLogs = "RES/TED"
+res = "RES/13-08_17-08/"
+tosLogs = res + "TOS"
+tedLogs = res + "TED"
 
-audaceTosLogs = "RES/AUDACE_TOS"
-audaceTedLogs = "RES/AUDACE_TED"
+audaceTosLogs = res + "AUDACE_TOS"
+audaceTedLogs = res + "AUDACE_TED"
 
-parc = "RES/parc.csv"
+parc = res + "parc.csv"
 
-histoTed = "RES/HISTO_TED/HISTO_TED.csv"
+histoTed = res + "HISTO_TED/HISTO_TED.csv"
 
 # Formate les logs TOS en CSV
 cmd = """
