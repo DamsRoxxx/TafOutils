@@ -32,7 +32,7 @@ def findInTOS(nl, code, valeur, date):
 	if not code in TOSIndex[nl]:
 		return
 		
-	for delay in range(0, tosDelay):
+	for delay in range(-tosDelay, tosDelay + 1):
 		tosDate = date + timedelta(seconds=delay)
 		
 		if tosDate in TOSIndex[nl][code]:
