@@ -3,18 +3,18 @@
 
 import logging
 from ArgsProcessing import *
-from TED import *
-from TOS import *
+from TED import ted
+from TOS import tos
 from HistoTED import histo_ted
 
 # Call the appropriate function depending on the command line arguments
 def call_appropriate_func(args):
-    if args.extract_ted_logs:
+    if args.ted:
         assert_args(args, {"input", "output", "start-date", "end-date"})
-        extract_ted_logs(args.input, args.output, args.start_date, args.end_date)
-    elif args.extract_tos_logs:
+        ted(args.input, args.output, args.start_date, args.end_date)
+    elif args.tos:
         assert_args(args, {"input", "output", "start-date", "end-date"})
-        extract_tos_logs(args.input, args.output, args.start_date, args.end_date)
+        tos(args.input, args.output, args.start_date, args.end_date)
     elif args.hted:
         assert_args(args, {"input", "output", "start-date", "end-date", "parc"})
         histo_ted(args.input, args.output, args.start_date, args.end_date, args.parc)

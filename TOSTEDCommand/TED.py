@@ -17,9 +17,9 @@ def convert_value(value):
 # Create a CSV file from the log files present in the input_dir_path filtering
 # data that are not between start_date_str and end_date_str. The date format is
 # "YYYY-MM-DD hh:mm:ss"
-def extract_ted_logs(input_dir_path, output_file_path, start_date_str, end_date_str):
+def ted(input_dir_path, output_file_path, start_date_str, end_date_str):
     logging.info(
-        "extract_ted_logs(%s, %s, %s, %s)", 
+        "ted(%s, %s, %s, %s)", 
         input_dir_path, output_file_path,
         start_date_str, end_date_str
     )
