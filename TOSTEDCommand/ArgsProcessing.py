@@ -26,6 +26,7 @@ def parse_args():
     )
 
     parser.add_argument(
+        "--ted",
         "--extract-ted-logs",
         dest="extract_ted_logs",
         action="store_true",
@@ -37,6 +38,7 @@ def parse_args():
     )
 
     parser.add_argument(
+        "--tos",
         "--extract-tos-logs",
         dest="extract_tos_logs",
         action="store_true",

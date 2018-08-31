@@ -3,7 +3,8 @@
 
 import logging
 from ArgsProcessing import *
-from ExtractTOSLogs import *
+from TED import *
+from TOS import *
 
 # Call the appropriate function depending on the command line arguments
 def call_appropriate_func(args):
