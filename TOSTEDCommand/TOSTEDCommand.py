@@ -11,7 +11,7 @@ from RemoveDuplicates import remove_duplicates
 
 # Call the appropriate function depending on the command line arguments
 def call_appropriate_func(args):
-    assert_only_one_arg(args, {"ted", "tos", "hted", "filter", "remove_duplicates"})
+    assert_only_one_arg(args, {"ted", "tos", "hted", "filter", "remove-duplicates"})
     if args.ted:
         assert_args(args, {"input", "output", "start-date", "end-date"})
         ted(args.input, args.output, args.start_date, args.end_date)

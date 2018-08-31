@@ -118,7 +118,7 @@ def assert_only_one_arg(args, args_to_check):
     args_dict = vars(args)
     args_counter = 0
     for arg in args_to_check:
-        if args_dict[arg]:
+        if args_dict[arg.replace('-', '_')]:
             args_counter += 1
     if args_counter > 1:
         logging.error("Incompatible arguments.")
