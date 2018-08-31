@@ -5,6 +5,7 @@ import logging
 from ArgsProcessing import *
 from TED import *
 from TOS import *
+from HistoTED import histo_ted
 
 # Call the appropriate function depending on the command line arguments
 def call_appropriate_func(args):
@@ -14,6 +15,10 @@ def call_appropriate_func(args):
     elif args.extract_tos_logs:
         assert_args(args, {"input", "output", "start-date", "end-date"})
         extract_tos_logs(args.input, args.output, args.start_date, args.end_date)
+    elif args.hted:
+        assert_args(args, {"input", "output", "start-date", "end-date", "parc"})
+        histo_ted(args.input, args.output, args.start_date, args.end_date, args.parc)
+
 
 if __name__ == '__main__':
     logging.basicConfig(

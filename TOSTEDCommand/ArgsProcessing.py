@@ -26,6 +26,17 @@ def parse_args():
     )
 
     parser.add_argument(
+        "--hted",
+        dest="hted",
+        action="store_true",
+        help="""
+        Formatage du fichier [HISTO_TED.csv] passé en input (-i) dans le CSV
+        spécifié en output (-o) en filtrant les alarmes en dehors des dates
+        précisées via --start-date et --end-date
+        """
+    )
+
+    parser.add_argument(
         "--ted",
         "--extract-ted-logs",
         dest="extract_ted_logs",
@@ -59,6 +70,11 @@ def parse_args():
         "--end-date",
         dest="end_date",
         type=str
+    )
+
+    parser.add_argument(
+        "--parc",
+        dest="parc"
     )
 
     args = parser.parse_args()
