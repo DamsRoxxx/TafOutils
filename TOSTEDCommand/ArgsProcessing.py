@@ -37,6 +37,17 @@ def parse_args():
     )
 
     parser.add_argument(
+        "--extract-tos-logs",
+        dest="extract_tos_logs",
+        action="store_true",
+        help="""
+        Formatage des logs TOS présents dans le répertoire passé en
+        input (-i) dans le CSV spécifié en output (-o) en filtrant les alarmes
+        en dehors des dates précisées via --start-date et --end-date
+        """
+    )
+
+    parser.add_argument(
         "--start-date",
         dest="start_date",
         type=str
