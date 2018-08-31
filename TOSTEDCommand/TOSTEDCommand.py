@@ -8,10 +8,11 @@ from TOS import tos
 from HistoTED import histo_ted
 from FilterEquipments import filter_equipments
 from RemoveDuplicates import remove_duplicates
+from Compare import compare
 
 # Call the appropriate function depending on the command line arguments
 def call_appropriate_func(args):
-    assert_only_one_arg(args, {"ted", "tos", "hted", "filter", "remove-duplicates"})
+    assert_only_one_arg(args, {"ted", "tos", "hted", "filter", "remove-duplicates", "compare"})
     if args.ted:
         assert_args(args, {"input", "output", "start-date", "end-date"})
         ted(args.input, args.output, args.start_date, args.end_date)
@@ -28,7 +29,9 @@ def call_appropriate_func(args):
     elif args.remove_duplicates:
         assert_args(args, {"input", "output"})
         remove_duplicates(args.input, args.output)
-
+    elif args.compare:
+        assert_args(args, {"input", "output", "start-date", "end-date"})
+        compare(args.output, args.input.split(' '), args.start_date, args.end_date)
 
 if __name__ == '__main__':
     logging.basicConfig(

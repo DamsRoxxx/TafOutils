@@ -97,6 +97,16 @@ def parse_args():
         """
     )
 
+    parser.add_argument(
+        "--compare",
+        dest="compare",
+        action="store_true",
+        help="""
+        Compare des logs CSV et les met au format Qlik.  Input files are
+        specified by -i "FILE_1 FILE_2 ...". Output is specified by -o OUTPUT
+        """
+    )
+
     args = parser.parse_args()
 
     return args
