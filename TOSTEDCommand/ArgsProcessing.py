@@ -3,6 +3,7 @@
 
 import sys
 import argparse
+import logging
 
 # Parse command line arguments
 def parse_args():
@@ -15,11 +16,13 @@ def parse_args():
 
     parser.add_argument(
         "-i",
+        "--input",
         dest="input"
     )
 
     parser.add_argument(
         "-o",
+        "--output",
         dest="output"
     )
 
@@ -73,6 +76,17 @@ def parse_args():
         """
     )
 
+    parser.add_argument(
+        "--filter",
+        dest="filter",
+        metavar="EQUIPMENTS_LIST_FILE",
+        help="""
+        Filtre le fichier précisé en input (-i) avec les équipements présents
+        dans le fichier précisé en -f et enregistre le résultat dans le fichier
+        d'output (-o)
+        """
+    )
+
     args = parser.parse_args()
 
     return args
@@ -84,7 +98,19 @@ def assert_args(args, needed_args):
     missing_args = False
     for arg in needed_args:
         if not args_dict[arg.replace('-', '_')]:
-            print("--{} is missing.".format(arg))
+            logging.error("--{} is missing.".format(arg))
             missing_args = True
     if missing_args:
         sys.exit(0)
+
+# Make sure that the user is not trying an impossible command
+def assert_only_one_arg(args, args_to_check):
+    args_dict = vars(args)
+    args_counter = 0
+    for arg in args_to_check:
+        if args_dict[arg]:
+            args_counter += 1
+    if args_counter > 1:
+        logging.error("Incompatible arguments.")
+        sys.exit(0)
+    

@@ -6,9 +6,11 @@ from ArgsProcessing import *
 from TED import ted
 from TOS import tos
 from HistoTED import histo_ted
+from FilterEquipment import filter_equipments
 
 # Call the appropriate function depending on the command line arguments
 def call_appropriate_func(args):
+    assert_only_one_arg(args, {"ted", "tos", "hted", "filter"})
     if args.ted:
         assert_args(args, {"input", "output", "start-date", "end-date"})
         ted(args.input, args.output, args.start_date, args.end_date)
@@ -17,7 +19,11 @@ def call_appropriate_func(args):
         tos(args.input, args.output, args.start_date, args.end_date)
     elif args.hted:
         assert_args(args, {"input", "output", "start-date", "end-date", "parc"})
-        histo_ted(args.input, args.output, args.start_date, args.end_date, args.parc)
+        histo_ted(args.input, args.output, args.start_date, args.end_date,
+                  args.parc)
+    elif args.filter:
+        assert_args(args, {"input", "output"})
+        filter_equipments(args.input, args.output, args.filter)
 
 
 if __name__ == '__main__':
