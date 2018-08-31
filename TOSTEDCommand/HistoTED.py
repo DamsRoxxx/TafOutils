@@ -38,7 +38,7 @@ def histo_ted(input_csv_path, output_csv_path, start_date_str, end_date_str, par
             parc_indexed_data[parc_reftec_id] = parc_logical_name
 
     for row in sorted_lines:
-        valeur = row[0]
+        value = row[0]
         timestamp_str = row[1]
         reftec_id = row[3]
         code = row[4]
@@ -52,8 +52,8 @@ def histo_ted(input_csv_path, output_csv_path, start_date_str, end_date_str, par
         if (timestamp < start_date) or (timestamp > end_date):
             continue
 
-        valeur = '1' if valeur == 'D' else '0'
-        output_csv_writer.writerow((parc_indexed_data[reftec_id], code, valeur, timestamp_str))
+        value = '1' if value == 'D' else '0'
+        output_csv_writer.writerow((parc_indexed_data[reftec_id], code, value, timestamp_str))
 
     input_csv_file.close()
     output_csv_file.close()
