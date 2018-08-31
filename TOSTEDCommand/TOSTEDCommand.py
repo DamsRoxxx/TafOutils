@@ -6,7 +6,7 @@ from ArgsProcessing import *
 from TED import ted
 from TOS import tos
 from HistoTED import histo_ted
-from FilterEquipment import filter_equipments
+from FilterEquipments import filter_equipments
 from RemoveDuplicates import remove_duplicates
 
 # Call the appropriate function depending on the command line arguments
