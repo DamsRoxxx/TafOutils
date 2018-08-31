@@ -87,6 +87,16 @@ def parse_args():
         """
     )
 
+    parser.add_argument(
+        "--remove-duplicates",
+        dest="remove_duplicates",
+        action="store_true",
+        help="""
+        Retire les doublons de début et de fin d'alarme du fichier précisé en
+        -i et enregistre le résultat dans le fichier précisé en -o
+        """
+    )
+
     args = parser.parse_args()
 
     return args
