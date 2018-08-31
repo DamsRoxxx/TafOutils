@@ -70,7 +70,7 @@ def assert_args(args, needed_args):
     missing_args = False
     for arg in needed_args:
         if not args_dict[arg.replace('-', '_')]:
-            print("{} is missing.".format(arg.replace('-', '_').upper()))
+            print("--{} is missing.".format(arg))
             missing_args = True
     if missing_args:
         sys.exit(0)
