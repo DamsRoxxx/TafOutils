@@ -11,6 +11,7 @@ from RemoveDuplicates import remove_duplicates
 from Compare import compare
 from ExtractDriverNDSI import extract_driver_ndsi
 from AudaceTED import audace_ted
+from AudaceTOS import audace_tos
 
 # Call the appropriate function depending on the command line arguments
 def call_appropriate_func(args):
@@ -40,6 +41,9 @@ def call_appropriate_func(args):
     elif args.ated:
         assert_args(args, {"input", "output", "start-date", "end-date"})
         audace_ted(args.input, args.output, args.start_date, args.end_date)
+    elif args.atos:
+        assert_args(args, {"input", "output", "start-date", "end-date"})
+        audace_tos(args.input, args.output, args.start_date, args.end_date)
 
 if __name__ == '__main__':
     logging.basicConfig(

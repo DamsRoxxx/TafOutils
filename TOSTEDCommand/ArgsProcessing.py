@@ -129,6 +129,17 @@ def parse_args():
         """
     )
 
+    parser.add_argument(
+        "--atos",
+        dest="atos",
+        action="store_true",
+        help="""
+        Formatage des logs AUDACE_TOS présents dans le répertoire passé en
+        input (-i) dans le CSV spécifié en output (-o) en filtrant les alarmes
+        en dehors des dates précisées via --start-date et --end-date
+        """
+    )
+
     args = parser.parse_args()
 
     return args
