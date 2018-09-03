@@ -35,8 +35,57 @@ def compare(outputFile, filesToCompare, startDateStr, endDateStr):
 
     if len(filesToCompare) == 2:
         compare2(outputFile, filesToCompare[0], filesToCompare[1], startDateStr, endDateStr)
+    elif len(filesToCompare) == 3:
+        pass
     else:
         logging.error("Bad number of files in the input files list [%s]", ', '.join(filesToCompare))
+
+def indexData(fileToIndex):
+    indexedData = dict()
+    logging.info("Indexing data...")
+    with open(fileToIndex, 'rb') as fileToIndexCSV:
+            secondFileReader = csv.reader(fileToIndexCSV, delimiter=';')
+            for row in secondFileReader:
+                    NL 		= row[0] 
+                    Code 	= row[1] 
+                    Valeur	= row[2]
+                    Date		= datetime.strptime(row[3], "%Y-%m-%d %H:%M:%S")
+                    
+                    if (Date < start) or (Date > end):
+                            continue
+                    
+                    if not NL in indexedData:
+                            indexedData[NL] = dict()
+                            indexedData[NL][Code] = dict()		
+                            indexedData[NL][Code][Date] = []
+                    elif not Code in indexedData[NL]:
+                            indexedData[NL][Code] = dict()		
+                            indexedData[NL][Code][Date] = []
+                    elif not Date in indexedData[NL][Code]:
+                            indexedData[NL][Code][Date] = []
+                    indexedData[NL][Code][Date].append(Valeur)
+    return indexedData
+
+def findInIndexedData(indexedData, nl, code, valeur, date):
+        if not nl in indexedData:
+                return
+                
+        if not code in indexedData[nl]:
+                return
+                
+        for delay in range(-checkDelay, checkDelay + 1):
+                indexedDataDate = date + timedelta(seconds=delay)
+                
+                if indexedDataDate in indexedData[nl][code]:
+                        if valeur in indexedData[nl][code][indexedDataDate]:
+                                indexedData[nl][code][indexedDataDate].remove(valeur)
+                                if not indexedData[nl][code][indexedDataDate]:
+                                        del indexedData[nl][code][indexedDataDate]
+                                if not indexedData[nl][code]:
+                                        del indexedData[nl][code]
+                                if not indexedData[nl]:
+                                        del indexedData[nl]
+                                return indexedDataDate
 
 def compare2(outputFile, tedFile, tosFile, startDateStr, endDateStr):
     dateformat = "%Y-%m-%d %H:%M:%S"
@@ -97,3 +146,62 @@ def compare2(outputFile, tedFile, tosFile, startDateStr, endDateStr):
                 for date in TOSIndex[nl][code].keys():
                     for valeur in TOSIndex[nl][code][date]:
                         RESWriter.writerow((2,nl, code, valeur, None, date))
+
+def compare3(outputFile, firstFile, secondFile, thirdFile, startDateStr, endDateStr):
+    checkDelay	= 5
+    start = datetime.strptime(startDateStr, dateformat)
+    end = datetime.strptime(endDateStr, dateformat)
+
+    logging.info(datetime.now())
+
+    with open(outputFile, 'wb') as RESFile:
+            RESWriter = csv.writer(RESFile, delimiter=';')
+            RESWriter.writerow(("THANL", "THACode", "THAValeur", "THATEDDate", "THAHistDate", "THAAudDate"))
+            
+            secondFileIndex = indexData(secondFile)
+            thirdFileIndex = indexData(thirdFile)
+
+            logging.info("Reading firstFile data...")
+            with open(firstFile, 'rb') as firstFileCSV:
+                    firstFileReader = csv.reader(firstFileCSV, delimiter=';')
+                    for firstFileRow in firstFileReader:
+                            nl 		= firstFileRow[0] 
+                            code 		= firstFileRow[1] 
+                            valeur		= firstFileRow[2]
+                            date		= datetime.strptime(firstFileRow[3], "%Y-%m-%d %H:%M:%S")
+
+                            if (date < start) or (date > end):
+                                    continue
+
+                            secondFileDate		= findInIndexedData(secondFileIndex, nl, code, valeur, date)
+                            thirdFileDate           = findInIndexedData(thirdFileIndex, nl, code, valeur, date)
+                            if secondFileDate:
+                                if thirdFileDate:
+                                    RESWriter.writerow((nl, code, valeur, date, secondFileDate, thirdFileDate))
+                                else:
+                                    RESWriter.writerow((nl, code, valeur, date, secondFileDate, None))
+                            else:
+                                if thirdFileDate:
+                                    RESWriter.writerow((nl, code, valeur, date, None, thirdFileDate))
+                                else:
+                                    RESWriter.writerow((nl, code, valeur, date, None, None))
+                    
+            logging.info("Appending remaining secondFile data...")
+            for nl in secondFileIndex.keys():
+                    for code in secondFileIndex[nl].keys():
+                            for date in secondFileIndex[nl][code].keys():
+                                    for valeur in secondFileIndex[nl][code][date]:
+                                        thirdFileDate = findInIndexedData(thirdFileIndex, nl, code, valeur, date)
+                                        if thirdFileDate:
+                                            RESWriter.writerow((nl, code, valeur, None, date, thirdFileDate))
+                                        else:
+                                            RESWriter.writerow((nl, code, valeur, None, date, None))
+
+            logging.info("Appending remaining thirdFile data...")
+            for nl in thirdFileIndex.keys():
+                    for code in thirdFileIndex[nl].keys():
+                            for date in thirdFileIndex[nl][code].keys():
+                                    for valeur in thirdFileIndex[nl][code][date]:
+                                            RESWriter.writerow((nl, code, valeur, None, None, date))
+                                    
+    logging.info(datetime.now())
