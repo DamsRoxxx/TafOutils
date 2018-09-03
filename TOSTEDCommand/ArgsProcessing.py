@@ -79,7 +79,7 @@ def parse_args():
     parser.add_argument(
         "--filter",
         dest="filter",
-        metavar="EQUIPMENTS_LIST_FILE",
+        action="store_true",
         help="""
         Filtre le fichier précisé en input (-i) avec les équipements présents
         dans le fichier précisé en -f et enregistre le résultat dans le fichier
