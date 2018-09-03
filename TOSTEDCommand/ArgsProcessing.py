@@ -82,7 +82,7 @@ def parse_args():
         metavar="EQUIPMENTS_LIST_FILE",
         help="""
         Filtre le fichier précisé en input (-i) avec les équipements présents
-        dans le fichier précisé en -f et enregistre le résultat dans le fichier
+        dans le fichier précisé en --filter et enregistre le résultat dans le fichier
         d'output (-o)
         """
     )
