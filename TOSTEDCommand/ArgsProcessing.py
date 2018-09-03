@@ -107,6 +107,17 @@ def parse_args():
         """
     )
 
+    parser.add_argument(
+        "--extract-driver-ndsi",
+        dest="extract_driver_ndsi",
+        action="store_true",
+        help="""
+        Extrait le fichier DriverNDSI de chaque fichier de log TOS présents
+        dans le répertoire passé en input (-i) et les place dans le répertoire
+        passé en output (-o)
+        """
+    )
+
     args = parser.parse_args()
 
     return args

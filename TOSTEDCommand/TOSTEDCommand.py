@@ -9,6 +9,7 @@ from HistoTED import histo_ted
 from FilterEquipments import filter_equipments
 from RemoveDuplicates import remove_duplicates
 from Compare import compare
+from ExtractDriverNDSI import extract_driver_ndsi
 
 # Call the appropriate function depending on the command line arguments
 def call_appropriate_func(args):
@@ -23,6 +24,9 @@ def call_appropriate_func(args):
         assert_args(args, {"input", "output", "start-date", "end-date", "parc"})
         histo_ted(args.input, args.output, args.start_date, args.end_date,
                   args.parc)
+    elif args.extract_driver_ndsi:
+        assert_args(args, {"input", "output"})
+        extract_driver_ndsi(args.input, args.output)
     elif args.filter:
         assert_args(args, {"input", "output"})
         filter_equipments(args.input, args.output, args.filter)
