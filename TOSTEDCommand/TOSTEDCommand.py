@@ -16,6 +16,11 @@ from AudaceTOS import audace_tos
 # Call the appropriate function depending on the command line arguments
 def call_appropriate_func(args):
     assert_only_one_arg(args, {"ted", "tos", "hted", "filter", "remove-duplicates", "compare"})
+
+    # When the list of input contain only one arg, pass only this arg
+    if len(args.input) == 1:
+        args.input = args.input[0]
+
     if args.ted:
         assert_args(args, {"input", "output", "start-date", "end-date"})
         ted(args.input, args.output, args.start_date, args.end_date)
@@ -37,7 +42,7 @@ def call_appropriate_func(args):
         remove_duplicates(args.input, args.output)
     elif args.compare:
         assert_args(args, {"input", "output", "start-date", "end-date"})
-        compare(args.output, args.input.split(' '), args.start_date, args.end_date)
+        compare(args.input, args.output, args.start_date, args.end_date)
     elif args.ated:
         assert_args(args, {"input", "output", "start-date", "end-date"})
         audace_ted(args.input, args.output, args.start_date, args.end_date)

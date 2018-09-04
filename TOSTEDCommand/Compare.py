@@ -5,6 +5,7 @@ import logging
 import csv
 import time
 from datetime import datetime, date, time, timedelta
+from Common import DATE_FORMAT
 
 TOSIndex = dict()
 tosDelay = 5
@@ -30,69 +31,22 @@ def findInTOS(nl, code, valeur, date):
                     del TOSIndex[nl]
                 return tosDate
 
-def compare(outputFile, filesToCompare, startDateStr, endDateStr):
+def compare(filesToCompare, outputFile, startDateStr, endDateStr):
     logging.info("compare(%s, %s, %s, %s)", outputFile, filesToCompare, startDateStr, endDateStr)
 
     if len(filesToCompare) == 2:
         compare2(outputFile, filesToCompare[0], filesToCompare[1], startDateStr, endDateStr)
     elif len(filesToCompare) == 3:
-        pass
+        compare3(outputFile, filesToCompare[0], filesToCompare[1], filesToCompare[2], startDateStr, endDateStr)
     else:
         logging.error("Bad number of files in the input files list [%s]", ', '.join(filesToCompare))
 
-def indexData(fileToIndex):
-    indexedData = dict()
-    logging.info("Indexing data...")
-    with open(fileToIndex, 'rb') as fileToIndexCSV:
-            secondFileReader = csv.reader(fileToIndexCSV, delimiter=';')
-            for row in secondFileReader:
-                    NL 		= row[0] 
-                    Code 	= row[1] 
-                    Valeur	= row[2]
-                    Date		= datetime.strptime(row[3], "%Y-%m-%d %H:%M:%S")
-                    
-                    if (Date < start) or (Date > end):
-                            continue
-                    
-                    if not NL in indexedData:
-                            indexedData[NL] = dict()
-                            indexedData[NL][Code] = dict()		
-                            indexedData[NL][Code][Date] = []
-                    elif not Code in indexedData[NL]:
-                            indexedData[NL][Code] = dict()		
-                            indexedData[NL][Code][Date] = []
-                    elif not Date in indexedData[NL][Code]:
-                            indexedData[NL][Code][Date] = []
-                    indexedData[NL][Code][Date].append(Valeur)
-    return indexedData
-
-def findInIndexedData(indexedData, nl, code, valeur, date):
-        if not nl in indexedData:
-                return
-                
-        if not code in indexedData[nl]:
-                return
-                
-        for delay in range(-checkDelay, checkDelay + 1):
-                indexedDataDate = date + timedelta(seconds=delay)
-                
-                if indexedDataDate in indexedData[nl][code]:
-                        if valeur in indexedData[nl][code][indexedDataDate]:
-                                indexedData[nl][code][indexedDataDate].remove(valeur)
-                                if not indexedData[nl][code][indexedDataDate]:
-                                        del indexedData[nl][code][indexedDataDate]
-                                if not indexedData[nl][code]:
-                                        del indexedData[nl][code]
-                                if not indexedData[nl]:
-                                        del indexedData[nl]
-                                return indexedDataDate
-
 def compare2(outputFile, tedFile, tosFile, startDateStr, endDateStr):
-    dateformat = "%Y-%m-%d %H:%M:%S"
+    DATE_FORMAT = "%Y-%m-%d %H:%M:%S"
     TEDFile = tedFile
     TOSFile = tosFile
-    start = datetime.strptime(startDateStr, dateformat)
-    end = datetime.strptime(endDateStr, dateformat)
+    start = datetime.strptime(startDateStr, DATE_FORMAT)
+    end = datetime.strptime(endDateStr, DATE_FORMAT)
     TOSTEDFile = outputFile
 
 
@@ -147,10 +101,61 @@ def compare2(outputFile, tedFile, tosFile, startDateStr, endDateStr):
                     for valeur in TOSIndex[nl][code][date]:
                         RESWriter.writerow((2,nl, code, valeur, None, date))
 
+def indexData(fileToIndex, startDateStr, endDateStr):
+    start = datetime.strptime(startDateStr, DATE_FORMAT)
+    end = datetime.strptime(endDateStr, DATE_FORMAT)
+    indexedData = dict()
+    logging.info("Indexing data...")
+    with open(fileToIndex, 'rb') as fileToIndexCSV:
+            secondFileReader = csv.reader(fileToIndexCSV, delimiter=';')
+            for row in secondFileReader:
+                    NL 		= row[0] 
+                    Code 	= row[1] 
+                    Valeur	= row[2]
+                    Date		= datetime.strptime(row[3], "%Y-%m-%d %H:%M:%S")
+                    
+                    if (Date < start) or (Date > end):
+                            continue
+                    
+                    if not NL in indexedData:
+                            indexedData[NL] = dict()
+                            indexedData[NL][Code] = dict()		
+                            indexedData[NL][Code][Date] = []
+                    elif not Code in indexedData[NL]:
+                            indexedData[NL][Code] = dict()		
+                            indexedData[NL][Code][Date] = []
+                    elif not Date in indexedData[NL][Code]:
+                            indexedData[NL][Code][Date] = []
+                    indexedData[NL][Code][Date].append(Valeur)
+    return indexedData
+
+def findInIndexedData(indexedData, nl, code, valeur, date):
+        checkDelay = 5
+        if not nl in indexedData:
+                return
+                
+        if not code in indexedData[nl]:
+                return
+                
+        for delay in range(-checkDelay, checkDelay + 1):
+                indexedDataDate = date + timedelta(seconds=delay)
+                
+                if indexedDataDate in indexedData[nl][code]:
+                        if valeur in indexedData[nl][code][indexedDataDate]:
+                                indexedData[nl][code][indexedDataDate].remove(valeur)
+                                if not indexedData[nl][code][indexedDataDate]:
+                                        del indexedData[nl][code][indexedDataDate]
+                                if not indexedData[nl][code]:
+                                        del indexedData[nl][code]
+                                if not indexedData[nl]:
+                                        del indexedData[nl]
+                                return indexedDataDate
+
+
 def compare3(outputFile, firstFile, secondFile, thirdFile, startDateStr, endDateStr):
     checkDelay	= 5
-    start = datetime.strptime(startDateStr, dateformat)
-    end = datetime.strptime(endDateStr, dateformat)
+    start = datetime.strptime(startDateStr, DATE_FORMAT)
+    end = datetime.strptime(endDateStr, DATE_FORMAT)
 
     logging.info(datetime.now())
 
@@ -158,8 +163,8 @@ def compare3(outputFile, firstFile, secondFile, thirdFile, startDateStr, endDate
             RESWriter = csv.writer(RESFile, delimiter=';')
             RESWriter.writerow(("THANL", "THACode", "THAValeur", "THATEDDate", "THAHistDate", "THAAudDate"))
             
-            secondFileIndex = indexData(secondFile)
-            thirdFileIndex = indexData(thirdFile)
+            secondFileIndex = indexData(secondFile, startDateStr, endDateStr)
+            thirdFileIndex = indexData(thirdFile, startDateStr, endDateStr)
 
             logging.info("Reading firstFile data...")
             with open(firstFile, 'rb') as firstFileCSV:

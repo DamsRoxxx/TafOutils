@@ -17,7 +17,8 @@ def parse_args():
     parser.add_argument(
         "-i",
         "--input",
-        dest="input"
+        dest="input",
+        nargs="*"
     )
 
     parser.add_argument(
