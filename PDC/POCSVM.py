@@ -123,7 +123,7 @@ def PdC2Qlik(pdcFile):
                 continue
             for j in range(6):
                 worksheet.write(writeRowId, j, rowValues[j])
-            worksheet.write(writeRowId, 6, rowValues[6 + i])
+            worksheet.write(writeRowId, 5, rowValues[6 + i])
             worksheet.write(writeRowId, 6, sheet.row_values(0)[6 + i], dateFormat)
             writeRowId += 1
     workbook.close()
@@ -141,10 +141,11 @@ def Staffing2Qlik(staffingFile):
     worksheet.write(0, 2, "PDCEntite")
     worksheet.write(0, 3, "PDCGroupe")
     worksheet.write(0, 4, "PDCCompetences")
-    worksheet.write(0, 5, "PDCStaffing")
-    worksheet.write(0, 6, "PDCAPW")
-    worksheet.write(0, 7, "PDCCharge")
-    worksheet.write(0, 8, "PDCDate")
+    worksheet.write(0, 5, "PDCCommentaires")
+    worksheet.write(0, 6, "PDCStaffing")
+    worksheet.write(0, 7, "PDCAPW")
+    worksheet.write(0, 8, "PDCCharge")
+    worksheet.write(0, 9, "PDCDate")
 
     dateFormat = workbook.add_format({'num_format': 'dd/mm/yy'})
     writeRowId = 1
@@ -153,10 +154,10 @@ def Staffing2Qlik(staffingFile):
         for i in range(12):
             if rowValues[9 + i] == 0 or sheet.cell_type(row, 9 + i) in (xlrd.XL_CELL_EMPTY, xlrd.XL_CELL_BLANK):
                 continue
-            for j in range(9):
+            for j in range(8):
                 worksheet.write(writeRowId, j, rowValues[j])
-            worksheet.write(writeRowId, 9, rowValues[9 + i])
-            worksheet.write(writeRowId, 8, sheet.row_values(0)[9 + i], dateFormat)
+            worksheet.write(writeRowId, 8, rowValues[9 + i])
+            worksheet.write(writeRowId, 9, sheet.row_values(0)[9 + i], dateFormat)
             writeRowId += 1
     workbook.close()
 
