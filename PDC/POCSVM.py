@@ -16,7 +16,7 @@ def MergeSheet(booksList, sheetName, dstWorkbook):
     dstWorksheet = dstWorkbook.add_worksheet(sheetName)
     dateFormat = dstWorkbook.add_format({'num_format': 'dd/mm/yy'})
     # Write header
-    sheet = booksList[0].sheet_by_name(sheetName)
+    sheet = booksList[0].sheet_by_index(0)
     if sheet.nrows > 0:
         rowValues = sheet.row_values(0)
         for col in range(len(rowValues)):
@@ -25,13 +25,13 @@ def MergeSheet(booksList, sheetName, dstWorkbook):
     # Merge contents
     startId = 0
     for book in booksList:
-        sheet = book.sheet_by_name(sheetName)
+        sheet = book.sheet_by_index(0)
         for row in range(1, sheet.nrows):
             rowValues = sheet.row_values(row)
             for col in range(len(rowValues)):
                 dstWorksheet.write(startId + row, col, rowValues[col])
         startId += sheet.nrows - 1
-    dstWorksheet.autofilter('A1:BM1')
+    dstWorksheet.autofilter('A1:BN1')
 
 def MergeXLSXFilesList(filesList, dst):
     workbook = Workbook(dst)
@@ -104,7 +104,7 @@ def PdC2Qlik(pdcFile):
     worksheet = workbook.add_worksheet("QlikPdC")
 
     book = xlrd.open_workbook(pdcFile)
-    sheet = book.sheet_by_name("Feuil1")
+    sheet = book.sheet_by_index(0)
 
     worksheet.write(0, 0, "PDCNumAffaire")
     worksheet.write(0, 1, "PDCIntituleAffaire")
@@ -119,12 +119,12 @@ def PdC2Qlik(pdcFile):
     for row in range(1, sheet.nrows):
         rowValues = sheet.row_values(row)
         for i in range(60):
-            if rowValues[5 + i] == 0 or sheet.cell_type(row, 5 + i) in (xlrd.XL_CELL_EMPTY, xlrd.XL_CELL_BLANK):
+            if rowValues[6 + i] == 0 or sheet.cell_type(row, 6 + i) in (xlrd.XL_CELL_EMPTY, xlrd.XL_CELL_BLANK):
                 continue
-            for j in range(5):
+            for j in range(6):
                 worksheet.write(writeRowId, j, rowValues[j])
-            worksheet.write(writeRowId, 5, rowValues[5 + i])
-            worksheet.write(writeRowId, 6, sheet.row_values(0)[5 + i], dateFormat)
+            worksheet.write(writeRowId, 6, rowValues[6 + i])
+            worksheet.write(writeRowId, 6, sheet.row_values(0)[6 + i], dateFormat)
             writeRowId += 1
     workbook.close()
 
@@ -134,7 +134,7 @@ def Staffing2Qlik(staffingFile):
     worksheet = workbook.add_worksheet("QlikStaffing")
 
     book = xlrd.open_workbook(staffingFile)
-    sheet = book.sheet_by_name("Feuil1")
+    sheet = book.sheet_by_index(0)
 
     worksheet.write(0, 0, "PDCNumAffaire")
     worksheet.write(0, 1, "PDCIntituleAffaire")
@@ -151,12 +151,12 @@ def Staffing2Qlik(staffingFile):
     for row in range(1, sheet.nrows):
         rowValues = sheet.row_values(row)
         for i in range(12):
-            if rowValues[7 + i] == 0 or sheet.cell_type(row, 7 + i) in (xlrd.XL_CELL_EMPTY, xlrd.XL_CELL_BLANK):
+            if rowValues[9 + i] == 0 or sheet.cell_type(row, 9 + i) in (xlrd.XL_CELL_EMPTY, xlrd.XL_CELL_BLANK):
                 continue
-            for j in range(7):
+            for j in range(9):
                 worksheet.write(writeRowId, j, rowValues[j])
-            worksheet.write(writeRowId, 7, rowValues[7 + i])
-            worksheet.write(writeRowId, 8, sheet.row_values(0)[7 + i], dateFormat)
+            worksheet.write(writeRowId, 9, rowValues[9 + i])
+            worksheet.write(writeRowId, 8, sheet.row_values(0)[9 + i], dateFormat)
             writeRowId += 1
     workbook.close()
 
