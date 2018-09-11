@@ -141,6 +141,15 @@ def parse_args():
         """
     )
 
+    parser.add_argument(
+        "--merge-histo-ted",
+        dest="merge_histo_ted",
+        action="store_true",
+        help="""
+        Fusionne tous les fichiers CSV passés en -i vers le fichier CSV passé en -o
+        """
+    )
+
     args = parser.parse_args()
 
     return args

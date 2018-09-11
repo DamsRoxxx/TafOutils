@@ -12,11 +12,13 @@ from Compare import compare
 from ExtractDriverNDSI import extract_driver_ndsi
 from AudaceTED import audace_ted
 from AudaceTOS import audace_tos
+from Merge import merge_files
 
 # Call the appropriate function depending on the command line arguments
 def call_appropriate_func(args):
     assert_only_one_arg(args, {"ted", "tos", "hted", "filter", "remove-duplicates", "compare"})
 
+    #/!\ Dirty
     # When the list of input contain only one arg, pass only this arg
     if len(args.input) == 1:
         args.input = args.input[0]
@@ -49,6 +51,10 @@ def call_appropriate_func(args):
     elif args.atos:
         assert_args(args, {"input", "output", "start-date", "end-date"})
         audace_tos(args.input, args.output, args.start_date, args.end_date)
+    elif args.merge_histo_ted:
+        assert_args(args, {"input", "output"})
+        merge_files(args.output, args.input)
+
 
 if __name__ == '__main__':
     logging.basicConfig(

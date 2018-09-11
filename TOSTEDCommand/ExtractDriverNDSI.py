@@ -21,7 +21,8 @@ def extract_driver_ndsi(input_dir_path, output_dir_path):
         tar.extractall(members=driver_ndsi_members(tar))
         tar.close()
 
-        file_to_move = os.path.join("./appli/zf4/var/log/", os.listdir("./appli/zf4/var/log/")[0])
+        log_path = os.path.join(".", "appli", "zf4", "var", "log")
+        file_to_move = os.path.join(log_path, os.listdir(log_path)[0])
         new_name = os.path.join(output_dir_path, "DriverNDSI_{}".format(file_name.split('.')[0]))
         os.rename(file_to_move, new_name)
-    os.removedirs("./appli/zf4/var/log/")
+    os.removedirs(log_path)
