@@ -7,7 +7,7 @@ import logging
 
 # CONFIG
 RESULT_DIR = os.path.join("..", "RESULTS")
-DATA_DIR = os.path.join("..", "DATA")
+DATA_DIR = "D:\Programmation\STAGE\\08-02_08-05"
 START_DATE = "2018-08-02 00:00:01"
 END_DATE = "2018-08-05 23:59:59"
 
@@ -35,8 +35,8 @@ RESULT_HISTO_TED_LOG_FILE_PATH = os.path.join(RESULT_DIR, "HISTO_TED", "HISTO_TE
 RESULT_CAS4_HISTO_TED_LOG_FILE_PATH = os.path.join(RESULT_DIR, "HISTO_TED", "CAS4_HISTO_TED_LOG.csv")
 RESULT_CAS4_TOS_LOG_FILE_PATH = os.path.join(RESULT_DIR, "TOS", "CAS4_TOS_LOG.csv")
 RESULT_NO_DUPLICATED_CAS4_TOS_LOG_FILE_PATH = os.path.join(RESULT_DIR, "TOS", "NO_DUPLICATED_CAS4_TOS_LOG.csv")
-RESULT_TOSTED_CSV_FILE_PATH = os.path.join(RESULT_DIR, "TOSTED.csv")
-RESULT_TOSTED_XLSX_FILE_PATH = os.path.join(RESULT_DIR, "TOSTED.xlsx")
+RESULT_TOSTED_CSV_FILE_PATH = os.path.join(RESULT_DIR, "STATS", "TOSTED.csv")
+RESULT_TOSTED_XLSX_FILE_PATH = os.path.join(RESULT_DIR, "STATS", "TOSTED.xlsx")
 
 # Create $RESULT_DIR and subdirs if they don't exist
 if not os.path.exists(RESULT_DIR):
