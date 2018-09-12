@@ -13,6 +13,7 @@ from ExtractDriverNDSI import extract_driver_ndsi
 from AudaceTED import audace_ted
 from AudaceTOS import audace_tos
 from Merge import merge_files
+from TOSTED2xlsx import tosted_to_xlsx
 
 # Call the appropriate function depending on the command line arguments
 def call_appropriate_func(args):
@@ -54,6 +55,9 @@ def call_appropriate_func(args):
     elif args.merge_histo_ted:
         assert_args(args, {"input", "output"})
         merge_files(args.output, args.input)
+    elif args.xlsx:
+        assert_args(args, {"input", "output"})
+        tosted_to_xlsx(args.input, args.output)
 
 
 if __name__ == '__main__':

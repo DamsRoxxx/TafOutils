@@ -150,6 +150,16 @@ def parse_args():
         """
     )
 
+    parser.add_argument(
+        "--xlsx",
+        dest="xlsx",
+        action="store_true",
+        help="""
+        Formate le fichier CSV donné en -i au format xlsx et enregistre le
+        résultat dans le fichier précisé en -o
+        """
+    )
+
     args = parser.parse_args()
 
     return args
