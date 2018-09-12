@@ -6,8 +6,8 @@ from subprocess import call
 import logging
 
 # CONFIG
-RESULT_DIR = "RESULTS"
-DATA_DIR = "DATA"
+RESULT_DIR = os.path.join("..", "RESULTS")
+DATA_DIR = os.path.join("..", "DATA")
 START_DATE = "2018-08-02 00:00:01"
 END_DATE = "2018-08-05 23:59:59"
 
