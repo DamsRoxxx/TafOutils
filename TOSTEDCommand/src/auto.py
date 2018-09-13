@@ -4,12 +4,19 @@
 import os
 from subprocess import call
 import logging
+import json
 
-# CONFIG
-RESULT_DIR = os.path.join("..", "RESULTS")
-DATA_DIR = "D:\Programmation\STAGE\\08-02_08-05"
-START_DATE = "2018-08-02 00:00:01"
-END_DATE = "2018-08-05 23:59:59"
+# Load config.json
+os.chdir("..")
+config_file_path = os.path.join("config.json")
+config_json_str = open(config_file_path, 'r').read()
+config = json.loads(config_json_str)
+
+RESULT_DIR = os.path.abspath(config['result_directory_path'])
+DATA_DIR = os.path.abspath(config['data_directory_path'])
+START_DATE = config['start_date']
+END_DATE = config['end_date']
+os.chdir("src")
 
 # Call a shell command
 def runcmd(cmd):
