@@ -12,10 +12,10 @@ def generic_merge_files(files_list, output_file):
     writer.add_sheet(os.path.basename(output_file).strip('.xlsx'))
     writer.bind_sheet(0)
     # Write header
-    writer.concat(files_list[0], end_point=0)
+    writer.concat(files_list[0], end_point=1)
     # Concatenate contents
     for file in files_list:
-        writer.concat(file, start_point=1)
+        writer.concat(file, start_point=2)
     writer.close()
     
 
@@ -64,7 +64,8 @@ def recursive_merge(dir_path, merge_options):
                 for subdir_file in os.listdir(subdir):
                     if file_key in subdir_file:
                         files_to_merge.append(os.path.join(subdir, subdir_file))
-            merge_options[file_key](files_to_merge, os.path.join(dir, file_key + ' ' + os.path.basename(dir) + ".xlsx"))
+            if len(files_to_merge) != 0:
+                merge_options[file_key](files_to_merge, os.path.join(dir, file_key + ' ' + os.path.basename(dir) + ".xlsx"))
         
     def recursive_merge_aux(dir_path, merge_options):
         # Recursion
