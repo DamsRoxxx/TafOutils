@@ -10,6 +10,8 @@ PARC_INDEX = defaultdict(lambda: defaultdict(str))
 STATIONS_INDEX = defaultdict(lambda: defaultdict(str))
 REFTEC_INDEX = dict()
 
+NOT_CAS4_DICT = dict()
+
 def index_parc(parc_file_path):
     with open(parc_file_path) as f:
         csv_reader = csv.reader(f, delimiter=';')
@@ -67,35 +69,31 @@ def get_functionnal_father(logical_name):
     return REFTEC_INDEX[PARC_INDEX[logical_name]['FUNCTIONNAL_FATHER']]
 
 def is_cas4(equipment):
-    # logging.info("Equipement: " + equipment)
     if in_production_and_supervisable(equipment):
-        # logging.info("En production et supervisable")
         if has_functionnal_father(equipment):
             functionnal_father = get_functionnal_father(equipment)
-            # logging.info("Père fonctionnel: " + functionnal_father)
             if equipment == functionnal_father:
-                # logging.info("Equipement = Père fonctionnel -> NON-CAS4")
-                logging.error(equipment + ";D")
+                # L'équipement et le père fonctionnel sont identiques
+                NOT_CAS4_DICT[equipment] = "D"
                 return False
             if is_cas4(functionnal_father):
-                # logging.info("Père fonctionnel CAS4")
                 if in_same_station(equipment, functionnal_father):
-                    # logging.info("Dans la même station -> CAS4")
+                    # L'équipement et le père fonctionnel sont dans la même station
                     return True
                 else:
-                    # logging.info("Pas dans la même station -> NON-CAS4")
-                    logging.error(equipment + ";C")
+                    # L'équipement et le père fonctionnel ne sont pas la même station ou le père n'est pas dans cfgLibrairie.xml
+                    NOT_CAS4_DICT[equipment] = "C"
                     return False
             else:
-                # logging.info("Père fonctionnel NON-CAS4")
-                logging.error(equipment + ";B")
+                # Le père fonctionnel n'est pas un CAS4
+                NOT_CAS4_DICT[equipment] = "B"
                 return False
         else:
-            # logging.info("Pas de père fonctionnel -> CAS4")
+            # Pas de père fonctionnel
             return True
     else:
-        # logging.info("NON-CAS4")
-        logging.error(equipment + ";A")
+        # Production ou Supervisable == 2
+        NOT_CAS4_DICT[equipment] = "A"
         return False
 
 def reftec_id_to_logical_name(id_reftec):
@@ -114,14 +112,48 @@ def generate_cas4(cfg_library_file_path, parc_file_path):
             f.write(line + "\n")
 
 if __name__ == '__main__':
-    log_file_path = "log.csv"
-    logging.FileHandler(log_file_path, "w")
-    logging.basicConfig(
-        filename=log_file_path,
-        format='%(levelname)s;%(message)s',
-        level=logging.DEBUG
-    )
+    # log_file_path = "log.csv"
+    # logging.FileHandler(log_file_path, "w")
+    # logging.basicConfig(
+    #     filename=log_file_path,
+    #     # format='%(levelname)s;%(message)s',
+    #     format='',
+    #     level=logging.DEBUG
+    # )
 
     cfg_library_file_path = "./cfgLibrairie.xml"
     parc_file_path = "./parc.csv"
     generate_cas4(cfg_library_file_path, parc_file_path)
+
+    # B
+    for equipment in NOT_CAS4_DICT:
+        if NOT_CAS4_DICT[equipment].split(',')[0] == "B":
+            father = get_functionnal_father(equipment)
+            NOT_CAS4_DICT[equipment] += "," + NOT_CAS4_DICT[father].split(',')[0]
+
+    for equipment in NOT_CAS4_DICT:
+        if NOT_CAS4_DICT[equipment].split(',')[-1] == "B":
+            father = get_functionnal_father(equipment)
+            NOT_CAS4_DICT[equipment] += "," + NOT_CAS4_DICT[father].split(',')[-1]
+
+    # C
+    for equipment in NOT_CAS4_DICT:
+        first_case = False
+        if NOT_CAS4_DICT[equipment].split(',')[-1] == "C":
+            father = get_functionnal_father(equipment)
+            for station in STATIONS_INDEX:
+                if father in STATIONS_INDEX[station]:
+                    NOT_CAS4_DICT[equipment] = NOT_CAS4_DICT[equipment].replace('C', 'C1')
+                    first_case = True
+                    
+        if not first_case:
+            NOT_CAS4_DICT[equipment] = NOT_CAS4_DICT[equipment].replace('C', 'C2')
+
+
+
+
+    # Save NOT_CAS4.csv
+    with open("NOT_CAS4.csv", "w") as f:
+        csv_writer = csv.writer(f, delimiter=';')
+        for t in NOT_CAS4_DICT:
+            csv_writer.writerow([t, NOT_CAS4_DICT[t]])

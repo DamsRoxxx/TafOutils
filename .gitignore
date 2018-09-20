@@ -4,6 +4,10 @@
 .*.swp
 /CAS4Generator/cas4.csv
 /CAS4Generator/log
+/CAS4Generator/NOT_CAS4.csv
+.fuse*
+.~lock*
+
 
 # AGSDBFeeder
 /AGSDBFeeder/bin/AGSDBFeeder
