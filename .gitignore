@@ -2,6 +2,8 @@
 /PDC_REFACTOR/SVM
 *.pyc
 .*.swp
+/CAS4Generator/cas4.csv
+/CAS4Generator/log
 
 # AGSDBFeeder
 /AGSDBFeeder/bin/AGSDBFeeder
