@@ -114,7 +114,7 @@ def generate_cas4(cfg_library_file_path, parc_file_path):
             f.write(line + "\n")
 
 if __name__ == '__main__':
-    log_file_path = "log"
+    log_file_path = "log.csv"
     logging.FileHandler(log_file_path, "w")
     logging.basicConfig(
         filename=log_file_path,
