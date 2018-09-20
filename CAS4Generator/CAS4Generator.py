@@ -67,35 +67,35 @@ def get_functionnal_father(logical_name):
     return REFTEC_INDEX[PARC_INDEX[logical_name]['FUNCTIONNAL_FATHER']]
 
 def is_cas4(equipment):
-    logging.info("Equipement: " + equipment)
+    # logging.info("Equipement: " + equipment)
     if in_production_and_supervisable(equipment):
-        logging.info("En production et supervisable")
+        # logging.info("En production et supervisable")
         if has_functionnal_father(equipment):
             functionnal_father = get_functionnal_father(equipment)
-            logging.info("Père fonctionnel: " + functionnal_father)
+            # logging.info("Père fonctionnel: " + functionnal_father)
             if equipment == functionnal_father:
-                logging.info("Equipement = Père fonctionnel -> NON-CAS4")
-                print(equipment + " :: D")
+                # logging.info("Equipement = Père fonctionnel -> NON-CAS4")
+                logging.error(equipment + ";D")
                 return False
             if is_cas4(functionnal_father):
-                logging.info("Père fonctionnel CAS4")
+                # logging.info("Père fonctionnel CAS4")
                 if in_same_station(equipment, functionnal_father):
-                    logging.info("Dans la même station -> CAS4")
+                    # logging.info("Dans la même station -> CAS4")
                     return True
                 else:
-                    logging.info("Pas dans la même station -> NON-CAS4")
-                    print(equipment + " :: C")
+                    # logging.info("Pas dans la même station -> NON-CAS4")
+                    logging.error(equipment + ";C")
                     return False
             else:
-                logging.info("Père fonctionnel NON-CAS4")
-                print(equipment + " :: B")
+                # logging.info("Père fonctionnel NON-CAS4")
+                logging.error(equipment + ";B")
                 return False
         else:
-            logging.info("Pas de père fonctionnel -> CAS4")
+            # logging.info("Pas de père fonctionnel -> CAS4")
             return True
     else:
-        logging.info("NON-CAS4")
-        print(equipment + " :: A")
+        # logging.info("NON-CAS4")
+        logging.error(equipment + ";A")
         return False
 
 def reftec_id_to_logical_name(id_reftec):
@@ -109,13 +109,16 @@ def generate_cas4(cfg_library_file_path, parc_file_path):
         for equipment in STATIONS_INDEX[station]:
             if is_not_pci(station, equipment) and is_cas4(equipment):
                 cas4.append(equipment)
+    with open("cas4.csv", "w") as f:
+        for line in cas4:
+            f.write(line + "\n")
 
 if __name__ == '__main__':
     log_file_path = "log"
     logging.FileHandler(log_file_path, "w")
     logging.basicConfig(
         filename=log_file_path,
-        format='%(levelname)s :: %(message)s',
+        format='%(levelname)s;%(message)s',
         level=logging.DEBUG
     )
 
