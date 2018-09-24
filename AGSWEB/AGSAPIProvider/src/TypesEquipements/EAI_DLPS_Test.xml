@@ -18,7 +18,7 @@
             <Parametre description="Numéro pour l'écoute discrète du DLPS à partir du PCSEC" facultatif="false" forceMiseAJour="true" id="numeroEcouteDiscretePCSEC" libelle="Numéro de l'écoute discrète PCSEC" type="Nombre"/>
         </GroupeParametre>
         <GroupeParametre facultatif="true" id="Camera" libelle="Camera" libelleMultiple="Caméras associées" multiple="true">
-            <Parametre defaut="" description="Une caméra à associer" id="nomLogique" libelle="Nom logique" type="NomLogique" typeEqtLie="VIDEOCameraFVMC"/>
+            <Parametre defaut="" description="Une caméra à associer" id="nomLogique" libelle="Nom logique" type="NomLogique" typeEqtLie="VIDEOCamera"/>
         </GroupeParametre>
         <GroupeParametre facultatif="true" id="AccesEtatDistant" libelle="Accès état distant" libelleMultiple="Accès états synthèse" multiple="true">
             <Parametre defaut="" description="Le code de l'état" id="codeLocal" libelle="Code" type="Nombre"/>

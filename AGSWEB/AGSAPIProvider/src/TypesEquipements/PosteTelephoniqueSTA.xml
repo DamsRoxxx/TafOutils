@@ -9,7 +9,7 @@
             <Parametre description="Numéro d'appel du poste téléphonique qui reçoit les appels interphones. Il sert notamment à l'auto-sélection lors du mise en communication entre un interphone supervisé et ce poste." facultatif="false" id="identifiant" important="true" libelle="Numéro d'appel du poste téléphonique" type="Nombre"/>
         </GroupeParametre>
         <GroupeParametre facultatif="true" id="Camera" libelle="Camera" libelleMultiple="Caméras associées" multiple="true">
-            <Parametre defaut="" description="Une caméra à associer" id="nomLogique" libelle="Nom logique" type="NomLogique" typeEqtLie="VIDEOCameraFVMC"/>
+            <Parametre defaut="" description="Une caméra à associer" id="nomLogique" libelle="Nom logique" type="NomLogique" typeEqtLie="VIDEOCamera"/>
         </GroupeParametre>
         <GroupeParametre facultatif="true" id="AccesEtatDistant" libelle="Accès état distant" libelleMultiple="Accès états synthèse" multiple="true">
             <Parametre defaut="" description="Le code de l'état" id="codeLocal" libelle="Code" type="Nombre"/>

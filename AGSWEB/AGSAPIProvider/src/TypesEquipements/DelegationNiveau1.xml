@@ -18,7 +18,7 @@
             <Parametre defaut="5" description="Délai d'attente de réponse de demande de signe de vie du client N2 (en secondes), valeurs : défaut=5 secondes, minimum pris en compte=2 secondes, maximum pris en compte=20 secondes" id="attenteN2" libelle="Attente réponse signe de vie Client N2" type="Nombre"/>
         </GroupeParametre>
         <GroupeParametre facultatif="true" id="Camera" libelle="Camera" libelleMultiple="Caméras associées" multiple="true">
-            <Parametre defaut="" description="Une caméra à associer" id="nomLogique" libelle="Nom logique" type="NomLogique" typeEqtLie="VIDEOCameraFVMC"/>
+            <Parametre defaut="" description="Une caméra à associer" id="nomLogique" libelle="Nom logique" type="NomLogique" typeEqtLie="VIDEOCamera"/>
         </GroupeParametre>
         <GroupeParametre facultatif="true" id="AccesEtatDistant" libelle="Accès état distant" libelleMultiple="Accès états synthèse" multiple="true">
             <Parametre defaut="" description="Le code de l'état" id="codeLocal" libelle="Code" type="Nombre"/>

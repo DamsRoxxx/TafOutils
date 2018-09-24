@@ -25,10 +25,10 @@ GenericClient::GenericClient(Config& cfg) :
 
   /* DISABLE WHEN DEBUGING WITH ALREADY FEEDED DB */
   /* Create tables if they do not exists and clean all the tables */
-  /* dbHandler->Query("DROP TABLE DDS;"); */
-  /* dbHandler->Query("DROP TABLE DescObjet;"); */
-  /* dbHandler->Query("CREATE TABLE DDS (id NULL, name TEXT, type TEXT, data TEXT);"); */
-  /* dbHandler->Query("CREATE TABLE DescObjet (name TEXT, libelle TEXT, typeObjet TEXT, groupe Text, espace TEXT);"); */
+  dbHandler->Query("DROP TABLE DDS;");
+  dbHandler->Query("DROP TABLE DescObjet;");
+  dbHandler->Query("CREATE TABLE DDS (id NULL, name TEXT, type TEXT, data TEXT);");
+  dbHandler->Query("CREATE TABLE DescObjet (name TEXT, libelle TEXT, typeObjet TEXT, groupe Text, espace TEXT);");
 
   /* Get the participant factory */
   DDS_DomainParticipantFactoryQos factoryQos;

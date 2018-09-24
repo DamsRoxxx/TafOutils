@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TypeEquipement module="" nom="EM_TR">
+    <Info cle="mot_id_ligne_station" mot="448" bit="-1"/>
+    <Info cle="mot_id_type_numero_equipement" mot="449" bit="-1"/>
+    <Info cle="mot_id_mois_annee_version" mot="450" bit="-1"/>
+    <Info cle="mot_id_checksum" mot="451" bit="-1"/>
+    <Info cle="mot_status" mot="452" bit="-1"/>
+    <Info cle="mot_mesure_tps_fct_marche" mot="453" bit="-1"/>
+    <Info cle="mot_mesure_tps_fct_arret_normal" mot="454" bit="-1"/>
+    <Info cle="mot_mesure_tps_arret_en_panne" mot="455" bit="-1"/>
+    <Info cle="mot_mesure_tsp_arret_ASI" mot="456" bit="-1"/>
+    <Info cle="mot_mesure_tps_arret_entretien" mot="457" bit="-1"/>
+    <Info cle="mot_mesure_tps_coupure_400V" mot="458" bit="-1"/>
+    <Info cle="mot_mesure_tps_fct_arret_normal_exploitation" mot="459" bit="-1"/>
+    <Info cle="mot_mesure_tps_arret_en_panne_exploitation" mot="460" bit="-1"/>
+    <Info cle="mot_mesure_tsp_arret_ASI_exploitation" mot="461" bit="-1"/>
+    <Info cle="mot_mesure_tps_arret_entretien_exploitation" mot="462" bit="-1"/>
+    <Info cle="mot_mesure_tps_coupure_400V_exploitation" mot="463" bit="-1"/>
+    <Info cle="mot_16_etat" mot="464" bit="-1"/>
+    <Info cle="bit_etat_en_entretien" mot="464" bit="0"/>
+    <Info cle="bit_etat_en_arret_asservissement" mot="464" bit="1"/>
+    <Info cle="bit_etat_en_marche_montee_locale" mot="464" bit="2"/>
+    <Info cle="bit_etat_en_marche_montee_distance" mot="464" bit="3"/>
+    <Info cle="bit_etat_en_marche_descente_locale" mot="464" bit="4"/>
+    <Info cle="bit_etat_en_marche_descente_distance" mot="464" bit="5"/>
+    <Info cle="bit_etat_en_arret_exploitation_distance" mot="464" bit="6"/>
+    <Info cle="bit_etat_en_arret_exploitation_locale" mot="464" bit="7"/>
+    <Info cle="bit_etat_en_commande_locale_interdite" mot="464" bit="8"/>
+    <Info cle="bit_etat_en_commande_locale" mot="464" bit="9"/>
+    <Info cle="mot_17_pre-alerte" mot="465" bit="-1"/>
+    <Info cle="bit_pre-alerte_pre_alerte" mot="465" bit="0"/>
+    <Info cle="bit_pre-alerte_temperature_haute" mot="465" bit="1"/>
+    <Info cle="bit_pre-alerte_percussion" mot="465" bit="2"/>
+    <Info cle="bit_pre-alerte_niveau_bruit_anormal" mot="465" bit="3"/>
+    <Info cle="bit_pre-alerte_niveau_huile" mot="465" bit="4"/>
+    <Info cle="bit_pre-alerte_usure_frein" mot="465" bit="5"/>
+    <Info cle="bit_pre-alerte_panne_detection_incendie" mot="465" bit="6"/>
+    <Info cle="bit_pre-alerte_detection_fumee" mot="465" bit="7"/>
+    <Info cle="bit_pre-alerte_detection_voyageur" mot="465" bit="8"/>
+    <Info cle="bit_pre-alerte_defaut_automate" mot="465" bit="9"/>
+    <Info cle="mot_18_alerte" mot="466" bit="-1"/>
+    <Info cle="bit_alerte_arret_ASI" mot="466" bit="0"/>
+    <Info cle="bit_alerte_ASI_non_discriminee" mot="466" bit="1"/>
+    <Info cle="bit_alerte_ASI_arret_urgence_voyageur" mot="466" bit="2"/>
+    <Info cle="bit_alerte_ASI_entree_mc_droite" mot="466" bit="3"/>
+    <Info cle="bit_alerte_ASI_entree_mc_gauche" mot="466" bit="4"/>
+    <Info cle="bit_alerte_ASI_entrainement_mc_droite" mot="466" bit="5"/>
+    <Info cle="bit_alerte_ASI_entrainement_mc_gauche" mot="466" bit="6"/>
+    <Info cle="bit_alerte_ASI_pp_inferieure" mot="466" bit="7"/>
+    <Info cle="bit_alerte_ASI_pp_superieure" mot="466" bit="8"/>
+    <Info cle="bit_alerte_ASI_variateur" mot="466" bit="9"/>
+    <Info cle="bit_alerte_ASI_relais_phase" mot="466" bit="10"/>
+    <Info cle="bit_alerte_ASI_retour" mot="466" bit="11"/>
+    <Info cle="bit_alerte_ASI_fin_asservissement" mot="466" bit="12"/>
+    <Info cle="mot_19_alarme" mot="467" bit="-1"/>
+    <Info cle="bit_alarme_arret_AAI_rearmable_PCM" mot="467" bit="0"/>
+    <Info cle="bit_alarme_AAI_RD_frein_add" mot="467" bit="1"/>
+    <Info cle="bit_alarme_AAI_RD_frein_fct" mot="467" bit="2"/>
+    <Info cle="bit_alarme_AAI_RD_defaut_thermique_moteur" mot="467" bit="3"/>
+    <Info cle="bit_alarme_AAI_RD_defaut_thermique_frein_fct" mot="467" bit="4"/>
+    <Info cle="bit_alarme_AAI_RD_defaut_thermique_frein_sec" mot="467" bit="5"/>
+    <Info cle="bit_alarme_AAI_RD_connecteur" mot="467" bit="6"/>
+    <Info cle="bit_alarme_AAI_RD_pompe_huile" mot="467" bit="7"/>
+    <Info cle="bit_alarme_AAI_RD_variateur" mot="467" bit="8"/>
+    <Info cle="bit_alarme_AAI_RD_bouton_poussoir_arret" mot="467" bit="9"/>
+    <Info cle="bit_alarme_AAI_RD_defaut_demarrage_TLD" mot="467" bit="10"/>
+    <Info cle="mot_21_alarme" mot="469" bit="-1"/>
+    <Info cle="bit_alarme_arret_AAI" mot="469" bit="0"/>
+    <Info cle="bit_alarme_AAI_non_discriminee" mot="469" bit="1"/>
+    <Info cle="bit_alarme_AAI_inversion_sens_marche" mot="469" bit="2"/>
+    <Info cle="bit_alarme_AAI_survitesse" mot="469" bit="3"/>
+    <Info cle="bit_alarme_AAI_defaut_detecteur_vitesse" mot="469" bit="4"/>
+    <Info cle="bit_alarme_AAI_defaut_relais_vitesse" mot="469" bit="5"/>
+    <Info cle="bit_alarme_AAI_defaut_TBTS" mot="469" bit="6"/>
+    <Info cle="bit_alarme_AAI_defaut_relais_phase" mot="469" bit="7"/>
+    <Info cle="bit_alarme_AAI_declenchement_relais_securite" mot="469" bit="8"/>
+    <Info cle="bit_alarme_AAI_non_retombee_contacteur" mot="469" bit="9"/>
+    <Info cle="bit_alarme_AAI_rupture_chaine_treuil" mot="469" bit="10"/>
+    <Info cle="bit_alarme_AAI_chariot_tenseur" mot="469" bit="11"/>
+    <Info cle="bit_alarme_AAI_capot_bout_arbre" mot="469" bit="12"/>
+    <Info cle="bit_alarme_AAI_trappe" mot="469" bit="13"/>
+    <Info cle="bit_alarme_AAI_pp_superieure" mot="469" bit="14"/>
+    <Info cle="bit_alarme_AAI_pp_inferieure" mot="469" bit="15"/>
+    <Info cle="mot_22_alarme" mot="470" bit="-1"/>
+    <Info cle="bit_alarme_AAI_affaissement_marche_inf" mot="470" bit="0"/>
+    <Info cle="bit_alarme_AAI_affaissement_marche_sup" mot="470" bit="1"/>
+    <Info cle="bit_alarme_AAI_absence_marche_haute" mot="470" bit="2"/>
+    <Info cle="bit_alarme_AAI_absence_marche_basse" mot="470" bit="3"/>
+    <Info cle="bit_alarme_AAI_rupture_mc_droite" mot="470" bit="4"/>
+    <Info cle="bit_alarme_AAI_rupture_mc_gauche" mot="470" bit="5"/>
+    <Info cle="bit_alarme_AAI_entrainement_mc_droite" mot="470" bit="6"/>
+    <Info cle="bit_alarme_AAI_entrainement_mc_gauche" mot="470" bit="7"/>
+    <Info cle="bit_alarme_AAI_dejantement_mc_droite" mot="470" bit="8"/>
+    <Info cle="bit_alarme_AAI_dejantement_mc_gauche" mot="470" bit="9"/>
+    <Info cle="bit_alarme_AAI_non_levee_frein_sec" mot="470" bit="10"/>
+    <Info cle="bit_alarme_AAI_non_levee_frein_fct" mot="470" bit="11"/>
+    <Info cle="bit_alarme_AAI_defaut_automate" mot="470" bit="12"/>
+    <Info cle="bit_alarme_AAI_defaut_armoire_automatisme" mot="470" bit="13"/>
+    <Info cle="bit_alarme_AAI_entree_mc_sup_bloquee" mot="470" bit="14"/>
+    <Info cle="bit_alarme_AAI_entree_mc_inf_bloquee" mot="470" bit="15"/>
+    <Info cle="mot_27_alarme" mot="475" bit="-1"/>
+    <Info cle="bit_alarme_panne_epuisement" mot="475" bit="0"/>
+    <Info cle="mot_28_etat" mot="476" bit="-1"/>
+    <Info cle="bit_etat_en_arret_ASI" mot="476" bit="0"/>
+    <Info cle="bit_etat_en_arret_AAI_RD" mot="476" bit="1"/>
+    <Info cle="bit_etat_en_arret_AAI_RL" mot="476" bit="2"/>
+    <Info cle="mot_commande" mot="480" bit="-1"/>
+    <Info cle="bit_commande_rearmement_ASI" mot="480" bit="0" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_arret" mot="480" bit="1" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_montee" mot="480" bit="2" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_descente" mot="480" bit="3" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_rearmement_AAI" mot="480" bit="4" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_interdiction_marche_locale" mot="480" bit="5" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_autorisation_marche_locale" mot="480" bit="6" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_debut_priorite_commande_liaison_serie" mot="480" bit="12" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_fin_priorite_commande_liaison_serie" mot="480" bit="13" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_synchro" mot="480" bit="14" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_signe_de_vie" mot="480" bit="15" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="mot_commande_reglage_seconde" mot="481" bit="-1"/>
+    <Info cle="mot_commande_reglage_heure" mot="482" bit="-1"/>
+</TypeEquipement>

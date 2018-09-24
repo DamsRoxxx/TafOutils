@@ -101,11 +101,11 @@
             <Parametre description="Nombre de caméra du cycle" id="nbCamera" libelle="Nombre de caméra" type="Nombre"/>
             <GroupeParametre facultatif="true" id="Camera" libelle="Caméra" libelleMultiple="Caméras du cycle" multiple="true">
                 <Parametre description="" id="index" libelle="Index" type="Nombre"/>
-                <Parametre description="Caméra à associer" id="nomLogique" libelle="Nom logique" type="NomLogique" typeEqtLie="VIDEOCameraFVMC"/>
+                <Parametre description="Caméra à associer" id="nomLogique" libelle="Nom logique" type="NomLogique" typeEqtLie="VIDEOCamera"/>
             </GroupeParametre>
         </GroupeParametre>
         <GroupeParametre facultatif="true" id="Camera" libelle="Camera" libelleMultiple="Caméras associées" multiple="true">
-            <Parametre defaut="" description="Une caméra à associer" id="nomLogique" libelle="Nom logique" type="NomLogique" typeEqtLie="VIDEOCameraFVMC"/>
+            <Parametre defaut="" description="Une caméra à associer" id="nomLogique" libelle="Nom logique" type="NomLogique" typeEqtLie="VIDEOCamera"/>
         </GroupeParametre>
         <GroupeParametre facultatif="true" id="AccesEtatDistant" libelle="Accès état distant" libelleMultiple="Accès états synthèse" multiple="true">
             <Parametre defaut="" description="Le code de l'état" id="codeLocal" libelle="Code" type="Nombre"/>

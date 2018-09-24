@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TypeEquipement module="" nom="compresseur">
+    <Info cle="mot_id_ligne_station" mot="448" bit="-1"/>
+    <Info cle="mot_id_type_numero_equipement" mot="449" bit="-1"/>
+    <Info cle="mot_id_mois_annee_version" mot="450" bit="-1"/>
+    <Info cle="mot_id_checksum" mot="451" bit="-1"/>
+    <Info cle="mot_status" mot="452" bit="-1"/>
+    <Info cle="mot_mesure_tps_ecoule_en_panne" mot="453" bit="-1"/>
+    <Info cle="mot_mesure_tps_arret_entretien" mot="454" bit="-1"/>
+    <Info cle="mot_mesure_tps_fct_cumule_groupe1" mot="455" bit="-1"/>
+    <Info cle="mot_mesure_tps_fct_cumule_groupe2" mot="456" bit="-1"/>
+    <Info cle="mot_mesure_tps_coupure_400V" mot="457" bit="-1"/>
+    <Info cle="mot_mesure_tps_fct_marche_normale_aero1" mot="458" bit="-1"/>
+    <Info cle="mot_mesure_tps_fct_defaut_aero1" mot="459" bit="-1"/>
+    <Info cle="mot_mesure_tps_fct_marche_normale_aero2" mot="460" bit="-1"/>
+    <Info cle="mot_mesure_tps_fct_defaut_aero2" mot="461" bit="-1"/>
+    <Info cle="mot_mesure_tps_fct_marche_normale_aero3" mot="462" bit="-1"/>
+    <Info cle="mot_mesure_tps_fct_defaut_aero3" mot="463" bit="-1"/>
+    <Info cle="mot_16_etat" mot="464" bit="-1"/>
+    <Info cle="bit_etat_en_marche_normale_compression_groupe1" mot="464" bit="0"/>
+    <Info cle="bit_etat_en_marche_normale_compression_groupe2" mot="464" bit="1"/>
+    <Info cle="bit_etat_en_marche_secours" mot="464" bit="2"/>
+    <Info cle="bit_etat_en_marche_normale_arret" mot="464" bit="3"/>
+    <Info cle="bit_etat_en_entretien" mot="464" bit="4"/>
+    <Info cle="bit_etat_en_marche_normale_aero1" mot="464" bit="6"/>
+    <Info cle="bit_etat_en_defaut_aero1" mot="464" bit="7"/>
+    <Info cle="bit_etat_en_marche_normale_aero2" mot="464" bit="8"/>
+    <Info cle="bit_etat_en_defaut_aero2" mot="464" bit="9"/>
+    <Info cle="bit_etat_en_marche_normale_aero3" mot="464" bit="10"/>
+    <Info cle="bit_etat_en_defaut_aero3" mot="464" bit="11"/>
+    <Info cle="mot_17_pre-alerte" mot="465" bit="-1"/>
+    <Info cle="bit_pre-alerte_pre_alerte" mot="465" bit="0"/>
+    <Info cle="bit_pre-alerte_temperature_groupe_anormale" mot="465" bit="1"/>
+    <Info cle="bit_pre-alerte_defaut_automate" mot="465" bit="2"/>
+    <Info cle="mot_18_alerte" mot="466" bit="-1"/>
+    <Info cle="bit_alerte_alerte" mot="466" bit="0"/>
+    <Info cle="bit_alerte_defaut_fuite_reseau" mot="466" bit="1"/>
+    <Info cle="bit_alerte_tps_compression_long_groupe1" mot="466" bit="2"/>
+    <Info cle="bit_alerte_tps_compression_long_groupe2" mot="466" bit="3"/>
+    <Info cle="mot_21_alarme" mot="469" bit="-1"/>
+    <Info cle="bit_alarme_en_arret_AAI" mot="469" bit="0"/>
+    <Info cle="bit_alarme_autres_AAI" mot="469" bit="1"/>
+    <Info cle="bit_alarme_defaut_pression_inf_4bars" mot="469" bit="2"/>
+    <Info cle="bit_alarme_defaut_comp1" mot="469" bit="3"/>
+    <Info cle="bit_alarme_defaut_comp2" mot="469" bit="4"/>
+    <Info cle="bit_alarme_defaut_BAE&gt;5h" mot="469" bit="5"/>
+    <Info cle="bit_alarme_absence_tension_comp1_400V" mot="469" bit="6"/>
+    <Info cle="bit_alarme_absence_tension_comp2_400V" mot="469" bit="7"/>
+    <Info cle="bit_alarme_defaut_secheur1" mot="469" bit="8"/>
+    <Info cle="bit_alarme_defaut_secheur2" mot="469" bit="9"/>
+    <Info cle="mot_22_alarme" mot="470" bit="-1"/>
+    <Info cle="bit_alarme_alarme_AAI_aero1" mot="470" bit="0"/>
+    <Info cle="bit_alarme_niveau_eau_aero1" mot="470" bit="1"/>
+    <Info cle="bit_alarme_tirage_air_aero1" mot="470" bit="2"/>
+    <Info cle="bit_alarme_manque_pression_aero1" mot="470" bit="3"/>
+    <Info cle="bit_alarme_alarme_AAI_aero2" mot="470" bit="4"/>
+    <Info cle="bit_alarme_niveau_eau_aero2" mot="470" bit="5"/>
+    <Info cle="bit_alarme_tirage_air_aero2" mot="470" bit="6"/>
+    <Info cle="bit_alarme_manque_pression_aero2" mot="470" bit="7"/>
+    <Info cle="bit_alarme_alarme_AAI_aero3" mot="470" bit="8"/>
+    <Info cle="bit_alarme_niveau_eau_aero3" mot="470" bit="9"/>
+    <Info cle="bit_alarme_tirage_air_aero3" mot="470" bit="10"/>
+    <Info cle="bit_alarme_manque_pression_aero3" mot="470" bit="11"/>
+    <Info cle="mot_commande" mot="480" bit="-1"/>
+    <Info cle="bit_commande_rearmement" mot="480" bit="0" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_commande_marche_comp1" mot="480" bit="1" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_commande_marche_comp2" mot="480" bit="2" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_synchro" mot="480" bit="14" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_signe_de_vie" mot="480" bit="15" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="mot_commande_reglage_seconde" mot="481" bit="-1"/>
+    <Info cle="mot_commande_reglage_heure" mot="482" bit="-1"/>
+</TypeEquipement>

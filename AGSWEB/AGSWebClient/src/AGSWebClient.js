@@ -2,7 +2,7 @@
 
 // Global variables
 var _uiMainColor = "green";
-var _apiURL = "http://" + location.hostname + ":8080"
+var _apiURL = "http://" + location.hostname + ":8085"
 var _nameFilter = "";
 var _typeFilter = "Alarme";
 var _dataFilter = "";
@@ -228,7 +228,7 @@ function UpdateArrayV2(data) {
     "idInfo": "Code",
     "idCodePublic": "Code Public",
     "libelle": "Libelle",
-    "valeur": "valeur",
+    "valeur": "Valeur",
     "gdhEmission": "Horaire"
   };
   var columnOrder = {

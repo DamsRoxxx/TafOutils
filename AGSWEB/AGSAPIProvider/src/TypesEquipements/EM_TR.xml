@@ -89,7 +89,7 @@
             <Connexion id="DefautBonFonctionnement" libelle="Défaut bon fonctionnement (redondance)"/>
         </LiaisonEquipement>
         <GroupeParametre facultatif="true" id="Camera" libelle="Camera" libelleMultiple="Caméras associées" multiple="true">
-            <Parametre defaut="" description="Une caméra à associer" id="nomLogique" libelle="Nom logique" type="NomLogique" typeEqtLie="VIDEOCameraFVMC"/>
+            <Parametre defaut="" description="Une caméra à associer" id="nomLogique" libelle="Nom logique" type="NomLogique" typeEqtLie="VIDEOCamera"/>
         </GroupeParametre>
         <GroupeParametre facultatif="true" id="AccesEtatDistant" libelle="Accès état distant" libelleMultiple="Accès états synthèse" multiple="true">
             <Parametre defaut="" description="Le code de l'état" id="codeLocal" libelle="Code" type="Nombre"/>
@@ -465,11 +465,11 @@
     <Alarme code="501006" codePublic="1006" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Bit de signe de vie manquant" type="Alarme"/>
     <Alarme code="501009" codePublic="1009" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Commande automatique initiale impossible" type="Alarme"/>
     <Alarme code="501015" codePublic="1015" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Commande marche locale impossible" type="Alarme"/>
-    <Alarme code="11018" isExploitant="false" isHistorisable="true" isMainteneur="false" isPersistable="true" isServeur="false" libelle="Arrêt d’urgence [ASI]" type="Alarme"/>
-    <Alarme code="11019" isExploitant="false" isHistorisable="true" isMainteneur="false" isPersistable="true" isServeur="false" libelle="Panne [AAI]" type="Alarme"/>
-    <Alarme code="11020" isExploitant="false" isHistorisable="true" isMainteneur="false" isPersistable="true" isServeur="false" libelle="Dérangement incendie" type="Alarme"/>
-    <Alarme code="11021" isExploitant="false" isHistorisable="true" isMainteneur="false" isPersistable="true" isServeur="false" libelle="Alarmes détection feu" type="Alarme"/>
-    <Alarme code="11164" isExploitant="false" isHistorisable="true" isMainteneur="false" isPersistable="true" isServeur="false" libelle="Panne epuisement" type="Alarme"/>
+    <Alarme code="11018" codePublic="70" isExploitant="true" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Arrêt d’urgence [ASI]" type="Alarme"/>
+    <Alarme code="11021" codePublic="73" isExploitant="false" isHistorisable="true" isMainteneur="false" isPersistable="true" isServeur="false" libelle="Alarmes détection feu" type="Alarme"/>
+    <Alarme code="11164" codePublic="74" isExploitant="false" isHistorisable="true" isMainteneur="false" isPersistable="true" isServeur="false" libelle="Panne epuisement" type="Alarme"/>
+    <Alarme code="11019" codePublic="71" isExploitant="false" isHistorisable="true" isMainteneur="false" isPersistable="true" isServeur="false" libelle="Panne [AAI]" type="Alarme"/>
+    <Alarme code="11020" codePublic="72" isExploitant="false" isHistorisable="true" isMainteneur="false" isPersistable="true" isServeur="false" libelle="Dérangement incendie" type="Alarme"/>
     <Commande code="30" isExploitant="false" isHistorisable="false" isMainteneur="false" isServeur="true" libelle="Interdiction marche locale" timeOut="0"/>
     <Commande code="31" isExploitant="false" isHistorisable="false" isMainteneur="false" isServeur="true" libelle="Autorisation marche locale" timeOut="0"/>
     <Commande code="1" codePublic="1" isExploitant="true" isHistorisable="true" isMainteneur="true" libelle="Réarmement ASI" timeOut="0"/>
@@ -884,11 +884,11 @@
     <AccesAlarmeSynthese code="501009" formule="ETAT[1009];" operateur="OU"/>
     <AccesAlarmeSynthese code="501015" formule="ETAT[1015];" operateur="OU"/>
     <AccesAlarmeSynthese code="11018" formule="ETAT[11];ETAT[110];ETAT[111];ETAT[112];ETAT[113];ETAT[114];ETAT[115];ETAT[116];ETAT[17];ETAT[18];ETAT[19];ETAT[20];ETAT[21];ETAT[22];" operateur="OU"/>
-    <AccesAlarmeSynthese code="11019" formule="ETAT[1];ETAT[10];ETAT[1000];ETAT[12];ETAT[13];ETAT[26];ETAT[27];ETAT[28];ETAT[29];ETAT[30];ETAT[31];ETAT[32];ETAT[33];ETAT[34];ETAT[35];ETAT[36];ETAT[37];ETAT[38];ETAT[39];ETAT[40];ETAT[41];ETAT[42];ETAT[43];ETAT[44];ETAT[45];ETAT[46];ETAT[47];ETAT[48];ETAT[49];ETAT[50];ETAT[51];ETAT[52];ETAT[53];ETAT[54];ETAT[55];ETAT[56];ETAT[57];ETAT[58];ETAT[59];ETAT[60];ETAT[61];ETAT[62];ETAT[63];ETAT[64];ETAT[65];" operateur="OU"/>
-    <AccesAlarmeSynthese code="11020" formule="ETAT[107];" operateur="ET"/>
     <AccesAlarmeSynthese code="11021" formule="ETAT[107];" operateur="ET"/>
     <AccesAlarmeSynthese code="11164" formule="ETAT[67];" operateur="ET"/>
     <AccesAlarmeSynthese code="0" formule="ALARME[1000];ALARME[999999];" operateur="ET"/>
+    <AccesAlarmeSynthese code="11019" formule="ETAT[1];ETAT[10];ETAT[1000];ETAT[12];ETAT[13];ETAT[26];ETAT[27];ETAT[28];ETAT[29];ETAT[30];ETAT[31];ETAT[32];ETAT[33];ETAT[34];ETAT[35];ETAT[36];ETAT[37];ETAT[38];ETAT[39];ETAT[40];ETAT[41];ETAT[42];ETAT[43];ETAT[44];ETAT[45];ETAT[46];ETAT[47];ETAT[48];ETAT[49];ETAT[50];ETAT[51];ETAT[52];ETAT[53];ETAT[54];ETAT[55];ETAT[56];ETAT[57];ETAT[58];ETAT[59];ETAT[60];ETAT[61];ETAT[62];ETAT[63];ETAT[64];ETAT[65];" operateur="OU"/>
+    <AccesAlarmeSynthese code="11020" formule="ETAT[107];" operateur="ET"/>
     <Entree code="201" isActifAZero="false" type="Etat" valeur="DefautPuisard"/>
     <Entree code="202" isActifAZero="false" type="Etat" valeur="DerangementIncendie"/>
     <Entree code="203" isActifAZero="false" type="Etat" valeur="Feu"/>

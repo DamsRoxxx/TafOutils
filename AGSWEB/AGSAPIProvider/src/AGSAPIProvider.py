@@ -83,7 +83,7 @@ if __name__ == '__main__':
     cherrypy.config.update({'server.socket_host': '0.0.0.0'})
 
     # Set up the serving port
-    cherrypy.config.update({'server.socket_port': 8080})
+    cherrypy.config.update({'server.socket_port': 8085})
 
     # Allow CORS requests from the domain specified in CORS function
     cherrypy.tools.CORS = cherrypy.Tool('before_handler', CORS)

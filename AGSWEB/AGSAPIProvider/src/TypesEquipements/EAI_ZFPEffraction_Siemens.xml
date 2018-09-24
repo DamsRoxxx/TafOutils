@@ -3,7 +3,7 @@
     <Conf categorie="Protection" types="EAI_ZFPEffraction" libelle="ZFP Effraction Siemens">
         <description>ZFP effraction liée à une centrale Siemens</description>
         <GroupeParametre facultatif="true" id="LiaisonEquipementAssocie" libelle="Liaison Equipement Associe" multiple="true">
-            <Parametre description="Appareil de Vente associé" id="equipement" libelle="Appareil de Vente Associé" type="NomLogique" typeEqtLie="ALL"/>
+            <Parametre description="Appareil de Vente associé" id="equipement" libelle="Appareil de Vente Associé" type="NomLogique" typeEqtLie="APV"/>
         </GroupeParametre>
         <GroupeParametre facultatif="false" id="LiaisonCentraleSiemens" libelle="Liaison avec la centrale Siemens" multiple="false">
             <Parametre defaut="" id="equipement" libelle="Centrale Siemens liée" type="NomLogique" typeEqtLie="EAI_Centrale_Siemens"/>
@@ -29,7 +29,7 @@
             </Parametre>
         </GroupeParametre>
         <GroupeParametre facultatif="true" id="Camera" libelle="Camera" libelleMultiple="Caméras associées" multiple="true">
-            <Parametre defaut="" description="Une caméra à associer" id="nomLogique" libelle="Nom logique" type="NomLogique" typeEqtLie="VIDEOCameraFVMC"/>
+            <Parametre defaut="" description="Une caméra à associer" id="nomLogique" libelle="Nom logique" type="NomLogique" typeEqtLie="VIDEOCamera"/>
         </GroupeParametre>
         <GroupeParametre facultatif="true" id="AccesEtatDistant" libelle="Accès état distant" libelleMultiple="Accès états synthèse" multiple="true">
             <Parametre defaut="" description="Le code de l'état" id="codeLocal" libelle="Code" type="Nombre"/>

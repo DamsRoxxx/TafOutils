@@ -6,13 +6,13 @@
             <Parametre id="equipement" libelle="Nom logique de l APV" type="NomLogique" typeEqtLie="A2007"/>
         </GroupeParametre>
         <GroupeParametre facultatif="true" id="Eclairage" libelle="liste des Eclairage asservi" multiple="true">
-            <Parametre id="equipement" libelle="Nom logique de l Eclairage" type="NomLogique" typeEqtLie="Eclairage_1E_1S"/>
+            <Parametre id="equipement" libelle="Nom logique de l Eclairage" type="NomLogique" typeEqtLie="Eclairage"/>
         </GroupeParametre>
         <GroupeParametre facultatif="true" id="CalendrierExploitation" libelle="Calendrier d exploitation" multiple="false">
             <Parametre id="equipement" libelle="Nom logique du calendrier" type="NomLogique" typeEqtLie="CalendrierExploitation"/>
         </GroupeParametre>
         <GroupeParametre facultatif="true" id="Camera" libelle="Camera" libelleMultiple="Caméras associées" multiple="true">
-            <Parametre defaut="" description="Une caméra à associer" id="nomLogique" libelle="Nom logique" type="NomLogique" typeEqtLie="VIDEOCameraFVMC"/>
+            <Parametre defaut="" description="Une caméra à associer" id="nomLogique" libelle="Nom logique" type="NomLogique" typeEqtLie="VIDEOCamera"/>
         </GroupeParametre>
         <GroupeParametre facultatif="true" id="AccesEtatDistant" libelle="Accès état distant" libelleMultiple="Accès états synthèse" multiple="true">
             <Parametre defaut="" description="Le code de l'état" id="codeLocal" libelle="Code" type="Nombre"/>

@@ -63,7 +63,7 @@ class DBHandler:
         table = dict()
         while query.next():
             name = str(query.record().value(0).toString())
-            libelle = str(query.record().value(1).toString())
+            libelle = unicode(query.record().value(1).toString(), "utf-8")
             type_objet = str(query.record().value(2).toString())
             table[name] = dict()
             table[name]["libelle"] = libelle
@@ -79,7 +79,7 @@ class DBHandler:
 
         while query.next():
             nom = str(query.record().value(0).toString())
-            libelle = str(query.record().value(1).toString())
+            libelle = unicode(query.record().value(1).toString(), "utf-8")
             type_objet = str(query.record().value(2).toString())
             groupe = str(query.record().value(3).toString())
             espace = str(query.record().value(4).toString())

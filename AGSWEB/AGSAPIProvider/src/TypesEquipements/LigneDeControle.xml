@@ -22,13 +22,13 @@
             <Parametre defaut="" description="LA3G lié" facultatif="false" id="equipement" libelle="LA3G" type="NomLogique" typeEqtLie="LA3G"/>
         </GroupeParametre>
         <GroupeParametre facultatif="true" id="LienAEXG" libelle="Lien avec un AEXG" multiple="false">
-            <Parametre defaut="" description="L'équipement AEXG lié" facultatif="false" id="equipement" libelle="AEXG" type="NomLogique" typeEqtLie="ALL"/>
+            <Parametre defaut="" description="L'équipement AEXG lié" facultatif="false" id="equipement" libelle="AEXG" type="NomLogique" typeEqtLie="AEXG_Generique"/>
         </GroupeParametre>
         <GroupeParametre facultatif="true" id="LienBaiePeageMeteor" libelle="Lien avec une Baie de péage météor" multiple="false">
-            <Parametre defaut="" description="L'équipement baie de péage météor lié" facultatif="false" id="equipement" libelle="Baie de péage météor" type="NomLogique" typeEqtLie="ALL"/>
+            <Parametre defaut="" description="L'équipement baie de péage météor lié" facultatif="false" id="equipement" libelle="Baie de péage météor" type="NomLogique" typeEqtLie="Baie_peage_meteor_API_GTS_Base"/>
         </GroupeParametre>
         <GroupeParametre facultatif="true" id="LiaisonBlocFonctionnel" libelle="Liaison bloc fonctionnel vers l'API GTS" multiple="false">
-            <Parametre defaut="" description="Equipement lié" id="equipement" libelle="Equipement lié" type="NomLogique" typeEqtLie="ALL"/>
+            <Parametre defaut="" description="Equipement lié" id="equipement" libelle="Equipement lié" type="NomLogique" typeEqtLie="API_GTS_Base"/>
             <Parametre defaut="A1" description="Numéro de l'équipement (recette de la baie de péage et numéro de la LC)" id="numero" libelle="Numéro de l'équipement" type="Texte">
                 <Choix valeur="A1"/>
                 <Choix valeur="A2"/>
@@ -42,7 +42,7 @@
             <Parametre defaut="blocLigneDeControleGTS" id="nomBloc" libelle="Nom du bloc" type="Texte"/>
         </GroupeParametre>
         <GroupeParametre facultatif="true" id="Camera" libelle="Camera" libelleMultiple="Caméras associées" multiple="true">
-            <Parametre defaut="" description="Une caméra à associer" id="nomLogique" libelle="Nom logique" type="NomLogique" typeEqtLie="VIDEOCameraFVMC"/>
+            <Parametre defaut="" description="Une caméra à associer" id="nomLogique" libelle="Nom logique" type="NomLogique" typeEqtLie="VIDEOCamera"/>
         </GroupeParametre>
         <GroupeParametre facultatif="true" id="AccesEtatDistant" libelle="Accès état distant" libelleMultiple="Accès états synthèse" multiple="true">
             <Parametre defaut="" description="Le code de l'état" id="codeLocal" libelle="Code" type="Nombre"/>

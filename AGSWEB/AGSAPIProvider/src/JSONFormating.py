@@ -107,7 +107,7 @@ class JSONFormating:
 
                 libelle = code_table[objet_table[id_objet]["type"]][info_type][id_info].replace(":", "-")
             except:
-              libelle = "Inconnu"
+                libelle = "Inconnu"
 
             data += '\nlibelle: "%s"' % libelle
             

@@ -15,15 +15,15 @@
             </Parametre>
         </GroupeParametre>
         <GroupeParametre facultatif="true" id="MoniteurContiguVertical" libelle="Moniteur Contigu Vertical" multiple="false">
-            <Parametre defaut="" description="Moniteur à associer situé en dessous" id="nomLogique" libelle="Moniteur Contigu Vertical" type="NomLogique" typeEqtLie="VIDEOMoniteurFVMC"/>
+            <Parametre defaut="" description="Moniteur à associer situé en dessous" id="nomLogique" libelle="Moniteur Contigu Vertical" type="NomLogique" typeEqtLie="VIDEOMoniteur"/>
             <Parametre borneInf="0" description="Numéro d'ordre associé au couple de moniteur contigu vertical associés" facultatif="true" id="ordre" libelle="Numero Ordre Moniteur Contigu Vertical" type="Nombre"/>
         </GroupeParametre>
         <GroupeParametre facultatif="true" id="MoniteurContiguHorizontal" libelle="Moniteur Contigu Horizontal" multiple="false">
-            <Parametre defaut="" description="Moniteur à associer situé à droite" id="nomLogique" libelle="Moniteur Contigu Horizontal" type="NomLogique" typeEqtLie="VIDEOMoniteurFVMC"/>
+            <Parametre defaut="" description="Moniteur à associer situé à droite" id="nomLogique" libelle="Moniteur Contigu Horizontal" type="NomLogique" typeEqtLie="VIDEOMoniteur"/>
             <Parametre borneInf="0" description="Numéro d'ordre associé au couple de moniteur contigu horizontal associés" facultatif="true" id="ordre" libelle="Numero Ordre Moniteur Contigu Horizontal" type="Nombre"/>
         </GroupeParametre>
         <GroupeParametre facultatif="true" id="Camera" libelle="Camera" libelleMultiple="Caméras associées" multiple="true">
-            <Parametre defaut="" description="Une caméra à associer" id="nomLogique" libelle="Nom logique" type="NomLogique" typeEqtLie="VIDEOCameraFVMC"/>
+            <Parametre defaut="" description="Une caméra à associer" id="nomLogique" libelle="Nom logique" type="NomLogique" typeEqtLie="VIDEOCamera"/>
         </GroupeParametre>
         <GroupeParametre facultatif="true" id="AccesEtatDistant" libelle="Accès état distant" libelleMultiple="Accès états synthèse" multiple="true">
             <Parametre defaut="" description="Le code de l'état" id="codeLocal" libelle="Code" type="Nombre"/>

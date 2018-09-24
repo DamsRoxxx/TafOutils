@@ -2,7 +2,7 @@
 <TypeEquipement priorite="4" module="libAGSServeurEquipementsEAI.so" nom="EAI_ZFPEffraction_LT200">
     <Conf categorie="Protection" types="EAI_ZFPEffraction" libelle="EAI_ZFPEffraction_LT200">
         <GroupeParametre facultatif="true" id="LiaisonEquipementAssocie" libelle="Liaison Equipement Associe" multiple="true">
-            <Parametre description="Appareil de Vente associé" id="equipement" libelle="Appareil de Vente Associé" type="NomLogique" typeEqtLie="ALL"/>
+            <Parametre description="Appareil de Vente associé" id="equipement" libelle="Appareil de Vente Associé" type="NomLogique" typeEqtLie="APV"/>
         </GroupeParametre>
         <GroupeParametre facultatif="false" id="ParametreComportement" libelle="Comportement de la ZFP" multiple="false">
             <Parametre defaut="ECOUTE_AUTO_CENTRALE" description="Comportement de l'activation des DLPS sur la ZFP" id="comportement" libelle="Comportement de la ZFP" type="Texte">
@@ -28,7 +28,7 @@
             </Parametre>
         </GroupeParametre>
         <GroupeParametre facultatif="true" id="Camera" libelle="Camera" libelleMultiple="Caméras associées" multiple="true">
-            <Parametre defaut="" description="Une caméra à associer" id="nomLogique" libelle="Nom logique" type="NomLogique" typeEqtLie="VIDEOCameraFVMC"/>
+            <Parametre defaut="" description="Une caméra à associer" id="nomLogique" libelle="Nom logique" type="NomLogique" typeEqtLie="VIDEOCamera"/>
         </GroupeParametre>
         <GroupeParametre facultatif="true" id="AccesEtatDistant" libelle="Accès état distant" libelleMultiple="Accès états synthèse" multiple="true">
             <Parametre defaut="" description="Le code de l'état" id="codeLocal" libelle="Code" type="Nombre"/>

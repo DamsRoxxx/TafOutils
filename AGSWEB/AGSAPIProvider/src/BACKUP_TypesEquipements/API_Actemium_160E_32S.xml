@@ -1,0 +1,1236 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TypeEquipement priorite="-10" module="libAGSServeurEquipementsMaestroAPI.so" codeFamille="API_AGS" fonctionnel="API_GARE" nom="API_Actemium_160E_32S">
+    <Conf categorie="API" libelle="API_Actemium_160E_32S">
+        <description>Une API_Actemium_160E_32S.</description>
+        <GroupeParametre id="ParametreSigneDeVie" libelle="Paramètres signe de vie" multiple="false">
+            <Parametre defaut="20" description="" id="periode" libelle="Période" type="Nombre"/>
+        </GroupeParametre>
+        <GroupeParametre id="ParametresMaintenance" libelle="Paramètres de maintenance" multiple="false">
+            <Parametre defaut="AUTO" description="" id="chargementParametres" libelle="Chargement des paramètres" type="Texte"/>
+            <Parametre defaut="1,59,8" description="" id="plageMotsMaintenance" libelle="plage mots de maintenance" type="Texte"/>
+            <Parametre defaut="/appli/AGS_APP/comp/param/API_GARE.conf" description="" id="fichierParametres" libelle="Fichier de paramètres" type="Texte"/>
+        </GroupeParametre>
+        <GroupeParametre id="ParametresIdentifiants" libelle="Paramètres Identifiants" multiple="false">
+            <Parametre defaut="0" description="Identifiant station" id="idStation" important="true" libelle="Identifiant Station" type="Hexadecimal"/>
+            <Parametre defaut="0" description="" id="idEquipement" important="true" libelle="Identifiant équipement" type="Hexadecimal"/>
+            <Parametre defaut="0" description="" id="idVersion" important="true" libelle="Identifiant version" type="Hexadecimal"/>
+            <Parametre defaut="0" description="" id="idChecksum" important="true" libelle="Identifiant checksum" type="Hexadecimal"/>
+            <Parametre defaut="0" description="" id="idChecksumParametre" important="true" libelle="Identifiant checksum parametre" type="Hexadecimal"/>
+        </GroupeParametre>
+        <GroupeParametre id="ParametresLigne" libelle="Paramètres Ligne" multiple="false">
+            <Parametre defaut="RTU" description="mode" id="mode" libelle="Mode" type="Texte">
+                <Choix valeur="RTU"/>
+                <Choix valeur="TCP"/>
+            </Parametre>
+            <Parametre defaut="127.0.0.1" description="Adresse IP" id="adresseIP" important="true" libelle="Adresse IP" type="AdresseIP"/>
+            <Parametre description="Port" facultatif="false" id="port" important="true" libelle="Port" type="Nombre"/>
+            <Parametre defaut="900" description="Time out" id="timeout" libelle="Time out" type="Nombre"/>
+            <Parametre defaut="5000" description="Période de reconnection" id="periode_reconnection" libelle="Période de reco" type="Nombre"/>
+            <Parametre defaut="4" description="Période de silence" id="periode_silence" libelle="Période de silence" type="Nombre"/>
+            <Parametre defaut="180" description="Seuil d'echec communication" id="seuil_echec_com" libelle="Seuil d'echec com" type="Nombre"/>
+            <Parametre defaut="600000" description="Période de reconnection automatique" id="periode_retry_automate" libelle="Période reco auto" type="Nombre"/>
+            <Parametre defaut="0" description="Port de reset" id="port_reset" libelle="Port de reset" type="Nombre"/>
+            <Parametre defaut="2" description="Nb de reessais" forceMiseAJour="true" id="nbReessais" libelle="Nombre de réessais avant timeout" type="Nombre"/>
+        </GroupeParametre>
+        <GroupeParametre facultatif="true" id="parametresInterdictionModeEcritureModbus" libelle="Paramètres Interdiction Mode Ecriture Modbus" multiple="false">
+            <Parametre defaut="false" description="interdiction écriture en Write Single Register" id="interdictionWSR" libelle="interdictionWSR" type="Texte">
+                <Choix valeur="false"/>
+                <Choix valeur="true"/>
+            </Parametre>
+            <Parametre defaut="false" description="interdiction écriture en Write Multiple Register" id="interdictionWMR" libelle="interdictionWMR" type="Texte">
+                <Choix valeur="false"/>
+                <Choix valeur="true"/>
+            </Parametre>
+        </GroupeParametre>
+        <GroupeParametre id="ParametresAutomate" libelle="Paramètres Automate" multiple="false">
+            <Parametre defaut="1" description="Adresse esclave" id="adresse_esclave" libelle="Adresse esclave" type="Texte"/>
+            <Parametre defaut="100" description="Nombre maximum de mots" id="nb_max_mot" libelle="Nbre max de mots" type="Nombre"/>
+            <Parametre defaut="800" description="Nombre maximum de bits" id="nb_max_bit" libelle="Nbre max de bits" type="Nombre"/>
+            <Parametre defaut="2" description="Bit de parité (0: pas de parité, 1: parité impaire, 2: parité paire)" forceMiseAJour="true" id="bit_parite" libelle="Bit de partité" type="Nombre"/>
+        </GroupeParametre>
+        <GroupeParametre id="ParametresPolling" libelle="Paramètres Polling" multiple="false">
+            <Parametre defaut="1000" description="Période en ms" id="periode" libelle="Période" type="Nombre"/>
+            <Parametre defaut="20" description="Nombre de mots" id="nbMots" libelle="Nbre de mots" type="Nombre"/>
+        </GroupeParametre>
+        <GroupeParametre facultatif="true" id="ParametresCommandeInit" libelle="Commande initiale" multiple="true">
+            <Parametre description="Code de la commande à executer (mise à 1)" id="code" libelle="Code" type="Nombre"/>
+        </GroupeParametre>
+        <GroupeParametre facultatif="true" id="ParametresCommandeInitPrioSerie" libelle="Gestion commande distant / local" multiple="true">
+            <Parametre description="Code de l'état gestion du mode distant" id="idEtat" libelle="Etat" type="Nombre"/>
+            <Parametre description="Code de la commande de gestion du mode distant" id="idCommande" libelle="commande" type="Nombre"/>
+        </GroupeParametre>
+        <GroupeParametre facultatif="true" id="ParametresOffsetTableEchange" libelle="Paramétrage de l'offset de la table d'échange" multiple="false">
+            <Parametre description="Valeur de l'offset de décalage de la table d'échange" id="valeurOffset" libelle="Valeur de l'offset" type="Nombre"/>
+        </GroupeParametre>
+        <LiaisonEquipement facultatif="true" id="equipementModbus" libelle="Liaison API pour autres équipements Modbus" multiple="false">
+            <TypeEquipementLie code="API_Actemium_48E_16S"/>
+            <TypeEquipementLie code="API_Actemium_96E_32S"/>
+            <TypeEquipementLie code="API_Actemium_160E_32S"/>
+            <TypeEquipementLie code="API_GTC"/>
+            <TypeEquipementLie code="API_GTS"/>
+            <TypeEquipementLie code="API_GTS_Wago"/>
+            <Connexion id="DefautBonFonctionnement" libelle="Défaut bon fonctionnement (redondance)"/>
+        </LiaisonEquipement>
+        <GroupeParametre facultatif="true" id="Camera" libelle="Camera" libelleMultiple="Caméras associées" multiple="true">
+            <Parametre defaut="" description="Une caméra à associer" id="nomLogique" libelle="Nom logique" type="NomLogique" typeEqtLie="VIDEOCameraFVMC"/>
+        </GroupeParametre>
+        <GroupeParametre facultatif="true" id="AccesEtatDistant" libelle="Accès état distant" libelleMultiple="Accès états synthèse" multiple="true">
+            <Parametre defaut="" description="Le code de l'état" id="codeLocal" libelle="Code" type="Nombre"/>
+            <Parametre defaut="" description="L'équipement" id="equipement" libelle="Equipement" type="NomLogique" typeEqtLie="ALL"/>
+            <Parametre defaut="" description="" id="codeDistant" libelle="Code distant" type="Texte"/>
+        </GroupeParametre>
+    </Conf>
+    <Delegation soumisADelegationTotale="true" soumisADelegationPartielle="false" soumisADelegationPCSEC="false"/>
+    <Include type="TablesEchanges/API_Actemium_160E_32S_TableEchange"/>
+    <Include type="API_Actemium_96E_32S"/>
+    <Include type="TablesEchanges/API_Actemium_96E_32S_TableEchange"/>
+    <Include type="API_Actemium_48E_16S"/>
+    <Include type="TablesEchanges/API_Actemium_48E_16S_TableEchange"/>
+    <Include type="MaestroPere"/>
+    <Include type="MaestroSDV"/>
+    <Include type="MaestroPereMaintenance"/>
+    <Include type="MaestroPereHorsSDVHorsMaintenance"/>
+    <Include type="Maestro"/>
+    <Include type="LiaisonAPI"/>
+    <Include type="Entretenable"/>
+    <Include type="Communiquant"/>
+    <Include type="Generique"/>
+    <Include type="CommuniquantSansGenerique"/>
+    <Include type="API_AGS_V2"/>
+    <Include type="EtatNormal"/>
+    <Include type="API_AGS_V1"/>
+    <Etat code="1000" isExploitant="true" isHistorisable="true" isInterne="false" isMainteneur="true" isPersistable="false" libelle="Pas de remontee d'etat"/>
+    <Etat code="9999" isExploitant="true" isHistorisable="true" isInterne="false" isMainteneur="true" isPersistable="false" libelle="Défaut bon fonctionnement (redondance)"/>
+    <Etat code="1" codePublic="1" isExploitant="true" isHistorisable="true" isMainteneur="true" isPersistable="false" libelle="En entretien"/>
+    <Etat code="0" codePublic="0" isExploitant="true" isHistorisable="true" isMainteneur="true" isObligatoireIHM="true" isPersistable="false" libelle="Indéterminé"/>
+    <Etat code="5" isExploitant="true" isHistorisable="true" isMainteneur="true" isObligatoireIHM="true" isPersistable="false" libelle="En défaut"/>
+    <Etat code="1010" isExploitant="true" isHistorisable="true" isInterne="false" isMainteneur="true" isPersistable="true" libelle="Equipement inhibé"/>
+    <Etat code="999990" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Synthese états indeterminés 0"/>
+    <Etat code="999991" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Synthese états indeterminés 1"/>
+    <Etat code="999992" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Synthese états indeterminés 2"/>
+    <Etat code="999993" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Synthese états indeterminés 3"/>
+    <Etat code="999994" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Synthese états indeterminés 4"/>
+    <Etat code="1000000" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Synthese états indeterminés équipements"/>
+    <Etat code="1000001" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 01"/>
+    <Etat code="1000002" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 02"/>
+    <Etat code="1000003" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 03"/>
+    <Etat code="1000004" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 04"/>
+    <Etat code="1000005" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 05"/>
+    <Etat code="1000006" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 06"/>
+    <Etat code="1000007" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 07"/>
+    <Etat code="1000008" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 08"/>
+    <Etat code="1000009" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 09"/>
+    <Etat code="1000010" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 10"/>
+    <Etat code="1000011" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 11"/>
+    <Etat code="1000012" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 12"/>
+    <Etat code="1000013" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 13"/>
+    <Etat code="1000014" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 14"/>
+    <Etat code="1000015" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 15"/>
+    <Etat code="1000016" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 16"/>
+    <Etat code="1000017" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 17"/>
+    <Etat code="1000018" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 18"/>
+    <Etat code="1000019" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 19"/>
+    <Etat code="1000020" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 20"/>
+    <Etat code="1000021" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 21"/>
+    <Etat code="1000022" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 22"/>
+    <Etat code="1000023" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 23"/>
+    <Etat code="1000024" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 24"/>
+    <Etat code="1000025" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 25"/>
+    <Etat code="1000026" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 26"/>
+    <Etat code="1000027" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 27"/>
+    <Etat code="1000028" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 28"/>
+    <Etat code="1000029" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 29"/>
+    <Etat code="1000030" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 30"/>
+    <Etat code="1000031" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 31"/>
+    <Etat code="1000032" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 32"/>
+    <Etat code="1000033" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 33"/>
+    <Etat code="1000034" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 34"/>
+    <Etat code="1000035" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 35"/>
+    <Etat code="1000036" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 36"/>
+    <Etat code="1000037" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 37"/>
+    <Etat code="1000038" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 38"/>
+    <Etat code="1000039" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 39"/>
+    <Etat code="1000040" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 40"/>
+    <Etat code="1000041" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 41"/>
+    <Etat code="1000042" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 42"/>
+    <Etat code="1000043" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 43"/>
+    <Etat code="1000044" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 44"/>
+    <Etat code="1000045" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 45"/>
+    <Etat code="1000046" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 46"/>
+    <Etat code="1000047" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 47"/>
+    <Etat code="1000048" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 48"/>
+    <Etat code="1000049" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 49"/>
+    <Etat code="1000050" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 50"/>
+    <Etat code="1999990" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Synthese etats invisibles 0"/>
+    <Etat code="1999991" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Synthese etats invisibles 1"/>
+    <Etat code="1999992" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Synthese etats invisibles 2"/>
+    <Etat code="1999993" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Synthese etats invisibles 3"/>
+    <Etat code="1999994" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Synthese etats invisibles 4"/>
+    <Etat code="11000000" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Synthese etats invisibles equipements"/>
+    <Etat code="11000001" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 01"/>
+    <Etat code="11000002" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 02"/>
+    <Etat code="11000003" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 03"/>
+    <Etat code="11000004" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 04"/>
+    <Etat code="11000005" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 05"/>
+    <Etat code="11000006" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 06"/>
+    <Etat code="11000007" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 07"/>
+    <Etat code="11000008" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 08"/>
+    <Etat code="11000009" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 09"/>
+    <Etat code="11000010" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 10"/>
+    <Etat code="11000011" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 11"/>
+    <Etat code="11000012" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 12"/>
+    <Etat code="11000013" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 13"/>
+    <Etat code="11000014" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 14"/>
+    <Etat code="11000015" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 15"/>
+    <Etat code="11000016" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 16"/>
+    <Etat code="11000017" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 17"/>
+    <Etat code="11000018" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 18"/>
+    <Etat code="11000019" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 19"/>
+    <Etat code="11000020" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 20"/>
+    <Etat code="11000021" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 21"/>
+    <Etat code="11000022" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 22"/>
+    <Etat code="11000023" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 23"/>
+    <Etat code="11000024" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 24"/>
+    <Etat code="11000025" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 25"/>
+    <Etat code="11000026" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 26"/>
+    <Etat code="11000027" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 27"/>
+    <Etat code="11000028" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 28"/>
+    <Etat code="11000029" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 29"/>
+    <Etat code="11000030" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 30"/>
+    <Etat code="11000031" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 31"/>
+    <Etat code="11000032" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 32"/>
+    <Etat code="11000033" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 33"/>
+    <Etat code="11000034" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 34"/>
+    <Etat code="11000035" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 35"/>
+    <Etat code="11000036" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 36"/>
+    <Etat code="11000037" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 37"/>
+    <Etat code="11000038" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 38"/>
+    <Etat code="11000039" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 39"/>
+    <Etat code="11000040" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 40"/>
+    <Etat code="11000041" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 41"/>
+    <Etat code="11000042" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 42"/>
+    <Etat code="11000043" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 43"/>
+    <Etat code="11000044" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 44"/>
+    <Etat code="11000045" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 45"/>
+    <Etat code="11000046" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 46"/>
+    <Etat code="11000047" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 47"/>
+    <Etat code="11000048" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 48"/>
+    <Etat code="11000049" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 49"/>
+    <Etat code="11000050" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 50"/>
+    <Etat code="1018" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="false" libelle="Identifiant version incorrect (Alarme)"/>
+    <Etat code="1017" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="false" libelle="Identifiant checksum incorrect (Alarme)"/>
+    <Etat code="1005" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="false" libelle="Synchronisation horloge impossible (Alarme)"/>
+    <Etat code="1006" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="false" libelle="Bit de signe de vie manquant (Alarme)"/>
+    <Etat code="1016" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="false" libelle="Identifiant checksum paramètre incorrect"/>
+    <Etat code="1001" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="false" libelle="Identifiant station incorrect (Alarme)"/>
+    <Etat code="1002" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="false" libelle="Identifiant equipement incorrect (Alarme)"/>
+    <Etat code="2" codePublic="2" isExploitant="true" isHistorisable="true" isMainteneur="true" isObligatoireIHM="true" isPersistable="false" libelle="Normal"/>
+    <Etat code="5002" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Echec de commande par NDS (Alarme)"/>
+    <Etat code="5001" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Défaillance d'E/S (Alarme)"/>
+    <Etat code="5003" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Erreur d'E/S locales (Alarme)"/>
+    <Etat code="4" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Perte d'alimentation E/S (Alarme)"/>
+    <Etat code="5004" isExploitant="true" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Mode repli (commandes impossibles) (Alarme)"/>
+    <Etat code="700" isExploitant="true" isHistorisable="true" isMainteneur="false" isPersistable="true" libelle="Défaut API (Alarme)"/>
+    <Etat code="1009" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Commande init impossible (Alarme)"/>
+    <Etat code="1011" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="PEC API impossible (Alarme)"/>
+    <Etat code="5000" isExploitant="false" isHistorisable="false" isMainteneur="false" isPersistable="false" isServeur="true" libelle="API en defaut"/>
+    <Etat code="100" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat du bit de signe de vie"/>
+    <Etat code="101" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Reset API"/>
+    <Etat code="102" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 1"/>
+    <Etat code="103" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 2"/>
+    <Etat code="104" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 3"/>
+    <Etat code="105" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 4"/>
+    <Etat code="106" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 5"/>
+    <Etat code="107" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 6"/>
+    <Etat code="108" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 7"/>
+    <Etat code="109" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 8"/>
+    <Etat code="110" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 9"/>
+    <Etat code="111" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 10"/>
+    <Etat code="112" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 11"/>
+    <Etat code="113" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 12"/>
+    <Etat code="114" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 13"/>
+    <Etat code="115" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 14"/>
+    <Etat code="116" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 15"/>
+    <Etat code="117" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 16"/>
+    <Etat code="118" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 17"/>
+    <Etat code="119" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 18"/>
+    <Etat code="120" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 19"/>
+    <Etat code="121" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 20"/>
+    <Etat code="122" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 21"/>
+    <Etat code="123" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 22"/>
+    <Etat code="124" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 23"/>
+    <Etat code="125" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 24"/>
+    <Etat code="126" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 25"/>
+    <Etat code="127" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 26"/>
+    <Etat code="128" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 27"/>
+    <Etat code="129" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 28"/>
+    <Etat code="130" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 29"/>
+    <Etat code="131" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 30"/>
+    <Etat code="132" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 31"/>
+    <Etat code="133" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 32"/>
+    <Etat code="134" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 33"/>
+    <Etat code="135" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 34"/>
+    <Etat code="136" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 35"/>
+    <Etat code="137" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 36"/>
+    <Etat code="138" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 37"/>
+    <Etat code="139" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 38"/>
+    <Etat code="140" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 39"/>
+    <Etat code="141" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 40"/>
+    <Etat code="142" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 41"/>
+    <Etat code="143" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 42"/>
+    <Etat code="144" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 43"/>
+    <Etat code="145" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 44"/>
+    <Etat code="146" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 45"/>
+    <Etat code="147" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 46"/>
+    <Etat code="148" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 47"/>
+    <Etat code="149" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 48"/>
+    <Etat code="262" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Sortie 1"/>
+    <Etat code="263" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Sortie 2"/>
+    <Etat code="264" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Sortie 3"/>
+    <Etat code="265" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Sortie 4"/>
+    <Etat code="266" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Sortie 5"/>
+    <Etat code="267" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Sortie 6"/>
+    <Etat code="268" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Sortie 7"/>
+    <Etat code="269" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Sortie 8"/>
+    <Etat code="270" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Sortie 9"/>
+    <Etat code="271" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Sortie 10"/>
+    <Etat code="272" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Sortie 11"/>
+    <Etat code="273" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Sortie 12"/>
+    <Etat code="274" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Sortie 13"/>
+    <Etat code="275" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Sortie 14"/>
+    <Etat code="276" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Sortie 15"/>
+    <Etat code="277" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Sortie 16"/>
+    <Etat code="150" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 49"/>
+    <Etat code="151" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 50"/>
+    <Etat code="152" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 51"/>
+    <Etat code="153" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 52"/>
+    <Etat code="154" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 53"/>
+    <Etat code="155" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 54"/>
+    <Etat code="156" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 55"/>
+    <Etat code="157" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 56"/>
+    <Etat code="158" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 57"/>
+    <Etat code="159" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 58"/>
+    <Etat code="160" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 59"/>
+    <Etat code="161" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 60"/>
+    <Etat code="162" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 61"/>
+    <Etat code="163" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 62"/>
+    <Etat code="164" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 63"/>
+    <Etat code="165" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 64"/>
+    <Etat code="166" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 65"/>
+    <Etat code="167" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 66"/>
+    <Etat code="168" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 67"/>
+    <Etat code="169" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 68"/>
+    <Etat code="170" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 69"/>
+    <Etat code="171" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 70"/>
+    <Etat code="172" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 71"/>
+    <Etat code="173" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 72"/>
+    <Etat code="174" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 73"/>
+    <Etat code="175" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 74"/>
+    <Etat code="176" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 75"/>
+    <Etat code="177" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 76"/>
+    <Etat code="178" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 77"/>
+    <Etat code="179" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 78"/>
+    <Etat code="180" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 79"/>
+    <Etat code="181" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 80"/>
+    <Etat code="182" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 81"/>
+    <Etat code="183" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 82"/>
+    <Etat code="184" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 83"/>
+    <Etat code="185" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 84"/>
+    <Etat code="186" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 85"/>
+    <Etat code="187" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 86"/>
+    <Etat code="188" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 87"/>
+    <Etat code="189" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 88"/>
+    <Etat code="190" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 89"/>
+    <Etat code="191" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 90"/>
+    <Etat code="192" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 91"/>
+    <Etat code="193" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 92"/>
+    <Etat code="194" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 93"/>
+    <Etat code="195" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 94"/>
+    <Etat code="196" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 95"/>
+    <Etat code="197" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 96"/>
+    <Etat code="278" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Sortie 17"/>
+    <Etat code="279" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Sortie 18"/>
+    <Etat code="280" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Sortie 19"/>
+    <Etat code="281" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Sortie 20"/>
+    <Etat code="282" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Sortie 21"/>
+    <Etat code="283" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Sortie 22"/>
+    <Etat code="284" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Sortie 23"/>
+    <Etat code="285" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Sortie 24"/>
+    <Etat code="286" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Sortie 25"/>
+    <Etat code="287" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Sortie 26"/>
+    <Etat code="288" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Sortie 27"/>
+    <Etat code="289" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Sortie 28"/>
+    <Etat code="290" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Sortie 29"/>
+    <Etat code="291" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Sortie 30"/>
+    <Etat code="292" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Sortie 31"/>
+    <Etat code="293" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Sortie 32"/>
+    <Etat code="198" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 97"/>
+    <Etat code="199" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 98"/>
+    <Etat code="200" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 99"/>
+    <Etat code="201" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 100"/>
+    <Etat code="202" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 101"/>
+    <Etat code="203" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 102"/>
+    <Etat code="204" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 103"/>
+    <Etat code="205" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 104"/>
+    <Etat code="206" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 105"/>
+    <Etat code="207" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 106"/>
+    <Etat code="208" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 107"/>
+    <Etat code="209" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 108"/>
+    <Etat code="210" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 109"/>
+    <Etat code="211" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 110"/>
+    <Etat code="212" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 111"/>
+    <Etat code="213" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 112"/>
+    <Etat code="214" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 113"/>
+    <Etat code="215" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 114"/>
+    <Etat code="216" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 115"/>
+    <Etat code="217" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 116"/>
+    <Etat code="218" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 117"/>
+    <Etat code="219" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 118"/>
+    <Etat code="220" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 119"/>
+    <Etat code="221" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 120"/>
+    <Etat code="222" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 121"/>
+    <Etat code="223" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 122"/>
+    <Etat code="224" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 123"/>
+    <Etat code="225" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 124"/>
+    <Etat code="226" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 125"/>
+    <Etat code="227" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 126"/>
+    <Etat code="228" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 127"/>
+    <Etat code="229" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 128"/>
+    <Etat code="230" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 129"/>
+    <Etat code="231" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 130"/>
+    <Etat code="232" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 131"/>
+    <Etat code="233" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 132"/>
+    <Etat code="234" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 133"/>
+    <Etat code="235" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 134"/>
+    <Etat code="236" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 135"/>
+    <Etat code="237" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 136"/>
+    <Etat code="238" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 137"/>
+    <Etat code="239" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 138"/>
+    <Etat code="240" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 139"/>
+    <Etat code="241" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 140"/>
+    <Etat code="242" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 141"/>
+    <Etat code="243" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 142"/>
+    <Etat code="244" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 143"/>
+    <Etat code="245" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 144"/>
+    <Etat code="246" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 145"/>
+    <Etat code="247" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 146"/>
+    <Etat code="248" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 147"/>
+    <Etat code="249" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 148"/>
+    <Etat code="250" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 149"/>
+    <Etat code="251" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 150"/>
+    <Etat code="252" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 151"/>
+    <Etat code="253" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 152"/>
+    <Etat code="254" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 153"/>
+    <Etat code="255" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 154"/>
+    <Etat code="256" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 155"/>
+    <Etat code="257" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 156"/>
+    <Etat code="258" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 157"/>
+    <Etat code="259" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 158"/>
+    <Etat code="260" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 159"/>
+    <Etat code="261" isHistorisable="false" isInterne="true" isPersistable="false" isServeur="true" libelle="Etat Entree 160"/>
+    <Etat code="11250" isExploitant="false" isHistorisable="true" isMainteneur="false" isPersistable="true" isServeur="false" libelle="interm. : défaut ou entretien ou indéterminé"/>
+    <Alarme code="1014" codePublic="1014" isExploitant="true" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Inhibition" type="Alarme"/>
+    <Alarme code="999990" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Synthese alarmes chaines fonctionnelles 0" type="Alarme"/>
+    <Alarme code="999991" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Synthese alarmes chaines fonctionnelles 1" type="Alarme"/>
+    <Alarme code="999992" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Synthese alarmes chaines fonctionnelles 2" type="Alarme"/>
+    <Alarme code="999993" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Synthese alarmes chaines fonctionnelles 3" type="Alarme"/>
+    <Alarme code="999994" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Synthese alarmes chaines fonctionnelles 4" type="Alarme"/>
+    <Alarme code="999999" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Synthese probleme liaison" type="Alarme"/>
+    <Alarme code="1000000" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Synthese alarmes chaines fonctionnelles" type="Alarme"/>
+    <Alarme code="1000001" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 01" type="Alarme"/>
+    <Alarme code="1000002" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 02" type="Alarme"/>
+    <Alarme code="1000003" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 03" type="Alarme"/>
+    <Alarme code="1000004" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 04" type="Alarme"/>
+    <Alarme code="1000005" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 05" type="Alarme"/>
+    <Alarme code="1000006" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 06" type="Alarme"/>
+    <Alarme code="1000007" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 07" type="Alarme"/>
+    <Alarme code="1000008" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 08" type="Alarme"/>
+    <Alarme code="1000009" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 09" type="Alarme"/>
+    <Alarme code="1000010" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 10" type="Alarme"/>
+    <Alarme code="1000011" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 11" type="Alarme"/>
+    <Alarme code="1000012" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 12" type="Alarme"/>
+    <Alarme code="1000013" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 13" type="Alarme"/>
+    <Alarme code="1000014" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 14" type="Alarme"/>
+    <Alarme code="1000015" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 15" type="Alarme"/>
+    <Alarme code="1000016" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 16" type="Alarme"/>
+    <Alarme code="1000017" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 17" type="Alarme"/>
+    <Alarme code="1000018" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 18" type="Alarme"/>
+    <Alarme code="1000019" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 19" type="Alarme"/>
+    <Alarme code="1000020" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 20" type="Alarme"/>
+    <Alarme code="1000021" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 21" type="Alarme"/>
+    <Alarme code="1000022" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 22" type="Alarme"/>
+    <Alarme code="1000023" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 23" type="Alarme"/>
+    <Alarme code="1000024" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 24" type="Alarme"/>
+    <Alarme code="1000025" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 25" type="Alarme"/>
+    <Alarme code="1000026" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 26" type="Alarme"/>
+    <Alarme code="1000027" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 27" type="Alarme"/>
+    <Alarme code="1000028" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 28" type="Alarme"/>
+    <Alarme code="1000029" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 29" type="Alarme"/>
+    <Alarme code="1000030" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 30" type="Alarme"/>
+    <Alarme code="1000031" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 31" type="Alarme"/>
+    <Alarme code="1000032" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 32" type="Alarme"/>
+    <Alarme code="1000033" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 33" type="Alarme"/>
+    <Alarme code="1000034" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 34" type="Alarme"/>
+    <Alarme code="1000035" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 35" type="Alarme"/>
+    <Alarme code="1000036" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 36" type="Alarme"/>
+    <Alarme code="1000037" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 37" type="Alarme"/>
+    <Alarme code="1000038" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 38" type="Alarme"/>
+    <Alarme code="1000039" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 39" type="Alarme"/>
+    <Alarme code="1000040" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 40" type="Alarme"/>
+    <Alarme code="1000041" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 41" type="Alarme"/>
+    <Alarme code="1000042" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 42" type="Alarme"/>
+    <Alarme code="1000043" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 43" type="Alarme"/>
+    <Alarme code="1000044" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 44" type="Alarme"/>
+    <Alarme code="1000045" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 45" type="Alarme"/>
+    <Alarme code="1000046" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 46" type="Alarme"/>
+    <Alarme code="1000047" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 47" type="Alarme"/>
+    <Alarme code="1000048" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 48" type="Alarme"/>
+    <Alarme code="1000049" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 49" type="Alarme"/>
+    <Alarme code="1000050" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 50" type="Alarme"/>
+    <Alarme code="0" isExploitant="true" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Erreur de communication" type="Alarme"/>
+    <Alarme code="1000" codePublic="1000" isExploitant="true" isHistorisable="true" isMainteneur="true" isPersistable="false" libelle="Erreur de communication equipement" type="Alarme"/>
+    <Alarme code="500001" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Echec de commande par NDS (Alarme)" type="Alarme"/>
+    <Alarme code="500002" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Défaillance d'E/S (Alarme)" type="Alarme"/>
+    <Alarme code="500003" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Erreur d'E/S locales (Alarme)" type="Alarme"/>
+    <Alarme code="500004" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Perte d'alimentation E/S (Alarme)" type="Alarme"/>
+    <Alarme code="500700" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="En défaut" type="Alarme"/>
+    <Alarme code="501001" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Identifiant station incorrect (Alarme)" type="Alarme"/>
+    <Alarme code="501002" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Identifiant equipement incorrect (Alarme)" type="Alarme"/>
+    <Alarme code="501003" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Identifiant version incorrect (Alarme)" type="Alarme"/>
+    <Alarme code="501004" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Identifiant checksum incorrect (Alarme)" type="Alarme"/>
+    <Alarme code="501005" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Synchronisation horloge impossible (Alarme)" type="Alarme"/>
+    <Alarme code="501006" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Bit de signe de vie manquant (Alarme)" type="Alarme"/>
+    <Alarme code="501016" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Identifiant checksum paramètre incorrect" type="Alarme"/>
+    <Commande code="1201" codePublic="1201" isExploitant="false" isHistorisable="true" isMainteneur="true" libelle="Prise en compte des parametres de maintenance" timeOut="0"/>
+    <Commande code="1022" codePublic="1022" isExploitant="false" isHistorisable="true" isMainteneur="true" libelle="Lire mots modbus" paramSigEntete="II" timeOut="0"/>
+    <Commande code="1023" codePublic="1023" isExploitant="false" isHistorisable="true" isMainteneur="true" libelle="Ecrire mots modbus" paramSigCorps="I" paramSigEntete="II" timeOut="0"/>
+    <Commande code="1100" codePublic="1100" isExploitant="true" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Inhibition" paramSigEntete="I"/>
+    <Commande code="1500" isExploitant="true" isHistorisable="true" isMainteneur="true" libelle="Depeche emise"/>
+    <Commande code="1501" isExploitant="true" isHistorisable="false" isMainteneur="true" libelle="Modification etat Depche" paramSigEntete="II"/>
+    <Commande code="1000" isExploitant="false" isHistorisable="false" isMainteneur="false" isServeur="true" libelle="Réarmement bit de signe de vie " timeOut="0"/>
+    <Commande code="1020" codePublic="1020" isExploitant="false" isHistorisable="true" isMainteneur="true" libelle="Stats Automate modbus" timeOut="0"/>
+    <Commande code="1021" codePublic="1021" isExploitant="false" isHistorisable="true" isMainteneur="true" libelle="Stats Ligne modbus" timeOut="0"/>
+    <Commande code="1024" codePublic="1024" isExploitant="false" isHistorisable="true" isMainteneur="true" libelle="Raz stats ligne" timeOut="0"/>
+    <Commande code="1025" codePublic="1025" isExploitant="false" isHistorisable="true" isMainteneur="true" libelle="Raz stats automate" timeOut="0"/>
+    <Commande code="1200" codePublic="1200" isExploitant="false" isHistorisable="true" isMainteneur="true" libelle="Mise à jour Identifiant" paramSigEntete="II" timeOut="0"/>
+    <Commande code="1" codePublic="1" isExploitant="false" isHistorisable="true" isMainteneur="true" libelle="Reset API" timeOut="0"/>
+    <Commande code="2" isExploitant="false" isHistorisable="false" isMainteneur="false" isServeur="true" libelle="Prise en compte paramètres maintenance" timeOut="0"/>
+    <Commande code="3" isExploitant="false" isHistorisable="true" isMainteneur="false" isServeur="true" libelle="Lecture Faite Toutes Entrees" timeOut="0"/>
+    <Commande code="4" isExploitant="false" isHistorisable="true" isMainteneur="false" isServeur="true" libelle="Lecture Faite Toutes Alarmes" timeOut="0"/>
+    <Commande code="5" isExploitant="false" isHistorisable="true" isMainteneur="false" isServeur="true" libelle="Lecture Faite Autres Etats" timeOut="0"/>
+    <Commande code="10001" isHistorisable="false" isServeur="true" libelle="Cmd Sortie 1" paramSigEntete="I" timeOut="0"/>
+    <Commande code="10002" isHistorisable="false" isServeur="true" libelle="Cmd Sortie 2" paramSigEntete="I" timeOut="0"/>
+    <Commande code="10003" isHistorisable="false" isServeur="true" libelle="Cmd Sortie 3" paramSigEntete="I" timeOut="0"/>
+    <Commande code="10004" isHistorisable="false" isServeur="true" libelle="Cmd Sortie 4" paramSigEntete="I" timeOut="0"/>
+    <Commande code="10005" isHistorisable="false" isServeur="true" libelle="Cmd Sortie 5" paramSigEntete="I" timeOut="0"/>
+    <Commande code="10006" isHistorisable="false" isServeur="true" libelle="Cmd Sortie 6" paramSigEntete="I" timeOut="0"/>
+    <Commande code="10007" isHistorisable="false" isServeur="true" libelle="Cmd Sortie 7" paramSigEntete="I" timeOut="0"/>
+    <Commande code="10008" isHistorisable="false" isServeur="true" libelle="Cmd Sortie 8" paramSigEntete="I" timeOut="0"/>
+    <Commande code="10009" isHistorisable="false" isServeur="true" libelle="Cmd Sortie 9" paramSigEntete="I" timeOut="0"/>
+    <Commande code="10010" isHistorisable="false" isServeur="true" libelle="Cmd Sortie 10" paramSigEntete="I" timeOut="0"/>
+    <Commande code="10011" isHistorisable="false" isServeur="true" libelle="Cmd Sortie 11" paramSigEntete="I" timeOut="0"/>
+    <Commande code="10012" isHistorisable="false" isServeur="true" libelle="Cmd Sortie 12" paramSigEntete="I" timeOut="0"/>
+    <Commande code="10013" isHistorisable="false" isServeur="true" libelle="Cmd Sortie 13" paramSigEntete="I" timeOut="0"/>
+    <Commande code="10014" isHistorisable="false" isServeur="true" libelle="Cmd Sortie 14" paramSigEntete="I" timeOut="0"/>
+    <Commande code="10015" isHistorisable="false" isServeur="true" libelle="Cmd Sortie 15" paramSigEntete="I" timeOut="0"/>
+    <Commande code="10016" isHistorisable="false" isServeur="true" libelle="Cmd Sortie 16" paramSigEntete="I" timeOut="0"/>
+    <Commande code="10017" isHistorisable="false" isServeur="true" libelle="Cmd Sortie 17" paramSigEntete="I" timeOut="0"/>
+    <Commande code="10018" isHistorisable="false" isServeur="true" libelle="Cmd Sortie 18" paramSigEntete="I" timeOut="0"/>
+    <Commande code="10019" isHistorisable="false" isServeur="true" libelle="Cmd Sortie 19" paramSigEntete="I" timeOut="0"/>
+    <Commande code="10020" isHistorisable="false" isServeur="true" libelle="Cmd Sortie 20" paramSigEntete="I" timeOut="0"/>
+    <Commande code="10021" isHistorisable="false" isServeur="true" libelle="Cmd Sortie 21" paramSigEntete="I" timeOut="0"/>
+    <Commande code="10022" isHistorisable="false" isServeur="true" libelle="Cmd Sortie 22" paramSigEntete="I" timeOut="0"/>
+    <Commande code="10023" isHistorisable="false" isServeur="true" libelle="Cmd Sortie 23" paramSigEntete="I" timeOut="0"/>
+    <Commande code="10024" isHistorisable="false" isServeur="true" libelle="Cmd Sortie 24" paramSigEntete="I" timeOut="0"/>
+    <Commande code="10025" isHistorisable="false" isServeur="true" libelle="Cmd Sortie 25" paramSigEntete="I" timeOut="0"/>
+    <Commande code="10026" isHistorisable="false" isServeur="true" libelle="Cmd Sortie 26" paramSigEntete="I" timeOut="0"/>
+    <Commande code="10027" isHistorisable="false" isServeur="true" libelle="Cmd Sortie 27" paramSigEntete="I" timeOut="0"/>
+    <Commande code="10028" isHistorisable="false" isServeur="true" libelle="Cmd Sortie 28" paramSigEntete="I" timeOut="0"/>
+    <Commande code="10029" isHistorisable="false" isServeur="true" libelle="Cmd Sortie 29" paramSigEntete="I" timeOut="0"/>
+    <Commande code="10030" isHistorisable="false" isServeur="true" libelle="Cmd Sortie 30" paramSigEntete="I" timeOut="0"/>
+    <Commande code="10031" isHistorisable="false" isServeur="true" libelle="Cmd Sortie 31" paramSigEntete="I" timeOut="0"/>
+    <Commande code="10032" isHistorisable="false" isServeur="true" libelle="Cmd Sortie 32" paramSigEntete="I" timeOut="0"/>
+    <CommandeServiceIHM code="10" codeService="ServiceVideo" isExploitant="true" isHistorisable="true" isMainteneur="true" libelle="Vidéo" timeOut="2000"/>
+    <CommandeServiceIHM code="11" codeService="ServiceVideo" isExploitant="true" isHistorisable="true" isMainteneur="true" libelle="Mettre au noir" timeOut="2000"/>
+    <Mesure code="1" codePublic="1" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="false" libelle="Identifiant ligne station"/>
+    <Mesure code="2" codePublic="2" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="false" libelle="Identifiant type equipement"/>
+    <Mesure code="3" codePublic="3" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="false" libelle="Identifiant version"/>
+    <Mesure code="4" codePublic="4" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="false" libelle="Identifiant checksum"/>
+    <Mesure code="5" codePublic="5" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="false" libelle="Identifiant checksum maintenance"/>
+    <Information code="1" isExploitant="true" isInterne="true" isMainteneur="true" isObligatoireIHM="true" libelle="caméras associées"/>
+    <AccesEtatMaestro codeDistant="bit_etat_bit_signe_de_vie" codeLocal="100"/>
+    <AccesEtatMaestro codeDistant="bit_etat_reset_api" codeLocal="101"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_1" codeLocal="102"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_2" codeLocal="103"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_3" codeLocal="104"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_4" codeLocal="105"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_5" codeLocal="106"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_6" codeLocal="107"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_7" codeLocal="108"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_8" codeLocal="109"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_9" codeLocal="110"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_10" codeLocal="111"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_11" codeLocal="112"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_12" codeLocal="113"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_13" codeLocal="114"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_14" codeLocal="115"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_15" codeLocal="116"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_16" codeLocal="117"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_17" codeLocal="118"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_18" codeLocal="119"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_19" codeLocal="120"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_20" codeLocal="121"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_21" codeLocal="122"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_22" codeLocal="123"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_23" codeLocal="124"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_24" codeLocal="125"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_25" codeLocal="126"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_26" codeLocal="127"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_27" codeLocal="128"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_28" codeLocal="129"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_29" codeLocal="130"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_30" codeLocal="131"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_31" codeLocal="132"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_32" codeLocal="133"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_33" codeLocal="134"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_34" codeLocal="135"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_35" codeLocal="136"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_36" codeLocal="137"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_37" codeLocal="138"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_38" codeLocal="139"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_39" codeLocal="140"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_40" codeLocal="141"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_41" codeLocal="142"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_42" codeLocal="143"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_43" codeLocal="144"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_44" codeLocal="145"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_45" codeLocal="146"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_46" codeLocal="147"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_47" codeLocal="148"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_48" codeLocal="149"/>
+    <AccesEtatMaestro codeDistant="bit_etat_sortie_1" codeLocal="262"/>
+    <AccesEtatMaestro codeDistant="bit_etat_sortie_2" codeLocal="263"/>
+    <AccesEtatMaestro codeDistant="bit_etat_sortie_3" codeLocal="264"/>
+    <AccesEtatMaestro codeDistant="bit_etat_sortie_4" codeLocal="265"/>
+    <AccesEtatMaestro codeDistant="bit_etat_sortie_5" codeLocal="266"/>
+    <AccesEtatMaestro codeDistant="bit_etat_sortie_6" codeLocal="267"/>
+    <AccesEtatMaestro codeDistant="bit_etat_sortie_7" codeLocal="268"/>
+    <AccesEtatMaestro codeDistant="bit_etat_sortie_8" codeLocal="269"/>
+    <AccesEtatMaestro codeDistant="bit_etat_sortie_9" codeLocal="270"/>
+    <AccesEtatMaestro codeDistant="bit_etat_sortie_10" codeLocal="271"/>
+    <AccesEtatMaestro codeDistant="bit_etat_sortie_11" codeLocal="272"/>
+    <AccesEtatMaestro codeDistant="bit_etat_sortie_12" codeLocal="273"/>
+    <AccesEtatMaestro codeDistant="bit_etat_sortie_13" codeLocal="274"/>
+    <AccesEtatMaestro codeDistant="bit_etat_sortie_14" codeLocal="275"/>
+    <AccesEtatMaestro codeDistant="bit_etat_sortie_15" codeLocal="276"/>
+    <AccesEtatMaestro codeDistant="bit_etat_sortie_16" codeLocal="277"/>
+    <AccesEtatMaestro codeDistant="bit_alarm_echec_command_nds" codeLocal="5002"/>
+    <AccesEtatMaestro codeDistant="bit_alarm_defaillance_es" codeLocal="5001"/>
+    <AccesEtatMaestro codeDistant="bit_alarm_erreur_es_locales" codeLocal="5003"/>
+    <AccesEtatMaestro codeDistant="bit_alarm_perte_alim_es" codeLocal="4"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_49" codeLocal="150"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_50" codeLocal="151"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_51" codeLocal="152"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_52" codeLocal="153"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_53" codeLocal="154"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_54" codeLocal="155"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_55" codeLocal="156"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_56" codeLocal="157"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_57" codeLocal="158"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_58" codeLocal="159"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_59" codeLocal="160"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_60" codeLocal="161"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_61" codeLocal="162"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_62" codeLocal="163"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_63" codeLocal="164"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_64" codeLocal="165"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_65" codeLocal="166"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_66" codeLocal="167"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_67" codeLocal="168"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_68" codeLocal="169"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_69" codeLocal="170"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_70" codeLocal="171"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_71" codeLocal="172"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_72" codeLocal="173"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_73" codeLocal="174"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_74" codeLocal="175"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_75" codeLocal="176"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_76" codeLocal="177"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_77" codeLocal="178"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_78" codeLocal="179"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_79" codeLocal="180"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_80" codeLocal="181"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_81" codeLocal="182"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_82" codeLocal="183"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_83" codeLocal="184"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_84" codeLocal="185"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_85" codeLocal="186"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_86" codeLocal="187"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_87" codeLocal="188"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_88" codeLocal="189"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_89" codeLocal="190"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_90" codeLocal="191"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_91" codeLocal="192"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_92" codeLocal="193"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_93" codeLocal="194"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_94" codeLocal="195"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_95" codeLocal="196"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_96" codeLocal="197"/>
+    <AccesEtatMaestro codeDistant="bit_etat_sortie_17" codeLocal="278"/>
+    <AccesEtatMaestro codeDistant="bit_etat_sortie_18" codeLocal="279"/>
+    <AccesEtatMaestro codeDistant="bit_etat_sortie_19" codeLocal="280"/>
+    <AccesEtatMaestro codeDistant="bit_etat_sortie_20" codeLocal="281"/>
+    <AccesEtatMaestro codeDistant="bit_etat_sortie_21" codeLocal="282"/>
+    <AccesEtatMaestro codeDistant="bit_etat_sortie_22" codeLocal="283"/>
+    <AccesEtatMaestro codeDistant="bit_etat_sortie_23" codeLocal="284"/>
+    <AccesEtatMaestro codeDistant="bit_etat_sortie_24" codeLocal="285"/>
+    <AccesEtatMaestro codeDistant="bit_etat_sortie_25" codeLocal="286"/>
+    <AccesEtatMaestro codeDistant="bit_etat_sortie_26" codeLocal="287"/>
+    <AccesEtatMaestro codeDistant="bit_etat_sortie_27" codeLocal="288"/>
+    <AccesEtatMaestro codeDistant="bit_etat_sortie_28" codeLocal="289"/>
+    <AccesEtatMaestro codeDistant="bit_etat_sortie_29" codeLocal="290"/>
+    <AccesEtatMaestro codeDistant="bit_etat_sortie_30" codeLocal="291"/>
+    <AccesEtatMaestro codeDistant="bit_etat_sortie_31" codeLocal="292"/>
+    <AccesEtatMaestro codeDistant="bit_etat_sortie_32" codeLocal="293"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_97" codeLocal="198"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_98" codeLocal="199"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_99" codeLocal="200"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_100" codeLocal="201"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_101" codeLocal="202"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_102" codeLocal="203"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_103" codeLocal="204"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_104" codeLocal="205"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_105" codeLocal="206"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_106" codeLocal="207"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_107" codeLocal="208"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_108" codeLocal="209"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_109" codeLocal="210"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_110" codeLocal="211"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_111" codeLocal="212"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_112" codeLocal="213"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_113" codeLocal="214"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_114" codeLocal="215"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_115" codeLocal="216"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_116" codeLocal="217"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_117" codeLocal="218"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_118" codeLocal="219"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_119" codeLocal="220"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_120" codeLocal="221"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_121" codeLocal="222"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_122" codeLocal="223"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_123" codeLocal="224"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_124" codeLocal="225"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_125" codeLocal="226"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_126" codeLocal="227"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_127" codeLocal="228"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_128" codeLocal="229"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_129" codeLocal="230"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_130" codeLocal="231"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_131" codeLocal="232"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_132" codeLocal="233"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_133" codeLocal="234"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_134" codeLocal="235"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_135" codeLocal="236"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_136" codeLocal="237"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_137" codeLocal="238"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_138" codeLocal="239"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_139" codeLocal="240"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_140" codeLocal="241"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_141" codeLocal="242"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_142" codeLocal="243"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_143" codeLocal="244"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_144" codeLocal="245"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_145" codeLocal="246"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_146" codeLocal="247"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_147" codeLocal="248"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_148" codeLocal="249"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_149" codeLocal="250"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_150" codeLocal="251"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_151" codeLocal="252"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_152" codeLocal="253"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_153" codeLocal="254"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_154" codeLocal="255"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_155" codeLocal="256"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_156" codeLocal="257"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_157" codeLocal="258"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_158" codeLocal="259"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_159" codeLocal="260"/>
+    <AccesEtatMaestro codeDistant="bit_etat_entree_160" codeLocal="261"/>
+    <AccesCommandeMaestro codeDistant="bit_commande_reset_API" codeLocal="1" type="1"/>
+    <AccesCommandeMaestro codeDistant="bit_commande_prise_en_compte_maintenance" codeLocal="2" type="1"/>
+    <AccesCommandeMaestro codeDistant="bit_commande_lecture_faite_de_toutes_les_entrees" codeLocal="3" type="1"/>
+    <AccesCommandeMaestro codeDistant="bit_commande_lecture_faite_de_toutes_les_alarmes" codeLocal="4" type="1"/>
+    <AccesCommandeMaestro codeDistant="bit_commande_lecture_faite_de_tous_les_autres_etats" codeLocal="5" type="1"/>
+    <AccesCommandeMaestro codeDistant="bit_commande_rearmement_bit_signe_de_vie" codeLocal="1000" type="1"/>
+    <AccesCommandeMaestro codeDistant="bit_commande_sortie_1" codeLocal="10001" type="3"/>
+    <AccesCommandeMaestro codeDistant="bit_commande_sortie_2" codeLocal="10002" type="3"/>
+    <AccesCommandeMaestro codeDistant="bit_commande_sortie_3" codeLocal="10003" type="3"/>
+    <AccesCommandeMaestro codeDistant="bit_commande_sortie_4" codeLocal="10004" type="3"/>
+    <AccesCommandeMaestro codeDistant="bit_commande_sortie_5" codeLocal="10005" type="3"/>
+    <AccesCommandeMaestro codeDistant="bit_commande_sortie_6" codeLocal="10006" type="3"/>
+    <AccesCommandeMaestro codeDistant="bit_commande_sortie_7" codeLocal="10007" type="3"/>
+    <AccesCommandeMaestro codeDistant="bit_commande_sortie_8" codeLocal="10008" type="3"/>
+    <AccesCommandeMaestro codeDistant="bit_commande_sortie_9" codeLocal="10009" type="3"/>
+    <AccesCommandeMaestro codeDistant="bit_commande_sortie_10" codeLocal="10010" type="3"/>
+    <AccesCommandeMaestro codeDistant="bit_commande_sortie_11" codeLocal="10011" type="3"/>
+    <AccesCommandeMaestro codeDistant="bit_commande_sortie_12" codeLocal="10012" type="3"/>
+    <AccesCommandeMaestro codeDistant="bit_commande_sortie_13" codeLocal="10013" type="3"/>
+    <AccesCommandeMaestro codeDistant="bit_commande_sortie_14" codeLocal="10014" type="3"/>
+    <AccesCommandeMaestro codeDistant="bit_commande_sortie_15" codeLocal="10015" type="3"/>
+    <AccesCommandeMaestro codeDistant="bit_commande_sortie_16" codeLocal="10016" type="3"/>
+    <AccesCommandeMaestro codeDistant="bit_commande_sortie_17" codeLocal="10017" type="3"/>
+    <AccesCommandeMaestro codeDistant="bit_commande_sortie_18" codeLocal="10018" type="3"/>
+    <AccesCommandeMaestro codeDistant="bit_commande_sortie_19" codeLocal="10019" type="3"/>
+    <AccesCommandeMaestro codeDistant="bit_commande_sortie_20" codeLocal="10020" type="3"/>
+    <AccesCommandeMaestro codeDistant="bit_commande_sortie_21" codeLocal="10021" type="3"/>
+    <AccesCommandeMaestro codeDistant="bit_commande_sortie_22" codeLocal="10022" type="3"/>
+    <AccesCommandeMaestro codeDistant="bit_commande_sortie_23" codeLocal="10023" type="3"/>
+    <AccesCommandeMaestro codeDistant="bit_commande_sortie_24" codeLocal="10024" type="3"/>
+    <AccesCommandeMaestro codeDistant="bit_commande_sortie_25" codeLocal="10025" type="3"/>
+    <AccesCommandeMaestro codeDistant="bit_commande_sortie_26" codeLocal="10026" type="3"/>
+    <AccesCommandeMaestro codeDistant="bit_commande_sortie_27" codeLocal="10027" type="3"/>
+    <AccesCommandeMaestro codeDistant="bit_commande_sortie_28" codeLocal="10028" type="3"/>
+    <AccesCommandeMaestro codeDistant="bit_commande_sortie_29" codeLocal="10029" type="3"/>
+    <AccesCommandeMaestro codeDistant="bit_commande_sortie_30" codeLocal="10030" type="3"/>
+    <AccesCommandeMaestro codeDistant="bit_commande_sortie_31" codeLocal="10031" type="3"/>
+    <AccesCommandeMaestro codeDistant="bit_commande_sortie_32" codeLocal="10032" type="3"/>
+    <AccesMesureMaestro codeDistant="mot_id_ligne_station" codeLocal="1"/>
+    <AccesMesureMaestro codeDistant="mot_id_type_numero_equipement" codeLocal="2"/>
+    <AccesMesureMaestro codeDistant="mot_id_version_programme" codeLocal="3"/>
+    <AccesMesureMaestro codeDistant="mot_id_checksum" codeLocal="4"/>
+    <AccesMesureMaestro codeDistant="mot_id_checksum_maintenance" codeLocal="5"/>
+    <AccesIdentifiantMaestro codeDistant="mot_id_ligne_station" codeLocal="station"/>
+    <AccesIdentifiantMaestro codeDistant="mot_id_type_numero_equipement" codeLocal="equipement"/>
+    <AccesIdentifiantMaestro codeDistant="mot_id_version_programme" codeLocal="version"/>
+    <AccesIdentifiantMaestro codeDistant="mot_id_checksum" codeLocal="checksum"/>
+    <AccesIdentifiantMaestro codeDistant="mot_id_checksum_maintenance" codeLocal="checksumParametre"/>
+    <AccesEtatValeur code="1000001" valeur="0"/>
+    <AccesEtatValeur code="1000002" valeur="0"/>
+    <AccesEtatValeur code="1000003" valeur="0"/>
+    <AccesEtatValeur code="1000004" valeur="0"/>
+    <AccesEtatValeur code="1000005" valeur="0"/>
+    <AccesEtatValeur code="1000006" valeur="0"/>
+    <AccesEtatValeur code="1000007" valeur="0"/>
+    <AccesEtatValeur code="1000008" valeur="0"/>
+    <AccesEtatValeur code="1000009" valeur="0"/>
+    <AccesEtatValeur code="1000010" valeur="0"/>
+    <AccesEtatValeur code="1000011" valeur="0"/>
+    <AccesEtatValeur code="1000012" valeur="0"/>
+    <AccesEtatValeur code="1000013" valeur="0"/>
+    <AccesEtatValeur code="1000014" valeur="0"/>
+    <AccesEtatValeur code="1000015" valeur="0"/>
+    <AccesEtatValeur code="1000016" valeur="0"/>
+    <AccesEtatValeur code="1000017" valeur="0"/>
+    <AccesEtatValeur code="1000018" valeur="0"/>
+    <AccesEtatValeur code="1000019" valeur="0"/>
+    <AccesEtatValeur code="1000020" valeur="0"/>
+    <AccesEtatValeur code="1000021" valeur="0"/>
+    <AccesEtatValeur code="1000022" valeur="0"/>
+    <AccesEtatValeur code="1000023" valeur="0"/>
+    <AccesEtatValeur code="1000024" valeur="0"/>
+    <AccesEtatValeur code="1000025" valeur="0"/>
+    <AccesEtatValeur code="1000026" valeur="0"/>
+    <AccesEtatValeur code="1000027" valeur="0"/>
+    <AccesEtatValeur code="1000028" valeur="0"/>
+    <AccesEtatValeur code="1000029" valeur="0"/>
+    <AccesEtatValeur code="1000030" valeur="0"/>
+    <AccesEtatValeur code="1000031" valeur="0"/>
+    <AccesEtatValeur code="1000032" valeur="0"/>
+    <AccesEtatValeur code="1000033" valeur="0"/>
+    <AccesEtatValeur code="1000034" valeur="0"/>
+    <AccesEtatValeur code="1000035" valeur="0"/>
+    <AccesEtatValeur code="1000036" valeur="0"/>
+    <AccesEtatValeur code="1000037" valeur="0"/>
+    <AccesEtatValeur code="1000038" valeur="0"/>
+    <AccesEtatValeur code="1000039" valeur="0"/>
+    <AccesEtatValeur code="1000040" valeur="0"/>
+    <AccesEtatValeur code="1000041" valeur="0"/>
+    <AccesEtatValeur code="1000042" valeur="0"/>
+    <AccesEtatValeur code="1000043" valeur="0"/>
+    <AccesEtatValeur code="1000044" valeur="0"/>
+    <AccesEtatValeur code="1000045" valeur="0"/>
+    <AccesEtatValeur code="1000046" valeur="0"/>
+    <AccesEtatValeur code="1000047" valeur="0"/>
+    <AccesEtatValeur code="1000048" valeur="0"/>
+    <AccesEtatValeur code="1000049" valeur="0"/>
+    <AccesEtatValeur code="1000050" valeur="0"/>
+    <AccesEtatValeur code="11000001" valeur="0"/>
+    <AccesEtatValeur code="11000002" valeur="0"/>
+    <AccesEtatValeur code="11000003" valeur="0"/>
+    <AccesEtatValeur code="11000004" valeur="0"/>
+    <AccesEtatValeur code="11000005" valeur="0"/>
+    <AccesEtatValeur code="11000006" valeur="0"/>
+    <AccesEtatValeur code="11000007" valeur="0"/>
+    <AccesEtatValeur code="11000008" valeur="0"/>
+    <AccesEtatValeur code="11000009" valeur="0"/>
+    <AccesEtatValeur code="11000010" valeur="0"/>
+    <AccesEtatValeur code="11000011" valeur="0"/>
+    <AccesEtatValeur code="11000012" valeur="0"/>
+    <AccesEtatValeur code="11000013" valeur="0"/>
+    <AccesEtatValeur code="11000014" valeur="0"/>
+    <AccesEtatValeur code="11000015" valeur="0"/>
+    <AccesEtatValeur code="11000016" valeur="0"/>
+    <AccesEtatValeur code="11000017" valeur="0"/>
+    <AccesEtatValeur code="11000018" valeur="0"/>
+    <AccesEtatValeur code="11000019" valeur="0"/>
+    <AccesEtatValeur code="11000020" valeur="0"/>
+    <AccesEtatValeur code="11000021" valeur="0"/>
+    <AccesEtatValeur code="11000022" valeur="0"/>
+    <AccesEtatValeur code="11000023" valeur="0"/>
+    <AccesEtatValeur code="11000024" valeur="0"/>
+    <AccesEtatValeur code="11000025" valeur="0"/>
+    <AccesEtatValeur code="11000026" valeur="0"/>
+    <AccesEtatValeur code="11000027" valeur="0"/>
+    <AccesEtatValeur code="11000028" valeur="0"/>
+    <AccesEtatValeur code="11000029" valeur="0"/>
+    <AccesEtatValeur code="11000030" valeur="0"/>
+    <AccesEtatValeur code="11000031" valeur="0"/>
+    <AccesEtatValeur code="11000032" valeur="0"/>
+    <AccesEtatValeur code="11000033" valeur="0"/>
+    <AccesEtatValeur code="11000034" valeur="0"/>
+    <AccesEtatValeur code="11000035" valeur="0"/>
+    <AccesEtatValeur code="11000036" valeur="0"/>
+    <AccesEtatValeur code="11000037" valeur="0"/>
+    <AccesEtatValeur code="11000038" valeur="0"/>
+    <AccesEtatValeur code="11000039" valeur="0"/>
+    <AccesEtatValeur code="11000040" valeur="0"/>
+    <AccesEtatValeur code="11000041" valeur="0"/>
+    <AccesEtatValeur code="11000042" valeur="0"/>
+    <AccesEtatValeur code="11000043" valeur="0"/>
+    <AccesEtatValeur code="11000044" valeur="0"/>
+    <AccesEtatValeur code="11000045" valeur="0"/>
+    <AccesEtatValeur code="11000046" valeur="0"/>
+    <AccesEtatValeur code="11000047" valeur="0"/>
+    <AccesEtatValeur code="11000048" valeur="0"/>
+    <AccesEtatValeur code="11000049" valeur="0"/>
+    <AccesEtatValeur code="11000050" valeur="0"/>
+    <AccesAlarmeValeur code="1000001" valeur="0"/>
+    <AccesAlarmeValeur code="1000002" valeur="0"/>
+    <AccesAlarmeValeur code="1000003" valeur="0"/>
+    <AccesAlarmeValeur code="1000004" valeur="0"/>
+    <AccesAlarmeValeur code="1000005" valeur="0"/>
+    <AccesAlarmeValeur code="1000006" valeur="0"/>
+    <AccesAlarmeValeur code="1000007" valeur="0"/>
+    <AccesAlarmeValeur code="1000008" valeur="0"/>
+    <AccesAlarmeValeur code="1000009" valeur="0"/>
+    <AccesAlarmeValeur code="1000010" valeur="0"/>
+    <AccesAlarmeValeur code="1000011" valeur="0"/>
+    <AccesAlarmeValeur code="1000012" valeur="0"/>
+    <AccesAlarmeValeur code="1000013" valeur="0"/>
+    <AccesAlarmeValeur code="1000014" valeur="0"/>
+    <AccesAlarmeValeur code="1000015" valeur="0"/>
+    <AccesAlarmeValeur code="1000016" valeur="0"/>
+    <AccesAlarmeValeur code="1000017" valeur="0"/>
+    <AccesAlarmeValeur code="1000018" valeur="0"/>
+    <AccesAlarmeValeur code="1000019" valeur="0"/>
+    <AccesAlarmeValeur code="1000020" valeur="0"/>
+    <AccesAlarmeValeur code="1000021" valeur="0"/>
+    <AccesAlarmeValeur code="1000022" valeur="0"/>
+    <AccesAlarmeValeur code="1000023" valeur="0"/>
+    <AccesAlarmeValeur code="1000024" valeur="0"/>
+    <AccesAlarmeValeur code="1000025" valeur="0"/>
+    <AccesAlarmeValeur code="1000026" valeur="0"/>
+    <AccesAlarmeValeur code="1000027" valeur="0"/>
+    <AccesAlarmeValeur code="1000028" valeur="0"/>
+    <AccesAlarmeValeur code="1000029" valeur="0"/>
+    <AccesAlarmeValeur code="1000030" valeur="0"/>
+    <AccesAlarmeValeur code="1000031" valeur="0"/>
+    <AccesAlarmeValeur code="1000032" valeur="0"/>
+    <AccesAlarmeValeur code="1000033" valeur="0"/>
+    <AccesAlarmeValeur code="1000034" valeur="0"/>
+    <AccesAlarmeValeur code="1000035" valeur="0"/>
+    <AccesAlarmeValeur code="1000036" valeur="0"/>
+    <AccesAlarmeValeur code="1000037" valeur="0"/>
+    <AccesAlarmeValeur code="1000038" valeur="0"/>
+    <AccesAlarmeValeur code="1000039" valeur="0"/>
+    <AccesAlarmeValeur code="1000040" valeur="0"/>
+    <AccesAlarmeValeur code="1000041" valeur="0"/>
+    <AccesAlarmeValeur code="1000042" valeur="0"/>
+    <AccesAlarmeValeur code="1000043" valeur="0"/>
+    <AccesAlarmeValeur code="1000044" valeur="0"/>
+    <AccesAlarmeValeur code="1000045" valeur="0"/>
+    <AccesAlarmeValeur code="1000046" valeur="0"/>
+    <AccesAlarmeValeur code="1000047" valeur="0"/>
+    <AccesAlarmeValeur code="1000048" valeur="0"/>
+    <AccesAlarmeValeur code="1000049" valeur="0"/>
+    <AccesAlarmeValeur code="1000050" valeur="0"/>
+    <AccesEtatSynthese code="999990" formule="ETAT[1000001];ETAT[1000002];ETAT[1000003];ETAT[1000004];ETAT[1000005];ETAT[1000006];ETAT[1000007];ETAT[1000008];ETAT[1000009];ETAT[1000010];" operateur="OU"/>
+    <AccesEtatSynthese code="999991" formule="ETAT[1000011];ETAT[1000012];ETAT[1000013];ETAT[1000014];ETAT[1000015];ETAT[1000016];ETAT[1000017];ETAT[1000018];ETAT[1000019];ETAT[1000020];" operateur="OU"/>
+    <AccesEtatSynthese code="999992" formule="ETAT[1000021];ETAT[1000022];ETAT[1000023];ETAT[1000024];ETAT[1000025];ETAT[1000026];ETAT[1000027];ETAT[1000028];ETAT[1000029];ETAT[1000030];" operateur="OU"/>
+    <AccesEtatSynthese code="999993" formule="ETAT[1000031];ETAT[1000032];ETAT[1000033];ETAT[1000034];ETAT[1000035];ETAT[1000036];ETAT[1000037];ETAT[1000038];ETAT[1000039];ETAT[1000040];" operateur="OU"/>
+    <AccesEtatSynthese code="999994" formule="ETAT[1000041];ETAT[1000042];ETAT[1000043];ETAT[1000044];ETAT[1000045];ETAT[1000046];ETAT[1000047];ETAT[1000048];ETAT[1000049];ETAT[1000050];" operateur="OU"/>
+    <AccesEtatSynthese code="1000000" formule="ETAT[999990];ETAT[999991];ETAT[999992];ETAT[999993];ETAT[999994];" operateur="OU"/>
+    <AccesEtatSynthese code="1999990" formule="ETAT[11000001];ETAT[11000002];ETAT[11000003];ETAT[11000004];ETAT[11000005];ETAT[11000006];ETAT[11000007];ETAT[11000008];ETAT[11000009];ETAT[11000010];" operateur="OU"/>
+    <AccesEtatSynthese code="1999991" formule="ETAT[11000011];ETAT[11000012];ETAT[11000013];ETAT[11000014];ETAT[11000015];ETAT[11000016];ETAT[11000017];ETAT[11000018];ETAT[11000019];ETAT[11000020];" operateur="OU"/>
+    <AccesEtatSynthese code="1999992" formule="ETAT[11000021];ETAT[11000022];ETAT[11000023];ETAT[11000024];ETAT[11000025];ETAT[11000026];ETAT[11000027];ETAT[11000028];ETAT[11000029];ETAT[11000030];" operateur="OU"/>
+    <AccesEtatSynthese code="1999993" formule="ETAT[11000031];ETAT[11000032];ETAT[11000033];ETAT[11000034];ETAT[11000035];ETAT[11000036];ETAT[11000037];ETAT[11000038];ETAT[11000039];ETAT[11000040];" operateur="OU"/>
+    <AccesEtatSynthese code="1999994" formule="ETAT[11000041];ETAT[11000042];ETAT[11000043];ETAT[11000044];ETAT[11000045];ETAT[11000046];ETAT[11000047];ETAT[11000048];ETAT[11000049];ETAT[11000050];" operateur="OU"/>
+    <AccesEtatSynthese code="11000000" formule="ETAT[1999990];ETAT[1999991];ETAT[1999992];ETAT[1999993];ETAT[1999994];" operateur="OU"/>
+    <AccesEtatSynthese code="0" formule="ETAT[1000000];ETAT[11000000];" operateur="OU"/>
+    <AccesEtatSynthese code="11250" formule="ETAT[0];ETAT[1000];ETAT[1001];ETAT[1002];ETAT[1005];ETAT[1006];ETAT[1009];ETAT[1010];ETAT[1011];ETAT[1016];ETAT[1017];ETAT[1018];ETAT[4];ETAT[5];ETAT[5001];ETAT[5002];ETAT[5003];ETAT[700];" operateur="OU"/>
+    <AccesEtatSynthese code="700" formule="ETAT[4];ETAT[5001];ETAT[5002];ETAT[5003];" operateur="OU"/>
+    <AccesEtatSynthese code="5" formule="ETAT[700];" operateur="ET"/>
+    <AccesEtatSynthese code="2" formule="ETAT[11250];" operateur="!ET"/>
+    <AccesAlarmeSynthese code="999990" formule="ALARME[1000001];ALARME[1000002];ALARME[1000003];ALARME[1000004];ALARME[1000005];ALARME[1000006];ALARME[1000007];ALARME[1000008];ALARME[1000009];ALARME[1000010];" operateur="OU"/>
+    <AccesAlarmeSynthese code="999991" formule="ALARME[1000011];ALARME[1000012];ALARME[1000013];ALARME[1000014];ALARME[1000015];ALARME[1000016];ALARME[1000017];ALARME[1000018];ALARME[1000019];ALARME[1000020];" operateur="OU"/>
+    <AccesAlarmeSynthese code="999992" formule="ALARME[1000021];ALARME[1000022];ALARME[1000023];ALARME[1000024];ALARME[1000025];ALARME[1000026];ALARME[1000027];ALARME[1000028];ALARME[1000029];ALARME[1000030];" operateur="OU"/>
+    <AccesAlarmeSynthese code="999993" formule="ALARME[1000031];ALARME[1000032];ALARME[1000033];ALARME[1000034];ALARME[1000035];ALARME[1000036];ALARME[1000037];ALARME[1000038];ALARME[1000039];ALARME[1000040];" operateur="OU"/>
+    <AccesAlarmeSynthese code="999994" formule="ALARME[1000041];ALARME[1000042];ALARME[1000043];ALARME[1000044];ALARME[1000045];ALARME[1000046];ALARME[1000047];ALARME[1000048];ALARME[1000049];ALARME[1000050];" operateur="OU"/>
+    <AccesAlarmeSynthese code="999999" formule="ALARME[1000000];" operateur="!ET"/>
+    <AccesAlarmeSynthese code="1000000" formule="ALARME[999990];ALARME[999991];ALARME[999992];ALARME[999993];ALARME[999994];" operateur="OU"/>
+    <AccesAlarmeSynthese code="500001" formule="ETAT[5002];" operateur="OU"/>
+    <AccesAlarmeSynthese code="500002" formule="ETAT[5001];" operateur="OU"/>
+    <AccesAlarmeSynthese code="500003" formule="ETAT[5003];" operateur="OU"/>
+    <AccesAlarmeSynthese code="500004" formule="ETAT[4];" operateur="OU"/>
+    <AccesAlarmeSynthese code="500700" formule="ETAT[5];" operateur="OU"/>
+    <AccesAlarmeSynthese code="501001" formule="ETAT[1001];" operateur="OU"/>
+    <AccesAlarmeSynthese code="501002" formule="ETAT[1002];" operateur="OU"/>
+    <AccesAlarmeSynthese code="501003" formule="ETAT[1018];" operateur="OU"/>
+    <AccesAlarmeSynthese code="501004" formule="ETAT[1017];" operateur="OU"/>
+    <AccesAlarmeSynthese code="501005" formule="ETAT[1005];" operateur="OU"/>
+    <AccesAlarmeSynthese code="501006" formule="ETAT[1006];" operateur="OU"/>
+    <AccesAlarmeSynthese code="501016" formule="ETAT[1016];" operateur="OU"/>
+    <AccesAlarmeSynthese code="0" formule="ALARME[1000];ALARME[999999];" operateur="ET"/>
+    <Entree code="9999" isActifAZero="false" type="Etat" valeur="DefautBonFonctionnement"/>
+    <Entree code="10001" type="Commande" valeur="Commande_Sortie_1"/>
+    <Entree code="10002" type="Commande" valeur="Commande_Sortie_2"/>
+    <Entree code="10003" type="Commande" valeur="Commande_Sortie_3"/>
+    <Entree code="10004" type="Commande" valeur="Commande_Sortie_4"/>
+    <Entree code="10005" type="Commande" valeur="Commande_Sortie_5"/>
+    <Entree code="10006" type="Commande" valeur="Commande_Sortie_6"/>
+    <Entree code="10007" type="Commande" valeur="Commande_Sortie_7"/>
+    <Entree code="10008" type="Commande" valeur="Commande_Sortie_8"/>
+    <Entree code="10009" type="Commande" valeur="Commande_Sortie_9"/>
+    <Entree code="10010" type="Commande" valeur="Commande_Sortie_10"/>
+    <Entree code="10011" type="Commande" valeur="Commande_Sortie_11"/>
+    <Entree code="10012" type="Commande" valeur="Commande_Sortie_12"/>
+    <Entree code="10013" type="Commande" valeur="Commande_Sortie_13"/>
+    <Entree code="10014" type="Commande" valeur="Commande_Sortie_14"/>
+    <Entree code="10015" type="Commande" valeur="Commande_Sortie_15"/>
+    <Entree code="10016" type="Commande" valeur="Commande_Sortie_16"/>
+    <Entree code="10017" type="Commande" valeur="Commande_Sortie_17"/>
+    <Entree code="10018" type="Commande" valeur="Commande_Sortie_18"/>
+    <Entree code="10019" type="Commande" valeur="Commande_Sortie_19"/>
+    <Entree code="10020" type="Commande" valeur="Commande_Sortie_20"/>
+    <Entree code="10021" type="Commande" valeur="Commande_Sortie_21"/>
+    <Entree code="10022" type="Commande" valeur="Commande_Sortie_22"/>
+    <Entree code="10023" type="Commande" valeur="Commande_Sortie_23"/>
+    <Entree code="10024" type="Commande" valeur="Commande_Sortie_24"/>
+    <Entree code="10025" type="Commande" valeur="Commande_Sortie_25"/>
+    <Entree code="10026" type="Commande" valeur="Commande_Sortie_26"/>
+    <Entree code="10027" type="Commande" valeur="Commande_Sortie_27"/>
+    <Entree code="10028" type="Commande" valeur="Commande_Sortie_28"/>
+    <Entree code="10029" type="Commande" valeur="Commande_Sortie_29"/>
+    <Entree code="10030" type="Commande" valeur="Commande_Sortie_30"/>
+    <Entree code="10031" type="Commande" valeur="Commande_Sortie_31"/>
+    <Entree code="10032" type="Commande" valeur="Commande_Sortie_32"/>
+    <Sortie code="5000" type="Etat" valeur="APIEnDefaut"/>
+    <Sortie code="102" type="Etat" valeur="Entree_1"/>
+    <Sortie code="103" type="Etat" valeur="Entree_2"/>
+    <Sortie code="104" type="Etat" valeur="Entree_3"/>
+    <Sortie code="105" type="Etat" valeur="Entree_4"/>
+    <Sortie code="106" type="Etat" valeur="Entree_5"/>
+    <Sortie code="107" type="Etat" valeur="Entree_6"/>
+    <Sortie code="108" type="Etat" valeur="Entree_7"/>
+    <Sortie code="109" type="Etat" valeur="Entree_8"/>
+    <Sortie code="110" type="Etat" valeur="Entree_9"/>
+    <Sortie code="111" type="Etat" valeur="Entree_10"/>
+    <Sortie code="112" type="Etat" valeur="Entree_11"/>
+    <Sortie code="113" type="Etat" valeur="Entree_12"/>
+    <Sortie code="114" type="Etat" valeur="Entree_13"/>
+    <Sortie code="115" type="Etat" valeur="Entree_14"/>
+    <Sortie code="116" type="Etat" valeur="Entree_15"/>
+    <Sortie code="117" type="Etat" valeur="Entree_16"/>
+    <Sortie code="118" type="Etat" valeur="Entree_17"/>
+    <Sortie code="119" type="Etat" valeur="Entree_18"/>
+    <Sortie code="120" type="Etat" valeur="Entree_19"/>
+    <Sortie code="121" type="Etat" valeur="Entree_20"/>
+    <Sortie code="122" type="Etat" valeur="Entree_21"/>
+    <Sortie code="123" type="Etat" valeur="Entree_22"/>
+    <Sortie code="124" type="Etat" valeur="Entree_23"/>
+    <Sortie code="125" type="Etat" valeur="Entree_24"/>
+    <Sortie code="126" type="Etat" valeur="Entree_25"/>
+    <Sortie code="127" type="Etat" valeur="Entree_26"/>
+    <Sortie code="128" type="Etat" valeur="Entree_27"/>
+    <Sortie code="129" type="Etat" valeur="Entree_28"/>
+    <Sortie code="130" type="Etat" valeur="Entree_29"/>
+    <Sortie code="131" type="Etat" valeur="Entree_30"/>
+    <Sortie code="132" type="Etat" valeur="Entree_31"/>
+    <Sortie code="133" type="Etat" valeur="Entree_32"/>
+    <Sortie code="134" type="Etat" valeur="Entree_33"/>
+    <Sortie code="135" type="Etat" valeur="Entree_34"/>
+    <Sortie code="136" type="Etat" valeur="Entree_35"/>
+    <Sortie code="137" type="Etat" valeur="Entree_36"/>
+    <Sortie code="138" type="Etat" valeur="Entree_37"/>
+    <Sortie code="139" type="Etat" valeur="Entree_38"/>
+    <Sortie code="140" type="Etat" valeur="Entree_39"/>
+    <Sortie code="141" type="Etat" valeur="Entree_40"/>
+    <Sortie code="142" type="Etat" valeur="Entree_41"/>
+    <Sortie code="143" type="Etat" valeur="Entree_42"/>
+    <Sortie code="144" type="Etat" valeur="Entree_43"/>
+    <Sortie code="145" type="Etat" valeur="Entree_44"/>
+    <Sortie code="146" type="Etat" valeur="Entree_45"/>
+    <Sortie code="147" type="Etat" valeur="Entree_46"/>
+    <Sortie code="148" type="Etat" valeur="Entree_47"/>
+    <Sortie code="149" type="Etat" valeur="Entree_48"/>
+    <Sortie code="262" type="Etat" valeur="Etat_Sortie_1"/>
+    <Sortie code="263" type="Etat" valeur="Etat_Sortie_2"/>
+    <Sortie code="264" type="Etat" valeur="Etat_Sortie_3"/>
+    <Sortie code="265" type="Etat" valeur="Etat_Sortie_4"/>
+    <Sortie code="266" type="Etat" valeur="Etat_Sortie_5"/>
+    <Sortie code="267" type="Etat" valeur="Etat_Sortie_6"/>
+    <Sortie code="268" type="Etat" valeur="Etat_Sortie_7"/>
+    <Sortie code="269" type="Etat" valeur="Etat_Sortie_8"/>
+    <Sortie code="270" type="Etat" valeur="Etat_Sortie_9"/>
+    <Sortie code="271" type="Etat" valeur="Etat_Sortie_10"/>
+    <Sortie code="272" type="Etat" valeur="Etat_Sortie_11"/>
+    <Sortie code="273" type="Etat" valeur="Etat_Sortie_12"/>
+    <Sortie code="274" type="Etat" valeur="Etat_Sortie_13"/>
+    <Sortie code="275" type="Etat" valeur="Etat_Sortie_14"/>
+    <Sortie code="276" type="Etat" valeur="Etat_Sortie_15"/>
+    <Sortie code="277" type="Etat" valeur="Etat_Sortie_16"/>
+    <Sortie code="150" type="Etat" valeur="Entree_49"/>
+    <Sortie code="151" type="Etat" valeur="Entree_50"/>
+    <Sortie code="152" type="Etat" valeur="Entree_51"/>
+    <Sortie code="153" type="Etat" valeur="Entree_52"/>
+    <Sortie code="154" type="Etat" valeur="Entree_53"/>
+    <Sortie code="155" type="Etat" valeur="Entree_54"/>
+    <Sortie code="156" type="Etat" valeur="Entree_55"/>
+    <Sortie code="157" type="Etat" valeur="Entree_56"/>
+    <Sortie code="158" type="Etat" valeur="Entree_57"/>
+    <Sortie code="159" type="Etat" valeur="Entree_58"/>
+    <Sortie code="160" type="Etat" valeur="Entree_59"/>
+    <Sortie code="161" type="Etat" valeur="Entree_60"/>
+    <Sortie code="162" type="Etat" valeur="Entree_61"/>
+    <Sortie code="163" type="Etat" valeur="Entree_62"/>
+    <Sortie code="164" type="Etat" valeur="Entree_63"/>
+    <Sortie code="165" type="Etat" valeur="Entree_64"/>
+    <Sortie code="166" type="Etat" valeur="Entree_65"/>
+    <Sortie code="167" type="Etat" valeur="Entree_66"/>
+    <Sortie code="168" type="Etat" valeur="Entree_67"/>
+    <Sortie code="169" type="Etat" valeur="Entree_68"/>
+    <Sortie code="170" type="Etat" valeur="Entree_69"/>
+    <Sortie code="171" type="Etat" valeur="Entree_70"/>
+    <Sortie code="172" type="Etat" valeur="Entree_71"/>
+    <Sortie code="173" type="Etat" valeur="Entree_72"/>
+    <Sortie code="174" type="Etat" valeur="Entree_73"/>
+    <Sortie code="175" type="Etat" valeur="Entree_74"/>
+    <Sortie code="176" type="Etat" valeur="Entree_75"/>
+    <Sortie code="177" type="Etat" valeur="Entree_76"/>
+    <Sortie code="178" type="Etat" valeur="Entree_77"/>
+    <Sortie code="179" type="Etat" valeur="Entree_78"/>
+    <Sortie code="180" type="Etat" valeur="Entree_79"/>
+    <Sortie code="181" type="Etat" valeur="Entree_80"/>
+    <Sortie code="182" type="Etat" valeur="Entree_81"/>
+    <Sortie code="183" type="Etat" valeur="Entree_82"/>
+    <Sortie code="184" type="Etat" valeur="Entree_83"/>
+    <Sortie code="185" type="Etat" valeur="Entree_84"/>
+    <Sortie code="186" type="Etat" valeur="Entree_85"/>
+    <Sortie code="187" type="Etat" valeur="Entree_86"/>
+    <Sortie code="188" type="Etat" valeur="Entree_87"/>
+    <Sortie code="189" type="Etat" valeur="Entree_88"/>
+    <Sortie code="190" type="Etat" valeur="Entree_89"/>
+    <Sortie code="191" type="Etat" valeur="Entree_90"/>
+    <Sortie code="192" type="Etat" valeur="Entree_91"/>
+    <Sortie code="193" type="Etat" valeur="Entree_92"/>
+    <Sortie code="194" type="Etat" valeur="Entree_93"/>
+    <Sortie code="195" type="Etat" valeur="Entree_94"/>
+    <Sortie code="196" type="Etat" valeur="Entree_95"/>
+    <Sortie code="197" type="Etat" valeur="Entree_96"/>
+    <Sortie code="278" type="Etat" valeur="Etat_Sortie_17"/>
+    <Sortie code="279" type="Etat" valeur="Etat_Sortie_18"/>
+    <Sortie code="280" type="Etat" valeur="Etat_Sortie_19"/>
+    <Sortie code="281" type="Etat" valeur="Etat_Sortie_20"/>
+    <Sortie code="282" type="Etat" valeur="Etat_Sortie_21"/>
+    <Sortie code="283" type="Etat" valeur="Etat_Sortie_22"/>
+    <Sortie code="284" type="Etat" valeur="Etat_Sortie_23"/>
+    <Sortie code="285" type="Etat" valeur="Etat_Sortie_24"/>
+    <Sortie code="286" type="Etat" valeur="Etat_Sortie_25"/>
+    <Sortie code="287" type="Etat" valeur="Etat_Sortie_26"/>
+    <Sortie code="288" type="Etat" valeur="Etat_Sortie_27"/>
+    <Sortie code="289" type="Etat" valeur="Etat_Sortie_28"/>
+    <Sortie code="290" type="Etat" valeur="Etat_Sortie_29"/>
+    <Sortie code="291" type="Etat" valeur="Etat_Sortie_30"/>
+    <Sortie code="292" type="Etat" valeur="Etat_Sortie_31"/>
+    <Sortie code="293" type="Etat" valeur="Etat_Sortie_32"/>
+    <Sortie code="198" type="Etat" valeur="Entree_97"/>
+    <Sortie code="199" type="Etat" valeur="Entree_98"/>
+    <Sortie code="200" type="Etat" valeur="Entree_99"/>
+    <Sortie code="201" type="Etat" valeur="Entree_100"/>
+    <Sortie code="202" type="Etat" valeur="Entree_101"/>
+    <Sortie code="203" type="Etat" valeur="Entree_102"/>
+    <Sortie code="204" type="Etat" valeur="Entree_103"/>
+    <Sortie code="205" type="Etat" valeur="Entree_104"/>
+    <Sortie code="206" type="Etat" valeur="Entree_105"/>
+    <Sortie code="207" type="Etat" valeur="Entree_106"/>
+    <Sortie code="208" type="Etat" valeur="Entree_107"/>
+    <Sortie code="209" type="Etat" valeur="Entree_108"/>
+    <Sortie code="210" type="Etat" valeur="Entree_109"/>
+    <Sortie code="211" type="Etat" valeur="Entree_110"/>
+    <Sortie code="212" type="Etat" valeur="Entree_111"/>
+    <Sortie code="213" type="Etat" valeur="Entree_112"/>
+    <Sortie code="214" type="Etat" valeur="Entree_113"/>
+    <Sortie code="215" type="Etat" valeur="Entree_114"/>
+    <Sortie code="216" type="Etat" valeur="Entree_115"/>
+    <Sortie code="217" type="Etat" valeur="Entree_116"/>
+    <Sortie code="218" type="Etat" valeur="Entree_117"/>
+    <Sortie code="219" type="Etat" valeur="Entree_118"/>
+    <Sortie code="220" type="Etat" valeur="Entree_119"/>
+    <Sortie code="221" type="Etat" valeur="Entree_120"/>
+    <Sortie code="222" type="Etat" valeur="Entree_121"/>
+    <Sortie code="223" type="Etat" valeur="Entree_122"/>
+    <Sortie code="224" type="Etat" valeur="Entree_123"/>
+    <Sortie code="225" type="Etat" valeur="Entree_124"/>
+    <Sortie code="226" type="Etat" valeur="Entree_125"/>
+    <Sortie code="227" type="Etat" valeur="Entree_126"/>
+    <Sortie code="228" type="Etat" valeur="Entree_127"/>
+    <Sortie code="229" type="Etat" valeur="Entree_128"/>
+    <Sortie code="230" type="Etat" valeur="Entree_129"/>
+    <Sortie code="231" type="Etat" valeur="Entree_130"/>
+    <Sortie code="232" type="Etat" valeur="Entree_131"/>
+    <Sortie code="233" type="Etat" valeur="Entree_132"/>
+    <Sortie code="234" type="Etat" valeur="Entree_133"/>
+    <Sortie code="235" type="Etat" valeur="Entree_134"/>
+    <Sortie code="236" type="Etat" valeur="Entree_135"/>
+    <Sortie code="237" type="Etat" valeur="Entree_136"/>
+    <Sortie code="238" type="Etat" valeur="Entree_137"/>
+    <Sortie code="239" type="Etat" valeur="Entree_138"/>
+    <Sortie code="240" type="Etat" valeur="Entree_139"/>
+    <Sortie code="241" type="Etat" valeur="Entree_140"/>
+    <Sortie code="242" type="Etat" valeur="Entree_141"/>
+    <Sortie code="243" type="Etat" valeur="Entree_142"/>
+    <Sortie code="244" type="Etat" valeur="Entree_143"/>
+    <Sortie code="245" type="Etat" valeur="Entree_144"/>
+    <Sortie code="246" type="Etat" valeur="Entree_145"/>
+    <Sortie code="247" type="Etat" valeur="Entree_146"/>
+    <Sortie code="248" type="Etat" valeur="Entree_147"/>
+    <Sortie code="249" type="Etat" valeur="Entree_148"/>
+    <Sortie code="250" type="Etat" valeur="Entree_149"/>
+    <Sortie code="251" type="Etat" valeur="Entree_150"/>
+    <Sortie code="252" type="Etat" valeur="Entree_151"/>
+    <Sortie code="253" type="Etat" valeur="Entree_152"/>
+    <Sortie code="254" type="Etat" valeur="Entree_153"/>
+    <Sortie code="255" type="Etat" valeur="Entree_154"/>
+    <Sortie code="256" type="Etat" valeur="Entree_155"/>
+    <Sortie code="257" type="Etat" valeur="Entree_156"/>
+    <Sortie code="258" type="Etat" valeur="Entree_157"/>
+    <Sortie code="259" type="Etat" valeur="Entree_158"/>
+    <Sortie code="260" type="Etat" valeur="Entree_159"/>
+    <Sortie code="261" type="Etat" valeur="Entree_160"/>
+    <AlarmeChaineFonctionnelle typeEquipement="API_Actemium_48E_16S"/>
+    <AlarmeChaineFonctionnelle typeEquipement="API_Actemium_96E_32S"/>
+    <AlarmeChaineFonctionnelle typeEquipement="API_Actemium_160E_32S"/>
+    <AlarmeChaineFonctionnelle typeEquipement="API_GTC"/>
+    <AlarmeChaineFonctionnelle typeEquipement="switch">
+        <ListeCode code="0"/>
+    </AlarmeChaineFonctionnelle>
+    <AlarmeChaineFonctionnelle typeEquipement="switch">
+        <ListeCode code="0"/>
+    </AlarmeChaineFonctionnelle>
+    <AlarmeChaineFonctionnelle typeEquipement="switch">
+        <ListeCode code="0"/>
+    </AlarmeChaineFonctionnelle>
+    <AlarmeChaineFonctionnelle typeEquipement="switch">
+        <ListeCode code="0"/>
+    </AlarmeChaineFonctionnelle>
+</TypeEquipement>

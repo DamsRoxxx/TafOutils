@@ -2,11 +2,11 @@
 <TypeEquipement module="libAGSServeurEquipementsMaestroLigneDeControle.so" codeFamille="PSER" nom="PSER">
     <Conf categorie="VCA" libelle="PSER">
         <GroupeParametre facultatif="false" id="LiaisonAExG" libelle="Liaison avec l'AExG" multiple="false">
-            <Parametre defaut="" description="L'équipement AEXG lié" facultatif="true" id="equipement" libelle="AEXG lié" type="NomLogique" typeEqtLie="ALL"/>
+            <Parametre defaut="" description="L'équipement AEXG lié" facultatif="true" id="equipement" libelle="AEXG lié" type="NomLogique" typeEqtLie="AEXG_Generique"/>
             <Parametre defaut="" description="Numero de PSER (de 1 à 6) dans l'AExG" facultatif="false" id="numero" libelle="Numéro du PSER" type="Nombre"/>
         </GroupeParametre>
         <GroupeParametre facultatif="true" id="Camera" libelle="Camera" libelleMultiple="Caméras associées" multiple="true">
-            <Parametre defaut="" description="Une caméra à associer" id="nomLogique" libelle="Nom logique" type="NomLogique" typeEqtLie="VIDEOCameraFVMC"/>
+            <Parametre defaut="" description="Une caméra à associer" id="nomLogique" libelle="Nom logique" type="NomLogique" typeEqtLie="VIDEOCamera"/>
         </GroupeParametre>
         <GroupeParametre facultatif="true" id="AccesEtatDistant" libelle="Accès état distant" libelleMultiple="Accès états synthèse" multiple="true">
             <Parametre defaut="" description="Le code de l'état" id="codeLocal" libelle="Code" type="Nombre"/>

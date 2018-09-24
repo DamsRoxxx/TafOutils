@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TypeEquipement module="libAGSServeurEquipementsMaestroVentilateur.so" codeFamille="VT" nom="Ventilateur_API_BLOCSET">
+    <Conf categorie="Aération" libelle="Ventilateur API BLOCSET">
+        <GroupeParametre id="LiaisonBlocFonctionnel" libelle="Liaison bloc fonctionnel" multiple="false">
+            <Parametre defaut="" description="Equipement lié" id="equipement" libelle="Equipement lié" type="NomLogique" typeEqtLie="ALL"/>
+            <Parametre defaut="" description="Identifiant du bloc dans l'équipement" id="numero" libelle="Identifiant du bloc dans l'équipement" type="Texte"/>
+            <Parametre defaut="blocVT" id="nomBloc" libelle="Nom du bloc" type="Texte"/>
+        </GroupeParametre>
+        <GroupeParametre facultatif="true" id="Camera" libelle="Camera" libelleMultiple="Caméras associées" multiple="true">
+            <Parametre defaut="" description="Une caméra à associer" id="nomLogique" libelle="Nom logique" type="NomLogique" typeEqtLie="VIDEOCameraFVMC"/>
+        </GroupeParametre>
+        <GroupeParametre facultatif="true" id="AccesEtatDistant" libelle="Accès état distant" libelleMultiple="Accès états synthèse" multiple="true">
+            <Parametre defaut="" description="Le code de l'état" id="codeLocal" libelle="Code" type="Nombre"/>
+            <Parametre defaut="" description="L'équipement" id="equipement" libelle="Equipement" type="NomLogique" typeEqtLie="ALL"/>
+            <Parametre defaut="" description="" id="codeDistant" libelle="Code distant" type="Texte"/>
+        </GroupeParametre>
+    </Conf>
+    <Delegation soumisADelegationTotale="true" soumisADelegationPartielle="false" soumisADelegationPCSEC="false"/>
+    <Include type="Entretenable"/>
+    <Include type="Communiquant"/>
+    <Include type="Generique"/>
+    <Include type="CommuniquantSansGenerique"/>
+    <Include type="ventilateur_Base"/>
+    <Etat code="1" codePublic="1" isExploitant="true" isHistorisable="true" isMainteneur="true" isPersistable="false" libelle="En entretien"/>
+    <Etat code="0" codePublic="0" isExploitant="true" isHistorisable="true" isMainteneur="true" isObligatoireIHM="true" isPersistable="false" libelle="Indéterminé"/>
+    <Etat code="5" codePublic="999999" isExploitant="true" isHistorisable="true" isMainteneur="true" isObligatoireIHM="true" isPersistable="false" libelle="En défaut"/>
+    <Etat code="1010" codePublic="1010" isExploitant="true" isHistorisable="true" isInterne="false" isMainteneur="true" isPersistable="true" libelle="Equipement inhibé"/>
+    <Etat code="999990" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Synthese états indeterminés 0"/>
+    <Etat code="999991" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Synthese états indeterminés 1"/>
+    <Etat code="999992" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Synthese états indeterminés 2"/>
+    <Etat code="999993" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Synthese états indeterminés 3"/>
+    <Etat code="999994" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Synthese états indeterminés 4"/>
+    <Etat code="1000000" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Synthese états indeterminés équipements"/>
+    <Etat code="1000001" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 01"/>
+    <Etat code="1000002" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 02"/>
+    <Etat code="1000003" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 03"/>
+    <Etat code="1000004" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 04"/>
+    <Etat code="1000005" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 05"/>
+    <Etat code="1000006" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 06"/>
+    <Etat code="1000007" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 07"/>
+    <Etat code="1000008" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 08"/>
+    <Etat code="1000009" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 09"/>
+    <Etat code="1000010" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 10"/>
+    <Etat code="1000011" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 11"/>
+    <Etat code="1000012" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 12"/>
+    <Etat code="1000013" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 13"/>
+    <Etat code="1000014" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 14"/>
+    <Etat code="1000015" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 15"/>
+    <Etat code="1000016" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 16"/>
+    <Etat code="1000017" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 17"/>
+    <Etat code="1000018" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 18"/>
+    <Etat code="1000019" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 19"/>
+    <Etat code="1000020" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 20"/>
+    <Etat code="1000021" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 21"/>
+    <Etat code="1000022" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 22"/>
+    <Etat code="1000023" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 23"/>
+    <Etat code="1000024" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 24"/>
+    <Etat code="1000025" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 25"/>
+    <Etat code="1000026" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 26"/>
+    <Etat code="1000027" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 27"/>
+    <Etat code="1000028" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 28"/>
+    <Etat code="1000029" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 29"/>
+    <Etat code="1000030" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 30"/>
+    <Etat code="1000031" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 31"/>
+    <Etat code="1000032" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 32"/>
+    <Etat code="1000033" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 33"/>
+    <Etat code="1000034" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 34"/>
+    <Etat code="1000035" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 35"/>
+    <Etat code="1000036" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 36"/>
+    <Etat code="1000037" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 37"/>
+    <Etat code="1000038" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 38"/>
+    <Etat code="1000039" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 39"/>
+    <Etat code="1000040" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 40"/>
+    <Etat code="1000041" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 41"/>
+    <Etat code="1000042" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 42"/>
+    <Etat code="1000043" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 43"/>
+    <Etat code="1000044" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 44"/>
+    <Etat code="1000045" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 45"/>
+    <Etat code="1000046" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 46"/>
+    <Etat code="1000047" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 47"/>
+    <Etat code="1000048" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 48"/>
+    <Etat code="1000049" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 49"/>
+    <Etat code="1000050" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 50"/>
+    <Etat code="1999990" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Synthese etats invisibles 0"/>
+    <Etat code="1999991" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Synthese etats invisibles 1"/>
+    <Etat code="1999992" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Synthese etats invisibles 2"/>
+    <Etat code="1999993" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Synthese etats invisibles 3"/>
+    <Etat code="1999994" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Synthese etats invisibles 4"/>
+    <Etat code="11000000" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Synthese etats invisibles equipements"/>
+    <Etat code="11000001" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 01"/>
+    <Etat code="11000002" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 02"/>
+    <Etat code="11000003" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 03"/>
+    <Etat code="11000004" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 04"/>
+    <Etat code="11000005" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 05"/>
+    <Etat code="11000006" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 06"/>
+    <Etat code="11000007" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 07"/>
+    <Etat code="11000008" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 08"/>
+    <Etat code="11000009" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 09"/>
+    <Etat code="11000010" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 10"/>
+    <Etat code="11000011" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 11"/>
+    <Etat code="11000012" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 12"/>
+    <Etat code="11000013" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 13"/>
+    <Etat code="11000014" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 14"/>
+    <Etat code="11000015" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 15"/>
+    <Etat code="11000016" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 16"/>
+    <Etat code="11000017" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 17"/>
+    <Etat code="11000018" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 18"/>
+    <Etat code="11000019" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 19"/>
+    <Etat code="11000020" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 20"/>
+    <Etat code="11000021" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 21"/>
+    <Etat code="11000022" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 22"/>
+    <Etat code="11000023" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 23"/>
+    <Etat code="11000024" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 24"/>
+    <Etat code="11000025" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 25"/>
+    <Etat code="11000026" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 26"/>
+    <Etat code="11000027" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 27"/>
+    <Etat code="11000028" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 28"/>
+    <Etat code="11000029" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 29"/>
+    <Etat code="11000030" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 30"/>
+    <Etat code="11000031" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 31"/>
+    <Etat code="11000032" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 32"/>
+    <Etat code="11000033" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 33"/>
+    <Etat code="11000034" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 34"/>
+    <Etat code="11000035" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 35"/>
+    <Etat code="11000036" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 36"/>
+    <Etat code="11000037" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 37"/>
+    <Etat code="11000038" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 38"/>
+    <Etat code="11000039" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 39"/>
+    <Etat code="11000040" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 40"/>
+    <Etat code="11000041" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 41"/>
+    <Etat code="11000042" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 42"/>
+    <Etat code="11000043" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 43"/>
+    <Etat code="11000044" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 44"/>
+    <Etat code="11000045" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 45"/>
+    <Etat code="11000046" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 46"/>
+    <Etat code="11000047" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 47"/>
+    <Etat code="11000048" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 48"/>
+    <Etat code="11000049" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 49"/>
+    <Etat code="11000050" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 50"/>
+    <Etat code="1122" codePublic="2" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="false" libelle="En mode normal A"/>
+    <Etat code="4" codePublic="3" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="false" libelle="En mode normal B"/>
+    <Etat code="5001" codePublic="4" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="false" libelle="En mode désenfumage"/>
+    <Etat code="7" codePublic="5" isExploitant="true" isHistorisable="true" isMainteneur="true" isPersistable="false" libelle="En commande depuis la PGR forcée"/>
+    <Etat code="8" codePublic="6" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="false" libelle="En commande depuis le PCM"/>
+    <Etat code="9" codePublic="7" isExploitant="true" isHistorisable="true" isMainteneur="true" isPersistable="false" libelle="En arrêt"/>
+    <Etat code="10" codePublic="8" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="false" libelle="En arrêt nuit (CAN)"/>
+    <Etat code="11" codePublic="9" isExploitant="true" isHistorisable="true" isMainteneur="true" isPersistable="false" libelle="En arrêt CMA"/>
+    <Etat code="12" codePublic="10" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="false" libelle="En insufflation petite vitesse confort"/>
+    <Etat code="13" codePublic="11" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="false" libelle="En extraction petite vitesse confort"/>
+    <Etat code="14" codePublic="12" isExploitant="true" isHistorisable="true" isMainteneur="true" isPersistable="false" libelle="En insufflation désenfumage"/>
+    <Etat code="15" codePublic="13" isExploitant="true" isHistorisable="true" isMainteneur="true" isPersistable="false" libelle="En extraction désenfumage"/>
+    <Etat code="16" codePublic="14" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="false" libelle="En Arrêt sur voie"/>
+    <Etat code="17" codePublic="15" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="false" libelle="En commande depuis la PGR confort"/>
+    <Etat code="18" codePublic="16" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="false" libelle="En insuflation grande vitesse confort"/>
+    <Etat code="19" codePublic="17" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="false" libelle="En extraction grande vitesse confort"/>
+    <Etat code="1102" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Défaut vibration (Préalerte)"/>
+    <Etat code="1103" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Intensité insuffisante en extraction (Préalerte)"/>
+    <Etat code="1104" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Intensité insuffisante en insufflation (Préalerte)"/>
+    <Etat code="1105" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Niveau de bruit élevé en baie (&gt;60db) (Préalerte)"/>
+    <Etat code="1106" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Absence 400V &quot;Secours&quot; (Préalerte)"/>
+    <Etat code="1107" isExploitant="true" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Panne Désenfumage (Alarme)"/>
+    <Etat code="1108" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Défaut variateur ou thermique démarreur (Alarme)"/>
+    <Etat code="1109" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Défaut disjoncteur ou thermique moteur (Alarme)"/>
+    <Etat code="1110" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Panne non discriminée (Alarme)"/>
+    <Etat code="1111" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Défaut absence tension 400 Volts &quot;NORMAL&quot; (Alarme)"/>
+    <Etat code="1112" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Défaut absence tension 24/48 Volts Armoire (Alarme)"/>
+    <Etat code="1113" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Discordance BAE / CDAL (Alarme)"/>
+    <Etat code="1114" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Défaut frein (Alarme)"/>
+    <Etat code="1115" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Défaut rideau coupe-vent (Alarme)"/>
+    <Etat code="1116" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Défaut BAE &gt; 5 heures (Alarme)"/>
+    <Etat code="1117" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Arrêt d'urgence (Alarme)"/>
+    <Etat code="1118" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Panne d'épuisement (de l'ouvrage de ventilation) (Alarme)"/>
+    <Etat code="1119" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Echauffement des paliers moteur (Préalerte)"/>
+    <Etat code="1120" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Pré-alerte (Préalerte)"/>
+    <Etat code="1123" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Absence 400V &quot;Normal&quot; (Préalerte)"/>
+    <Etat code="20" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Défaut automate (Préalerte)"/>
+    <Etat code="21" isExploitant="true" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Panne confort (Alarme)"/>
+    <Etat code="22" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Défaut clapets coupe feu (Alarme)"/>
+    <Etat code="23" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Défaut vibration &quot;seuil danger&quot; (Alarme)"/>
+    <Etat code="24" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Défaut absence tension 48 Volts Station (Alarme)"/>
+    <Etat code="25" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Clapets coupe feu défaillants (Alarme)"/>
+    <Etat code="1009" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Commande automatique initiale impossible (Alarme)"/>
+    <Etat code="1124" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="false" libelle="Défaut accès trappe (Préalerte)"/>
+    <Etat code="11215" isExploitant="false" isHistorisable="true" isMainteneur="false" isPersistable="true" isServeur="false" libelle="Panne"/>
+    <Etat code="11217" isExploitant="false" isHistorisable="true" isMainteneur="false" isPersistable="true" isServeur="false" libelle="Perte de com Fipway"/>
+    <Alarme code="1014" codePublic="1014" isExploitant="true" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Inhibition" type="Alarme"/>
+    <Alarme code="999990" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Synthese alarmes chaines fonctionnelles 0" type="Alarme"/>
+    <Alarme code="999991" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Synthese alarmes chaines fonctionnelles 1" type="Alarme"/>
+    <Alarme code="999992" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Synthese alarmes chaines fonctionnelles 2" type="Alarme"/>
+    <Alarme code="999993" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Synthese alarmes chaines fonctionnelles 3" type="Alarme"/>
+    <Alarme code="999994" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Synthese alarmes chaines fonctionnelles 4" type="Alarme"/>
+    <Alarme code="999999" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Synthese probleme liaison" type="Alarme"/>
+    <Alarme code="1000000" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Synthese alarmes chaines fonctionnelles" type="Alarme"/>
+    <Alarme code="1000001" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 01" type="Alarme"/>
+    <Alarme code="1000002" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 02" type="Alarme"/>
+    <Alarme code="1000003" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 03" type="Alarme"/>
+    <Alarme code="1000004" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 04" type="Alarme"/>
+    <Alarme code="1000005" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 05" type="Alarme"/>
+    <Alarme code="1000006" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 06" type="Alarme"/>
+    <Alarme code="1000007" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 07" type="Alarme"/>
+    <Alarme code="1000008" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 08" type="Alarme"/>
+    <Alarme code="1000009" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 09" type="Alarme"/>
+    <Alarme code="1000010" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 10" type="Alarme"/>
+    <Alarme code="1000011" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 11" type="Alarme"/>
+    <Alarme code="1000012" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 12" type="Alarme"/>
+    <Alarme code="1000013" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 13" type="Alarme"/>
+    <Alarme code="1000014" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 14" type="Alarme"/>
+    <Alarme code="1000015" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 15" type="Alarme"/>
+    <Alarme code="1000016" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 16" type="Alarme"/>
+    <Alarme code="1000017" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 17" type="Alarme"/>
+    <Alarme code="1000018" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 18" type="Alarme"/>
+    <Alarme code="1000019" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 19" type="Alarme"/>
+    <Alarme code="1000020" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 20" type="Alarme"/>
+    <Alarme code="1000021" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 21" type="Alarme"/>
+    <Alarme code="1000022" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 22" type="Alarme"/>
+    <Alarme code="1000023" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 23" type="Alarme"/>
+    <Alarme code="1000024" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 24" type="Alarme"/>
+    <Alarme code="1000025" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 25" type="Alarme"/>
+    <Alarme code="1000026" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 26" type="Alarme"/>
+    <Alarme code="1000027" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 27" type="Alarme"/>
+    <Alarme code="1000028" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 28" type="Alarme"/>
+    <Alarme code="1000029" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 29" type="Alarme"/>
+    <Alarme code="1000030" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 30" type="Alarme"/>
+    <Alarme code="1000031" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 31" type="Alarme"/>
+    <Alarme code="1000032" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 32" type="Alarme"/>
+    <Alarme code="1000033" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 33" type="Alarme"/>
+    <Alarme code="1000034" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 34" type="Alarme"/>
+    <Alarme code="1000035" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 35" type="Alarme"/>
+    <Alarme code="1000036" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 36" type="Alarme"/>
+    <Alarme code="1000037" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 37" type="Alarme"/>
+    <Alarme code="1000038" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 38" type="Alarme"/>
+    <Alarme code="1000039" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 39" type="Alarme"/>
+    <Alarme code="1000040" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 40" type="Alarme"/>
+    <Alarme code="1000041" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 41" type="Alarme"/>
+    <Alarme code="1000042" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 42" type="Alarme"/>
+    <Alarme code="1000043" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 43" type="Alarme"/>
+    <Alarme code="1000044" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 44" type="Alarme"/>
+    <Alarme code="1000045" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 45" type="Alarme"/>
+    <Alarme code="1000046" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 46" type="Alarme"/>
+    <Alarme code="1000047" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 47" type="Alarme"/>
+    <Alarme code="1000048" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 48" type="Alarme"/>
+    <Alarme code="1000049" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 49" type="Alarme"/>
+    <Alarme code="1000050" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 50" type="Alarme"/>
+    <Alarme code="0" isExploitant="true" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Erreur de communication" type="Alarme"/>
+    <Alarme code="1000" codePublic="1000" isExploitant="true" isHistorisable="true" isMainteneur="true" isPersistable="false" libelle="Erreur de communication equipement" type="Alarme"/>
+    <Alarme code="500001" codePublic="1" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Pré-alerte (Préalerte)" type="Alarme"/>
+    <Alarme code="500002" codePublic="2" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Défaut vibration (Préalerte)" type="Alarme"/>
+    <Alarme code="500003" codePublic="3" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Intensité insuffisante en extraction (Préalerte)" type="Alarme"/>
+    <Alarme code="500004" codePublic="4" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Intensité insuffisante en insufflation (Préalerte)" type="Alarme"/>
+    <Alarme code="500005" codePublic="5" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Niveau de bruit élevé en baie (&gt;60db) (Préalerte)" type="Alarme"/>
+    <Alarme code="500006" codePublic="6" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Absence 400V &quot;Secours&quot; (Préalerte)" type="Alarme"/>
+    <Alarme code="500007" codePublic="7" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Panne confort (Alarme)" type="Alarme"/>
+    <Alarme code="500008" codePublic="8" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Défaut variateur ou thermique démarreur (Alarme)" type="Alarme"/>
+    <Alarme code="500009" codePublic="9" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Défaut disjoncteur ou thermique moteur (Alarme)" type="Alarme"/>
+    <Alarme code="500010" codePublic="10" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Panne non discriminée (Alarme)" type="Alarme"/>
+    <Alarme code="500011" codePublic="11" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Défaut absence tension 400 Volts &quot;NORMAL&quot; (Alarme)" type="Alarme"/>
+    <Alarme code="500012" codePublic="12" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Défaut absence tension 24/48 Volts Armoire (Alarme)" type="Alarme"/>
+    <Alarme code="500013" codePublic="13" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Discordance BAE / CDAL (Alarme)" type="Alarme"/>
+    <Alarme code="500014" codePublic="14" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Défaut frein (Alarme)" type="Alarme"/>
+    <Alarme code="500015" codePublic="15" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Défaut rideau coupe-vent (Alarme)" type="Alarme"/>
+    <Alarme code="500016" codePublic="16" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Défaut BAE &gt; 5 heures (Alarme)" type="Alarme"/>
+    <Alarme code="500017" codePublic="17" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Arrêt d'urgence (Alarme)" type="Alarme"/>
+    <Alarme code="500018" codePublic="18" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Panne d'épuisement (de l'ouvrage de ventilation) (Alarme)" type="Alarme"/>
+    <Alarme code="500019" codePublic="19" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Echauffement des paliers moteur (Préalerte)" type="Alarme"/>
+    <Alarme code="500020" codePublic="20" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Défaut automate (Préalerte)" type="Alarme"/>
+    <Alarme code="500021" codePublic="21" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Clapets coupe feu défaillants (Alarme)" type="Alarme"/>
+    <Alarme code="500022" codePublic="22" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Absence 400V &quot;Normal&quot; (Préalerte)" type="Alarme"/>
+    <Alarme code="500023" codePublic="23" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Panne Désenfumage (Alarme)" type="Alarme"/>
+    <Alarme code="500024" codePublic="24" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Défaut vibration &quot;seuil danger&quot; (Alarme)" type="Alarme"/>
+    <Alarme code="500025" codePublic="25" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Défaut absence tension 48 Volts Station (Alarme)" type="Alarme"/>
+    <Alarme code="500026" codePublic="26" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="Défaut clapets coupe feu (Alarme)" type="Alarme"/>
+    <Alarme code="11113" isExploitant="false" isHistorisable="true" isMainteneur="false" isPersistable="true" isServeur="false" libelle="Alarme défaillance ventilateur (en désenfumage)" type="Alarme"/>
+    <Alarme code="11114" isExploitant="false" isHistorisable="true" isMainteneur="false" isPersistable="true" isServeur="false" libelle="Panne" type="Alarme"/>
+    <Alarme code="11153" isExploitant="false" isHistorisable="true" isMainteneur="false" isPersistable="true" isServeur="false" libelle="Accès trappe" type="Alarme"/>
+    <Commande code="1100" codePublic="1100" isExploitant="true" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Inhibition" paramSigEntete="I"/>
+    <Commande code="1500" isExploitant="true" isHistorisable="true" isMainteneur="true" libelle="Depeche emise"/>
+    <Commande code="1501" isExploitant="true" isHistorisable="false" isMainteneur="true" libelle="Modification etat Depche" paramSigEntete="II"/>
+    <Commande code="1" codePublic="1" isExploitant="false" isHistorisable="true" isMainteneur="true" libelle="Prise de priorité PGR Forcée" timeOut="0"/>
+    <Commande code="2" codePublic="2" isExploitant="false" isHistorisable="true" isMainteneur="true" libelle="Retour commande normale BUS après priorité PGR" timeOut="0"/>
+    <Commande code="3" codePublic="3" isExploitant="false" isHistorisable="true" isMainteneur="true" libelle="Marche forcée insufflation PGR" timeOut="0"/>
+    <Commande code="4" codePublic="4" isExploitant="false" isHistorisable="true" isMainteneur="true" libelle="Marche forcée extraction PGR" timeOut="0"/>
+    <Commande code="5" codePublic="5" isExploitant="false" isHistorisable="true" isMainteneur="true" libelle="Arrêt poste par PGR" timeOut="20"/>
+    <Commande code="6" codePublic="6" isExploitant="false" isHistorisable="true" isMainteneur="true" libelle="Marche confort insufflation PGR" timeOut="0"/>
+    <Commande code="7" codePublic="7" isExploitant="false" isHistorisable="true" isMainteneur="true" libelle="Marche confort extraction PGR" timeOut="0"/>
+    <Commande code="8" codePublic="8" isExploitant="false" isHistorisable="true" isMainteneur="true" libelle="Prise de priorité PCM" timeOut="0"/>
+    <Commande code="9" codePublic="9" isExploitant="false" isHistorisable="true" isMainteneur="true" libelle="Retour commande normale BUS après priorité PCM" timeOut="0"/>
+    <Commande code="10" codePublic="10" isExploitant="false" isHistorisable="true" isMainteneur="true" libelle="Marche confort insufflation PCM" timeOut="0"/>
+    <Commande code="11" codePublic="11" isExploitant="false" isHistorisable="true" isMainteneur="true" libelle="Marche confort extraction PCM" timeOut="0"/>
+    <Commande code="12" codePublic="12" isExploitant="false" isHistorisable="true" isMainteneur="true" libelle="Arrêt poste par PCM" timeOut="0"/>
+    <Commande code="13" codePublic="13" isExploitant="false" isHistorisable="true" isMainteneur="true" libelle="Réarmement (Alarme RD)" timeOut="0"/>
+    <Commande code="14" codePublic="14" isExploitant="false" isHistorisable="true" isMainteneur="true" libelle="Prise de priorité PGR confort" timeOut="0"/>
+    <Commande code="15" codePublic="15" isExploitant="false" isHistorisable="true" isMainteneur="true" libelle="Choix vitesse confort" timeOut="0"/>
+    <Commande code="20" isExploitant="true" isHistorisable="true" isMainteneur="true" libelle="Commande utilisateur d'extraction confort"/>
+    <Commande code="21" isExploitant="true" isHistorisable="true" isMainteneur="true" libelle="Commande utilisateur d'insufflation confort"/>
+    <Commande code="22" isExploitant="true" isHistorisable="true" isMainteneur="true" libelle="Commande utilisateur d'arrêt confort"/>
+    <Commande code="23" isExploitant="true" isHistorisable="true" isMainteneur="true" libelle="Commande utilisateur d'extraction forcée"/>
+    <Commande code="24" isExploitant="true" isHistorisable="true" isMainteneur="true" libelle="Commande utilisateur d'insufflation forcée"/>
+    <Commande code="25" isExploitant="true" isHistorisable="true" isMainteneur="true" libelle="Commande utilisateur d'arrêt forcé"/>
+    <Commande code="26" isExploitant="true" isHistorisable="true" isMainteneur="true" libelle="Commande utilisateur de retour à l'état normal"/>
+    <Commande code="1001" isExploitant="false" isHistorisable="true" isMainteneur="true" isServeur="true" libelle="Mot de mise à l'heure horloge API: heures(b8 à 15)/minutes (b0 à 7)" timeOut="0"/>
+    <Commande code="1002" isExploitant="false" isHistorisable="true" isMainteneur="true" isServeur="true" libelle="Mot de mise à l'heure horloge API: secondes (bits 0 à 7)" timeOut="0"/>
+    <Commande code="1003" isExploitant="false" isHistorisable="true" isMainteneur="true" isServeur="true" libelle="Bit de synchronisation mise à l'heure API" timeOut="0"/>
+    <Commande code="1004" isExploitant="false" isHistorisable="true" isMainteneur="true" isServeur="true" libelle="Mot de mise à la date horloge API: Jour(b8 à 15)/Mois (b0 à 7)" timeOut="0"/>
+    <Commande code="1005" isExploitant="false" isHistorisable="true" isMainteneur="true" isServeur="true" libelle="Mot de mise à la date horloge API: Jour semaine(b8 à b15)/Année (b0 à 7)" timeOut="0"/>
+    <Commande code="1101" isExploitant="false" isHistorisable="true" isMainteneur="true" libelle="Inhibition automate modbus" timeOut="0"/>
+    <Commande code="1102" isExploitant="false" isHistorisable="true" isMainteneur="true" libelle="Inhibition ligne modbus" timeOut="0"/>
+    <CommandeServiceIHM code="10" codeService="ServiceVideo" isExploitant="true" isHistorisable="true" isMainteneur="true" libelle="Vidéo" timeOut="2000"/>
+    <CommandeServiceIHM code="11" codeService="ServiceVideo" isExploitant="true" isHistorisable="true" isMainteneur="true" libelle="Mettre au noir" timeOut="2000"/>
+    <Mesure code="6" codePublic="1" isExploitant="false" isHistorisable="true" isInterne="true" isMainteneur="true" isPersistable="false" libelle="Temps écoulé en panne confort (h)"/>
+    <Mesure code="7" codePublic="2" isExploitant="false" isHistorisable="true" isInterne="true" isMainteneur="true" isPersistable="false" libelle="Temps de fonctionnement cumulé en insufflation (h)"/>
+    <Mesure code="8" codePublic="3" isExploitant="false" isHistorisable="true" isInterne="true" isMainteneur="true" isPersistable="false" libelle="Temps de fonctionnement cumulé en extraction (h)"/>
+    <Mesure code="9" codePublic="4" isExploitant="false" isHistorisable="true" isInterne="true" isMainteneur="true" isPersistable="false" libelle="Temps d'arret en entretien (h)"/>
+    <Mesure code="10" codePublic="5" isExploitant="false" isHistorisable="true" isInterne="true" isMainteneur="true" isPersistable="false" libelle="Temps de coupure 400V (h)"/>
+    <Mesure code="11" codePublic="6" isExploitant="false" isHistorisable="true" isInterne="true" isMainteneur="true" isPersistable="false" libelle="Nombre de déclenchement des Clapets coupe feu"/>
+    <Mesure code="1" codePublic="50" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="false" libelle="Identifiant ligne station"/>
+    <Mesure code="2" codePublic="51" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="false" libelle="Identifiant type equipement"/>
+    <Mesure code="3" codePublic="52" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="false" libelle="Identifiant version"/>
+    <Mesure code="4" codePublic="53" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="false" libelle="Identifiant checksum"/>
+    <Information code="1" isExploitant="true" isInterne="true" isMainteneur="true" isObligatoireIHM="true" libelle="caméras associées"/>
+    <AccesEtatValeur code="1000001" valeur="0"/>
+    <AccesEtatValeur code="1000002" valeur="0"/>
+    <AccesEtatValeur code="1000003" valeur="0"/>
+    <AccesEtatValeur code="1000004" valeur="0"/>
+    <AccesEtatValeur code="1000005" valeur="0"/>
+    <AccesEtatValeur code="1000006" valeur="0"/>
+    <AccesEtatValeur code="1000007" valeur="0"/>
+    <AccesEtatValeur code="1000008" valeur="0"/>
+    <AccesEtatValeur code="1000009" valeur="0"/>
+    <AccesEtatValeur code="1000010" valeur="0"/>
+    <AccesEtatValeur code="1000011" valeur="0"/>
+    <AccesEtatValeur code="1000012" valeur="0"/>
+    <AccesEtatValeur code="1000013" valeur="0"/>
+    <AccesEtatValeur code="1000014" valeur="0"/>
+    <AccesEtatValeur code="1000015" valeur="0"/>
+    <AccesEtatValeur code="1000016" valeur="0"/>
+    <AccesEtatValeur code="1000017" valeur="0"/>
+    <AccesEtatValeur code="1000018" valeur="0"/>
+    <AccesEtatValeur code="1000019" valeur="0"/>
+    <AccesEtatValeur code="1000020" valeur="0"/>
+    <AccesEtatValeur code="1000021" valeur="0"/>
+    <AccesEtatValeur code="1000022" valeur="0"/>
+    <AccesEtatValeur code="1000023" valeur="0"/>
+    <AccesEtatValeur code="1000024" valeur="0"/>
+    <AccesEtatValeur code="1000025" valeur="0"/>
+    <AccesEtatValeur code="1000026" valeur="0"/>
+    <AccesEtatValeur code="1000027" valeur="0"/>
+    <AccesEtatValeur code="1000028" valeur="0"/>
+    <AccesEtatValeur code="1000029" valeur="0"/>
+    <AccesEtatValeur code="1000030" valeur="0"/>
+    <AccesEtatValeur code="1000031" valeur="0"/>
+    <AccesEtatValeur code="1000032" valeur="0"/>
+    <AccesEtatValeur code="1000033" valeur="0"/>
+    <AccesEtatValeur code="1000034" valeur="0"/>
+    <AccesEtatValeur code="1000035" valeur="0"/>
+    <AccesEtatValeur code="1000036" valeur="0"/>
+    <AccesEtatValeur code="1000037" valeur="0"/>
+    <AccesEtatValeur code="1000038" valeur="0"/>
+    <AccesEtatValeur code="1000039" valeur="0"/>
+    <AccesEtatValeur code="1000040" valeur="0"/>
+    <AccesEtatValeur code="1000041" valeur="0"/>
+    <AccesEtatValeur code="1000042" valeur="0"/>
+    <AccesEtatValeur code="1000043" valeur="0"/>
+    <AccesEtatValeur code="1000044" valeur="0"/>
+    <AccesEtatValeur code="1000045" valeur="0"/>
+    <AccesEtatValeur code="1000046" valeur="0"/>
+    <AccesEtatValeur code="1000047" valeur="0"/>
+    <AccesEtatValeur code="1000048" valeur="0"/>
+    <AccesEtatValeur code="1000049" valeur="0"/>
+    <AccesEtatValeur code="1000050" valeur="0"/>
+    <AccesEtatValeur code="11000001" valeur="0"/>
+    <AccesEtatValeur code="11000002" valeur="0"/>
+    <AccesEtatValeur code="11000003" valeur="0"/>
+    <AccesEtatValeur code="11000004" valeur="0"/>
+    <AccesEtatValeur code="11000005" valeur="0"/>
+    <AccesEtatValeur code="11000006" valeur="0"/>
+    <AccesEtatValeur code="11000007" valeur="0"/>
+    <AccesEtatValeur code="11000008" valeur="0"/>
+    <AccesEtatValeur code="11000009" valeur="0"/>
+    <AccesEtatValeur code="11000010" valeur="0"/>
+    <AccesEtatValeur code="11000011" valeur="0"/>
+    <AccesEtatValeur code="11000012" valeur="0"/>
+    <AccesEtatValeur code="11000013" valeur="0"/>
+    <AccesEtatValeur code="11000014" valeur="0"/>
+    <AccesEtatValeur code="11000015" valeur="0"/>
+    <AccesEtatValeur code="11000016" valeur="0"/>
+    <AccesEtatValeur code="11000017" valeur="0"/>
+    <AccesEtatValeur code="11000018" valeur="0"/>
+    <AccesEtatValeur code="11000019" valeur="0"/>
+    <AccesEtatValeur code="11000020" valeur="0"/>
+    <AccesEtatValeur code="11000021" valeur="0"/>
+    <AccesEtatValeur code="11000022" valeur="0"/>
+    <AccesEtatValeur code="11000023" valeur="0"/>
+    <AccesEtatValeur code="11000024" valeur="0"/>
+    <AccesEtatValeur code="11000025" valeur="0"/>
+    <AccesEtatValeur code="11000026" valeur="0"/>
+    <AccesEtatValeur code="11000027" valeur="0"/>
+    <AccesEtatValeur code="11000028" valeur="0"/>
+    <AccesEtatValeur code="11000029" valeur="0"/>
+    <AccesEtatValeur code="11000030" valeur="0"/>
+    <AccesEtatValeur code="11000031" valeur="0"/>
+    <AccesEtatValeur code="11000032" valeur="0"/>
+    <AccesEtatValeur code="11000033" valeur="0"/>
+    <AccesEtatValeur code="11000034" valeur="0"/>
+    <AccesEtatValeur code="11000035" valeur="0"/>
+    <AccesEtatValeur code="11000036" valeur="0"/>
+    <AccesEtatValeur code="11000037" valeur="0"/>
+    <AccesEtatValeur code="11000038" valeur="0"/>
+    <AccesEtatValeur code="11000039" valeur="0"/>
+    <AccesEtatValeur code="11000040" valeur="0"/>
+    <AccesEtatValeur code="11000041" valeur="0"/>
+    <AccesEtatValeur code="11000042" valeur="0"/>
+    <AccesEtatValeur code="11000043" valeur="0"/>
+    <AccesEtatValeur code="11000044" valeur="0"/>
+    <AccesEtatValeur code="11000045" valeur="0"/>
+    <AccesEtatValeur code="11000046" valeur="0"/>
+    <AccesEtatValeur code="11000047" valeur="0"/>
+    <AccesEtatValeur code="11000048" valeur="0"/>
+    <AccesEtatValeur code="11000049" valeur="0"/>
+    <AccesEtatValeur code="11000050" valeur="0"/>
+    <AccesAlarmeValeur code="1000001" valeur="0"/>
+    <AccesAlarmeValeur code="1000002" valeur="0"/>
+    <AccesAlarmeValeur code="1000003" valeur="0"/>
+    <AccesAlarmeValeur code="1000004" valeur="0"/>
+    <AccesAlarmeValeur code="1000005" valeur="0"/>
+    <AccesAlarmeValeur code="1000006" valeur="0"/>
+    <AccesAlarmeValeur code="1000007" valeur="0"/>
+    <AccesAlarmeValeur code="1000008" valeur="0"/>
+    <AccesAlarmeValeur code="1000009" valeur="0"/>
+    <AccesAlarmeValeur code="1000010" valeur="0"/>
+    <AccesAlarmeValeur code="1000011" valeur="0"/>
+    <AccesAlarmeValeur code="1000012" valeur="0"/>
+    <AccesAlarmeValeur code="1000013" valeur="0"/>
+    <AccesAlarmeValeur code="1000014" valeur="0"/>
+    <AccesAlarmeValeur code="1000015" valeur="0"/>
+    <AccesAlarmeValeur code="1000016" valeur="0"/>
+    <AccesAlarmeValeur code="1000017" valeur="0"/>
+    <AccesAlarmeValeur code="1000018" valeur="0"/>
+    <AccesAlarmeValeur code="1000019" valeur="0"/>
+    <AccesAlarmeValeur code="1000020" valeur="0"/>
+    <AccesAlarmeValeur code="1000021" valeur="0"/>
+    <AccesAlarmeValeur code="1000022" valeur="0"/>
+    <AccesAlarmeValeur code="1000023" valeur="0"/>
+    <AccesAlarmeValeur code="1000024" valeur="0"/>
+    <AccesAlarmeValeur code="1000025" valeur="0"/>
+    <AccesAlarmeValeur code="1000026" valeur="0"/>
+    <AccesAlarmeValeur code="1000027" valeur="0"/>
+    <AccesAlarmeValeur code="1000028" valeur="0"/>
+    <AccesAlarmeValeur code="1000029" valeur="0"/>
+    <AccesAlarmeValeur code="1000030" valeur="0"/>
+    <AccesAlarmeValeur code="1000031" valeur="0"/>
+    <AccesAlarmeValeur code="1000032" valeur="0"/>
+    <AccesAlarmeValeur code="1000033" valeur="0"/>
+    <AccesAlarmeValeur code="1000034" valeur="0"/>
+    <AccesAlarmeValeur code="1000035" valeur="0"/>
+    <AccesAlarmeValeur code="1000036" valeur="0"/>
+    <AccesAlarmeValeur code="1000037" valeur="0"/>
+    <AccesAlarmeValeur code="1000038" valeur="0"/>
+    <AccesAlarmeValeur code="1000039" valeur="0"/>
+    <AccesAlarmeValeur code="1000040" valeur="0"/>
+    <AccesAlarmeValeur code="1000041" valeur="0"/>
+    <AccesAlarmeValeur code="1000042" valeur="0"/>
+    <AccesAlarmeValeur code="1000043" valeur="0"/>
+    <AccesAlarmeValeur code="1000044" valeur="0"/>
+    <AccesAlarmeValeur code="1000045" valeur="0"/>
+    <AccesAlarmeValeur code="1000046" valeur="0"/>
+    <AccesAlarmeValeur code="1000047" valeur="0"/>
+    <AccesAlarmeValeur code="1000048" valeur="0"/>
+    <AccesAlarmeValeur code="1000049" valeur="0"/>
+    <AccesAlarmeValeur code="1000050" valeur="0"/>
+    <AccesEtatSynthese code="999990" formule="ETAT[1000001];ETAT[1000002];ETAT[1000003];ETAT[1000004];ETAT[1000005];ETAT[1000006];ETAT[1000007];ETAT[1000008];ETAT[1000009];ETAT[1000010];" operateur="OU"/>
+    <AccesEtatSynthese code="999991" formule="ETAT[1000011];ETAT[1000012];ETAT[1000013];ETAT[1000014];ETAT[1000015];ETAT[1000016];ETAT[1000017];ETAT[1000018];ETAT[1000019];ETAT[1000020];" operateur="OU"/>
+    <AccesEtatSynthese code="999992" formule="ETAT[1000021];ETAT[1000022];ETAT[1000023];ETAT[1000024];ETAT[1000025];ETAT[1000026];ETAT[1000027];ETAT[1000028];ETAT[1000029];ETAT[1000030];" operateur="OU"/>
+    <AccesEtatSynthese code="999993" formule="ETAT[1000031];ETAT[1000032];ETAT[1000033];ETAT[1000034];ETAT[1000035];ETAT[1000036];ETAT[1000037];ETAT[1000038];ETAT[1000039];ETAT[1000040];" operateur="OU"/>
+    <AccesEtatSynthese code="999994" formule="ETAT[1000041];ETAT[1000042];ETAT[1000043];ETAT[1000044];ETAT[1000045];ETAT[1000046];ETAT[1000047];ETAT[1000048];ETAT[1000049];ETAT[1000050];" operateur="OU"/>
+    <AccesEtatSynthese code="1000000" formule="ETAT[999990];ETAT[999991];ETAT[999992];ETAT[999993];ETAT[999994];" operateur="OU"/>
+    <AccesEtatSynthese code="1999990" formule="ETAT[11000001];ETAT[11000002];ETAT[11000003];ETAT[11000004];ETAT[11000005];ETAT[11000006];ETAT[11000007];ETAT[11000008];ETAT[11000009];ETAT[11000010];" operateur="OU"/>
+    <AccesEtatSynthese code="1999991" formule="ETAT[11000011];ETAT[11000012];ETAT[11000013];ETAT[11000014];ETAT[11000015];ETAT[11000016];ETAT[11000017];ETAT[11000018];ETAT[11000019];ETAT[11000020];" operateur="OU"/>
+    <AccesEtatSynthese code="1999992" formule="ETAT[11000021];ETAT[11000022];ETAT[11000023];ETAT[11000024];ETAT[11000025];ETAT[11000026];ETAT[11000027];ETAT[11000028];ETAT[11000029];ETAT[11000030];" operateur="OU"/>
+    <AccesEtatSynthese code="1999993" formule="ETAT[11000031];ETAT[11000032];ETAT[11000033];ETAT[11000034];ETAT[11000035];ETAT[11000036];ETAT[11000037];ETAT[11000038];ETAT[11000039];ETAT[11000040];" operateur="OU"/>
+    <AccesEtatSynthese code="1999994" formule="ETAT[11000041];ETAT[11000042];ETAT[11000043];ETAT[11000044];ETAT[11000045];ETAT[11000046];ETAT[11000047];ETAT[11000048];ETAT[11000049];ETAT[11000050];" operateur="OU"/>
+    <AccesEtatSynthese code="11000000" formule="ETAT[1999990];ETAT[1999991];ETAT[1999992];ETAT[1999993];ETAT[1999994];" operateur="OU"/>
+    <AccesEtatSynthese code="11215" formule="ETAT[1107];ETAT[1110];ETAT[1118];ETAT[21];" operateur="OU"/>
+    <AccesEtatSynthese code="11217" formule="" operateur="ET"/>
+    <AccesEtatSynthese code="0" formule="ETAT[1000000];ETAT[11000000];ETAT[11217];" operateur="OU"/>
+    <AccesAlarmeSynthese code="999990" formule="ALARME[1000001];ALARME[1000002];ALARME[1000003];ALARME[1000004];ALARME[1000005];ALARME[1000006];ALARME[1000007];ALARME[1000008];ALARME[1000009];ALARME[1000010];" operateur="OU"/>
+    <AccesAlarmeSynthese code="999991" formule="ALARME[1000011];ALARME[1000012];ALARME[1000013];ALARME[1000014];ALARME[1000015];ALARME[1000016];ALARME[1000017];ALARME[1000018];ALARME[1000019];ALARME[1000020];" operateur="OU"/>
+    <AccesAlarmeSynthese code="999992" formule="ALARME[1000021];ALARME[1000022];ALARME[1000023];ALARME[1000024];ALARME[1000025];ALARME[1000026];ALARME[1000027];ALARME[1000028];ALARME[1000029];ALARME[1000030];" operateur="OU"/>
+    <AccesAlarmeSynthese code="999993" formule="ALARME[1000031];ALARME[1000032];ALARME[1000033];ALARME[1000034];ALARME[1000035];ALARME[1000036];ALARME[1000037];ALARME[1000038];ALARME[1000039];ALARME[1000040];" operateur="OU"/>
+    <AccesAlarmeSynthese code="999994" formule="ALARME[1000041];ALARME[1000042];ALARME[1000043];ALARME[1000044];ALARME[1000045];ALARME[1000046];ALARME[1000047];ALARME[1000048];ALARME[1000049];ALARME[1000050];" operateur="OU"/>
+    <AccesAlarmeSynthese code="999999" formule="ALARME[1000000];" operateur="!ET"/>
+    <AccesAlarmeSynthese code="1000000" formule="ALARME[999990];ALARME[999991];ALARME[999992];ALARME[999993];ALARME[999994];" operateur="OU"/>
+    <AccesAlarmeSynthese code="500001" formule="ETAT[1120];" operateur="OU"/>
+    <AccesAlarmeSynthese code="500002" formule="ETAT[1102];" operateur="OU"/>
+    <AccesAlarmeSynthese code="500003" formule="ETAT[1103];" operateur="OU"/>
+    <AccesAlarmeSynthese code="500004" formule="ETAT[1104];" operateur="OU"/>
+    <AccesAlarmeSynthese code="500005" formule="ETAT[1105];" operateur="OU"/>
+    <AccesAlarmeSynthese code="500006" formule="ETAT[1106];" operateur="OU"/>
+    <AccesAlarmeSynthese code="500007" formule="ETAT[21];" operateur="OU"/>
+    <AccesAlarmeSynthese code="500008" formule="ETAT[1108];" operateur="OU"/>
+    <AccesAlarmeSynthese code="500009" formule="ETAT[1109];" operateur="OU"/>
+    <AccesAlarmeSynthese code="500010" formule="ETAT[1110];" operateur="OU"/>
+    <AccesAlarmeSynthese code="500011" formule="ETAT[1111];" operateur="OU"/>
+    <AccesAlarmeSynthese code="500012" formule="ETAT[1112];" operateur="OU"/>
+    <AccesAlarmeSynthese code="500013" formule="ETAT[1113];" operateur="OU"/>
+    <AccesAlarmeSynthese code="500014" formule="ETAT[1114];" operateur="OU"/>
+    <AccesAlarmeSynthese code="500015" formule="ETAT[1115];" operateur="OU"/>
+    <AccesAlarmeSynthese code="500016" formule="ETAT[1116];" operateur="OU"/>
+    <AccesAlarmeSynthese code="500017" formule="ETAT[1117];" operateur="OU"/>
+    <AccesAlarmeSynthese code="500018" formule="ETAT[1118];" operateur="OU"/>
+    <AccesAlarmeSynthese code="500019" formule="ETAT[1119];" operateur="OU"/>
+    <AccesAlarmeSynthese code="500020" formule="ETAT[20];" operateur="OU"/>
+    <AccesAlarmeSynthese code="500021" formule="ETAT[25];" operateur="OU"/>
+    <AccesAlarmeSynthese code="500022" formule="ETAT[1123];" operateur="OU"/>
+    <AccesAlarmeSynthese code="500023" formule="ETAT[1107];" operateur="OU"/>
+    <AccesAlarmeSynthese code="500024" formule="ETAT[23];" operateur="OU"/>
+    <AccesAlarmeSynthese code="500025" formule="ETAT[24];" operateur="OU"/>
+    <AccesAlarmeSynthese code="500026" formule="ETAT[22];" operateur="OU"/>
+    <AccesAlarmeSynthese code="11113" formule="ETAT[1107];ETAT[5001];" operateur="ET"/>
+    <AccesAlarmeSynthese code="11114" formule="ETAT[1107];ETAT[1110];ETAT[1118];ETAT[21];" operateur="OU"/>
+    <AccesAlarmeSynthese code="11153" formule="ETAT[1124];" operateur="ET"/>
+    <AccesAlarmeSynthese code="0" formule="ETAT[0];" operateur="ET"/>
+    <AccesAlarmeSynthese code="1000" formule="ETAT[0];" operateur="ET"/>
+    <Entree code="1" isActifAZero="false" type="Mesure" valeur="0__M_Id_Ligne_Station_VT"/>
+    <Entree code="2" isActifAZero="false" type="Mesure" valeur="1__M_Id_Type_Equipement_VT"/>
+    <Entree code="3" isActifAZero="false" type="Mesure" valeur="2__M_Id_version_VT"/>
+    <Entree code="4" isActifAZero="false" type="Mesure" valeur="3__M_Id_checksum_VT"/>
+    <Entree code="6" isActifAZero="false" type="Mesure" valeur="5__M_Temps_ecoule_en_panne_confort_VT"/>
+    <Entree code="7" isActifAZero="false" type="Mesure" valeur="6__M_Temps_de_fonctionnement_cumule_en_insufflation_VT"/>
+    <Entree code="8" isActifAZero="false" type="Mesure" valeur="7__M_Temps_de_fonctionnement_cumule_en_extraction_VT"/>
+    <Entree code="9" isActifAZero="false" type="Mesure" valeur="8__M_Temps_arret_en_entretien_VT"/>
+    <Entree code="10" isActifAZero="false" type="Mesure" valeur="9__M_Temps_de_coupure_400_Volts_VT"/>
+    <Entree code="1122" isActifAZero="false" type="Etat" valeur="16_0_E_En_mode_normal_A_VT"/>
+    <Entree code="4" isActifAZero="false" type="Etat" valeur="16_1_E_En_mode_normal_B_VT"/>
+    <Entree code="5001" isActifAZero="false" type="Etat" valeur="16_2_E_En_mode_desenfumage_VT"/>
+    <Entree code="7" isActifAZero="false" type="Etat" valeur="16_3_E_En_commande_depuis_la_PGR_forcee_VT"/>
+    <Entree code="8" isActifAZero="false" type="Etat" valeur="16_4_E_En_commande_depuis_le_PCM_VT"/>
+    <Entree code="1" isActifAZero="false" type="Etat" valeur="16_5_E_En_entretien_VT"/>
+    <Entree code="9" isActifAZero="false" type="Etat" valeur="16_6_E_En_arret_VT"/>
+    <Entree code="10" isActifAZero="false" type="Etat" valeur="16_7_E_En_arret_nuit_CAN_VT"/>
+    <Entree code="11" isActifAZero="false" type="Etat" valeur="16_8_E_En_arret_CMA_VT"/>
+    <Entree code="12" isActifAZero="false" type="Etat" valeur="16_9_E_En_insufflation_petite_vitesse_confort_VT"/>
+    <Entree code="13" isActifAZero="false" type="Etat" valeur="16_10_E_En_extraction_petite_vitesse_confort_VT"/>
+    <Entree code="14" isActifAZero="false" type="Etat" valeur="16_11_E_En_insufflation_desenfumage_VT"/>
+    <Entree code="15" isActifAZero="false" type="Etat" valeur="16_12_E_En_extraction_desenfumage_VT"/>
+    <Entree code="16" isActifAZero="false" type="Etat" valeur="16_13_E_En_Arret_sur_voie_VT"/>
+    <Entree code="17" isActifAZero="false" type="Etat" valeur="16_14_E_En_commande_depuis_la_PGR_confort_VT"/>
+    <Entree code="1120" isActifAZero="false" type="Etat" valeur="17_0_E_Pre_alerte_VT"/>
+    <Entree code="1102" isActifAZero="false" type="Etat" valeur="17_1_E_Defaut_vibration_VT"/>
+    <Entree code="1103" isActifAZero="false" type="Etat" valeur="17_2_E_Intensite_insuffisante_en_extraction_VT"/>
+    <Entree code="1104" isActifAZero="false" type="Etat" valeur="17_3_E_Intensite_insuffisante_en_insufflation_VT"/>
+    <Entree code="1105" isActifAZero="false" type="Etat" valeur="17_4_E_Niveau_de_bruit_eleve_en_baie_VT"/>
+    <Entree code="1106" isActifAZero="false" type="Etat" valeur="17_5_E_Absence_400V_Secours_VT"/>
+    <Entree code="1119" isActifAZero="false" type="Etat" valeur="17_6_E_Echauffement_des_paliers_moteur_VT"/>
+    <Entree code="20" isActifAZero="false" type="Etat" valeur="17_7_E_Defaut_automate_VT"/>
+    <Entree code="1123" isActifAZero="false" type="Etat" valeur="17_9_E_Absence_400V_Normal_VT"/>
+    <Entree code="1124" isActifAZero="false" type="Etat" valeur="17_10_E_Defaut_acces_trappe_VT"/>
+    <Entree code="21" isActifAZero="false" type="Etat" valeur="19_0_E_Panne_confort_VT"/>
+    <Entree code="1108" isActifAZero="false" type="Etat" valeur="19_1_E_Defaut_variateur_ou_thermique_demarreur_VT"/>
+    <Entree code="1109" isActifAZero="false" type="Etat" valeur="19_2_E_Defaut_disjoncteur_ou_thermique_moteur_VT"/>
+    <Entree code="1107" isActifAZero="false" type="Etat" valeur="19_3_E_Panne_Desenfumage_VT"/>
+    <Entree code="1110" isActifAZero="false" type="Etat" valeur="21_0_E_Panne_non_discriminee_VT"/>
+    <Entree code="1111" isActifAZero="false" type="Etat" valeur="21_1_E_Defaut_absence_tension_400_Volts_NORMAL_VT"/>
+    <Entree code="1112" isActifAZero="false" type="Etat" valeur="21_2_E_Defaut_absence_tension_24_48_Volts_Armoire_VT"/>
+    <Entree code="1113" isActifAZero="false" type="Etat" valeur="21_3_E_Discordance_BAE_CDAL_VT"/>
+    <Entree code="1114" isActifAZero="false" type="Etat" valeur="21_4_E_Defaut_frein_VT"/>
+    <Entree code="1115" isActifAZero="false" type="Etat" valeur="21_5_E_Defaut_rideau_coupe_vent_VT"/>
+    <Entree code="1116" isActifAZero="false" type="Etat" valeur="21_6_E_Defaut_BAE_5_heures_VT"/>
+    <Entree code="22" isActifAZero="false" type="Etat" valeur="21_7_E_Defaut_clapets_coupe_feu_VT"/>
+    <Entree code="1117" isActifAZero="false" type="Etat" valeur="21_8_E_Arret_urgence_VT"/>
+    <Entree code="23" isActifAZero="false" type="Etat" valeur="21_9_E_Defaut_vibration_seuil_danger_VT"/>
+    <Entree code="24" isActifAZero="false" type="Etat" valeur="21_10_E_Defaut_absence_tension_48_Volts_Station_VT"/>
+    <Entree code="1118" isActifAZero="false" type="Etat" valeur="27_0_E_Panne_epuisement_ouvrage_ventilation_VT"/>
+    <Entree code="18" isActifAZero="false" type="Etat" valeur="28_0_E_En_insuflation_grande_vitesse_confort_VT"/>
+    <Entree code="19" isActifAZero="false" type="Etat" valeur="28_1_E_En_extraction_grande_vitesse_confort_VT"/>
+    <Sortie code="1" type="Commande" valeur="32_0_C_Prise_de_priorite_PGR_Forcee_VT"/>
+    <Sortie code="2" type="Commande" valeur="32_1_C_Retour_commande_normale_BUS_apres_priorite_PGR_VT"/>
+    <Sortie code="3" type="Commande" valeur="32_2_C_Marche_forcee_insufflation_PGR_VT"/>
+    <Sortie code="4" type="Commande" valeur="32_3_C_Marche_forcee_extraction_PGR_VT"/>
+    <Sortie code="5" type="Commande" valeur="32_4_C_Arret_poste_par_PGR_VT"/>
+    <Sortie code="6" type="Commande" valeur="32_5_C_Marche_confort_insufflation_PGR_VT"/>
+    <Sortie code="7" type="Commande" valeur="32_6_C_Marche_confort_extraction_PGR_VT"/>
+    <Sortie code="8" type="Commande" valeur="32_7_C_Prise_de_priorite_PCM_VT"/>
+    <Sortie code="9" type="Commande" valeur="32_8_C_Retour_commande_normale_BUS_apres_priorite_PCM_VT"/>
+    <Sortie code="10" type="Commande" valeur="32_9_C_Marche_confort_insufflation_PCM_VT"/>
+    <Sortie code="11" type="Commande" valeur="32_10_C_Marche_confort_extraction_PCM_VT"/>
+    <Sortie code="12" type="Commande" valeur="32_11_C_Arret_poste_par_PCM_VT"/>
+    <Sortie code="13" type="Commande" valeur="32_12_C_Rearmement_VT"/>
+    <Sortie code="14" type="Commande" valeur="32_13_C_Prise_de_priorite_PGR_confort_VT"/>
+    <Sortie code="1003" type="Commande" valeur="32_14_C_Bit_de_synchronisation_mise_heure_API_VT"/>
+    <Sortie code="1002" type="Commande" valeur="33__C_Mot_de_mise_heure_horloge_API_secondes_VT"/>
+    <Sortie code="1001" type="Commande" valeur="34__C_Mot_de_mise_heure_horloge_API_heures_minutes_VT"/>
+    <Sortie code="15" type="Commande" valeur="35__C_Choix_vitesse_confort_VT"/>
+    <Sortie code="1004" type="Commande" valeur="36__C_Mot_de_mise_date_horloge_API_Jour_Mois_VT"/>
+    <Sortie code="1005" type="Commande" valeur="37__C_Mot_de_mise_date_horloge_API_Jour_semaine_Annee_VT"/>
+    <BlocFonctionnelle valeur="blocVT">
+        <Association elementAssocie="0__M_Id_Ligne_Station_VT" valeur="0__M_Id_Ligne_Station_VT"/>
+        <Association elementAssocie="1__M_Id_Type_Equipement_VT" valeur="1__M_Id_Type_Equipement_VT"/>
+        <Association elementAssocie="2__M_Id_version_VT" valeur="2__M_Id_version_VT"/>
+        <Association elementAssocie="3__M_Id_checksum_VT" valeur="3__M_Id_checksum_VT"/>
+        <Association elementAssocie="5__M_Temps_ecoule_en_panne_confort_VT" valeur="5__M_Temps_ecoule_en_panne_confort_VT"/>
+        <Association elementAssocie="6__M_Temps_de_fonctionnement_cumule_en_insufflation_VT" valeur="6__M_Temps_de_fonctionnement_cumule_en_insufflation_VT"/>
+        <Association elementAssocie="7__M_Temps_de_fonctionnement_cumule_en_extraction_VT" valeur="7__M_Temps_de_fonctionnement_cumule_en_extraction_VT"/>
+        <Association elementAssocie="8__M_Temps_arret_en_entretien_VT" valeur="8__M_Temps_arret_en_entretien_VT"/>
+        <Association elementAssocie="9__M_Temps_de_coupure_400_Volts_VT" valeur="9__M_Temps_de_coupure_400_Volts_VT"/>
+        <Association elementAssocie="16_0_E_En_mode_normal_A_VT" valeur="16_0_E_En_mode_normal_A_VT"/>
+        <Association elementAssocie="16_1_E_En_mode_normal_B_VT" valeur="16_1_E_En_mode_normal_B_VT"/>
+        <Association elementAssocie="16_2_E_En_mode_desenfumage_VT" valeur="16_2_E_En_mode_desenfumage_VT"/>
+        <Association elementAssocie="16_3_E_En_commande_depuis_la_PGR_forcee_VT" valeur="16_3_E_En_commande_depuis_la_PGR_forcee_VT"/>
+        <Association elementAssocie="16_4_E_En_commande_depuis_le_PCM_VT" valeur="16_4_E_En_commande_depuis_le_PCM_VT"/>
+        <Association elementAssocie="16_5_E_En_entretien_VT" valeur="16_5_E_En_entretien_VT"/>
+        <Association elementAssocie="16_6_E_En_arret_VT" valeur="16_6_E_En_arret_VT"/>
+        <Association elementAssocie="16_7_E_En_arret_nuit_CAN_VT" valeur="16_7_E_En_arret_nuit_CAN_VT"/>
+        <Association elementAssocie="16_8_E_En_arret_CMA_VT" valeur="16_8_E_En_arret_CMA_VT"/>
+        <Association elementAssocie="16_9_E_En_insufflation_petite_vitesse_confort_VT" valeur="16_9_E_En_insufflation_petite_vitesse_confort_VT"/>
+        <Association elementAssocie="16_10_E_En_extraction_petite_vitesse_confort_VT" valeur="16_10_E_En_extraction_petite_vitesse_confort_VT"/>
+        <Association elementAssocie="16_11_E_En_insufflation_desenfumage_VT" valeur="16_11_E_En_insufflation_desenfumage_VT"/>
+        <Association elementAssocie="16_12_E_En_extraction_desenfumage_VT" valeur="16_12_E_En_extraction_desenfumage_VT"/>
+        <Association elementAssocie="16_13_E_En_Arret_sur_voie_VT" valeur="16_13_E_En_Arret_sur_voie_VT"/>
+        <Association elementAssocie="16_14_E_En_commande_depuis_la_PGR_confort_VT" valeur="16_14_E_En_commande_depuis_la_PGR_confort_VT"/>
+        <Association elementAssocie="28_0_E_En_insuflation_grande_vitesse_confort_VT" valeur="28_0_E_En_insuflation_grande_vitesse_confort_VT"/>
+        <Association elementAssocie="28_1_E_En_extraction_grande_vitesse_confort_VT" valeur="28_1_E_En_extraction_grande_vitesse_confort_VT"/>
+        <Association elementAssocie="17_0_E_Pre_alerte_VT" valeur="17_0_E_Pre_alerte_VT"/>
+        <Association elementAssocie="17_1_E_Defaut_vibration_VT" valeur="17_1_E_Defaut_vibration_VT"/>
+        <Association elementAssocie="17_2_E_Intensite_insuffisante_en_extraction_VT" valeur="17_2_E_Intensite_insuffisante_en_extraction_VT"/>
+        <Association elementAssocie="17_3_E_Intensite_insuffisante_en_insufflation_VT" valeur="17_3_E_Intensite_insuffisante_en_insufflation_VT"/>
+        <Association elementAssocie="17_4_E_Niveau_de_bruit_eleve_en_baie_VT" valeur="17_4_E_Niveau_de_bruit_eleve_en_baie_VT"/>
+        <Association elementAssocie="17_5_E_Absence_400V_Secours_VT" valeur="17_5_E_Absence_400V_Secours_VT"/>
+        <Association elementAssocie="17_6_E_Echauffement_des_paliers_moteur_VT" valeur="17_6_E_Echauffement_des_paliers_moteur_VT"/>
+        <Association elementAssocie="17_7_E_Defaut_automate_VT" valeur="17_7_E_Defaut_automate_VT"/>
+        <Association elementAssocie="17_9_E_Absence_400V_Normal_VT" valeur="17_9_E_Absence_400V_Normal_VT"/>
+        <Association elementAssocie="17_10_E_Defaut_acces_trappe_VT" valeur="17_10_E_Defaut_acces_trappe_VT"/>
+        <Association elementAssocie="19_0_E_Panne_confort_VT" valeur="19_0_E_Panne_confort_VT"/>
+        <Association elementAssocie="19_1_E_Defaut_variateur_ou_thermique_demarreur_VT" valeur="19_1_E_Defaut_variateur_ou_thermique_demarreur_VT"/>
+        <Association elementAssocie="19_2_E_Defaut_disjoncteur_ou_thermique_moteur_VT" valeur="19_2_E_Defaut_disjoncteur_ou_thermique_moteur_VT"/>
+        <Association elementAssocie="19_3_E_Panne_Desenfumage_VT" valeur="19_3_E_Panne_Desenfumage_VT"/>
+        <Association elementAssocie="21_0_E_Panne_non_discriminee_VT" valeur="21_0_E_Panne_non_discriminee_VT"/>
+        <Association elementAssocie="21_1_E_Defaut_absence_tension_400_Volts_NORMAL_VT" valeur="21_1_E_Defaut_absence_tension_400_Volts_NORMAL_VT"/>
+        <Association elementAssocie="21_2_E_Defaut_absence_tension_24_48_Volts_Armoire_VT" valeur="21_2_E_Defaut_absence_tension_24_48_Volts_Armoire_VT"/>
+        <Association elementAssocie="21_3_E_Discordance_BAE_CDAL_VT" valeur="21_3_E_Discordance_BAE_CDAL_VT"/>
+        <Association elementAssocie="21_4_E_Defaut_frein_VT" valeur="21_4_E_Defaut_frein_VT"/>
+        <Association elementAssocie="21_5_E_Defaut_rideau_coupe_vent_VT" valeur="21_5_E_Defaut_rideau_coupe_vent_VT"/>
+        <Association elementAssocie="21_6_E_Defaut_BAE_5_heures_VT" valeur="21_6_E_Defaut_BAE_5_heures_VT"/>
+        <Association elementAssocie="21_7_E_Defaut_clapets_coupe_feu_VT" valeur="21_7_E_Defaut_clapets_coupe_feu_VT"/>
+        <Association elementAssocie="21_8_E_Arret_urgence_VT" valeur="21_8_E_Arret_urgence_VT"/>
+        <Association elementAssocie="21_9_E_Defaut_vibration_seuil_danger_VT" valeur="21_9_E_Defaut_vibration_seuil_danger_VT"/>
+        <Association elementAssocie="21_10_E_Defaut_absence_tension_48_Volts_Station_VT" valeur="21_10_E_Defaut_absence_tension_48_Volts_Station_VT"/>
+        <Association elementAssocie="27_0_E_Panne_epuisement_ouvrage_ventilation_VT" valeur="27_0_E_Panne_epuisement_ouvrage_ventilation_VT"/>
+        <Association elementAssocie="32_0_C_Prise_de_priorite_PGR_Forcee_VT" valeur="32_0_C_Prise_de_priorite_PGR_Forcee_VT"/>
+        <Association elementAssocie="32_1_C_Retour_commande_normale_BUS_apres_priorite_PGR_VT" valeur="32_1_C_Retour_commande_normale_BUS_apres_priorite_PGR_VT"/>
+        <Association elementAssocie="32_2_C_Marche_forcee_insufflation_PGR_VT" valeur="32_2_C_Marche_forcee_insufflation_PGR_VT"/>
+        <Association elementAssocie="32_3_C_Marche_forcee_extraction_PGR_VT" valeur="32_3_C_Marche_forcee_extraction_PGR_VT"/>
+        <Association elementAssocie="32_4_C_Arret_poste_par_PGR_VT" valeur="32_4_C_Arret_poste_par_PGR_VT"/>
+        <Association elementAssocie="32_5_C_Marche_confort_insufflation_PGR_VT" valeur="32_5_C_Marche_confort_insufflation_PGR_VT"/>
+        <Association elementAssocie="32_6_C_Marche_confort_extraction_PGR_VT" valeur="32_6_C_Marche_confort_extraction_PGR_VT"/>
+        <Association elementAssocie="32_7_C_Prise_de_priorite_PCM_VT" valeur="32_7_C_Prise_de_priorite_PCM_VT"/>
+        <Association elementAssocie="32_8_C_Retour_commande_normale_BUS_apres_priorite_PCM_VT" valeur="32_8_C_Retour_commande_normale_BUS_apres_priorite_PCM_VT"/>
+        <Association elementAssocie="32_9_C_Marche_confort_insufflation_PCM_VT" valeur="32_9_C_Marche_confort_insufflation_PCM_VT"/>
+        <Association elementAssocie="32_10_C_Marche_confort_extraction_PCM_VT" valeur="32_10_C_Marche_confort_extraction_PCM_VT"/>
+        <Association elementAssocie="32_11_C_Arret_poste_par_PCM_VT" valeur="32_11_C_Arret_poste_par_PCM_VT"/>
+        <Association elementAssocie="32_12_C_Rearmement_VT" valeur="32_12_C_Rearmement_VT"/>
+        <Association elementAssocie="32_13_C_Prise_de_priorite_PGR_confort_VT" valeur="32_13_C_Prise_de_priorite_PGR_confort_VT"/>
+        <Association elementAssocie="32_14_C_Bit_de_synchronisation_mise_heure_API_VT" valeur="32_14_C_Bit_de_synchronisation_mise_heure_API_VT"/>
+        <Association elementAssocie="33__C_Mot_de_mise_heure_horloge_API_secondes_VT" valeur="33__C_Mot_de_mise_heure_horloge_API_secondes_VT"/>
+        <Association elementAssocie="34__C_Mot_de_mise_heure_horloge_API_heures_minutes_VT" valeur="34__C_Mot_de_mise_heure_horloge_API_heures_minutes_VT"/>
+        <Association elementAssocie="35__C_Choix_vitesse_confort_VT" valeur="35__C_Choix_vitesse_confort_VT"/>
+        <Association elementAssocie="36__C_Mot_de_mise_date_horloge_API_Jour_Mois_VT" valeur="36__C_Mot_de_mise_date_horloge_API_Jour_Mois_VT"/>
+        <Association elementAssocie="37__C_Mot_de_mise_date_horloge_API_Jour_semaine_Annee_VT" valeur="37__C_Mot_de_mise_date_horloge_API_Jour_semaine_Annee_VT"/>
+    </BlocFonctionnelle>
+    <AlarmeChaineFonctionnelle typeEquipement="switch">
+        <ListeCode code="0"/>
+    </AlarmeChaineFonctionnelle>
+</TypeEquipement>

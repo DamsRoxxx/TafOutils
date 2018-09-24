@@ -2,12 +2,12 @@
 <TypeEquipement module="libAGSServeurEquipementsGeneriques.so" codeFamille="GA" nom="grille_2_API_BLOCSET">
     <Conf categorie="Fermetures automatiques" libelle="Grille 2 API BLOCSET">
         <GroupeParametre id="LiaisonBlocFonctionnel" libelle="Liaison bloc fonctionnel" multiple="false">
-            <Parametre defaut="" description=" Equipement lié" id="equipement" libelle="Equipement lié" type="NomLogique" typeEqtLie="ALL"/>
+            <Parametre defaut="" description=" Equipement lié" id="equipement" libelle="Equipement lié" type="NomLogique" typeEqtLie="API_BLOCSET_Base"/>
             <Parametre defaut="" description="Identifiant du bloc dans l'équipement" id="numero" libelle="Identifiant du bloc dans l'équipement" type="Texte"/>
             <Parametre defaut="blocFA" id="nomBloc" libelle="nom du bloc" type="Texte"/>
         </GroupeParametre>
         <GroupeParametre facultatif="true" id="Camera" libelle="Camera" libelleMultiple="Caméras associées" multiple="true">
-            <Parametre defaut="" description="Une caméra à associer" id="nomLogique" libelle="Nom logique" type="NomLogique" typeEqtLie="VIDEOCameraFVMC"/>
+            <Parametre defaut="" description="Une caméra à associer" id="nomLogique" libelle="Nom logique" type="NomLogique" typeEqtLie="VIDEOCamera"/>
         </GroupeParametre>
         <GroupeParametre facultatif="true" id="AccesEtatDistant" libelle="Accès état distant" libelleMultiple="Accès états synthèse" multiple="true">
             <Parametre defaut="" description="Le code de l'état" id="codeLocal" libelle="Code" type="Nombre"/>

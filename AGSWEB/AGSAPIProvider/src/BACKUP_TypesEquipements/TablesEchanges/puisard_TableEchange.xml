@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TypeEquipement module="" nom="puisard">
+    <Info cle="mot_id_ligne_station" mot="448" bit="-1"/>
+    <Info cle="mot_id_type_numero_equipement" mot="449" bit="-1"/>
+    <Info cle="mot_id_mois_annee_version" mot="450" bit="-1"/>
+    <Info cle="mot_id_checksum" mot="451" bit="-1"/>
+    <Info cle="mot_status" mot="452" bit="-1"/>
+    <Info cle="mot_mesure_apport_eau" mot="453" bit="-1"/>
+    <Info cle="mot_mesure_debit_groupe1" mot="454" bit="-1"/>
+    <Info cle="mot_mesure_tps_fct_groupe1" mot="455" bit="-1"/>
+    <Info cle="mot_mesure_debit_groupe2" mot="456" bit="-1"/>
+    <Info cle="mot_mesure_tps_fct_groupe2" mot="457" bit="-1"/>
+    <Info cle="mot_mesure_debit_groupe3" mot="458" bit="-1"/>
+    <Info cle="mot_mesure_tps_fct_groupe3" mot="459" bit="-1"/>
+    <Info cle="mot_mesure_debit_groupe4" mot="460" bit="-1"/>
+    <Info cle="mot_mesure_tps_fct_groupe4" mot="461" bit="-1"/>
+    <Info cle="mot_mesure_cumul_rejet_eau" mot="462" bit="-1"/>
+    <Info cle="mot_16_etat" mot="464" bit="-1"/>
+    <Info cle="bit_etat_arret_normal" mot="464" bit="0"/>
+    <Info cle="bit_etat_marche_secours" mot="464" bit="1"/>
+    <Info cle="bit_etat_entretien" mot="464" bit="2"/>
+    <Info cle="bit_etat_marche_normale_groupe1" mot="464" bit="3"/>
+    <Info cle="bit_etat_marche_normale_groupe2" mot="464" bit="4"/>
+    <Info cle="bit_etat_marche_normale_groupe3" mot="464" bit="5"/>
+    <Info cle="bit_etat_marche_normale_groupe4" mot="464" bit="6"/>
+    <Info cle="bit_etat_groupe3_sur_T1" mot="464" bit="7"/>
+    <Info cle="bit_etat_groupe3_sur_T2" mot="464" bit="8"/>
+    <Info cle="mot_17_pre-alerte" mot="465" bit="-1"/>
+    <Info cle="bit_pre-alerte_pre_alerte" mot="465" bit="0"/>
+    <Info cle="bit_pre-alerte_augmentation_apport_eau" mot="465" bit="1"/>
+    <Info cle="bit_pre-alerte_baisse_debit_groupe1" mot="465" bit="2"/>
+    <Info cle="bit_pre-alerte_baisse_debit_groupe2" mot="465" bit="3"/>
+    <Info cle="bit_pre-alerte_baisse_debit_groupe3" mot="465" bit="4"/>
+    <Info cle="bit_pre-alerte_baisse_debit_groupe4" mot="465" bit="5"/>
+    <Info cle="bit_alarme_defaut_automate" mot="465" bit="6"/>
+    <Info cle="mot_18_alerte" mot="466" bit="-1"/>
+    <Info cle="bit_alerte_alerte" mot="466" bit="0"/>
+    <Info cle="bit_alerte_tps_pompage_long_groupe1" mot="466" bit="1"/>
+    <Info cle="bit_alerte_tps_pompage_long_groupe2" mot="466" bit="2"/>
+    <Info cle="bit_alerte_tps_pompage_long_groupe3" mot="466" bit="3"/>
+    <Info cle="bit_alerte_tps_pompage_long_groupe4" mot="466" bit="4"/>
+    <Info cle="bit_alerte_defaut_hydraulique_groupe1" mot="466" bit="5"/>
+    <Info cle="bit_alerte_defaut_hydraulique_groupe2" mot="466" bit="6"/>
+    <Info cle="bit_alerte_defaut_hydraulique_groupe3" mot="466" bit="7"/>
+    <Info cle="bit_alerte_defaut_hydraulique_groupe4" mot="466" bit="8"/>
+    <Info cle="mot_21_alarme" mot="469" bit="-1"/>
+    <Info cle="bit_alarme_alarme_AAI" mot="469" bit="0"/>
+    <Info cle="bit_alarme_autres_AAI" mot="469" bit="1"/>
+    <Info cle="bit_alarme_vanne_arrivee_fermee" mot="469" bit="2"/>
+    <Info cle="bit_alarme_alarme_haute" mot="469" bit="3"/>
+    <Info cle="bit_alarme_BAE_sup_5h" mot="469" bit="4"/>
+    <Info cle="bit_alarme_absence_T1" mot="469" bit="5"/>
+    <Info cle="bit_alarme_absence_T2" mot="469" bit="6"/>
+    <Info cle="bit_alarme_defaut_detection_niveaux" mot="469" bit="7"/>
+    <Info cle="bit_alarme_defaut_thermique_groupe1" mot="469" bit="9"/>
+    <Info cle="bit_alarme_defaut_variateur_groupe1" mot="469" bit="10"/>
+    <Info cle="bit_alarme_defaut_thermique_groupe2" mot="469" bit="13"/>
+    <Info cle="bit_alarme_defaut_variateur_groupe2" mot="469" bit="14"/>
+    <Info cle="mot_22_alarme" mot="470" bit="-1"/>
+    <Info cle="bit_alarme_defaut_thermique_groupe3" mot="470" bit="2"/>
+    <Info cle="bit_alarme_defaut_variateur_groupe3" mot="470" bit="3"/>
+    <Info cle="bit_alarme_defaut_thermique_groupe4" mot="470" bit="6"/>
+    <Info cle="bit_alarme_defaut_variateur_groupe4" mot="470" bit="7"/>
+    <Info cle="mot_commande" mot="480" bit="-1"/>
+    <Info cle="bit_commande_rearmement_defaut" mot="480" bit="0" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_marche_groupe1" mot="480" bit="1" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_marche_groupe2" mot="480" bit="2" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_marche_groupe3" mot="480" bit="3" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_marche_groupe4" mot="480" bit="4" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_synchro" mot="480" bit="14" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_signe_de_vie" mot="480" bit="15" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="mot_commande_reglage_secondes" mot="481" bit="-1"/>
+    <Info cle="mot_commande_reglage_minutes" mot="482" bit="-1"/>
+</TypeEquipement>

@@ -3,11 +3,11 @@
     <Conf categorie="EquipementsMaestro" libelle="PointDetectionIncendie DEF">
         <description>Une zone fonctionnelle Point de detection incendie DEF.</description>
         <GroupeParametre id="LiaisonECS_DEF" libelle="Liaison ECS DEF" multiple="false">
-            <Parametre defaut="" description="ESC DEF à associer" id="equipement" libelle="Equipement ECS_DEF" type="NomLogique" typeEqtLie="ECS"/>
+            <Parametre defaut="" description="ESC DEF à associer" id="equipement" libelle="Equipement ECS_DEF" type="NomLogique" typeEqtLie="ECS_DEF"/>
             <Parametre defaut="" description="Index du point de détection incendie" facultatif="false" id="numero" libelle="Numéro" type="Nombre"/>
         </GroupeParametre>
         <GroupeParametre facultatif="true" id="Camera" libelle="Camera" libelleMultiple="Caméras associées" multiple="true">
-            <Parametre defaut="" description="Une caméra à associer" id="nomLogique" libelle="Nom logique" type="NomLogique" typeEqtLie="VIDEOCameraFVMC"/>
+            <Parametre defaut="" description="Une caméra à associer" id="nomLogique" libelle="Nom logique" type="NomLogique" typeEqtLie="VIDEOCamera"/>
         </GroupeParametre>
         <GroupeParametre facultatif="true" id="AccesEtatDistant" libelle="Accès état distant" libelleMultiple="Accès états synthèse" multiple="true">
             <Parametre defaut="" description="Le code de l'état" id="codeLocal" libelle="Code" type="Nombre"/>
