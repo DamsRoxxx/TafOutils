@@ -1,0 +1,11 @@
+CAS4Generator/NOT_CAS4.csv
+CAS4Generator/cas4.csv
+PDC/SVM/
+PDC_REFACTOR/SVM/
+TOSTED/RES
+TOSTED/TEST/
+TOSTED/results/
+*.o
+*.pyc
+.*.swp
+*.d
