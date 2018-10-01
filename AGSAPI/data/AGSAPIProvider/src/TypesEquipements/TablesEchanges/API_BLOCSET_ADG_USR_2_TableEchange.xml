@@ -1,0 +1,1830 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TypeEquipement module="" nom="API_BLOCSET_ADG_USR_2">
+    <Info cle="mot_10200_defaut_fipway" mot="10200" bit="-1"/>
+    <Info cle="bit_defaut_fipway_ventilateur_1" mot="10200" bit="0"/>
+    <Info cle="bit_defaut_fipway_ventilateur_2" mot="10200" bit="1"/>
+    <Info cle="bit_defaut_fipway_ventilateur_3" mot="10200" bit="2"/>
+    <Info cle="bit_defaut_fipway_ventilateur_4" mot="10200" bit="3"/>
+    <Info cle="bit_defaut_fipway_ventilateur_5" mot="10200" bit="4"/>
+    <Info cle="bit_defaut_fipway_ventilateur_6" mot="10200" bit="5"/>
+    <Info cle="bit_defaut_fipway_ventilateur_7" mot="10200" bit="6"/>
+    <Info cle="bit_defaut_fipway_ventilateur_8" mot="10200" bit="7"/>
+    <Info cle="bit_defaut_fipway_ventilateur_9" mot="10200" bit="8"/>
+    <Info cle="bit_defaut_fipway_ventilateur_10" mot="10200" bit="9"/>
+    <Info cle="bit_defaut_fipway_ventilateur_11" mot="10200" bit="10"/>
+    <Info cle="bit_defaut_fipway_ventilateur_12" mot="10200" bit="11"/>
+    <Info cle="bit_defaut_fipway_ventilateur_13" mot="10200" bit="12"/>
+    <Info cle="bit_defaut_fipway_ventilateur_14" mot="10200" bit="13"/>
+    <Info cle="bit_defaut_fipway_ventilateur_15" mot="10200" bit="14"/>
+    <Info cle="bit_defaut_fipway_ventilateur_16" mot="10200" bit="15"/>
+    <Info cle="mot_10201_defaut_fipway" mot="10201" bit="-1"/>
+    <Info cle="bit_defaut_fipway_ventilateur_17" mot="10201" bit="0"/>
+    <Info cle="bit_defaut_fipway_ventilateur_18" mot="10201" bit="1"/>
+    <Info cle="bit_defaut_fipway_ventilateur_19" mot="10201" bit="2"/>
+    <Info cle="bit_defaut_fipway_ventilateur_20" mot="10201" bit="3"/>
+    <Info cle="bit_defaut_fipway_BAM_1" mot="10201" bit="4"/>
+    <Info cle="bit_defaut_fipway_BAM_2" mot="10201" bit="5"/>
+    <Info cle="bit_defaut_fipway_BAM_3" mot="10201" bit="6"/>
+    <Info cle="bit_defaut_fipway_BAM_4" mot="10201" bit="7"/>
+    <Info cle="mot_10202_defauts_API" mot="10202" bit="-1"/>
+    <Info cle="bit_defaut_API_pile_alimentation" mot="10202" bit="0"/>
+    <Info cle="mot_10203_defauts_API" mot="10203" bit="-1"/>
+    <Info cle="bit_synthese_defaut_ADG" mot="10203" bit="0"/>
+    <Info cle="bit_defaut_API_comm_FIP" mot="10203" bit="1"/>
+    <Info cle="bit_defaut_API_comm_eth1" mot="10203" bit="2"/>
+    <Info cle="bit_defaut_API_comm_eth2" mot="10203" bit="3"/>
+    <Info cle="bit_defaut_API_carte4" mot="10203" bit="4"/>
+    <Info cle="bit_defaut_API_carte5" mot="10203" bit="5"/>
+    <Info cle="bit_defaut_API_carte6" mot="10203" bit="6"/>
+    <Info cle="bit_defaut_API_carte7" mot="10203" bit="7"/>
+    <Info cle="bit_defaut_API_carte8" mot="10203" bit="8"/>
+    <Info cle="bit_defaut_API_carte9" mot="10203" bit="9"/>
+    <Info cle="bit_defaut_API_carte10" mot="10203" bit="10"/>
+    <Info cle="bit_defaut_API_CPU_TSX_573623" mot="10203" bit="11"/>
+    <Info cle="mot_10307_etats_entree" mot="10307" bit="-1"/>
+    <Info cle="bit_etat_entree_1" mot="10307" bit="0"/>
+    <Info cle="bit_etat_entree_2" mot="10307" bit="1"/>
+    <Info cle="bit_etat_entree_3" mot="10307" bit="2"/>
+    <Info cle="bit_etat_entree_4" mot="10307" bit="3"/>
+    <Info cle="bit_etat_entree_5" mot="10307" bit="4"/>
+    <Info cle="bit_etat_entree_6" mot="10307" bit="5"/>
+    <Info cle="bit_etat_entree_7" mot="10307" bit="6"/>
+    <Info cle="bit_etat_entree_8" mot="10307" bit="7"/>
+    <Info cle="bit_etat_entree_9" mot="10307" bit="8"/>
+    <Info cle="bit_etat_entree_10" mot="10307" bit="9"/>
+    <Info cle="bit_etat_entree_11" mot="10307" bit="10"/>
+    <Info cle="bit_etat_entree_12" mot="10307" bit="11"/>
+    <Info cle="bit_etat_entree_13" mot="10307" bit="12"/>
+    <Info cle="bit_etat_entree_14" mot="10307" bit="13"/>
+    <Info cle="bit_etat_entree_15" mot="10307" bit="14"/>
+    <Info cle="bit_etat_entree_16" mot="10307" bit="15"/>
+    <Info cle="mot_10308_etats_entree" mot="10308" bit="-1"/>
+    <Info cle="bit_etat_entree_17" mot="10308" bit="0"/>
+    <Info cle="bit_etat_entree_18" mot="10308" bit="1"/>
+    <Info cle="bit_etat_entree_19" mot="10308" bit="2"/>
+    <Info cle="bit_etat_entree_20" mot="10308" bit="3"/>
+    <Info cle="bit_etat_entree_21" mot="10308" bit="4"/>
+    <Info cle="bit_etat_entree_22" mot="10308" bit="5"/>
+    <Info cle="bit_etat_entree_23" mot="10308" bit="6"/>
+    <Info cle="bit_etat_entree_24" mot="10308" bit="7"/>
+    <Info cle="bit_etat_entree_25" mot="10308" bit="8"/>
+    <Info cle="bit_etat_entree_26" mot="10308" bit="9"/>
+    <Info cle="bit_etat_entree_27" mot="10308" bit="10"/>
+    <Info cle="bit_etat_entree_28" mot="10308" bit="11"/>
+    <Info cle="bit_etat_entree_29" mot="10308" bit="12"/>
+    <Info cle="bit_etat_entree_30" mot="10308" bit="13"/>
+    <Info cle="bit_etat_entree_31" mot="10308" bit="14"/>
+    <Info cle="bit_etat_entree_32" mot="10308" bit="15"/>
+    <Info cle="mot_10309_etats_entree" mot="10309" bit="-1"/>
+    <Info cle="bit_etat_entree_33" mot="10309" bit="0"/>
+    <Info cle="bit_etat_entree_34" mot="10309" bit="1"/>
+    <Info cle="bit_etat_entree_35" mot="10309" bit="2"/>
+    <Info cle="bit_etat_entree_36" mot="10309" bit="3"/>
+    <Info cle="bit_etat_entree_37" mot="10309" bit="4"/>
+    <Info cle="bit_etat_entree_38" mot="10309" bit="5"/>
+    <Info cle="bit_etat_entree_39" mot="10309" bit="6"/>
+    <Info cle="bit_etat_entree_40" mot="10309" bit="7"/>
+    <Info cle="bit_etat_entree_41" mot="10309" bit="8"/>
+    <Info cle="bit_etat_entree_42" mot="10309" bit="9"/>
+    <Info cle="bit_etat_entree_43" mot="10309" bit="10"/>
+    <Info cle="bit_etat_entree_44" mot="10309" bit="11"/>
+    <Info cle="bit_etat_entree_45" mot="10309" bit="12"/>
+    <Info cle="bit_etat_entree_46" mot="10309" bit="13"/>
+    <Info cle="bit_etat_entree_47" mot="10309" bit="14"/>
+    <Info cle="bit_etat_entree_48" mot="10309" bit="15"/>
+    <Info cle="mot_10310_etats_entree" mot="10310" bit="-1"/>
+    <Info cle="bit_etat_entree_49" mot="10310" bit="0"/>
+    <Info cle="bit_etat_entree_50" mot="10310" bit="1"/>
+    <Info cle="bit_etat_entree_51" mot="10310" bit="2"/>
+    <Info cle="bit_etat_entree_52" mot="10310" bit="3"/>
+    <Info cle="bit_etat_entree_53" mot="10310" bit="4"/>
+    <Info cle="bit_etat_entree_54" mot="10310" bit="5"/>
+    <Info cle="bit_etat_entree_55" mot="10310" bit="6"/>
+    <Info cle="bit_etat_entree_56" mot="10310" bit="7"/>
+    <Info cle="bit_etat_entree_57" mot="10310" bit="8"/>
+    <Info cle="bit_etat_entree_58" mot="10310" bit="9"/>
+    <Info cle="bit_etat_entree_59" mot="10310" bit="10"/>
+    <Info cle="bit_etat_entree_60" mot="10310" bit="11"/>
+    <Info cle="bit_etat_entree_61" mot="10310" bit="12"/>
+    <Info cle="bit_etat_entree_62" mot="10310" bit="13"/>
+    <Info cle="bit_etat_entree_63" mot="10310" bit="14"/>
+    <Info cle="bit_etat_entree_64" mot="10310" bit="15"/>
+    <Info cle="mot_10311_etats_entree" mot="10311" bit="-1"/>
+    <Info cle="bit_etat_entree_65" mot="10311" bit="0"/>
+    <Info cle="bit_etat_entree_66" mot="10311" bit="1"/>
+    <Info cle="bit_etat_entree_67" mot="10311" bit="2"/>
+    <Info cle="bit_etat_entree_68" mot="10311" bit="3"/>
+    <Info cle="bit_etat_entree_69" mot="10311" bit="4"/>
+    <Info cle="bit_etat_entree_70" mot="10311" bit="5"/>
+    <Info cle="bit_etat_entree_71" mot="10311" bit="6"/>
+    <Info cle="bit_etat_entree_72" mot="10311" bit="7"/>
+    <Info cle="bit_etat_entree_73" mot="10311" bit="8"/>
+    <Info cle="bit_etat_entree_74" mot="10311" bit="9"/>
+    <Info cle="bit_etat_entree_75" mot="10311" bit="10"/>
+    <Info cle="bit_etat_entree_76" mot="10311" bit="11"/>
+    <Info cle="bit_etat_entree_77" mot="10311" bit="12"/>
+    <Info cle="bit_etat_entree_78" mot="10311" bit="13"/>
+    <Info cle="bit_etat_entree_79" mot="10311" bit="14"/>
+    <Info cle="bit_etat_entree_80" mot="10311" bit="15"/>
+    <Info cle="mot_10312_etats_entree" mot="10312" bit="-1"/>
+    <Info cle="bit_etat_entree_81" mot="10312" bit="0"/>
+    <Info cle="bit_etat_entree_82" mot="10312" bit="1"/>
+    <Info cle="bit_etat_entree_83" mot="10312" bit="2"/>
+    <Info cle="bit_etat_entree_84" mot="10312" bit="3"/>
+    <Info cle="bit_etat_entree_85" mot="10312" bit="4"/>
+    <Info cle="bit_etat_entree_86" mot="10312" bit="5"/>
+    <Info cle="bit_etat_entree_87" mot="10312" bit="6"/>
+    <Info cle="bit_etat_entree_88" mot="10312" bit="7"/>
+    <Info cle="bit_etat_entree_89" mot="10312" bit="8"/>
+    <Info cle="bit_etat_entree_90" mot="10312" bit="9"/>
+    <Info cle="bit_etat_entree_91" mot="10312" bit="10"/>
+    <Info cle="bit_etat_entree_92" mot="10312" bit="11"/>
+    <Info cle="bit_etat_entree_93" mot="10312" bit="12"/>
+    <Info cle="bit_etat_entree_94" mot="10312" bit="13"/>
+    <Info cle="bit_etat_entree_95" mot="10312" bit="14"/>
+    <Info cle="bit_etat_entree_96" mot="10312" bit="15"/>
+    <Info cle="mot_10313_etats_entree" mot="10313" bit="-1"/>
+    <Info cle="bit_etat_entree_97" mot="10313" bit="0"/>
+    <Info cle="bit_etat_entree_98" mot="10313" bit="1"/>
+    <Info cle="bit_etat_entree_99" mot="10313" bit="2"/>
+    <Info cle="bit_etat_entree_100" mot="10313" bit="3"/>
+    <Info cle="bit_etat_entree_101" mot="10313" bit="4"/>
+    <Info cle="bit_etat_entree_102" mot="10313" bit="5"/>
+    <Info cle="bit_etat_entree_103" mot="10313" bit="6"/>
+    <Info cle="bit_etat_entree_104" mot="10313" bit="7"/>
+    <Info cle="bit_etat_entree_105" mot="10313" bit="8"/>
+    <Info cle="bit_etat_entree_106" mot="10313" bit="9"/>
+    <Info cle="bit_etat_entree_107" mot="10313" bit="10"/>
+    <Info cle="bit_etat_entree_108" mot="10313" bit="11"/>
+    <Info cle="bit_etat_entree_109" mot="10313" bit="12"/>
+    <Info cle="bit_etat_entree_110" mot="10313" bit="13"/>
+    <Info cle="bit_etat_entree_111" mot="10313" bit="14"/>
+    <Info cle="bit_etat_entree_112" mot="10313" bit="15"/>
+    <Info cle="mot_10314_etats_entree" mot="10314" bit="-1"/>
+    <Info cle="bit_etat_entree_113" mot="10314" bit="0"/>
+    <Info cle="bit_etat_entree_114" mot="10314" bit="1"/>
+    <Info cle="bit_etat_entree_115" mot="10314" bit="2"/>
+    <Info cle="bit_etat_entree_116" mot="10314" bit="3"/>
+    <Info cle="bit_etat_entree_117" mot="10314" bit="4"/>
+    <Info cle="bit_etat_entree_118" mot="10314" bit="5"/>
+    <Info cle="bit_etat_entree_119" mot="10314" bit="6"/>
+    <Info cle="bit_etat_entree_120" mot="10314" bit="7"/>
+    <Info cle="bit_etat_entree_121" mot="10314" bit="8"/>
+    <Info cle="bit_etat_entree_122" mot="10314" bit="9"/>
+    <Info cle="bit_etat_entree_123" mot="10314" bit="10"/>
+    <Info cle="bit_etat_entree_124" mot="10314" bit="11"/>
+    <Info cle="bit_etat_entree_125" mot="10314" bit="12"/>
+    <Info cle="bit_etat_entree_126" mot="10314" bit="13"/>
+    <Info cle="bit_etat_entree_127" mot="10314" bit="14"/>
+    <Info cle="bit_etat_entree_128" mot="10314" bit="15"/>
+    <Info cle="mot_10318_commandes_API" mot="10318" bit="-1"/>
+    <Info cle="bit_signe_de_vie" mot="10318" bit="0"/>
+    <Info cle="bit_lecture_maitre_modbus" mot="10318" bit="1"/>
+    <Info cle="bit_reset_API_a_froid" mot="10318" bit="2"/>
+    <Info cle="bit_reset_API_a_chaud" mot="10318" bit="3"/>
+    <Info cle="bit_pec_param_maintenance" mot="10318" bit="4"/>
+    <Info cle="bit_raz_mesures" mot="10318" bit="5"/>
+    <Info cle="mot_10319_commandes_commutation_sortie" mot="10319" bit="-1"/>
+    <Info cle="bit_commande_commutation_sortie_1" mot="10319" bit="0"/>
+    <Info cle="bit_commande_commutation_sortie_2" mot="10319" bit="1"/>
+    <Info cle="bit_commande_commutation_sortie_3" mot="10319" bit="2"/>
+    <Info cle="bit_commande_commutation_sortie_4" mot="10319" bit="3"/>
+    <Info cle="bit_commande_commutation_sortie_5" mot="10319" bit="4"/>
+    <Info cle="bit_commande_commutation_sortie_6" mot="10319" bit="5"/>
+    <Info cle="bit_commande_commutation_sortie_7" mot="10319" bit="6"/>
+    <Info cle="bit_commande_commutation_sortie_8" mot="10319" bit="7"/>
+    <Info cle="bit_commande_commutation_sortie_9" mot="10319" bit="8"/>
+    <Info cle="bit_commande_commutation_sortie_10" mot="10319" bit="9"/>
+    <Info cle="bit_commande_commutation_sortie_11" mot="10319" bit="10"/>
+    <Info cle="bit_commande_commutation_sortie_12" mot="10319" bit="11"/>
+    <Info cle="bit_commande_commutation_sortie_13" mot="10319" bit="12"/>
+    <Info cle="bit_commande_commutation_sortie_14" mot="10319" bit="13"/>
+    <Info cle="bit_commande_commutation_sortie_15" mot="10319" bit="14"/>
+    <Info cle="bit_commande_commutation_sortie_16" mot="10319" bit="15"/>
+    <Info cle="mot_10320_commandes_commutation_sortie" mot="10320" bit="-1"/>
+    <Info cle="bit_commande_commutation_sortie_17" mot="10320" bit="0"/>
+    <Info cle="bit_commande_commutation_sortie_18" mot="10320" bit="1"/>
+    <Info cle="bit_commande_commutation_sortie_19" mot="10320" bit="2"/>
+    <Info cle="bit_commande_commutation_sortie_20" mot="10320" bit="3"/>
+    <Info cle="bit_commande_commutation_sortie_21" mot="10320" bit="4"/>
+    <Info cle="bit_commande_commutation_sortie_22" mot="10320" bit="5"/>
+    <Info cle="bit_commande_commutation_sortie_23" mot="10320" bit="6"/>
+    <Info cle="bit_commande_commutation_sortie_24" mot="10320" bit="7"/>
+    <Info cle="bit_commande_commutation_sortie_25" mot="10320" bit="8"/>
+    <Info cle="bit_commande_commutation_sortie_26" mot="10320" bit="9"/>
+    <Info cle="bit_commande_commutation_sortie_27" mot="10320" bit="10"/>
+    <Info cle="bit_commande_commutation_sortie_28" mot="10320" bit="11"/>
+    <Info cle="bit_commande_commutation_sortie_29" mot="10320" bit="12"/>
+    <Info cle="bit_commande_commutation_sortie_30" mot="10320" bit="13"/>
+    <Info cle="bit_commande_commutation_sortie_31" mot="10320" bit="14"/>
+    <Info cle="bit_commande_commutation_sortie_32" mot="10320" bit="15"/>
+    <Info cle="mot_10321_commandes_commutation_sortie" mot="10321" bit="-1"/>
+    <Info cle="bit_commande_commutation_sortie_33" mot="10321" bit="0"/>
+    <Info cle="bit_commande_commutation_sortie_34" mot="10321" bit="1"/>
+    <Info cle="bit_commande_commutation_sortie_35" mot="10321" bit="2"/>
+    <Info cle="bit_commande_commutation_sortie_36" mot="10321" bit="3"/>
+    <Info cle="bit_commande_commutation_sortie_37" mot="10321" bit="4"/>
+    <Info cle="bit_commande_commutation_sortie_38" mot="10321" bit="5"/>
+    <Info cle="bit_commande_commutation_sortie_39" mot="10321" bit="6"/>
+    <Info cle="bit_commande_commutation_sortie_40" mot="10321" bit="7"/>
+    <Info cle="bit_commande_commutation_sortie_41" mot="10321" bit="8"/>
+    <Info cle="bit_commande_commutation_sortie_42" mot="10321" bit="9"/>
+    <Info cle="bit_commande_commutation_sortie_43" mot="10321" bit="10"/>
+    <Info cle="bit_commande_commutation_sortie_44" mot="10321" bit="11"/>
+    <Info cle="bit_commande_commutation_sortie_45" mot="10321" bit="12"/>
+    <Info cle="bit_commande_commutation_sortie_46" mot="10321" bit="13"/>
+    <Info cle="bit_commande_commutation_sortie_47" mot="10321" bit="14"/>
+    <Info cle="bit_commande_commutation_sortie_48" mot="10321" bit="15"/>
+    <Info cle="10000_0__M_Id_Ligne_Station_BAM" mot="10000"/>
+    <Info cle="10000_1__M_Id_Type_Equipement_BAM" mot="10001"/>
+    <Info cle="10000_2__M_Id_version_BAM" mot="10002"/>
+    <Info cle="10000_3__M_Id_checksum_BAM" mot="10003"/>
+    <Info cle="10000_5__M_Temps_ecoule_en_panne_BAM" mot="10005"/>
+    <Info cle="10000_6__M_Temps_de_coupure_48_Volts_BAM" mot="10006"/>
+    <Info cle="10000_7__M_Temps_arret_en_entretien_BAM" mot="10007"/>
+    <Info cle="10000_16_0_E_En_commande_depuis_la_PGR_forcee_BAM" mot="10016" bit="0"/>
+    <Info cle="10000_16_1_E_En_commande_depuis_le_PCM_BAM" mot="10016" bit="1"/>
+    <Info cle="10000_16_2_E_BAM_ouverte_BAM" mot="10016" bit="2"/>
+    <Info cle="10000_16_3_E_BAM_fermee_BAM" mot="10016" bit="3"/>
+    <Info cle="10000_16_4_E_En_entretien_BAM" mot="10016" bit="4"/>
+    <Info cle="10000_16_5_E_En_mode_desenfumage_BAM" mot="10016" bit="5"/>
+    <Info cle="10000_16_6_E_En_commande_depuis_la_PGR_confort_BAM" mot="10016" bit="6"/>
+    <Info cle="10000_16_7_E_En_mode_confort_BAM" mot="10016" bit="7"/>
+    <Info cle="10000_17_0_E_Pre_alerte_BAM" mot="10017" bit="0"/>
+    <Info cle="10000_17_1_E_Defaut_automate_BAM" mot="10017" bit="1"/>
+    <Info cle="10000_17_2_E_Defaut_acces_trappe_BAM" mot="10017" bit="2"/>
+    <Info cle="10000_19_0_E_En_panne_AAI_BAM" mot="10019" bit="0"/>
+    <Info cle="10000_19_1_E_Defaut_thermique_moteur_BAM" mot="10019" bit="1"/>
+    <Info cle="10000_21_0_E_AAI_non_discriminee_BAM" mot="10021" bit="0"/>
+    <Info cle="10000_21_1_E_Defaut_chaine_de_securite_BAM" mot="10021" bit="1"/>
+    <Info cle="10000_21_2_E_Defaut_48V_Armoire_BAM" mot="10021" bit="2"/>
+    <Info cle="10000_21_3_E_Defaut_BAE_5h_BAM" mot="10021" bit="3"/>
+    <Info cle="10000_21_4_E_Defaut_48V_Station_BAM" mot="10021" bit="4"/>
+    <Info cle="10000_32_0_C_Prise_de_priorite_PGR_Forcee_BAM" mot="10032" bit="0"/>
+    <Info cle="10000_32_1_C_Retour_commande_normale_BUS_apres_priorite_PGR_BAM" mot="10032" bit="1"/>
+    <Info cle="10000_32_2_C_Commande_ouverture_PGR_BAM" mot="10032" bit="2"/>
+    <Info cle="10000_32_3_C_Commande_fermeture_PGR_BAM" mot="10032" bit="3"/>
+    <Info cle="10000_32_4_C_Prise_de_priorite_PCM_BAM" mot="10032" bit="4"/>
+    <Info cle="10000_32_5_C_Retour_commande_normale_BUS_apres_priorite_PCM_BAM" mot="10032" bit="5"/>
+    <Info cle="10000_32_6_C_Commande_ouverture_PCM_BAM" mot="10032" bit="6"/>
+    <Info cle="10000_32_7_C_Commande_fermeture_PCM_BAM" mot="10032" bit="7"/>
+    <Info cle="10000_32_8_C_Rearmement_AAI_BAM" mot="10032" bit="8"/>
+    <Info cle="10000_32_9_C_Prise_de_priorite_PGR_Confort_BAM" mot="10032" bit="9"/>
+    <Info cle="10000_32_14_C_Bit_de_synchronisation_mise_heure_API_BAM" mot="10032" bit="14"/>
+    <Info cle="10000_33__C_Mot_de_mise_heure_horloge_API_secondes_BAM" mot="10033"/>
+    <Info cle="10000_34__C_Mot_de_mise_heure_horloge_API_heures_minutes_BAM" mot="10034"/>
+    <Info cle="10050_0__M_Id_Ligne_Station_BAM" mot="10050"/>
+    <Info cle="10050_1__M_Id_Type_Equipement_BAM" mot="10051"/>
+    <Info cle="10050_2__M_Id_version_BAM" mot="10052"/>
+    <Info cle="10050_3__M_Id_checksum_BAM" mot="10053"/>
+    <Info cle="10050_5__M_Temps_ecoule_en_panne_BAM" mot="10055"/>
+    <Info cle="10050_6__M_Temps_de_coupure_48_Volts_BAM" mot="10056"/>
+    <Info cle="10050_7__M_Temps_arret_en_entretien_BAM" mot="10057"/>
+    <Info cle="10050_16_0_E_En_commande_depuis_la_PGR_forcee_BAM" mot="10066" bit="0"/>
+    <Info cle="10050_16_1_E_En_commande_depuis_le_PCM_BAM" mot="10066" bit="1"/>
+    <Info cle="10050_16_2_E_BAM_ouverte_BAM" mot="10066" bit="2"/>
+    <Info cle="10050_16_3_E_BAM_fermee_BAM" mot="10066" bit="3"/>
+    <Info cle="10050_16_4_E_En_entretien_BAM" mot="10066" bit="4"/>
+    <Info cle="10050_16_5_E_En_mode_desenfumage_BAM" mot="10066" bit="5"/>
+    <Info cle="10050_16_6_E_En_commande_depuis_la_PGR_confort_BAM" mot="10066" bit="6"/>
+    <Info cle="10050_16_7_E_En_mode_confort_BAM" mot="10066" bit="7"/>
+    <Info cle="10050_17_0_E_Pre_alerte_BAM" mot="10067" bit="0"/>
+    <Info cle="10050_17_1_E_Defaut_automate_BAM" mot="10067" bit="1"/>
+    <Info cle="10050_17_2_E_Defaut_acces_trappe_BAM" mot="10067" bit="2"/>
+    <Info cle="10050_19_0_E_En_panne_AAI_BAM" mot="10069" bit="0"/>
+    <Info cle="10050_19_1_E_Defaut_thermique_moteur_BAM" mot="10069" bit="1"/>
+    <Info cle="10050_21_0_E_AAI_non_discriminee_BAM" mot="10071" bit="0"/>
+    <Info cle="10050_21_1_E_Defaut_chaine_de_securite_BAM" mot="10071" bit="1"/>
+    <Info cle="10050_21_2_E_Defaut_48V_Armoire_BAM" mot="10071" bit="2"/>
+    <Info cle="10050_21_3_E_Defaut_BAE_5h_BAM" mot="10071" bit="3"/>
+    <Info cle="10050_21_4_E_Defaut_48V_Station_BAM" mot="10071" bit="4"/>
+    <Info cle="10050_32_0_C_Prise_de_priorite_PGR_Forcee_BAM" mot="10082" bit="0"/>
+    <Info cle="10050_32_1_C_Retour_commande_normale_BUS_apres_priorite_PGR_BAM" mot="10082" bit="1"/>
+    <Info cle="10050_32_2_C_Commande_ouverture_PGR_BAM" mot="10082" bit="2"/>
+    <Info cle="10050_32_3_C_Commande_fermeture_PGR_BAM" mot="10082" bit="3"/>
+    <Info cle="10050_32_4_C_Prise_de_priorite_PCM_BAM" mot="10082" bit="4"/>
+    <Info cle="10050_32_5_C_Retour_commande_normale_BUS_apres_priorite_PCM_BAM" mot="10082" bit="5"/>
+    <Info cle="10050_32_6_C_Commande_ouverture_PCM_BAM" mot="10082" bit="6"/>
+    <Info cle="10050_32_7_C_Commande_fermeture_PCM_BAM" mot="10082" bit="7"/>
+    <Info cle="10050_32_8_C_Rearmement_AAI_BAM" mot="10082" bit="8"/>
+    <Info cle="10050_32_9_C_Prise_de_priorite_PGR_Confort_BAM" mot="10082" bit="9"/>
+    <Info cle="10050_32_14_C_Bit_de_synchronisation_mise_heure_API_BAM" mot="10082" bit="14"/>
+    <Info cle="10050_33__C_Mot_de_mise_heure_horloge_API_secondes_BAM" mot="10083"/>
+    <Info cle="10050_34__C_Mot_de_mise_heure_horloge_API_heures_minutes_BAM" mot="10084"/>
+    <Info cle="10100_0__M_Id_Ligne_Station_BAM" mot="10100"/>
+    <Info cle="10100_1__M_Id_Type_Equipement_BAM" mot="10101"/>
+    <Info cle="10100_2__M_Id_version_BAM" mot="10102"/>
+    <Info cle="10100_3__M_Id_checksum_BAM" mot="10103"/>
+    <Info cle="10100_5__M_Temps_ecoule_en_panne_BAM" mot="10105"/>
+    <Info cle="10100_6__M_Temps_de_coupure_48_Volts_BAM" mot="10106"/>
+    <Info cle="10100_7__M_Temps_arret_en_entretien_BAM" mot="10107"/>
+    <Info cle="10100_16_0_E_En_commande_depuis_la_PGR_forcee_BAM" mot="10116" bit="0"/>
+    <Info cle="10100_16_1_E_En_commande_depuis_le_PCM_BAM" mot="10116" bit="1"/>
+    <Info cle="10100_16_2_E_BAM_ouverte_BAM" mot="10116" bit="2"/>
+    <Info cle="10100_16_3_E_BAM_fermee_BAM" mot="10116" bit="3"/>
+    <Info cle="10100_16_4_E_En_entretien_BAM" mot="10116" bit="4"/>
+    <Info cle="10100_16_5_E_En_mode_desenfumage_BAM" mot="10116" bit="5"/>
+    <Info cle="10100_16_6_E_En_commande_depuis_la_PGR_confort_BAM" mot="10116" bit="6"/>
+    <Info cle="10100_16_7_E_En_mode_confort_BAM" mot="10116" bit="7"/>
+    <Info cle="10100_17_0_E_Pre_alerte_BAM" mot="10117" bit="0"/>
+    <Info cle="10100_17_1_E_Defaut_automate_BAM" mot="10117" bit="1"/>
+    <Info cle="10100_17_2_E_Defaut_acces_trappe_BAM" mot="10117" bit="2"/>
+    <Info cle="10100_19_0_E_En_panne_AAI_BAM" mot="10119" bit="0"/>
+    <Info cle="10100_19_1_E_Defaut_thermique_moteur_BAM" mot="10119" bit="1"/>
+    <Info cle="10100_21_0_E_AAI_non_discriminee_BAM" mot="10121" bit="0"/>
+    <Info cle="10100_21_1_E_Defaut_chaine_de_securite_BAM" mot="10121" bit="1"/>
+    <Info cle="10100_21_2_E_Defaut_48V_Armoire_BAM" mot="10121" bit="2"/>
+    <Info cle="10100_21_3_E_Defaut_BAE_5h_BAM" mot="10121" bit="3"/>
+    <Info cle="10100_21_4_E_Defaut_48V_Station_BAM" mot="10121" bit="4"/>
+    <Info cle="10100_32_0_C_Prise_de_priorite_PGR_Forcee_BAM" mot="10132" bit="0"/>
+    <Info cle="10100_32_1_C_Retour_commande_normale_BUS_apres_priorite_PGR_BAM" mot="10132" bit="1"/>
+    <Info cle="10100_32_2_C_Commande_ouverture_PGR_BAM" mot="10132" bit="2"/>
+    <Info cle="10100_32_3_C_Commande_fermeture_PGR_BAM" mot="10132" bit="3"/>
+    <Info cle="10100_32_4_C_Prise_de_priorite_PCM_BAM" mot="10132" bit="4"/>
+    <Info cle="10100_32_5_C_Retour_commande_normale_BUS_apres_priorite_PCM_BAM" mot="10132" bit="5"/>
+    <Info cle="10100_32_6_C_Commande_ouverture_PCM_BAM" mot="10132" bit="6"/>
+    <Info cle="10100_32_7_C_Commande_fermeture_PCM_BAM" mot="10132" bit="7"/>
+    <Info cle="10100_32_8_C_Rearmement_AAI_BAM" mot="10132" bit="8"/>
+    <Info cle="10100_32_9_C_Prise_de_priorite_PGR_Confort_BAM" mot="10132" bit="9"/>
+    <Info cle="10100_32_14_C_Bit_de_synchronisation_mise_heure_API_BAM" mot="10132" bit="14"/>
+    <Info cle="10100_33__C_Mot_de_mise_heure_horloge_API_secondes_BAM" mot="10133"/>
+    <Info cle="10100_34__C_Mot_de_mise_heure_horloge_API_heures_minutes_BAM" mot="10134"/>
+    <Info cle="10150_0__M_Id_Ligne_Station_BAM" mot="10150"/>
+    <Info cle="10150_1__M_Id_Type_Equipement_BAM" mot="10151"/>
+    <Info cle="10150_2__M_Id_version_BAM" mot="10152"/>
+    <Info cle="10150_3__M_Id_checksum_BAM" mot="10153"/>
+    <Info cle="10150_5__M_Temps_ecoule_en_panne_BAM" mot="10155"/>
+    <Info cle="10150_6__M_Temps_de_coupure_48_Volts_BAM" mot="10156"/>
+    <Info cle="10150_7__M_Temps_arret_en_entretien_BAM" mot="10157"/>
+    <Info cle="10150_16_0_E_En_commande_depuis_la_PGR_forcee_BAM" mot="10166" bit="0"/>
+    <Info cle="10150_16_1_E_En_commande_depuis_le_PCM_BAM" mot="10166" bit="1"/>
+    <Info cle="10150_16_2_E_BAM_ouverte_BAM" mot="10166" bit="2"/>
+    <Info cle="10150_16_3_E_BAM_fermee_BAM" mot="10166" bit="3"/>
+    <Info cle="10150_16_4_E_En_entretien_BAM" mot="10166" bit="4"/>
+    <Info cle="10150_16_5_E_En_mode_desenfumage_BAM" mot="10166" bit="5"/>
+    <Info cle="10150_16_6_E_En_commande_depuis_la_PGR_confort_BAM" mot="10166" bit="6"/>
+    <Info cle="10150_16_7_E_En_mode_confort_BAM" mot="10166" bit="7"/>
+    <Info cle="10150_17_0_E_Pre_alerte_BAM" mot="10167" bit="0"/>
+    <Info cle="10150_17_1_E_Defaut_automate_BAM" mot="10167" bit="1"/>
+    <Info cle="10150_17_2_E_Defaut_acces_trappe_BAM" mot="10167" bit="2"/>
+    <Info cle="10150_19_0_E_En_panne_AAI_BAM" mot="10169" bit="0"/>
+    <Info cle="10150_19_1_E_Defaut_thermique_moteur_BAM" mot="10169" bit="1"/>
+    <Info cle="10150_21_0_E_AAI_non_discriminee_BAM" mot="10171" bit="0"/>
+    <Info cle="10150_21_1_E_Defaut_chaine_de_securite_BAM" mot="10171" bit="1"/>
+    <Info cle="10150_21_2_E_Defaut_48V_Armoire_BAM" mot="10171" bit="2"/>
+    <Info cle="10150_21_3_E_Defaut_BAE_5h_BAM" mot="10171" bit="3"/>
+    <Info cle="10150_21_4_E_Defaut_48V_Station_BAM" mot="10171" bit="4"/>
+    <Info cle="10150_32_0_C_Prise_de_priorite_PGR_Forcee_BAM" mot="10182" bit="0"/>
+    <Info cle="10150_32_1_C_Retour_commande_normale_BUS_apres_priorite_PGR_BAM" mot="10182" bit="1"/>
+    <Info cle="10150_32_2_C_Commande_ouverture_PGR_BAM" mot="10182" bit="2"/>
+    <Info cle="10150_32_3_C_Commande_fermeture_PGR_BAM" mot="10182" bit="3"/>
+    <Info cle="10150_32_4_C_Prise_de_priorite_PCM_BAM" mot="10182" bit="4"/>
+    <Info cle="10150_32_5_C_Retour_commande_normale_BUS_apres_priorite_PCM_BAM" mot="10182" bit="5"/>
+    <Info cle="10150_32_6_C_Commande_ouverture_PCM_BAM" mot="10182" bit="6"/>
+    <Info cle="10150_32_7_C_Commande_fermeture_PCM_BAM" mot="10182" bit="7"/>
+    <Info cle="10150_32_8_C_Rearmement_AAI_BAM" mot="10182" bit="8"/>
+    <Info cle="10150_32_9_C_Prise_de_priorite_PGR_Confort_BAM" mot="10182" bit="9"/>
+    <Info cle="10150_32_14_C_Bit_de_synchronisation_mise_heure_API_BAM" mot="10182" bit="14"/>
+    <Info cle="10150_33__C_Mot_de_mise_heure_horloge_API_secondes_BAM" mot="10183"/>
+    <Info cle="10150_34__C_Mot_de_mise_heure_horloge_API_heures_minutes_BAM" mot="10184"/>
+    <Info cle="9000_0__M_Id_Ligne_Station_VT" mot="9000"/>
+    <Info cle="9000_1__M_Id_Type_Equipement_VT" mot="9001"/>
+    <Info cle="9000_2__M_Id_version_VT" mot="9002"/>
+    <Info cle="9000_3__M_Id_checksum_VT" mot="9003"/>
+    <Info cle="9000_5__M_Temps_ecoule_en_panne_confort_VT" mot="9005"/>
+    <Info cle="9000_6__M_Temps_de_fonctionnement_cumule_en_insufflation_VT" mot="9006"/>
+    <Info cle="9000_7__M_Temps_de_fonctionnement_cumule_en_extraction_VT" mot="9007"/>
+    <Info cle="9000_8__M_Temps_arret_en_entretien_VT" mot="9008"/>
+    <Info cle="9000_9__M_Temps_de_coupure_400_Volts_VT" mot="9009"/>
+    <Info cle="9000_16_0_E_En_mode_normal_A_VT" mot="9016" bit="0"/>
+    <Info cle="9000_16_1_E_En_mode_normal_B_VT" mot="9016" bit="1"/>
+    <Info cle="9000_16_2_E_En_mode_desenfumage_VT" mot="9016" bit="2"/>
+    <Info cle="9000_16_3_E_En_commande_depuis_la_PGR_forcee_VT" mot="9016" bit="3"/>
+    <Info cle="9000_16_4_E_En_commande_depuis_le_PCM_VT" mot="9016" bit="4"/>
+    <Info cle="9000_16_5_E_En_entretien_VT" mot="9016" bit="5"/>
+    <Info cle="9000_16_6_E_En_arret_VT" mot="9016" bit="6"/>
+    <Info cle="9000_16_7_E_En_arret_nuit_CAN_VT" mot="9016" bit="7"/>
+    <Info cle="9000_16_8_E_En_arret_CMA_VT" mot="9016" bit="8"/>
+    <Info cle="9000_16_9_E_En_insufflation_petite_vitesse_confort_VT" mot="9016" bit="9"/>
+    <Info cle="9000_16_10_E_En_extraction_petite_vitesse_confort_VT" mot="9016" bit="10"/>
+    <Info cle="9000_16_11_E_En_insufflation_desenfumage_VT" mot="9016" bit="11"/>
+    <Info cle="9000_16_12_E_En_extraction_desenfumage_VT" mot="9016" bit="12"/>
+    <Info cle="9000_16_13_E_En_Arret_sur_voie_VT" mot="9016" bit="13"/>
+    <Info cle="9000_16_14_E_En_commande_depuis_la_PGR_confort_VT" mot="9016" bit="14"/>
+    <Info cle="9000_17_0_E_Pre_alerte_VT" mot="9017" bit="0"/>
+    <Info cle="9000_17_1_E_Defaut_vibration_VT" mot="9017" bit="1"/>
+    <Info cle="9000_17_2_E_Intensite_insuffisante_en_extraction_VT" mot="9017" bit="2"/>
+    <Info cle="9000_17_3_E_Intensite_insuffisante_en_insufflation_VT" mot="9017" bit="3"/>
+    <Info cle="9000_17_4_E_Niveau_de_bruit_eleve_en_baie_VT" mot="9017" bit="4"/>
+    <Info cle="9000_17_5_E_Absence_400V_Secours_VT" mot="9017" bit="5"/>
+    <Info cle="9000_17_6_E_Echauffement_des_paliers_moteur_VT" mot="9017" bit="6"/>
+    <Info cle="9000_17_7_E_Defaut_automate_VT" mot="9017" bit="7"/>
+    <Info cle="9000_17_9_E_Absence_400V_Normal_VT" mot="9017" bit="9"/>
+    <Info cle="9000_17_10_E_Defaut_acces_trappe_VT" mot="9017" bit="10"/>
+    <Info cle="9000_19_0_E_Panne_confort_VT" mot="9019" bit="0"/>
+    <Info cle="9000_19_1_E_Defaut_variateur_ou_thermique_demarreur_VT" mot="9019" bit="1"/>
+    <Info cle="9000_19_2_E_Defaut_disjoncteur_ou_thermique_moteur_VT" mot="9019" bit="2"/>
+    <Info cle="9000_19_3_E_Panne_Desenfumage_VT" mot="9019" bit="3"/>
+    <Info cle="9000_21_0_E_Panne_non_discriminee_VT" mot="9021" bit="0"/>
+    <Info cle="9000_21_1_E_Defaut_absence_tension_400_Volts_NORMAL_VT" mot="9021" bit="1"/>
+    <Info cle="9000_21_2_E_Defaut_absence_tension_24_48_Volts_Armoire_VT" mot="9021" bit="2"/>
+    <Info cle="9000_21_3_E_Discordance_BAE_CDAL_VT" mot="9021" bit="3"/>
+    <Info cle="9000_21_4_E_Defaut_frein_VT" mot="9021" bit="4"/>
+    <Info cle="9000_21_5_E_Defaut_rideau_coupe_vent_VT" mot="9021" bit="5"/>
+    <Info cle="9000_21_6_E_Defaut_BAE_5_heures_VT" mot="9021" bit="6"/>
+    <Info cle="9000_21_7_E_Defaut_clapets_coupe_feu_VT" mot="9021" bit="7"/>
+    <Info cle="9000_21_8_E_Arret_urgence_VT" mot="9021" bit="8"/>
+    <Info cle="9000_21_9_E_Defaut_vibration_seuil_danger_VT" mot="9021" bit="9"/>
+    <Info cle="9000_21_10_E_Defaut_absence_tension_48_Volts_Station_VT" mot="9021" bit="10"/>
+    <Info cle="9000_27_0_E_Panne_epuisement_ouvrage_ventilation_VT" mot="9027" bit="0"/>
+    <Info cle="9000_28_0_E_En_insuflation_grande_vitesse_confort_VT" mot="9028" bit="0"/>
+    <Info cle="9000_28_1_E_En_extraction_grande_vitesse_confort_VT" mot="9028" bit="1"/>
+    <Info cle="9000_32_0_C_Prise_de_priorite_PGR_Forcee_VT" mot="9032" bit="0"/>
+    <Info cle="9000_32_1_C_Retour_commande_normale_BUS_apres_priorite_PGR_VT" mot="9032" bit="1"/>
+    <Info cle="9000_32_2_C_Marche_forcee_insufflation_PGR_VT" mot="9032" bit="2"/>
+    <Info cle="9000_32_3_C_Marche_forcee_extraction_PGR_VT" mot="9032" bit="3"/>
+    <Info cle="9000_32_4_C_Arret_poste_par_PGR_VT" mot="9032" bit="4"/>
+    <Info cle="9000_32_5_C_Marche_confort_insufflation_PGR_VT" mot="9032" bit="5"/>
+    <Info cle="9000_32_6_C_Marche_confort_extraction_PGR_VT" mot="9032" bit="6"/>
+    <Info cle="9000_32_7_C_Prise_de_priorite_PCM_VT" mot="9032" bit="7"/>
+    <Info cle="9000_32_8_C_Retour_commande_normale_BUS_apres_priorite_PCM_VT" mot="9032" bit="8"/>
+    <Info cle="9000_32_9_C_Marche_confort_insufflation_PCM_VT" mot="9032" bit="9"/>
+    <Info cle="9000_32_10_C_Marche_confort_extraction_PCM_VT" mot="9032" bit="10"/>
+    <Info cle="9000_32_11_C_Arret_poste_par_PCM_VT" mot="9032" bit="11"/>
+    <Info cle="9000_32_12_C_Rearmement_VT" mot="9032" bit="12"/>
+    <Info cle="9000_32_13_C_Prise_de_priorite_PGR_confort_VT" mot="9032" bit="13"/>
+    <Info cle="9000_32_14_C_Bit_de_synchronisation_mise_heure_API_VT" mot="9032" bit="14"/>
+    <Info cle="9000_33__C_Mot_de_mise_heure_horloge_API_secondes_VT" mot="9033"/>
+    <Info cle="9000_34__C_Mot_de_mise_heure_horloge_API_heures_minutes_VT" mot="9034"/>
+    <Info cle="9000_35__C_Choix_vitesse_confort_VT" mot="9035"/>
+    <Info cle="9000_36__C_Mot_de_mise_date_horloge_API_Jour_Mois_VT" mot="9036"/>
+    <Info cle="9000_37__C_Mot_de_mise_date_horloge_API_Jour_semaine_Annee_VT" mot="9037"/>
+    <Info cle="9050_0__M_Id_Ligne_Station_VT" mot="9050"/>
+    <Info cle="9050_1__M_Id_Type_Equipement_VT" mot="9051"/>
+    <Info cle="9050_2__M_Id_version_VT" mot="9052"/>
+    <Info cle="9050_3__M_Id_checksum_VT" mot="9053"/>
+    <Info cle="9050_5__M_Temps_ecoule_en_panne_confort_VT" mot="9055"/>
+    <Info cle="9050_6__M_Temps_de_fonctionnement_cumule_en_insufflation_VT" mot="9056"/>
+    <Info cle="9050_7__M_Temps_de_fonctionnement_cumule_en_extraction_VT" mot="9057"/>
+    <Info cle="9050_8__M_Temps_arret_en_entretien_VT" mot="9058"/>
+    <Info cle="9050_9__M_Temps_de_coupure_400_Volts_VT" mot="9059"/>
+    <Info cle="9050_16_0_E_En_mode_normal_A_VT" mot="9066" bit="0"/>
+    <Info cle="9050_16_1_E_En_mode_normal_B_VT" mot="9066" bit="1"/>
+    <Info cle="9050_16_2_E_En_mode_desenfumage_VT" mot="9066" bit="2"/>
+    <Info cle="9050_16_3_E_En_commande_depuis_la_PGR_forcee_VT" mot="9066" bit="3"/>
+    <Info cle="9050_16_4_E_En_commande_depuis_le_PCM_VT" mot="9066" bit="4"/>
+    <Info cle="9050_16_5_E_En_entretien_VT" mot="9066" bit="5"/>
+    <Info cle="9050_16_6_E_En_arret_VT" mot="9066" bit="6"/>
+    <Info cle="9050_16_7_E_En_arret_nuit_CAN_VT" mot="9066" bit="7"/>
+    <Info cle="9050_16_8_E_En_arret_CMA_VT" mot="9066" bit="8"/>
+    <Info cle="9050_16_9_E_En_insufflation_petite_vitesse_confort_VT" mot="9066" bit="9"/>
+    <Info cle="9050_16_10_E_En_extraction_petite_vitesse_confort_VT" mot="9066" bit="10"/>
+    <Info cle="9050_16_11_E_En_insufflation_desenfumage_VT" mot="9066" bit="11"/>
+    <Info cle="9050_16_12_E_En_extraction_desenfumage_VT" mot="9066" bit="12"/>
+    <Info cle="9050_16_13_E_En_Arret_sur_voie_VT" mot="9066" bit="13"/>
+    <Info cle="9050_16_14_E_En_commande_depuis_la_PGR_confort_VT" mot="9066" bit="14"/>
+    <Info cle="9050_17_0_E_Pre_alerte_VT" mot="9067" bit="0"/>
+    <Info cle="9050_17_1_E_Defaut_vibration_VT" mot="9067" bit="1"/>
+    <Info cle="9050_17_2_E_Intensite_insuffisante_en_extraction_VT" mot="9067" bit="2"/>
+    <Info cle="9050_17_3_E_Intensite_insuffisante_en_insufflation_VT" mot="9067" bit="3"/>
+    <Info cle="9050_17_4_E_Niveau_de_bruit_eleve_en_baie_VT" mot="9067" bit="4"/>
+    <Info cle="9050_17_5_E_Absence_400V_Secours_VT" mot="9067" bit="5"/>
+    <Info cle="9050_17_6_E_Echauffement_des_paliers_moteur_VT" mot="9067" bit="6"/>
+    <Info cle="9050_17_7_E_Defaut_automate_VT" mot="9067" bit="7"/>
+    <Info cle="9050_17_9_E_Absence_400V_Normal_VT" mot="9067" bit="9"/>
+    <Info cle="9050_17_10_E_Defaut_acces_trappe_VT" mot="9067" bit="10"/>
+    <Info cle="9050_19_0_E_Panne_confort_VT" mot="9069" bit="0"/>
+    <Info cle="9050_19_1_E_Defaut_variateur_ou_thermique_demarreur_VT" mot="9069" bit="1"/>
+    <Info cle="9050_19_2_E_Defaut_disjoncteur_ou_thermique_moteur_VT" mot="9069" bit="2"/>
+    <Info cle="9050_19_3_E_Panne_Desenfumage_VT" mot="9069" bit="3"/>
+    <Info cle="9050_21_0_E_Panne_non_discriminee_VT" mot="9071" bit="0"/>
+    <Info cle="9050_21_1_E_Defaut_absence_tension_400_Volts_NORMAL_VT" mot="9071" bit="1"/>
+    <Info cle="9050_21_2_E_Defaut_absence_tension_24_48_Volts_Armoire_VT" mot="9071" bit="2"/>
+    <Info cle="9050_21_3_E_Discordance_BAE_CDAL_VT" mot="9071" bit="3"/>
+    <Info cle="9050_21_4_E_Defaut_frein_VT" mot="9071" bit="4"/>
+    <Info cle="9050_21_5_E_Defaut_rideau_coupe_vent_VT" mot="9071" bit="5"/>
+    <Info cle="9050_21_6_E_Defaut_BAE_5_heures_VT" mot="9071" bit="6"/>
+    <Info cle="9050_21_7_E_Defaut_clapets_coupe_feu_VT" mot="9071" bit="7"/>
+    <Info cle="9050_21_8_E_Arret_urgence_VT" mot="9071" bit="8"/>
+    <Info cle="9050_21_9_E_Defaut_vibration_seuil_danger_VT" mot="9071" bit="9"/>
+    <Info cle="9050_21_10_E_Defaut_absence_tension_48_Volts_Station_VT" mot="9071" bit="10"/>
+    <Info cle="9050_27_0_E_Panne_epuisement_ouvrage_ventilation_VT" mot="9077" bit="0"/>
+    <Info cle="9050_28_0_E_En_insuflation_grande_vitesse_confort_VT" mot="9078" bit="0"/>
+    <Info cle="9050_28_1_E_En_extraction_grande_vitesse_confort_VT" mot="9078" bit="1"/>
+    <Info cle="9050_32_0_C_Prise_de_priorite_PGR_Forcee_VT" mot="9082" bit="0"/>
+    <Info cle="9050_32_1_C_Retour_commande_normale_BUS_apres_priorite_PGR_VT" mot="9082" bit="1"/>
+    <Info cle="9050_32_2_C_Marche_forcee_insufflation_PGR_VT" mot="9082" bit="2"/>
+    <Info cle="9050_32_3_C_Marche_forcee_extraction_PGR_VT" mot="9082" bit="3"/>
+    <Info cle="9050_32_4_C_Arret_poste_par_PGR_VT" mot="9082" bit="4"/>
+    <Info cle="9050_32_5_C_Marche_confort_insufflation_PGR_VT" mot="9082" bit="5"/>
+    <Info cle="9050_32_6_C_Marche_confort_extraction_PGR_VT" mot="9082" bit="6"/>
+    <Info cle="9050_32_7_C_Prise_de_priorite_PCM_VT" mot="9082" bit="7"/>
+    <Info cle="9050_32_8_C_Retour_commande_normale_BUS_apres_priorite_PCM_VT" mot="9082" bit="8"/>
+    <Info cle="9050_32_9_C_Marche_confort_insufflation_PCM_VT" mot="9082" bit="9"/>
+    <Info cle="9050_32_10_C_Marche_confort_extraction_PCM_VT" mot="9082" bit="10"/>
+    <Info cle="9050_32_11_C_Arret_poste_par_PCM_VT" mot="9082" bit="11"/>
+    <Info cle="9050_32_12_C_Rearmement_VT" mot="9082" bit="12"/>
+    <Info cle="9050_32_13_C_Prise_de_priorite_PGR_confort_VT" mot="9082" bit="13"/>
+    <Info cle="9050_32_14_C_Bit_de_synchronisation_mise_heure_API_VT" mot="9082" bit="14"/>
+    <Info cle="9050_33__C_Mot_de_mise_heure_horloge_API_secondes_VT" mot="9083"/>
+    <Info cle="9050_34__C_Mot_de_mise_heure_horloge_API_heures_minutes_VT" mot="9084"/>
+    <Info cle="9050_35__C_Choix_vitesse_confort_VT" mot="9085"/>
+    <Info cle="9050_36__C_Mot_de_mise_date_horloge_API_Jour_Mois_VT" mot="9086"/>
+    <Info cle="9050_37__C_Mot_de_mise_date_horloge_API_Jour_semaine_Annee_VT" mot="9087"/>
+    <Info cle="9100_0__M_Id_Ligne_Station_VT" mot="9100"/>
+    <Info cle="9100_1__M_Id_Type_Equipement_VT" mot="9101"/>
+    <Info cle="9100_2__M_Id_version_VT" mot="9102"/>
+    <Info cle="9100_3__M_Id_checksum_VT" mot="9103"/>
+    <Info cle="9100_5__M_Temps_ecoule_en_panne_confort_VT" mot="9105"/>
+    <Info cle="9100_6__M_Temps_de_fonctionnement_cumule_en_insufflation_VT" mot="9106"/>
+    <Info cle="9100_7__M_Temps_de_fonctionnement_cumule_en_extraction_VT" mot="9107"/>
+    <Info cle="9100_8__M_Temps_arret_en_entretien_VT" mot="9108"/>
+    <Info cle="9100_9__M_Temps_de_coupure_400_Volts_VT" mot="9109"/>
+    <Info cle="9100_16_0_E_En_mode_normal_A_VT" mot="9116" bit="0"/>
+    <Info cle="9100_16_1_E_En_mode_normal_B_VT" mot="9116" bit="1"/>
+    <Info cle="9100_16_2_E_En_mode_desenfumage_VT" mot="9116" bit="2"/>
+    <Info cle="9100_16_3_E_En_commande_depuis_la_PGR_forcee_VT" mot="9116" bit="3"/>
+    <Info cle="9100_16_4_E_En_commande_depuis_le_PCM_VT" mot="9116" bit="4"/>
+    <Info cle="9100_16_5_E_En_entretien_VT" mot="9116" bit="5"/>
+    <Info cle="9100_16_6_E_En_arret_VT" mot="9116" bit="6"/>
+    <Info cle="9100_16_7_E_En_arret_nuit_CAN_VT" mot="9116" bit="7"/>
+    <Info cle="9100_16_8_E_En_arret_CMA_VT" mot="9116" bit="8"/>
+    <Info cle="9100_16_9_E_En_insufflation_petite_vitesse_confort_VT" mot="9116" bit="9"/>
+    <Info cle="9100_16_10_E_En_extraction_petite_vitesse_confort_VT" mot="9116" bit="10"/>
+    <Info cle="9100_16_11_E_En_insufflation_desenfumage_VT" mot="9116" bit="11"/>
+    <Info cle="9100_16_12_E_En_extraction_desenfumage_VT" mot="9116" bit="12"/>
+    <Info cle="9100_16_13_E_En_Arret_sur_voie_VT" mot="9116" bit="13"/>
+    <Info cle="9100_16_14_E_En_commande_depuis_la_PGR_confort_VT" mot="9116" bit="14"/>
+    <Info cle="9100_17_0_E_Pre_alerte_VT" mot="9117" bit="0"/>
+    <Info cle="9100_17_1_E_Defaut_vibration_VT" mot="9117" bit="1"/>
+    <Info cle="9100_17_2_E_Intensite_insuffisante_en_extraction_VT" mot="9117" bit="2"/>
+    <Info cle="9100_17_3_E_Intensite_insuffisante_en_insufflation_VT" mot="9117" bit="3"/>
+    <Info cle="9100_17_4_E_Niveau_de_bruit_eleve_en_baie_VT" mot="9117" bit="4"/>
+    <Info cle="9100_17_5_E_Absence_400V_Secours_VT" mot="9117" bit="5"/>
+    <Info cle="9100_17_6_E_Echauffement_des_paliers_moteur_VT" mot="9117" bit="6"/>
+    <Info cle="9100_17_7_E_Defaut_automate_VT" mot="9117" bit="7"/>
+    <Info cle="9100_17_9_E_Absence_400V_Normal_VT" mot="9117" bit="9"/>
+    <Info cle="9100_17_10_E_Defaut_acces_trappe_VT" mot="9117" bit="10"/>
+    <Info cle="9100_19_0_E_Panne_confort_VT" mot="9119" bit="0"/>
+    <Info cle="9100_19_1_E_Defaut_variateur_ou_thermique_demarreur_VT" mot="9119" bit="1"/>
+    <Info cle="9100_19_2_E_Defaut_disjoncteur_ou_thermique_moteur_VT" mot="9119" bit="2"/>
+    <Info cle="9100_19_3_E_Panne_Desenfumage_VT" mot="9119" bit="3"/>
+    <Info cle="9100_21_0_E_Panne_non_discriminee_VT" mot="9121" bit="0"/>
+    <Info cle="9100_21_1_E_Defaut_absence_tension_400_Volts_NORMAL_VT" mot="9121" bit="1"/>
+    <Info cle="9100_21_2_E_Defaut_absence_tension_24_48_Volts_Armoire_VT" mot="9121" bit="2"/>
+    <Info cle="9100_21_3_E_Discordance_BAE_CDAL_VT" mot="9121" bit="3"/>
+    <Info cle="9100_21_4_E_Defaut_frein_VT" mot="9121" bit="4"/>
+    <Info cle="9100_21_5_E_Defaut_rideau_coupe_vent_VT" mot="9121" bit="5"/>
+    <Info cle="9100_21_6_E_Defaut_BAE_5_heures_VT" mot="9121" bit="6"/>
+    <Info cle="9100_21_7_E_Defaut_clapets_coupe_feu_VT" mot="9121" bit="7"/>
+    <Info cle="9100_21_8_E_Arret_urgence_VT" mot="9121" bit="8"/>
+    <Info cle="9100_21_9_E_Defaut_vibration_seuil_danger_VT" mot="9121" bit="9"/>
+    <Info cle="9100_21_10_E_Defaut_absence_tension_48_Volts_Station_VT" mot="9121" bit="10"/>
+    <Info cle="9100_27_0_E_Panne_epuisement_ouvrage_ventilation_VT" mot="9127" bit="0"/>
+    <Info cle="9100_28_0_E_En_insuflation_grande_vitesse_confort_VT" mot="9128" bit="0"/>
+    <Info cle="9100_28_1_E_En_extraction_grande_vitesse_confort_VT" mot="9128" bit="1"/>
+    <Info cle="9100_32_0_C_Prise_de_priorite_PGR_Forcee_VT" mot="9132" bit="0"/>
+    <Info cle="9100_32_1_C_Retour_commande_normale_BUS_apres_priorite_PGR_VT" mot="9132" bit="1"/>
+    <Info cle="9100_32_2_C_Marche_forcee_insufflation_PGR_VT" mot="9132" bit="2"/>
+    <Info cle="9100_32_3_C_Marche_forcee_extraction_PGR_VT" mot="9132" bit="3"/>
+    <Info cle="9100_32_4_C_Arret_poste_par_PGR_VT" mot="9132" bit="4"/>
+    <Info cle="9100_32_5_C_Marche_confort_insufflation_PGR_VT" mot="9132" bit="5"/>
+    <Info cle="9100_32_6_C_Marche_confort_extraction_PGR_VT" mot="9132" bit="6"/>
+    <Info cle="9100_32_7_C_Prise_de_priorite_PCM_VT" mot="9132" bit="7"/>
+    <Info cle="9100_32_8_C_Retour_commande_normale_BUS_apres_priorite_PCM_VT" mot="9132" bit="8"/>
+    <Info cle="9100_32_9_C_Marche_confort_insufflation_PCM_VT" mot="9132" bit="9"/>
+    <Info cle="9100_32_10_C_Marche_confort_extraction_PCM_VT" mot="9132" bit="10"/>
+    <Info cle="9100_32_11_C_Arret_poste_par_PCM_VT" mot="9132" bit="11"/>
+    <Info cle="9100_32_12_C_Rearmement_VT" mot="9132" bit="12"/>
+    <Info cle="9100_32_13_C_Prise_de_priorite_PGR_confort_VT" mot="9132" bit="13"/>
+    <Info cle="9100_32_14_C_Bit_de_synchronisation_mise_heure_API_VT" mot="9132" bit="14"/>
+    <Info cle="9100_33__C_Mot_de_mise_heure_horloge_API_secondes_VT" mot="9133"/>
+    <Info cle="9100_34__C_Mot_de_mise_heure_horloge_API_heures_minutes_VT" mot="9134"/>
+    <Info cle="9100_35__C_Choix_vitesse_confort_VT" mot="9135"/>
+    <Info cle="9100_36__C_Mot_de_mise_date_horloge_API_Jour_Mois_VT" mot="9136"/>
+    <Info cle="9100_37__C_Mot_de_mise_date_horloge_API_Jour_semaine_Annee_VT" mot="9137"/>
+    <Info cle="9150_0__M_Id_Ligne_Station_VT" mot="9150"/>
+    <Info cle="9150_1__M_Id_Type_Equipement_VT" mot="9151"/>
+    <Info cle="9150_2__M_Id_version_VT" mot="9152"/>
+    <Info cle="9150_3__M_Id_checksum_VT" mot="9153"/>
+    <Info cle="9150_5__M_Temps_ecoule_en_panne_confort_VT" mot="9155"/>
+    <Info cle="9150_6__M_Temps_de_fonctionnement_cumule_en_insufflation_VT" mot="9156"/>
+    <Info cle="9150_7__M_Temps_de_fonctionnement_cumule_en_extraction_VT" mot="9157"/>
+    <Info cle="9150_8__M_Temps_arret_en_entretien_VT" mot="9158"/>
+    <Info cle="9150_9__M_Temps_de_coupure_400_Volts_VT" mot="9159"/>
+    <Info cle="9150_16_0_E_En_mode_normal_A_VT" mot="9166" bit="0"/>
+    <Info cle="9150_16_1_E_En_mode_normal_B_VT" mot="9166" bit="1"/>
+    <Info cle="9150_16_2_E_En_mode_desenfumage_VT" mot="9166" bit="2"/>
+    <Info cle="9150_16_3_E_En_commande_depuis_la_PGR_forcee_VT" mot="9166" bit="3"/>
+    <Info cle="9150_16_4_E_En_commande_depuis_le_PCM_VT" mot="9166" bit="4"/>
+    <Info cle="9150_16_5_E_En_entretien_VT" mot="9166" bit="5"/>
+    <Info cle="9150_16_6_E_En_arret_VT" mot="9166" bit="6"/>
+    <Info cle="9150_16_7_E_En_arret_nuit_CAN_VT" mot="9166" bit="7"/>
+    <Info cle="9150_16_8_E_En_arret_CMA_VT" mot="9166" bit="8"/>
+    <Info cle="9150_16_9_E_En_insufflation_petite_vitesse_confort_VT" mot="9166" bit="9"/>
+    <Info cle="9150_16_10_E_En_extraction_petite_vitesse_confort_VT" mot="9166" bit="10"/>
+    <Info cle="9150_16_11_E_En_insufflation_desenfumage_VT" mot="9166" bit="11"/>
+    <Info cle="9150_16_12_E_En_extraction_desenfumage_VT" mot="9166" bit="12"/>
+    <Info cle="9150_16_13_E_En_Arret_sur_voie_VT" mot="9166" bit="13"/>
+    <Info cle="9150_16_14_E_En_commande_depuis_la_PGR_confort_VT" mot="9166" bit="14"/>
+    <Info cle="9150_17_0_E_Pre_alerte_VT" mot="9167" bit="0"/>
+    <Info cle="9150_17_1_E_Defaut_vibration_VT" mot="9167" bit="1"/>
+    <Info cle="9150_17_2_E_Intensite_insuffisante_en_extraction_VT" mot="9167" bit="2"/>
+    <Info cle="9150_17_3_E_Intensite_insuffisante_en_insufflation_VT" mot="9167" bit="3"/>
+    <Info cle="9150_17_4_E_Niveau_de_bruit_eleve_en_baie_VT" mot="9167" bit="4"/>
+    <Info cle="9150_17_5_E_Absence_400V_Secours_VT" mot="9167" bit="5"/>
+    <Info cle="9150_17_6_E_Echauffement_des_paliers_moteur_VT" mot="9167" bit="6"/>
+    <Info cle="9150_17_7_E_Defaut_automate_VT" mot="9167" bit="7"/>
+    <Info cle="9150_17_9_E_Absence_400V_Normal_VT" mot="9167" bit="9"/>
+    <Info cle="9150_17_10_E_Defaut_acces_trappe_VT" mot="9167" bit="10"/>
+    <Info cle="9150_19_0_E_Panne_confort_VT" mot="9169" bit="0"/>
+    <Info cle="9150_19_1_E_Defaut_variateur_ou_thermique_demarreur_VT" mot="9169" bit="1"/>
+    <Info cle="9150_19_2_E_Defaut_disjoncteur_ou_thermique_moteur_VT" mot="9169" bit="2"/>
+    <Info cle="9150_19_3_E_Panne_Desenfumage_VT" mot="9169" bit="3"/>
+    <Info cle="9150_21_0_E_Panne_non_discriminee_VT" mot="9171" bit="0"/>
+    <Info cle="9150_21_1_E_Defaut_absence_tension_400_Volts_NORMAL_VT" mot="9171" bit="1"/>
+    <Info cle="9150_21_2_E_Defaut_absence_tension_24_48_Volts_Armoire_VT" mot="9171" bit="2"/>
+    <Info cle="9150_21_3_E_Discordance_BAE_CDAL_VT" mot="9171" bit="3"/>
+    <Info cle="9150_21_4_E_Defaut_frein_VT" mot="9171" bit="4"/>
+    <Info cle="9150_21_5_E_Defaut_rideau_coupe_vent_VT" mot="9171" bit="5"/>
+    <Info cle="9150_21_6_E_Defaut_BAE_5_heures_VT" mot="9171" bit="6"/>
+    <Info cle="9150_21_7_E_Defaut_clapets_coupe_feu_VT" mot="9171" bit="7"/>
+    <Info cle="9150_21_8_E_Arret_urgence_VT" mot="9171" bit="8"/>
+    <Info cle="9150_21_9_E_Defaut_vibration_seuil_danger_VT" mot="9171" bit="9"/>
+    <Info cle="9150_21_10_E_Defaut_absence_tension_48_Volts_Station_VT" mot="9171" bit="10"/>
+    <Info cle="9150_27_0_E_Panne_epuisement_ouvrage_ventilation_VT" mot="9177" bit="0"/>
+    <Info cle="9150_28_0_E_En_insuflation_grande_vitesse_confort_VT" mot="9178" bit="0"/>
+    <Info cle="9150_28_1_E_En_extraction_grande_vitesse_confort_VT" mot="9178" bit="1"/>
+    <Info cle="9150_32_0_C_Prise_de_priorite_PGR_Forcee_VT" mot="9182" bit="0"/>
+    <Info cle="9150_32_1_C_Retour_commande_normale_BUS_apres_priorite_PGR_VT" mot="9182" bit="1"/>
+    <Info cle="9150_32_2_C_Marche_forcee_insufflation_PGR_VT" mot="9182" bit="2"/>
+    <Info cle="9150_32_3_C_Marche_forcee_extraction_PGR_VT" mot="9182" bit="3"/>
+    <Info cle="9150_32_4_C_Arret_poste_par_PGR_VT" mot="9182" bit="4"/>
+    <Info cle="9150_32_5_C_Marche_confort_insufflation_PGR_VT" mot="9182" bit="5"/>
+    <Info cle="9150_32_6_C_Marche_confort_extraction_PGR_VT" mot="9182" bit="6"/>
+    <Info cle="9150_32_7_C_Prise_de_priorite_PCM_VT" mot="9182" bit="7"/>
+    <Info cle="9150_32_8_C_Retour_commande_normale_BUS_apres_priorite_PCM_VT" mot="9182" bit="8"/>
+    <Info cle="9150_32_9_C_Marche_confort_insufflation_PCM_VT" mot="9182" bit="9"/>
+    <Info cle="9150_32_10_C_Marche_confort_extraction_PCM_VT" mot="9182" bit="10"/>
+    <Info cle="9150_32_11_C_Arret_poste_par_PCM_VT" mot="9182" bit="11"/>
+    <Info cle="9150_32_12_C_Rearmement_VT" mot="9182" bit="12"/>
+    <Info cle="9150_32_13_C_Prise_de_priorite_PGR_confort_VT" mot="9182" bit="13"/>
+    <Info cle="9150_32_14_C_Bit_de_synchronisation_mise_heure_API_VT" mot="9182" bit="14"/>
+    <Info cle="9150_33__C_Mot_de_mise_heure_horloge_API_secondes_VT" mot="9183"/>
+    <Info cle="9150_34__C_Mot_de_mise_heure_horloge_API_heures_minutes_VT" mot="9184"/>
+    <Info cle="9150_35__C_Choix_vitesse_confort_VT" mot="9185"/>
+    <Info cle="9150_36__C_Mot_de_mise_date_horloge_API_Jour_Mois_VT" mot="9186"/>
+    <Info cle="9150_37__C_Mot_de_mise_date_horloge_API_Jour_semaine_Annee_VT" mot="9187"/>
+    <Info cle="9200_0__M_Id_Ligne_Station_VT" mot="9200"/>
+    <Info cle="9200_1__M_Id_Type_Equipement_VT" mot="9201"/>
+    <Info cle="9200_2__M_Id_version_VT" mot="9202"/>
+    <Info cle="9200_3__M_Id_checksum_VT" mot="9203"/>
+    <Info cle="9200_5__M_Temps_ecoule_en_panne_confort_VT" mot="9205"/>
+    <Info cle="9200_6__M_Temps_de_fonctionnement_cumule_en_insufflation_VT" mot="9206"/>
+    <Info cle="9200_7__M_Temps_de_fonctionnement_cumule_en_extraction_VT" mot="9207"/>
+    <Info cle="9200_8__M_Temps_arret_en_entretien_VT" mot="9208"/>
+    <Info cle="9200_9__M_Temps_de_coupure_400_Volts_VT" mot="9209"/>
+    <Info cle="9200_16_0_E_En_mode_normal_A_VT" mot="9216" bit="0"/>
+    <Info cle="9200_16_1_E_En_mode_normal_B_VT" mot="9216" bit="1"/>
+    <Info cle="9200_16_2_E_En_mode_desenfumage_VT" mot="9216" bit="2"/>
+    <Info cle="9200_16_3_E_En_commande_depuis_la_PGR_forcee_VT" mot="9216" bit="3"/>
+    <Info cle="9200_16_4_E_En_commande_depuis_le_PCM_VT" mot="9216" bit="4"/>
+    <Info cle="9200_16_5_E_En_entretien_VT" mot="9216" bit="5"/>
+    <Info cle="9200_16_6_E_En_arret_VT" mot="9216" bit="6"/>
+    <Info cle="9200_16_7_E_En_arret_nuit_CAN_VT" mot="9216" bit="7"/>
+    <Info cle="9200_16_8_E_En_arret_CMA_VT" mot="9216" bit="8"/>
+    <Info cle="9200_16_9_E_En_insufflation_petite_vitesse_confort_VT" mot="9216" bit="9"/>
+    <Info cle="9200_16_10_E_En_extraction_petite_vitesse_confort_VT" mot="9216" bit="10"/>
+    <Info cle="9200_16_11_E_En_insufflation_desenfumage_VT" mot="9216" bit="11"/>
+    <Info cle="9200_16_12_E_En_extraction_desenfumage_VT" mot="9216" bit="12"/>
+    <Info cle="9200_16_13_E_En_Arret_sur_voie_VT" mot="9216" bit="13"/>
+    <Info cle="9200_16_14_E_En_commande_depuis_la_PGR_confort_VT" mot="9216" bit="14"/>
+    <Info cle="9200_17_0_E_Pre_alerte_VT" mot="9217" bit="0"/>
+    <Info cle="9200_17_1_E_Defaut_vibration_VT" mot="9217" bit="1"/>
+    <Info cle="9200_17_2_E_Intensite_insuffisante_en_extraction_VT" mot="9217" bit="2"/>
+    <Info cle="9200_17_3_E_Intensite_insuffisante_en_insufflation_VT" mot="9217" bit="3"/>
+    <Info cle="9200_17_4_E_Niveau_de_bruit_eleve_en_baie_VT" mot="9217" bit="4"/>
+    <Info cle="9200_17_5_E_Absence_400V_Secours_VT" mot="9217" bit="5"/>
+    <Info cle="9200_17_6_E_Echauffement_des_paliers_moteur_VT" mot="9217" bit="6"/>
+    <Info cle="9200_17_7_E_Defaut_automate_VT" mot="9217" bit="7"/>
+    <Info cle="9200_17_9_E_Absence_400V_Normal_VT" mot="9217" bit="9"/>
+    <Info cle="9200_17_10_E_Defaut_acces_trappe_VT" mot="9217" bit="10"/>
+    <Info cle="9200_19_0_E_Panne_confort_VT" mot="9219" bit="0"/>
+    <Info cle="9200_19_1_E_Defaut_variateur_ou_thermique_demarreur_VT" mot="9219" bit="1"/>
+    <Info cle="9200_19_2_E_Defaut_disjoncteur_ou_thermique_moteur_VT" mot="9219" bit="2"/>
+    <Info cle="9200_19_3_E_Panne_Desenfumage_VT" mot="9219" bit="3"/>
+    <Info cle="9200_21_0_E_Panne_non_discriminee_VT" mot="9221" bit="0"/>
+    <Info cle="9200_21_1_E_Defaut_absence_tension_400_Volts_NORMAL_VT" mot="9221" bit="1"/>
+    <Info cle="9200_21_2_E_Defaut_absence_tension_24_48_Volts_Armoire_VT" mot="9221" bit="2"/>
+    <Info cle="9200_21_3_E_Discordance_BAE_CDAL_VT" mot="9221" bit="3"/>
+    <Info cle="9200_21_4_E_Defaut_frein_VT" mot="9221" bit="4"/>
+    <Info cle="9200_21_5_E_Defaut_rideau_coupe_vent_VT" mot="9221" bit="5"/>
+    <Info cle="9200_21_6_E_Defaut_BAE_5_heures_VT" mot="9221" bit="6"/>
+    <Info cle="9200_21_7_E_Defaut_clapets_coupe_feu_VT" mot="9221" bit="7"/>
+    <Info cle="9200_21_8_E_Arret_urgence_VT" mot="9221" bit="8"/>
+    <Info cle="9200_21_9_E_Defaut_vibration_seuil_danger_VT" mot="9221" bit="9"/>
+    <Info cle="9200_21_10_E_Defaut_absence_tension_48_Volts_Station_VT" mot="9221" bit="10"/>
+    <Info cle="9200_27_0_E_Panne_epuisement_ouvrage_ventilation_VT" mot="9227" bit="0"/>
+    <Info cle="9200_28_0_E_En_insuflation_grande_vitesse_confort_VT" mot="9228" bit="0"/>
+    <Info cle="9200_28_1_E_En_extraction_grande_vitesse_confort_VT" mot="9228" bit="1"/>
+    <Info cle="9200_32_0_C_Prise_de_priorite_PGR_Forcee_VT" mot="9232" bit="0"/>
+    <Info cle="9200_32_1_C_Retour_commande_normale_BUS_apres_priorite_PGR_VT" mot="9232" bit="1"/>
+    <Info cle="9200_32_2_C_Marche_forcee_insufflation_PGR_VT" mot="9232" bit="2"/>
+    <Info cle="9200_32_3_C_Marche_forcee_extraction_PGR_VT" mot="9232" bit="3"/>
+    <Info cle="9200_32_4_C_Arret_poste_par_PGR_VT" mot="9232" bit="4"/>
+    <Info cle="9200_32_5_C_Marche_confort_insufflation_PGR_VT" mot="9232" bit="5"/>
+    <Info cle="9200_32_6_C_Marche_confort_extraction_PGR_VT" mot="9232" bit="6"/>
+    <Info cle="9200_32_7_C_Prise_de_priorite_PCM_VT" mot="9232" bit="7"/>
+    <Info cle="9200_32_8_C_Retour_commande_normale_BUS_apres_priorite_PCM_VT" mot="9232" bit="8"/>
+    <Info cle="9200_32_9_C_Marche_confort_insufflation_PCM_VT" mot="9232" bit="9"/>
+    <Info cle="9200_32_10_C_Marche_confort_extraction_PCM_VT" mot="9232" bit="10"/>
+    <Info cle="9200_32_11_C_Arret_poste_par_PCM_VT" mot="9232" bit="11"/>
+    <Info cle="9200_32_12_C_Rearmement_VT" mot="9232" bit="12"/>
+    <Info cle="9200_32_13_C_Prise_de_priorite_PGR_confort_VT" mot="9232" bit="13"/>
+    <Info cle="9200_32_14_C_Bit_de_synchronisation_mise_heure_API_VT" mot="9232" bit="14"/>
+    <Info cle="9200_33__C_Mot_de_mise_heure_horloge_API_secondes_VT" mot="9233"/>
+    <Info cle="9200_34__C_Mot_de_mise_heure_horloge_API_heures_minutes_VT" mot="9234"/>
+    <Info cle="9200_35__C_Choix_vitesse_confort_VT" mot="9235"/>
+    <Info cle="9200_36__C_Mot_de_mise_date_horloge_API_Jour_Mois_VT" mot="9236"/>
+    <Info cle="9200_37__C_Mot_de_mise_date_horloge_API_Jour_semaine_Annee_VT" mot="9237"/>
+    <Info cle="9250_0__M_Id_Ligne_Station_VT" mot="9250"/>
+    <Info cle="9250_1__M_Id_Type_Equipement_VT" mot="9251"/>
+    <Info cle="9250_2__M_Id_version_VT" mot="9252"/>
+    <Info cle="9250_3__M_Id_checksum_VT" mot="9253"/>
+    <Info cle="9250_5__M_Temps_ecoule_en_panne_confort_VT" mot="9255"/>
+    <Info cle="9250_6__M_Temps_de_fonctionnement_cumule_en_insufflation_VT" mot="9256"/>
+    <Info cle="9250_7__M_Temps_de_fonctionnement_cumule_en_extraction_VT" mot="9257"/>
+    <Info cle="9250_8__M_Temps_arret_en_entretien_VT" mot="9258"/>
+    <Info cle="9250_9__M_Temps_de_coupure_400_Volts_VT" mot="9259"/>
+    <Info cle="9250_16_0_E_En_mode_normal_A_VT" mot="9266" bit="0"/>
+    <Info cle="9250_16_1_E_En_mode_normal_B_VT" mot="9266" bit="1"/>
+    <Info cle="9250_16_2_E_En_mode_desenfumage_VT" mot="9266" bit="2"/>
+    <Info cle="9250_16_3_E_En_commande_depuis_la_PGR_forcee_VT" mot="9266" bit="3"/>
+    <Info cle="9250_16_4_E_En_commande_depuis_le_PCM_VT" mot="9266" bit="4"/>
+    <Info cle="9250_16_5_E_En_entretien_VT" mot="9266" bit="5"/>
+    <Info cle="9250_16_6_E_En_arret_VT" mot="9266" bit="6"/>
+    <Info cle="9250_16_7_E_En_arret_nuit_CAN_VT" mot="9266" bit="7"/>
+    <Info cle="9250_16_8_E_En_arret_CMA_VT" mot="9266" bit="8"/>
+    <Info cle="9250_16_9_E_En_insufflation_petite_vitesse_confort_VT" mot="9266" bit="9"/>
+    <Info cle="9250_16_10_E_En_extraction_petite_vitesse_confort_VT" mot="9266" bit="10"/>
+    <Info cle="9250_16_11_E_En_insufflation_desenfumage_VT" mot="9266" bit="11"/>
+    <Info cle="9250_16_12_E_En_extraction_desenfumage_VT" mot="9266" bit="12"/>
+    <Info cle="9250_16_13_E_En_Arret_sur_voie_VT" mot="9266" bit="13"/>
+    <Info cle="9250_16_14_E_En_commande_depuis_la_PGR_confort_VT" mot="9266" bit="14"/>
+    <Info cle="9250_17_0_E_Pre_alerte_VT" mot="9267" bit="0"/>
+    <Info cle="9250_17_1_E_Defaut_vibration_VT" mot="9267" bit="1"/>
+    <Info cle="9250_17_2_E_Intensite_insuffisante_en_extraction_VT" mot="9267" bit="2"/>
+    <Info cle="9250_17_3_E_Intensite_insuffisante_en_insufflation_VT" mot="9267" bit="3"/>
+    <Info cle="9250_17_4_E_Niveau_de_bruit_eleve_en_baie_VT" mot="9267" bit="4"/>
+    <Info cle="9250_17_5_E_Absence_400V_Secours_VT" mot="9267" bit="5"/>
+    <Info cle="9250_17_6_E_Echauffement_des_paliers_moteur_VT" mot="9267" bit="6"/>
+    <Info cle="9250_17_7_E_Defaut_automate_VT" mot="9267" bit="7"/>
+    <Info cle="9250_17_9_E_Absence_400V_Normal_VT" mot="9267" bit="9"/>
+    <Info cle="9250_17_10_E_Defaut_acces_trappe_VT" mot="9267" bit="10"/>
+    <Info cle="9250_19_0_E_Panne_confort_VT" mot="9269" bit="0"/>
+    <Info cle="9250_19_1_E_Defaut_variateur_ou_thermique_demarreur_VT" mot="9269" bit="1"/>
+    <Info cle="9250_19_2_E_Defaut_disjoncteur_ou_thermique_moteur_VT" mot="9269" bit="2"/>
+    <Info cle="9250_19_3_E_Panne_Desenfumage_VT" mot="9269" bit="3"/>
+    <Info cle="9250_21_0_E_Panne_non_discriminee_VT" mot="9271" bit="0"/>
+    <Info cle="9250_21_1_E_Defaut_absence_tension_400_Volts_NORMAL_VT" mot="9271" bit="1"/>
+    <Info cle="9250_21_2_E_Defaut_absence_tension_24_48_Volts_Armoire_VT" mot="9271" bit="2"/>
+    <Info cle="9250_21_3_E_Discordance_BAE_CDAL_VT" mot="9271" bit="3"/>
+    <Info cle="9250_21_4_E_Defaut_frein_VT" mot="9271" bit="4"/>
+    <Info cle="9250_21_5_E_Defaut_rideau_coupe_vent_VT" mot="9271" bit="5"/>
+    <Info cle="9250_21_6_E_Defaut_BAE_5_heures_VT" mot="9271" bit="6"/>
+    <Info cle="9250_21_7_E_Defaut_clapets_coupe_feu_VT" mot="9271" bit="7"/>
+    <Info cle="9250_21_8_E_Arret_urgence_VT" mot="9271" bit="8"/>
+    <Info cle="9250_21_9_E_Defaut_vibration_seuil_danger_VT" mot="9271" bit="9"/>
+    <Info cle="9250_21_10_E_Defaut_absence_tension_48_Volts_Station_VT" mot="9271" bit="10"/>
+    <Info cle="9250_27_0_E_Panne_epuisement_ouvrage_ventilation_VT" mot="9277" bit="0"/>
+    <Info cle="9250_28_0_E_En_insuflation_grande_vitesse_confort_VT" mot="9278" bit="0"/>
+    <Info cle="9250_28_1_E_En_extraction_grande_vitesse_confort_VT" mot="9278" bit="1"/>
+    <Info cle="9250_32_0_C_Prise_de_priorite_PGR_Forcee_VT" mot="9282" bit="0"/>
+    <Info cle="9250_32_1_C_Retour_commande_normale_BUS_apres_priorite_PGR_VT" mot="9282" bit="1"/>
+    <Info cle="9250_32_2_C_Marche_forcee_insufflation_PGR_VT" mot="9282" bit="2"/>
+    <Info cle="9250_32_3_C_Marche_forcee_extraction_PGR_VT" mot="9282" bit="3"/>
+    <Info cle="9250_32_4_C_Arret_poste_par_PGR_VT" mot="9282" bit="4"/>
+    <Info cle="9250_32_5_C_Marche_confort_insufflation_PGR_VT" mot="9282" bit="5"/>
+    <Info cle="9250_32_6_C_Marche_confort_extraction_PGR_VT" mot="9282" bit="6"/>
+    <Info cle="9250_32_7_C_Prise_de_priorite_PCM_VT" mot="9282" bit="7"/>
+    <Info cle="9250_32_8_C_Retour_commande_normale_BUS_apres_priorite_PCM_VT" mot="9282" bit="8"/>
+    <Info cle="9250_32_9_C_Marche_confort_insufflation_PCM_VT" mot="9282" bit="9"/>
+    <Info cle="9250_32_10_C_Marche_confort_extraction_PCM_VT" mot="9282" bit="10"/>
+    <Info cle="9250_32_11_C_Arret_poste_par_PCM_VT" mot="9282" bit="11"/>
+    <Info cle="9250_32_12_C_Rearmement_VT" mot="9282" bit="12"/>
+    <Info cle="9250_32_13_C_Prise_de_priorite_PGR_confort_VT" mot="9282" bit="13"/>
+    <Info cle="9250_32_14_C_Bit_de_synchronisation_mise_heure_API_VT" mot="9282" bit="14"/>
+    <Info cle="9250_33__C_Mot_de_mise_heure_horloge_API_secondes_VT" mot="9283"/>
+    <Info cle="9250_34__C_Mot_de_mise_heure_horloge_API_heures_minutes_VT" mot="9284"/>
+    <Info cle="9250_35__C_Choix_vitesse_confort_VT" mot="9285"/>
+    <Info cle="9250_36__C_Mot_de_mise_date_horloge_API_Jour_Mois_VT" mot="9286"/>
+    <Info cle="9250_37__C_Mot_de_mise_date_horloge_API_Jour_semaine_Annee_VT" mot="9287"/>
+    <Info cle="9300_0__M_Id_Ligne_Station_VT" mot="9300"/>
+    <Info cle="9300_1__M_Id_Type_Equipement_VT" mot="9301"/>
+    <Info cle="9300_2__M_Id_version_VT" mot="9302"/>
+    <Info cle="9300_3__M_Id_checksum_VT" mot="9303"/>
+    <Info cle="9300_5__M_Temps_ecoule_en_panne_confort_VT" mot="9305"/>
+    <Info cle="9300_6__M_Temps_de_fonctionnement_cumule_en_insufflation_VT" mot="9306"/>
+    <Info cle="9300_7__M_Temps_de_fonctionnement_cumule_en_extraction_VT" mot="9307"/>
+    <Info cle="9300_8__M_Temps_arret_en_entretien_VT" mot="9308"/>
+    <Info cle="9300_9__M_Temps_de_coupure_400_Volts_VT" mot="9309"/>
+    <Info cle="9300_16_0_E_En_mode_normal_A_VT" mot="9316" bit="0"/>
+    <Info cle="9300_16_1_E_En_mode_normal_B_VT" mot="9316" bit="1"/>
+    <Info cle="9300_16_2_E_En_mode_desenfumage_VT" mot="9316" bit="2"/>
+    <Info cle="9300_16_3_E_En_commande_depuis_la_PGR_forcee_VT" mot="9316" bit="3"/>
+    <Info cle="9300_16_4_E_En_commande_depuis_le_PCM_VT" mot="9316" bit="4"/>
+    <Info cle="9300_16_5_E_En_entretien_VT" mot="9316" bit="5"/>
+    <Info cle="9300_16_6_E_En_arret_VT" mot="9316" bit="6"/>
+    <Info cle="9300_16_7_E_En_arret_nuit_CAN_VT" mot="9316" bit="7"/>
+    <Info cle="9300_16_8_E_En_arret_CMA_VT" mot="9316" bit="8"/>
+    <Info cle="9300_16_9_E_En_insufflation_petite_vitesse_confort_VT" mot="9316" bit="9"/>
+    <Info cle="9300_16_10_E_En_extraction_petite_vitesse_confort_VT" mot="9316" bit="10"/>
+    <Info cle="9300_16_11_E_En_insufflation_desenfumage_VT" mot="9316" bit="11"/>
+    <Info cle="9300_16_12_E_En_extraction_desenfumage_VT" mot="9316" bit="12"/>
+    <Info cle="9300_16_13_E_En_Arret_sur_voie_VT" mot="9316" bit="13"/>
+    <Info cle="9300_16_14_E_En_commande_depuis_la_PGR_confort_VT" mot="9316" bit="14"/>
+    <Info cle="9300_17_0_E_Pre_alerte_VT" mot="9317" bit="0"/>
+    <Info cle="9300_17_1_E_Defaut_vibration_VT" mot="9317" bit="1"/>
+    <Info cle="9300_17_2_E_Intensite_insuffisante_en_extraction_VT" mot="9317" bit="2"/>
+    <Info cle="9300_17_3_E_Intensite_insuffisante_en_insufflation_VT" mot="9317" bit="3"/>
+    <Info cle="9300_17_4_E_Niveau_de_bruit_eleve_en_baie_VT" mot="9317" bit="4"/>
+    <Info cle="9300_17_5_E_Absence_400V_Secours_VT" mot="9317" bit="5"/>
+    <Info cle="9300_17_6_E_Echauffement_des_paliers_moteur_VT" mot="9317" bit="6"/>
+    <Info cle="9300_17_7_E_Defaut_automate_VT" mot="9317" bit="7"/>
+    <Info cle="9300_17_9_E_Absence_400V_Normal_VT" mot="9317" bit="9"/>
+    <Info cle="9300_17_10_E_Defaut_acces_trappe_VT" mot="9317" bit="10"/>
+    <Info cle="9300_19_0_E_Panne_confort_VT" mot="9319" bit="0"/>
+    <Info cle="9300_19_1_E_Defaut_variateur_ou_thermique_demarreur_VT" mot="9319" bit="1"/>
+    <Info cle="9300_19_2_E_Defaut_disjoncteur_ou_thermique_moteur_VT" mot="9319" bit="2"/>
+    <Info cle="9300_19_3_E_Panne_Desenfumage_VT" mot="9319" bit="3"/>
+    <Info cle="9300_21_0_E_Panne_non_discriminee_VT" mot="9321" bit="0"/>
+    <Info cle="9300_21_1_E_Defaut_absence_tension_400_Volts_NORMAL_VT" mot="9321" bit="1"/>
+    <Info cle="9300_21_2_E_Defaut_absence_tension_24_48_Volts_Armoire_VT" mot="9321" bit="2"/>
+    <Info cle="9300_21_3_E_Discordance_BAE_CDAL_VT" mot="9321" bit="3"/>
+    <Info cle="9300_21_4_E_Defaut_frein_VT" mot="9321" bit="4"/>
+    <Info cle="9300_21_5_E_Defaut_rideau_coupe_vent_VT" mot="9321" bit="5"/>
+    <Info cle="9300_21_6_E_Defaut_BAE_5_heures_VT" mot="9321" bit="6"/>
+    <Info cle="9300_21_7_E_Defaut_clapets_coupe_feu_VT" mot="9321" bit="7"/>
+    <Info cle="9300_21_8_E_Arret_urgence_VT" mot="9321" bit="8"/>
+    <Info cle="9300_21_9_E_Defaut_vibration_seuil_danger_VT" mot="9321" bit="9"/>
+    <Info cle="9300_21_10_E_Defaut_absence_tension_48_Volts_Station_VT" mot="9321" bit="10"/>
+    <Info cle="9300_27_0_E_Panne_epuisement_ouvrage_ventilation_VT" mot="9327" bit="0"/>
+    <Info cle="9300_28_0_E_En_insuflation_grande_vitesse_confort_VT" mot="9328" bit="0"/>
+    <Info cle="9300_28_1_E_En_extraction_grande_vitesse_confort_VT" mot="9328" bit="1"/>
+    <Info cle="9300_32_0_C_Prise_de_priorite_PGR_Forcee_VT" mot="9332" bit="0"/>
+    <Info cle="9300_32_1_C_Retour_commande_normale_BUS_apres_priorite_PGR_VT" mot="9332" bit="1"/>
+    <Info cle="9300_32_2_C_Marche_forcee_insufflation_PGR_VT" mot="9332" bit="2"/>
+    <Info cle="9300_32_3_C_Marche_forcee_extraction_PGR_VT" mot="9332" bit="3"/>
+    <Info cle="9300_32_4_C_Arret_poste_par_PGR_VT" mot="9332" bit="4"/>
+    <Info cle="9300_32_5_C_Marche_confort_insufflation_PGR_VT" mot="9332" bit="5"/>
+    <Info cle="9300_32_6_C_Marche_confort_extraction_PGR_VT" mot="9332" bit="6"/>
+    <Info cle="9300_32_7_C_Prise_de_priorite_PCM_VT" mot="9332" bit="7"/>
+    <Info cle="9300_32_8_C_Retour_commande_normale_BUS_apres_priorite_PCM_VT" mot="9332" bit="8"/>
+    <Info cle="9300_32_9_C_Marche_confort_insufflation_PCM_VT" mot="9332" bit="9"/>
+    <Info cle="9300_32_10_C_Marche_confort_extraction_PCM_VT" mot="9332" bit="10"/>
+    <Info cle="9300_32_11_C_Arret_poste_par_PCM_VT" mot="9332" bit="11"/>
+    <Info cle="9300_32_12_C_Rearmement_VT" mot="9332" bit="12"/>
+    <Info cle="9300_32_13_C_Prise_de_priorite_PGR_confort_VT" mot="9332" bit="13"/>
+    <Info cle="9300_32_14_C_Bit_de_synchronisation_mise_heure_API_VT" mot="9332" bit="14"/>
+    <Info cle="9300_33__C_Mot_de_mise_heure_horloge_API_secondes_VT" mot="9333"/>
+    <Info cle="9300_34__C_Mot_de_mise_heure_horloge_API_heures_minutes_VT" mot="9334"/>
+    <Info cle="9300_35__C_Choix_vitesse_confort_VT" mot="9335"/>
+    <Info cle="9300_36__C_Mot_de_mise_date_horloge_API_Jour_Mois_VT" mot="9336"/>
+    <Info cle="9300_37__C_Mot_de_mise_date_horloge_API_Jour_semaine_Annee_VT" mot="9337"/>
+    <Info cle="9350_0__M_Id_Ligne_Station_VT" mot="9350"/>
+    <Info cle="9350_1__M_Id_Type_Equipement_VT" mot="9351"/>
+    <Info cle="9350_2__M_Id_version_VT" mot="9352"/>
+    <Info cle="9350_3__M_Id_checksum_VT" mot="9353"/>
+    <Info cle="9350_5__M_Temps_ecoule_en_panne_confort_VT" mot="9355"/>
+    <Info cle="9350_6__M_Temps_de_fonctionnement_cumule_en_insufflation_VT" mot="9356"/>
+    <Info cle="9350_7__M_Temps_de_fonctionnement_cumule_en_extraction_VT" mot="9357"/>
+    <Info cle="9350_8__M_Temps_arret_en_entretien_VT" mot="9358"/>
+    <Info cle="9350_9__M_Temps_de_coupure_400_Volts_VT" mot="9359"/>
+    <Info cle="9350_16_0_E_En_mode_normal_A_VT" mot="9366" bit="0"/>
+    <Info cle="9350_16_1_E_En_mode_normal_B_VT" mot="9366" bit="1"/>
+    <Info cle="9350_16_2_E_En_mode_desenfumage_VT" mot="9366" bit="2"/>
+    <Info cle="9350_16_3_E_En_commande_depuis_la_PGR_forcee_VT" mot="9366" bit="3"/>
+    <Info cle="9350_16_4_E_En_commande_depuis_le_PCM_VT" mot="9366" bit="4"/>
+    <Info cle="9350_16_5_E_En_entretien_VT" mot="9366" bit="5"/>
+    <Info cle="9350_16_6_E_En_arret_VT" mot="9366" bit="6"/>
+    <Info cle="9350_16_7_E_En_arret_nuit_CAN_VT" mot="9366" bit="7"/>
+    <Info cle="9350_16_8_E_En_arret_CMA_VT" mot="9366" bit="8"/>
+    <Info cle="9350_16_9_E_En_insufflation_petite_vitesse_confort_VT" mot="9366" bit="9"/>
+    <Info cle="9350_16_10_E_En_extraction_petite_vitesse_confort_VT" mot="9366" bit="10"/>
+    <Info cle="9350_16_11_E_En_insufflation_desenfumage_VT" mot="9366" bit="11"/>
+    <Info cle="9350_16_12_E_En_extraction_desenfumage_VT" mot="9366" bit="12"/>
+    <Info cle="9350_16_13_E_En_Arret_sur_voie_VT" mot="9366" bit="13"/>
+    <Info cle="9350_16_14_E_En_commande_depuis_la_PGR_confort_VT" mot="9366" bit="14"/>
+    <Info cle="9350_17_0_E_Pre_alerte_VT" mot="9367" bit="0"/>
+    <Info cle="9350_17_1_E_Defaut_vibration_VT" mot="9367" bit="1"/>
+    <Info cle="9350_17_2_E_Intensite_insuffisante_en_extraction_VT" mot="9367" bit="2"/>
+    <Info cle="9350_17_3_E_Intensite_insuffisante_en_insufflation_VT" mot="9367" bit="3"/>
+    <Info cle="9350_17_4_E_Niveau_de_bruit_eleve_en_baie_VT" mot="9367" bit="4"/>
+    <Info cle="9350_17_5_E_Absence_400V_Secours_VT" mot="9367" bit="5"/>
+    <Info cle="9350_17_6_E_Echauffement_des_paliers_moteur_VT" mot="9367" bit="6"/>
+    <Info cle="9350_17_7_E_Defaut_automate_VT" mot="9367" bit="7"/>
+    <Info cle="9350_17_9_E_Absence_400V_Normal_VT" mot="9367" bit="9"/>
+    <Info cle="9350_17_10_E_Defaut_acces_trappe_VT" mot="9367" bit="10"/>
+    <Info cle="9350_19_0_E_Panne_confort_VT" mot="9369" bit="0"/>
+    <Info cle="9350_19_1_E_Defaut_variateur_ou_thermique_demarreur_VT" mot="9369" bit="1"/>
+    <Info cle="9350_19_2_E_Defaut_disjoncteur_ou_thermique_moteur_VT" mot="9369" bit="2"/>
+    <Info cle="9350_19_3_E_Panne_Desenfumage_VT" mot="9369" bit="3"/>
+    <Info cle="9350_21_0_E_Panne_non_discriminee_VT" mot="9371" bit="0"/>
+    <Info cle="9350_21_1_E_Defaut_absence_tension_400_Volts_NORMAL_VT" mot="9371" bit="1"/>
+    <Info cle="9350_21_2_E_Defaut_absence_tension_24_48_Volts_Armoire_VT" mot="9371" bit="2"/>
+    <Info cle="9350_21_3_E_Discordance_BAE_CDAL_VT" mot="9371" bit="3"/>
+    <Info cle="9350_21_4_E_Defaut_frein_VT" mot="9371" bit="4"/>
+    <Info cle="9350_21_5_E_Defaut_rideau_coupe_vent_VT" mot="9371" bit="5"/>
+    <Info cle="9350_21_6_E_Defaut_BAE_5_heures_VT" mot="9371" bit="6"/>
+    <Info cle="9350_21_7_E_Defaut_clapets_coupe_feu_VT" mot="9371" bit="7"/>
+    <Info cle="9350_21_8_E_Arret_urgence_VT" mot="9371" bit="8"/>
+    <Info cle="9350_21_9_E_Defaut_vibration_seuil_danger_VT" mot="9371" bit="9"/>
+    <Info cle="9350_21_10_E_Defaut_absence_tension_48_Volts_Station_VT" mot="9371" bit="10"/>
+    <Info cle="9350_27_0_E_Panne_epuisement_ouvrage_ventilation_VT" mot="9377" bit="0"/>
+    <Info cle="9350_28_0_E_En_insuflation_grande_vitesse_confort_VT" mot="9378" bit="0"/>
+    <Info cle="9350_28_1_E_En_extraction_grande_vitesse_confort_VT" mot="9378" bit="1"/>
+    <Info cle="9350_32_0_C_Prise_de_priorite_PGR_Forcee_VT" mot="9382" bit="0"/>
+    <Info cle="9350_32_1_C_Retour_commande_normale_BUS_apres_priorite_PGR_VT" mot="9382" bit="1"/>
+    <Info cle="9350_32_2_C_Marche_forcee_insufflation_PGR_VT" mot="9382" bit="2"/>
+    <Info cle="9350_32_3_C_Marche_forcee_extraction_PGR_VT" mot="9382" bit="3"/>
+    <Info cle="9350_32_4_C_Arret_poste_par_PGR_VT" mot="9382" bit="4"/>
+    <Info cle="9350_32_5_C_Marche_confort_insufflation_PGR_VT" mot="9382" bit="5"/>
+    <Info cle="9350_32_6_C_Marche_confort_extraction_PGR_VT" mot="9382" bit="6"/>
+    <Info cle="9350_32_7_C_Prise_de_priorite_PCM_VT" mot="9382" bit="7"/>
+    <Info cle="9350_32_8_C_Retour_commande_normale_BUS_apres_priorite_PCM_VT" mot="9382" bit="8"/>
+    <Info cle="9350_32_9_C_Marche_confort_insufflation_PCM_VT" mot="9382" bit="9"/>
+    <Info cle="9350_32_10_C_Marche_confort_extraction_PCM_VT" mot="9382" bit="10"/>
+    <Info cle="9350_32_11_C_Arret_poste_par_PCM_VT" mot="9382" bit="11"/>
+    <Info cle="9350_32_12_C_Rearmement_VT" mot="9382" bit="12"/>
+    <Info cle="9350_32_13_C_Prise_de_priorite_PGR_confort_VT" mot="9382" bit="13"/>
+    <Info cle="9350_32_14_C_Bit_de_synchronisation_mise_heure_API_VT" mot="9382" bit="14"/>
+    <Info cle="9350_33__C_Mot_de_mise_heure_horloge_API_secondes_VT" mot="9383"/>
+    <Info cle="9350_34__C_Mot_de_mise_heure_horloge_API_heures_minutes_VT" mot="9384"/>
+    <Info cle="9350_35__C_Choix_vitesse_confort_VT" mot="9385"/>
+    <Info cle="9350_36__C_Mot_de_mise_date_horloge_API_Jour_Mois_VT" mot="9386"/>
+    <Info cle="9350_37__C_Mot_de_mise_date_horloge_API_Jour_semaine_Annee_VT" mot="9387"/>
+    <Info cle="9400_0__M_Id_Ligne_Station_VT" mot="9400"/>
+    <Info cle="9400_1__M_Id_Type_Equipement_VT" mot="9401"/>
+    <Info cle="9400_2__M_Id_version_VT" mot="9402"/>
+    <Info cle="9400_3__M_Id_checksum_VT" mot="9403"/>
+    <Info cle="9400_5__M_Temps_ecoule_en_panne_confort_VT" mot="9405"/>
+    <Info cle="9400_6__M_Temps_de_fonctionnement_cumule_en_insufflation_VT" mot="9406"/>
+    <Info cle="9400_7__M_Temps_de_fonctionnement_cumule_en_extraction_VT" mot="9407"/>
+    <Info cle="9400_8__M_Temps_arret_en_entretien_VT" mot="9408"/>
+    <Info cle="9400_9__M_Temps_de_coupure_400_Volts_VT" mot="9409"/>
+    <Info cle="9400_16_0_E_En_mode_normal_A_VT" mot="9416" bit="0"/>
+    <Info cle="9400_16_1_E_En_mode_normal_B_VT" mot="9416" bit="1"/>
+    <Info cle="9400_16_2_E_En_mode_desenfumage_VT" mot="9416" bit="2"/>
+    <Info cle="9400_16_3_E_En_commande_depuis_la_PGR_forcee_VT" mot="9416" bit="3"/>
+    <Info cle="9400_16_4_E_En_commande_depuis_le_PCM_VT" mot="9416" bit="4"/>
+    <Info cle="9400_16_5_E_En_entretien_VT" mot="9416" bit="5"/>
+    <Info cle="9400_16_6_E_En_arret_VT" mot="9416" bit="6"/>
+    <Info cle="9400_16_7_E_En_arret_nuit_CAN_VT" mot="9416" bit="7"/>
+    <Info cle="9400_16_8_E_En_arret_CMA_VT" mot="9416" bit="8"/>
+    <Info cle="9400_16_9_E_En_insufflation_petite_vitesse_confort_VT" mot="9416" bit="9"/>
+    <Info cle="9400_16_10_E_En_extraction_petite_vitesse_confort_VT" mot="9416" bit="10"/>
+    <Info cle="9400_16_11_E_En_insufflation_desenfumage_VT" mot="9416" bit="11"/>
+    <Info cle="9400_16_12_E_En_extraction_desenfumage_VT" mot="9416" bit="12"/>
+    <Info cle="9400_16_13_E_En_Arret_sur_voie_VT" mot="9416" bit="13"/>
+    <Info cle="9400_16_14_E_En_commande_depuis_la_PGR_confort_VT" mot="9416" bit="14"/>
+    <Info cle="9400_17_0_E_Pre_alerte_VT" mot="9417" bit="0"/>
+    <Info cle="9400_17_1_E_Defaut_vibration_VT" mot="9417" bit="1"/>
+    <Info cle="9400_17_2_E_Intensite_insuffisante_en_extraction_VT" mot="9417" bit="2"/>
+    <Info cle="9400_17_3_E_Intensite_insuffisante_en_insufflation_VT" mot="9417" bit="3"/>
+    <Info cle="9400_17_4_E_Niveau_de_bruit_eleve_en_baie_VT" mot="9417" bit="4"/>
+    <Info cle="9400_17_5_E_Absence_400V_Secours_VT" mot="9417" bit="5"/>
+    <Info cle="9400_17_6_E_Echauffement_des_paliers_moteur_VT" mot="9417" bit="6"/>
+    <Info cle="9400_17_7_E_Defaut_automate_VT" mot="9417" bit="7"/>
+    <Info cle="9400_17_9_E_Absence_400V_Normal_VT" mot="9417" bit="9"/>
+    <Info cle="9400_17_10_E_Defaut_acces_trappe_VT" mot="9417" bit="10"/>
+    <Info cle="9400_19_0_E_Panne_confort_VT" mot="9419" bit="0"/>
+    <Info cle="9400_19_1_E_Defaut_variateur_ou_thermique_demarreur_VT" mot="9419" bit="1"/>
+    <Info cle="9400_19_2_E_Defaut_disjoncteur_ou_thermique_moteur_VT" mot="9419" bit="2"/>
+    <Info cle="9400_19_3_E_Panne_Desenfumage_VT" mot="9419" bit="3"/>
+    <Info cle="9400_21_0_E_Panne_non_discriminee_VT" mot="9421" bit="0"/>
+    <Info cle="9400_21_1_E_Defaut_absence_tension_400_Volts_NORMAL_VT" mot="9421" bit="1"/>
+    <Info cle="9400_21_2_E_Defaut_absence_tension_24_48_Volts_Armoire_VT" mot="9421" bit="2"/>
+    <Info cle="9400_21_3_E_Discordance_BAE_CDAL_VT" mot="9421" bit="3"/>
+    <Info cle="9400_21_4_E_Defaut_frein_VT" mot="9421" bit="4"/>
+    <Info cle="9400_21_5_E_Defaut_rideau_coupe_vent_VT" mot="9421" bit="5"/>
+    <Info cle="9400_21_6_E_Defaut_BAE_5_heures_VT" mot="9421" bit="6"/>
+    <Info cle="9400_21_7_E_Defaut_clapets_coupe_feu_VT" mot="9421" bit="7"/>
+    <Info cle="9400_21_8_E_Arret_urgence_VT" mot="9421" bit="8"/>
+    <Info cle="9400_21_9_E_Defaut_vibration_seuil_danger_VT" mot="9421" bit="9"/>
+    <Info cle="9400_21_10_E_Defaut_absence_tension_48_Volts_Station_VT" mot="9421" bit="10"/>
+    <Info cle="9400_27_0_E_Panne_epuisement_ouvrage_ventilation_VT" mot="9427" bit="0"/>
+    <Info cle="9400_28_0_E_En_insuflation_grande_vitesse_confort_VT" mot="9428" bit="0"/>
+    <Info cle="9400_28_1_E_En_extraction_grande_vitesse_confort_VT" mot="9428" bit="1"/>
+    <Info cle="9400_32_0_C_Prise_de_priorite_PGR_Forcee_VT" mot="9432" bit="0"/>
+    <Info cle="9400_32_1_C_Retour_commande_normale_BUS_apres_priorite_PGR_VT" mot="9432" bit="1"/>
+    <Info cle="9400_32_2_C_Marche_forcee_insufflation_PGR_VT" mot="9432" bit="2"/>
+    <Info cle="9400_32_3_C_Marche_forcee_extraction_PGR_VT" mot="9432" bit="3"/>
+    <Info cle="9400_32_4_C_Arret_poste_par_PGR_VT" mot="9432" bit="4"/>
+    <Info cle="9400_32_5_C_Marche_confort_insufflation_PGR_VT" mot="9432" bit="5"/>
+    <Info cle="9400_32_6_C_Marche_confort_extraction_PGR_VT" mot="9432" bit="6"/>
+    <Info cle="9400_32_7_C_Prise_de_priorite_PCM_VT" mot="9432" bit="7"/>
+    <Info cle="9400_32_8_C_Retour_commande_normale_BUS_apres_priorite_PCM_VT" mot="9432" bit="8"/>
+    <Info cle="9400_32_9_C_Marche_confort_insufflation_PCM_VT" mot="9432" bit="9"/>
+    <Info cle="9400_32_10_C_Marche_confort_extraction_PCM_VT" mot="9432" bit="10"/>
+    <Info cle="9400_32_11_C_Arret_poste_par_PCM_VT" mot="9432" bit="11"/>
+    <Info cle="9400_32_12_C_Rearmement_VT" mot="9432" bit="12"/>
+    <Info cle="9400_32_13_C_Prise_de_priorite_PGR_confort_VT" mot="9432" bit="13"/>
+    <Info cle="9400_32_14_C_Bit_de_synchronisation_mise_heure_API_VT" mot="9432" bit="14"/>
+    <Info cle="9400_33__C_Mot_de_mise_heure_horloge_API_secondes_VT" mot="9433"/>
+    <Info cle="9400_34__C_Mot_de_mise_heure_horloge_API_heures_minutes_VT" mot="9434"/>
+    <Info cle="9400_35__C_Choix_vitesse_confort_VT" mot="9435"/>
+    <Info cle="9400_36__C_Mot_de_mise_date_horloge_API_Jour_Mois_VT" mot="9436"/>
+    <Info cle="9400_37__C_Mot_de_mise_date_horloge_API_Jour_semaine_Annee_VT" mot="9437"/>
+    <Info cle="9450_0__M_Id_Ligne_Station_VT" mot="9450"/>
+    <Info cle="9450_1__M_Id_Type_Equipement_VT" mot="9451"/>
+    <Info cle="9450_2__M_Id_version_VT" mot="9452"/>
+    <Info cle="9450_3__M_Id_checksum_VT" mot="9453"/>
+    <Info cle="9450_5__M_Temps_ecoule_en_panne_confort_VT" mot="9455"/>
+    <Info cle="9450_6__M_Temps_de_fonctionnement_cumule_en_insufflation_VT" mot="9456"/>
+    <Info cle="9450_7__M_Temps_de_fonctionnement_cumule_en_extraction_VT" mot="9457"/>
+    <Info cle="9450_8__M_Temps_arret_en_entretien_VT" mot="9458"/>
+    <Info cle="9450_9__M_Temps_de_coupure_400_Volts_VT" mot="9459"/>
+    <Info cle="9450_16_0_E_En_mode_normal_A_VT" mot="9466" bit="0"/>
+    <Info cle="9450_16_1_E_En_mode_normal_B_VT" mot="9466" bit="1"/>
+    <Info cle="9450_16_2_E_En_mode_desenfumage_VT" mot="9466" bit="2"/>
+    <Info cle="9450_16_3_E_En_commande_depuis_la_PGR_forcee_VT" mot="9466" bit="3"/>
+    <Info cle="9450_16_4_E_En_commande_depuis_le_PCM_VT" mot="9466" bit="4"/>
+    <Info cle="9450_16_5_E_En_entretien_VT" mot="9466" bit="5"/>
+    <Info cle="9450_16_6_E_En_arret_VT" mot="9466" bit="6"/>
+    <Info cle="9450_16_7_E_En_arret_nuit_CAN_VT" mot="9466" bit="7"/>
+    <Info cle="9450_16_8_E_En_arret_CMA_VT" mot="9466" bit="8"/>
+    <Info cle="9450_16_9_E_En_insufflation_petite_vitesse_confort_VT" mot="9466" bit="9"/>
+    <Info cle="9450_16_10_E_En_extraction_petite_vitesse_confort_VT" mot="9466" bit="10"/>
+    <Info cle="9450_16_11_E_En_insufflation_desenfumage_VT" mot="9466" bit="11"/>
+    <Info cle="9450_16_12_E_En_extraction_desenfumage_VT" mot="9466" bit="12"/>
+    <Info cle="9450_16_13_E_En_Arret_sur_voie_VT" mot="9466" bit="13"/>
+    <Info cle="9450_16_14_E_En_commande_depuis_la_PGR_confort_VT" mot="9466" bit="14"/>
+    <Info cle="9450_17_0_E_Pre_alerte_VT" mot="9467" bit="0"/>
+    <Info cle="9450_17_1_E_Defaut_vibration_VT" mot="9467" bit="1"/>
+    <Info cle="9450_17_2_E_Intensite_insuffisante_en_extraction_VT" mot="9467" bit="2"/>
+    <Info cle="9450_17_3_E_Intensite_insuffisante_en_insufflation_VT" mot="9467" bit="3"/>
+    <Info cle="9450_17_4_E_Niveau_de_bruit_eleve_en_baie_VT" mot="9467" bit="4"/>
+    <Info cle="9450_17_5_E_Absence_400V_Secours_VT" mot="9467" bit="5"/>
+    <Info cle="9450_17_6_E_Echauffement_des_paliers_moteur_VT" mot="9467" bit="6"/>
+    <Info cle="9450_17_7_E_Defaut_automate_VT" mot="9467" bit="7"/>
+    <Info cle="9450_17_9_E_Absence_400V_Normal_VT" mot="9467" bit="9"/>
+    <Info cle="9450_17_10_E_Defaut_acces_trappe_VT" mot="9467" bit="10"/>
+    <Info cle="9450_19_0_E_Panne_confort_VT" mot="9469" bit="0"/>
+    <Info cle="9450_19_1_E_Defaut_variateur_ou_thermique_demarreur_VT" mot="9469" bit="1"/>
+    <Info cle="9450_19_2_E_Defaut_disjoncteur_ou_thermique_moteur_VT" mot="9469" bit="2"/>
+    <Info cle="9450_19_3_E_Panne_Desenfumage_VT" mot="9469" bit="3"/>
+    <Info cle="9450_21_0_E_Panne_non_discriminee_VT" mot="9471" bit="0"/>
+    <Info cle="9450_21_1_E_Defaut_absence_tension_400_Volts_NORMAL_VT" mot="9471" bit="1"/>
+    <Info cle="9450_21_2_E_Defaut_absence_tension_24_48_Volts_Armoire_VT" mot="9471" bit="2"/>
+    <Info cle="9450_21_3_E_Discordance_BAE_CDAL_VT" mot="9471" bit="3"/>
+    <Info cle="9450_21_4_E_Defaut_frein_VT" mot="9471" bit="4"/>
+    <Info cle="9450_21_5_E_Defaut_rideau_coupe_vent_VT" mot="9471" bit="5"/>
+    <Info cle="9450_21_6_E_Defaut_BAE_5_heures_VT" mot="9471" bit="6"/>
+    <Info cle="9450_21_7_E_Defaut_clapets_coupe_feu_VT" mot="9471" bit="7"/>
+    <Info cle="9450_21_8_E_Arret_urgence_VT" mot="9471" bit="8"/>
+    <Info cle="9450_21_9_E_Defaut_vibration_seuil_danger_VT" mot="9471" bit="9"/>
+    <Info cle="9450_21_10_E_Defaut_absence_tension_48_Volts_Station_VT" mot="9471" bit="10"/>
+    <Info cle="9450_27_0_E_Panne_epuisement_ouvrage_ventilation_VT" mot="9477" bit="0"/>
+    <Info cle="9450_28_0_E_En_insuflation_grande_vitesse_confort_VT" mot="9478" bit="0"/>
+    <Info cle="9450_28_1_E_En_extraction_grande_vitesse_confort_VT" mot="9478" bit="1"/>
+    <Info cle="9450_32_0_C_Prise_de_priorite_PGR_Forcee_VT" mot="9482" bit="0"/>
+    <Info cle="9450_32_1_C_Retour_commande_normale_BUS_apres_priorite_PGR_VT" mot="9482" bit="1"/>
+    <Info cle="9450_32_2_C_Marche_forcee_insufflation_PGR_VT" mot="9482" bit="2"/>
+    <Info cle="9450_32_3_C_Marche_forcee_extraction_PGR_VT" mot="9482" bit="3"/>
+    <Info cle="9450_32_4_C_Arret_poste_par_PGR_VT" mot="9482" bit="4"/>
+    <Info cle="9450_32_5_C_Marche_confort_insufflation_PGR_VT" mot="9482" bit="5"/>
+    <Info cle="9450_32_6_C_Marche_confort_extraction_PGR_VT" mot="9482" bit="6"/>
+    <Info cle="9450_32_7_C_Prise_de_priorite_PCM_VT" mot="9482" bit="7"/>
+    <Info cle="9450_32_8_C_Retour_commande_normale_BUS_apres_priorite_PCM_VT" mot="9482" bit="8"/>
+    <Info cle="9450_32_9_C_Marche_confort_insufflation_PCM_VT" mot="9482" bit="9"/>
+    <Info cle="9450_32_10_C_Marche_confort_extraction_PCM_VT" mot="9482" bit="10"/>
+    <Info cle="9450_32_11_C_Arret_poste_par_PCM_VT" mot="9482" bit="11"/>
+    <Info cle="9450_32_12_C_Rearmement_VT" mot="9482" bit="12"/>
+    <Info cle="9450_32_13_C_Prise_de_priorite_PGR_confort_VT" mot="9482" bit="13"/>
+    <Info cle="9450_32_14_C_Bit_de_synchronisation_mise_heure_API_VT" mot="9482" bit="14"/>
+    <Info cle="9450_33__C_Mot_de_mise_heure_horloge_API_secondes_VT" mot="9483"/>
+    <Info cle="9450_34__C_Mot_de_mise_heure_horloge_API_heures_minutes_VT" mot="9484"/>
+    <Info cle="9450_35__C_Choix_vitesse_confort_VT" mot="9485"/>
+    <Info cle="9450_36__C_Mot_de_mise_date_horloge_API_Jour_Mois_VT" mot="9486"/>
+    <Info cle="9450_37__C_Mot_de_mise_date_horloge_API_Jour_semaine_Annee_VT" mot="9487"/>
+    <Info cle="9500_0__M_Id_Ligne_Station_VT" mot="9500"/>
+    <Info cle="9500_1__M_Id_Type_Equipement_VT" mot="9501"/>
+    <Info cle="9500_2__M_Id_version_VT" mot="9502"/>
+    <Info cle="9500_3__M_Id_checksum_VT" mot="9503"/>
+    <Info cle="9500_5__M_Temps_ecoule_en_panne_confort_VT" mot="9505"/>
+    <Info cle="9500_6__M_Temps_de_fonctionnement_cumule_en_insufflation_VT" mot="9506"/>
+    <Info cle="9500_7__M_Temps_de_fonctionnement_cumule_en_extraction_VT" mot="9507"/>
+    <Info cle="9500_8__M_Temps_arret_en_entretien_VT" mot="9508"/>
+    <Info cle="9500_9__M_Temps_de_coupure_400_Volts_VT" mot="9509"/>
+    <Info cle="9500_16_0_E_En_mode_normal_A_VT" mot="9516" bit="0"/>
+    <Info cle="9500_16_1_E_En_mode_normal_B_VT" mot="9516" bit="1"/>
+    <Info cle="9500_16_2_E_En_mode_desenfumage_VT" mot="9516" bit="2"/>
+    <Info cle="9500_16_3_E_En_commande_depuis_la_PGR_forcee_VT" mot="9516" bit="3"/>
+    <Info cle="9500_16_4_E_En_commande_depuis_le_PCM_VT" mot="9516" bit="4"/>
+    <Info cle="9500_16_5_E_En_entretien_VT" mot="9516" bit="5"/>
+    <Info cle="9500_16_6_E_En_arret_VT" mot="9516" bit="6"/>
+    <Info cle="9500_16_7_E_En_arret_nuit_CAN_VT" mot="9516" bit="7"/>
+    <Info cle="9500_16_8_E_En_arret_CMA_VT" mot="9516" bit="8"/>
+    <Info cle="9500_16_9_E_En_insufflation_petite_vitesse_confort_VT" mot="9516" bit="9"/>
+    <Info cle="9500_16_10_E_En_extraction_petite_vitesse_confort_VT" mot="9516" bit="10"/>
+    <Info cle="9500_16_11_E_En_insufflation_desenfumage_VT" mot="9516" bit="11"/>
+    <Info cle="9500_16_12_E_En_extraction_desenfumage_VT" mot="9516" bit="12"/>
+    <Info cle="9500_16_13_E_En_Arret_sur_voie_VT" mot="9516" bit="13"/>
+    <Info cle="9500_16_14_E_En_commande_depuis_la_PGR_confort_VT" mot="9516" bit="14"/>
+    <Info cle="9500_17_0_E_Pre_alerte_VT" mot="9517" bit="0"/>
+    <Info cle="9500_17_1_E_Defaut_vibration_VT" mot="9517" bit="1"/>
+    <Info cle="9500_17_2_E_Intensite_insuffisante_en_extraction_VT" mot="9517" bit="2"/>
+    <Info cle="9500_17_3_E_Intensite_insuffisante_en_insufflation_VT" mot="9517" bit="3"/>
+    <Info cle="9500_17_4_E_Niveau_de_bruit_eleve_en_baie_VT" mot="9517" bit="4"/>
+    <Info cle="9500_17_5_E_Absence_400V_Secours_VT" mot="9517" bit="5"/>
+    <Info cle="9500_17_6_E_Echauffement_des_paliers_moteur_VT" mot="9517" bit="6"/>
+    <Info cle="9500_17_7_E_Defaut_automate_VT" mot="9517" bit="7"/>
+    <Info cle="9500_17_9_E_Absence_400V_Normal_VT" mot="9517" bit="9"/>
+    <Info cle="9500_17_10_E_Defaut_acces_trappe_VT" mot="9517" bit="10"/>
+    <Info cle="9500_19_0_E_Panne_confort_VT" mot="9519" bit="0"/>
+    <Info cle="9500_19_1_E_Defaut_variateur_ou_thermique_demarreur_VT" mot="9519" bit="1"/>
+    <Info cle="9500_19_2_E_Defaut_disjoncteur_ou_thermique_moteur_VT" mot="9519" bit="2"/>
+    <Info cle="9500_19_3_E_Panne_Desenfumage_VT" mot="9519" bit="3"/>
+    <Info cle="9500_21_0_E_Panne_non_discriminee_VT" mot="9521" bit="0"/>
+    <Info cle="9500_21_1_E_Defaut_absence_tension_400_Volts_NORMAL_VT" mot="9521" bit="1"/>
+    <Info cle="9500_21_2_E_Defaut_absence_tension_24_48_Volts_Armoire_VT" mot="9521" bit="2"/>
+    <Info cle="9500_21_3_E_Discordance_BAE_CDAL_VT" mot="9521" bit="3"/>
+    <Info cle="9500_21_4_E_Defaut_frein_VT" mot="9521" bit="4"/>
+    <Info cle="9500_21_5_E_Defaut_rideau_coupe_vent_VT" mot="9521" bit="5"/>
+    <Info cle="9500_21_6_E_Defaut_BAE_5_heures_VT" mot="9521" bit="6"/>
+    <Info cle="9500_21_7_E_Defaut_clapets_coupe_feu_VT" mot="9521" bit="7"/>
+    <Info cle="9500_21_8_E_Arret_urgence_VT" mot="9521" bit="8"/>
+    <Info cle="9500_21_9_E_Defaut_vibration_seuil_danger_VT" mot="9521" bit="9"/>
+    <Info cle="9500_21_10_E_Defaut_absence_tension_48_Volts_Station_VT" mot="9521" bit="10"/>
+    <Info cle="9500_27_0_E_Panne_epuisement_ouvrage_ventilation_VT" mot="9527" bit="0"/>
+    <Info cle="9500_28_0_E_En_insuflation_grande_vitesse_confort_VT" mot="9528" bit="0"/>
+    <Info cle="9500_28_1_E_En_extraction_grande_vitesse_confort_VT" mot="9528" bit="1"/>
+    <Info cle="9500_32_0_C_Prise_de_priorite_PGR_Forcee_VT" mot="9532" bit="0"/>
+    <Info cle="9500_32_1_C_Retour_commande_normale_BUS_apres_priorite_PGR_VT" mot="9532" bit="1"/>
+    <Info cle="9500_32_2_C_Marche_forcee_insufflation_PGR_VT" mot="9532" bit="2"/>
+    <Info cle="9500_32_3_C_Marche_forcee_extraction_PGR_VT" mot="9532" bit="3"/>
+    <Info cle="9500_32_4_C_Arret_poste_par_PGR_VT" mot="9532" bit="4"/>
+    <Info cle="9500_32_5_C_Marche_confort_insufflation_PGR_VT" mot="9532" bit="5"/>
+    <Info cle="9500_32_6_C_Marche_confort_extraction_PGR_VT" mot="9532" bit="6"/>
+    <Info cle="9500_32_7_C_Prise_de_priorite_PCM_VT" mot="9532" bit="7"/>
+    <Info cle="9500_32_8_C_Retour_commande_normale_BUS_apres_priorite_PCM_VT" mot="9532" bit="8"/>
+    <Info cle="9500_32_9_C_Marche_confort_insufflation_PCM_VT" mot="9532" bit="9"/>
+    <Info cle="9500_32_10_C_Marche_confort_extraction_PCM_VT" mot="9532" bit="10"/>
+    <Info cle="9500_32_11_C_Arret_poste_par_PCM_VT" mot="9532" bit="11"/>
+    <Info cle="9500_32_12_C_Rearmement_VT" mot="9532" bit="12"/>
+    <Info cle="9500_32_13_C_Prise_de_priorite_PGR_confort_VT" mot="9532" bit="13"/>
+    <Info cle="9500_32_14_C_Bit_de_synchronisation_mise_heure_API_VT" mot="9532" bit="14"/>
+    <Info cle="9500_33__C_Mot_de_mise_heure_horloge_API_secondes_VT" mot="9533"/>
+    <Info cle="9500_34__C_Mot_de_mise_heure_horloge_API_heures_minutes_VT" mot="9534"/>
+    <Info cle="9500_35__C_Choix_vitesse_confort_VT" mot="9535"/>
+    <Info cle="9500_36__C_Mot_de_mise_date_horloge_API_Jour_Mois_VT" mot="9536"/>
+    <Info cle="9500_37__C_Mot_de_mise_date_horloge_API_Jour_semaine_Annee_VT" mot="9537"/>
+    <Info cle="9550_0__M_Id_Ligne_Station_VT" mot="9550"/>
+    <Info cle="9550_1__M_Id_Type_Equipement_VT" mot="9551"/>
+    <Info cle="9550_2__M_Id_version_VT" mot="9552"/>
+    <Info cle="9550_3__M_Id_checksum_VT" mot="9553"/>
+    <Info cle="9550_5__M_Temps_ecoule_en_panne_confort_VT" mot="9555"/>
+    <Info cle="9550_6__M_Temps_de_fonctionnement_cumule_en_insufflation_VT" mot="9556"/>
+    <Info cle="9550_7__M_Temps_de_fonctionnement_cumule_en_extraction_VT" mot="9557"/>
+    <Info cle="9550_8__M_Temps_arret_en_entretien_VT" mot="9558"/>
+    <Info cle="9550_9__M_Temps_de_coupure_400_Volts_VT" mot="9559"/>
+    <Info cle="9550_16_0_E_En_mode_normal_A_VT" mot="9566" bit="0"/>
+    <Info cle="9550_16_1_E_En_mode_normal_B_VT" mot="9566" bit="1"/>
+    <Info cle="9550_16_2_E_En_mode_desenfumage_VT" mot="9566" bit="2"/>
+    <Info cle="9550_16_3_E_En_commande_depuis_la_PGR_forcee_VT" mot="9566" bit="3"/>
+    <Info cle="9550_16_4_E_En_commande_depuis_le_PCM_VT" mot="9566" bit="4"/>
+    <Info cle="9550_16_5_E_En_entretien_VT" mot="9566" bit="5"/>
+    <Info cle="9550_16_6_E_En_arret_VT" mot="9566" bit="6"/>
+    <Info cle="9550_16_7_E_En_arret_nuit_CAN_VT" mot="9566" bit="7"/>
+    <Info cle="9550_16_8_E_En_arret_CMA_VT" mot="9566" bit="8"/>
+    <Info cle="9550_16_9_E_En_insufflation_petite_vitesse_confort_VT" mot="9566" bit="9"/>
+    <Info cle="9550_16_10_E_En_extraction_petite_vitesse_confort_VT" mot="9566" bit="10"/>
+    <Info cle="9550_16_11_E_En_insufflation_desenfumage_VT" mot="9566" bit="11"/>
+    <Info cle="9550_16_12_E_En_extraction_desenfumage_VT" mot="9566" bit="12"/>
+    <Info cle="9550_16_13_E_En_Arret_sur_voie_VT" mot="9566" bit="13"/>
+    <Info cle="9550_16_14_E_En_commande_depuis_la_PGR_confort_VT" mot="9566" bit="14"/>
+    <Info cle="9550_17_0_E_Pre_alerte_VT" mot="9567" bit="0"/>
+    <Info cle="9550_17_1_E_Defaut_vibration_VT" mot="9567" bit="1"/>
+    <Info cle="9550_17_2_E_Intensite_insuffisante_en_extraction_VT" mot="9567" bit="2"/>
+    <Info cle="9550_17_3_E_Intensite_insuffisante_en_insufflation_VT" mot="9567" bit="3"/>
+    <Info cle="9550_17_4_E_Niveau_de_bruit_eleve_en_baie_VT" mot="9567" bit="4"/>
+    <Info cle="9550_17_5_E_Absence_400V_Secours_VT" mot="9567" bit="5"/>
+    <Info cle="9550_17_6_E_Echauffement_des_paliers_moteur_VT" mot="9567" bit="6"/>
+    <Info cle="9550_17_7_E_Defaut_automate_VT" mot="9567" bit="7"/>
+    <Info cle="9550_17_9_E_Absence_400V_Normal_VT" mot="9567" bit="9"/>
+    <Info cle="9550_17_10_E_Defaut_acces_trappe_VT" mot="9567" bit="10"/>
+    <Info cle="9550_19_0_E_Panne_confort_VT" mot="9569" bit="0"/>
+    <Info cle="9550_19_1_E_Defaut_variateur_ou_thermique_demarreur_VT" mot="9569" bit="1"/>
+    <Info cle="9550_19_2_E_Defaut_disjoncteur_ou_thermique_moteur_VT" mot="9569" bit="2"/>
+    <Info cle="9550_19_3_E_Panne_Desenfumage_VT" mot="9569" bit="3"/>
+    <Info cle="9550_21_0_E_Panne_non_discriminee_VT" mot="9571" bit="0"/>
+    <Info cle="9550_21_1_E_Defaut_absence_tension_400_Volts_NORMAL_VT" mot="9571" bit="1"/>
+    <Info cle="9550_21_2_E_Defaut_absence_tension_24_48_Volts_Armoire_VT" mot="9571" bit="2"/>
+    <Info cle="9550_21_3_E_Discordance_BAE_CDAL_VT" mot="9571" bit="3"/>
+    <Info cle="9550_21_4_E_Defaut_frein_VT" mot="9571" bit="4"/>
+    <Info cle="9550_21_5_E_Defaut_rideau_coupe_vent_VT" mot="9571" bit="5"/>
+    <Info cle="9550_21_6_E_Defaut_BAE_5_heures_VT" mot="9571" bit="6"/>
+    <Info cle="9550_21_7_E_Defaut_clapets_coupe_feu_VT" mot="9571" bit="7"/>
+    <Info cle="9550_21_8_E_Arret_urgence_VT" mot="9571" bit="8"/>
+    <Info cle="9550_21_9_E_Defaut_vibration_seuil_danger_VT" mot="9571" bit="9"/>
+    <Info cle="9550_21_10_E_Defaut_absence_tension_48_Volts_Station_VT" mot="9571" bit="10"/>
+    <Info cle="9550_27_0_E_Panne_epuisement_ouvrage_ventilation_VT" mot="9577" bit="0"/>
+    <Info cle="9550_28_0_E_En_insuflation_grande_vitesse_confort_VT" mot="9578" bit="0"/>
+    <Info cle="9550_28_1_E_En_extraction_grande_vitesse_confort_VT" mot="9578" bit="1"/>
+    <Info cle="9550_32_0_C_Prise_de_priorite_PGR_Forcee_VT" mot="9582" bit="0"/>
+    <Info cle="9550_32_1_C_Retour_commande_normale_BUS_apres_priorite_PGR_VT" mot="9582" bit="1"/>
+    <Info cle="9550_32_2_C_Marche_forcee_insufflation_PGR_VT" mot="9582" bit="2"/>
+    <Info cle="9550_32_3_C_Marche_forcee_extraction_PGR_VT" mot="9582" bit="3"/>
+    <Info cle="9550_32_4_C_Arret_poste_par_PGR_VT" mot="9582" bit="4"/>
+    <Info cle="9550_32_5_C_Marche_confort_insufflation_PGR_VT" mot="9582" bit="5"/>
+    <Info cle="9550_32_6_C_Marche_confort_extraction_PGR_VT" mot="9582" bit="6"/>
+    <Info cle="9550_32_7_C_Prise_de_priorite_PCM_VT" mot="9582" bit="7"/>
+    <Info cle="9550_32_8_C_Retour_commande_normale_BUS_apres_priorite_PCM_VT" mot="9582" bit="8"/>
+    <Info cle="9550_32_9_C_Marche_confort_insufflation_PCM_VT" mot="9582" bit="9"/>
+    <Info cle="9550_32_10_C_Marche_confort_extraction_PCM_VT" mot="9582" bit="10"/>
+    <Info cle="9550_32_11_C_Arret_poste_par_PCM_VT" mot="9582" bit="11"/>
+    <Info cle="9550_32_12_C_Rearmement_VT" mot="9582" bit="12"/>
+    <Info cle="9550_32_13_C_Prise_de_priorite_PGR_confort_VT" mot="9582" bit="13"/>
+    <Info cle="9550_32_14_C_Bit_de_synchronisation_mise_heure_API_VT" mot="9582" bit="14"/>
+    <Info cle="9550_33__C_Mot_de_mise_heure_horloge_API_secondes_VT" mot="9583"/>
+    <Info cle="9550_34__C_Mot_de_mise_heure_horloge_API_heures_minutes_VT" mot="9584"/>
+    <Info cle="9550_35__C_Choix_vitesse_confort_VT" mot="9585"/>
+    <Info cle="9550_36__C_Mot_de_mise_date_horloge_API_Jour_Mois_VT" mot="9586"/>
+    <Info cle="9550_37__C_Mot_de_mise_date_horloge_API_Jour_semaine_Annee_VT" mot="9587"/>
+    <Info cle="9600_0__M_Id_Ligne_Station_VT" mot="9600"/>
+    <Info cle="9600_1__M_Id_Type_Equipement_VT" mot="9601"/>
+    <Info cle="9600_2__M_Id_version_VT" mot="9602"/>
+    <Info cle="9600_3__M_Id_checksum_VT" mot="9603"/>
+    <Info cle="9600_5__M_Temps_ecoule_en_panne_confort_VT" mot="9605"/>
+    <Info cle="9600_6__M_Temps_de_fonctionnement_cumule_en_insufflation_VT" mot="9606"/>
+    <Info cle="9600_7__M_Temps_de_fonctionnement_cumule_en_extraction_VT" mot="9607"/>
+    <Info cle="9600_8__M_Temps_arret_en_entretien_VT" mot="9608"/>
+    <Info cle="9600_9__M_Temps_de_coupure_400_Volts_VT" mot="9609"/>
+    <Info cle="9600_16_0_E_En_mode_normal_A_VT" mot="9616" bit="0"/>
+    <Info cle="9600_16_1_E_En_mode_normal_B_VT" mot="9616" bit="1"/>
+    <Info cle="9600_16_2_E_En_mode_desenfumage_VT" mot="9616" bit="2"/>
+    <Info cle="9600_16_3_E_En_commande_depuis_la_PGR_forcee_VT" mot="9616" bit="3"/>
+    <Info cle="9600_16_4_E_En_commande_depuis_le_PCM_VT" mot="9616" bit="4"/>
+    <Info cle="9600_16_5_E_En_entretien_VT" mot="9616" bit="5"/>
+    <Info cle="9600_16_6_E_En_arret_VT" mot="9616" bit="6"/>
+    <Info cle="9600_16_7_E_En_arret_nuit_CAN_VT" mot="9616" bit="7"/>
+    <Info cle="9600_16_8_E_En_arret_CMA_VT" mot="9616" bit="8"/>
+    <Info cle="9600_16_9_E_En_insufflation_petite_vitesse_confort_VT" mot="9616" bit="9"/>
+    <Info cle="9600_16_10_E_En_extraction_petite_vitesse_confort_VT" mot="9616" bit="10"/>
+    <Info cle="9600_16_11_E_En_insufflation_desenfumage_VT" mot="9616" bit="11"/>
+    <Info cle="9600_16_12_E_En_extraction_desenfumage_VT" mot="9616" bit="12"/>
+    <Info cle="9600_16_13_E_En_Arret_sur_voie_VT" mot="9616" bit="13"/>
+    <Info cle="9600_16_14_E_En_commande_depuis_la_PGR_confort_VT" mot="9616" bit="14"/>
+    <Info cle="9600_17_0_E_Pre_alerte_VT" mot="9617" bit="0"/>
+    <Info cle="9600_17_1_E_Defaut_vibration_VT" mot="9617" bit="1"/>
+    <Info cle="9600_17_2_E_Intensite_insuffisante_en_extraction_VT" mot="9617" bit="2"/>
+    <Info cle="9600_17_3_E_Intensite_insuffisante_en_insufflation_VT" mot="9617" bit="3"/>
+    <Info cle="9600_17_4_E_Niveau_de_bruit_eleve_en_baie_VT" mot="9617" bit="4"/>
+    <Info cle="9600_17_5_E_Absence_400V_Secours_VT" mot="9617" bit="5"/>
+    <Info cle="9600_17_6_E_Echauffement_des_paliers_moteur_VT" mot="9617" bit="6"/>
+    <Info cle="9600_17_7_E_Defaut_automate_VT" mot="9617" bit="7"/>
+    <Info cle="9600_17_9_E_Absence_400V_Normal_VT" mot="9617" bit="9"/>
+    <Info cle="9600_17_10_E_Defaut_acces_trappe_VT" mot="9617" bit="10"/>
+    <Info cle="9600_19_0_E_Panne_confort_VT" mot="9619" bit="0"/>
+    <Info cle="9600_19_1_E_Defaut_variateur_ou_thermique_demarreur_VT" mot="9619" bit="1"/>
+    <Info cle="9600_19_2_E_Defaut_disjoncteur_ou_thermique_moteur_VT" mot="9619" bit="2"/>
+    <Info cle="9600_19_3_E_Panne_Desenfumage_VT" mot="9619" bit="3"/>
+    <Info cle="9600_21_0_E_Panne_non_discriminee_VT" mot="9621" bit="0"/>
+    <Info cle="9600_21_1_E_Defaut_absence_tension_400_Volts_NORMAL_VT" mot="9621" bit="1"/>
+    <Info cle="9600_21_2_E_Defaut_absence_tension_24_48_Volts_Armoire_VT" mot="9621" bit="2"/>
+    <Info cle="9600_21_3_E_Discordance_BAE_CDAL_VT" mot="9621" bit="3"/>
+    <Info cle="9600_21_4_E_Defaut_frein_VT" mot="9621" bit="4"/>
+    <Info cle="9600_21_5_E_Defaut_rideau_coupe_vent_VT" mot="9621" bit="5"/>
+    <Info cle="9600_21_6_E_Defaut_BAE_5_heures_VT" mot="9621" bit="6"/>
+    <Info cle="9600_21_7_E_Defaut_clapets_coupe_feu_VT" mot="9621" bit="7"/>
+    <Info cle="9600_21_8_E_Arret_urgence_VT" mot="9621" bit="8"/>
+    <Info cle="9600_21_9_E_Defaut_vibration_seuil_danger_VT" mot="9621" bit="9"/>
+    <Info cle="9600_21_10_E_Defaut_absence_tension_48_Volts_Station_VT" mot="9621" bit="10"/>
+    <Info cle="9600_27_0_E_Panne_epuisement_ouvrage_ventilation_VT" mot="9627" bit="0"/>
+    <Info cle="9600_28_0_E_En_insuflation_grande_vitesse_confort_VT" mot="9628" bit="0"/>
+    <Info cle="9600_28_1_E_En_extraction_grande_vitesse_confort_VT" mot="9628" bit="1"/>
+    <Info cle="9600_32_0_C_Prise_de_priorite_PGR_Forcee_VT" mot="9632" bit="0"/>
+    <Info cle="9600_32_1_C_Retour_commande_normale_BUS_apres_priorite_PGR_VT" mot="9632" bit="1"/>
+    <Info cle="9600_32_2_C_Marche_forcee_insufflation_PGR_VT" mot="9632" bit="2"/>
+    <Info cle="9600_32_3_C_Marche_forcee_extraction_PGR_VT" mot="9632" bit="3"/>
+    <Info cle="9600_32_4_C_Arret_poste_par_PGR_VT" mot="9632" bit="4"/>
+    <Info cle="9600_32_5_C_Marche_confort_insufflation_PGR_VT" mot="9632" bit="5"/>
+    <Info cle="9600_32_6_C_Marche_confort_extraction_PGR_VT" mot="9632" bit="6"/>
+    <Info cle="9600_32_7_C_Prise_de_priorite_PCM_VT" mot="9632" bit="7"/>
+    <Info cle="9600_32_8_C_Retour_commande_normale_BUS_apres_priorite_PCM_VT" mot="9632" bit="8"/>
+    <Info cle="9600_32_9_C_Marche_confort_insufflation_PCM_VT" mot="9632" bit="9"/>
+    <Info cle="9600_32_10_C_Marche_confort_extraction_PCM_VT" mot="9632" bit="10"/>
+    <Info cle="9600_32_11_C_Arret_poste_par_PCM_VT" mot="9632" bit="11"/>
+    <Info cle="9600_32_12_C_Rearmement_VT" mot="9632" bit="12"/>
+    <Info cle="9600_32_13_C_Prise_de_priorite_PGR_confort_VT" mot="9632" bit="13"/>
+    <Info cle="9600_32_14_C_Bit_de_synchronisation_mise_heure_API_VT" mot="9632" bit="14"/>
+    <Info cle="9600_33__C_Mot_de_mise_heure_horloge_API_secondes_VT" mot="9633"/>
+    <Info cle="9600_34__C_Mot_de_mise_heure_horloge_API_heures_minutes_VT" mot="9634"/>
+    <Info cle="9600_35__C_Choix_vitesse_confort_VT" mot="9635"/>
+    <Info cle="9600_36__C_Mot_de_mise_date_horloge_API_Jour_Mois_VT" mot="9636"/>
+    <Info cle="9600_37__C_Mot_de_mise_date_horloge_API_Jour_semaine_Annee_VT" mot="9637"/>
+    <Info cle="9650_0__M_Id_Ligne_Station_VT" mot="9650"/>
+    <Info cle="9650_1__M_Id_Type_Equipement_VT" mot="9651"/>
+    <Info cle="9650_2__M_Id_version_VT" mot="9652"/>
+    <Info cle="9650_3__M_Id_checksum_VT" mot="9653"/>
+    <Info cle="9650_5__M_Temps_ecoule_en_panne_confort_VT" mot="9655"/>
+    <Info cle="9650_6__M_Temps_de_fonctionnement_cumule_en_insufflation_VT" mot="9656"/>
+    <Info cle="9650_7__M_Temps_de_fonctionnement_cumule_en_extraction_VT" mot="9657"/>
+    <Info cle="9650_8__M_Temps_arret_en_entretien_VT" mot="9658"/>
+    <Info cle="9650_9__M_Temps_de_coupure_400_Volts_VT" mot="9659"/>
+    <Info cle="9650_16_0_E_En_mode_normal_A_VT" mot="9666" bit="0"/>
+    <Info cle="9650_16_1_E_En_mode_normal_B_VT" mot="9666" bit="1"/>
+    <Info cle="9650_16_2_E_En_mode_desenfumage_VT" mot="9666" bit="2"/>
+    <Info cle="9650_16_3_E_En_commande_depuis_la_PGR_forcee_VT" mot="9666" bit="3"/>
+    <Info cle="9650_16_4_E_En_commande_depuis_le_PCM_VT" mot="9666" bit="4"/>
+    <Info cle="9650_16_5_E_En_entretien_VT" mot="9666" bit="5"/>
+    <Info cle="9650_16_6_E_En_arret_VT" mot="9666" bit="6"/>
+    <Info cle="9650_16_7_E_En_arret_nuit_CAN_VT" mot="9666" bit="7"/>
+    <Info cle="9650_16_8_E_En_arret_CMA_VT" mot="9666" bit="8"/>
+    <Info cle="9650_16_9_E_En_insufflation_petite_vitesse_confort_VT" mot="9666" bit="9"/>
+    <Info cle="9650_16_10_E_En_extraction_petite_vitesse_confort_VT" mot="9666" bit="10"/>
+    <Info cle="9650_16_11_E_En_insufflation_desenfumage_VT" mot="9666" bit="11"/>
+    <Info cle="9650_16_12_E_En_extraction_desenfumage_VT" mot="9666" bit="12"/>
+    <Info cle="9650_16_13_E_En_Arret_sur_voie_VT" mot="9666" bit="13"/>
+    <Info cle="9650_16_14_E_En_commande_depuis_la_PGR_confort_VT" mot="9666" bit="14"/>
+    <Info cle="9650_17_0_E_Pre_alerte_VT" mot="9667" bit="0"/>
+    <Info cle="9650_17_1_E_Defaut_vibration_VT" mot="9667" bit="1"/>
+    <Info cle="9650_17_2_E_Intensite_insuffisante_en_extraction_VT" mot="9667" bit="2"/>
+    <Info cle="9650_17_3_E_Intensite_insuffisante_en_insufflation_VT" mot="9667" bit="3"/>
+    <Info cle="9650_17_4_E_Niveau_de_bruit_eleve_en_baie_VT" mot="9667" bit="4"/>
+    <Info cle="9650_17_5_E_Absence_400V_Secours_VT" mot="9667" bit="5"/>
+    <Info cle="9650_17_6_E_Echauffement_des_paliers_moteur_VT" mot="9667" bit="6"/>
+    <Info cle="9650_17_7_E_Defaut_automate_VT" mot="9667" bit="7"/>
+    <Info cle="9650_17_9_E_Absence_400V_Normal_VT" mot="9667" bit="9"/>
+    <Info cle="9650_17_10_E_Defaut_acces_trappe_VT" mot="9667" bit="10"/>
+    <Info cle="9650_19_0_E_Panne_confort_VT" mot="9669" bit="0"/>
+    <Info cle="9650_19_1_E_Defaut_variateur_ou_thermique_demarreur_VT" mot="9669" bit="1"/>
+    <Info cle="9650_19_2_E_Defaut_disjoncteur_ou_thermique_moteur_VT" mot="9669" bit="2"/>
+    <Info cle="9650_19_3_E_Panne_Desenfumage_VT" mot="9669" bit="3"/>
+    <Info cle="9650_21_0_E_Panne_non_discriminee_VT" mot="9671" bit="0"/>
+    <Info cle="9650_21_1_E_Defaut_absence_tension_400_Volts_NORMAL_VT" mot="9671" bit="1"/>
+    <Info cle="9650_21_2_E_Defaut_absence_tension_24_48_Volts_Armoire_VT" mot="9671" bit="2"/>
+    <Info cle="9650_21_3_E_Discordance_BAE_CDAL_VT" mot="9671" bit="3"/>
+    <Info cle="9650_21_4_E_Defaut_frein_VT" mot="9671" bit="4"/>
+    <Info cle="9650_21_5_E_Defaut_rideau_coupe_vent_VT" mot="9671" bit="5"/>
+    <Info cle="9650_21_6_E_Defaut_BAE_5_heures_VT" mot="9671" bit="6"/>
+    <Info cle="9650_21_7_E_Defaut_clapets_coupe_feu_VT" mot="9671" bit="7"/>
+    <Info cle="9650_21_8_E_Arret_urgence_VT" mot="9671" bit="8"/>
+    <Info cle="9650_21_9_E_Defaut_vibration_seuil_danger_VT" mot="9671" bit="9"/>
+    <Info cle="9650_21_10_E_Defaut_absence_tension_48_Volts_Station_VT" mot="9671" bit="10"/>
+    <Info cle="9650_27_0_E_Panne_epuisement_ouvrage_ventilation_VT" mot="9677" bit="0"/>
+    <Info cle="9650_28_0_E_En_insuflation_grande_vitesse_confort_VT" mot="9678" bit="0"/>
+    <Info cle="9650_28_1_E_En_extraction_grande_vitesse_confort_VT" mot="9678" bit="1"/>
+    <Info cle="9650_32_0_C_Prise_de_priorite_PGR_Forcee_VT" mot="9682" bit="0"/>
+    <Info cle="9650_32_1_C_Retour_commande_normale_BUS_apres_priorite_PGR_VT" mot="9682" bit="1"/>
+    <Info cle="9650_32_2_C_Marche_forcee_insufflation_PGR_VT" mot="9682" bit="2"/>
+    <Info cle="9650_32_3_C_Marche_forcee_extraction_PGR_VT" mot="9682" bit="3"/>
+    <Info cle="9650_32_4_C_Arret_poste_par_PGR_VT" mot="9682" bit="4"/>
+    <Info cle="9650_32_5_C_Marche_confort_insufflation_PGR_VT" mot="9682" bit="5"/>
+    <Info cle="9650_32_6_C_Marche_confort_extraction_PGR_VT" mot="9682" bit="6"/>
+    <Info cle="9650_32_7_C_Prise_de_priorite_PCM_VT" mot="9682" bit="7"/>
+    <Info cle="9650_32_8_C_Retour_commande_normale_BUS_apres_priorite_PCM_VT" mot="9682" bit="8"/>
+    <Info cle="9650_32_9_C_Marche_confort_insufflation_PCM_VT" mot="9682" bit="9"/>
+    <Info cle="9650_32_10_C_Marche_confort_extraction_PCM_VT" mot="9682" bit="10"/>
+    <Info cle="9650_32_11_C_Arret_poste_par_PCM_VT" mot="9682" bit="11"/>
+    <Info cle="9650_32_12_C_Rearmement_VT" mot="9682" bit="12"/>
+    <Info cle="9650_32_13_C_Prise_de_priorite_PGR_confort_VT" mot="9682" bit="13"/>
+    <Info cle="9650_32_14_C_Bit_de_synchronisation_mise_heure_API_VT" mot="9682" bit="14"/>
+    <Info cle="9650_33__C_Mot_de_mise_heure_horloge_API_secondes_VT" mot="9683"/>
+    <Info cle="9650_34__C_Mot_de_mise_heure_horloge_API_heures_minutes_VT" mot="9684"/>
+    <Info cle="9650_35__C_Choix_vitesse_confort_VT" mot="9685"/>
+    <Info cle="9650_36__C_Mot_de_mise_date_horloge_API_Jour_Mois_VT" mot="9686"/>
+    <Info cle="9650_37__C_Mot_de_mise_date_horloge_API_Jour_semaine_Annee_VT" mot="9687"/>
+    <Info cle="9700_0__M_Id_Ligne_Station_VT" mot="9700"/>
+    <Info cle="9700_1__M_Id_Type_Equipement_VT" mot="9701"/>
+    <Info cle="9700_2__M_Id_version_VT" mot="9702"/>
+    <Info cle="9700_3__M_Id_checksum_VT" mot="9703"/>
+    <Info cle="9700_5__M_Temps_ecoule_en_panne_confort_VT" mot="9705"/>
+    <Info cle="9700_6__M_Temps_de_fonctionnement_cumule_en_insufflation_VT" mot="9706"/>
+    <Info cle="9700_7__M_Temps_de_fonctionnement_cumule_en_extraction_VT" mot="9707"/>
+    <Info cle="9700_8__M_Temps_arret_en_entretien_VT" mot="9708"/>
+    <Info cle="9700_9__M_Temps_de_coupure_400_Volts_VT" mot="9709"/>
+    <Info cle="9700_16_0_E_En_mode_normal_A_VT" mot="9716" bit="0"/>
+    <Info cle="9700_16_1_E_En_mode_normal_B_VT" mot="9716" bit="1"/>
+    <Info cle="9700_16_2_E_En_mode_desenfumage_VT" mot="9716" bit="2"/>
+    <Info cle="9700_16_3_E_En_commande_depuis_la_PGR_forcee_VT" mot="9716" bit="3"/>
+    <Info cle="9700_16_4_E_En_commande_depuis_le_PCM_VT" mot="9716" bit="4"/>
+    <Info cle="9700_16_5_E_En_entretien_VT" mot="9716" bit="5"/>
+    <Info cle="9700_16_6_E_En_arret_VT" mot="9716" bit="6"/>
+    <Info cle="9700_16_7_E_En_arret_nuit_CAN_VT" mot="9716" bit="7"/>
+    <Info cle="9700_16_8_E_En_arret_CMA_VT" mot="9716" bit="8"/>
+    <Info cle="9700_16_9_E_En_insufflation_petite_vitesse_confort_VT" mot="9716" bit="9"/>
+    <Info cle="9700_16_10_E_En_extraction_petite_vitesse_confort_VT" mot="9716" bit="10"/>
+    <Info cle="9700_16_11_E_En_insufflation_desenfumage_VT" mot="9716" bit="11"/>
+    <Info cle="9700_16_12_E_En_extraction_desenfumage_VT" mot="9716" bit="12"/>
+    <Info cle="9700_16_13_E_En_Arret_sur_voie_VT" mot="9716" bit="13"/>
+    <Info cle="9700_16_14_E_En_commande_depuis_la_PGR_confort_VT" mot="9716" bit="14"/>
+    <Info cle="9700_17_0_E_Pre_alerte_VT" mot="9717" bit="0"/>
+    <Info cle="9700_17_1_E_Defaut_vibration_VT" mot="9717" bit="1"/>
+    <Info cle="9700_17_2_E_Intensite_insuffisante_en_extraction_VT" mot="9717" bit="2"/>
+    <Info cle="9700_17_3_E_Intensite_insuffisante_en_insufflation_VT" mot="9717" bit="3"/>
+    <Info cle="9700_17_4_E_Niveau_de_bruit_eleve_en_baie_VT" mot="9717" bit="4"/>
+    <Info cle="9700_17_5_E_Absence_400V_Secours_VT" mot="9717" bit="5"/>
+    <Info cle="9700_17_6_E_Echauffement_des_paliers_moteur_VT" mot="9717" bit="6"/>
+    <Info cle="9700_17_7_E_Defaut_automate_VT" mot="9717" bit="7"/>
+    <Info cle="9700_17_9_E_Absence_400V_Normal_VT" mot="9717" bit="9"/>
+    <Info cle="9700_17_10_E_Defaut_acces_trappe_VT" mot="9717" bit="10"/>
+    <Info cle="9700_19_0_E_Panne_confort_VT" mot="9719" bit="0"/>
+    <Info cle="9700_19_1_E_Defaut_variateur_ou_thermique_demarreur_VT" mot="9719" bit="1"/>
+    <Info cle="9700_19_2_E_Defaut_disjoncteur_ou_thermique_moteur_VT" mot="9719" bit="2"/>
+    <Info cle="9700_19_3_E_Panne_Desenfumage_VT" mot="9719" bit="3"/>
+    <Info cle="9700_21_0_E_Panne_non_discriminee_VT" mot="9721" bit="0"/>
+    <Info cle="9700_21_1_E_Defaut_absence_tension_400_Volts_NORMAL_VT" mot="9721" bit="1"/>
+    <Info cle="9700_21_2_E_Defaut_absence_tension_24_48_Volts_Armoire_VT" mot="9721" bit="2"/>
+    <Info cle="9700_21_3_E_Discordance_BAE_CDAL_VT" mot="9721" bit="3"/>
+    <Info cle="9700_21_4_E_Defaut_frein_VT" mot="9721" bit="4"/>
+    <Info cle="9700_21_5_E_Defaut_rideau_coupe_vent_VT" mot="9721" bit="5"/>
+    <Info cle="9700_21_6_E_Defaut_BAE_5_heures_VT" mot="9721" bit="6"/>
+    <Info cle="9700_21_7_E_Defaut_clapets_coupe_feu_VT" mot="9721" bit="7"/>
+    <Info cle="9700_21_8_E_Arret_urgence_VT" mot="9721" bit="8"/>
+    <Info cle="9700_21_9_E_Defaut_vibration_seuil_danger_VT" mot="9721" bit="9"/>
+    <Info cle="9700_21_10_E_Defaut_absence_tension_48_Volts_Station_VT" mot="9721" bit="10"/>
+    <Info cle="9700_27_0_E_Panne_epuisement_ouvrage_ventilation_VT" mot="9727" bit="0"/>
+    <Info cle="9700_28_0_E_En_insuflation_grande_vitesse_confort_VT" mot="9728" bit="0"/>
+    <Info cle="9700_28_1_E_En_extraction_grande_vitesse_confort_VT" mot="9728" bit="1"/>
+    <Info cle="9700_32_0_C_Prise_de_priorite_PGR_Forcee_VT" mot="9732" bit="0"/>
+    <Info cle="9700_32_1_C_Retour_commande_normale_BUS_apres_priorite_PGR_VT" mot="9732" bit="1"/>
+    <Info cle="9700_32_2_C_Marche_forcee_insufflation_PGR_VT" mot="9732" bit="2"/>
+    <Info cle="9700_32_3_C_Marche_forcee_extraction_PGR_VT" mot="9732" bit="3"/>
+    <Info cle="9700_32_4_C_Arret_poste_par_PGR_VT" mot="9732" bit="4"/>
+    <Info cle="9700_32_5_C_Marche_confort_insufflation_PGR_VT" mot="9732" bit="5"/>
+    <Info cle="9700_32_6_C_Marche_confort_extraction_PGR_VT" mot="9732" bit="6"/>
+    <Info cle="9700_32_7_C_Prise_de_priorite_PCM_VT" mot="9732" bit="7"/>
+    <Info cle="9700_32_8_C_Retour_commande_normale_BUS_apres_priorite_PCM_VT" mot="9732" bit="8"/>
+    <Info cle="9700_32_9_C_Marche_confort_insufflation_PCM_VT" mot="9732" bit="9"/>
+    <Info cle="9700_32_10_C_Marche_confort_extraction_PCM_VT" mot="9732" bit="10"/>
+    <Info cle="9700_32_11_C_Arret_poste_par_PCM_VT" mot="9732" bit="11"/>
+    <Info cle="9700_32_12_C_Rearmement_VT" mot="9732" bit="12"/>
+    <Info cle="9700_32_13_C_Prise_de_priorite_PGR_confort_VT" mot="9732" bit="13"/>
+    <Info cle="9700_32_14_C_Bit_de_synchronisation_mise_heure_API_VT" mot="9732" bit="14"/>
+    <Info cle="9700_33__C_Mot_de_mise_heure_horloge_API_secondes_VT" mot="9733"/>
+    <Info cle="9700_34__C_Mot_de_mise_heure_horloge_API_heures_minutes_VT" mot="9734"/>
+    <Info cle="9700_35__C_Choix_vitesse_confort_VT" mot="9735"/>
+    <Info cle="9700_36__C_Mot_de_mise_date_horloge_API_Jour_Mois_VT" mot="9736"/>
+    <Info cle="9700_37__C_Mot_de_mise_date_horloge_API_Jour_semaine_Annee_VT" mot="9737"/>
+    <Info cle="9750_0__M_Id_Ligne_Station_VT" mot="9750"/>
+    <Info cle="9750_1__M_Id_Type_Equipement_VT" mot="9751"/>
+    <Info cle="9750_2__M_Id_version_VT" mot="9752"/>
+    <Info cle="9750_3__M_Id_checksum_VT" mot="9753"/>
+    <Info cle="9750_5__M_Temps_ecoule_en_panne_confort_VT" mot="9755"/>
+    <Info cle="9750_6__M_Temps_de_fonctionnement_cumule_en_insufflation_VT" mot="9756"/>
+    <Info cle="9750_7__M_Temps_de_fonctionnement_cumule_en_extraction_VT" mot="9757"/>
+    <Info cle="9750_8__M_Temps_arret_en_entretien_VT" mot="9758"/>
+    <Info cle="9750_9__M_Temps_de_coupure_400_Volts_VT" mot="9759"/>
+    <Info cle="9750_16_0_E_En_mode_normal_A_VT" mot="9766" bit="0"/>
+    <Info cle="9750_16_1_E_En_mode_normal_B_VT" mot="9766" bit="1"/>
+    <Info cle="9750_16_2_E_En_mode_desenfumage_VT" mot="9766" bit="2"/>
+    <Info cle="9750_16_3_E_En_commande_depuis_la_PGR_forcee_VT" mot="9766" bit="3"/>
+    <Info cle="9750_16_4_E_En_commande_depuis_le_PCM_VT" mot="9766" bit="4"/>
+    <Info cle="9750_16_5_E_En_entretien_VT" mot="9766" bit="5"/>
+    <Info cle="9750_16_6_E_En_arret_VT" mot="9766" bit="6"/>
+    <Info cle="9750_16_7_E_En_arret_nuit_CAN_VT" mot="9766" bit="7"/>
+    <Info cle="9750_16_8_E_En_arret_CMA_VT" mot="9766" bit="8"/>
+    <Info cle="9750_16_9_E_En_insufflation_petite_vitesse_confort_VT" mot="9766" bit="9"/>
+    <Info cle="9750_16_10_E_En_extraction_petite_vitesse_confort_VT" mot="9766" bit="10"/>
+    <Info cle="9750_16_11_E_En_insufflation_desenfumage_VT" mot="9766" bit="11"/>
+    <Info cle="9750_16_12_E_En_extraction_desenfumage_VT" mot="9766" bit="12"/>
+    <Info cle="9750_16_13_E_En_Arret_sur_voie_VT" mot="9766" bit="13"/>
+    <Info cle="9750_16_14_E_En_commande_depuis_la_PGR_confort_VT" mot="9766" bit="14"/>
+    <Info cle="9750_17_0_E_Pre_alerte_VT" mot="9767" bit="0"/>
+    <Info cle="9750_17_1_E_Defaut_vibration_VT" mot="9767" bit="1"/>
+    <Info cle="9750_17_2_E_Intensite_insuffisante_en_extraction_VT" mot="9767" bit="2"/>
+    <Info cle="9750_17_3_E_Intensite_insuffisante_en_insufflation_VT" mot="9767" bit="3"/>
+    <Info cle="9750_17_4_E_Niveau_de_bruit_eleve_en_baie_VT" mot="9767" bit="4"/>
+    <Info cle="9750_17_5_E_Absence_400V_Secours_VT" mot="9767" bit="5"/>
+    <Info cle="9750_17_6_E_Echauffement_des_paliers_moteur_VT" mot="9767" bit="6"/>
+    <Info cle="9750_17_7_E_Defaut_automate_VT" mot="9767" bit="7"/>
+    <Info cle="9750_17_9_E_Absence_400V_Normal_VT" mot="9767" bit="9"/>
+    <Info cle="9750_17_10_E_Defaut_acces_trappe_VT" mot="9767" bit="10"/>
+    <Info cle="9750_19_0_E_Panne_confort_VT" mot="9769" bit="0"/>
+    <Info cle="9750_19_1_E_Defaut_variateur_ou_thermique_demarreur_VT" mot="9769" bit="1"/>
+    <Info cle="9750_19_2_E_Defaut_disjoncteur_ou_thermique_moteur_VT" mot="9769" bit="2"/>
+    <Info cle="9750_19_3_E_Panne_Desenfumage_VT" mot="9769" bit="3"/>
+    <Info cle="9750_21_0_E_Panne_non_discriminee_VT" mot="9771" bit="0"/>
+    <Info cle="9750_21_1_E_Defaut_absence_tension_400_Volts_NORMAL_VT" mot="9771" bit="1"/>
+    <Info cle="9750_21_2_E_Defaut_absence_tension_24_48_Volts_Armoire_VT" mot="9771" bit="2"/>
+    <Info cle="9750_21_3_E_Discordance_BAE_CDAL_VT" mot="9771" bit="3"/>
+    <Info cle="9750_21_4_E_Defaut_frein_VT" mot="9771" bit="4"/>
+    <Info cle="9750_21_5_E_Defaut_rideau_coupe_vent_VT" mot="9771" bit="5"/>
+    <Info cle="9750_21_6_E_Defaut_BAE_5_heures_VT" mot="9771" bit="6"/>
+    <Info cle="9750_21_7_E_Defaut_clapets_coupe_feu_VT" mot="9771" bit="7"/>
+    <Info cle="9750_21_8_E_Arret_urgence_VT" mot="9771" bit="8"/>
+    <Info cle="9750_21_9_E_Defaut_vibration_seuil_danger_VT" mot="9771" bit="9"/>
+    <Info cle="9750_21_10_E_Defaut_absence_tension_48_Volts_Station_VT" mot="9771" bit="10"/>
+    <Info cle="9750_27_0_E_Panne_epuisement_ouvrage_ventilation_VT" mot="9777" bit="0"/>
+    <Info cle="9750_28_0_E_En_insuflation_grande_vitesse_confort_VT" mot="9778" bit="0"/>
+    <Info cle="9750_28_1_E_En_extraction_grande_vitesse_confort_VT" mot="9778" bit="1"/>
+    <Info cle="9750_32_0_C_Prise_de_priorite_PGR_Forcee_VT" mot="9782" bit="0"/>
+    <Info cle="9750_32_1_C_Retour_commande_normale_BUS_apres_priorite_PGR_VT" mot="9782" bit="1"/>
+    <Info cle="9750_32_2_C_Marche_forcee_insufflation_PGR_VT" mot="9782" bit="2"/>
+    <Info cle="9750_32_3_C_Marche_forcee_extraction_PGR_VT" mot="9782" bit="3"/>
+    <Info cle="9750_32_4_C_Arret_poste_par_PGR_VT" mot="9782" bit="4"/>
+    <Info cle="9750_32_5_C_Marche_confort_insufflation_PGR_VT" mot="9782" bit="5"/>
+    <Info cle="9750_32_6_C_Marche_confort_extraction_PGR_VT" mot="9782" bit="6"/>
+    <Info cle="9750_32_7_C_Prise_de_priorite_PCM_VT" mot="9782" bit="7"/>
+    <Info cle="9750_32_8_C_Retour_commande_normale_BUS_apres_priorite_PCM_VT" mot="9782" bit="8"/>
+    <Info cle="9750_32_9_C_Marche_confort_insufflation_PCM_VT" mot="9782" bit="9"/>
+    <Info cle="9750_32_10_C_Marche_confort_extraction_PCM_VT" mot="9782" bit="10"/>
+    <Info cle="9750_32_11_C_Arret_poste_par_PCM_VT" mot="9782" bit="11"/>
+    <Info cle="9750_32_12_C_Rearmement_VT" mot="9782" bit="12"/>
+    <Info cle="9750_32_13_C_Prise_de_priorite_PGR_confort_VT" mot="9782" bit="13"/>
+    <Info cle="9750_32_14_C_Bit_de_synchronisation_mise_heure_API_VT" mot="9782" bit="14"/>
+    <Info cle="9750_33__C_Mot_de_mise_heure_horloge_API_secondes_VT" mot="9783"/>
+    <Info cle="9750_34__C_Mot_de_mise_heure_horloge_API_heures_minutes_VT" mot="9784"/>
+    <Info cle="9750_35__C_Choix_vitesse_confort_VT" mot="9785"/>
+    <Info cle="9750_36__C_Mot_de_mise_date_horloge_API_Jour_Mois_VT" mot="9786"/>
+    <Info cle="9750_37__C_Mot_de_mise_date_horloge_API_Jour_semaine_Annee_VT" mot="9787"/>
+    <Info cle="9800_0__M_Id_Ligne_Station_VT" mot="9800"/>
+    <Info cle="9800_1__M_Id_Type_Equipement_VT" mot="9801"/>
+    <Info cle="9800_2__M_Id_version_VT" mot="9802"/>
+    <Info cle="9800_3__M_Id_checksum_VT" mot="9803"/>
+    <Info cle="9800_5__M_Temps_ecoule_en_panne_confort_VT" mot="9805"/>
+    <Info cle="9800_6__M_Temps_de_fonctionnement_cumule_en_insufflation_VT" mot="9806"/>
+    <Info cle="9800_7__M_Temps_de_fonctionnement_cumule_en_extraction_VT" mot="9807"/>
+    <Info cle="9800_8__M_Temps_arret_en_entretien_VT" mot="9808"/>
+    <Info cle="9800_9__M_Temps_de_coupure_400_Volts_VT" mot="9809"/>
+    <Info cle="9800_16_0_E_En_mode_normal_A_VT" mot="9816" bit="0"/>
+    <Info cle="9800_16_1_E_En_mode_normal_B_VT" mot="9816" bit="1"/>
+    <Info cle="9800_16_2_E_En_mode_desenfumage_VT" mot="9816" bit="2"/>
+    <Info cle="9800_16_3_E_En_commande_depuis_la_PGR_forcee_VT" mot="9816" bit="3"/>
+    <Info cle="9800_16_4_E_En_commande_depuis_le_PCM_VT" mot="9816" bit="4"/>
+    <Info cle="9800_16_5_E_En_entretien_VT" mot="9816" bit="5"/>
+    <Info cle="9800_16_6_E_En_arret_VT" mot="9816" bit="6"/>
+    <Info cle="9800_16_7_E_En_arret_nuit_CAN_VT" mot="9816" bit="7"/>
+    <Info cle="9800_16_8_E_En_arret_CMA_VT" mot="9816" bit="8"/>
+    <Info cle="9800_16_9_E_En_insufflation_petite_vitesse_confort_VT" mot="9816" bit="9"/>
+    <Info cle="9800_16_10_E_En_extraction_petite_vitesse_confort_VT" mot="9816" bit="10"/>
+    <Info cle="9800_16_11_E_En_insufflation_desenfumage_VT" mot="9816" bit="11"/>
+    <Info cle="9800_16_12_E_En_extraction_desenfumage_VT" mot="9816" bit="12"/>
+    <Info cle="9800_16_13_E_En_Arret_sur_voie_VT" mot="9816" bit="13"/>
+    <Info cle="9800_16_14_E_En_commande_depuis_la_PGR_confort_VT" mot="9816" bit="14"/>
+    <Info cle="9800_17_0_E_Pre_alerte_VT" mot="9817" bit="0"/>
+    <Info cle="9800_17_1_E_Defaut_vibration_VT" mot="9817" bit="1"/>
+    <Info cle="9800_17_2_E_Intensite_insuffisante_en_extraction_VT" mot="9817" bit="2"/>
+    <Info cle="9800_17_3_E_Intensite_insuffisante_en_insufflation_VT" mot="9817" bit="3"/>
+    <Info cle="9800_17_4_E_Niveau_de_bruit_eleve_en_baie_VT" mot="9817" bit="4"/>
+    <Info cle="9800_17_5_E_Absence_400V_Secours_VT" mot="9817" bit="5"/>
+    <Info cle="9800_17_6_E_Echauffement_des_paliers_moteur_VT" mot="9817" bit="6"/>
+    <Info cle="9800_17_7_E_Defaut_automate_VT" mot="9817" bit="7"/>
+    <Info cle="9800_17_9_E_Absence_400V_Normal_VT" mot="9817" bit="9"/>
+    <Info cle="9800_17_10_E_Defaut_acces_trappe_VT" mot="9817" bit="10"/>
+    <Info cle="9800_19_0_E_Panne_confort_VT" mot="9819" bit="0"/>
+    <Info cle="9800_19_1_E_Defaut_variateur_ou_thermique_demarreur_VT" mot="9819" bit="1"/>
+    <Info cle="9800_19_2_E_Defaut_disjoncteur_ou_thermique_moteur_VT" mot="9819" bit="2"/>
+    <Info cle="9800_19_3_E_Panne_Desenfumage_VT" mot="9819" bit="3"/>
+    <Info cle="9800_21_0_E_Panne_non_discriminee_VT" mot="9821" bit="0"/>
+    <Info cle="9800_21_1_E_Defaut_absence_tension_400_Volts_NORMAL_VT" mot="9821" bit="1"/>
+    <Info cle="9800_21_2_E_Defaut_absence_tension_24_48_Volts_Armoire_VT" mot="9821" bit="2"/>
+    <Info cle="9800_21_3_E_Discordance_BAE_CDAL_VT" mot="9821" bit="3"/>
+    <Info cle="9800_21_4_E_Defaut_frein_VT" mot="9821" bit="4"/>
+    <Info cle="9800_21_5_E_Defaut_rideau_coupe_vent_VT" mot="9821" bit="5"/>
+    <Info cle="9800_21_6_E_Defaut_BAE_5_heures_VT" mot="9821" bit="6"/>
+    <Info cle="9800_21_7_E_Defaut_clapets_coupe_feu_VT" mot="9821" bit="7"/>
+    <Info cle="9800_21_8_E_Arret_urgence_VT" mot="9821" bit="8"/>
+    <Info cle="9800_21_9_E_Defaut_vibration_seuil_danger_VT" mot="9821" bit="9"/>
+    <Info cle="9800_21_10_E_Defaut_absence_tension_48_Volts_Station_VT" mot="9821" bit="10"/>
+    <Info cle="9800_27_0_E_Panne_epuisement_ouvrage_ventilation_VT" mot="9827" bit="0"/>
+    <Info cle="9800_28_0_E_En_insuflation_grande_vitesse_confort_VT" mot="9828" bit="0"/>
+    <Info cle="9800_28_1_E_En_extraction_grande_vitesse_confort_VT" mot="9828" bit="1"/>
+    <Info cle="9800_32_0_C_Prise_de_priorite_PGR_Forcee_VT" mot="9832" bit="0"/>
+    <Info cle="9800_32_1_C_Retour_commande_normale_BUS_apres_priorite_PGR_VT" mot="9832" bit="1"/>
+    <Info cle="9800_32_2_C_Marche_forcee_insufflation_PGR_VT" mot="9832" bit="2"/>
+    <Info cle="9800_32_3_C_Marche_forcee_extraction_PGR_VT" mot="9832" bit="3"/>
+    <Info cle="9800_32_4_C_Arret_poste_par_PGR_VT" mot="9832" bit="4"/>
+    <Info cle="9800_32_5_C_Marche_confort_insufflation_PGR_VT" mot="9832" bit="5"/>
+    <Info cle="9800_32_6_C_Marche_confort_extraction_PGR_VT" mot="9832" bit="6"/>
+    <Info cle="9800_32_7_C_Prise_de_priorite_PCM_VT" mot="9832" bit="7"/>
+    <Info cle="9800_32_8_C_Retour_commande_normale_BUS_apres_priorite_PCM_VT" mot="9832" bit="8"/>
+    <Info cle="9800_32_9_C_Marche_confort_insufflation_PCM_VT" mot="9832" bit="9"/>
+    <Info cle="9800_32_10_C_Marche_confort_extraction_PCM_VT" mot="9832" bit="10"/>
+    <Info cle="9800_32_11_C_Arret_poste_par_PCM_VT" mot="9832" bit="11"/>
+    <Info cle="9800_32_12_C_Rearmement_VT" mot="9832" bit="12"/>
+    <Info cle="9800_32_13_C_Prise_de_priorite_PGR_confort_VT" mot="9832" bit="13"/>
+    <Info cle="9800_32_14_C_Bit_de_synchronisation_mise_heure_API_VT" mot="9832" bit="14"/>
+    <Info cle="9800_33__C_Mot_de_mise_heure_horloge_API_secondes_VT" mot="9833"/>
+    <Info cle="9800_34__C_Mot_de_mise_heure_horloge_API_heures_minutes_VT" mot="9834"/>
+    <Info cle="9800_35__C_Choix_vitesse_confort_VT" mot="9835"/>
+    <Info cle="9800_36__C_Mot_de_mise_date_horloge_API_Jour_Mois_VT" mot="9836"/>
+    <Info cle="9800_37__C_Mot_de_mise_date_horloge_API_Jour_semaine_Annee_VT" mot="9837"/>
+    <Info cle="9850_0__M_Id_Ligne_Station_VT" mot="9850"/>
+    <Info cle="9850_1__M_Id_Type_Equipement_VT" mot="9851"/>
+    <Info cle="9850_2__M_Id_version_VT" mot="9852"/>
+    <Info cle="9850_3__M_Id_checksum_VT" mot="9853"/>
+    <Info cle="9850_5__M_Temps_ecoule_en_panne_confort_VT" mot="9855"/>
+    <Info cle="9850_6__M_Temps_de_fonctionnement_cumule_en_insufflation_VT" mot="9856"/>
+    <Info cle="9850_7__M_Temps_de_fonctionnement_cumule_en_extraction_VT" mot="9857"/>
+    <Info cle="9850_8__M_Temps_arret_en_entretien_VT" mot="9858"/>
+    <Info cle="9850_9__M_Temps_de_coupure_400_Volts_VT" mot="9859"/>
+    <Info cle="9850_16_0_E_En_mode_normal_A_VT" mot="9866" bit="0"/>
+    <Info cle="9850_16_1_E_En_mode_normal_B_VT" mot="9866" bit="1"/>
+    <Info cle="9850_16_2_E_En_mode_desenfumage_VT" mot="9866" bit="2"/>
+    <Info cle="9850_16_3_E_En_commande_depuis_la_PGR_forcee_VT" mot="9866" bit="3"/>
+    <Info cle="9850_16_4_E_En_commande_depuis_le_PCM_VT" mot="9866" bit="4"/>
+    <Info cle="9850_16_5_E_En_entretien_VT" mot="9866" bit="5"/>
+    <Info cle="9850_16_6_E_En_arret_VT" mot="9866" bit="6"/>
+    <Info cle="9850_16_7_E_En_arret_nuit_CAN_VT" mot="9866" bit="7"/>
+    <Info cle="9850_16_8_E_En_arret_CMA_VT" mot="9866" bit="8"/>
+    <Info cle="9850_16_9_E_En_insufflation_petite_vitesse_confort_VT" mot="9866" bit="9"/>
+    <Info cle="9850_16_10_E_En_extraction_petite_vitesse_confort_VT" mot="9866" bit="10"/>
+    <Info cle="9850_16_11_E_En_insufflation_desenfumage_VT" mot="9866" bit="11"/>
+    <Info cle="9850_16_12_E_En_extraction_desenfumage_VT" mot="9866" bit="12"/>
+    <Info cle="9850_16_13_E_En_Arret_sur_voie_VT" mot="9866" bit="13"/>
+    <Info cle="9850_16_14_E_En_commande_depuis_la_PGR_confort_VT" mot="9866" bit="14"/>
+    <Info cle="9850_17_0_E_Pre_alerte_VT" mot="9867" bit="0"/>
+    <Info cle="9850_17_1_E_Defaut_vibration_VT" mot="9867" bit="1"/>
+    <Info cle="9850_17_2_E_Intensite_insuffisante_en_extraction_VT" mot="9867" bit="2"/>
+    <Info cle="9850_17_3_E_Intensite_insuffisante_en_insufflation_VT" mot="9867" bit="3"/>
+    <Info cle="9850_17_4_E_Niveau_de_bruit_eleve_en_baie_VT" mot="9867" bit="4"/>
+    <Info cle="9850_17_5_E_Absence_400V_Secours_VT" mot="9867" bit="5"/>
+    <Info cle="9850_17_6_E_Echauffement_des_paliers_moteur_VT" mot="9867" bit="6"/>
+    <Info cle="9850_17_7_E_Defaut_automate_VT" mot="9867" bit="7"/>
+    <Info cle="9850_17_9_E_Absence_400V_Normal_VT" mot="9867" bit="9"/>
+    <Info cle="9850_17_10_E_Defaut_acces_trappe_VT" mot="9867" bit="10"/>
+    <Info cle="9850_19_0_E_Panne_confort_VT" mot="9869" bit="0"/>
+    <Info cle="9850_19_1_E_Defaut_variateur_ou_thermique_demarreur_VT" mot="9869" bit="1"/>
+    <Info cle="9850_19_2_E_Defaut_disjoncteur_ou_thermique_moteur_VT" mot="9869" bit="2"/>
+    <Info cle="9850_19_3_E_Panne_Desenfumage_VT" mot="9869" bit="3"/>
+    <Info cle="9850_21_0_E_Panne_non_discriminee_VT" mot="9871" bit="0"/>
+    <Info cle="9850_21_1_E_Defaut_absence_tension_400_Volts_NORMAL_VT" mot="9871" bit="1"/>
+    <Info cle="9850_21_2_E_Defaut_absence_tension_24_48_Volts_Armoire_VT" mot="9871" bit="2"/>
+    <Info cle="9850_21_3_E_Discordance_BAE_CDAL_VT" mot="9871" bit="3"/>
+    <Info cle="9850_21_4_E_Defaut_frein_VT" mot="9871" bit="4"/>
+    <Info cle="9850_21_5_E_Defaut_rideau_coupe_vent_VT" mot="9871" bit="5"/>
+    <Info cle="9850_21_6_E_Defaut_BAE_5_heures_VT" mot="9871" bit="6"/>
+    <Info cle="9850_21_7_E_Defaut_clapets_coupe_feu_VT" mot="9871" bit="7"/>
+    <Info cle="9850_21_8_E_Arret_urgence_VT" mot="9871" bit="8"/>
+    <Info cle="9850_21_9_E_Defaut_vibration_seuil_danger_VT" mot="9871" bit="9"/>
+    <Info cle="9850_21_10_E_Defaut_absence_tension_48_Volts_Station_VT" mot="9871" bit="10"/>
+    <Info cle="9850_27_0_E_Panne_epuisement_ouvrage_ventilation_VT" mot="9877" bit="0"/>
+    <Info cle="9850_28_0_E_En_insuflation_grande_vitesse_confort_VT" mot="9878" bit="0"/>
+    <Info cle="9850_28_1_E_En_extraction_grande_vitesse_confort_VT" mot="9878" bit="1"/>
+    <Info cle="9850_32_0_C_Prise_de_priorite_PGR_Forcee_VT" mot="9882" bit="0"/>
+    <Info cle="9850_32_1_C_Retour_commande_normale_BUS_apres_priorite_PGR_VT" mot="9882" bit="1"/>
+    <Info cle="9850_32_2_C_Marche_forcee_insufflation_PGR_VT" mot="9882" bit="2"/>
+    <Info cle="9850_32_3_C_Marche_forcee_extraction_PGR_VT" mot="9882" bit="3"/>
+    <Info cle="9850_32_4_C_Arret_poste_par_PGR_VT" mot="9882" bit="4"/>
+    <Info cle="9850_32_5_C_Marche_confort_insufflation_PGR_VT" mot="9882" bit="5"/>
+    <Info cle="9850_32_6_C_Marche_confort_extraction_PGR_VT" mot="9882" bit="6"/>
+    <Info cle="9850_32_7_C_Prise_de_priorite_PCM_VT" mot="9882" bit="7"/>
+    <Info cle="9850_32_8_C_Retour_commande_normale_BUS_apres_priorite_PCM_VT" mot="9882" bit="8"/>
+    <Info cle="9850_32_9_C_Marche_confort_insufflation_PCM_VT" mot="9882" bit="9"/>
+    <Info cle="9850_32_10_C_Marche_confort_extraction_PCM_VT" mot="9882" bit="10"/>
+    <Info cle="9850_32_11_C_Arret_poste_par_PCM_VT" mot="9882" bit="11"/>
+    <Info cle="9850_32_12_C_Rearmement_VT" mot="9882" bit="12"/>
+    <Info cle="9850_32_13_C_Prise_de_priorite_PGR_confort_VT" mot="9882" bit="13"/>
+    <Info cle="9850_32_14_C_Bit_de_synchronisation_mise_heure_API_VT" mot="9882" bit="14"/>
+    <Info cle="9850_33__C_Mot_de_mise_heure_horloge_API_secondes_VT" mot="9883"/>
+    <Info cle="9850_34__C_Mot_de_mise_heure_horloge_API_heures_minutes_VT" mot="9884"/>
+    <Info cle="9850_35__C_Choix_vitesse_confort_VT" mot="9885"/>
+    <Info cle="9850_36__C_Mot_de_mise_date_horloge_API_Jour_Mois_VT" mot="9886"/>
+    <Info cle="9850_37__C_Mot_de_mise_date_horloge_API_Jour_semaine_Annee_VT" mot="9887"/>
+    <Info cle="9900_0__M_Id_Ligne_Station_VT" mot="9900"/>
+    <Info cle="9900_1__M_Id_Type_Equipement_VT" mot="9901"/>
+    <Info cle="9900_2__M_Id_version_VT" mot="9902"/>
+    <Info cle="9900_3__M_Id_checksum_VT" mot="9903"/>
+    <Info cle="9900_5__M_Temps_ecoule_en_panne_confort_VT" mot="9905"/>
+    <Info cle="9900_6__M_Temps_de_fonctionnement_cumule_en_insufflation_VT" mot="9906"/>
+    <Info cle="9900_7__M_Temps_de_fonctionnement_cumule_en_extraction_VT" mot="9907"/>
+    <Info cle="9900_8__M_Temps_arret_en_entretien_VT" mot="9908"/>
+    <Info cle="9900_9__M_Temps_de_coupure_400_Volts_VT" mot="9909"/>
+    <Info cle="9900_16_0_E_En_mode_normal_A_VT" mot="9916" bit="0"/>
+    <Info cle="9900_16_1_E_En_mode_normal_B_VT" mot="9916" bit="1"/>
+    <Info cle="9900_16_2_E_En_mode_desenfumage_VT" mot="9916" bit="2"/>
+    <Info cle="9900_16_3_E_En_commande_depuis_la_PGR_forcee_VT" mot="9916" bit="3"/>
+    <Info cle="9900_16_4_E_En_commande_depuis_le_PCM_VT" mot="9916" bit="4"/>
+    <Info cle="9900_16_5_E_En_entretien_VT" mot="9916" bit="5"/>
+    <Info cle="9900_16_6_E_En_arret_VT" mot="9916" bit="6"/>
+    <Info cle="9900_16_7_E_En_arret_nuit_CAN_VT" mot="9916" bit="7"/>
+    <Info cle="9900_16_8_E_En_arret_CMA_VT" mot="9916" bit="8"/>
+    <Info cle="9900_16_9_E_En_insufflation_petite_vitesse_confort_VT" mot="9916" bit="9"/>
+    <Info cle="9900_16_10_E_En_extraction_petite_vitesse_confort_VT" mot="9916" bit="10"/>
+    <Info cle="9900_16_11_E_En_insufflation_desenfumage_VT" mot="9916" bit="11"/>
+    <Info cle="9900_16_12_E_En_extraction_desenfumage_VT" mot="9916" bit="12"/>
+    <Info cle="9900_16_13_E_En_Arret_sur_voie_VT" mot="9916" bit="13"/>
+    <Info cle="9900_16_14_E_En_commande_depuis_la_PGR_confort_VT" mot="9916" bit="14"/>
+    <Info cle="9900_17_0_E_Pre_alerte_VT" mot="9917" bit="0"/>
+    <Info cle="9900_17_1_E_Defaut_vibration_VT" mot="9917" bit="1"/>
+    <Info cle="9900_17_2_E_Intensite_insuffisante_en_extraction_VT" mot="9917" bit="2"/>
+    <Info cle="9900_17_3_E_Intensite_insuffisante_en_insufflation_VT" mot="9917" bit="3"/>
+    <Info cle="9900_17_4_E_Niveau_de_bruit_eleve_en_baie_VT" mot="9917" bit="4"/>
+    <Info cle="9900_17_5_E_Absence_400V_Secours_VT" mot="9917" bit="5"/>
+    <Info cle="9900_17_6_E_Echauffement_des_paliers_moteur_VT" mot="9917" bit="6"/>
+    <Info cle="9900_17_7_E_Defaut_automate_VT" mot="9917" bit="7"/>
+    <Info cle="9900_17_9_E_Absence_400V_Normal_VT" mot="9917" bit="9"/>
+    <Info cle="9900_17_10_E_Defaut_acces_trappe_VT" mot="9917" bit="10"/>
+    <Info cle="9900_19_0_E_Panne_confort_VT" mot="9919" bit="0"/>
+    <Info cle="9900_19_1_E_Defaut_variateur_ou_thermique_demarreur_VT" mot="9919" bit="1"/>
+    <Info cle="9900_19_2_E_Defaut_disjoncteur_ou_thermique_moteur_VT" mot="9919" bit="2"/>
+    <Info cle="9900_19_3_E_Panne_Desenfumage_VT" mot="9919" bit="3"/>
+    <Info cle="9900_21_0_E_Panne_non_discriminee_VT" mot="9921" bit="0"/>
+    <Info cle="9900_21_1_E_Defaut_absence_tension_400_Volts_NORMAL_VT" mot="9921" bit="1"/>
+    <Info cle="9900_21_2_E_Defaut_absence_tension_24_48_Volts_Armoire_VT" mot="9921" bit="2"/>
+    <Info cle="9900_21_3_E_Discordance_BAE_CDAL_VT" mot="9921" bit="3"/>
+    <Info cle="9900_21_4_E_Defaut_frein_VT" mot="9921" bit="4"/>
+    <Info cle="9900_21_5_E_Defaut_rideau_coupe_vent_VT" mot="9921" bit="5"/>
+    <Info cle="9900_21_6_E_Defaut_BAE_5_heures_VT" mot="9921" bit="6"/>
+    <Info cle="9900_21_7_E_Defaut_clapets_coupe_feu_VT" mot="9921" bit="7"/>
+    <Info cle="9900_21_8_E_Arret_urgence_VT" mot="9921" bit="8"/>
+    <Info cle="9900_21_9_E_Defaut_vibration_seuil_danger_VT" mot="9921" bit="9"/>
+    <Info cle="9900_21_10_E_Defaut_absence_tension_48_Volts_Station_VT" mot="9921" bit="10"/>
+    <Info cle="9900_27_0_E_Panne_epuisement_ouvrage_ventilation_VT" mot="9927" bit="0"/>
+    <Info cle="9900_28_0_E_En_insuflation_grande_vitesse_confort_VT" mot="9928" bit="0"/>
+    <Info cle="9900_28_1_E_En_extraction_grande_vitesse_confort_VT" mot="9928" bit="1"/>
+    <Info cle="9900_32_0_C_Prise_de_priorite_PGR_Forcee_VT" mot="9932" bit="0"/>
+    <Info cle="9900_32_1_C_Retour_commande_normale_BUS_apres_priorite_PGR_VT" mot="9932" bit="1"/>
+    <Info cle="9900_32_2_C_Marche_forcee_insufflation_PGR_VT" mot="9932" bit="2"/>
+    <Info cle="9900_32_3_C_Marche_forcee_extraction_PGR_VT" mot="9932" bit="3"/>
+    <Info cle="9900_32_4_C_Arret_poste_par_PGR_VT" mot="9932" bit="4"/>
+    <Info cle="9900_32_5_C_Marche_confort_insufflation_PGR_VT" mot="9932" bit="5"/>
+    <Info cle="9900_32_6_C_Marche_confort_extraction_PGR_VT" mot="9932" bit="6"/>
+    <Info cle="9900_32_7_C_Prise_de_priorite_PCM_VT" mot="9932" bit="7"/>
+    <Info cle="9900_32_8_C_Retour_commande_normale_BUS_apres_priorite_PCM_VT" mot="9932" bit="8"/>
+    <Info cle="9900_32_9_C_Marche_confort_insufflation_PCM_VT" mot="9932" bit="9"/>
+    <Info cle="9900_32_10_C_Marche_confort_extraction_PCM_VT" mot="9932" bit="10"/>
+    <Info cle="9900_32_11_C_Arret_poste_par_PCM_VT" mot="9932" bit="11"/>
+    <Info cle="9900_32_12_C_Rearmement_VT" mot="9932" bit="12"/>
+    <Info cle="9900_32_13_C_Prise_de_priorite_PGR_confort_VT" mot="9932" bit="13"/>
+    <Info cle="9900_32_14_C_Bit_de_synchronisation_mise_heure_API_VT" mot="9932" bit="14"/>
+    <Info cle="9900_33__C_Mot_de_mise_heure_horloge_API_secondes_VT" mot="9933"/>
+    <Info cle="9900_34__C_Mot_de_mise_heure_horloge_API_heures_minutes_VT" mot="9934"/>
+    <Info cle="9900_35__C_Choix_vitesse_confort_VT" mot="9935"/>
+    <Info cle="9900_36__C_Mot_de_mise_date_horloge_API_Jour_Mois_VT" mot="9936"/>
+    <Info cle="9900_37__C_Mot_de_mise_date_horloge_API_Jour_semaine_Annee_VT" mot="9937"/>
+    <Info cle="9950_0__M_Id_Ligne_Station_VT" mot="9950"/>
+    <Info cle="9950_1__M_Id_Type_Equipement_VT" mot="9951"/>
+    <Info cle="9950_2__M_Id_version_VT" mot="9952"/>
+    <Info cle="9950_3__M_Id_checksum_VT" mot="9953"/>
+    <Info cle="9950_5__M_Temps_ecoule_en_panne_confort_VT" mot="9955"/>
+    <Info cle="9950_6__M_Temps_de_fonctionnement_cumule_en_insufflation_VT" mot="9956"/>
+    <Info cle="9950_7__M_Temps_de_fonctionnement_cumule_en_extraction_VT" mot="9957"/>
+    <Info cle="9950_8__M_Temps_arret_en_entretien_VT" mot="9958"/>
+    <Info cle="9950_9__M_Temps_de_coupure_400_Volts_VT" mot="9959"/>
+    <Info cle="9950_16_0_E_En_mode_normal_A_VT" mot="9966" bit="0"/>
+    <Info cle="9950_16_1_E_En_mode_normal_B_VT" mot="9966" bit="1"/>
+    <Info cle="9950_16_2_E_En_mode_desenfumage_VT" mot="9966" bit="2"/>
+    <Info cle="9950_16_3_E_En_commande_depuis_la_PGR_forcee_VT" mot="9966" bit="3"/>
+    <Info cle="9950_16_4_E_En_commande_depuis_le_PCM_VT" mot="9966" bit="4"/>
+    <Info cle="9950_16_5_E_En_entretien_VT" mot="9966" bit="5"/>
+    <Info cle="9950_16_6_E_En_arret_VT" mot="9966" bit="6"/>
+    <Info cle="9950_16_7_E_En_arret_nuit_CAN_VT" mot="9966" bit="7"/>
+    <Info cle="9950_16_8_E_En_arret_CMA_VT" mot="9966" bit="8"/>
+    <Info cle="9950_16_9_E_En_insufflation_petite_vitesse_confort_VT" mot="9966" bit="9"/>
+    <Info cle="9950_16_10_E_En_extraction_petite_vitesse_confort_VT" mot="9966" bit="10"/>
+    <Info cle="9950_16_11_E_En_insufflation_desenfumage_VT" mot="9966" bit="11"/>
+    <Info cle="9950_16_12_E_En_extraction_desenfumage_VT" mot="9966" bit="12"/>
+    <Info cle="9950_16_13_E_En_Arret_sur_voie_VT" mot="9966" bit="13"/>
+    <Info cle="9950_16_14_E_En_commande_depuis_la_PGR_confort_VT" mot="9966" bit="14"/>
+    <Info cle="9950_17_0_E_Pre_alerte_VT" mot="9967" bit="0"/>
+    <Info cle="9950_17_1_E_Defaut_vibration_VT" mot="9967" bit="1"/>
+    <Info cle="9950_17_2_E_Intensite_insuffisante_en_extraction_VT" mot="9967" bit="2"/>
+    <Info cle="9950_17_3_E_Intensite_insuffisante_en_insufflation_VT" mot="9967" bit="3"/>
+    <Info cle="9950_17_4_E_Niveau_de_bruit_eleve_en_baie_VT" mot="9967" bit="4"/>
+    <Info cle="9950_17_5_E_Absence_400V_Secours_VT" mot="9967" bit="5"/>
+    <Info cle="9950_17_6_E_Echauffement_des_paliers_moteur_VT" mot="9967" bit="6"/>
+    <Info cle="9950_17_7_E_Defaut_automate_VT" mot="9967" bit="7"/>
+    <Info cle="9950_17_9_E_Absence_400V_Normal_VT" mot="9967" bit="9"/>
+    <Info cle="9950_17_10_E_Defaut_acces_trappe_VT" mot="9967" bit="10"/>
+    <Info cle="9950_19_0_E_Panne_confort_VT" mot="9969" bit="0"/>
+    <Info cle="9950_19_1_E_Defaut_variateur_ou_thermique_demarreur_VT" mot="9969" bit="1"/>
+    <Info cle="9950_19_2_E_Defaut_disjoncteur_ou_thermique_moteur_VT" mot="9969" bit="2"/>
+    <Info cle="9950_19_3_E_Panne_Desenfumage_VT" mot="9969" bit="3"/>
+    <Info cle="9950_21_0_E_Panne_non_discriminee_VT" mot="9971" bit="0"/>
+    <Info cle="9950_21_1_E_Defaut_absence_tension_400_Volts_NORMAL_VT" mot="9971" bit="1"/>
+    <Info cle="9950_21_2_E_Defaut_absence_tension_24_48_Volts_Armoire_VT" mot="9971" bit="2"/>
+    <Info cle="9950_21_3_E_Discordance_BAE_CDAL_VT" mot="9971" bit="3"/>
+    <Info cle="9950_21_4_E_Defaut_frein_VT" mot="9971" bit="4"/>
+    <Info cle="9950_21_5_E_Defaut_rideau_coupe_vent_VT" mot="9971" bit="5"/>
+    <Info cle="9950_21_6_E_Defaut_BAE_5_heures_VT" mot="9971" bit="6"/>
+    <Info cle="9950_21_7_E_Defaut_clapets_coupe_feu_VT" mot="9971" bit="7"/>
+    <Info cle="9950_21_8_E_Arret_urgence_VT" mot="9971" bit="8"/>
+    <Info cle="9950_21_9_E_Defaut_vibration_seuil_danger_VT" mot="9971" bit="9"/>
+    <Info cle="9950_21_10_E_Defaut_absence_tension_48_Volts_Station_VT" mot="9971" bit="10"/>
+    <Info cle="9950_27_0_E_Panne_epuisement_ouvrage_ventilation_VT" mot="9977" bit="0"/>
+    <Info cle="9950_28_0_E_En_insuflation_grande_vitesse_confort_VT" mot="9978" bit="0"/>
+    <Info cle="9950_28_1_E_En_extraction_grande_vitesse_confort_VT" mot="9978" bit="1"/>
+    <Info cle="9950_32_0_C_Prise_de_priorite_PGR_Forcee_VT" mot="9982" bit="0"/>
+    <Info cle="9950_32_1_C_Retour_commande_normale_BUS_apres_priorite_PGR_VT" mot="9982" bit="1"/>
+    <Info cle="9950_32_2_C_Marche_forcee_insufflation_PGR_VT" mot="9982" bit="2"/>
+    <Info cle="9950_32_3_C_Marche_forcee_extraction_PGR_VT" mot="9982" bit="3"/>
+    <Info cle="9950_32_4_C_Arret_poste_par_PGR_VT" mot="9982" bit="4"/>
+    <Info cle="9950_32_5_C_Marche_confort_insufflation_PGR_VT" mot="9982" bit="5"/>
+    <Info cle="9950_32_6_C_Marche_confort_extraction_PGR_VT" mot="9982" bit="6"/>
+    <Info cle="9950_32_7_C_Prise_de_priorite_PCM_VT" mot="9982" bit="7"/>
+    <Info cle="9950_32_8_C_Retour_commande_normale_BUS_apres_priorite_PCM_VT" mot="9982" bit="8"/>
+    <Info cle="9950_32_9_C_Marche_confort_insufflation_PCM_VT" mot="9982" bit="9"/>
+    <Info cle="9950_32_10_C_Marche_confort_extraction_PCM_VT" mot="9982" bit="10"/>
+    <Info cle="9950_32_11_C_Arret_poste_par_PCM_VT" mot="9982" bit="11"/>
+    <Info cle="9950_32_12_C_Rearmement_VT" mot="9982" bit="12"/>
+    <Info cle="9950_32_13_C_Prise_de_priorite_PGR_confort_VT" mot="9982" bit="13"/>
+    <Info cle="9950_32_14_C_Bit_de_synchronisation_mise_heure_API_VT" mot="9982" bit="14"/>
+    <Info cle="9950_33__C_Mot_de_mise_heure_horloge_API_secondes_VT" mot="9983"/>
+    <Info cle="9950_34__C_Mot_de_mise_heure_horloge_API_heures_minutes_VT" mot="9984"/>
+    <Info cle="9950_35__C_Choix_vitesse_confort_VT" mot="9985"/>
+    <Info cle="9950_36__C_Mot_de_mise_date_horloge_API_Jour_Mois_VT" mot="9986"/>
+    <Info cle="9950_37__C_Mot_de_mise_date_horloge_API_Jour_semaine_Annee_VT" mot="9987"/>
+</TypeEquipement>

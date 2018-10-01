@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+file USER_QOS_PROFILES.xml
+
+Ce fichier contient la description des profils utilisateurs.
+
+Copyright (c) RATP ING/SVO/SGE/APS 2011.
+Tous droits réservés / All Rights Reserved
+
+THIS FILE CONTAINS UNPUBLISHED PROPRIETARY SOURCE CODE OF THE RATP.
+The copyright notice above does not evidence any
+actual or intended publication of such source code.
+-->
+
+<dds>
+  <qos_library name="libCommun">
+    <qos_profile name="Commun">
+      <participant_qos>
+        <participant_name>
+          <name>GenericClient</name>
+        </participant_name>
+      </participant_qos>
+
+      <topic_qos name="TopicCommun">
+        <!-- 
+      Temps accordé au writer pour envoyer la donnée, permettant au middleware
+      de grouper plusieurs samples en un seul paquet s'ils sont publiés assez vite
+    -->
+          <latency_budget>
+            <duration>
+              <sec>0</sec>
+              <nanosec>100000000</nanosec>
+            </duration>
+          </latency_budget>
+          <!--
+      Période durant laquelle l'écriture ou la lecture d'un sample est requise pour que le writer soit considéré vivant.
+      Par défaut pas de tests de vie => durée infinie
+    -->
+    <liveliness>
+      <kind>AUTOMATIC_LIVELINESS_QOS</kind>
+      <lease_duration>
+        <sec>DURATION_INFINITE_SEC</sec>
+        <nanosec>DURATION_INFINITE_NSEC</nanosec>
+      </lease_duration>
+    </liveliness>
+    <!--
+      Sûreté des émissions.
+      Par défaut, Reliable : On n'accepte pas la perte de donnée.
+    -->
+    <reliability>
+      <kind>RELIABLE_RELIABILITY_QOS</kind>
+      <max_blocking_time>
+        <sec>1</sec>
+        <nanosec>0</nanosec>
+      </max_blocking_time>	
+    </reliability>
+    <!--
+      Ordre d'arrivée des samples côté reader
+      *** Correction v0.9.5 :
+      La Destination Order par heure d'émission est :
+        - non nécessaire (les instances du framework depuis différents publishers ne sont pas les mêmes)
+        - gênante : lié à la date et l'heure système, ce qui entraine des dysfonctionnements.
+      => Passage par heure de réception.
+    -->		
+    <destination_order>
+      <kind>BY_RECEPTION_TIMESTAMP_DESTINATIONORDER_QOS</kind>
+    </destination_order>
+    <!--
+      Limites de resources utilisables
+      Par défaut, le plus possible
+    -->
+    <resource_limits>
+      <max_samples>LENGTH_UNLIMITED</max_samples>
+      <max_instances>LENGTH_UNLIMITED</max_instances>
+      <max_samples_per_instance>LENGTH_UNLIMITED</max_samples_per_instance>
+    </resource_limits>
+    <!--
+      Durée de validité de la donnée
+      Par défaut, une donnée ne devient jamais obsolète.
+    -->
+    <lifespan>
+      <duration>
+        <sec>DURATION_INFINITE_SEC</sec>
+        <nanosec>DURATION_INFINITE_NSEC</nanosec>
+      </duration>
+    </lifespan>
+  </topic_qos>
+
+  <!-- DataReader commun QoS settings -->
+  <datareader_qos name="DataReaderCommun">
+    <!--
+      Période durant laquelle l'écriture d'une instance est requise pour que l'instance soit considérée valide.
+      Par défaut pas de tests de vie par instance => durée infinie
+    -->
+    <deadline>
+      <period>
+        <sec>DURATION_INFINITE_SEC</sec>
+        <nanosec>DURATION_INFINITE_NSEC</nanosec>
+      </period>
+    </deadline>
+    <!--
+      Temps accordé au writer pour envoyer la donnée, permettant au middleware
+      de grouper plusieurs samples en un seul paquet s'ils sont publiés assez vite
+      Par défaut, un délai paramétrable
+      Besoin sur le reader car RxO
+    -->
+          <latency_budget>
+            <duration>
+              <sec>DURATION_INFINITE_SEC</sec>
+              <nanosec>DURATION_INFINITE_NSEC</nanosec>
+            </duration>
+          </latency_budget>
+          <!--
+      Période durant laquelle l'écriture ou la lecture d'un sample est requise pour que le writer soit considéré vivant.
+      Par défaut pas de tests de vie => durée infinie
+    -->
+    <liveliness>
+      <kind>AUTOMATIC_LIVELINESS_QOS</kind>
+      <lease_duration>
+        <sec>DURATION_INFINITE_SEC</sec>
+        <nanosec>DURATION_INFINITE_NSEC</nanosec>
+      </lease_duration>
+    </liveliness>
+    <!--
+      Sûreté des émissions.
+      Par défaut, Reliable : On n'accepte pas la perte de donnée.
+    -->
+    <reliability>
+      <kind>RELIABLE_RELIABILITY_QOS</kind>
+      <max_blocking_time>
+        <sec>1</sec>
+        <nanosec>0</nanosec>
+      </max_blocking_time>	
+    </reliability>
+    <!--
+      Ordre d'arrivée des samples côté reader
+    -->
+    <destination_order>
+      <kind>BY_RECEPTION_TIMESTAMP_DESTINATIONORDER_QOS</kind>
+    </destination_order>
+    <!--
+      Limites de resources utilisables
+      Par défaut, le plus possible
+    -->
+    <resource_limits>
+      <max_samples>LENGTH_UNLIMITED</max_samples>
+      <max_instances>LENGTH_UNLIMITED</max_instances>
+      <max_samples_per_instance>LENGTH_UNLIMITED</max_samples_per_instance>
+    </resource_limits>
+    <!--
+      Partage de la donnée
+      Par défaut, aucun writer n'a l'exclusivité
+    -->
+    <ownership>
+      <kind>SHARED_OWNERSHIP_QOS</kind>	
+    </ownership>
+    <!--
+      Durée pendant laquelle les samples détruits sont conservés.
+      Par défaut, pas de purge automatique.
+    -->
+    <reader_data_lifecycle>
+      <autopurge_nowriter_samples_delay>
+        <sec>DURATION_INFINITE_SEC</sec>
+        <nanosec>DURATION_INFINITE_NSEC</nanosec>
+      </autopurge_nowriter_samples_delay>
+      <autopurge_disposed_samples_delay>
+        <sec>DURATION_INFINITE_SEC</sec>
+        <nanosec>DURATION_INFINITE_NSEC</nanosec>
+      </autopurge_disposed_samples_delay>
+    </reader_data_lifecycle>
+
+  </datareader_qos>
+  <!-- On passe au datawriter -->
+  <datawriter_qos name="DataWriterCommun">
+    <!--
+      Période durant laquelle l'écriture d'une instance est requise pour que l'instance soit considérée valide.
+      Par défaut pas de tests de vie par instance => durée infinie
+    -->
+    <deadline>
+      <period>
+        <sec>DURATION_INFINITE_SEC</sec>
+        <nanosec>DURATION_INFINITE_NSEC</nanosec>
+      </period>
+    </deadline>
+    <!--
+      Temps accordé au writer pour envoyer la donnée, permettant au middleware
+      de grouper plusieurs samples en un seul paquet s'ils sont publiés assez vite
+      Par défaut, un délai paramétrable
+    -->
+          <latency_budget>
+            <duration>
+              <sec>0</sec>
+              <nanosec>100000000</nanosec>
+            </duration>
+          </latency_budget>
+          <!--
+      Période durant laquelle l'écriture ou la lecture d'un sample est requise pour que le writer soit considéré vivant.
+      Par défaut pas de tests de vie => durée infinie
+    -->
+    <liveliness>
+      <kind>AUTOMATIC_LIVELINESS_QOS</kind>
+      <lease_duration>
+        <sec>DURATION_INFINITE_SEC</sec>
+        <nanosec>DURATION_INFINITE_NSEC</nanosec>
+      </lease_duration>
+    </liveliness>
+    <!--
+      Sûreté des émissions.
+      Par défaut, Reliable : On n'accepte pas la perte de donnée.
+    -->
+    <reliability>
+      <kind>RELIABLE_RELIABILITY_QOS</kind>
+      <max_blocking_time>
+        <sec>1</sec>
+        <nanosec>0</nanosec>
+      </max_blocking_time>	
+    </reliability>
+    <!-- Ordre d'arrivée des samples côté reader -->
+    <destination_order>
+      <kind>BY_RECEPTION_TIMESTAMP_DESTINATIONORDER_QOS</kind>
+    </destination_order>
+    <!--
+      Limites de resources utilisables
+      Par défaut, le plus possible
+      Côté writer, on bloque apres que cette queue (MAX_WAITING_QUEUE) soit remplie.
+    -->
+    <resource_limits>
+      <max_samples>LENGTH_UNLIMITED</max_samples>
+      <max_instances>LENGTH_UNLIMITED</max_instances>
+      <max_samples_per_instance>LENGTH_UNLIMITED</max_samples_per_instance>
+    </resource_limits>
+    <!--		
+      Durée de validité de la donnée
+      Par défaut, une donnée ne devient jamais obsolète.
+    -->
+    <lifespan>
+      <duration>
+        <sec>DURATION_INFINITE_SEC</sec>
+        <nanosec>DURATION_INFINITE_NSEC</nanosec>
+      </duration>
+    </lifespan>
+    <!--
+      Partage de la donnée
+      Par défaut, aucun writer n'a l'exclusivité
+    -->
+    <ownership>
+      <kind>SHARED_OWNERSHIP_QOS</kind>	
+    </ownership>
+    <!--
+      Flag indiquant si les données désenregistrées doivent être nettoyées automatiquement
+    -->
+    <writer_data_lifecycle>
+      <autodispose_unregistered_instances>BOOLEAN_FALSE</autodispose_unregistered_instances>
+    </writer_data_lifecycle>
+    <!--
+      QoS spécifique RTI indiquant si on doit renseigner la clé des instances disposed.
+    -->
+    <protocol>
+      <serialize_key_with_dispose>BOOLEAN_TRUE</serialize_key_with_dispose>
+    </protocol>
+  </datawriter_qos>
+</qos_profile>
+
+    </qos_library>
+    <qos_library name="libAGSCommunMiddlewareDDS">
+      <qos_profile name="Transient" is_default_qos="true">
+        <topic_qos name="TopicTransient" base_name="libCommun::Commun::TopicCommun">
+          <!--
+          Durabilité de la donnée
+      La donnée est transiente : elle reste connue après publication
+      et est encore disponible pour les souscripteurs arrivés après publication.
+    -->
+    <durability>
+      <kind>TRANSIENT_LOCAL_DURABILITY_QOS</kind>
+    </durability>
+    <!-- Limites de resources utilisables -->
+    <resource_limits>
+      <max_samples>LENGTH_UNLIMITED</max_samples>
+      <max_instances>LENGTH_UNLIMITED</max_instances>
+      <max_samples_per_instance>LENGTH_UNLIMITED</max_samples_per_instance>
+    </resource_limits>
+    <!--
+      Conservation des données
+      RTI : pour rester cohérent (et RxO ?) on garde la meme valeur que le dataWriter.
+    -->
+    <history>
+      <kind>KEEP_LAST_HISTORY_QOS</kind>
+      <depth>1</depth>
+    </history>
+
+  </topic_qos>
+  <datareader_qos name="DataReaderTransient" base_name="libCommun::Commun::DataReaderCommun">
+    <!--
+      Durabilité de la donnée
+      Par défaut, la donnée est transiente : elle reste connue après publication
+      et est encore disponible pour les souscripteurs arrivés après publication.
+    -->
+    <durability>
+      <kind>TRANSIENT_LOCAL_DURABILITY_QOS</kind>
+    </durability>
+    <!-- Limites de resources utilisables -->
+    <resource_limits>
+      <max_samples>LENGTH_UNLIMITED</max_samples>
+      <max_instances>LENGTH_UNLIMITED</max_instances>
+      <max_samples_per_instance>LENGTH_UNLIMITED</max_samples_per_instance>
+    </resource_limits>
+    <!--
+      Conservation des données
+      Par défaut, seule la dernière donnée est conservée.
+    -->
+    <history>
+      <kind>KEEP_LAST_HISTORY_QOS</kind>
+      <depth>1</depth>
+    </history>
+  </datareader_qos>
+  <!-- Maintenant le DataWriter -->
+  <datawriter_qos name="DataWriterTransient" base_name="libCommun::Commun::DataWriterCommun">
+    <!--
+      Durabilité de la donnée
+      La donnée est transiente : elle reste connue après publication
+      et est encore disponible pour les souscripteurs arrivés après publication.
+    -->
+    <durability>
+      <kind>TRANSIENT_LOCAL_DURABILITY_QOS</kind>
+    </durability>
+    <!-- Limites de resources utilisables -->
+    <resource_limits>
+      <max_samples>LENGTH_UNLIMITED</max_samples>
+      <max_instances>LENGTH_UNLIMITED</max_instances>
+      <max_samples_per_instance>LENGTH_UNLIMITED</max_samples_per_instance>
+    </resource_limits>
+    <!--
+      Conservation des données
+      RTI : Détermine l'historique max conservé côté writer.
+    -->
+    <history>
+      <kind>KEEP_LAST_HISTORY_QOS</kind>
+      <depth>1</depth>
+    </history>
+    <!-- RTI DDS spécifique -->
+    <publish_mode>
+      <kind>SYNCHRONOUS_PUBLISH_MODE_QOS</kind>
+    </publish_mode>
+  </datawriter_qos>
+</qos_profile>
+<qos_profile name="TransientDesync">
+  <topic_qos name="TopicTransientDesync" base_name="libAGSCommunMiddlewareDDS::Transient::TopicTransient">
+  </topic_qos>
+  <datareader_qos name="DataReaderTransientDesync" base_name="libAGSCommunMiddlewareDDS::Transient::DataReaderTransient">
+  </datareader_qos>
+  <datawriter_qos name="DataWriterTransientDesync" base_name="libAGSCommunMiddlewareDDS::Transient::DataWriterTransient">
+    <!-- RTI DDS spécifique -->
+    <publish_mode>
+      <kind>ASYNCHRONOUS_PUBLISH_MODE_QOS</kind>
+      <flow_controller_name>FIXED_RATE_FLOW_CONTROLLER_NAME</flow_controller_name>
+    </publish_mode>
+  </datawriter_qos>
+</qos_profile>
+<qos_profile name="Volatile">
+  <topic_qos name="TopicVolatile" base_name="libCommun::Commun::TopicCommun">
+    <!--
+      Durabilité de la donnée
+      La donnée est volatile : elle n'est connue que des readers présents au moment de la publication.
+    -->
+    <durability>
+      <kind>VOLATILE_DURABILITY_QOS</kind>
+    </durability>
+    <!--
+      Conservation des données
+      Pour rester cohérent (et RxO ?) on garde la meme valeur que le dataWriter.
+    -->
+    <history>
+      <kind>KEEP_ALL_HISTORY_QOS</kind>
+    </history>
+    <!--
+      Limites de resources utilisables
+      Pour rester cohérent (et RxO ?) on garde la meme valeur que le dataWriter.
+    -->
+    <resource_limits>
+      <max_samples_per_instance>10</max_samples_per_instance>
+    </resource_limits>
+  </topic_qos>
+  <datareader_qos name="DataReaderVolatile" base_name="libCommun::Commun::DataReaderCommun">
+    <!--
+      Durabilité de la donnée
+      La donnée est volatile : elle n'est connue que des readers présents au moment de la publication.
+    -->
+    <durability>
+      <kind>VOLATILE_DURABILITY_QOS</kind>
+    </durability>
+    <!--
+      Conservation des données
+      Par défaut, toutes les données sont conservées jusqu'à lecture par take().
+    -->
+    <history>
+      <kind>KEEP_ALL_HISTORY_QOS</kind>
+    </history>
+  </datareader_qos>
+  <datawriter_qos name="DataWriterVolatile" base_name="libCommun::Commun::DataWriterCommun">
+    <!--
+      Durabilité de la donnée
+      La donnée est volatile : elle n'est connue que des readers présents au moment de la publication.
+    -->
+    <durability>
+      <kind>VOLATILE_DURABILITY_QOS</kind>
+    </durability>
+    <!--
+      Conservation des données
+      On demande Keep All, le cache sera limité par la qos resource_limits.
+    -->
+    <history>
+      <kind>KEEP_ALL_HISTORY_QOS</kind>
+    </history>
+    <!--
+      Limites de resources utilisables
+      Côté writer, on bloque apres que cette queue soit remplie (à hauteur de la qos max_blocking_time)
+    -->
+    <resource_limits>
+      <max_samples_per_instance>10</max_samples_per_instance>
+    </resource_limits>
+    <!-- RTI DDS spécifique -->
+    <publish_mode>
+      <kind>SYNCHRONOUS_PUBLISH_MODE_QOS</kind>
+    </publish_mode>		
+
+  </datawriter_qos>
+</qos_profile>
+<qos_profile name="VolatileDesync">
+  <topic_qos name="TopicVolatileDesync" base_name="Volatile::TopicVolatile">
+  </topic_qos>
+  <datareader_qos name="DataReaderVolatileDesync" base_name="Volatile::DataReaderVolatile">
+  </datareader_qos>
+  <datawriter_qos name="DataWriterVolatileDesync" base_name="Volatile::DataWriterVolatile">
+    <!-- RTI DDS spécifique -->
+    <publish_mode>
+      <kind>SYNCHRONOUS_PUBLISH_MODE_QOS</kind>
+      <flow_controller_name>FIXED_RATE_FLOW_CONTROLLER_NAME</flow_controller_name>
+    </publish_mode>
+  </datawriter_qos>
+</qos_profile>
+<qos_profile name="Heartbeat">
+  <!-- Un Topic pour les heartbeats -->
+  <topic_qos name="TopicHeartbeat" base_name="libCommun::Commun::TopicCommun">
+    <!--
+      Durabilité de la donnée
+      La donnée est volatile : elle n'est connue que des readers présents au moment de la publication.
+    -->
+    <durability>
+      <kind>VOLATILE_DURABILITY_QOS</kind>
+    </durability>
+    <!--
+      Sûreté des émissions.
+      Best-effort pour les heartbeats .
+    -->
+    <reliability>
+      <kind>BEST_EFFORT_RELIABILITY_QOS</kind>
+    </reliability>
+    <!--  
+      Période durant laquelle l'écriture ou la lecture d'un sample est requise pour que le
+      writer soit considéré vivant.
+    -->
+    <liveliness>
+      <kind>MANUAL_BY_TOPIC_LIVELINESS_QOS</kind>
+      <lease_duration>
+        <sec>30</sec>
+        <nanosec>0</nanosec>
+      </lease_duration>
+    </liveliness>
+  </topic_qos>
+  <!-- Un datareader pour les heartbeats -->
+  <datareader_qos name="DataReaderHeartbeat" base_name="libCommun::Commun::DataReaderCommun">
+    <!--
+      Durabilité de la donnée
+      La donnée est volatile : elle n'est connue que des readers présents au moment de la publication.
+    -->
+    <durability>
+      <kind>VOLATILE_DURABILITY_QOS</kind>
+    </durability>
+    <!--
+      Sûreté des émissions.
+      Best-effort pour les heartbeats .
+    -->
+    <reliability>
+      <kind>BEST_EFFORT_RELIABILITY_QOS</kind>
+    </reliability>
+    <!--  
+      Période durant laquelle l'écriture ou la lecture d'un sample est requise pour que le
+      writer soit considéré vivant.
+    -->
+    <liveliness>
+      <kind>MANUAL_BY_TOPIC_LIVELINESS_QOS</kind>
+      <lease_duration>
+        <sec>30</sec>
+        <nanosec>0</nanosec>
+      </lease_duration>
+    </liveliness>
+  </datareader_qos>
+  <!-- un datawriter pour les heartbeats -->
+  <datawriter_qos name="DataWriterHearbeat" base_name="libCommun::Commun::DataWriterCommun">
+    <!--
+      Durabilité de la donnée
+      La donnée est volatile : elle n'est connue que des readers présents au moment de la publication.
+    -->
+    <durability>
+      <kind>VOLATILE_DURABILITY_QOS</kind>
+    </durability>
+    <!--
+      Sûreté des émissions.
+      Best-effort pour les heartbeats .
+    -->
+    <reliability>
+      <kind>BEST_EFFORT_RELIABILITY_QOS</kind>
+    </reliability>
+    <!--  
+      Période durant laquelle l'écriture ou la lecture d'un sample est requise pour que le
+      writer soit considéré vivant.
+    -->
+    <liveliness>
+      <kind>MANUAL_BY_TOPIC_LIVELINESS_QOS</kind>
+      <lease_duration>
+        <sec>20</sec>
+        <nanosec>0</nanosec>
+      </lease_duration>
+    </liveliness>
+  </datawriter_qos>
+</qos_profile>
+    </qos_library>
+  </dds>	   
+

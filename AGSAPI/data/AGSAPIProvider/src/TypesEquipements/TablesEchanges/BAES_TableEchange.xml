@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TypeEquipement module="" nom="BAES">
+    <Info cle="mot_id_ligne_station" mot="448" bit="-1"/>
+    <Info cle="mot_id_type_numero_equipement" mot="449" bit="-1"/>
+    <Info cle="mot_id_mois_annee_version" mot="450" bit="-1"/>
+    <Info cle="mot_id_checksum" mot="451" bit="-1"/>
+    <Info cle="mot_status" mot="452" bit="-1"/>
+    <Info cle="mot_mesure_nombre_blocs_initilisation" mot="453" bit="-1"/>
+    <Info cle="mot_mesure_nombre_blocs_reconnus" mot="454" bit="-1"/>
+    <Info cle="mot_mesure_nombre_blocs_en_defaut" mot="455" bit="-1"/>
+    <Info cle="mot_mesure_niveau_alerte_parametre_CGES" mot="456" bit="-1"/>
+    <Info cle="mot_mesure_test_fonctionnement_global_HHMM" mot="457" bit="-1"/>
+    <Info cle="mot_mesure_test_fonctionnement_global_JJMM" mot="458" bit="-1"/>
+    <Info cle="mot_mesure_test_autonomie_HHMM" mot="459" bit="-1"/>
+    <Info cle="mot_mesure_test_autonomie_JJMM" mot="460" bit="-1"/>
+    <Info cle="mot_16_etat" mot="464" bit="-1"/>
+    <Info cle="bit_etat_en_service" mot="464" bit="0"/>
+    <Info cle="mot_17_pre-alerte" mot="465" bit="-1"/>
+    <Info cle="bit_pre-alerte_pre_alerte" mot="465" bit="0"/>
+    <Info cle="bit_pre-alerte_au_moins_1_bloc_defaillant" mot="465" bit="1"/>
+    <Info cle="mot_18_alerte" mot="466" bit="-1"/>
+    <Info cle="bit_alerte_alerte" mot="466" bit="0"/>
+    <Info cle="bit_alerte_au_moins_2_blocs_defaillants" mot="466" bit="1"/>
+    <Info cle="mot_21_alarme" mot="469" bit="-1"/>
+    <Info cle="bit_alarme_alarme_synthese_AAI" mot="469" bit="0"/>
+    <Info cle="bit_alarme_au_moins_X_blocs_defaillants" mot="469" bit="1"/>
+    <Info cle="bit_alarme_3_blocs_consuecutifs_en_defaut_zone" mot="469" bit="2"/>
+    <Info cle="bit_alarme_batterie_centrale_HS" mot="469" bit="3"/>
+    <Info cle="bit_alarme_defaut_impedance_ligne" mot="469" bit="4"/>
+    <Info cle="mot_commande" mot="480" bit="-1"/>
+    <Info cle="bit_commande_test_fonctionnement_global" mot="480" bit="0" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_synchro" mot="480" bit="14" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_signe_de_vie" mot="480" bit="15" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="mot_commande_reglage_seconde" mot="481" bit="-1"/>
+    <Info cle="mot_commande_reglage_heure" mot="482" bit="-1"/>
+    <Info cle="mot_commande_reglage_jour_mois" mot="484" bit="-1"/>
+    <Info cle="mot_commande_reglage_semaine_annee" mot="485" bit="-1"/>
+</TypeEquipement>

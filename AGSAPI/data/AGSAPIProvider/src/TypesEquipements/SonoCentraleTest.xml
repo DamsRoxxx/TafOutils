@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TypeEquipement module="libAGSServeurEquipementsSonorisation.so" nom="SonoCentraleTest">
+    <Conf categorie="Sonorisation" libelle="Centrale Sono test">
+        <description>Centrale sono pour le test</description>
+        <GroupeParametre facultatif="false" id="Repertoires" libelle="Répertoire des fichiers d'entrée et de sortie" multiple="false">
+            <Parametre defaut="/appli/AGSServeur/comp/param" description="" id="repertoireEntree" libelle="Répertoire du fichier d'entree" type="Texte"/>
+            <Parametre defaut="/appli/AGSServeur/var" description="" id="repertoireSortie" libelle="Répertoire du fichier de sortie" type="Texte"/>
+        </GroupeParametre>
+        <GroupeParametre facultatif="true" id="SonoMessage" libelle="Message Sonore" libelleMultiple="Messages sonores" multiple="true">
+            <Parametre defaut="" description="Le libellé du message" id="libelle" libelle="Libellé" type="Texte"/>
+            <Parametre defaut="" description="L'identifiant du message dans l'équipement" id="idEquipement" libelle="IdentifiantEquipement" type="Texte"/>
+        </GroupeParametre>
+        <GroupeParametre facultatif="true" id="LiaisonPostePupitre" libelle="Liaison poste" multiple="true">
+            <Parametre defaut="" description="L'identifiant du poste" id="idPoste" libelle="Identifiant du poste" type="Nombre"/>
+            <Parametre defaut="" description="Le combiné de l'exploitant" id="pupitre" libelle="Le combiné exploitant" type="NomLogique" typeEqtLie="SonoPupitreTest"/>
+        </GroupeParametre>
+        <GroupeParametre facultatif="true" id="LiaisonPosteZFS" libelle="Liaison poste-ZFS d'écoute" multiple="true">
+            <Parametre defaut="" description="L'identifiant du poste" id="idPoste" libelle="Identifiant du poste" type="Nombre"/>
+            <Parametre defaut="" description="La ZFS d'écoute" id="ZFS" libelle="ZFS d'écoute" type="NomLogique" typeEqtLie="SonoZFSTest"/>
+        </GroupeParametre>
+        <GroupeParametre facultatif="true" id="LiaisonBlocFonctionnel" libelle="Liaison bloc fonctionnel" multiple="true">
+            <Parametre defaut="" description="Equipement lié" id="equipement" libelle="Equipement lié" type="NomLogique" typeEqtLie="SonoZFSTest"/>
+            <Parametre defaut="" description="Numéro de ZFS de 1 à 64" id="numero" libelle="Numéro de ZFS" type="Texte"/>
+            <Parametre defaut="blocAlarmeSonoZFSTest" id="nomBloc" libelle="Nom du bloc" type="Texte"/>
+        </GroupeParametre>
+        <LiaisonEquipement facultatif="true" id="equipement" libelle="Liaison API pour centrale de sonorisation test" multiple="false">
+            <TypeEquipementLie code="API_Actemium_48E_16S"/>
+            <TypeEquipementLie code="API_Actemium_96E_32S"/>
+            <TypeEquipementLie code="API_Actemium_160E_32S"/>
+            <TypeEquipementLie code="API_GTC"/>
+            <TypeEquipementLie code="API_GTS"/>
+            <TypeEquipementLie code="API_GTS_Wago"/>
+            <Connexion id="DefautBaieSONO" libelle="Défaut Baie SONO"/>
+            <Connexion id="TemperatureBaieSymphonie" libelle="Température Baie Symphonie"/>
+        </LiaisonEquipement>
+        <GroupeParametre facultatif="false" id="CalendrierExploitation" libelle="Calendrier exploitation" multiple="false">
+            <Parametre defaut="" description="Calendrier à associer" id="equipement" libelle="Calendrier" type="NomLogique" typeEqtLie="CalendrierExploitation"/>
+        </GroupeParametre>
+        <GroupeParametre id="ParametresGeneriquesMessages" libelle="Paramètres Sono Génériques pour les messages" multiple="false">
+            <Parametre description="Durée de message maximum en secondes" id="dureeMessageMax" libelle="Duree max message" type="Nombre"/>
+            <Parametre description="Nombre de cycles maximum" id="nombreCycleMax" libelle="Nombre cycles max" type="Nombre"/>
+            <Parametre description="Nombre de messages maximum" id="nombreMessageMax" libelle="Nombre messages max" type="Nombre"/>
+            <Parametre description="Type de sonal sélectionné par défaut" id="typeSonal" libelle="Type sonal defaut" type="Texte">
+                <Choix valeur="information voyageur"/>
+                <Choix valeur="commercial"/>
+            </Parametre>
+        </GroupeParametre>
+        <GroupeParametre id="ParametresCyclesNormaux" libelle="Paramètres Sono Génériques pour les cycles normaux" multiple="false">
+            <Parametre defaut="11" description="Nombre maximum de messages dans un cycle normal (par défaut 11)" id="nbrMaxMessageCycle" libelle="nbr max message cycle" type="Nombre"/>
+            <Parametre defaut="false" description="Autorisation de modifier un cycle normal (par défaut false)" id="cycleModifiable" libelle="cycle modifiable" type="Texte">
+                <Choix valeur="false"/>
+                <Choix valeur="true"/>
+            </Parametre>
+            <Parametre defaut="5" description="Valeur min de l'intervalle inter-message (par défaut 5)" id="numMinIntervalleInterMessage" libelle="num min intervalle inter message" type="Nombre"/>
+            <Parametre defaut="60" description="Valeur max de l'intervalle inter-message (par défaut 60)" id="numMaxIntervalleInterMessage" libelle="num max intervalle inter message" type="Nombre"/>
+            <Parametre defaut="5" description="Pas de l'intervalle inter-message (par défaut 5)" id="pasIntervalleInterMessage" libelle="pas intervalle inter message" type="Nombre"/>
+            <Parametre defaut="5" description="Valeur par défaut de l'intervalle inter-message (par défaut 5)" id="ValeurDefIntervalleInterMessage" libelle="valeur par defaut intervalle inter message" type="Nombre"/>
+            <Parametre defaut="5" description="Valeur min de l'intervalle de diffusion (par défaut 5)" id="numMinIntervalleDiffusion" libelle="num min intervalle diffusion" type="Nombre"/>
+            <Parametre defaut="60" description="Valeur max de l'intervalle de diffusion (par défaut 60)" id="numMaxIntervalleDiffusion" libelle="num max intervalle diffusion" type="Nombre"/>
+            <Parametre defaut="5" description="Pas de l'intervalle de diffusion (par défaut 5)" id="pasIntervalleDiffusion" libelle="pas intervalle diffusion" type="Nombre"/>
+            <Parametre defaut="5" description="Valeur par défaut de l'intervalle diffusion (par défaut 5)" id="ValeurDefIntervalleDiffusion" libelle="valeur par defaut intervalle diffusion" type="Nombre"/>
+            <Parametre defaut="false" description="Autorisation de planifier une diffusion (par défaut false)" id="planificationDiffusion" libelle="planification diffusion" type="Texte">
+                <Choix valeur="false"/>
+                <Choix valeur="true"/>
+            </Parametre>
+            <Parametre defaut="06:00" description="Heure de début de diffusion au format HH:MM (par défaut 06:00)" facultatif="true" id="debutPlanificationDiffusion" libelle="debut planification diffusion" type="Texte"/>
+            <Parametre defaut="23:59" description="Heure de fin de diffusion au format HH:MM (par defaut 23:59)" facultatif="true" id="finPlanificationDiffusion" libelle="fin planification diffusion" type="Texte"/>
+            <Parametre defaut="60" description="Durée de la diffusion planifiée (par défaut 60)" facultatif="true" id="dureePlanificationDiffusion" libelle="duree planification diffusion" type="Nombre"/>
+            <Parametre defaut="secondes" description="Unité des paramètres temporels des cycles (par défaut secondes)" id="uniteParamTemps" libelle="unite param temps" type="Texte">
+                <Choix valeur="secondes"/>
+                <Choix valeur="minutes"/>
+            </Parametre>
+        </GroupeParametre>
+        <GroupeParametre id="ParametresCyclesFlash" libelle="Paramètres Sono Génériques pour les cycles flash" multiple="false">
+            <Parametre defaut="5" description="Valeur min de l'intervalle de diffusion (par défaut 5)" id="numMinIntervalleDiffusionFlash" libelle="num min intervalle diffusion" type="Nombre"/>
+            <Parametre defaut="60" description="Valeur max de l'intervalle de diffusion (par défaut 60)" id="numMaxIntervalleDiffusionFlash" libelle="num max intervalle diffusion" type="Nombre"/>
+            <Parametre defaut="5" description="Pas de l'intervalle de diffusion (par défaut 5)" id="pasIntervalleDiffusionFlash" libelle="pas intervalle diffusion" type="Nombre"/>
+            <Parametre defaut="5" description="Valeur par défaut de l'intervalle diffusion d'un cycle flash (par défaut 5)" id="ValeurDefIntervalleDiffusionCycleFlash" libelle="valeur par defaut intervalle diffusion cycle flash" type="Nombre"/>
+            <Parametre defaut="false" description="Activer ou desactiver la fonction de prévenance d'un cycle flash (par défaut false)" id="prevenanceCycleFlash" libelle="prevenance cycle flash" type="Texte">
+                <Choix valeur="false"/>
+                <Choix valeur="true"/>
+            </Parametre>
+            <Parametre defaut="60" description="Durée par défaut de diffusion du cycle flash (en minutes)" id="dureeDiffusion" libelle="duree diffusion defaut cycle flash" type="Nombre"/>
+            <Parametre defaut="5" description="Valeur du délai de prévenance (en minutes)" id="delaiPrevenance" libelle="delai prevenance" type="Nombre"/>
+            <Parametre defaut="secondes" description="Unité des paramètres temporels des cycles flashs pour les intervalles (par défaut secondes)" id="uniteParamTempsCyclesFlash" libelle="unite param temps" type="Texte">
+                <Choix valeur="secondes"/>
+                <Choix valeur="minutes"/>
+            </Parametre>
+            <GroupeParametre facultatif="true" id="listeDureeDiffusion" libelle="liste de durée de diffusion de cycle flash" multiple="true">
+                <Parametre defaut="5" description="Durée unitaire de diffusion cycle flash (en minutes)" id="dureeUnitaire" libelle="duree diffusion" type="Nombre"/>
+            </GroupeParametre>
+        </GroupeParametre>
+        <GroupeParametre facultatif="true" id="FichiersConf" libelle="Fichiers de configuration" multiple="false">
+            <Parametre description="Chemin du fichier de configuration pour la gestion du niveau sonore" id="niveauSonore" libelle="Fichier conf niveau sonore" type="Texte"/>
+        </GroupeParametre>
+        <GroupeParametre facultatif="true" id="Musique" libelle="Musique pour diffusion" libelleMultiple="Musiques" multiple="true">
+            <Parametre defaut="" description="Le libellé de la musique pour diffusion" id="libelle" libelle="Libellé" type="Texte"/>
+            <Parametre defaut="" description="L'identifiant de la musique dans la centrale" id="id" libelle="Identifiant" type="Texte"/>
+        </GroupeParametre>
+        <GroupeParametre description="Association entre sonal équipement et sonal AGS" facultatif="true" id="Sonal" libelle="Sonal équipement" multiple="true">
+            <Parametre description="Le libellé du sonal" id="libelle" libelle="Libellé AGS" type="Texte">
+                <Choix valeur="information voyageur"/>
+                <Choix valeur="commercial"/>
+            </Parametre>
+            <Parametre defaut="" description="L'identifiant du sonal dans l'équipement" id="id" libelle="Identifiant équipement" type="Texte"/>
+        </GroupeParametre>
+        <GroupeParametre facultatif="true" id="Camera" libelle="Camera" libelleMultiple="Caméras associées" multiple="true">
+            <Parametre defaut="" description="Une caméra à associer" id="nomLogique" libelle="Nom logique" type="NomLogique" typeEqtLie="VIDEOCamera"/>
+        </GroupeParametre>
+        <GroupeParametre facultatif="true" id="AccesEtatDistant" libelle="Accès état distant" libelleMultiple="Accès états synthèse" multiple="true">
+            <Parametre defaut="" description="Le code de l'état" id="codeLocal" libelle="Code" type="Nombre"/>
+            <Parametre defaut="" description="L'équipement" id="equipement" libelle="Equipement" type="NomLogique" typeEqtLie="ALL"/>
+            <Parametre defaut="" description="" id="codeDistant" libelle="Code distant" type="Texte"/>
+        </GroupeParametre>
+    </Conf>
+    <Include type="LiaisonAPI"/>
+    <Include type="SonoCentraleGenerique"/>
+    <Include type="Communiquant"/>
+    <Include type="Generique"/>
+    <Include type="CommuniquantSansGenerique"/>
+    <Include type="EtatNormal"/>
+    <Etat code="0" codePublic="0" isExploitant="true" isHistorisable="true" isMainteneur="true" isObligatoireIHM="true" isPersistable="false" libelle="Indéterminé"/>
+    <Etat code="5" isExploitant="true" isHistorisable="true" isMainteneur="true" isObligatoireIHM="true" isPersistable="false" libelle="En défaut"/>
+    <Etat code="1010" isExploitant="true" isHistorisable="true" isInterne="false" isMainteneur="true" isPersistable="true" libelle="Equipement inhibé"/>
+    <Etat code="999990" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Synthese états indeterminés 0"/>
+    <Etat code="999991" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Synthese états indeterminés 1"/>
+    <Etat code="999992" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Synthese états indeterminés 2"/>
+    <Etat code="999993" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Synthese états indeterminés 3"/>
+    <Etat code="999994" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Synthese états indeterminés 4"/>
+    <Etat code="1000000" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Synthese états indeterminés équipements"/>
+    <Etat code="1000001" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 01"/>
+    <Etat code="1000002" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 02"/>
+    <Etat code="1000003" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 03"/>
+    <Etat code="1000004" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 04"/>
+    <Etat code="1000005" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 05"/>
+    <Etat code="1000006" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 06"/>
+    <Etat code="1000007" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 07"/>
+    <Etat code="1000008" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 08"/>
+    <Etat code="1000009" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 09"/>
+    <Etat code="1000010" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 10"/>
+    <Etat code="1000011" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 11"/>
+    <Etat code="1000012" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 12"/>
+    <Etat code="1000013" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 13"/>
+    <Etat code="1000014" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 14"/>
+    <Etat code="1000015" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 15"/>
+    <Etat code="1000016" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 16"/>
+    <Etat code="1000017" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 17"/>
+    <Etat code="1000018" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 18"/>
+    <Etat code="1000019" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 19"/>
+    <Etat code="1000020" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 20"/>
+    <Etat code="1000021" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 21"/>
+    <Etat code="1000022" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 22"/>
+    <Etat code="1000023" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 23"/>
+    <Etat code="1000024" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 24"/>
+    <Etat code="1000025" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 25"/>
+    <Etat code="1000026" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 26"/>
+    <Etat code="1000027" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 27"/>
+    <Etat code="1000028" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 28"/>
+    <Etat code="1000029" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 29"/>
+    <Etat code="1000030" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 30"/>
+    <Etat code="1000031" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 31"/>
+    <Etat code="1000032" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 32"/>
+    <Etat code="1000033" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 33"/>
+    <Etat code="1000034" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 34"/>
+    <Etat code="1000035" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 35"/>
+    <Etat code="1000036" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 36"/>
+    <Etat code="1000037" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 37"/>
+    <Etat code="1000038" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 38"/>
+    <Etat code="1000039" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 39"/>
+    <Etat code="1000040" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 40"/>
+    <Etat code="1000041" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 41"/>
+    <Etat code="1000042" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 42"/>
+    <Etat code="1000043" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 43"/>
+    <Etat code="1000044" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 44"/>
+    <Etat code="1000045" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 45"/>
+    <Etat code="1000046" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 46"/>
+    <Etat code="1000047" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 47"/>
+    <Etat code="1000048" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 48"/>
+    <Etat code="1000049" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 49"/>
+    <Etat code="1000050" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat indeterminé équipement 50"/>
+    <Etat code="1999990" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Synthese etats invisibles 0"/>
+    <Etat code="1999991" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Synthese etats invisibles 1"/>
+    <Etat code="1999992" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Synthese etats invisibles 2"/>
+    <Etat code="1999993" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Synthese etats invisibles 3"/>
+    <Etat code="1999994" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Synthese etats invisibles 4"/>
+    <Etat code="11000000" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Synthese etats invisibles equipements"/>
+    <Etat code="11000001" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 01"/>
+    <Etat code="11000002" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 02"/>
+    <Etat code="11000003" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 03"/>
+    <Etat code="11000004" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 04"/>
+    <Etat code="11000005" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 05"/>
+    <Etat code="11000006" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 06"/>
+    <Etat code="11000007" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 07"/>
+    <Etat code="11000008" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 08"/>
+    <Etat code="11000009" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 09"/>
+    <Etat code="11000010" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 10"/>
+    <Etat code="11000011" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 11"/>
+    <Etat code="11000012" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 12"/>
+    <Etat code="11000013" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 13"/>
+    <Etat code="11000014" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 14"/>
+    <Etat code="11000015" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 15"/>
+    <Etat code="11000016" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 16"/>
+    <Etat code="11000017" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 17"/>
+    <Etat code="11000018" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 18"/>
+    <Etat code="11000019" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 19"/>
+    <Etat code="11000020" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 20"/>
+    <Etat code="11000021" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 21"/>
+    <Etat code="11000022" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 22"/>
+    <Etat code="11000023" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 23"/>
+    <Etat code="11000024" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 24"/>
+    <Etat code="11000025" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 25"/>
+    <Etat code="11000026" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 26"/>
+    <Etat code="11000027" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 27"/>
+    <Etat code="11000028" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 28"/>
+    <Etat code="11000029" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 29"/>
+    <Etat code="11000030" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 30"/>
+    <Etat code="11000031" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 31"/>
+    <Etat code="11000032" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 32"/>
+    <Etat code="11000033" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 33"/>
+    <Etat code="11000034" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 34"/>
+    <Etat code="11000035" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 35"/>
+    <Etat code="11000036" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 36"/>
+    <Etat code="11000037" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 37"/>
+    <Etat code="11000038" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 38"/>
+    <Etat code="11000039" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 39"/>
+    <Etat code="11000040" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 40"/>
+    <Etat code="11000041" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 41"/>
+    <Etat code="11000042" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 42"/>
+    <Etat code="11000043" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 43"/>
+    <Etat code="11000044" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 44"/>
+    <Etat code="11000045" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 45"/>
+    <Etat code="11000046" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 46"/>
+    <Etat code="11000047" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 47"/>
+    <Etat code="11000048" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 48"/>
+    <Etat code="11000049" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 49"/>
+    <Etat code="11000050" isHistorisable="false" isInterne="false" isPersistable="false" isServeur="true" libelle="Etat invisible equipement 50"/>
+    <Etat code="2" isExploitant="true" isHistorisable="true" isMainteneur="true" isObligatoireIHM="true" isPersistable="false" libelle="Normal"/>
+    <Etat code="46302" isExploitant="true" isHistorisable="true" isMainteneur="true" isPersistable="false" isServeur="true" libelle="Défaut Baie SONO (Alarme)"/>
+    <Etat code="46303" isExploitant="true" isHistorisable="true" isMainteneur="true" isPersistable="false" isServeur="true" libelle="Température Baie Symphonie (Alarme)"/>
+    <Alarme code="1014" isExploitant="true" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Inhibition" type="Alarme"/>
+    <Alarme code="999990" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Synthese alarmes chaines fonctionnelles 0" type="Alarme"/>
+    <Alarme code="999991" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Synthese alarmes chaines fonctionnelles 1" type="Alarme"/>
+    <Alarme code="999992" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Synthese alarmes chaines fonctionnelles 2" type="Alarme"/>
+    <Alarme code="999993" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Synthese alarmes chaines fonctionnelles 3" type="Alarme"/>
+    <Alarme code="999994" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Synthese alarmes chaines fonctionnelles 4" type="Alarme"/>
+    <Alarme code="999999" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Synthese probleme liaison" type="Alarme"/>
+    <Alarme code="1000000" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Synthese alarmes chaines fonctionnelles" type="Alarme"/>
+    <Alarme code="1000001" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 01" type="Alarme"/>
+    <Alarme code="1000002" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 02" type="Alarme"/>
+    <Alarme code="1000003" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 03" type="Alarme"/>
+    <Alarme code="1000004" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 04" type="Alarme"/>
+    <Alarme code="1000005" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 05" type="Alarme"/>
+    <Alarme code="1000006" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 06" type="Alarme"/>
+    <Alarme code="1000007" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 07" type="Alarme"/>
+    <Alarme code="1000008" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 08" type="Alarme"/>
+    <Alarme code="1000009" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 09" type="Alarme"/>
+    <Alarme code="1000010" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 10" type="Alarme"/>
+    <Alarme code="1000011" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 11" type="Alarme"/>
+    <Alarme code="1000012" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 12" type="Alarme"/>
+    <Alarme code="1000013" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 13" type="Alarme"/>
+    <Alarme code="1000014" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 14" type="Alarme"/>
+    <Alarme code="1000015" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 15" type="Alarme"/>
+    <Alarme code="1000016" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 16" type="Alarme"/>
+    <Alarme code="1000017" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 17" type="Alarme"/>
+    <Alarme code="1000018" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 18" type="Alarme"/>
+    <Alarme code="1000019" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 19" type="Alarme"/>
+    <Alarme code="1000020" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 20" type="Alarme"/>
+    <Alarme code="1000021" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 21" type="Alarme"/>
+    <Alarme code="1000022" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 22" type="Alarme"/>
+    <Alarme code="1000023" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 23" type="Alarme"/>
+    <Alarme code="1000024" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 24" type="Alarme"/>
+    <Alarme code="1000025" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 25" type="Alarme"/>
+    <Alarme code="1000026" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 26" type="Alarme"/>
+    <Alarme code="1000027" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 27" type="Alarme"/>
+    <Alarme code="1000028" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 28" type="Alarme"/>
+    <Alarme code="1000029" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 29" type="Alarme"/>
+    <Alarme code="1000030" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 30" type="Alarme"/>
+    <Alarme code="1000031" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 31" type="Alarme"/>
+    <Alarme code="1000032" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 32" type="Alarme"/>
+    <Alarme code="1000033" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 33" type="Alarme"/>
+    <Alarme code="1000034" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 34" type="Alarme"/>
+    <Alarme code="1000035" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 35" type="Alarme"/>
+    <Alarme code="1000036" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 36" type="Alarme"/>
+    <Alarme code="1000037" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 37" type="Alarme"/>
+    <Alarme code="1000038" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 38" type="Alarme"/>
+    <Alarme code="1000039" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 39" type="Alarme"/>
+    <Alarme code="1000040" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 40" type="Alarme"/>
+    <Alarme code="1000041" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 41" type="Alarme"/>
+    <Alarme code="1000042" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 42" type="Alarme"/>
+    <Alarme code="1000043" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 43" type="Alarme"/>
+    <Alarme code="1000044" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 44" type="Alarme"/>
+    <Alarme code="1000045" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 45" type="Alarme"/>
+    <Alarme code="1000046" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 46" type="Alarme"/>
+    <Alarme code="1000047" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 47" type="Alarme"/>
+    <Alarme code="1000048" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 48" type="Alarme"/>
+    <Alarme code="1000049" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 49" type="Alarme"/>
+    <Alarme code="1000050" isHistorisable="false" isPersistable="false" isServeur="true" libelle="Alarme chaine fonctionnelle 50" type="Alarme"/>
+    <Alarme code="0" isExploitant="true" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Erreur de communication" type="Alarme"/>
+    <Alarme code="1000" codePublic="1000" isExploitant="true" isHistorisable="true" isMainteneur="true" isPersistable="false" libelle="Erreur de communication equipement" type="Alarme"/>
+    <Alarme code="40000" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 1" type="Alarme"/>
+    <Alarme code="40100" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 2" type="Alarme"/>
+    <Alarme code="40200" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 3" type="Alarme"/>
+    <Alarme code="40300" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 4" type="Alarme"/>
+    <Alarme code="40400" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 5" type="Alarme"/>
+    <Alarme code="40500" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 6" type="Alarme"/>
+    <Alarme code="40600" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 7" type="Alarme"/>
+    <Alarme code="40700" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 8" type="Alarme"/>
+    <Alarme code="40800" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 9" type="Alarme"/>
+    <Alarme code="40900" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 10" type="Alarme"/>
+    <Alarme code="41000" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 11" type="Alarme"/>
+    <Alarme code="41100" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 12" type="Alarme"/>
+    <Alarme code="41200" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 13" type="Alarme"/>
+    <Alarme code="41300" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 14" type="Alarme"/>
+    <Alarme code="41400" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 15" type="Alarme"/>
+    <Alarme code="41500" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 16" type="Alarme"/>
+    <Alarme code="41600" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 17" type="Alarme"/>
+    <Alarme code="41700" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 18" type="Alarme"/>
+    <Alarme code="41800" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 19" type="Alarme"/>
+    <Alarme code="41900" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 20" type="Alarme"/>
+    <Alarme code="42000" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 21" type="Alarme"/>
+    <Alarme code="42100" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 22" type="Alarme"/>
+    <Alarme code="42200" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 23" type="Alarme"/>
+    <Alarme code="42300" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 24" type="Alarme"/>
+    <Alarme code="42400" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 25" type="Alarme"/>
+    <Alarme code="42500" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 26" type="Alarme"/>
+    <Alarme code="42600" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 27" type="Alarme"/>
+    <Alarme code="42700" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 28" type="Alarme"/>
+    <Alarme code="42800" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 29" type="Alarme"/>
+    <Alarme code="42900" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 30" type="Alarme"/>
+    <Alarme code="43000" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 31" type="Alarme"/>
+    <Alarme code="43100" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 32" type="Alarme"/>
+    <Alarme code="43200" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 33" type="Alarme"/>
+    <Alarme code="43300" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 34" type="Alarme"/>
+    <Alarme code="43400" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 35" type="Alarme"/>
+    <Alarme code="43500" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 36" type="Alarme"/>
+    <Alarme code="43600" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 37" type="Alarme"/>
+    <Alarme code="43700" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 38" type="Alarme"/>
+    <Alarme code="43800" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 39" type="Alarme"/>
+    <Alarme code="43900" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 40" type="Alarme"/>
+    <Alarme code="44000" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 41" type="Alarme"/>
+    <Alarme code="44100" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 42" type="Alarme"/>
+    <Alarme code="44200" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 43" type="Alarme"/>
+    <Alarme code="44300" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 44" type="Alarme"/>
+    <Alarme code="44400" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 45" type="Alarme"/>
+    <Alarme code="44500" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 46" type="Alarme"/>
+    <Alarme code="44600" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 47" type="Alarme"/>
+    <Alarme code="44700" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 48" type="Alarme"/>
+    <Alarme code="44800" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 49" type="Alarme"/>
+    <Alarme code="44900" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 50" type="Alarme"/>
+    <Alarme code="45000" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 51" type="Alarme"/>
+    <Alarme code="45100" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 52" type="Alarme"/>
+    <Alarme code="45200" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 53" type="Alarme"/>
+    <Alarme code="45300" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 54" type="Alarme"/>
+    <Alarme code="45400" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 55" type="Alarme"/>
+    <Alarme code="45500" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 56" type="Alarme"/>
+    <Alarme code="45600" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 57" type="Alarme"/>
+    <Alarme code="45700" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 58" type="Alarme"/>
+    <Alarme code="45800" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 59" type="Alarme"/>
+    <Alarme code="45900" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 60" type="Alarme"/>
+    <Alarme code="46000" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 61" type="Alarme"/>
+    <Alarme code="46100" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 62" type="Alarme"/>
+    <Alarme code="46200" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 63" type="Alarme"/>
+    <Alarme code="46300" isExploitant="false" isHistorisable="false" isMainteneur="true" isPersistable="false" libelle="Lecture inhibition dans Sono ZFS Test 64" type="Alarme"/>
+    <Alarme code="500001" codePublic="1" isExploitant="false" isHistorisable="true" isMainteneur="true" isPersistable="true" isServeur="false" libelle="En défaut" type="Alarme"/>
+    <Commande code="1100" isExploitant="true" isHistorisable="true" isMainteneur="true" isPersistable="true" libelle="Inhibition" paramSigEntete="I"/>
+    <Commande code="1500" isExploitant="true" isHistorisable="true" isMainteneur="true" libelle="Depeche emise"/>
+    <Commande code="1501" isExploitant="true" isHistorisable="false" isMainteneur="true" libelle="Modification etat Depche" paramSigEntete="II"/>
+    <Commande code="9" isExploitant="true" isHistorisable="true" isMainteneur="true" libelle="diffusion musique" paramSigCorps="S" paramSigEntete="S" timeOut="0"/>
+    <Commande code="10" isExploitant="true" isHistorisable="true" isMainteneur="true" libelle="arreter ecoute message" paramSigEntete="S" timeOut="0"/>
+    <Commande code="12" isExploitant="true" isHistorisable="true" isMainteneur="true" libelle="valider message" paramSigEntete="S" timeOut="0"/>
+    <Commande code="13" isExploitant="true" isHistorisable="true" isMainteneur="true" libelle="ecouter message" paramSigEntete="S" timeOut="0"/>
+    <Commande code="14" isExploitant="true" isHistorisable="true" isMainteneur="true" libelle="activer cycle" paramSigEntete="SII" timeOut="0"/>
+    <Commande code="15" isExploitant="true" isHistorisable="true" isMainteneur="true" libelle="supprimer cycle" paramSigEntete="S" timeOut="0"/>
+    <Commande code="16" isExploitant="true" isHistorisable="true" isMainteneur="true" libelle="supprimer message" paramSigEntete="S" timeOut="0"/>
+    <Commande code="17" isExploitant="true" isHistorisable="true" isMainteneur="true" libelle="arreter cycle" paramSigEntete="S" timeOut="0"/>
+    <Commande code="19" isExploitant="true" isHistorisable="true" isMainteneur="true" libelle="arreter musique" timeOut="0"/>
+    <Commande code="21" isExploitant="true" isHistorisable="true" isMainteneur="true" libelle="arreter diffusion directe" timeOut="0"/>
+    <Commande code="22" isExploitant="true" isHistorisable="true" isMainteneur="true" libelle="arreter enregistrement message" timeOut="0"/>
+    <Commande code="28" isExploitant="false" isHistorisable="true" isMainteneur="true" isServeur="true" libelle="arreter reecoute ZFS" paramSigEntete="S" timeOut="0"/>
+    <Commande code="29" isExploitant="false" isHistorisable="true" isMainteneur="true" isServeur="true" libelle="reecoute ZFS" paramSigEntete="S" timeOut="0"/>
+    <Commande code="60" isExploitant="true" isHistorisable="true" isMainteneur="true" libelle="renommer message" paramSigEntete="SS" timeOut="0"/>
+    <Commande code="62" isExploitant="true" isHistorisable="true" isMainteneur="true" libelle="creation cycle" paramSigCorps="S" paramSigEntete="SSSIISSIII" timeOut="0"/>
+    <Commande code="63" isExploitant="true" isHistorisable="true" isMainteneur="true" libelle="enregistrer message avec type sonal" paramSigEntete="SS" timeOut="0"/>
+    <Commande code="64" isExploitant="true" isHistorisable="true" isMainteneur="true" libelle="diffuser message" paramSigCorps="S" paramSigEntete="SII" timeOut="0"/>
+    <Commande code="66" isExploitant="true" isHistorisable="true" isMainteneur="true" libelle="changer message sonal" paramSigEntete="SS" timeOut="0"/>
+    <Commande code="67" isExploitant="true" isHistorisable="true" isMainteneur="true" libelle="diffusion annonce directe avec sonal" paramSigCorps="S" timeOut="0"/>
+    <Commande code="68" isExploitant="true" isHistorisable="true" isMainteneur="true" libelle="annuler pop up cycle flash" paramSigCorps="S" timeOut="0"/>
+    <Commande code="99" isExploitant="false" isHistorisable="true" isMainteneur="true" isServeur="true" libelle="suppression de cycle BDD sans la baie" paramSigEntete="S"/>
+    <Commande code="20" isExploitant="true" isHistorisable="true" isMainteneur="true" libelle="regler niveau sonore" paramSigEntete="IIS" timeOut="0"/>
+    <Commande code="30" isExploitant="true" isHistorisable="true" isMainteneur="true" libelle="forcer niveau sonore mode jour" paramSigEntete="S" timeOut="0"/>
+    <Commande code="31" isExploitant="true" isHistorisable="true" isMainteneur="true" libelle="forcer niveau sonore mode nuit" paramSigEntete="S" timeOut="0"/>
+    <Commande code="32" isExploitant="true" isHistorisable="true" isMainteneur="true" libelle="forcer niveau sonore par defaut" paramSigEntete="S" timeOut="0"/>
+    <Commande code="10000" isExploitant="true" isHistorisable="false" isMainteneur="true" libelle="testScriptClement" timeOut="0"/>
+    <Commande code="10001" isExploitant="true" isHistorisable="false" isMainteneur="true" libelle="testScript_AlternatAppuyer" paramSigEntete="S" timeOut="0"/>
+    <Commande code="10002" isExploitant="true" isHistorisable="false" isMainteneur="true" libelle="testScript_AlternatRelacher" paramSigEntete="S" timeOut="0"/>
+    <Commande code="10003" isExploitant="true" isHistorisable="false" isMainteneur="true" libelle="testScript_MessageFlash_Enregister" paramSigEntete="S" timeOut="0"/>
+    <Commande code="10004" isExploitant="true" isHistorisable="false" isMainteneur="true" libelle="testScript_MessageFlash_Delete" paramSigEntete="S" timeOut="0"/>
+    <Commande code="10005" isExploitant="true" isHistorisable="false" isMainteneur="true" libelle="testScript_CycleFlash_Creer" paramSigEntete="S" timeOut="0"/>
+    <Commande code="10006" isExploitant="true" isHistorisable="false" isMainteneur="true" libelle="testScript_CycleFlash_Activer" paramSigEntete="S" timeOut="0"/>
+    <Commande code="10007" isExploitant="true" isHistorisable="false" isMainteneur="true" libelle="testScript_CycleFlash_Arreter" paramSigEntete="S" timeOut="0"/>
+    <Commande code="10008" isExploitant="true" isHistorisable="false" isMainteneur="true" libelle="testScript_CycleFlash_Supprimer" paramSigEntete="S" timeOut="0"/>
+    <Commande code="10009" isExploitant="true" isHistorisable="false" isMainteneur="true" libelle="testScript_CentraleEnDefaut" paramSigEntete="IS" timeOut="0"/>
+    <Commande code="10010" isExploitant="true" isHistorisable="false" isMainteneur="true" libelle="testScript_PupitreEnDefaut" paramSigEntete="IS" timeOut="0"/>
+    <Commande code="10011" isExploitant="true" isHistorisable="false" isMainteneur="true" libelle="testScript_ZFSEnDefaut" paramSigEntete="IS" timeOut="0"/>
+    <CommandeServiceIHM code="10" codeService="ServiceVideo" isExploitant="true" isHistorisable="true" isMainteneur="true" libelle="Vidéo" timeOut="2000"/>
+    <CommandeServiceIHM code="11" codeService="ServiceVideo" isExploitant="true" isHistorisable="true" isMainteneur="true" libelle="Mettre au noir" timeOut="2000"/>
+    <Mesure code="10" isExploitant="true" isHistorisable="true" isMainteneur="true" isObligatoireIHM="true" isPersistable="false" libelle="Nombre cycles maximum"/>
+    <Mesure code="11" isExploitant="true" isHistorisable="true" isMainteneur="true" isObligatoireIHM="true" isPersistable="false" libelle="Nombre messages maximum"/>
+    <Mesure code="12" isExploitant="true" isHistorisable="true" isMainteneur="true" isObligatoireIHM="true" isPersistable="false" libelle="Duree maximum d'un message"/>
+    <Mesure code="40" isExploitant="true" isHistorisable="true" isMainteneur="true" isObligatoireIHM="true" isPersistable="false" libelle="Nombre maximum de messages dans un cycle"/>
+    <Mesure code="41" isExploitant="true" isHistorisable="true" isMainteneur="true" isObligatoireIHM="true" isPersistable="false" libelle="Valeur par défaut pour l'intervalle diffusion"/>
+    <Mesure code="42" isExploitant="true" isHistorisable="true" isMainteneur="true" isObligatoireIHM="true" isPersistable="false" libelle="Valeur par défaut pour l'intervalle inter-message"/>
+    <Mesure code="43" isExploitant="true" isHistorisable="true" isMainteneur="true" isObligatoireIHM="true" isPersistable="false" libelle="Durée de la diffusion planifiée"/>
+    <Mesure code="44" isExploitant="true" isHistorisable="true" isMainteneur="true" isObligatoireIHM="true" isPersistable="false" libelle="Durée par défaut de diffusion du cycle flash (en minutes)"/>
+    <Mesure code="46" isExploitant="true" isHistorisable="true" isMainteneur="true" isObligatoireIHM="true" isPersistable="false" libelle="Autorisation de planification d'un cycle normal"/>
+    <Mesure code="47" isExploitant="true" isHistorisable="true" isMainteneur="true" isObligatoireIHM="true" isPersistable="false" libelle="Activation de la fonction de prévenance du cycle flash"/>
+    <Mesure code="48" isExploitant="true" isHistorisable="true" isMainteneur="true" isObligatoireIHM="true" isPersistable="false" libelle="Autorisation de modifier un cycle normal"/>
+    <Mesure code="49" isExploitant="true" isHistorisable="true" isMainteneur="true" isObligatoireIHM="true" isPersistable="false" libelle="Valeur par défaut pour l'intervalle de diffusion cycle flash"/>
+    <Information code="1" isExploitant="true" isInterne="true" isMainteneur="true" isObligatoireIHM="true" libelle="caméras associées"/>
+    <Information code="2" isExploitant="true" isHistorisable="true" isMainteneur="true" isObligatoireIHM="true" isPersistable="false" libelle="liste des associations idPoste-pupitre"/>
+    <Information code="3" isExploitant="true" isHistorisable="true" isMainteneur="true" isObligatoireIHM="true" isPersistable="false" libelle="Unité des paramètres de temps des cycles normaux"/>
+    <Information code="4" isExploitant="true" isHistorisable="true" isMainteneur="true" isObligatoireIHM="true" isPersistable="false" libelle="Unité des paramètres de temps des cycles flashs"/>
+    <Information code="5" isExploitant="true" isHistorisable="true" isMainteneur="true" isObligatoireIHM="true" isPersistable="false" libelle="Heure de début de diffusion planifiée"/>
+    <Information code="6" isExploitant="true" isHistorisable="true" isMainteneur="true" isObligatoireIHM="true" isPersistable="false" libelle="Heure de fin de diffusion planifiée"/>
+    <Information code="7" isExploitant="true" isHistorisable="true" isMainteneur="true" isObligatoireIHM="true" isPersistable="false" libelle="Liste des valeurs pour intervalle de diffusion"/>
+    <Information code="8" isExploitant="true" isHistorisable="true" isMainteneur="true" isObligatoireIHM="true" isPersistable="false" libelle="Liste des valeurs pour intervalle inter-messages"/>
+    <Information code="9" isExploitant="true" isHistorisable="true" isMainteneur="true" isObligatoireIHM="true" isPersistable="false" libelle="Liste des valeurs pour intervalle de diffusion cycle flash"/>
+    <Information code="10" isExploitant="true" isHistorisable="true" isMainteneur="true" isObligatoireIHM="true" isPersistable="false" libelle="Type de sonal par défaut"/>
+    <Information code="11" isExploitant="true" isHistorisable="true" isMainteneur="true" isObligatoireIHM="true" isPersistable="false" libelle="Liste des musiques disponible pour diffusion"/>
+    <Information code="12" isExploitant="true" isHistorisable="true" isMainteneur="true" isObligatoireIHM="true" isPersistable="false" libelle="Liste des durées de diffusion pour un cycle flash (en minutes)"/>
+    <AccesEtatValeur code="1000001" valeur="0"/>
+    <AccesEtatValeur code="1000002" valeur="0"/>
+    <AccesEtatValeur code="1000003" valeur="0"/>
+    <AccesEtatValeur code="1000004" valeur="0"/>
+    <AccesEtatValeur code="1000005" valeur="0"/>
+    <AccesEtatValeur code="1000006" valeur="0"/>
+    <AccesEtatValeur code="1000007" valeur="0"/>
+    <AccesEtatValeur code="1000008" valeur="0"/>
+    <AccesEtatValeur code="1000009" valeur="0"/>
+    <AccesEtatValeur code="1000010" valeur="0"/>
+    <AccesEtatValeur code="1000011" valeur="0"/>
+    <AccesEtatValeur code="1000012" valeur="0"/>
+    <AccesEtatValeur code="1000013" valeur="0"/>
+    <AccesEtatValeur code="1000014" valeur="0"/>
+    <AccesEtatValeur code="1000015" valeur="0"/>
+    <AccesEtatValeur code="1000016" valeur="0"/>
+    <AccesEtatValeur code="1000017" valeur="0"/>
+    <AccesEtatValeur code="1000018" valeur="0"/>
+    <AccesEtatValeur code="1000019" valeur="0"/>
+    <AccesEtatValeur code="1000020" valeur="0"/>
+    <AccesEtatValeur code="1000021" valeur="0"/>
+    <AccesEtatValeur code="1000022" valeur="0"/>
+    <AccesEtatValeur code="1000023" valeur="0"/>
+    <AccesEtatValeur code="1000024" valeur="0"/>
+    <AccesEtatValeur code="1000025" valeur="0"/>
+    <AccesEtatValeur code="1000026" valeur="0"/>
+    <AccesEtatValeur code="1000027" valeur="0"/>
+    <AccesEtatValeur code="1000028" valeur="0"/>
+    <AccesEtatValeur code="1000029" valeur="0"/>
+    <AccesEtatValeur code="1000030" valeur="0"/>
+    <AccesEtatValeur code="1000031" valeur="0"/>
+    <AccesEtatValeur code="1000032" valeur="0"/>
+    <AccesEtatValeur code="1000033" valeur="0"/>
+    <AccesEtatValeur code="1000034" valeur="0"/>
+    <AccesEtatValeur code="1000035" valeur="0"/>
+    <AccesEtatValeur code="1000036" valeur="0"/>
+    <AccesEtatValeur code="1000037" valeur="0"/>
+    <AccesEtatValeur code="1000038" valeur="0"/>
+    <AccesEtatValeur code="1000039" valeur="0"/>
+    <AccesEtatValeur code="1000040" valeur="0"/>
+    <AccesEtatValeur code="1000041" valeur="0"/>
+    <AccesEtatValeur code="1000042" valeur="0"/>
+    <AccesEtatValeur code="1000043" valeur="0"/>
+    <AccesEtatValeur code="1000044" valeur="0"/>
+    <AccesEtatValeur code="1000045" valeur="0"/>
+    <AccesEtatValeur code="1000046" valeur="0"/>
+    <AccesEtatValeur code="1000047" valeur="0"/>
+    <AccesEtatValeur code="1000048" valeur="0"/>
+    <AccesEtatValeur code="1000049" valeur="0"/>
+    <AccesEtatValeur code="1000050" valeur="0"/>
+    <AccesEtatValeur code="11000001" valeur="0"/>
+    <AccesEtatValeur code="11000002" valeur="0"/>
+    <AccesEtatValeur code="11000003" valeur="0"/>
+    <AccesEtatValeur code="11000004" valeur="0"/>
+    <AccesEtatValeur code="11000005" valeur="0"/>
+    <AccesEtatValeur code="11000006" valeur="0"/>
+    <AccesEtatValeur code="11000007" valeur="0"/>
+    <AccesEtatValeur code="11000008" valeur="0"/>
+    <AccesEtatValeur code="11000009" valeur="0"/>
+    <AccesEtatValeur code="11000010" valeur="0"/>
+    <AccesEtatValeur code="11000011" valeur="0"/>
+    <AccesEtatValeur code="11000012" valeur="0"/>
+    <AccesEtatValeur code="11000013" valeur="0"/>
+    <AccesEtatValeur code="11000014" valeur="0"/>
+    <AccesEtatValeur code="11000015" valeur="0"/>
+    <AccesEtatValeur code="11000016" valeur="0"/>
+    <AccesEtatValeur code="11000017" valeur="0"/>
+    <AccesEtatValeur code="11000018" valeur="0"/>
+    <AccesEtatValeur code="11000019" valeur="0"/>
+    <AccesEtatValeur code="11000020" valeur="0"/>
+    <AccesEtatValeur code="11000021" valeur="0"/>
+    <AccesEtatValeur code="11000022" valeur="0"/>
+    <AccesEtatValeur code="11000023" valeur="0"/>
+    <AccesEtatValeur code="11000024" valeur="0"/>
+    <AccesEtatValeur code="11000025" valeur="0"/>
+    <AccesEtatValeur code="11000026" valeur="0"/>
+    <AccesEtatValeur code="11000027" valeur="0"/>
+    <AccesEtatValeur code="11000028" valeur="0"/>
+    <AccesEtatValeur code="11000029" valeur="0"/>
+    <AccesEtatValeur code="11000030" valeur="0"/>
+    <AccesEtatValeur code="11000031" valeur="0"/>
+    <AccesEtatValeur code="11000032" valeur="0"/>
+    <AccesEtatValeur code="11000033" valeur="0"/>
+    <AccesEtatValeur code="11000034" valeur="0"/>
+    <AccesEtatValeur code="11000035" valeur="0"/>
+    <AccesEtatValeur code="11000036" valeur="0"/>
+    <AccesEtatValeur code="11000037" valeur="0"/>
+    <AccesEtatValeur code="11000038" valeur="0"/>
+    <AccesEtatValeur code="11000039" valeur="0"/>
+    <AccesEtatValeur code="11000040" valeur="0"/>
+    <AccesEtatValeur code="11000041" valeur="0"/>
+    <AccesEtatValeur code="11000042" valeur="0"/>
+    <AccesEtatValeur code="11000043" valeur="0"/>
+    <AccesEtatValeur code="11000044" valeur="0"/>
+    <AccesEtatValeur code="11000045" valeur="0"/>
+    <AccesEtatValeur code="11000046" valeur="0"/>
+    <AccesEtatValeur code="11000047" valeur="0"/>
+    <AccesEtatValeur code="11000048" valeur="0"/>
+    <AccesEtatValeur code="11000049" valeur="0"/>
+    <AccesEtatValeur code="11000050" valeur="0"/>
+    <AccesAlarmeValeur code="1000001" valeur="0"/>
+    <AccesAlarmeValeur code="1000002" valeur="0"/>
+    <AccesAlarmeValeur code="1000003" valeur="0"/>
+    <AccesAlarmeValeur code="1000004" valeur="0"/>
+    <AccesAlarmeValeur code="1000005" valeur="0"/>
+    <AccesAlarmeValeur code="1000006" valeur="0"/>
+    <AccesAlarmeValeur code="1000007" valeur="0"/>
+    <AccesAlarmeValeur code="1000008" valeur="0"/>
+    <AccesAlarmeValeur code="1000009" valeur="0"/>
+    <AccesAlarmeValeur code="1000010" valeur="0"/>
+    <AccesAlarmeValeur code="1000011" valeur="0"/>
+    <AccesAlarmeValeur code="1000012" valeur="0"/>
+    <AccesAlarmeValeur code="1000013" valeur="0"/>
+    <AccesAlarmeValeur code="1000014" valeur="0"/>
+    <AccesAlarmeValeur code="1000015" valeur="0"/>
+    <AccesAlarmeValeur code="1000016" valeur="0"/>
+    <AccesAlarmeValeur code="1000017" valeur="0"/>
+    <AccesAlarmeValeur code="1000018" valeur="0"/>
+    <AccesAlarmeValeur code="1000019" valeur="0"/>
+    <AccesAlarmeValeur code="1000020" valeur="0"/>
+    <AccesAlarmeValeur code="1000021" valeur="0"/>
+    <AccesAlarmeValeur code="1000022" valeur="0"/>
+    <AccesAlarmeValeur code="1000023" valeur="0"/>
+    <AccesAlarmeValeur code="1000024" valeur="0"/>
+    <AccesAlarmeValeur code="1000025" valeur="0"/>
+    <AccesAlarmeValeur code="1000026" valeur="0"/>
+    <AccesAlarmeValeur code="1000027" valeur="0"/>
+    <AccesAlarmeValeur code="1000028" valeur="0"/>
+    <AccesAlarmeValeur code="1000029" valeur="0"/>
+    <AccesAlarmeValeur code="1000030" valeur="0"/>
+    <AccesAlarmeValeur code="1000031" valeur="0"/>
+    <AccesAlarmeValeur code="1000032" valeur="0"/>
+    <AccesAlarmeValeur code="1000033" valeur="0"/>
+    <AccesAlarmeValeur code="1000034" valeur="0"/>
+    <AccesAlarmeValeur code="1000035" valeur="0"/>
+    <AccesAlarmeValeur code="1000036" valeur="0"/>
+    <AccesAlarmeValeur code="1000037" valeur="0"/>
+    <AccesAlarmeValeur code="1000038" valeur="0"/>
+    <AccesAlarmeValeur code="1000039" valeur="0"/>
+    <AccesAlarmeValeur code="1000040" valeur="0"/>
+    <AccesAlarmeValeur code="1000041" valeur="0"/>
+    <AccesAlarmeValeur code="1000042" valeur="0"/>
+    <AccesAlarmeValeur code="1000043" valeur="0"/>
+    <AccesAlarmeValeur code="1000044" valeur="0"/>
+    <AccesAlarmeValeur code="1000045" valeur="0"/>
+    <AccesAlarmeValeur code="1000046" valeur="0"/>
+    <AccesAlarmeValeur code="1000047" valeur="0"/>
+    <AccesAlarmeValeur code="1000048" valeur="0"/>
+    <AccesAlarmeValeur code="1000049" valeur="0"/>
+    <AccesAlarmeValeur code="1000050" valeur="0"/>
+    <AccesAlarmeValeur code="1000" valeur="0"/>
+    <AccesEtatSynthese code="999990" formule="ETAT[1000001];ETAT[1000002];ETAT[1000003];ETAT[1000004];ETAT[1000005];ETAT[1000006];ETAT[1000007];ETAT[1000008];ETAT[1000009];ETAT[1000010];" operateur="OU"/>
+    <AccesEtatSynthese code="999991" formule="ETAT[1000011];ETAT[1000012];ETAT[1000013];ETAT[1000014];ETAT[1000015];ETAT[1000016];ETAT[1000017];ETAT[1000018];ETAT[1000019];ETAT[1000020];" operateur="OU"/>
+    <AccesEtatSynthese code="999992" formule="ETAT[1000021];ETAT[1000022];ETAT[1000023];ETAT[1000024];ETAT[1000025];ETAT[1000026];ETAT[1000027];ETAT[1000028];ETAT[1000029];ETAT[1000030];" operateur="OU"/>
+    <AccesEtatSynthese code="999993" formule="ETAT[1000031];ETAT[1000032];ETAT[1000033];ETAT[1000034];ETAT[1000035];ETAT[1000036];ETAT[1000037];ETAT[1000038];ETAT[1000039];ETAT[1000040];" operateur="OU"/>
+    <AccesEtatSynthese code="999994" formule="ETAT[1000041];ETAT[1000042];ETAT[1000043];ETAT[1000044];ETAT[1000045];ETAT[1000046];ETAT[1000047];ETAT[1000048];ETAT[1000049];ETAT[1000050];" operateur="OU"/>
+    <AccesEtatSynthese code="1000000" formule="ETAT[999990];ETAT[999991];ETAT[999992];ETAT[999993];ETAT[999994];" operateur="OU"/>
+    <AccesEtatSynthese code="1999990" formule="ETAT[11000001];ETAT[11000002];ETAT[11000003];ETAT[11000004];ETAT[11000005];ETAT[11000006];ETAT[11000007];ETAT[11000008];ETAT[11000009];ETAT[11000010];" operateur="OU"/>
+    <AccesEtatSynthese code="1999991" formule="ETAT[11000011];ETAT[11000012];ETAT[11000013];ETAT[11000014];ETAT[11000015];ETAT[11000016];ETAT[11000017];ETAT[11000018];ETAT[11000019];ETAT[11000020];" operateur="OU"/>
+    <AccesEtatSynthese code="1999992" formule="ETAT[11000021];ETAT[11000022];ETAT[11000023];ETAT[11000024];ETAT[11000025];ETAT[11000026];ETAT[11000027];ETAT[11000028];ETAT[11000029];ETAT[11000030];" operateur="OU"/>
+    <AccesEtatSynthese code="1999993" formule="ETAT[11000031];ETAT[11000032];ETAT[11000033];ETAT[11000034];ETAT[11000035];ETAT[11000036];ETAT[11000037];ETAT[11000038];ETAT[11000039];ETAT[11000040];" operateur="OU"/>
+    <AccesEtatSynthese code="1999994" formule="ETAT[11000041];ETAT[11000042];ETAT[11000043];ETAT[11000044];ETAT[11000045];ETAT[11000046];ETAT[11000047];ETAT[11000048];ETAT[11000049];ETAT[11000050];" operateur="OU"/>
+    <AccesEtatSynthese code="11000000" formule="ETAT[1999990];ETAT[1999991];ETAT[1999992];ETAT[1999993];ETAT[1999994];" operateur="OU"/>
+    <AccesEtatSynthese code="0" formule="ETAT[1000000];ETAT[11000000];" operateur="OU"/>
+    <AccesAlarmeSynthese code="999990" formule="ALARME[1000001];ALARME[1000002];ALARME[1000003];ALARME[1000004];ALARME[1000005];ALARME[1000006];ALARME[1000007];ALARME[1000008];ALARME[1000009];ALARME[1000010];" operateur="OU"/>
+    <AccesAlarmeSynthese code="999991" formule="ALARME[1000011];ALARME[1000012];ALARME[1000013];ALARME[1000014];ALARME[1000015];ALARME[1000016];ALARME[1000017];ALARME[1000018];ALARME[1000019];ALARME[1000020];" operateur="OU"/>
+    <AccesAlarmeSynthese code="999992" formule="ALARME[1000021];ALARME[1000022];ALARME[1000023];ALARME[1000024];ALARME[1000025];ALARME[1000026];ALARME[1000027];ALARME[1000028];ALARME[1000029];ALARME[1000030];" operateur="OU"/>
+    <AccesAlarmeSynthese code="999993" formule="ALARME[1000031];ALARME[1000032];ALARME[1000033];ALARME[1000034];ALARME[1000035];ALARME[1000036];ALARME[1000037];ALARME[1000038];ALARME[1000039];ALARME[1000040];" operateur="OU"/>
+    <AccesAlarmeSynthese code="999994" formule="ALARME[1000041];ALARME[1000042];ALARME[1000043];ALARME[1000044];ALARME[1000045];ALARME[1000046];ALARME[1000047];ALARME[1000048];ALARME[1000049];ALARME[1000050];" operateur="OU"/>
+    <AccesAlarmeSynthese code="999999" formule="ALARME[1000000];" operateur="!ET"/>
+    <AccesAlarmeSynthese code="1000000" formule="ALARME[999990];ALARME[999991];ALARME[999992];ALARME[999993];ALARME[999994];" operateur="OU"/>
+    <AccesAlarmeSynthese code="500001" formule="ETAT[5];" operateur="OU"/>
+    <Entree code="40000" type="Alarme" valeur="LectureInhibition_SonoZFSTest_1"/>
+    <Entree code="40100" type="Alarme" valeur="LectureInhibition_SonoZFSTest_2"/>
+    <Entree code="40200" type="Alarme" valeur="LectureInhibition_SonoZFSTest_3"/>
+    <Entree code="40300" type="Alarme" valeur="LectureInhibition_SonoZFSTest_4"/>
+    <Entree code="40400" type="Alarme" valeur="LectureInhibition_SonoZFSTest_5"/>
+    <Entree code="40500" type="Alarme" valeur="LectureInhibition_SonoZFSTest_6"/>
+    <Entree code="40600" type="Alarme" valeur="LectureInhibition_SonoZFSTest_7"/>
+    <Entree code="40700" type="Alarme" valeur="LectureInhibition_SonoZFSTest_8"/>
+    <Entree code="40800" type="Alarme" valeur="LectureInhibition_SonoZFSTest_9"/>
+    <Entree code="40900" type="Alarme" valeur="LectureInhibition_SonoZFSTest_10"/>
+    <Entree code="41000" type="Alarme" valeur="LectureInhibition_SonoZFSTest_11"/>
+    <Entree code="41100" type="Alarme" valeur="LectureInhibition_SonoZFSTest_12"/>
+    <Entree code="41200" type="Alarme" valeur="LectureInhibition_SonoZFSTest_13"/>
+    <Entree code="41300" type="Alarme" valeur="LectureInhibition_SonoZFSTest_14"/>
+    <Entree code="41400" type="Alarme" valeur="LectureInhibition_SonoZFSTest_15"/>
+    <Entree code="41500" type="Alarme" valeur="LectureInhibition_SonoZFSTest_16"/>
+    <Entree code="41600" type="Alarme" valeur="LectureInhibition_SonoZFSTest_17"/>
+    <Entree code="41700" type="Alarme" valeur="LectureInhibition_SonoZFSTest_18"/>
+    <Entree code="41800" type="Alarme" valeur="LectureInhibition_SonoZFSTest_19"/>
+    <Entree code="41900" type="Alarme" valeur="LectureInhibition_SonoZFSTest_20"/>
+    <Entree code="42000" type="Alarme" valeur="LectureInhibition_SonoZFSTest_21"/>
+    <Entree code="42100" type="Alarme" valeur="LectureInhibition_SonoZFSTest_22"/>
+    <Entree code="42200" type="Alarme" valeur="LectureInhibition_SonoZFSTest_23"/>
+    <Entree code="42300" type="Alarme" valeur="LectureInhibition_SonoZFSTest_24"/>
+    <Entree code="42400" type="Alarme" valeur="LectureInhibition_SonoZFSTest_25"/>
+    <Entree code="42500" type="Alarme" valeur="LectureInhibition_SonoZFSTest_26"/>
+    <Entree code="42600" type="Alarme" valeur="LectureInhibition_SonoZFSTest_27"/>
+    <Entree code="42700" type="Alarme" valeur="LectureInhibition_SonoZFSTest_28"/>
+    <Entree code="42800" type="Alarme" valeur="LectureInhibition_SonoZFSTest_29"/>
+    <Entree code="42900" type="Alarme" valeur="LectureInhibition_SonoZFSTest_30"/>
+    <Entree code="43000" type="Alarme" valeur="LectureInhibition_SonoZFSTest_31"/>
+    <Entree code="43100" type="Alarme" valeur="LectureInhibition_SonoZFSTest_32"/>
+    <Entree code="43200" type="Alarme" valeur="LectureInhibition_SonoZFSTest_33"/>
+    <Entree code="43300" type="Alarme" valeur="LectureInhibition_SonoZFSTest_34"/>
+    <Entree code="43400" type="Alarme" valeur="LectureInhibition_SonoZFSTest_35"/>
+    <Entree code="43500" type="Alarme" valeur="LectureInhibition_SonoZFSTest_36"/>
+    <Entree code="43600" type="Alarme" valeur="LectureInhibition_SonoZFSTest_37"/>
+    <Entree code="43700" type="Alarme" valeur="LectureInhibition_SonoZFSTest_38"/>
+    <Entree code="43800" type="Alarme" valeur="LectureInhibition_SonoZFSTest_39"/>
+    <Entree code="43900" type="Alarme" valeur="LectureInhibition_SonoZFSTest_40"/>
+    <Entree code="44000" type="Alarme" valeur="LectureInhibition_SonoZFSTest_41"/>
+    <Entree code="44100" type="Alarme" valeur="LectureInhibition_SonoZFSTest_42"/>
+    <Entree code="44200" type="Alarme" valeur="LectureInhibition_SonoZFSTest_43"/>
+    <Entree code="44300" type="Alarme" valeur="LectureInhibition_SonoZFSTest_44"/>
+    <Entree code="44400" type="Alarme" valeur="LectureInhibition_SonoZFSTest_45"/>
+    <Entree code="44500" type="Alarme" valeur="LectureInhibition_SonoZFSTest_46"/>
+    <Entree code="44600" type="Alarme" valeur="LectureInhibition_SonoZFSTest_47"/>
+    <Entree code="44700" type="Alarme" valeur="LectureInhibition_SonoZFSTest_48"/>
+    <Entree code="44800" type="Alarme" valeur="LectureInhibition_SonoZFSTest_49"/>
+    <Entree code="44900" type="Alarme" valeur="LectureInhibition_SonoZFSTest_50"/>
+    <Entree code="45000" type="Alarme" valeur="LectureInhibition_SonoZFSTest_51"/>
+    <Entree code="45100" type="Alarme" valeur="LectureInhibition_SonoZFSTest_52"/>
+    <Entree code="45200" type="Alarme" valeur="LectureInhibition_SonoZFSTest_53"/>
+    <Entree code="45300" type="Alarme" valeur="LectureInhibition_SonoZFSTest_54"/>
+    <Entree code="45400" type="Alarme" valeur="LectureInhibition_SonoZFSTest_55"/>
+    <Entree code="45500" type="Alarme" valeur="LectureInhibition_SonoZFSTest_56"/>
+    <Entree code="45600" type="Alarme" valeur="LectureInhibition_SonoZFSTest_57"/>
+    <Entree code="45700" type="Alarme" valeur="LectureInhibition_SonoZFSTest_58"/>
+    <Entree code="45800" type="Alarme" valeur="LectureInhibition_SonoZFSTest_59"/>
+    <Entree code="45900" type="Alarme" valeur="LectureInhibition_SonoZFSTest_60"/>
+    <Entree code="46000" type="Alarme" valeur="LectureInhibition_SonoZFSTest_61"/>
+    <Entree code="46100" type="Alarme" valeur="LectureInhibition_SonoZFSTest_62"/>
+    <Entree code="46200" type="Alarme" valeur="LectureInhibition_SonoZFSTest_63"/>
+    <Entree code="46300" type="Alarme" valeur="LectureInhibition_SonoZFSTest_64"/>
+    <Entree code="46302" type="Alarme" valeur="DefautBaieSONO"/>
+    <Entree code="46303" type="Alarme" valeur="TemperatureBaieSymphonie"/>
+    <BlocFonctionnelle valeur="blocAlarmeSonoZFSTest">
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_1" valeur="LectureInhibition_SonoZFSTest_1"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_2" valeur="LectureInhibition_SonoZFSTest_2"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_3" valeur="LectureInhibition_SonoZFSTest_3"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_4" valeur="LectureInhibition_SonoZFSTest_4"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_5" valeur="LectureInhibition_SonoZFSTest_5"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_6" valeur="LectureInhibition_SonoZFSTest_6"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_7" valeur="LectureInhibition_SonoZFSTest_7"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_8" valeur="LectureInhibition_SonoZFSTest_8"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_9" valeur="LectureInhibition_SonoZFSTest_9"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_10" valeur="LectureInhibition_SonoZFSTest_10"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_11" valeur="LectureInhibition_SonoZFSTest_11"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_12" valeur="LectureInhibition_SonoZFSTest_12"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_13" valeur="LectureInhibition_SonoZFSTest_13"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_14" valeur="LectureInhibition_SonoZFSTest_14"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_15" valeur="LectureInhibition_SonoZFSTest_15"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_16" valeur="LectureInhibition_SonoZFSTest_16"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_17" valeur="LectureInhibition_SonoZFSTest_17"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_18" valeur="LectureInhibition_SonoZFSTest_18"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_19" valeur="LectureInhibition_SonoZFSTest_19"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_20" valeur="LectureInhibition_SonoZFSTest_20"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_21" valeur="LectureInhibition_SonoZFSTest_21"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_22" valeur="LectureInhibition_SonoZFSTest_22"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_23" valeur="LectureInhibition_SonoZFSTest_23"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_24" valeur="LectureInhibition_SonoZFSTest_24"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_25" valeur="LectureInhibition_SonoZFSTest_25"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_26" valeur="LectureInhibition_SonoZFSTest_26"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_27" valeur="LectureInhibition_SonoZFSTest_27"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_28" valeur="LectureInhibition_SonoZFSTest_28"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_29" valeur="LectureInhibition_SonoZFSTest_29"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_30" valeur="LectureInhibition_SonoZFSTest_30"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_31" valeur="LectureInhibition_SonoZFSTest_31"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_32" valeur="LectureInhibition_SonoZFSTest_32"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_33" valeur="LectureInhibition_SonoZFSTest_33"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_34" valeur="LectureInhibition_SonoZFSTest_34"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_35" valeur="LectureInhibition_SonoZFSTest_35"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_36" valeur="LectureInhibition_SonoZFSTest_36"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_37" valeur="LectureInhibition_SonoZFSTest_37"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_38" valeur="LectureInhibition_SonoZFSTest_38"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_39" valeur="LectureInhibition_SonoZFSTest_39"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_40" valeur="LectureInhibition_SonoZFSTest_40"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_41" valeur="LectureInhibition_SonoZFSTest_41"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_42" valeur="LectureInhibition_SonoZFSTest_42"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_43" valeur="LectureInhibition_SonoZFSTest_43"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_44" valeur="LectureInhibition_SonoZFSTest_44"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_45" valeur="LectureInhibition_SonoZFSTest_45"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_46" valeur="LectureInhibition_SonoZFSTest_46"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_47" valeur="LectureInhibition_SonoZFSTest_47"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_48" valeur="LectureInhibition_SonoZFSTest_48"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_49" valeur="LectureInhibition_SonoZFSTest_49"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_50" valeur="LectureInhibition_SonoZFSTest_50"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_51" valeur="LectureInhibition_SonoZFSTest_51"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_52" valeur="LectureInhibition_SonoZFSTest_52"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_53" valeur="LectureInhibition_SonoZFSTest_53"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_54" valeur="LectureInhibition_SonoZFSTest_54"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_55" valeur="LectureInhibition_SonoZFSTest_55"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_56" valeur="LectureInhibition_SonoZFSTest_56"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_57" valeur="LectureInhibition_SonoZFSTest_57"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_58" valeur="LectureInhibition_SonoZFSTest_58"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_59" valeur="LectureInhibition_SonoZFSTest_59"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_60" valeur="LectureInhibition_SonoZFSTest_60"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_61" valeur="LectureInhibition_SonoZFSTest_61"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_62" valeur="LectureInhibition_SonoZFSTest_62"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_63" valeur="LectureInhibition_SonoZFSTest_63"/>
+        <Association elementAssocie="LectureInhibition_SonoZFSTest_64" valeur="LectureInhibition_SonoZFSTest_64"/>
+    </BlocFonctionnelle>
+    <AlarmeChaineFonctionnelle typeEquipement="API_Actemium_48E_16S"/>
+    <AlarmeChaineFonctionnelle typeEquipement="API_Actemium_96E_32S"/>
+    <AlarmeChaineFonctionnelle typeEquipement="API_Actemium_160E_32S"/>
+    <AlarmeChaineFonctionnelle typeEquipement="API_GTC"/>
+    <AlarmeChaineFonctionnelle typeEquipement="switch">
+        <ListeCode code="0"/>
+    </AlarmeChaineFonctionnelle>
+</TypeEquipement>

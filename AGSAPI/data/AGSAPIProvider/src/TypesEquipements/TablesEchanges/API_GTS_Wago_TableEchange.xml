@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TypeEquipement module="" nom="API_GTS_Wago">
+    <Info cle="mot_0" mot="0" bit="-1"/>
+    <Info cle="absence_380V_BPEA" mot="0" bit="0"/>
+    <Info cle="absence_220V_permanent_BPEA" mot="0" bit="1"/>
+    <Info cle="absence_24V_BPEA" mot="0" bit="2"/>
+    <Info cle="HT_generale_BPEA" mot="0" bit="3"/>
+    <Info cle="ATU_local_actionne_BPEA" mot="0" bit="4"/>
+    <Info cle="ATU_deporte_actionne_BPEA" mot="0" bit="5"/>
+    <Info cle="commande_CMSI_actionne_BPEA" mot="0" bit="6"/>
+    <Info cle="HT_generale_LCL" mot="0" bit="7"/>
+    <Info cle="DJ_alim_24v_PC_tombe_BPEA" mot="0" bit="8"/>
+    <Info cle="mot_1" mot="1" bit="-1"/>
+    <Info cle="HT_LCL_demandee" mot="1" bit="1"/>
+    <Info cle="BHU_LCL_demandee" mot="1" bit="2"/>
+    <Info cle="DJ_LCL_tombe" mot="1" bit="3"/>
+    <Info cle="DJ_LCL_disjoncte" mot="1" bit="4"/>
+    <Info cle="mot_3" mot="3" bit="-1"/>
+    <Info cle="bit_manque_48V_f3_interphones" mot="3" bit="8"/>
+    <Info cle="bit_manque_48V_f1_peages" mot="3" bit="9"/>
+    <Info cle="mot_4" mot="4" bit="-1"/>
+    <Info cle="bit_manque_48V_f2_disjoncteurs" mot="4" bit="0"/>
+    <Info cle="dysfonctionnement_interphone_1" mot="4" bit="12"/>
+    <Info cle="dysfonctionnement_interphone_2" mot="4" bit="13"/>
+    <Info cle="dysfonctionnement_interphone_3" mot="4" bit="14"/>
+    <Info cle="dysfonctionnement_interphone_4" mot="4" bit="15"/>
+    <Info cle="mot_5" mot="5" bit="-1"/>
+    <Info cle="dysfonctionnement_interphone_5" mot="5" bit="0"/>
+    <Info cle="dysfonctionnement_interphone_6" mot="5" bit="1"/>
+    <Info cle="dysfonctionnement_interphone_7" mot="5" bit="2"/>
+    <Info cle="dysfonctionnement_interphone_8" mot="5" bit="3"/>
+    <Info cle="dysfonctionnement_interphone_13" mot="5" bit="5"/>
+    <Info cle="dysfonctionnement_interphone_14" mot="5" bit="6"/>
+    <Info cle="dysfonctionnement_interphone_15" mot="5" bit="7"/>
+    <Info cle="dysfonctionnement_interphone_17" mot="5" bit="8"/>
+    <Info cle="dysfonctionnement_interphone_19" mot="5" bit="9"/>
+    <Info cle="dysfonctionnement_interphone_20" mot="5" bit="10"/>
+    <Info cle="dysfonctionnement_interphone_21" mot="5" bit="11"/>
+    <Info cle="dysfonctionnement_interphone_24" mot="5" bit="12"/>
+    <Info cle="dysfonctionnement_interphone_22" mot="5" bit="13"/>
+    <Info cle="mot_6" mot="6" bit="-1"/>
+    <Info cle="dysfonctionnement_interphone_23" mot="6" bit="0"/>
+    <Info cle="dysfonctionnement_interphone_25" mot="6" bit="1"/>
+    <Info cle="dysfonctionnement_interphone_26" mot="6" bit="2"/>
+    <Info cle="mot_512" mot="512" bit="-1"/>
+    <Info cle="mise_sous_hors_tension" mot="512" bit="0"/>
+</TypeEquipement>

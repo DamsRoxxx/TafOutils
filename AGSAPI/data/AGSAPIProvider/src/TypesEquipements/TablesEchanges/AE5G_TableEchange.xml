@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TypeEquipement module="" nom="AE5G">
+    <Info cle="bit_commande_Passage_Simule" mot="73" bit="0"/>
+    <Info cle="bit_commande_Prise_Controle_Recette" mot="73" bit="1"/>
+    <Info cle="bit_commande_Passage_Gratuit_1" mot="73" bit="4"/>
+    <Info cle="bit_commande_Passage_Gratuit_2" mot="73" bit="5"/>
+    <Info cle="bit_commande_Passage_Gratuit_3" mot="73" bit="6"/>
+    <Info cle="bit_commande_Passage_Gratuit_4" mot="73" bit="7"/>
+    <Info cle="bit_commande_Ouverture_Portillon_1" mot="73" bit="8"/>
+    <Info cle="bit_commande_Ouverture_Portillon_2" mot="73" bit="9"/>
+    <Info cle="bit_commande_Ouverture_Portillon_3" mot="73" bit="10"/>
+    <Info cle="bit_alarme_HT_de_TAC" mot="389" bit="0"/>
+    <Info cle="bit_alarme_HT_Extérieur" mot="389" bit="1"/>
+    <Info cle="bit_alarme_Simule_Auto" mot="389" bit="2"/>
+    <Info cle="bit_alarme_Simule_Manuel" mot="389" bit="3"/>
+    <Info cle="bit_alarme_Simule_depuis_le_Superviseur" mot="389" bit="4"/>
+    <Info cle="bit_alarme_Communication_Recette_effectuee" mot="389" bit="5"/>
+    <Info cle="mot_002_alarme" mot="390" bit="-1"/>
+    <Info cle="mot_003_alarme" mot="391" bit="-1"/>
+    <Info cle="mot_004_alarme" mot="392" bit="-1"/>
+    <Info cle="mot_005_alarme" mot="393" bit="-1"/>
+    <Info cle="mot_006_alarme" mot="394" bit="-1"/>
+    <Info cle="mot_007_alarme" mot="395" bit="-1"/>
+    <Info cle="mot_008_alarme" mot="396" bit="-1"/>
+    <Info cle="mot_009_alarme" mot="397" bit="-1"/>
+    <Info cle="mot_010_alarme" mot="398" bit="-1"/>
+    <Info cle="mot_011_alarme" mot="399" bit="-1"/>
+</TypeEquipement>

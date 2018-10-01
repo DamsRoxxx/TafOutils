@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TypeEquipement module="" nom="ventilateur">
+    <Info cle="mot_id_ligne_station" mot="448" bit="-1"/>
+    <Info cle="mot_id_type_numero_equipement" mot="449" bit="-1"/>
+    <Info cle="mot_id_mois_annee_version" mot="450" bit="-1"/>
+    <Info cle="mot_id_checksum" mot="451" bit="-1"/>
+    <Info cle="mot_status" mot="452" bit="-1"/>
+    <Info cle="mot_mesure_temps_ecoule_panne" mot="453" bit="-1"/>
+    <Info cle="mot_mesure_temps_fonctionnement_cumule_insufflation" mot="454" bit="-1"/>
+    <Info cle="mot_mesure_temps_fonctionnement_cumule_extraction" mot="455" bit="-1"/>
+    <Info cle="mot_mesure_temps_arret_entretien" mot="456" bit="-1"/>
+    <Info cle="mot_mesure_temps_coupure_400V" mot="457" bit="-1"/>
+    <Info cle="mot_mesure_nombre_declenchement_clapet_coupe_feu" mot="458" bit="-1"/>
+    <Info cle="mot_16_etat" mot="464" bit="-1"/>
+    <Info cle="bit_etat_normal_A" mot="464" bit="0"/>
+    <Info cle="bit_etat_normal_B" mot="464" bit="1"/>
+    <Info cle="bit_etat_desenfumage" mot="464" bit="2"/>
+    <Info cle="bit_etat_commande_PGR" mot="464" bit="3"/>
+    <Info cle="bit_etat_commande_PCM" mot="464" bit="4"/>
+    <Info cle="bit_etat_entretien" mot="464" bit="5"/>
+    <Info cle="bit_etat_arret" mot="464" bit="6"/>
+    <Info cle="bit_etat_arret_nuit" mot="464" bit="7"/>
+    <Info cle="bit_etat_arret_CMA" mot="464" bit="8"/>
+    <Info cle="bit_etat_insufflation_petite_moyenne_vitesse" mot="464" bit="9"/>
+    <Info cle="bit_etat_extraction_petite_moyenne_vitesse" mot="464" bit="10"/>
+    <Info cle="bit_etat_insufflation_desenfumage" mot="464" bit="11"/>
+    <Info cle="bit_etat_extraction_desenfumage" mot="464" bit="12"/>
+    <Info cle="bit_etat_en_arret_sur_voie" mot="464" bit="13"/>
+    <Info cle="bit_etat_commande_PGR_confort" mot="464" bit="14"/>
+    <Info cle="mot_17_pre-alerte" mot="465" bit="-1"/>
+    <Info cle="bit_pre-alerte_pre_alerte" mot="465" bit="0"/>
+    <Info cle="bit_pre-alerte_defaut_vibration" mot="465" bit="1"/>
+    <Info cle="bit_pre-alerte_intensite_insuffisante_extraction" mot="465" bit="2"/>
+    <Info cle="bit_pre-alerte_intensite_insuffisante_insufflation" mot="465" bit="3"/>
+    <Info cle="bit_pre-alerte_niveau_bruit_eleve_baie" mot="465" bit="4"/>
+    <Info cle="bit_pre-alerte_absence_400V" mot="465" bit="5"/>
+    <Info cle="bit_pre-alerte_echauffement_paliers_moteur" mot="465" bit="6"/>
+    <Info cle="bit_pre-alerte_defaut_automate" mot="465" bit="7"/>
+    <Info cle="bit_pre-alerte_clapets_coupe_feu_defaillants" mot="465" bit="8"/>
+    <Info cle="bit_pre-alerte_absence_400V_normal" mot="465" bit="9"/>
+    <Info cle="bit_pre-alerte_defaut_acces_trappe" mot="465" bit="10"/>
+    <Info cle="mot_19_alarme" mot="467" bit="-1"/>
+    <Info cle="bit_alarme_panne_confort" mot="467" bit="0"/>
+    <Info cle="bit_alarme_defaut_variateur_thermique_demarreur" mot="467" bit="1"/>
+    <Info cle="bit_alarme_defaut_disjoncteur_thermique_moteur" mot="467" bit="2"/>
+    <Info cle="bit_alarme_panne_desenfumage" mot="467" bit="3"/>
+    <Info cle="mot_21_alarme" mot="469" bit="-1"/>
+    <Info cle="bit_alarme_autres_aai" mot="469" bit="0"/>
+    <Info cle="bit_alarme_defaut_absence_tension_400V" mot="469" bit="1"/>
+    <Info cle="bit_alarme_defaut_absence_48V_armoire" mot="469" bit="2"/>
+    <Info cle="bit_alarme_discordance_BAE_CDAL" mot="469" bit="3"/>
+    <Info cle="bit_alarme_defaut_frein" mot="469" bit="4"/>
+    <Info cle="bit_alarme_defaut_rideau_coupe_vent" mot="469" bit="5"/>
+    <Info cle="bit_alarme_defaut_BAE_superieur_5h" mot="469" bit="6"/>
+    <Info cle="bit_alarme_defaut_clapets_coupe_feu" mot="469" bit="7"/>
+    <Info cle="bit_alarme_arret_urgence" mot="469" bit="8"/>
+    <Info cle="bit_alarme_defaut_vibration_seuil_danger" mot="469" bit="9"/>
+    <Info cle="bit_alarme_defaut_absence_48V_station" mot="469" bit="10"/>
+    <Info cle="mot_27_alarme" mot="475" bit="-1"/>
+    <Info cle="bit_alarme_panne_epuisement" mot="475" bit="0"/>
+    <Info cle="mot_28_etat" mot="476" bit="-1"/>
+    <Info cle="bit_etat_insufflation_grande_vitesse_confort" mot="476" bit="0"/>
+    <Info cle="bit_etat_extraction_grande_vitesse_confort" mot="476" bit="1"/>
+    <Info cle="mot_commande" mot="480" bit="-1"/>
+    <Info cle="bit_commande_prise_priorite_PGR" mot="480" bit="0" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_retour_commande_normaleBUS_priorite_PGR" mot="480" bit="1" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_marche_forcee_insufflation_PGR" mot="480" bit="2" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_marche_forcee_extraction_PGR" mot="480" bit="3" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_arret_poste_PGR" mot="480" bit="4" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_marche_confort_insufflation_PGR" mot="480" bit="5" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_marche_confort_extraction_PGR" mot="480" bit="6" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_prise_priorite_PCM" mot="480" bit="7" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_retour_commande_normaleBUS_priorite_PCM" mot="480" bit="8" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_marche_confort_insufflation_PCM" mot="480" bit="9" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_marche_confort_extraction_PCM" mot="480" bit="10" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_arret_poste_PCM" mot="480" bit="11" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_rearmement_aai" mot="480" bit="12" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_prise_priorite_PGR_confort" mot="480" bit="13" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_synchro" mot="480" bit="14" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_signe_de_vie" mot="480" bit="15" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="mot_commande_reglage_seconde" mot="481" bit="-1"/>
+    <Info cle="mot_commande_reglage_heure" mot="482" bit="-1"/>
+    <Info cle="mot_commande_choix_vitesse_confort" mot="483" bit="-1"/>
+    <Info cle="mot_commande_reglage_jour_mois" mot="484" bit="-1"/>
+    <Info cle="mot_commande_reglage_semaine_annee" mot="485" bit="-1"/>
+</TypeEquipement>

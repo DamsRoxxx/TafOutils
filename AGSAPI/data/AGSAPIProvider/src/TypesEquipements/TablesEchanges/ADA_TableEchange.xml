@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TypeEquipement module="" nom="ADA">
+    <Info cle="mot_id_ligne_station" mot="448" bit="-1"/>
+    <Info cle="mot_id_type_numero_equipement" mot="449" bit="-1"/>
+    <Info cle="mot_id_mois_annee_version" mot="450" bit="-1"/>
+    <Info cle="mot_id_checksum" mot="451" bit="-1"/>
+    <Info cle="mot_status" mot="452" bit="-1"/>
+    <Info cle="mot_mesure_temps_fonctionnement_sur_source_normale" mot="453" bit="-1"/>
+    <Info cle="mot_mesure_temps_fonctionnement_sur_source_remplacement" mot="454" bit="-1"/>
+    <Info cle="mot_mesure_nombre_de_bascule_inverseur_hors_test" mot="455" bit="-1"/>
+    <Info cle="mot_mesure_nombre_de_bascule_inverseur_en_test" mot="456" bit="-1"/>
+    <Info cle="mot_mesure_jour_mois_du_dernier_test_automatique" mot="457" bit="-1"/>
+    <Info cle="mot_mesure_jour_mois_du_prochain_test_automatique" mot="458" bit="-1"/>
+    <Info cle="mot_mesure_heures_minutes_du_prochain_test_automatique" mot="459" bit="-1"/>
+    <Info cle="mot_data_heure_minute" mot="462" bit="-1"/>
+    <Info cle="mot_data_jour_mois" mot="463" bit="-1"/>
+    <Info cle="mot_16_etat" mot="464" bit="-1"/>
+    <Info cle="bit_etat_cm_sur_maintenance" mot="464" bit="0"/>
+    <Info cle="bit_etat_fermeture_contacteur_source_normal" mot="464" bit="1"/>
+    <Info cle="bit_etat_fermeture_contacteur_source_remplacement" mot="464" bit="2"/>
+    <Info cle="bit_etat_test_automatique_inverseur_autorisé" mot="464" bit="3"/>
+    <Info cle="mot_17_prealerte" mot="465" bit="-1"/>
+    <Info cle="bit_prealerte_synthese_pre_alerte" mot="465" bit="0"/>
+    <Info cle="bit_prealerte_defaut_source_normal" mot="465" bit="1"/>
+    <Info cle="bit_prealerte_defaut_source_remplacement" mot="465" bit="2"/>
+    <Info cle="bit_prealerte_absence_de_tension_aval_inverseur" mot="465" bit="3"/>
+    <Info cle="bit_prealerte_Duree_de_maintenance_long" mot="465" bit="6"/>
+    <Info cle="bit_prealerte_defaut_automate" mot="465" bit="8"/>
+    <Info cle="mot_18_alerte" mot="466" bit="-1"/>
+    <Info cle="bit_alerte_synthese_prealerte" mot="466" bit="0"/>
+    <Info cle="bit_alerte_defaut_depart_permanent_luminaires_baes_vers_local_seat" mot="466" bit="1"/>
+    <Info cle="bit_alerte_defaut_depart_remplacement_luminaires_pc_clim_vers_local_seat" mot="466" bit="2"/>
+    <Info cle="bit_alerte_defaut_depart_permanent_luminaires_baes_vers_local_fq" mot="466" bit="3"/>
+    <Info cle="bit_alerte_defaut_depart_remplacement_luminaires_pc_clim_vers_local_fq" mot="466" bit="4"/>
+    <Info cle="bit_alerte_defaut_depart_permanent_luminaires_baes_vers_local_signaux" mot="466" bit="5"/>
+    <Info cle="bit_alerte_defaut_depart_remplacement_luminaires_pc_clim_vers_local_signaux" mot="466" bit="6"/>
+    <Info cle="bit_alerte_defaut_depart_permanent_luminaires_baes_vers_local_m2e_bt" mot="466" bit="7"/>
+    <Info cle="bit_alerte_defaut_depart_remplacement_luminaires_pc_clim_vers_local_m2e_bt" mot="466" bit="8"/>
+    <Info cle="mot_19_alerte" mot="467" bit="-1"/>
+    <Info cle="bit_alarme_en_arret_AAI_rearmable_PCM" mot="467" bit="0"/>
+    <Info cle="bit_alarme_defaut_commande_test_inverseur" mot="467" bit="1"/>
+    <Info cle="mot_21_alarme" mot="469" bit="-1"/>
+    <Info cle="bit_alarme_synthèse_alarme_bl" mot="469" bit="0"/>
+    <Info cle="bit_alarme_i3_aval_inverseur_ouvert_et_hors_maintenance" mot="469" bit="1"/>
+    <Info cle="bit_alarme_defaut_automatisme_inverseur" mot="469" bit="2"/>
+    <Info cle="bit_alarme_duree_maintenance_trop_longue" mot="469" bit="3"/>
+    <Info cle="mot_23_alarme" mot="471" bit="-1"/>
+    <Info cle="bit_alarme_defaut_depart_alimentation_équipement_SAET" mot="471" bit="0"/>
+    <Info cle="bit_alarme_defaut_depart_alimentation_equipement_FQ" mot="471" bit="1"/>
+    <Info cle="bit_alarme_defaut_depart_alimentation_equipement_signaux" mot="471" bit="2"/>
+    <Info cle="bit_alarme_defaut_depart_permanent_luminaire_BAES_vers_local_PCC_de_repli" mot="471" bit="3"/>
+    <Info cle="bit_alarme_defaut_depart_remplacement_luminaire_pc_clim_vers_local_PCC_de_repli" mot="471" bit="4"/>
+    <Info cle="mot_commande" mot="480" bit="-1"/>
+    <Info cle="bit_commande_commande_test_inverseur" mot="480" bit="0" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteurs_horaire" mot="480" bit="1" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_raz_compteur_basculement" mot="480" bit="2" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_interdiction_test_automatique_inverseur" mot="480" bit="3" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_autorisation_test_automatique_inverseur" mot="480" bit="4" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_pec_prochain_test_automatique" mot="480" bit="5" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_Rearmement_AAI" mot="480" bit="6" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_synchro" mot="480" bit="14" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_signe_de_vie" mot="480" bit="15" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="mot_commande_reglage_seconde" mot="481" bit="-1"/>
+    <Info cle="mot_commande_reglage_heure" mot="482" bit="-1"/>
+    <Info cle="mot_commande_reglage_jour_mois_prochain_test_automatique" mot="483" bit="-1"/>
+    <Info cle="mot_commande_reglage_jour_mois" mot="484" bit="-1"/>
+    <Info cle="mot_commande_reglage_joursemaine_annee" mot="485" bit="-1"/>
+</TypeEquipement>

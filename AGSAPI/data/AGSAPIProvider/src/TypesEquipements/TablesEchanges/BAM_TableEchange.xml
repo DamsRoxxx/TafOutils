@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TypeEquipement module="" nom="BAM">
+    <Info cle="mot_id_ligne_station" mot="448" bit="-1"/>
+    <Info cle="mot_id_type_numero_equipement" mot="449" bit="-1"/>
+    <Info cle="mot_id_mois_annee_version" mot="450" bit="-1"/>
+    <Info cle="mot_id_checksum" mot="451" bit="-1"/>
+    <Info cle="mot_status" mot="452" bit="-1"/>
+    <Info cle="mot_mesure_tps_ecoule_en_panne" mot="453" bit="-1"/>
+    <Info cle="mot_mesure_tps_coupure_48V" mot="454" bit="-1"/>
+    <Info cle="mot_mesure_tps_arret_entretien" mot="455" bit="-1"/>
+    <Info cle="mot_16_etat" mot="464" bit="-1"/>
+    <Info cle="bit_etat_en_commande_PGR" mot="464" bit="0"/>
+    <Info cle="bit_etat_en_commande_PCM" mot="464" bit="1"/>
+    <Info cle="bit_etat_BAM_ouverte" mot="464" bit="2"/>
+    <Info cle="bit_etat_BAM_fermee" mot="464" bit="3"/>
+    <Info cle="bit_etat_en_entretien" mot="464" bit="4"/>
+    <Info cle="bit_etat_en_mode_desenfumage" mot="464" bit="5"/>
+    <Info cle="bit_etat_en_commande_PGR_confort" mot="464" bit="6"/>
+    <Info cle="bit_etat_en_mode_confort" mot="464" bit="7"/>
+    <Info cle="mot_17_alarme" mot="465" bit="-1"/>
+    <Info cle="bit_alarme_pre-alerte" mot="465" bit="0"/>
+    <Info cle="bit_alarme_defaut_automate" mot="465" bit="1"/>
+    <Info cle="bit_alarme_defaut_acces_trappe" mot="465" bit="2"/>
+    <Info cle="mot_19_alarme" mot="467" bit="-1"/>
+    <Info cle="bit_alarme_en_panne_AAI" mot="467" bit="0"/>
+    <Info cle="bit_alarme_defaut_thermique_moteur" mot="467" bit="1"/>
+    <Info cle="mot_21_alarme" mot="469" bit="-1"/>
+    <Info cle="bit_alarme_autres_AAI" mot="469" bit="0"/>
+    <Info cle="bit_alarme_defaut_chaine_de_securite" mot="469" bit="1"/>
+    <Info cle="bit_alarme_defaut_48V_armoire" mot="469" bit="2"/>
+    <Info cle="bit_alarme_defaut_BAE&gt;5h" mot="469" bit="3"/>
+    <Info cle="bit_alarme_defaut_48V_station" mot="469" bit="4"/>
+    <Info cle="mot_commande" mot="480" bit="-1"/>
+    <Info cle="bit_commande_prise_priorite_PGR" mot="480" bit="0" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_retour_cmd_apres_priorite_PGR" mot="480" bit="1" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_ouverture_PGR" mot="480" bit="2" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_fermeture_PGR" mot="480" bit="3" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_prise_priorite_PCM" mot="480" bit="4" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_retour_cmd_apres_priorite_PCM" mot="480" bit="5" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_ouverture_PCM" mot="480" bit="6" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_fermeture_PCM" mot="480" bit="7" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_rearmement_AAI" mot="480" bit="8" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_prise_priorite_PGR_confort" mot="480" bit="9" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_synchro" mot="480" bit="14" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_signe_de_vie" mot="480" bit="15" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="mot_commande_reglage_seconde" mot="481" bit="-1"/>
+    <Info cle="mot_commande_reglage_heure" mot="482" bit="-1"/>
+</TypeEquipement>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TypeEquipement priorite="-15" module="libAGSServeurEquipementsVideoFrontal.so" nom="VIDEOCycle" isVirtuel="true">
+    <Conf categorie="Video" types="VIDEOCycle"/>
+    <Etat code="1" codePublic="1" isExploitant="true" isHistorisable="true" isMainteneur="true" isObligatoireIHM="true" isPersistable="false" libelle="Cycle Statique"/>
+    <Mesure code="1" codePublic="1" isExploitant="true" isHistorisable="true" isMainteneur="true" isObligatoireIHM="true" isPersistable="false" libelle="temps de commutation"/>
+    <Mesure code="2" codePublic="2" isExploitant="true" isHistorisable="true" isMainteneur="true" isObligatoireIHM="true" isPersistable="false" libelle="nombre de cameras"/>
+    <Mesure code="3" codePublic="3" isExploitant="true" isHistorisable="true" isMainteneur="true" isObligatoireIHM="true" isPersistable="false" libelle="nombre de moniteur actif"/>
+    <Information code="1" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="Nom du cycle"/>
+    <Information code="2" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="Commentaire du cycle"/>
+    <Information code="101" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera1"/>
+    <Information code="102" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera2"/>
+    <Information code="103" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera3"/>
+    <Information code="104" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera4"/>
+    <Information code="105" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera5"/>
+    <Information code="106" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera6"/>
+    <Information code="107" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera7"/>
+    <Information code="108" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera8"/>
+    <Information code="109" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera9"/>
+    <Information code="110" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera10"/>
+    <Information code="111" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera11"/>
+    <Information code="112" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera12"/>
+    <Information code="113" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera13"/>
+    <Information code="114" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera14"/>
+    <Information code="115" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera15"/>
+    <Information code="116" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera16"/>
+    <Information code="117" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera17"/>
+    <Information code="118" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera18"/>
+    <Information code="119" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera19"/>
+    <Information code="120" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera20"/>
+    <Information code="121" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera21"/>
+    <Information code="122" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera22"/>
+    <Information code="123" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera23"/>
+    <Information code="124" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera24"/>
+    <Information code="125" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera25"/>
+    <Information code="126" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera26"/>
+    <Information code="127" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera27"/>
+    <Information code="128" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera28"/>
+    <Information code="129" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera29"/>
+    <Information code="130" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera30"/>
+    <Information code="131" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera31"/>
+    <Information code="132" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera32"/>
+    <Information code="133" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera33"/>
+    <Information code="134" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera34"/>
+    <Information code="135" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera35"/>
+    <Information code="136" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera36"/>
+    <Information code="137" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera37"/>
+    <Information code="138" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera38"/>
+    <Information code="139" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera39"/>
+    <Information code="140" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera40"/>
+    <Information code="141" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera41"/>
+    <Information code="142" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera42"/>
+    <Information code="143" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera43"/>
+    <Information code="144" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera44"/>
+    <Information code="145" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera45"/>
+    <Information code="146" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera46"/>
+    <Information code="147" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera47"/>
+    <Information code="148" isExploitant="true" isMainteneur="true" isObligatoireIHM="true" libelle="camera48"/>
+</TypeEquipement>

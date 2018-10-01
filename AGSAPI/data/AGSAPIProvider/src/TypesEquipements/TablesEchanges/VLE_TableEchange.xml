@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TypeEquipement module="" nom="VLE">
+    <Info cle="mot_id_ligne_station" mot="448" bit="-1"/>
+    <Info cle="mot_id_type_numero_equipement" mot="449" bit="-1"/>
+    <Info cle="mot_id_mois_annee_version" mot="450" bit="-1"/>
+    <Info cle="mot_id_checksum" mot="451" bit="-1"/>
+    <Info cle="mot_status" mot="452" bit="-1"/>
+    <Info cle="mot_mesure_temps_fonctionnement_extracteur" mot="453" bit="-1"/>
+    <Info cle="mot_mesure_temperature_ambiance_interieur_local" mot="454" bit="-1"/>
+    <Info cle="mot_mesure_temperature_ambiance_exterieur_local" mot="455" bit="-1"/>
+    <Info cle="mot_mesure_seuil_temperature_alerte" mot="456" bit="-1"/>
+    <Info cle="mot_mesure_9_reserve" mot="457" bit="-1"/>
+    <Info cle="mot_mesure_10_reserve" mot="458" bit="-1"/>
+    <Info cle="mot_mesure_11_reserve" mot="459" bit="-1"/>
+    <Info cle="mot_mesure_12_reserve" mot="460" bit="-1"/>
+    <Info cle="mot_mesure_13_reserve" mot="461" bit="-1"/>
+    <Info cle="mot_mesure_14_reserve" mot="462" bit="-1"/>
+    <Info cle="mot_mesure_15_reserve" mot="463" bit="-1"/>
+    <Info cle="mot_16_etat" mot="464" bit="-1"/>
+    <Info cle="bit_etat_en_entretien" mot="464" bit="0"/>
+    <Info cle="bit_etat_en_marche_normale" mot="464" bit="1"/>
+    <Info cle="bit_etat_en_arret_normal" mot="464" bit="2"/>
+    <Info cle="bit_etat_en_arret_technique" mot="464" bit="3"/>
+    <Info cle="mot_17_prealerte" mot="465" bit="-1"/>
+    <Info cle="bit_prealerte_synthese_pre_alerte" mot="465" bit="0"/>
+    <Info cle="bit_prealerte_defaut_automate" mot="465" bit="1"/>
+    <Info cle="mot_18_alerte" mot="466" bit="-1"/>
+    <Info cle="bit_alerte_synthese_prealerte" mot="466" bit="0"/>
+    <Info cle="bit_alerte_depassement_seuil_temperature" mot="466" bit="1"/>
+    <Info cle="mot_19_alerte_reserve" mot="467" bit="-1"/>
+    <Info cle="mot_20_alerte_reserve" mot="468" bit="-1"/>
+    <Info cle="mot_21_alarme" mot="469" bit="-1"/>
+    <Info cle="bit_alarme_synthèse_alarme" mot="469" bit="0"/>
+    <Info cle="bit_alarme_defaut_volet_coupefeu_aspiration" mot="469" bit="1"/>
+    <Info cle="bit_alarme_defaut_volet_coupefeu_refoulement" mot="469" bit="2"/>
+    <Info cle="bit_alarme_defaut_extracteur" mot="469" bit="3"/>
+    <Info cle="bit_alarme_defaut_variateur" mot="469" bit="4"/>
+    <Info cle="bit_alarme_defaut_sonde_ambiance_interieur_local" mot="469" bit="5"/>
+    <Info cle="bit_alarme_defaut_sonde_ambiance_exterieur_local" mot="469" bit="6"/>
+    <Info cle="bit_alarme_BAE_5_heures" mot="469" bit="7"/>
+    <Info cle="mot_22_alarme_reserve" mot="470" bit="-1"/>
+    <Info cle="mot_23_alarme_reserve" mot="471" bit="-1"/>
+    <Info cle="mot_24_alarme_reserve" mot="472" bit="-1"/>
+    <Info cle="mot_25_alarme_reserve" mot="473" bit="-1"/>
+    <Info cle="mot_26_alarme_reserve" mot="474" bit="-1"/>
+    <Info cle="mot_27_alarme_reserve" mot="475" bit="-1"/>
+    <Info cle="mot_28_etat_reserve" mot="476" bit="-1"/>
+    <Info cle="mot_29_mesure_reserve" mot="477" bit="-1"/>
+    <Info cle="mot_30_reserve" mot="478" bit="-1"/>
+    <Info cle="mot_31_reserve" mot="479" bit="-1"/>
+    <Info cle="mot_commande" mot="480" bit="-1"/>
+    <Info cle="bit_commande_rearmement_defaut" mot="480" bit="0" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_reglage_seuil_temperature_alerte" mot="480" bit="1" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_synchro" mot="480" bit="14" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="bit_commande_signe_de_vie" mot="480" bit="15" motStatus="mot_status" delaiStatus="700"/>
+    <Info cle="mot_commande_reglage_seconde" mot="481" bit="-1"/>
+    <Info cle="mot_commande_reglage_heure" mot="482" bit="-1"/>
+    <Info cle="mot_commande_seuil_temperature_alerte" mot="483" bit="-1"/>
+</TypeEquipement>

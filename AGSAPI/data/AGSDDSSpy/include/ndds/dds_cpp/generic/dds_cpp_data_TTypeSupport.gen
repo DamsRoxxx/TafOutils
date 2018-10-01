@@ -1,0 +1,559 @@
+/* (c) Copyright 2003-2015, Real-Time Innovations, Inc. All rights reserved. */
+/* $Id$
+ (c) Copyright, Real-Time Innovations, 2004-2016. 
+ All rights reserved.
+ No duplications, whole or partial, manual or electronic, may be made
+ without express written permission.  Any such copies, or
+ revisions thereof, must display this notice unaltered.
+ This code contains trade secrets of Real-Time Innovations, Inc.
+
+modification history
+-------------------- 
+5.2.0 26jan14,ajm CODEGENII-245 Adding getTypeCode method to TypeSupport
+5.2.0,26aug14,fcs CODEGEN-745: Add APIs to serialize a sample to a CDR 
+                  buffer and to deserialize from a CDR buffer
+5.0.1,04jul13,fcs CORE-5835: Support for type allocation and deallocation
+                  parameters
+1.0v,14oct10,gn  Fixed bug 12906 
+1.0v,09jan10,fcs Fixed bug 13236
+1.0v,09apr09,fcs Fixed AIX compilation
+1.0v,08apr09,vtg Fixed bug #12876: Value type warnings in C++
+1.0v,22mar08,eys Allocate TTypeSupport once per type
+1.0v,21mar08,eys Added dummy finalize() method to remain API compatible
+1.0v,09mar08,rbw Fixed memory leak
+1.0i,07mar08,jpl New type plug-in interface refactoring
+1.0q,28dec07,jpl Updated for new type plug-in interface
+1.0h,18feb07,eys Added TypeSupport::finalize() method to fix memory in use
+                 issue
+1.0h,16dec05,fcs Added expanded and not expanded versions for the methods
+                 initialize, finalize, create and delete
+1.0f,21jun05,fcs Replaced RTIBool with DDS_Boolean.
+1.0f,26may05,fcs Added the following methods to the class TTypeSupport:
+                 initialize
+                 finalize
+                 create
+                 destroy (replaces deleteX)
+                 These methods replace the old ones (deprecated) ended in X 
+                 and they receive an additional parameter to allocate/delete 
+                 the pointers of the type
+1.0f,06may05,jml Bug #9333 Foo::type_name() renamed as Foo::get_type_name() 
+1.0e,22nov04,eys Fixed compiler warnings
+1.0e,09nov04,eys Type plugin refactoring. Added create_data(), initialize_data()
+                 and finalize_data().
+1.0d,30sep04,eys Removed typePluginProperty from InternalDefaults
+1.0d,10jun04,eys Renamed DataType to TypeSupport
+1.0d,25may04,eys To ensure that internalDefaults is property initialized,
+                 we need to call DDS_DomainParticipantFactory_get_instance()
+		 before accessing internalDefaults. See bug #8272.
+1.0d,30apr04,eys  Removed new and delete operator
+1.0c,17mar04,eys  return typename directly without going through C to avoid
+                  problem of type plugin not being initialized yet
+1.0c,26jan04,rw   Type name now maintained by C API layer
+1.0c,10dec03,eys  Bug #8143: added publication submodule
+1.0c,05dec03,eys  Bug #8143: copied from dds/psm-cpp.1.0
+===================================================================== */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#ifndef dds_cpp_domain_h
+#include "dds_cpp/dds_cpp_domain.h"
+#endif
+
+#ifndef dds_c_topic_impl_h
+#include "dds_c/dds_c_topic_impl.h"
+#endif
+
+#ifndef dds_c_printformat_h
+#include "dds_c/dds_c_printformat.h"
+#endif
+
+#ifndef dds_c_log_impl_h
+#include "dds_c/dds_c_log_impl.h"
+#endif
+
+/* ================================================================== */
+/*i
+   <<IMPLEMENTATION>> 
+
+   Requires:  TTYPENAME
+
+   Defines:   TTypeSupport
+*/
+#if defined(TTypeSupport) && defined(TTYPENAME) && defined(TData) && defined(TPlugin_new) && defined(TDataReader) && defined(TDataWriter)
+
+/* ----------------------------------------------------------------- */
+/* Defines submodule for logging purposes
+ */
+#define DDS_CURRENT_SUBMODULE  DDS_SUBMODULE_MASK_DATA
+
+/* ----------------------------------------------------------------- */
+//void* TTypeSupport::operator new(
+//    size_t size,
+//    struct DDS_DataTypeUtilityImpl* cDataTypeUtility) {
+//    //
+//    void* buffer = NULL;
+//
+//    /* no need to check size */
+//
+//    /* TODO: need to use fast buffer */
+///*    buffer = DDS_DataTypeUtility_get_user_dataI(cDataTypeUtility); */
+//    buffer = malloc(size);
+//
+//    return buffer;
+//}
+
+/*i
+ * Since operator new just returns a pointer into an existing structure
+ * rather than actually allocating any new memory, operator delete is a
+ * no-op.
+ */
+//void TTypeSupport::operator delete(void* /*self*/) {
+//    // empty
+//}
+
+TTypeSupport::TTypeSupport() {
+}
+
+TTypeSupport::~TTypeSupport() {
+}
+
+/* ----------------------------------------------------------------- */
+
+/*i
+   TTypeSupport::register_type()
+
+   @pre participant is non-NULL
+*/
+DDS_ReturnCode_t TTypeSupport::register_type(
+    DDSDomainParticipant* participant,
+    const char* type_name)
+{
+    DDSTypeSupport* ddsDataType = NULL;
+    struct PRESTypePlugin *typePlugin = NULL;
+    DDS_ReturnCode_t retcode = DDS_RETCODE_ERROR, result = DDS_RETCODE_ERROR;
+    DDS_Boolean deleteDataType = DDS_BOOLEAN_FALSE;
+    RTIBool alreadyRegistered = RTI_FALSE;
+    const char* const METHOD_NAME = "TTypeSupport::register_type";
+
+    if (participant == NULL) {
+        DDSLog_exception(METHOD_NAME, &DDS_LOG_BAD_PARAMETER_s, "participant");
+        retcode = DDS_RETCODE_BAD_PARAMETER;
+        goto done;
+    }
+
+    if (type_name == NULL) {
+        DDSLog_exception(METHOD_NAME, &DDS_LOG_BAD_PARAMETER_s, "type_name");
+        retcode = DDS_RETCODE_BAD_PARAMETER;
+        goto done;
+    }
+
+    // --- Get Presentation type plugin --- //
+    typePlugin = TPlugin_new();
+    if (typePlugin == NULL) {
+        DDSLog_exception(METHOD_NAME, &RTI_LOG_CREATION_FAILURE_s, "TPlugin");
+        goto done;
+    }
+
+    ddsDataType = new TTypeSupport();
+    if (ddsDataType == NULL) {
+        DDSLog_exception(
+            METHOD_NAME, &RTI_LOG_CREATION_FAILURE_s, "TTypeSupport");
+        goto done;
+    }
+    deleteDataType = DDS_BOOLEAN_TRUE;
+
+    typePlugin->_userBuffer = (PRESWord *)ddsDataType;
+
+    alreadyRegistered = participant->is_type_registered(type_name);
+
+    retcode = participant->register_type(
+        type_name, typePlugin, NULL, !alreadyRegistered);
+    if (retcode != DDS_RETCODE_OK) {
+        DDSLog_exception(
+            METHOD_NAME, &RTI_LOG_ANY_FAILURE_s, "register_type");
+        result = retcode;
+        goto done;
+    }
+
+    /* If the type was already registered then the call to register_type
+       returns DDS_RETCODE_OK and is a noop so we need to delete the
+       type support */
+    if (!alreadyRegistered) {
+        deleteDataType = DDS_BOOLEAN_FALSE;
+    }
+
+    result = DDS_RETCODE_OK;
+done:
+    if (typePlugin != NULL) {
+        TPlugin_delete(typePlugin);
+    }
+    if (deleteDataType) {
+        delete (TTypeSupport*)ddsDataType;
+        ddsDataType = NULL;
+    }
+    return result;
+}
+
+/*i
+   TTypeSupport::unregister_type()
+
+   @pre participant is non-NULL
+*/
+DDS_ReturnCode_t TTypeSupport::unregister_type(
+    DDSDomainParticipant* participant,
+    const char* type_name) 
+{
+    DDS_ReturnCode_t retcode = DDS_RETCODE_ERROR, result = DDS_RETCODE_ERROR;
+    const char* const METHOD_NAME = "TTypeSupport::unregister_type";
+
+    if (participant == NULL) {
+        DDSLog_exception(METHOD_NAME, &DDS_LOG_BAD_PARAMETER_s, "participant");
+        return DDS_RETCODE_BAD_PARAMETER;
+    }
+
+    if (type_name == NULL) {
+        DDSLog_exception(METHOD_NAME, &DDS_LOG_BAD_PARAMETER_s, "type_name");
+        return DDS_RETCODE_BAD_PARAMETER;
+    }
+
+    retcode = participant->lock();
+    if (retcode != DDS_RETCODE_OK) {
+        DDSLog_exception(METHOD_NAME, &DDS_LOG_LOCK_ENTITY_FAILURE);
+        return retcode;
+    }
+
+    retcode = participant->unregister_type(type_name);
+    if (retcode != DDS_RETCODE_OK) {
+        DDSLog_exception(
+            METHOD_NAME, &RTI_LOG_ANY_FAILURE_s, "unregister_type");
+        result = retcode;
+        goto done;
+    }
+
+    result = DDS_RETCODE_OK;
+done:
+    retcode = participant->unlock();
+    if (retcode != DDS_RETCODE_OK) {
+        DDSLog_exception(METHOD_NAME, &DDS_LOG_UNLOCK_ENTITY_FAILURE);
+        return DDS_RETCODE_ERROR;
+    }
+    return result;
+}
+
+/*i deprecated */
+void TTypeSupport::finalize()
+{
+    /* do nothing */
+}
+
+#define concatenate(A, B)  A ## B
+
+#define TTypePluginSupport_c(TData) concatenate(TData, PluginSupport)
+#define TTypePluginSupport TTypePluginSupport_c(TData)
+
+
+#ifndef TSUPPRESS_DATA_CONSTRUCTOR_METHODS
+/* ----------------------------------------------------------------- */
+TData* TTypeSupport::create_data(const DDS_TypeAllocationParams_t & alloc_params) 
+{
+#define TTypePluginSupport_create_data_w_params_c(TTypePluginSupport) concatenate(TTypePluginSupport, _create_data_w_params)
+#define TTypePluginSupport_create_data_w_params TTypePluginSupport_create_data_w_params_c(TTypePluginSupport)
+
+    /* create instance */
+    return (TData *)
+        TTypePluginSupport_create_data_w_params(&alloc_params);
+
+#undef TTypePluginSupport_create_data_w_params_c
+#undef TTypePluginSupport_create_data_w_params
+}
+
+/* ----------------------------------------------------------------- */
+TData* TTypeSupport::create_data_ex(DDS_Boolean allocatePointers)
+{
+#define TTypePluginSupport_create_data_ex_c(TTypePluginSupport) concatenate(TTypePluginSupport, _create_data_ex)
+#define TTypePluginSupport_create_data_ex TTypePluginSupport_create_data_ex_c(TTypePluginSupport)
+
+    /* create instance */
+    return (TData *)
+        TTypePluginSupport_create_data_ex((RTIBool)allocatePointers);
+
+#undef TTypePluginSupport_create_data_ex_c
+#undef TTypePluginSupport_create_data_ex
+}
+
+/* ----------------------------------------------------------------- */
+DDS_ReturnCode_t TTypeSupport::delete_data(
+        TData* a_data, const DDS_TypeDeallocationParams_t & dealloc_params)
+{
+#define TTypePluginSupport_delete_data_w_params_c(TTypePluginSupport) concatenate(TTypePluginSupport, _destroy_data_w_params)
+#define TTypePluginSupport_delete_data_w_params TTypePluginSupport_delete_data_w_params_c(TTypePluginSupport)
+
+    TTypePluginSupport_delete_data_w_params(a_data, &dealloc_params);
+        
+    return DDS_RETCODE_OK;
+
+#undef TTypePluginSupport_delete_data_w_params_c
+#undef TTypePluginSupport_delete_data_w_params
+}
+
+/* ----------------------------------------------------------------- */
+DDS_ReturnCode_t TTypeSupport::delete_data_ex(
+    TData* a_data, DDS_Boolean deletePointers) 
+{
+#define TTypePluginSupport_delete_data_ex_c(TTypePluginSupport) concatenate(TTypePluginSupport, _destroy_data_ex)
+#define TTypePluginSupport_delete_data_ex TTypePluginSupport_delete_data_ex_c(TTypePluginSupport)
+
+    TTypePluginSupport_delete_data_ex(
+        a_data, (RTIBool)deletePointers);
+        
+    return DDS_RETCODE_OK;
+
+#undef TTypePluginSupport_delete_data_ex_c
+#undef TTypePluginSupport_delete_data_ex
+}
+#endif
+
+/* ----------------------------------------------------------------- */
+void TTypeSupport::print_data(const TData *a_data) 
+{
+#define TTypePluginSupport_print_data_c(TTypePluginSupport) concatenate(TTypePluginSupport, _print_data)
+#define TTypePluginSupport_print_data TTypePluginSupport_print_data_c(TTypePluginSupport)
+
+     TTypePluginSupport_print_data(
+        a_data, NULL, 0);
+
+#undef TTypePluginSupport_print_data_c
+#undef TTypePluginSupport_print_data
+}
+
+#undef TTypePluginSupport_c
+#undef TTypePluginSupport
+
+#ifndef TSUPPRESS_DATA_CONSTRUCTOR_METHODS
+/* ----------------------------------------------------------------- */
+DDS_ReturnCode_t TTypeSupport::copy_data(
+    TData* dst, const TData* src)
+{
+#define TType_copy_data_c(TData) concatenate(TData, _copy)
+#define TType_copy_data TType_copy_data_c(TData)
+
+    DDS_ReturnCode_t retcode = DDS_RETCODE_OK;
+
+    if (!TType_copy_data(dst, src)) {
+        retcode = DDS_RETCODE_ERROR;
+    }
+
+    return retcode;
+
+#undef TType_copy_data_c
+#undef TType_copy_data
+}
+
+/* ----------------------------------------------------------------- */
+DDS_ReturnCode_t TTypeSupport::initialize_data(
+    TData* a_data, const DDS_TypeAllocationParams_t & alloc_params)
+{
+#define TType_initialize_data_w_params_c(TData) concatenate(TData, _initialize_w_params)
+#define TType_initialize_data_w_params TType_initialize_data_w_params_c(TData)
+
+    TType_initialize_data_w_params(a_data, &alloc_params);
+
+    return DDS_RETCODE_OK;
+
+#undef TType_initialize_data_w_params_c
+#undef TType_initialize_data_w_params
+}
+
+/* ----------------------------------------------------------------- */
+DDS_ReturnCode_t TTypeSupport::initialize_data_ex(
+    TData* a_data, DDS_Boolean allocatePointers) 
+{
+#define TType_initialize_data_ex_c(TData) concatenate(TData, _initialize_ex)
+#define TType_initialize_data_ex TType_initialize_data_ex_c(TData)
+
+    TType_initialize_data_ex(
+        a_data, (RTIBool)allocatePointers, RTI_TRUE);
+
+    return DDS_RETCODE_OK;
+
+#undef TType_initialize_data_ex_c
+#undef TType_initialize_data_ex
+}
+
+/* ----------------------------------------------------------------- */
+DDS_ReturnCode_t TTypeSupport::finalize_data(
+    TData* a_data, const DDS_TypeDeallocationParams_t & dealloc_params) 
+{
+#define TType_finalize_data_w_params_c(TData) concatenate(TData, _finalize_w_params)
+#define TType_finalize_data_w_params TType_finalize_data_w_params_c(TData)
+
+    TType_finalize_data_w_params(a_data, &dealloc_params);
+
+    return DDS_RETCODE_OK;
+
+#undef TType_finalize_data_w_params_c
+#undef TType_finalize_data_w_params
+}
+
+/* ----------------------------------------------------------------- */
+DDS_ReturnCode_t TTypeSupport::finalize_data_ex(
+    TData* a_data, DDS_Boolean deletePointers) 
+{
+#define TType_finalize_data_ex_c(TData) concatenate(TData, _finalize_ex)
+#define TType_finalize_data_ex TType_finalize_data_ex_c(TData)
+
+    TType_finalize_data_ex(
+        a_data, (RTIBool)deletePointers);
+
+    return DDS_RETCODE_OK;
+
+#undef TType_finalize_data_ex_c
+#undef TType_finalize_data_ex
+}
+#endif
+
+/* ----------------------------------------------------------------- */
+DDS_TypeCode* TTypeSupport::get_typecode()
+{
+#define TType_get_typecode_c(TData) concatenate(TData, _get_typecode)
+#define TType_get_typecode TType_get_typecode_c(TData)
+
+#ifdef TGENERATE_TYPECODE
+    return TType_get_typecode();
+#else
+    return NULL;
+#endif
+
+#undef TType_get_typecode_c
+#undef TType_get_typecode
+}
+
+/* ----------------------------------------------------------------- */
+#define TTypePlugin_c(TData) concatenate(TData, Plugin)
+#define TTypePlugin TTypePlugin_c(TData)
+
+DDS_ReturnCode_t TTypeSupport::serialize_data_to_cdr_buffer(
+      char * buffer,
+      unsigned int & length,
+      const TData *a_data)
+{
+#define TTypePlugin_serialize_to_cdr_buffer_c(TTypePlugin) concatenate(TTypePlugin, _serialize_to_cdr_buffer)
+#define TTypePlugin_serialize_to_cdr_buffer TTypePlugin_serialize_to_cdr_buffer_c(TTypePlugin)
+
+#ifdef TGENERATE_SER_CODE
+    if (!TTypePlugin_serialize_to_cdr_buffer(
+            buffer, &length, a_data)) {
+        return DDS_RETCODE_ERROR;
+    }
+
+    return DDS_RETCODE_OK;
+#else 
+    /*To avoid warnings*/
+    if (buffer){}
+    if (length){}
+    if (a_data){}
+
+    return DDS_RETCODE_UNSUPPORTED;
+#endif
+
+#undef TTypePlugin_serialize_to_cdr_buffer_c
+#undef TTypePlugin_serialize_to_cdr_buffer
+}
+
+/* ----------------------------------------------------------------- */
+DDS_ReturnCode_t TTypeSupport::deserialize_data_from_cdr_buffer(
+      TData *a_data,
+      const char * buffer,
+      unsigned int length)
+{
+#define TTypePlugin_deserialize_from_cdr_buffer_c(TTypePlugin) concatenate(TTypePlugin, _deserialize_from_cdr_buffer)
+#define TTypePlugin_deserialize_from_cdr_buffer TTypePlugin_deserialize_from_cdr_buffer_c(TTypePlugin)
+
+#ifdef TGENERATE_SER_CODE
+    if (!TTypePlugin_deserialize_from_cdr_buffer(
+            a_data, buffer, length)) {    
+        return DDS_RETCODE_ERROR;
+    }
+
+    return DDS_RETCODE_OK;
+#else
+    /*To avoid warnings*/
+    if (buffer){}
+    if (length){}
+    if (a_data){}
+
+    return DDS_RETCODE_UNSUPPORTED;
+#endif
+
+#undef TTypePlugin_deserialize_to_cdr_buffer_c
+#undef TTypePlugin_deserialize_to_cdr_buffer
+}
+
+DDS_ReturnCode_t TTypeSupport::data_to_string(
+      TData *sample,
+      char *str,
+      DDS_UnsignedLong& str_size, 
+      const DDS_PrintFormatProperty& property)
+{
+#define TTypePlugin_data_to_string_c(TTypePlugin) concatenate(TTypePlugin, _data_to_string)
+#define TTypePlugin_data_to_string TTypePlugin_data_to_string_c(TTypePlugin)
+
+#if defined(TGENERATE_SER_CODE) && defined(TGENERATE_TYPECODE)
+    return TTypePlugin_data_to_string(
+            sample, 
+            str, 
+            &str_size, 
+            &property);
+#else
+    /* To avoid warnings */
+    if (sample){}
+    if (str){}
+    if (str_size){}
+    RTIOsapiUtility_unusedParameter(property);
+
+    return DDS_RETCODE_UNSUPPORTED;
+#endif
+
+#undef TTypePlugin_data_to_string_c
+#undef TTypePlugin_data_to_string
+}
+
+#undef TTypePlugin_c
+#undef TTypePlugin
+
+/* ----------------------------------------------------------------- */
+/*i
+   TTypeSupport::get_type_name()
+
+   Requires TTYPENAME
+*/
+const char* TTypeSupport::get_type_name() {
+    return TTYPENAME;
+}
+
+#undef concatenate
+
+/* ----------------------------------------------------------------- */
+DDSDataReader* TTypeSupport::create_datareaderI(DDSDataReader* dataReader) {
+    return TDataReader::createI(dataReader);
+}
+
+DDS_ReturnCode_t TTypeSupport::destroy_datareaderI(DDSDataReader* dataReader) {
+    return TDataReader::destroyI((TDataReader*)dataReader);
+}
+
+DDSDataWriter* TTypeSupport::create_datawriterI(DDSDataWriter* dataWriter) {
+    return TDataWriter::createI(dataWriter);
+}
+
+DDS_ReturnCode_t TTypeSupport::destroy_datawriterI(DDSDataWriter* dataWriter) {
+    return TDataWriter::destroyI((TDataWriter*)dataWriter);
+}
+
+/* ----------------------------------------------------------------- */
+#undef DDS_CURRENT_SUBMODULE
+
+#endif /* defined(TTypeSupport) && defined(TTYPENAME) && defined(TData) && defined(TDataReader) && defined(TDataWriter) && define(TPlugin_new) */
+
+/* End $Id$ */

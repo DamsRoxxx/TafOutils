@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="agswebclient.css">
+<title>AGSWebClient</title>
+<script type="text/javascript" src="AGSWebClient.js"></script>
+</head>
+
+<body>
+<div id="main-container-div">
+  <div id="names-list-div">
+    <ul id="names-list-ul" class="w3-ul">
+    </ul>
+  </div>
+  <div id="dds-data-container-div">
+    <div id="dds-data-head-div">
+      <!-- Tab links -->
+      <div class="tab">
+        <button class="tablinks active" onclick="OpenTab(event, 'Alarme')">Alarmes</button>
+        <button class="tablinks" onclick="OpenTab(event, 'Etat')">Etats</button>
+        <button class="tablinks" onclick="OpenTab(event, 'InfoGen')">InfoGen</button>
+        <button class="tablinks" onclick="OpenTab(event, 'Mesure')">Mesures</button>
+
+        <span/>
+        <select class="groupe-espace-select" id="groupe-select">
+        </select>
+
+        <select class="groupe-espace-select" id="espace-select">
+        </select>
+
+      </div>
+    </div>
+
+    <div id="dds-data-div">
+      <table id="dds-data-table"></table>
+    </div>
+  </div>
+</div>
+</body>
+</html> 
