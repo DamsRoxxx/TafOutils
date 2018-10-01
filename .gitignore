@@ -1,0 +1,8 @@
+# Misc
+.*.swp
+*.pyc
+*.o
+*.d
+
+# PDC
+PDC/SVM
