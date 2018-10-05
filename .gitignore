@@ -11,3 +11,4 @@ PDC/SVM
 
 # AGSAPI
 AGSAPI/tmp/DDS*
+AGSAPI/data/AGSDDSSpy/rti_license/rti_license.dat
