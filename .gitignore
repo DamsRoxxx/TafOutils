@@ -3,6 +3,8 @@
 *.pyc
 *.o
 *.d
+AGSAPI_Manual.odt
+.~lock.*
 
 # PDC
 PDC/SVM
